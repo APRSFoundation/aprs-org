@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+   <TITLE>APRS Meteor Scatter</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.0Gold (X11; I; SunOS 5.5.1 sun4c) [Netscape]">
+   <META NAME="Author" CONTENT="Bob Bruninga">
+   <META NAME="Description" CONTENT="APRS Meteor Scatter Experiment">
+   <META NAME="Keywords" CONTENT="Amateur Radio, APRS,Leonids,Persieds, Bruninga,Meteor Scatter,APRSdos">
+   <META NAME="Classification" CONTENT="Amateur Radio">
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#87CEFA" LINK="#0000EE" VLINK="#551A8B" 
+ALINK="#FF0000">
+
+<H1 ALIGN=CENTER><IMG SRC="http://www.aprs.org/aprs.gif" HSPACE=5 HEIGHT=50 WIDTH=90 ALIGN=TEXTTOP><B>APRS Meteor Scatter Tests</B>
+<IMG SRC="http://www.aprs.org/aprs.gif" HSPACE=5 HEIGHT=50 WIDTH=90 ALIGN=TEXTTOP></H1>
+<H4 ALIGN=CENTER>Bob Bruninga, <B>WB4APR</B>,
+US Naval Academy Satellite Lab, Annapolis, MD</H4>
+<!--
+this is how you do comments
+//-->
+
+<CENTER><P>
+<HR WIDTH="100%"></P></CENTER>
+<P>
+Updated 10 Sep 2007 (Previous update 1999)
+<P>
+<B><FONT SIZE=+1> 
+The self plotting of APRS packets and global connectivity of
+the APRS-Internet System (APRS-IS) makes it ideal 
+for casual Meteor Scatter communications experiments.  This page suggests
+four ideas for experiments with Meteor Scatter comunications:
+<P>
+<LI> For Fun, monitor 144.39 in rural areas for meteor packets 
+<LI> See great results of some early experiments in 1998 and 1999 below...
+<LI> Add 6m FM receivers to scattered IGates to capture emergency
+     APRS emails/messages out of a disaster area.
+<LI> Prepare for hammering messages back into an affected area's D7/D700's 
+using 9600 baud MS on 2m.
+<LI> See <A HREF="APRS-docs/METEOR.TXT">METEOR.TXT</A> for details
+</B>
+<P>
+
+</FONT>
+<P>
+<B>Monitoring APRS for Meteor Packets:</B> .  Anyone in a relatively rural area
+can easily just monitor APRS any night, and especially during meteor
+showers to see what kind of packets can be heard.  APRS has the advantage of dozens
+of packets beging transmitted every second from all over the USA on the same 
+frequency.  Any of these are potential Meteor bounce packets, but only if the
+listener is in a quiet location.  But this is quite possible in most non-city
+areas.  Before we get into the details of how to monitor for Meteors on 144.39 
+in the USA, first some facts:
+<P>
+<LI> The biggest interference to reception is the local digipeater
+<LI> 95% of the packets from any digipeater are coming from out-of-area.
+<LI> The New-N paradigm has reduced the number of dupes by a factor of 2 to 3 or more
+<LI> The primary mission of APRS in most areas is LOCAL communications.
+
+<P>
+<B>Monitoring Meteor Packets:</B> . You must use a beam.
+<P>
+If you live in a quiet area, where your digi is only busy say 20% of the time, then
+your station can still hear possible meteor packets for 80% of the time!  Just point
+your beam towards a HIGH density APRS area between 500 to 1000 miles away.  Clear your
+APRS memories and buffers and go to sleep.  Next morning see what you got?
+<P>
+<B>Meteor Shower Special Events:</B> . Since meteor showers only last one night and are very predictable,
+it is easy to further improve your chances of hearing packets by asking the local 
+DIGI sysop to change the settings for one night.  These "meteor-event" digi settings
+will still allow local digipeating of all packets and all visitors, but will reduce
+the number of packets coming in from out of area.  This way, APRS continues to perform
+locally, but the amount of channel loading goes down by a factor of TEN or more!
+<P>
+For the night of a meteor shower, (Persides, Leonids, or Geminids, (August, November and December),
+simply ask the local DIGI sysop to change UITRACE from "WIDE" to OFF and make sure
+that the UIDIGI LIST contains WIDE1-1, WIDE2-1, WIDE2-2, and WIDE3-3.  This will quiet
+the channel drastically in rural areas.  Point your beam, and see what you capture
+by the next morning.  It might also be useful to post an APRS bulletin the week in advance
+on the local channel announcing
+something like "APRS digipeating reduced to local hops only on 12 August"...
+<P>
+<B>Meteor Shower Results in 1995</B> 
+<P>
+The rest of this page is historical.  APRSdos has a fully automatic Meteor scatter communications
+mode, but it was not implemented by any other authors that I konw of.  It is not
+appropriate to use the special MeteorScatter mode on 144.39 but only on dedicaed
+frequenceis such as 147.585 maybe, if agreed in advance.  This is why meteor packet
+capture on 144.39 as  described above has been developed to make it more routine
+and where all the action already is.
+
+<P>
+During the 1998 Leonids we saw good APRS packet meteor scatter propogation.  
+Please read <A HREF=""APRS-docs/METEOR.TXT">METEOR.TXT</A> which tells you all about using APRS 
+or just a TNC for MScatter.  The map below shows the results of the 
+1995 Perseids Meteor Scatter APRS tests.
+
+<HR WIDTH="100%">
+<CENTER><P>
+<APPLET codebase = "javaprs/" CODE ="javAPRS.class" WIDTH = 500 HEIGHT = 350>
+<PARAM name = "backgroundColor" value = "black">
+<PARAM name = "dosMap" value = "usa.mp">
+<PARAM name = "dataFile1" value = "mscatter.hst">
+<PARAM name = "sleep" value = "100">
+<PARAM name = "autoScale" value = "true">
+<PARAM name = "showAllMapLabels" value = "false">
+<PARAM name = "displayVectors" value = "true">
+<PARAM name = "stationList" value = "true">
+<PARAM name = "showNewStations" value = "true">
+</P></CENTER>
+
+<CENTER><P><PARAM name = "mapListFile" value ="hflist.txt"></APPLET><BR>
+
+<HR WIDTH="100%"></P></CENTER>
+<CENTER><TABLE BORDER="2" CELLPADDING="2" CELLSPACING="1">
+<CAPTION><B><BIG>javAPRS Commands (Case Insensitive)</BIG></B></CAPTION>
+<TR>
+<TD><center>U or D</center></TD>	<TD>zooms up/down (you may also use PGup/dn)</TD>
+</TR>
+<TR>
+<TD><center>L, S, or M</center></TD>	<TD>List stations, Show Status or Messages to Java console</TD>
+</TR>
+<TR>
+<TD><center>CTRL or ALT-click</center></TD>	<TD>Centers or Zooms map on clicked location</TD>
+</TR>
+<TR>
+<TD><center>Arrow keys</center></TD>	<TD>scrolls map</TD>
+</TR>
+</TABLE></CENTER>
+
+<CENTER><P>
+<HR WIDTH = "100%"></P></CENTER>
+
+<P> You are visitor number <IMG SRC="http://web.usna.navy.mil/cgi-bin/counter/counter?bruninga11"> since 14 Nov 1999.  This site recorded 17,401 hits from April 98 to Nov 99.</P>
+<P>Return to the <A HREF="aprs.html">APRS HOMEPAGE</A> 
+
+<HR WIDTH="100%"><FONT SIZE=-2>The Naval Academy is a registered user of
+APRS and WinAPRS. The purpose of this web page is to show several applications
+currently in use at this site and should not be considered as an advertisement
+or an endorsement of any commercial product.</FONT></P></CENTER>
+</CAPTION>
+
+</TABLE></CENTER>
+
+</BODY>
+</HTML>

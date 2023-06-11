@@ -1,0 +1,577 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>APRSTT Translator</title>
+
+<script language="javascript" type="text/javascript">
+
+/* APRSTT Qikcom Callsign Translator
+   WB4APR Specification: http://aprs.org/qikcom-2.html
+   Contact Bob Wood WA7MXZ for revisions */
+
+var ary_trans_tbl = new Array(); // Global array to hold character translations
+var grid_trans_tbl = new Array(); // Global array to hold grid translations
+var grid_array_len=100;
+
+// Initialize translation array and add overlay selections
+function initialize()
+{
+	var j;
+
+	// Create a two dimensional array
+	for (j = 0; j < 26; j++)
+		ary_trans_tbl[j] = new Array(3);
+	
+	// Load translations
+	ary_trans_tbl[0][0] = 'A';
+	ary_trans_tbl[0][1] = '2';
+	ary_trans_tbl[0][2] = '1';
+	ary_trans_tbl[1][0] = 'B';
+	ary_trans_tbl[1][1] = '2';
+	ary_trans_tbl[1][2] = '2';
+	ary_trans_tbl[2][0] = 'C';
+	ary_trans_tbl[2][1] = '2';
+	ary_trans_tbl[2][2] = '3';
+	ary_trans_tbl[3][0] = 'D';
+	ary_trans_tbl[3][1] = '3';
+	ary_trans_tbl[3][2] = '1';
+	ary_trans_tbl[4][0] = 'E';
+	ary_trans_tbl[4][1] = '3';
+	ary_trans_tbl[4][2] = '2';
+	ary_trans_tbl[5][0] = 'F';
+	ary_trans_tbl[5][1] = '3';
+	ary_trans_tbl[5][2] = '3';
+	ary_trans_tbl[6][0] = 'G';
+	ary_trans_tbl[6][1] = '4';
+	ary_trans_tbl[6][2] = '1';
+	ary_trans_tbl[7][0] = 'H';
+	ary_trans_tbl[7][1] = '4';
+	ary_trans_tbl[7][2] = '2';
+	ary_trans_tbl[8][0] = 'I';
+	ary_trans_tbl[8][1] = '4';
+	ary_trans_tbl[8][2] = '3';
+	ary_trans_tbl[9][0] = 'J';
+	ary_trans_tbl[9][1] = '5';
+	ary_trans_tbl[9][2] = '1';
+	ary_trans_tbl[10][0] = 'K';
+	ary_trans_tbl[10][1] = '5';
+	ary_trans_tbl[10][2] = '2';
+	ary_trans_tbl[11][0] = 'L';
+	ary_trans_tbl[11][1] = '5';
+	ary_trans_tbl[11][2] = '3';
+	ary_trans_tbl[12][0] = 'M';
+	ary_trans_tbl[12][1] = '6';
+	ary_trans_tbl[12][2] = '1';
+	ary_trans_tbl[13][0] = 'N';
+	ary_trans_tbl[13][1] = '6';
+	ary_trans_tbl[13][2] = '2';
+	ary_trans_tbl[14][0] = 'O';
+	ary_trans_tbl[14][1] = '6';
+	ary_trans_tbl[14][2] = '3';
+	ary_trans_tbl[15][0] = 'P';
+	ary_trans_tbl[15][1] = '7';
+	ary_trans_tbl[15][2] = '1';
+	ary_trans_tbl[16][0] = 'Q';
+	ary_trans_tbl[16][1] = '1';
+	ary_trans_tbl[16][2] = '2';
+	ary_trans_tbl[17][0] = 'R';
+	ary_trans_tbl[17][1] = '7';
+	ary_trans_tbl[17][2] = '2';
+	ary_trans_tbl[18][0] = 'S';
+	ary_trans_tbl[18][1] = '7';
+	ary_trans_tbl[18][2] = '3';
+	ary_trans_tbl[19][0] = 'T';
+	ary_trans_tbl[19][1] = '8';
+	ary_trans_tbl[19][2] = '1';
+	ary_trans_tbl[20][0] = 'U';
+	ary_trans_tbl[20][1] = '8';
+	ary_trans_tbl[20][2] = '2';
+	ary_trans_tbl[21][0] = 'V';
+	ary_trans_tbl[21][1] = '8';
+	ary_trans_tbl[21][2] = '3';
+	ary_trans_tbl[22][0] = 'W';
+	ary_trans_tbl[22][1] = '9';
+	ary_trans_tbl[22][2] = '1';
+	ary_trans_tbl[23][0] = 'X';
+	ary_trans_tbl[23][1] = '9';
+	ary_trans_tbl[23][2] = '2';
+	ary_trans_tbl[24][0] = 'Y';
+	ary_trans_tbl[24][1] = '9';
+	ary_trans_tbl[24][2] = '3';
+	ary_trans_tbl[25][0] = 'Z';
+	ary_trans_tbl[25][1] = '1';
+	ary_trans_tbl[25][2] = '2';
+
+	// Create a two dimensional array
+	for (j = 0; j < grid_array_len; j++)
+		grid_trans_tbl[j] = new Array(2);
+	
+//	// Load translations
+	grid_trans_tbl[0][0] = 'AP';
+	grid_trans_tbl[0][1] = '00';
+	grid_trans_tbl[1][0] = 'BP';
+	grid_trans_tbl[1][1] = '01';
+	grid_trans_tbl[2][0] = 'AO';
+	grid_trans_tbl[2][1] = '02';
+	grid_trans_tbl[3][0] = 'BO';
+	grid_trans_tbl[3][1] = '03';
+	grid_trans_tbl[4][0] = 'CO';
+	grid_trans_tbl[4][1] = '04';
+	grid_trans_tbl[5][0] = 'DO';
+	grid_trans_tbl[5][1] = '05';
+	grid_trans_tbl[6][0] = 'EO';
+	grid_trans_tbl[6][1] = '06';
+	grid_trans_tbl[7][0] = 'FO';
+	grid_trans_tbl[7][1] = '07';
+	grid_trans_tbl[8][0] = 'GO';
+	grid_trans_tbl[8][1] = '08';
+	grid_trans_tbl[9][0] = 'OJ';
+	grid_trans_tbl[9][1] = '09';
+	grid_trans_tbl[10][0] = 'CN';
+	grid_trans_tbl[10][1] = '10';
+	grid_trans_tbl[11][0] = 'DN';
+	grid_trans_tbl[11][1] = '11';
+	grid_trans_tbl[12][0] = 'EN';
+	grid_trans_tbl[12][1] = '12';
+	grid_trans_tbl[13][0] = 'FN';
+	grid_trans_tbl[13][1] = '13';
+	grid_trans_tbl[14][0] = 'GN';
+	grid_trans_tbl[14][1] = '14';
+	grid_trans_tbl[15][0] = 'CM';
+	grid_trans_tbl[15][1] = '15';
+	grid_trans_tbl[16][0] = 'DM';
+	grid_trans_tbl[16][1] = '16';
+	grid_trans_tbl[17][0] = 'EM';
+	grid_trans_tbl[17][1] = '17';
+	grid_trans_tbl[18][0] = 'FM';
+	grid_trans_tbl[18][1] = '18'; 
+	grid_trans_tbl[19][0] = 'OI';
+	grid_trans_tbl[19][1] = '19'; 
+	grid_trans_tbl[20][0] = 'DL';
+	grid_trans_tbl[20][1] = '20';
+	grid_trans_tbl[20][0] = 'EL';
+	grid_trans_tbl[21][1] = '21';
+	grid_trans_tbl[22][0] = 'FL';
+	grid_trans_tbl[22][1] = '22';
+	grid_trans_tbl[23][0] = 'DK';
+	grid_trans_tbl[23][1] = '23';
+	grid_trans_tbl[24][0] = 'EK';
+	grid_trans_tbl[24][1] = '24';
+	grid_trans_tbl[25][0] = 'FK';
+	grid_trans_tbl[25][1] = '25';
+	grid_trans_tbl[26][0] = 'EJ';
+	grid_trans_tbl[26][1] = '26';
+	grid_trans_tbl[27][0] = 'FJ';
+	grid_trans_tbl[27][1] = '27';
+	grid_trans_tbl[28][0] = 'GI';
+	grid_trans_tbl[28][1] = '28';
+	grid_trans_tbl[29][0] = 'PI';
+	grid_trans_tbl[29][1] = '29'; 
+	grid_trans_tbl[30][0] = 'FI';
+	grid_trans_tbl[30][1] = '30';
+	grid_trans_tbl[30][0] = 'GI';
+	grid_trans_tbl[31][1] = '31';
+	grid_trans_tbl[32][0] = 'HI';
+	grid_trans_tbl[32][1] = '32';
+	grid_trans_tbl[33][0] = 'FH';
+	grid_trans_tbl[33][1] = '33';
+	grid_trans_tbl[34][0] = 'GH';
+	grid_trans_tbl[34][1] = '34';
+	grid_trans_tbl[35][0] = 'HH';
+	grid_trans_tbl[35][1] = '35';
+	grid_trans_tbl[36][0] = 'FG';
+	grid_trans_tbl[36][1] = '36';
+	grid_trans_tbl[37][0] = 'GG';
+	grid_trans_tbl[37][1] = '37';
+	grid_trans_tbl[38][0] = 'FF';
+	grid_trans_tbl[38][1] = '38';
+	grid_trans_tbl[39][0] = 'GF';
+	grid_trans_tbl[39][1] = '39'; 
+	grid_trans_tbl[40][0] = 'JP';
+	grid_trans_tbl[40][1] = '40';
+	grid_trans_tbl[41][0] = 'IO';
+	grid_trans_tbl[41][1] = '41';
+	grid_trans_tbl[42][0] = 'JO';
+	grid_trans_tbl[42][1] = '42';
+	grid_trans_tbl[43][0] = 'KO';
+	grid_trans_tbl[43][1] = '43';
+	grid_trans_tbl[44][0] = 'IN';
+	grid_trans_tbl[44][1] = '44';
+	grid_trans_tbl[45][0] = 'JN';
+	grid_trans_tbl[45][1] = '45';
+	grid_trans_tbl[36][0] = 'KN';
+	grid_trans_tbl[46][1] = '46';
+	grid_trans_tbl[47][0] = 'IM';
+	grid_trans_tbl[47][1] = '47';
+	grid_trans_tbl[48][0] = 'JM';
+	grid_trans_tbl[48][1] = '48';
+	grid_trans_tbl[49][0] = 'KM';
+	grid_trans_tbl[49][1] = '49'; 
+	grid_trans_tbl[50][0] = 'LO';
+	grid_trans_tbl[50][1] = '50';
+	grid_trans_tbl[51][0] = 'MO';
+	grid_trans_tbl[51][1] = '51';
+	grid_trans_tbl[52][0] = 'MO';
+	grid_trans_tbl[52][1] = '52';
+	grid_trans_tbl[53][0] = 'NO';
+	grid_trans_tbl[53][1] = '53';
+	grid_trans_tbl[54][0] = 'PO';
+	grid_trans_tbl[54][1] = '54';
+	grid_trans_tbl[55][0] = 'QO';
+	grid_trans_tbl[55][1] = '55';
+	grid_trans_tbl[56][0] = 'RO';
+	grid_trans_tbl[56][1] = '56';
+	grid_trans_tbl[57][0] = 'LN';
+	grid_trans_tbl[57][1] = '57';
+	grid_trans_tbl[58][0] = 'MN';
+	grid_trans_tbl[58][1] = '58';
+	grid_trans_tbl[59][0] = 'NN';
+	grid_trans_tbl[59][1] = '59'; 
+	grid_trans_tbl[60][0] = 'ON';
+	grid_trans_tbl[60][1] = '60';
+	grid_trans_tbl[61][0] = 'PN';
+	grid_trans_tbl[61][1] = '61';
+	grid_trans_tbl[62][0] = 'QN';
+	grid_trans_tbl[62][1] = '62';
+	grid_trans_tbl[63][0] = 'OM';
+	grid_trans_tbl[63][1] = '63';
+	grid_trans_tbl[64][0] = 'PM';
+	grid_trans_tbl[64][1] = '64';
+	grid_trans_tbl[65][0] = 'QM';
+	grid_trans_tbl[65][1] = '65';
+	grid_trans_tbl[66][0] = 'OL';
+	grid_trans_tbl[66][1] = '66';
+	grid_trans_tbl[67][0] = 'PL';
+	grid_trans_tbl[67][1] = '67';
+	grid_trans_tbl[68][0] = 'OK';
+	grid_trans_tbl[68][1] = '68';
+	grid_trans_tbl[69][0] = 'PK';
+	grid_trans_tbl[69][1] = '69'; 
+	grid_trans_tbl[70][0] = 'LM';
+	grid_trans_tbl[70][1] = '70';
+	grid_trans_tbl[71][0] = 'MM';
+	grid_trans_tbl[71][1] = '71';
+	grid_trans_tbl[72][0] = 'NM';
+	grid_trans_tbl[72][1] = '72';
+	grid_trans_tbl[73][0] = 'LL';
+	grid_trans_tbl[73][1] = '73';
+	grid_trans_tbl[74][0] = 'ML';
+	grid_trans_tbl[74][1] = '74';
+	grid_trans_tbl[75][0] = 'NL';
+	grid_trans_tbl[75][1] = '75';
+	grid_trans_tbl[76][0] = 'LK';
+	grid_trans_tbl[76][1] = '76';
+	grid_trans_tbl[77][0] = 'MK';
+	grid_trans_tbl[77][1] = '77';
+	grid_trans_tbl[78][0] = 'NK';
+	grid_trans_tbl[78][1] = '78';
+	grid_trans_tbl[79][0] = 'LJ';
+	grid_trans_tbl[79][1] = '79'; 
+	grid_trans_tbl[80][0] = 'PH';
+	grid_trans_tbl[80][1] = '80';
+	grid_trans_tbl[81][0] = 'QH';
+	grid_trans_tbl[81][1] = '81';
+	grid_trans_tbl[82][0] = 'OG';
+	grid_trans_tbl[82][1] = '82';
+	grid_trans_tbl[83][0] = 'PG';
+	grid_trans_tbl[83][1] = '83';
+	grid_trans_tbl[84][0] = 'QG';
+	grid_trans_tbl[84][1] = '84';
+	grid_trans_tbl[85][0] = 'OF';
+	grid_trans_tbl[85][1] = '85';
+	grid_trans_tbl[86][0] = 'PF';
+	grid_trans_tbl[86][1] = '86';
+	grid_trans_tbl[87][0] = 'QF';
+	grid_trans_tbl[87][1] = '87';
+	grid_trans_tbl[88][0] = 'RF';
+	grid_trans_tbl[88][1] = '88';
+	grid_trans_tbl[89][0] = 'RE';
+	grid_trans_tbl[89][1] = '89'; 
+	grid_trans_tbl[90][0] = 'IL';
+	grid_trans_tbl[90][1] = '90';
+	grid_trans_tbl[91][0] = 'IK';
+	grid_trans_tbl[91][1] = '91';
+	grid_trans_tbl[92][0] = 'IJ';
+	grid_trans_tbl[92][1] = '92';
+	grid_trans_tbl[93][0] = 'JJ';
+	grid_trans_tbl[93][1] = '93';
+	grid_trans_tbl[94][0] = 'JL';
+	grid_trans_tbl[94][1] = '94';
+	grid_trans_tbl[95][0] = 'JH';
+	grid_trans_tbl[95][1] = '95';
+	grid_trans_tbl[96][0] = 'JG';
+	grid_trans_tbl[96][1] = '96';
+	grid_trans_tbl[97][0] = 'KG';
+	grid_trans_tbl[97][1] = '97';
+	grid_trans_tbl[98][0] = 'JF';
+	grid_trans_tbl[98][1] = '98';
+	grid_trans_tbl[99][0] = 'KF';
+	grid_trans_tbl[99][1] = '99'; 
+	
+}
+
+function translate_aprstt() { var str_callsign = document.frm_aprstt.txt_call.value; var i = 0; var s = ''; var str_char = ''; var code_string = '';
+	var code_numeric = 0;
+	var str_checksum = '';
+
+	// If no value has been provided for the callsign, abort
+	if (str_callsign.length > 0 && str_callsign.length < 7)
+		{
+			// Check if a dash was entered
+			if (str_callsign.indexOf("-") > -1)
+			{
+			alert('Please enter only the callsign, no SSID. To be converted to Q2');
+			return;
+			}
+		}
+		else
+		{
+			alert('Please enter a valid callsign.');
+			return;
+		}
+	
+	// ____FULL CALLSIGN CALCULATION____
+	// Cycle through callsign and convert characters to APRSTT equivalent	
+	for (i = 0; i < str_callsign.length; i++)
+		{
+		str_char = str_callsign.charAt(i);
+		
+		if (is_numeric(str_char))
+			{
+			s = s + str_char;
+			code_char = '0';
+			}
+		else if (is_alpha(str_char))
+			{
+			s = s + convert_char(str_char);
+			//code_string = code_string + code_char;
+			}
+		switch(i) {
+			case 0:
+				code_numeric = code_numeric + code_char*1024;
+			break;
+			case 1:
+				code_numeric = code_numeric + code_char*256;
+			break;
+			case 2:
+				code_numeric = code_numeric + code_char*64;
+			break;
+			case 3:
+				code_numeric = code_numeric + code_char*16;
+			break;
+			case 4:
+				code_numeric = code_numeric + code_char*4;
+			break;
+			case 5:
+				code_numeric = code_numeric + code_char*1;
+			break;
+			default:
+			break;
+			}
+			// Debugging alert(code_numeric);
+		}
+		if (i == 3)
+				s = s + '000';
+		if (i == 4)
+				s = s + '00';
+		if (i == 5)
+				s = s + '0';
+		
+	// Slap an A on the front and the overlay on the end
+	grid_result = convert_grid(document.frm_aprstt.grid_square.value);
+	grid_number = document.frm_aprstt.grid_square.value.substring(2,4);
+//	s = '*' + document.frm_aprstt.grid_square.value +  s;
+	s = '*' + grid_result + grid_number + s;
+	
+	// Add the checksum and pound to the end
+	//	Old version: s = s + calculate_checksum(s) + '#';
+	s = s + code_numeric + '#';
+	
+	// Display the translated string
+	document.frm_aprstt.txt_aprstt_translation.value = s;
+	
+	
+	// ____ABBREVIATED CALLSIGN CALCULATION____
+	// Cycle through right three characters of callsign and convert 
+	// characters to abbreviated APRSTT equivalent	
+	s = '';
+	for (i = str_callsign.length-3; i < str_callsign.length; i++)
+		{
+		str_char = str_callsign.charAt(i);
+		
+		if (is_numeric(str_char))
+			{
+			s = s + str_char;
+			//code_string = code_string + code_char;
+			}
+		else if (is_alpha(str_char))
+			{
+			code_string = code_string + '0';
+			s = s + convert_char(str_char).charAt(0);
+			}
+		}
+
+	// Slap an A on the front and the overlay on the end
+	grid_result = convert_grid(document.frm_aprstt.grid_square.value);
+	grid_number = document.frm_aprstt.grid_square.value.substring(2,4);
+//	s = '*' + document.frm_aprstt.grid_square.value + s;
+	s = '*' + grid_result + grid_number + s;
+	
+	// Add the checksum and pound to the end
+	s = s + calculate_checksum(s) + code_numeric + '#';
+	
+	// Display the translated string
+	document.frm_aprstt.txt_aprstt_translation_suffix.value = s;
+	
+	return;	
+}
+
+function convert_grid(what_grid)
+{
+	var grid_upper = what_grid.toUpperCase();	
+	for(i=0;i < grid_array_len;i++)
+	{
+//	alert(grid_upper.substring(0,2));
+	if (grid_trans_tbl[i][0] == grid_upper.substring(0,2))
+		{
+		return grid_trans_tbl[i][1];
+//		return "1819";
+		}
+	}
+	return("INVALID GRID");
+}
+
+// Cycle through the array and return the TT sequence for
+// the passed character.
+function convert_char(what_char)
+{
+	for (i = 0; i < 26; i++)
+		{
+		if (ary_trans_tbl[i][0] == what_char.toUpperCase())
+			{
+			code_char = ary_trans_tbl[i][2];
+			return ary_trans_tbl[i][1];
+			}
+		}
+}
+
+// Determine if the passed character is numeric
+function is_numeric(value)
+{
+	var anum=/(^\d+$)|(^\d+\.\d+$)/
+
+	if (anum.test(value))
+		return true;
+
+	return false;
+}
+
+// Determine if the passed character is alphabetic
+function is_alpha(value)
+{
+	var anum=/([a-z])|([A-Z])/
+
+	if (anum.test(value))
+		return true;
+
+	return false;
+}
+
+// Calculate the checksum of the passed string.
+// Add numerics together. A=10, B=11, C=12 and 
+// D=13. Return the right-most digit as the
+// checksum. Note: JavaScript is a loosely
+// typed language. To force JavaScript to treat
+// passed numbers as values and not strings, have
+// to multiply them by one.
+function calculate_checksum(what_string)
+{
+	var str_char = '';
+	var int_checksum = 0;
+	
+	for (i=0; i < what_string.length; i++)
+		{ 
+		str_char = what_string.charAt(i);
+		
+		if (is_numeric(str_char))
+			{
+			// Force handling as numeric by multiplication
+			int_checksum = str_char * 1 + int_checksum;
+			}
+		else if (str_char == "A")
+				{
+				int_checksum = int_checksum + 10;
+				}		
+		else if (str_char == "B")
+				{
+				int_checksum = int_checksum + 11;
+				}		
+		else if (str_char == "C")
+				{
+				int_checksum = int_checksum + 12;
+				}		
+		else if (str_char == "D")
+				{
+				int_checksum = int_checksum + 13;
+				}		
+		}
+
+	// Return last digit as checksum
+	return(String(int_checksum).charAt(String(int_checksum).length - 1));
+}
+
+// Add entry to specified selection list
+function add_option(what_selectbox,what_text,what_value)
+{
+	var optn = document.createElement("OPTION");
+	optn.text = what_text;
+	optn.value = what_value;
+	what_selectbox.options.add(optn);
+}
+
+</script>
+
+</head>
+
+<body BGCOLOR="#64503D" onload="initialize()">
+<br />
+
+  <a style="font-size: 25px; color:white; position:fixed; left:355px;bottom:500px;" href="https://www.qrz.com/gridmapper">Find Your Grid Square at QRZ</a>
+<!--  <img src="grid-square-map-box.png" style=" position:fixed; right:335px;bottom:27px;width:843px;height:280px;"> -->
+<form name="frm_aprstt">
+  <table
+style="width: 840px; height: 450px; text-align: left; margin-left: auto; margin-right: auto; background-image: url(dh72aprs-psat.jpg);"
+ border="0" cellpadding="2" cellspacing="2">
+    <tbody>
+      <tr style="font-weight: bold; font-size: 18px; color: white;">; <td><br><center>DTMF Converter by Bob Wood, WA7MXZ</center><br>Provide your callsign for Qikcom-2 conversion (without SSID), put in your Grid Square (like FM19) then click the Translate button. Store this &nbsp;sequence
+in DTMF memory.</td>
+      </tr>
+      <tr align="center">
+        <td><span style="font-weight: bold; color: white;">Call:</span>
+        <input name="txt_call" />&nbsp;&nbsp;<span
+ style="font-weight: bold; color: white;">Grid Square:
+        </span>
+        <input name="grid_square">
+        </select>
+        </td>
+      </tr>
+      <tr align="center">
+        <td><span style="font-weight: bold; color: white;">Translation:</span>&nbsp;<input value="" readonly="readonly" name="txt_aprstt_translation">
+        </td>
+        <td>
+        </td>
+	  </tr>
+      <tr>
+        <td align="center"><input value="Translate"
+ name="btn_translate" onclick="translate_aprstt()"
+ type="button" /></td>
+      </tr>
+    </tbody>
+  </table>
+  <br />
+  <br />
+  <br />
+</form>
+</body>
+</html>

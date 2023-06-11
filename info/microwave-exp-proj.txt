@@ -1,0 +1,59 @@
+Microwave Experimental Project - APRS Antenna Pointing    14 Nov 08
+-------------------------------------------------------------------
+
+I was approached by some microwave experimenters looking to use
+APRS for antenna alignment between stations.  I recommended the
+following format:
+
+HEADER:  CALLSIGN>APMEPx,WIDE1-1:
+
+=DDMM.mmN/DDDMM.mmW\CSE/SPD/BRG/NRQ/FFF.FFFMHz ATV-MEP 
+
+You will recognize this as the APRS DF BEARING report format.  The
+advantage of using this format is that all APRS clients already
+should plot these antenna bearings on the map, and no one is
+using the DF bearing format as much as we had hoped years ago.
+
+Where BRG is the antenna bearing 001 to 360
+Where NRQ is 3 digits....  Set N=9
+Where  R  is Range encoded as R^2 (4=16mi etc)
+Where   Q is Quality or  beamwidth.
+9 = 1 degree wide
+8 = 2 degree
+7 = 4 degree
+5 = 8 degree
+4 = 16 degree
+3 = 32 degree
+2 = 64 degree
+1 = 128 degree
+0 = OMNI
+
+I am surprised that I cannot find NRQ defined in the APRS SPEC.
+(Maybe I didn't look hard enough) So I went back to my original
+docs PROTOCOL.TXT and DF.TXT but even they did not document the
+Q byte.  Ill fix that by adding this to the APRS1.2 addendum:
+www.aprs.org/aprs12.html
+
+Of course FFF.FFFMHz is too small for microwave, but the Freq
+spec has defined additional characters so we have well defined
+formats for microwave.
+
+A96.000MHz would be 1296 MHz
+B20.000MHz would be 2320 MHz
+C01.000MHz would be 2401 MHz 
+D01.000MHz would be 3401 MHz
+E51.000MHz would be 5651 MHz 
+F60.000MHz would be 5760 MHz 
+G30.000MHz would be 5830 MHz
+H01.000MHz would be 10,101 MHz
+I01.000MHz would be 10,201 MHz
+J68.000MHz would be 10,368 MHz 
+K01.000MHz would be 10,401 MHz
+L01.000MHz would be 10,501 MHz
+M48.000MHz would be 24,048 MHz 
+N01.000MHz would be 24,101 MHz
+O01.000MHz would be 24,201 MHz
+Etc
+
+Thanks
+Bob, WB4APR

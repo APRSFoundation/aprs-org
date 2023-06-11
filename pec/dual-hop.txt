@@ -1,0 +1,62 @@
+PCSAT-1 and PCSAT2 DUAL-HOP OPPORTUNITY                      1 Dec 2005
+-----------------------------------------------------------------------
+
+PCSAT2 woke up Thursday morning, 1 Dec in good sun since the ISS 
+just shifted its attitude to XPOP (Xaxis Perpendicular to Orbit Plane).
+This puts PCSAT2 fully facing the sun whenever the ISS is in daylight.  
+PC2 went to low-power shut down a week ago on 23 Nov).  Actually the
+same day that we accomplished a full recovery on PCSAT-1.
+
+PCSAT2 volts immediately began to rise and after only a few orbits is
+back to normal operating mode.  The user digipeater has been enabled
+(145.825 uplink and 435.275 downlink.) and until 7 Dec, is using its
+145.825 downlink for constellation operation with PCSAT-1.  Here are 
+additional details on our plan to do some dual hop experiments:
+
+1) We have added SGATE as an alias to PCSAT2 so that ANY over-the-
+horizon PCSAT-1 originated packets (telemetry and beacons) that are 
+heard by PCSAT2 will be relayed. (THey already have SGATE in them)...
+
+2) Stations sending up through PCSAT-1 as a first hop may get a 2nd 
+hop through PCSAT2 if they use any dual hop path (ARISS,ARISS; or WIDE2-2;
+or PCSAT2,PCSAT-1; etc)  The second hop will only be heard on the 
+PCSAT-2 435.275 downlink.
+
+3) After the SCHOOL CONTACT on Dec-02, PCSAT2 was switched from 435.275 
+downlink to 145.825 so that PCSAT2 and PCSAT-1 are identical systems both 
+with uplinks and downlinks on 145.825 acting as a 2-hop constellation 
+both on 145.825.   
+
+CAUTION:  Do not use PCSAT2 (on 145.825 downlink) if the crew is using
+their ARISS radio for voice on 145.800!  Successsful packets tend to
+block the crew's receiver...
+
+4) THe PCSAT2 dowlink will shift back to 435.275 on 7 Dec to avoid any 
+possible interference with the next SCHOOL CONTACT with Sanderson, TX 
+on 8 Dec at 1730z.
+
+Of course, the MORE that try the FEWER will be the success rate.  So if 
+you really dont know what you are doing, PLEASE do not transmit and 
+just watch. YOUR station may be the one that SEES the dual hop, so that 
+should be a good reward too. 
+
+THINK about the geometry. When PCSAT-1 is over the horizon, but PCSAT2 is 
+in view, then JUST LISTEN to see if you hear any PCSAT-1 packets 
+(transmitting in this case will only jam yourself and everyone else
+listening for the dual hops from PCSAT-1).
+
+When one is over the ocean (no one using it) then DONT transmit through 
+the one in view (its just jamming the channel we are all listening on).
+
+Make your packet as SHORT as possible and use the shortest TXD for your 
+TNC.  The PCSATs should  respond with TXD's as low as 10 (100 ms) though
+your own station may not be fast enough to see your own packet.
+
+Transmit occassionally, NOT repeatedly.  If 60  people are trying, then 
+you should transmit only 1/60th of the time.  Maybe once a minute or so. 
+
+For details see the PCSAT2 web page:
+
+http://www.ew.usna.edu/~bruninga/pcsat2.html 
+
+de WB4APR, Bob

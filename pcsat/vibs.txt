@@ -1,0 +1,32 @@
+PCsat VIBRATION TEST REQUIREMENTS                        WB4APR
+---------------------------------------------------------------
+
+
+Here are the vibration requirements we designed to for PCsat:
+
+
+VIB LEVELS (1 in 20 (5% probability of being exceeded)):
+
+  FREQ   POWER DENSITY(g^2/Hz)
+  ----   ---------------------
+    20          .001
+   500          .015 
+  2000          .015
+
+
+SINE VIBRATIONS QUALIFICATION SPECIFICATIONS: (we tested to 5 G's I think)
+
+  FREQ   LONGITUDINAL   TRANSVERSE
+  ----   ------------   -----------
+ 85-110    2.5 G's       2.0 G's
+145-175    2.5 G's       2.0 G's
+
+
+ACOUSTICS
+
+105 dB @ 20 Hz ramps up to 115 dB at 40 Hz
+Level at 115 dB at 40 HZ to 90 Hz
+Ramps up to 125 dB at 110 Hz
+Level at 125 dB up to 500 Hz
+Ramps up to 132 dB at 850 Hz
+Ramps down to 115 dB at 1800 Hz

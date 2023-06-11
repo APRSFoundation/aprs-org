@@ -1,0 +1,43 @@
+Informal List of THINK owners on the THINK Yahoo Group  1 Aug 2016
+------------------------------------------------------------------------
+
+ 1k mi, "BRICK" fm auction. Fixed MLEC. Now RLEC. But wont go  - Bob
+11k mi, Carl
+17k mi, shifter flakey in reverse - Arthur
+17k mi, Zebra, battery OK, but a noise at the gear. It is No 5046. Chris
+20k mi, New LED headlights - Holger
+22k mi, L2@home. Warped plastic in shifter caused switch probs.  Chris
+24k mi, Hirsch
+25k mi, "PO" Blue Th!nk in Silicon Valley:  runs perfect. - Steve
+26k mi, no probs. New tires at 20k - Don
+27k mi, "PIT" Got used at 27k mi.  Repaired MLEC. Now OK. - Bob (me)
+30k mi, charge at home L2.    2 to 80 mi/day. Kept in carport.- Howard
+30k mi, tires at 15k, Bricked and RESET twice due to low 12v - Cherry
+32k mi, FOR SALE $6500 - Kurt
+32k mi, PCU at 13k, J1772, Red plastic fading - Doug
+35k mi, "THUNK" Oregon -no noticeable range decrease in time. Myles
+35k mi, since new - Lanny
+35k mi, jeff
+35k mi, new ower 4 days ago - Ben
+35k mi, had MLEC, now new owner Rob, Purdue
+36k mi, had PCU fuse fix and RLEC failure at 35k mi. AC is dead  Kyle
+36k mi, all OK in Indiana - Richard
+40k mi, No issues so far. -John
+42k mi, new Trans at 2yrs, MLEC at 3 twice, replaced tie rods at 5 - Cary
+47k mi, replaced 2 tires. Charge L2 and now L1 - Jane
+48k mi, in Oregon -Carl
+50k mi, in SC with 3 PCU fuse failures - Carl
+60k mi, Zebra,Norway. Bttry insulation bad. Needs plugin if parked > 8 hrs
+
+Problems:  Everyone knows about the MLEC danger of Heater and Key-cycle.
+
+Howard:  after one month 4 years ago, left the key on but not to START
+all night.  toasted - PCU, MLEC, and climate control.  Diagnosed in at
+Hawthorne Auto Clinic. Parts available.  12k mile... Tire Wear bars showing
+
+John says, no correlation between PCU fuse problems and L1 vs L2.
+Someone noted concerns if all charging is L1, then balance probs may appear?
+
+To add your THINK mileage send email DIRECT to bruninga@usna.edu
+
+Bob

@@ -1,0 +1,63 @@
+ANDE COMMAND AND CONTROL SYSTEM                                WB4APR
+---------------------------------------------------------------------
+                                                          24 Mar 2004
+
+This Naval Academy command and control system for ANDE has 
+been flight proven on PCsat and PCSAT2 and will provide the following 
+capabilities on orbit with the minimum power requirements suitable 
+for this mission:
+
+1) Routine telemetry every 1 minute when in view of command station
+2) Telemetry of 20 analog parameters  (4 blocks of 5 each)
+3) Three on/off command channels and bidirectional RS-232 channel
+4) AX.25 1200 baud compatibilitiy with all existing packet systems 
+   and the worldwide internet linked APRS gnd stations on 145.825.
+5) PCsat style communications worldwide at low duty cycle
+6) Text-to-speech experiment for low-tech communications
+7) Reception by student stations with only a whip antenna.
+8) Average power requirement of only 0.4W
+
+The average power requirement of 0.3 Watts for a mission life of one
+year can easily be met with the 112 Lithium Primary cells in 28 banks
+of 4 cells each.  The extremely low power budget is met with the 
+following operations plan which does not sacrifice any significant 
+operational functions of the PCsat type mission but achieves a 20 to 
+one power savings.
+
+1) Except for a milliwatt timer, all electronics are off
+2) Once every 15 secs for 1.5 secs, the primary TNC and receiver power up.
+3) If no packets are heard, the TNC then powers back off.
+4) If packets are heard, a 1 min timer holds the system ON.
+5) While the TNC and RX are on, the system is fully usable like PCsat.  
+   It will send once a minute telemetry, it will respond to a sysop
+   loggon and the ON/OFF BIT commands, and it is also available to 
+   users to use as a packet relay.
+
+POWER BUDGET:
+
+To determine the power budget, the Satellite is assumed to be in view
+of each command station on 4 passes a day.  There are about 6 full
+time commmand station areas, East USA, West USA, East Europe, West
+Europe, east Australia and Japan.  The satellite may be used in other
+locations, but the duty cycle will be insignificant to these six.
+
+Each such pass is assumed to last 8 minutes.  Thus the total access
+times average to about 120 minutes a day for an 10% dutycycle.  All the
+rest of the time, the TNC/Receiver are only waking up for 1.5 seconds
+out of every 15 for another 10% duty cycle.  The transmitter is assumed
+to transmit 10 Telemetry packets, 10 overhead packets, and 10 user
+packets per pass for a total of 30 in 8 minutes.  Peak rates for packet
+are typically 20% transmit dutycycle when in use.
+
+  Receiver  -  35mA @ 12 volts @  20%        = .08 W
+  TNC       -  20mA @ 12 volts @  20%        = .04 W
+  XMTR      - 500mA @ 12 volts @  20% of 10% = .12 W
+  Bkup Sys  -  55mA @ 12 volts @   3%        = .02 W 
+  Timers etc-   5mA @ 12 volts @ 100%        = .06 W
+  ---------------------------------------------------
+  Total AVERAGE Power                        = .32 W
+
+This power can be met with 112 Lithium Ion Primary cells an last more
+than one year.
+
+de WB4APR, Bob Bruninga

@@ -1,0 +1,94 @@
+Peter G3PLX COMMENTS ON OPERATING THE PC2PSK TRANSPONDER:
+----------------------------------------------------------------------------
+
+Taking up Bob's point about the fastest routes to getting active via the 
+PSK31 transponder, here are a few things that I think will help the 
+first-time user.
+
+1) The transponder downlink audio is not pre-emphasised. That is, the higher 
+audio frequencies are not boosted like they are in conventional voice FM 
+transmitters. Most FM receivers have de-emphasis in the receive audio, and 
+this means that the end-to-end frequency response of the system - from the 
+transponder receiver output to your soundcard input - will droop at the HF 
+end if your FM receiver is of the conventional type. If your FM transceiver 
+has a direct output from the discriminator which bypasses the de-emphasis 
+(sometimes labelled as being suitable for 9600 baud packet reception), then 
+use this one to feed the PC soundcard, and that will give a flat response 
+overall. If you can't do this, then bear in mind that downlink signals at 
+the top end of the audio band will be lower in audio level than those at the 
+bottom, but not necessarily further down in the background noise.
+
+2) The PCSAT2 transponder receiver 'dial frequency' is 29401.1 kHz. By this 
+I mean that if the ISS was stationary and you transmitted to it on that 
+frequency, you would (hypothetically of course) hear a zero-beat in the 
+output.
+
+3) The transponder receiver audio frequency response is centred on 1650Hz, 
+and extends down to 300Hz and up to 3000Hz. The receiver RF passband is 
+therefore 29401.4 to 29404.1 kHz.  It's not too steep at the edges, so these 
+figures are really just a guide.
+
+4) If you wanted to sit right in the centre of the passband, you would set 
+your transmitter dial on 29401.1 kHz and set the PSK31 transmit audio tone 
+at 1.650 kHz, or any combination of the two that results in their sum being 
+29402.75 kHz.  If the ISS was stationary, this would result in your uplink 
+signal on 29402.75 kHz appearing right in the middle of the downlink audio 
+band at 1650Hz.
+
+5) Because of Doppler shift, if you do transmit as in (4) above, your 
+downlink signal will start the pass higher than 1650 Hz, by as much as 
+700Hz, and end up low by the same amount.  From this you can see that 
+there's room to spare. You could transmit as high as 29403.4 or as low as 
+29402.1 and your downlink signal would always be within the 300-3000 Hz 
+range during a worst-case (overhead) pass.
+
+It's much better to calculate where you propose to transmit and stay there, 
+than to discover, halfway through the pass, that your signal is drifting off 
+the bottom of the downlink and you have to QSY up. It's also much easier for 
+other stations to receive you!
+
+6) The transponder receiver has AGC, and if you transmit too much uplink 
+power, it will reduce it's gain and keep the downlink audio level constant. 
+This will prevent lower power signals getting through. It's therefore very 
+important that you know how to recognise the signs of overdrive, but you 
+will not be able to do so by ear. Set up some way to display the downlink 
+audio visually. Even a simple audio voltmeter, or recording level meter, or 
+a scope will be enough, but some people may want to use a soundcard spectrum 
+analyser program, perhaps on a separate computer screen, so that they can 
+pick out individual stations in the downlink. The aim is to learn how to 
+recognise when YOUR signal is dominating the downlink, and to then reduce 
+power. The transponder downlink deviation is about 800Hz when the AGC is 
+operating, so it's possible to calibrate the downlink level display so you 
+can know precisely how hard you are driving the transponder. Later on, we 
+need to decide the best way to share between multiple users, but for the 
+moment it's enough to know that you only need to have a few hundred Hz 
+downlink deviation to be 100% readable on PSK31. As a guide, on the first 
+tests I found that I only needed 2 watts into a 5/8 wave vertical to give 
+500Hz downlink deviation (and no AGC) when the satellite is at a range of 
+500km at 45 degrees elevation.
+
+While activity is still low and while we are still learning, I think the 
+best strategy for a first-time user is to set up the transmitter frequency 
+and power before the pass, leave the transmitter on continuously with a 
+repeating short identification message, and work full duplex. Check that you 
+can copy your own signal early in the pass before the Doppler drift gets too 
+fast. Don't waggle your transmitter frequency around, leave it steady and 
+let it drift. Spend your time finding and following other signals, 
+concentrating on those where the Doppler shift is getting less and less, 
+which you stand a better chance of copying just before they vanish. Don't 
+try too hard to get a two-way QSO at the start. This really isn't easy 
+without Doppler correction both ways.
+
+Later on, uplink-corrected PSK31 software will be available and things will 
+get much easier when we can all adopt this technique. It will be possible to 
+treat the downlink as if we were all working full duplex on a dedicated 
+'0.3-3.0 kHz' band, with no Doppler shift apparent to anyone after the 
+initial signal aquisition. It is potentially even better than an HF band 
+because we have the remarkable ability to set all the downlink signals to 
+the same level, and this means we could reliably work at much smaller 
+channel-spacing than we do on HF.  This linear/FM transponder technique is 
+going to be very interesting indeed.
+
+73
+Peter
+

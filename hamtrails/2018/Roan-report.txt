@@ -1,0 +1,76 @@
+***************************************************************************
+*                  ATGP 2018 Report for ROAN MOUNTAIN                    75
+***************************************************************************
+
+
+This year Roan Mountain was covered by Bill KB4KFT and Glenn N4AZR.
+
+I arrived on site at about 1015am and had my gear deployed by about 1030am. 
+I quickly established solid voice and data contact with Comers Rock. For 
+some reason I could only raise Clingmans Dome on 2m data. Their 440 voice 
+signal was weak - barely broke squelch but perfectly readable. By 
+comparison their 2m signal was a solid S7. Even with high power I could not 
+make the trip to Clingmans. Strange.
+
+Bill KB4KFT arrived at about 1100am. Just before he arrived, I noticed that 
+I was having radio issues. My D700 was randomly cutting off. I suspected 
+battery but tried to ride it out because I had good data contact with my 
+adjacent sites when it was working. After the third incident, we decided 
+that my marine battery was dead. In the back of my mind I had planned to 
+hook everything up to my car battery as a last resort. As luck would have 
+it, Bill had a freshly charged gel cell in his car for an event later. We 
+swapped the power wiring over and got my D700 back online a few minutes later.
+
+After getting everything back online, Todd AL0I advised that I wasn't 
+digipeating anymore. Ugh! I always bring my netbook and serial cable with 
+me so I fired that up and checked the programming. The hard resets wiped 
+out the serial port settings on my D700. I plugged those back in and then 
+everything was good. We were back up and operational by around noon.
+
+We saw Springer Mountain through Apple Orchard Mountain packets reliably 
+through to the 1 PM hour. We all exchanged a few messages and I got ack's 
+for mine. Neat!
+
+Also around 1 PM a former ATGP participant stopped by. Eric KZ5ED was part 
+of the original crew covering Roan Mountain when I discovered this event in 
+2010. He was very excited to see that we are still trying every year, and 
+even more excited to hear about our successes in 2014 and 2017. He said he 
+plans to stop by again next year.
+
+We were beginning to get worried that we would not get any further than 
+Apple Orchard when we finally saw Hawksbill and GD Hill at about 1:15 pm. 
+Then we saw Camelback at about 1:40 pm and Sams Point at about 2:00 pm.
+
+Bob called for the GP attempt with what we had at 2:00 pm. We sent a 
+bulletin and so did many others.
+
+Bill KB4KFT had to leave around 3:00 pm. We shut it down at about 3:05pm. 
+Bill plans to return next year as do I. Hopefully my friends that joined 
+me last year will be able to come next year as we had planned to do HF.
+
+The weather was good the entire time. The forecast called for thunderstorms 
+all day which I was dreading, but as luck would have it it was mostly sunny 
+all day. Temps were in the 60's - 70's.
+
+My setup is pretty simple. A D700, drive on antenna base, 20 ft of 
+fiberglass pole, and a Diamond 2m / 440 vertical fed with LMR-400. I think 
+I'm going to look into getting one of the new batteries that have been 
+talked about recently on the list. It may be time to retire the 4 year old 
+marine battery that I have been using if for no other reason than to avoid 
+the liability next year.
+
+Also new for this year, if I held my phone in just the right place I 
+actually had 4G LTE service on top of Roan. This allowed me to stay on 
+ANSRVR with APRSDroid and keep informed of what was going on.
+
+We had a LOT of curious people this year. More than I have ever seen. So 
+many that it was hard to pay attention to the radios at times. They were 
+all fascinated with what we were doing once we explained it to them.
+
+Special thanks to Bill KB4KFT for having the battery ready to go and saving 
+the day. Also thanks to Ted KB8LMR from my club for making the trip to 
+Comers Rock for his first and hopefully not last event. And thanks to Todd 
+AL0I for providing excellent local support via 440 voice as always.
+
+See you all next year!
+Glenn N4AZR

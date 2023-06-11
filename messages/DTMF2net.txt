@@ -1,0 +1,71 @@
+DTMF Text Messaging to Net Control with ANY amateur HT    12 Fed 2009
+---------------------------------------------------------------------
+                                                               WB4APR
+
+This file addresses the use of a single DTMF Text Messaging radio as
+a display in front of the Net=Control or EOC operator so that he can
+be text-messaged or receive short numeric data from ANY HT in use by 
+an amateur radio operator in the field using his own simple existing
+HT as long as it has a DTMF keypad.  (almost all radios do).
+
+Here is a very fundamental and simple application of this capability 
+at a huge marathon for example.  We all know the congestion on the 
+main voice net and how inefficient it is to pass traffic by first  
+having to get the attention of Net Control, be acknowledged, and 
+then allowed to pass the traffic.
+
+Imagine this scenario
+
+1)  Every HT at the event is asked to pre-program these sequences 
+into his DTMF autodial memory:  
+
+mem 0 - 999*abc#
+mem 1 - 999*abc#ABC 1#
+mem 2 - 999*abc#ABC 2#
+mem 3 - 999*abc#ABC 3#
+
+Where 999 is the group code for these text messages
+Where abc is the numeric text equivalent of the station's suffix
+Where ABC is the spelled out TEXT of the stations suffix
+What will appear on the front panel of the Net Control Op is
+
+2) Anyone in the field that has Any traffic for the net simply presses 
+his appropriate DTMF memory button (on a separate dedicated FREQ) and 
+instantly, his request, his CALL ID and his urgency of traffic are 
+right there up-front in front of the net control.
+
+3) Net control has one of these FT51/TH78's in front of his 
+operating position.  Where he is a busy person handling traffic...
+Here is what he will see on the front panel of his rado.
+
++-----------+
+|abc 146.940|  where "abc" is the number ID equivalent of "ABC"
++-----------+
+| A B C   1 |  where "A B C" is the SUFFIX of the requesting stn
++-----------+
+
+Meaning that station with suffix "ABC" has an emergency message.
+Memory 0 is used as a prefix and then the user can type in any
+6 letter free-text in real time followed by a #.
+
+4) Net control then knows who to call next.  Very efficient.  The 
+ultimate in a DIRECTED net!
+
+The 999 is the group call for this function.  The ABC is the users 
+numeric suffix callsign ID (APR for example is 277) and the 1, 2, or
+3 indicate the urgency IE, Emergency, Priority, Routine.
+
+Some people would complain of the complexity, but then only because 
+some hams refuse to ever do or learn anything new.  But you can see 
+that the process is very simple and  most people can pick it up in 
+an instant.  And all of the tedious data entry can be done in advance.
+Of course the ideal radio for this application is a dual band.  Then 
+you can send in yoour check-in-with-traffic without leaving the net 
+frequency.
+
+Cross band is recommended so that the NET control can see the 
+incoming traffic while he is transmitting on the voice net.
+
+Practice at your club, and it could really work well.
+
+Bob, Wb4APR

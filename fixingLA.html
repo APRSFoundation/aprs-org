@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+   <TITLE>FIXING LA</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.0Gold (X11; I; SunOS 5.5.1 sun4m) [Netscape]">
+   <META NAME="Author" CONTENT="Bob Bruninga">
+   <META NAME="Description" CONTENT="APRS Homepage">
+   <META NAME="Keywords" CONTENT="APRS SPEC, erratta,Bruninga,radio, position, w3ado, wb4apr, GPS, APRS, Satellites, USNA">
+   <META NAME="Classification" CONTENT="Science">
+</HEAD>
+
+<BODY TEXT="#FF0000" BGCOLOR="#87CEFA" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000"> 
+
+<H1 ALIGN=CENTER><B>FIXING Los Angeles APRS</B></H1>
+
+<H2 ALIGN=CENTER><IMG SRC="logos/satellite.gif" HSPACE=30 HEIGHT=32 WIDTH=32 ALIGN=TEXTTOP>
+<B>Automatic Position Reporting System</B>
+<IMG SRC="logos/satellite.gif" HSPACE=30 HEIGHT=32 WIDTH=32 ALIGN=TEXTTOP></H3>
+<CENTER>
+<IMG SRC="logos/aprs.gif" HEIGHT=112 WIDTH=200>
+</CENTER>
+<!-- begin comments and the next line ends them
+//-->
+<FONT COLOR="#000000"><FONT SIZE=3>
+<P>
+<HR SIZE=5 WIDTH="100%"></P>
+<P>
+<B>Forward:</B>  This page was written in 2005 and was part of the initiative of the New-N
+Paradigm.  It shows how to greatly imrove APRS 
+reliability in heavily congested areas by simplying forcing all packets to one hop only.
+Simply take a look at this map and follow this line of reasoning.
+<P>
+<IMG SRC="newN/socal-B4.gif">
+<P>
+<B>An ALOHA Channel is QRM LIMITED:</B>  Once the channel as heard at the digipeaters
+is more than say about 30% busy, there is a 30% chance that most users will not be
+heard and the network is unreliable or worse.  We can no longer allow
+multiple-hops on every packet!  With just 2 hops, every packet is cluttering the surrounding area with potentially 
+16 copies of itself because of all the digipeaters!!!
+<P>
+<B>THE SINGLE HOP CONCEPT:</B> Applying the <A HREF="http://www.aprs.org/aloha.txt"><B>ALOHA calculation</B></A> 
+in a large metro area such as in central LA, and one hop for everyone, 
+the 144.39 channel could handle almost 180 users with good reliability!  
+By taking the extra effort of making the digipeaters full duplex, 
+so that the channel is 100% available for uplinks, 
+then a full 360 typical APRS stations could be accomodated 
+with high reliabilty.  This is more than everyone within 100 miles of central LA.
+<P>
+<B>NETWORK SATURATION!</B> In areas where the network is saturtated there is a tendency
+to just add more digis <i> closer</i> to the users
+so that their local signal was stronger than everything else
+the digi was hearing, and then they had to add another hop (quadrupeling the QRM) 
+to get into the BIG digi!
+This process just snowballs to where the only way for success is more and more digis 
+with more and more QRM and less and less range.  IE, MELT-DOWN! and total saturation
+with miserable reliability.
+<P>
+<B>THE SOLUTION:</B> Although there are some exotic solutions such as with the  
+<A HREF="superlan.html"><B> Super-site concept</B></A>(no longer recommended)
+and going to 9600 baud, the fix is much easier.  The simple solution
+is to make sure there is an IGate and then simply trapping all packets
+at one hop.  This eliminates packets from out of area while still fully
+supporting local users!
+<P>
+
+Here is how to do it at any KPC-3 DIGI:
+<P>
+<LI>  Remove UIFLOOD and UITRACE support for WIDEn-N and TRACEn-N from ALL surrounding digis 
+<LI>  Set UIDIGI ON, WIDE1-1,WIDE2-2,WIDE3-3,WIDE4-4 to trap all paths to 1 hop.
+<LI>  Continune to encourage the universal mobile user path of VIA WIDE1-1,WIDE2-1.
+<LI>  This enforces a 1 hop rule for everyone in the area, while permitting 2 hops everywhere else
+<LI>  This also keeps out any out of area packets from coming in.
+<LI>  This should be able to support about 180 simultaneous users in the LA basin for example.
+<P>
+
+<B>FUTURE Expansion:</B> The 1-hop support for 180 stations is still about half 
+of the potential 
+full load within 100 miles of LA.  To get to the ultimate support level of 360, 
+it would be necessary to cross band the oputput of the main big 3? digipeaters 
+to UHF so that they can still provide a full 100% channel feed, but not hear 
+each other's output on their input.  All they hear now are users direct, and
+can provide good coverage for up to 360 users!  
+Users still transmit on 144.39 but can tune in on UHF any of the BIG 3?
+they want to watch.
+<P>
+<B>WHAT ABOUT 144.39 OUTPUT?</B>  When the big digis stop half-duplex digipeating and only digipeat
+on UHF, doesnt this then prevent anyone running normal APRS on 144.39 from hearing all the activity?...
+YES and NO!!!
+<LI> Each UHF-output-digi  should have a reliable IGate listening to it to give APRS-IS reliability
+<LI> Fixed stations with home antennas will still hear many dozens of stations direct and will
+     hear all their local ALOHA area direct because of the high density of APRS throughout LA
+<LI> Mobiles who can only view 40 stations anyway, will now still be able to see everyone within
+     local direct range and not the hundreds that are much further away.
+<LI> THIS is APRS at its best.  Excellent LOCAL quality, Minimal QRM, yet full Internet connectivity.
+<LI> While still able to see full regional visibilty (tune to the UHF output in the area you are interested in!)
+<P>
+<B> INTERNET and IGATES:</B> Here is where some low-tier digis make their best
+contribution.  These digis can add an individual UHF full duplex AUDIO relay 
+of their 144.39
+RECEIVER.  On this UHF channel, now, the local IGate has the full EARS on 144.39 for everone 
+in range of <i>that</i> digi and can build the LOCAL LIST for <i>that</i> low-tier digi.  This IGate then, 
+with one-hop-only, and ONLY using the SPECIFIC digi callsign of that digi, can send any
+Internet traffic back to RF for any station in its LOCAL area with minimal QRM to the rest
+of LA.  Since the IGate is using a directed path, there is just one and only 1 copy of this traffic.
+This is an ideal situation for IGates.  Like the Cell phone system, they concentrate
+only on their small area and do not QRM
+<P>
+<B> LOW-POWER TRACKERS:</B> Another application for low-tier digis is to 
+put their input to the alternate APRS input channel for low-power trackers (144.99 if available in
+LA)  These digis now only listen for low power trackers using a 2 hop path and digipeat them over onto 144.39. 
+These digis should drop back to an output power of say, 5 watts because all they have to do is hit one
+of the BIG 3? on the second hop.  The only alias they support is WIDE1-1 for the low-power trackers that
+are using the universal APRS path of WIDE1-1,WIDE1-1.  Notice the double hop.
+<P>
+<B>WHAT ABOUT ABUSERS USING MULTI-HOP PATHS?</B>  Actually, if they implement 
+the 144.39=>UHF at the
+big digis, then 1 hop is ENFORCED in LA even thought the BIG 3?
+did not even have to upgrade to UIDIG ROMS!  This is because, when they switched to CROSS-BAND full duplex
+digipeats, none of the other digis are listenign to the UHF outputs of any of the other digis.
+THus, all packets still only go 1 hop via any one of the BIG 3?, but no farther.
+<P>
+<B>RESULT:</B> APRS works as a LOCAL system throughout LA with maximum efficiency and can support
+about 300 stations without much QRM.  APRS at its finest.  Possible only because of the high
+density of population and the presence of very high digipeater sites.  AND of course the use
+of ONE-HOP only FULL DUPLEX digipeating.  
+
+<P>
+Enjoy.
+<BR>
+de WB4APR, Bob
+<P>
+<HR SIZE=5 WIDTH="100%">
+<HR SIZE=5 WIDTH="100%">
+
+</BODY>
+</HTML>
+

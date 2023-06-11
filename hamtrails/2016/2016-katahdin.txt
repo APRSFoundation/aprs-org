@@ -1,0 +1,71 @@
+MT KATAHDYN REPORT 2016
+------------------------------------
+
+Hello Everyone,  Solo this year :(
+
+Day started early, entered the park gate at 06:00
+
+Set off from Katahdin Stream Campground at 07:15AM EST, Summitted about 11:15AM
+
+Immediately made voice contact on 70cm simplex with the SUGARLF-14 team 
+(John (WA1LKI) and his partner (sorry, I forgot name and call)
+
+We exchanged 1,200bps packets. All I had was a Yaesu FT1D and Diamond SRH77CA duck.
+
+John contacted Lynn (KJ4ERJ) via cell phone, and confirmed that MTWASH-13 
+would not be active (huge link lost).
+
+We exchanged 9,600bps packets an hour later, no problems!.
+
+John and I ragchewed for about an hour as our views this year were amazing! 
+We talked about building solar-power/embedded APRS and Packet-related hardware.
+
+Enjoyed listening to my Red Sox play at Yankee Stadium on the FM dial on the 
+hike down. Lynn (KJ4ERJ) and I also were exchanging APRS text messages!
+
+I attached a few photos from this trip. Baxter State Park is an amazing, 
+rugged place. Any nature lovers in the group, I urge you to experience this place 
+before the federal government takes it over as a National Park. It will never 
+be the same place if that day comes...
+
+Yes, I'll do it again every single year for sure!
+
+Thanks to all who worked this time around. We need to discuss a backup operator 
+plan for the 2017 event. We need to have alternate hams just in case. If both 
+can attend, even better!
+
+LATER: 
+Hi Lynn (and the Group),
+
+Thanks for being in the shack again this year! Your text messages are always 
+welcome! I'm glad we had the APRS exchange, it really shows the power that Bob's 
+(WB4APR) creation has on us hams! (Did we talk on .52 once when I was at Table 
+Rock in SC (~Summer 2013)?)
+
+If only APRS could store-forward messages... that's something I think we could 
+accomplish, but that's another topic all together!
+
+To answer your questions, 1. The summit temp was mild this time, between 60 and 
+65 deg F, I enjoyed it without shivering!) 2. There is nothing overly technical 
+about the climb on the Hunt Trail. This trail does have quite a few large boulders 
+to traverse, but there are steel hand and foot pegs on a few of them to help. 
+I have also hiked the Cathedral trail, that one is a little bit technical (still, 
+no tools other than rope required) and I experienced vertigo on that trail. :(
+
+The hike down on Hunt is much more intimidating than the way up, especially to 
+those with fear of heights. It's a daunting descent in full sunshine, as you see 
+the world around you. I attached a video of the "gateway" section. This is your 
+view at the top of this bouldering section at about 4,800' ASL. It's amazing. 
+(at 0:13, you see a 30' easy drop to that point... then it's 1,500' drop off in 
+a quarter mile) 
+
+I posted a video a while ago on Youtube, in the video, I am hiking up the Hunt 
+trail and crossing the famous "Knife Edge" with my old Yaesu VX-8R. 
+
+Here is the link: 2012 AT GP KATHDN-15 Station - Katahdin, Knife Edge, APRS, SOTA
+
+73,
+
+Tim
+KA1YBS
+KATAHDN-15

@@ -1,0 +1,68 @@
+Date: Thu, 12 Apr 2001 
+From: Bob Bruninga, WB4APR 
+
+To: TAPR APRS Special Interest Group 
+
+Cc: amsat-bb@AMSAT.Org,
+
+Subject: TX-Cycle Recommendation?
+
+
+
+ANSWER: It depends!  Are you there or not??
+
+Live keybopard operations, set one beacon a minute.  And message as 
+needed.  Unattended, one (and only one) packet every 5 minutes.
+
+The goal for live operations is to make contacts and to play radio.
+
+The goal of unattended beacons via satellite has been to provide a 
+remote position/status report once a day with good probability.
+
+
+
+Some numbers.  Lets say a good pass lasts 8 mins.  Thats 480 secs, but
+
+its half duplex so thats 240 secs of 100% channel capacity.  An ALOHA
+
+channel falls apart above 18% loading (success fails for everyone), 
+so only about 40 packets can be successful per pass.  This can equate 
+to about 10 live chats (1/min) about 10 mobile travelers (evy 2 min)
+and about 25 unattended stations with 5 minute beacons.
+
+
+
+NOW THE GOOD PART.  If we keep to the above rates, we are actually over
+loading the ALOHA channel by a factor of 3, but then the geometery of a
+pass is quite non-linear.  70% of the users are 6 to 10 dB farther away
+than the 30% closer under the spacecraft.  SO this can reduce collisions
+via the well known 10 dB capture effect.
+
+So, in the long run, after the initial excitement, I would hope that 
+there will be 50 or so users actively operating in each footprint
+
+on every pass. (PRIME-TIME and FIELD DAY excluded!)  Thus, you can count
+
+on a good chance at pinging the ISS to show off HAM radio anytime,
+anywhere, 
+when it comes into view (if everyone else follows the ISS 
+UtIquette)...
+
+
+
+This is not to discourage people with more important DEMOS to increase
+
+their rate until successful, because the value to HAM radio of someone
+
+else's demo is far more important to us all than our individual 1 seconds...
+
+
+
+
+Just a thought. I'd love to see a rigorous analysis.
+
+
+
+de WB4APR, Bob
+
+

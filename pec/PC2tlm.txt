@@ -1,0 +1,48 @@
+TELEMETRY CHANNEL ASSIGNMENTS                            2 Feb 2003    
+-------------------------------------------------------------------
+
+As of Telecon on 15 Jan, we must add the PCSAT type 20-to-5 channel 
+telemetry multiplexer to account for the additional battery
+telemetry needed.  Both the A and B side carry identical telemetry
+to provide dual redundancy.  The channels are transmitted in 
+packets 5 values at a time, so it takes 4 cycles of the telemetry
+to gain a complete telemetry snapshot.  Thus, only the 5 samples
+per packet are taken at the same instant in time.
+
+The channel assignments follow
+
+TNC-A CHANNELS                  TNC-B CHANNELS
+------------------------------  ---------------
+Frame 11  
+  1 = Battery Volts             1 = Same
+  2 = Battery Current           2 = Same
+  3 = Solar Array Current       3 = Same <== new
+  4 = Load Current              4 = Same <== new
+  5 = 5 volt regulator          5 = Same
+  i = avail
+
+Frame 10
+  1 = Battery Temp 1            1 = Same
+  2 = PEC side Temperature      2 = Same <== new
+  3 = TXA Current               3 = Same
+  4 = TXB Current               4 = Same
+  5 = TX Power out              5 = same <== new
+  i = avail
+
+Frame 01
+  1 = TXA Temp                  1 = Same               
+  2 = TXB Temp                  2 = Same
+  3 = TXC Temp                  3 = Same
+  4 = RX  Temp                  4 = Same
+  5 = TNC/TLM Temps             5 = Same
+  i = avail
+
+Frame 11
+  1 = RXA Current               1 = Same
+  2 = RXB Current               2 = Same
+  3 = RXC Current               3 = Same
+  4 = TNC-A Current             4 = Same
+  5 = TNC-B Current             5 = Same <== new
+  i = avail
+
+The i channel is an ON/OFF indication only

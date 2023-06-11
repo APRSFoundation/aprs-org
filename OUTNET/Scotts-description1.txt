@@ -1,0 +1,84 @@
+*****************************************************************************
+* I was confounded on what is needed to build an Outernet Inmarsat Receiver *
+*---------------------------------------------------------------------------*
+*         Here is K4KDR, Scott Chapman's summary of how he did it:          *
+*****************************************************************************
+
+RESULT:  A BLACK BOX  THAT RECEIVES OUTERNET CONTENT  AND CREATES  A WIFI HOT
+SPOT THAT MAKES THAT CONTENT AVAILABLE TO ANY SUROUNDING USERS WITH A BROWSER
+
+The system consists of an Antenna, an LNA, a Receiver (SDR) and a processor
+that feeds a WiFi transceiver.  There are multiple ways to do this:
+
+The LANTERN:  This is an all-in-one including solar power black box made
+available from the Outernet folks for $169 or so and it is even solar powerd.
+
+PC Hackers:  There are beta software that can run on various platforms to
+do the processing, but are frustrating.  I will leave that to other threads.
+
+THE LOW COST HAM APPROACH:
+--------------------------
+
+ANTENNA:  unless you already have an L-band RHCP antenna, the patch antenna 
+offered by Outernet (via Amazon) is a fine way to start.  
+https://www.amazon.com/L-Band-Patch-Antenna-RHCP-1525/dp/B01JTE7NHU/
+ref=pd_lpo_23_tr_t_3?ie=UTF8&psc=1&refRID=SWZ6F4G1DQPTW5355GD9
+ 
+LNA:   The LNA offered by Outernet (via Amazon) does an excellent job.
+https://amazon.com/Outernet-Inmarsat-L-band-Amplifier-Module/dp/B01K04UG1I
+
+RECEIVER: I originally used the Outernet SDR dongle sold on Amazon.  Then I
+tried the newer metal-case rtl-sdr.com TXCO dongle and my L-band signal 
+almost doubled.  Unless my units were flukes, the rtl-sdr.com dongle is best.
+NOTE! – unlike the Outernet SDR, the rtl-sdr.com dongle needs a jumper on 
+board to be soldered to enable the bias-T to power the  LNA.
+https://www.amazon.com/dp/B0129EBDS2/ref=as_li_ss_tl?ie=UTF8&linkCode=sl1
+&tag=rsv0f-20&linkId=9806dfa291f74f7cdb49e2cfbe3d34eb
+ 
+PROCESSOR: -Raspberry Pi-3:  Besides being a wonderful little computer for
+numerous Ham radio projects, the Pi uses a micro-SD card to boot and store
+data.  Changing the micro-SD card completely changes the application.
+https://amazon.com/Raspberry-Pi-RASP-PI-3-Model-Motherboard/dp/B01CD5VC92
+ 
+POWERING IT:  The Raspberry Pi-3 needs at least 2.4 amps from the USB. I do
+not recommend using AC-only power adapters because you might want to make 
+this system portable away from AC mains. Get an appropriate USB cable, and 
+separately an adapter for AC-to-USB power. I used an Insignia brand.
+http://www.bestbuy.com/site/insignia-micro-usb-wall-charger-black/5689149.p
+?skuId=5689149
+ 
+PI CASE: A basic case protects the Pi and simplifies handling/mounting.
+https://www.amazon.com/gp/product/B00MQLB1N6/ref=oh_aui_detailpage_o08_s01?
+ie=UTF8&psc=1
+ 
+MICROSD CARD for the Pi: The Pi’s “hard drive”... so get several. The bigger
+the more storage the file system can store. 
+https://www.amazon.com/SanDisk-microSDHC-Standard-Packaging-SDSQUNC-032G-
+GN6MA/dp/B010Q57T02/ref=zg_bs_3015433011_2?th=1
+ 
+-------------------------------  SOFTWARE  ---------------------------------
+ 
+The only setup step is to download the latest Outernet Pi operating system.
+rxOS .ZIP image from: https://archive.outernet.is/images/rxOS-Raspberry-Pi/
+ 
+First, extract the contents of the .ZIP archive; one of the included files
+has instructions.  If using a Windows PC for this task, the utility is:
+https://sourceforge.net/projects/win32diskimager/
+ 
+Once the Pi image is written to the micro-SD card, insert it in the Pi,
+connect the antenna, LNA, & SDR, and power up the Pi.
+ 
+Using a personal computer, you will see a new wireless network available.
+Connect to the “Outernet” network (no security by default).
+Once connected, open a browser on your PC and go to http://10.0.0.1  
+ 
+The Outernet web interface will guide you from there.
+ 
+--------------------------------  USES  ------------------------------------
+ 
+Put it all in a box, take it to the next HAM event and encourage others to
+use their WiFi devices to check it out!  Any APRS client that can draw APRS
+data from a file, can then display the hourly linked APRS files on its map
+or messages, etc.
+
+Scott Chapman, K4KDR

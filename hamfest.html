@@ -1,0 +1,247 @@
+<HTML>
+<HEAD>
+   <TITLE>APRS Hamfest Display for mobiles</TITLE>
+   <META NAME="Author" CONTENT="Bob Bruninga">
+   <META NAME="Description" CONTENT="APRS Homepage">
+   <META NAME="Keywords" CONTENT="hamfest, aprs, Bruninga,radio, position, w3ado, wb4apr, GPS, APRS, Satellites, USNA">
+   <META NAME="Classification" CONTENT="Science">
+   <META http-equiv="Content-Type" content="text/html;charset=utf-8">
+</HEAD>
+
+<BODY TEXT="#FF0000" BGCOLOR="#87CEFA" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000"> 
+
+<IMG SRC="avmap/HFESTx.JPG" align=right>
+<H2 >
+
+<IMG SRC="logos/aprs.gif" HEIGHT=66 WIDTH=100>
+<B>Using APRS for Hamfest Support</B>
+
+</H2>
+<BR><FONT SIZE=3>
+Bob Bruninga, WB4APR
+</FONT>
+
+<!-- begin comments and the next line ends them
+ this image was old format ...<IMG SRC="info/InfoFlashMtgX.JPG">
+//-->
+
+<FONT COLOR="#000000" size=3>
+<P>
+<B> This page tells Hamfest organizers as well as all Hamfest attenders how
+they can use APRS to optimize their experience at these exciting events!</B>
+(or any other event)...
+<P>
+
+<B>LOCATION:</B>The most valuable aspects are the display of the local HAMFEST
+object on the GPS screens of all APRS Mobiles as shown to the right.  This is
+the AVMAP-G5 GPS which displays the full APRS set of symbols.
+Anyone driving in the area will not only see the bold <B>HFEST-ddx</B> object
+show up on their radio front panel  displays to alert them to an upcling 
+hamfest, but the SYMBOL will also show up on their attached GPS map.
+(This same technique can also work for <B>AMSAT-ddx</B> events)
+<P>
+Not only does the object show the location of the hamfest, but it also
+shows the date using the <B>dd</B> digits.  These are the day of the month.
+In addition, so that all hamfests in the world are unique, the <B>HFEST-ddx</B>
+object name has the <B>x</B> byte that can be anything to make this event
+unique.
+<P>
+<IMG SRC="info/InfoHuntsvilleX.JPG" align=right height=180 width=330> 
+
+<B>TALK-IN FREQUENCY:</B> In addition to the map object showing the location
+of the hamfest so travelers can just drive right to it, the object also contains
+the <i>talk-in frequency and Tone (if any)</i>.  Many APRS radios now have a
+tune button that can automatically tune right to this frequency with one button 
+push.
+
+<P>
+
+But not only does this highly visible HAMFEST object advertise the event, 
+but it also provides more information to the community about the event.
+Here are some of the ways to use APRS to enhance your Hamfest experience.
+<P>
+<LI> HAMFEST OBJECT on the map to clearly show the location
+<LI> HFEST-dd object shows the day of the event using "dd"
+<LI> The object contains the Talk-in Frequecncy
+<LI> Make sure the Talk-in Operators can see an APRS map to see approaching mobiles.
+<LI> The talk-in can assist lost drivers, or see where APRS assistnace is in real time
+<LI> Mobiles can text-message the Talk-In without having to bother the voice channel
+
+<P>
+
+<B>BACKGROUND:</B> Too many people have been misslead to think of APRS as a vehicle
+tracking system, when in fact it was desigend to be the opposite.  A local 
+real-time information dissemination and display system TO the mobile operator.
+The objective was for the moible APRS operator to see on the front panel of his
+radio ALL relevant local information about ham radio and activities.  Nothing
+is more important than having Hamfests show up on their maps!
+
+<P>
+
+This is all part of the <A HREF="localinfo.html"><B>Local Info Initiative</B></A> which
+is  a fundamental part of APRS in informing radio mobile of the situation around them.
+Please see that web page about all the info we should be pushing to mobile operators.
+Especially local recommended voice frequencies, Echolink or IRLP channels
+ for travelers in the area.
+
+<P>
+<IMG SRC="D7xx/net-mtg-onD7.GIF" align=right> 
+
+<B>MOBILE DISPLAYS = TINY WEB PAGES:</B> When the APRS radios came out over
+10 years ago
+that could display this info directly on the radio front panel, we called 
+this info <A HREF="TWP.html"><B>Tiny-Web-Pages </B></A> as presented 
+at the year 2000 DCC. 
+. The intent was to have all local ham radio activities of immediate local interest
+show up on these radios to inform mobiles in real time about evertyhing going on in
+ham radio around them... such as WX, Satellites, DX, traffic, Nets, Meetings
+and so forth.   Some examples as they appear on the small D7 screen are shown here 
+to the right:
+<P>
+
+<B>HAMFEST OBJECTS:</B> You can enter an object using any APRS client, or if
+all you have is an old TNC, you just put the object in the TNC <B>BText</B>
+and set the beacon rate to once every 15 minutes.  Set the UNPROTO path to
+<B> UNPROTO APRSHF VIA WIDE1-1</B> and then set the <B>BText</B> to:
+<P>
+
+<B> ;HFEST-ddx*111111/DDMM.mmN/DDDMM.mmWhFFF.FFFMHz Talk-in...</B>
+<P>
+<BR> <B> Where ddx </B> is the day of the month and the unique identifer byte
+<BR> <B> Where DDMM.mmN/DDDMM.MMW </B> is the lat/long of the hamfest
+<BR> <B> Where h</B> is the Hamfest symbol ( the red object as shown above)
+         (or S for satellite or `(grave accent) for satellite station)
+<BR> <B> Where FFF.FFFMHz</B> is the talk-in frequency followed by any other text.
+<P>
+
+<B>SEE THEM ALL!</B>  By having each Hamfest object be unique, then it is easy
+to use any of the APRS web pages to see all the hamfests currently on the air.
+For example, just wild card the <B>HFEST*</B> prefix and all hamfests should
+show up. Try this <A HREF="http://map.findu.com/HFEST*"><B>HFEST*</B></A> search
+on FINDU.COM.
+
+<P>
+
+<B>OBJECTS FROM THE D700 MOBILE:</B> . If you are the first person to arrive, 
+and no one has taken the initiative to put the hamfest object on the map, then
+you can do it easily from your APRS radio.  Just momentarily change your 
+APRS mobile's MYCALL  to "HFEST-dd" and then leave your radio on, and 
+beaconing once every 10 minutes or so.  This will let everyone after you,
+drive right to the HAMFEST (your car).  Don't forget to then switch 
+your MYCALL back to your call after the event.  This works well for club
+meetings as well!   See
+<A HREF="D7xx/d700-objects.txt"><B>Sending Objects from the D700</B></A>.
+<P>
+
+<IMG SRC="info/InfoList1+1x.JPG" align=right height=200 width=400>
+<P>
+<B>SOME DISPLAY EXAMPLES:</B>   The display at the top of this page is what flashes on the front panel for 10 seconds when the
+packet is received.  If the driver does not happen to see this display, then the Repeater will
+show up as an object on the radio's STATION list as shown to the right on a D700:
+
+<P>
+In this case, the newer 146.76 repeater has appeared on the list and the older repeater
+from the previous town is going down the list.  Of course, usually it is <i>much</i> further 
+down the list than shown here.  When the user sees one of these repeater objects in his
+STATION list he can know that he is in DIRECT range of that repeater and he can
+ select it to see any other amplifying information such as tone, range, nets and meeting times.
+<P>
+
+<!--
+<B>ADDENDUM:</B><i> Since these photos were taken, there were some refinements to the formats such
+as adding + or - in the object name to avoid wasting the +600 or -600 in the text fields.
+Also, the TONE was simplified to <B>Tnnn</B> and the Range was added, <B>Rxxm</B></i>
+<P>
+<CENTER><IMG SRC="info/InfoObjNetX.JPG"></CENTER>
+//-->
+
+<P>
+<IMG SRC="info/AB9FXd710list1.JPG" align=right height=200 width=400>
+<P>
+<B>FREQUENCIES ON STATION LIST on the D710:</B> . In the next photo to the right,
+ the new D710 even
+has a column on the station list for displaying the operating frequency if it is included
+in the station's packet.  In this case, the first three are Local Repeater Objects,
+but the first one of those is a cross-band repeater, so both the output frequency
+(object name) and input frequency can be shown.  
+. The last two stations on the list are
+another D710 and D7 simply showing their current operating frequency.
+
+<P>
+
+When an object is selected as shown below left, 
+the split frequency cross band repeater example above shows on a D710 
+display below
+(complements of AB9FX).  His example shows "233.6 Hz" 
+instead of the more compact recommended "T233 RXXm" tone and range.
+
+<P>
+<IMG SRC="info/AB9FXd710obj1.JPG" height=200 width=400> . . 
+<IMG SRC="info/InfoHuntsvilleX.JPG" height =180 width=330></CENTER>
+<P>
+The yellow D700 screen on the right above shows an example of the correct final format, 
+though it does not use the 3rd line of 8 characters to also include the 
+club meeting dates.
+Note also that TONE is now <B>Tnnn</B> and typical useable range is 
+<B>R33m</B> in this case.
+The local repeater frequency object shows the frequency, the tone, typical 
+operating range and weekly net times. 
+
+<P>
+<B> Please read more about the local info that should be distributed on 
+APRS so that it is avaialbe to all mobile operators and travelers when 
+they enter the area. </B>
+
+Please see the
+
+<A HREF="localinfo.html"><B>Local Info Initiative</B></A> and the
+<A HREF="aprs-messaging.html"><B>Universal Messaging/Contact Initiative</B></A>. .
+The screens below show additional types of inormation such as the local
+repeater, and  <B>IRLP</B> and <B> Echolink</B> frequencies.
+
+<P>
+
+<IMG SRC="D7xx/Rptr7-105x.JPG" height=80 width=150>
+<IMG SRC="info/IRLPx.JPG" height=80 width=150> 
+<IMG SRC="info/EL-123456x.JPG" height=80 width=150> 
+<IMG SRC="info/EL-posit.JPG" height=80 width=150>
+<P>
+
+<P>
+<B>APRS is a <i> two-way local Information Distribution and Communication System </i>
+<BR> (not just a vehicle tracking system).  <A HREF="APRS-tactical.html"><B>See APRS misconceptions!</B></A>
+<BR>  The objective is Human-to-human local real-time info and communications!</B> . 
+<P>
+<P>
+
+<B>MESSAGING:</B> Any easy way to get the Talk-in's attention is to simply send
+him a request by APRS message.  If he is properly set-up in front ot an APRS
+display, he will see your message and ccall you next!
+To send an APRS message, just press the MSG button, select
+INPUT on the MSG Menu, enter EMAIL as the address, 
+and make the first text of the message be an email address 
+followed by your message. . In the example below, an <B>EMAIL</B> to <B>A3XYZ@AMSAT.ORG</B>
+ says
+<B><i>OK in OceanCity with HT & whip!</B></i>. . 
+
+<P>
+<IMG SRC="info/MSG-listXx.JPG" height=80 width = 150> 
+<IMG SRC="info/Email-1-okXx.JPG" height=80 width = 150> 
+<IMG SRC="info/Email-2-bestXx.JPG" height=80 width = 150> 
+<IMG SRC="info/mymsg.gif" height=80 width = 150> 
+<P>
+If your email is digipeated, then you will see <B>MY MESSAGE</B>
+flashed on the screen indicating success. 
+
+<P>
+<!--
+COMMENTED OUT
+//-->
+
+
+<P>
+Bob Bruninga, WB4APR
+
+<P>
+</BODY>
+</HTML>

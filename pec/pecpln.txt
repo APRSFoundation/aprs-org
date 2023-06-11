@@ -1,0 +1,60 @@
+PCsat2 TELEMETRY/COMMAND/COMMUNICATIONS PROJECT BACKGROUND      18 Nov 02
+-------------------------------------------------------------------------
+
+Students:           	Midn 1/C Otero, Silver, Jones, Evans, and Henry
+Faculty and Staff:	Bob Bruninga (WB4APR), LTCOL Billy Smith
+     
+MISSION:  The Comm payload for PCsat2 is an opportunity to provide a 
+Communications payload in the Amateur Satellite Service that is compatible 
+with the objectives of the ARISS Program. 
+   
+The packet portion of this mission will augment the constellation of other 
+similar amateur satellites (PCsat, ISS, MIR, OPAL, Sapphire and SUNSAT)
+which have served the amateur community as worldwide packet relays for 
+user communications and position/status reporting for educational outreach 
+and for remote travelers.  The packet formats permit dozens 
+of users per pass to relay individual packets via the satellite.  This 
+constellation of satellites, can also augment the existing worldwide 
+terrestrial APRS tracking system by providing links from the 90% of the 
+earths surface not covered by the terrestrial network.
+
+The PSK-31 COMM transponder similarly provides multi-user access to augment
+the ARISS outreach potential.  It uses very narrowband PSK-31 linear uplinks 
+on the 10 meter band and an FM downlink on UHF that can be received by
+any FM receiver and sound card software on any PC.
+
+BACKGROUND:  Today, most of the US urban amateur population is covered by 
+the terrestrial APRS network, BUT the other 80% of the area in most countries
+and all of the oceans, third-world and polar regions (95% of the earth's
+surface) are void of any digital connectivity.   Schools, distant travelers,
+boats at sea, and stations in the rest of the world are presently unable to
+use the APRS system as a digital reporting system.  The launch of PCsat in
+September 2001 extended this capability worldwide.  The joint ISS/ARISS/PCsat
+communications experiments in October 2002 extended this capability and
+demonstrated the viability of having more than one satellite suporting
+this mission.  Multiple UI digipeaters on the same frequency, will give the 
+program reliability and continuity and connectivity more often than a single 
+satellite can provide.
+
+FREQUENCY CONSIDERATIONS:  The frequency of 145.825 is already established
+for digipeating by the precedence of SUNSAT and PCsat.  Although the
+desired downlink is also 145.825, this would cause interference to other
+ARISS missions on the ISS and so the primary downlink will need to be on 
+the UHF band.  For times when no ARISS voice activity is planned, then
+the 145.825 downlink can be activated for dual constellation operations
+with PCsat and ANDE.
+
+INTERNET LINKED GROUND STATIONS:  APRS is unique in the way it combines all
+packets heard everywhere in the world into a single common internet feed 
+channel.   Existing downlink sites need only add a UHF receiver to continue
+to bring in downlink data from PECsat.  THus the infrastructure for 
+distributing APRS traffic no matter where its source into all other 
+stations already exists. 
+
+TECHNICAL INVESTIGATION OF RADIATION EFFECTS ON SOLAR CELLS:  The power
+system for PCsat2 on the PEC system consists of a number of high-tech solar
+cells.   The space environment effects of radiation on these cells will
+be included in the housekeeping telemetry and such investigations are in 
+accordance with the objectives of the Amateur Satellite Service.
+
+WB4APR, Bob

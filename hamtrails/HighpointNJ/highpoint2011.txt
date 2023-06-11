@@ -1,0 +1,42 @@
+HIGH POINT, NJ TEST SITE 2011 REPORT                      26 July 2011
+----------------------------------------------------------------------
+                                                          Gordon W2TTT
+Greetings,
+
+Gordon W2TTT and Steve WI2W set up 2 packet monitoring stations in the 
+parking lot about 50 feet lower than the monument at High Point NJ. 
+The 2M antenna was a copper pipe J-pole at about 30 feet. We had a 
+second packet station running with another copper pipe J-pole at about 
+10 feet. Either Gordon or myself will upload the second data file 
+shortly.  See highpoint-LOG2011.txt
+
+We were not able to contact or hear either GDHILL or GREYLOCK on 70cm. 
+We were able to bring up the GREYLOCK 2M voice repeater and make a 
+contact successfully. The 70cm antenna was a small gain dualband 
+vertical at 15 feet.
+
+We had solid 70cm communications with Rojer NJ2R at Sams Point when 
+the intermod at his location permitted.
+
+High Point State Park is a drive-up location with a park entrance fee 
+of $10 in season. It was not permitted to drive up to the base of the 
+monument unless you had a handicapped sticker on your vehicle. It is 
+however a short walk up to the monument and next year we might have 
+better results carrying up a portable station to the base of the 
+monument. If we do try this again next year I will bring 4 small 
+yagi's to improve our chances for success.
+
+The park rangers were pleasant and accommodating. We had several 
+visitors throughout the afternoon. The were lots of people visiting 
+the park. There are bathrooms with running water.
+
+We got a few rain showers during the day but no thunder and lightning. 
+It was fun to watch the weather all around us move in, out and on top 
+of us all afternoon. At one point a low cloud engulfed us and 
+completely obscured the monument only a few tens of feet away.
+
+We had fun and will do it again next year if High Point is part of the 
+event.
+
+73,
+Steve WI2W

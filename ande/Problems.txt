@@ -1,0 +1,22 @@
+Debugging and DESIGN notes                                 12 March 2004
+------------------------------------------------------------------------
+                                                                  WB4APR
+
+These notes summarize concerns as they arrise and as they are resolved
+to document the design issues and history.
+
+RTS Serial PORT Blockage:   RTS is used as a telemetry driver, this blocks 
+RXD data for half the time.  This is of no concern during flight because 
+nothing is connected to the serial port.  HOWEVER, the SPEECH module is 
+thus connected and will have speech delayed by as much as the telemetry 
+cycle period.
+
+LATCHING RELAYS:  The side B RELAY drivers are available for latching
+relays if needed.  This can give us some memory of two selected commands:
+
+	LOW RATE SIDE B:  One idea is to let a relay be designated as a 
+      HIGH/LOW rate sleep timer selector.  Everytime the LAZERS are 
+      commanded, a pulse would latch the relay to the LOW rate position 
+	for side B, keeping it very dormant.  If side A dies, then B could
+	be logged onto eventually and commanded to CLEAR this relay.  Thus,
+	B would enter high rate for the remainder of the mission.

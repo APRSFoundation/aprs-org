@@ -1,0 +1,81 @@
+***************************************************************************
+*                  ATGP 2018 Report for MT Greylock                      75
+***************************************************************************
+
+Report for Greylock-11;
+
+Below is the List Data from my D72:
+
+Alias      Time     Grid  Distance  Alt  Lat1    Long1	 First	  Last
+--------- -------- ------ -------- ---- ------- ------- --------- -------
+SAMSPT-10 03:06 PM FN21TQ   89.6   2260	4141.06	7421.30	HOP7-7	
+EQUINX-12 02:54 PM FN33KD   36.7   3862	4309.96	7307.03	EQUINX-12	
+UTSAY	  02:41 PM FN22QJ   74.5   3219	4223.94	7435.37	EQUINX-12	
+CLNGMN-2  02:30 PM EM85GN  738	   6302	3533.38	8329.70	EQUINX-12	
+MTWASH-13 02:29 PM FN44IG  146	   6234	4416.22	7118.09	EQUINX-12	
+MDMTNS-7  02:23 PM FM19FM  311		3932.24	7730.01	UTSAY	
+ROAN-3	  02:20 PM EM86WC  657		3606.26	8207.96	UTSAY	
+GDHILL-8  02:12 PM FN10SF  237		4014.77	7627.33	EQUINX-12	
+SPRNGR-1  02:01 PM EM74UL  824		3429.18	8419.86	EQUINX-12	
+CMLBK-9	  02:00 PM FN21HB  157	   2113	4102.56	7520.92	EQUINX-12	
+HWKSBL-6  01:59 PM FM08QX  380		3858.31	7835.08	EQUINX-12	
+N2YP	  01:40 PM FN22QJ   74.5   3255	4223.93	7435.38	EQUINX-12	
+COMERS-4  01:38 PM EM96JS  590		3645.53	8113.43	EQUINX-12	
+AOMTN-5	  01:27 PM FM07FM  487		3731.03	7930.70	SAMSPT-10	
+MTSTJO-14 12:07 PM JJ00AA  5284		0000.00	0000.00		
+KB1POR-9  11:59 AM FN44IG  146	   6204	4416.17	7118.17	EQUINX-12
+	
+
+Left at 0600 from my lodging in Merrimack NH. Arrived about 09:30 at the 
+Notch Rd pull-off (4238.09N, 07309.89W). I programmed my D72 per the link 
+on the Spreadsheet. I am a novice D72 user that used it mainly for balloon 
+tracking so I was very unfamiliar with most of the APRS settings. I wish 
+there was a D72 primer. The manual provides some value and the setup on the 
+golden packet site was very clear but really didn't explain what the 
+settings did. There are various Internet sites that have bits and pieces but 
+nothing that I could find that provides a strait forward primer.
+
+My station consisted of a D72 with a 5/8 roof antenna. Power for the
+D72 was planned to be via a vehicle cigarette lighter power supply. 
+It did not work, still haven't trouble shot the issue as at first I thought 
+the jack on the D72 was damaged. After getting back to my lodging I found 
+it work fine. I was concerned that I would run out of battery power during 
+the event but even after 6.5 hours use the radio was indicating just under 
+half battery remaining. Pleasant surprise there.
+
+I activated about 1000 at the notch. I stayed there for over an hour & half 
+receiving EQUINX-12/N1JCM via packet.I was able to establish voice comms 
+with EQUINX-12 on UHF for the entire event. We used the 146.91 repeater once 
+or twice. I used a Baofeng UV-5R  for UHF voice with just the rubber ducky
+antenna so there was no surprise that I couldn't be heard by anyone but 
+EQUINX-12. I did hear UTSAY and I believe MTWASH.
+
+Around 1130 I moved to the parking area and had a better copy of EQUINX-12 
+packets but that location faces north and is blocked to the south by the 
+summit. I was not seeing any activity except EQUINX-12 or via EQUINX-12. 
+Moved back to the notch at about 1330 and stayed about 30 minutes no 
+improvement  so went back to the parking area. 
+
+Stayed there until around 1415. At 1415 I took the D72 with the rubber ducky 
+to the top of the veterans monument in the observation room. Started hearing 
+a number of the stations south but no voice comms. I suspect I might have 
+digipeated from the memorial. I saw some symbols on the D72 display that I 
+had never seen before. Anyone want to clue me in feel free.
+
+Stayed in the Memorial till 1445 and went back to the car in the parking lot 
+and set the D72 back up in the car with the roof 5/8 antenna. Continued in 
+the car till about 1515 and then departed. I am still not clear if I ever 
+actually digipeated anything??? I don't believe my station played any 
+significant part in the event involving digipeating.
+
+Next year perhaps making arrangements with the Park Management to operate 
+from the lodge might be a better location. It is one the summit west side 
+and likely would provide a better location.
+
+I learned a lot about APRS from the event that I didn't know but I'm still 
+a novice.
+
+I'm interested in any feedback or helpful hints.
+
+Jim Conrad/N4WFP
+GREYLOCK-11

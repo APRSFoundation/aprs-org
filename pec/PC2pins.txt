@@ -1,0 +1,79 @@
+PCSAT2 WIRING HARNESS AND PIN CONNECTIONS ASSIGNMENTS   31 Jan 2003
+-------------------------------------------------------------------
+
+The number of wires and signals are as shown.  The exact pin
+assignments should not be considered final until final PCB board
+layout is complete.
+
+RECEIVER ENCLOSURE:   Connector DB-9 Male
+    1 - Circuit Ground
+    2 - RXA +12 volts
+    3 - RXB +12 volts
+    4 - RXC +12 volts
+    5 - Chassis Ground
+    6 - RXA audio   *** Spliced to GSE connector
+    7 - RXB audio   *** Spliced to GSE connector
+    8 - RXC audio   *** Spliced to GSE connector
+    9 - XTAL heaters
+
+TRANSMITTER ENCLOSURE:  Connector DB-15 Male
+    1 - Circuit Ground
+    2 - TXA +12 volts
+    3 - TXB +12 volts
+    4 - TXC +12 volts
+    5 - TXA Audio   *** Spliced to GSE connector
+    6 - TXB Audio   *** Spliced to GSE connector
+    7 - TXC Audio
+    8 - Chassis Ground
+    9 - TXA Power detect
+   10 - TXB Power detect
+   11 - TXC Power detect
+   12 - 15 no connection
+
+TNC/INTERFACE ENCLOSURE:
+    RECEIVER CONNECTOR:     DB-9 Female.   Pins same as above
+    TRANSMITTER CONNECTOR:  DB-15 Female.  Pins same as above
+    SOLAREX/GSE CONNECTOR:  DB-25 Male.
+        1 -  Chassis Ground
+        2 -  Critical +12 volts Receiver/TNC power (a) *** to GSE also
+        3 -  Critical +12 volts Receiver/TNC power (b)
+        4 -  TNC-A TXD Serial Port line to GSE connector
+        5 -  TNC-A RXD Serial Port line to GSE connector
+        6 -  Battery Current Monitor
+        7 -  Solar Array Current Monitor
+        8 -  Total load Current Monitor
+        9 -  TNC-A TXD Serial Port line to GSE connector
+       10 -  TNC-A RXD Serial Port line to GSE connector
+       11 -  EVA INHIBITED Transmitter 12 volts (a)
+       12 -  EVA INHIBITED Transmitter 12 volts (b)  *** to GSE also
+       13 -  Chassis Ground
+       14 -  Power System Return (a)
+       15 -  N/C
+       16 -  SolarEx Serial Port TXD
+       17 -  SolarEx Serial Port RXD
+       18 -  Signal Ground
+       19 -  Command Soft Reset line to Solarex
+       20 -  Command Power Reset line to Solarex
+       21 -  Solarex to TNC Transmit Inhibit line
+       22 -  N/C
+       23 -  Restart 8 Hour Timer 
+       24 -  N/C
+       25 -  Power system Return (b)
+
+GROUND SUPPORT EQUIPMENT TEST PORT:  DB-15 Female Connector on PEC
+        1 -  Circuit ground
+        2 -  Serial Port TNC-A TXD
+        3 -  Serial Port TNC-A RXD
+        4 -  Serial Port TNC-B TXD
+        5 -  Serial Port TNC-B RXD
+        6 -  RX Power Test Point
+        7 -  TX Power Test Point
+        8 -  Chassis Ground
+        9 -  N/C
+       10 -  TX-A Audio
+       11 -  TX-B Audio
+       12 -  RX-A Audio
+       13 -  RX-B Audio
+       14 -  RX-C Audio
+       15 -  N/C
+        

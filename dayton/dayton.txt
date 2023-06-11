@@ -1,0 +1,80 @@
+APRS at LARGE SPECIAL Events like DAYTON                      3 May 2006
+------------------------------------------------------------------------
+
+For more Dayton detail Recommendations, please see:
+http://www.ew.usna.edu/~bruninga/aprs/DaytonPilgrimage.txt 
+
+Here is how events that need to support lots-&-lots of APRS trackers
+(such as the Dayton Hamvention) should be done so that everyone gets
+tracked, and the channel is not too overloaded so that users can 
+actually message each other too.  The goal here is mutual visibility
+of everyone locally on RF.  (This is how the system works in the LA
+basin too).
+
+1) Support existing mobile paths (WIDE1-1, WIDE2-2 and WIDE3-3)
+2) Any plan that expects mobiles to change anything will fail.
+2) Setup a local IGate within direct RF range of the event or one hop
+3) Setup a low power alt-input 144.99/144.39 digi for pocket trackers
+4) Change settings on ALL local digis that can hear the event direct
+   - Disable WIDEn-N support (turn UIFLOOD or UITRACE OFF)
+   - Set UIDIGI or ALIAS list to WIDE1-1, WIDE2-2, WIDE3-3
+   - Put something like "Only 1-hop supported" in the BTEXT of each digi
+
+The above settings will support up to 100+ stations.  The IGate will 
+hear everyone, the digis will ONLY digipeat the visiting mobiles once 
+and will not bring in any out-of-area QRM, and the low-power pocket 
+trackers on .99 will be heard.  The advantages of this approach are:
+
+1) No user education is required.
+2) Only the local DIGI sysop has to do anything.
+3) A D700 mobile digi can do the 144.99 alt-input for pocket trackers
+4) One person provides an IGate.
+5) Everyone can be seen on 144.39
+
+Of course, users with messasges can easily go multiple directed hops by
+using a directed path with actual digi calls.
+
+This is the advantage of the New-N paradigm.  Having greatly simplified
+APRS PATHS to simply WIDEn and allowing for simple settings of UIDIGI, 
+UIFLOOD and UITRACE, the local sysops can change the network on the fly 
+to match the event.  Then easily return to normal the next day.  And 
+USERS dont have to do anything...
+
+DAYTON ITSELF:  Dayton has no high and wide digipeaters near the event.
+But does have a number of smaller 40 to 160' home stations.  THis is
+excellent for a high density event, since there are no tall digis that
+are overloaded by hearing everything and they wont be bringing in any
+outside QRM.  If all the local home stations surrounding the event and
+withing 20 miles of the Hamvention, all supported WIDE1-1, then we would
+have an excellent high-density APRS network that could easily handle the
+load of over 100 APRS visitors.  See the Dayton map:
+
+http://www.ew.usna.edu/~bruninga/aprs/DaytonMap.GIF
+
+Good APRS requires good planning like any other comms event...
+
+Don't forget, with a little more effort, you can do tracking INDOORS
+for D7 users or anywhere without a GPS with just 2 or 3 digit entries 
+for any of up to 999 different locations. 
+
+See http://www.ew.usna.edu/~bruninga/aprs/points.txt
+
+And Finally, if the load is still too great and/or there are more than
+100 or so users, then the next step is to switch all digis to split
+frequency with the input on 144.99 and outputs still on 144.39.  This
+way:
+
+1) everyone listens and sees EVERYONE on 144.39 direct and one hop.
+2) Nothing from out of area gets in, nor does it QRM any digi input.
+3) Even fixed XTAL trackers on 144.39 can still be seen locally direct
+4) Uplinks to the digis do not get QRM'd by outputs from the digi
+
+Split freq operation more than doubles throughput because not only does
+it spread the load to two frequencies, but it also avoide collisions
+on the uplink for better reliability.
+
+The digi's beacons should indicate that they are 144.39 +600 digis.
+Actually, only Dayton or LA is where we could ever see that kind of 
+load.
+
+de WB4APR

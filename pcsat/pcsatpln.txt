@@ -1,0 +1,97 @@
+PCsat SUMMARY
+
+PCsat:  PCsat is a student satellite project to give students hands-on 
+practical experience in the design of spacecraft.  It has been worked on 
+by students over the last several years:
+
+1997 Midn 1/c Goodhiew                    
+1998 Midn 1/c Morgan
+1999 Midn Erik Theodore Lundberg     
+     Midn Brian Everett Scrabeck 
+     Midn Carlos Eduardo Gomez 
+     Midn Lester Michael Melanson III 
+     Midn John Anton Kollar IV 
+     Midn Travis Anthony Mattera 
+     Midn George Apolonio Najar Ortiz Jr 
+     Midn David James Burroughs 
+2000 Midn Robert Bradford Schwenzer
+     Midn Laura Elizabeth Nolan 
+     Midn Steven Charles Lawrence 
+     Midn Daniel Antoine Boutros 
+2001 Midn Daniel Sullivan
+     Midn Alex Gutweiler
+Faculty and Staff:
+     Assoc Prof Daryl G Boden 
+     LtCol USAF Billy R Smith 
+     Bob Bruninga (WB4APR)
+     
+MISSION:  The Mission of PCsat is to serve as a worldwide position/status
+reporting and message communications satellite for remote travelers using 
+only Handheld or Mobile radios with Omni-directional whip antennas.  It uses
+the APRS (Automatic Position Reporting System) protocols to permit hundreds
+of users per pass to access the satellite.  To demonstrate this concept, 
+PCsat will augment the existing worldwide terrestrial Amateur Radio APRS 
+tracking system by providing links from the 90% of the earths surface not 
+covered by the terrestrial network.  It will be licensed as an Amateur
+Satellite in the Amateur Satellite Service.
+
+BACKGROUND:  Today, 95% of the US amateur population is covered by the 
+terrestrial APRS network, BUT only 30% of the surface area of the USA is, 
+or will probably ever be, covered.  Similarly in just the last year we have
+seen explosive growth in the European theater as well.  But, distant travelers,
+boats at sea, and stations in the rest of the world are presently unable to
+use the APRS system as a travelers safety reporting system when on distant
+trips.  An APRS payload on one or more satellites would make such reporting
+possible throughout the world.  PCsat will be a proof of concept for
+this mission.  Credibility to the popularity of this mode is demonstrated
+by the recent decision of the South African SUNSAT team to re-write their
+flight software to user their SUNSAT satellite to also provide APRS type
+satellite service.
+
+
+FREQUENCY CONSIDERATIONS:  Two meters is the ideal band for this mission due to
+the requirement for user access using only a handheld radio.  Two meters
+offers a 9 dB link advantage over UHF.  To take advantage of this advantage,
+the HANDHELD uplinks will be on two meters and the downlink will also be on 
+2 meters.  This assures the best reception by mobiles and handhelds both with 
+only omnidirectional antennas.  Higher power mobiles who have 10 dB greater
+uplink power will use UHF.  This splits the contention on the uplink channels
+and doubles overall throughput.  Two downlink frequencies are required:
+
+DOWNLINKS:
+VHF-A  should be in the Satellite Subband for operation worldwide
+VHF-B  can operate on 144.39 over the North American continent.
+
+UPLINKS:
+VHF-A  is for handhelds and low power (5w) stations everywhere
+VHF-C  is for special events/applications/and comand/control
+UHF-A  is for 50 watt mobiles everywhere
+UHF-B  is for command/control
+
+UNIVERSAL CONTINENT PAGING:  Since ALL terrestrial APRS users monitor the 
+North American Continent frequency of 144.39 and this frequency is coordinated
+by all coordinated bodies, there is an additional capability that can be performed
+by an APRS satelite.  It can be used to send urgent messages to ANYONE.  SUch
+use will be minimized to only priority applications since it does add a burden to
+the terrestrial network everywhwere.
+
+INTERNET LINKED GROUND STATIONS:  APRS is unique in the way it combines all
+packets heard everywhere in the world into a single common internet feed 
+channel.  THus the infrastructure for distributing APRS traffic no
+matter where its source into all other stations already exists.  So all
+we need is a few PCsat donwlink stations to feed in the packets heard
+from space.  
+
+Even on the 144.39 downlink, this is not a problem!
+To any single ground station receiver, the channel is still 70% vacant.
+(The Optimum Aloha TDMA channel operates at less than 20% occupancy).
+Since only a few ground stations are needed to link the PCsat downlink
+into the internet, any local instantaneous QRM at one receive site would
+not be present at all others simultaneouslly.  Thus with only 5 PCsat
+downlinks sites all feeding the APRServe internet system and experiencing
+say 30% channel QRM in their area, still gives a  0.3 to the 5th power
+chance of a lost packet.  Or better than 99.8% probabiliy of SUCCESSFUL
+receipt!  Thus 144.39 is a GOOD downlink in the USA and there are no
+frequency coordination issues.
+
+WB4APR, Bob

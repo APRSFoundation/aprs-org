@@ -1,0 +1,265 @@
+KPC3+ (PLUS) Version 8.3 Settings (and 9.1) WIDEn-N DIGIs  14 Jun 2021
+----------------------------------------------------------------------
+
+Update 14 Jun 21 Added note about Problem(0) - Log delayed packets
+Update 19 Jul 14 Suggests using digi location vs callsign for the name
+Update 24 Jul 09 added 2 LTexts for local EchoLink and IRLP objects
+Update 16 Nov 08 to clean up some text
+Update  2 Sep 08 added KA-node enabling for digi maintenance
+Update  8 Nov 07 clarified that "W2" in a digi text means that W2 is
+                  the current local recommendation for that area, not
+                  necessarily the trap limit.
+
+Update 24 Jan 07 clean up the BText for local repeaters 
+Update 18 Oct 05 to include 9.1 ROMS.  
+
+PROBLEM(0): There is a random problem with KPC3 digis that at some
+point hold up and then regurgitate LOTS of packets.  Here is a possible
+fix. Kantronics recommends shorting the RTS and CTS pins together 
+within my serial cable. (PINS 4/5 on DB25 and PINS 7/8 on DB9).
+Shorting the RTS and CTS together prevents the software from holding 
+the RTS pin low. If the RTS pin is at low voltage the KPC3+ will 
+start buffering and does not get caught back up.
+
+This applies to all 8.3 and 9.1 ROMS running on the KPC-3+(PLUS) TNC.
+With one small change (noted below), it also applies to KPC-3+ TNC's 
+running the last version of the 8.2 ROMS ending in "7265".  The 
+difference is noted below in section 4) and "6E".
+
+Typically, all KPC-3+ digis already support the basics of New n-N 
+Paradigm, that is, WIDEn-N digipeating.  But there are better ways to 
+use these features that have been developed since January 2005 that
+includes:
+
+ - add path tracing to WIDEn-N for the health of the network
+ - add TRAPPING of large values of N to cut out-of-area-QRM
+ - add Proportional-pathing to the digi's beacon to cut QRM
+ - added SSn-N path for efficient area-wide routing
+ - added standrdized TEXT to let users see capabilities
+ - Added new overlay "S" so users could see these new digis
+
+FIRST:  RESET the TNC to factory defaults to start fresh.
+
+1)  Resetting the TNC should remove the obsolete "RELAY", "WIDE", 
+"TRACE", and "SS" aliases which are obsolete.  
+
+2)  Set these commands for normal operation:
+  MYCALL      -  Digi callsign or preferably LOCATION name
+  INTFACE     -  Terminal.  So you can enter the remaining parameters
+  HID OFF     -  These packets are of no value to APRS
+  CD SOFTWARE -  For the best collision avoidance method
+  UIDWAIT OFF -  To speed up the response
+  TXD 18      -  To shorten the TX delay by 40% from the 300ms default
+  XMITLVL xxx -  Set TX modulation level to less than full distortion! 
+  MYA NONE
+
+SECOND:  Set up the KA-Node process so that you can maintain distant
+digis via a path from a local digi if you own more than one digi.
+
+   MYNode XXXXXX-7  The KA node callsign
+   NUMNodes 2       Will support up to 2 connections
+
+THIRD:  Eliminate the settings that are detrimental to the network.
+
+* UIDWAIT should be OFF. (the default).  With it on, your digi is not 
+doing the fundamental APRS fratricide that is the primary mechanism 
+for minimizing channel loading.  All digis that hear the same packet 
+are supposed to DIGI it at the SAME time so that all those copies 
+only take up one additional time slot. (but outward located digs will 
+hear it without collision (and continue outward propogation)
+
+FORTH:  Set up the DIGI ALIASES to perform the New-N digipeating.
+
+1) UITRACE WIDE,30  - This tells the digi to support WIDEn-N and to
+insert its own callsign so that the path is fully traceable.
+
+2) UIFLOOD SS,30,ID - Where SS or SSS or SSSS is your State or local
+ARRL or other Ham radio comunications section organization name.
+Notice, that having ID ON is a complete reversal to previous 
+recommendations that wanted NOID to be set.  Now we want ID ON to
+improve path tracing.  Users of SSn-N paths are encouraged to use 
+the path of WIDE1-1,SSn-N so that they get FIRST and LAST digi 
+identification.  These packets will arrive as DIGI1,DIGIn*,SSn-N, 
+showing the first and last DIGI's used.
+
+3) UIDUPE to 30.  This is a new command in version 9.1 roms.
+
+
+FIFTH:  Now set up the digi's own beacons into the network:
+
+1)  Prior to July 09, we used all four LTexts to implement
+Proportional Pathing on the digi's own data, so that beacons
+went out direct every 10 minutes, but 1 hop every 30 and
+2 hops every hour.  Now we only use two LTexts for a direct
+10 minute and 2 hop 1 hour beacon so we can use the other two
+LTexts for local info to mobiles.  
+See www.aprs.org/digis/digi-rates.txt.
+
+ LT  1  DIGI's beacon text (direct every 10 minutes)
+ LT  2  DIGI's beacon text (1 or 2 hops every hour)
+ LT  3  first frequency object
+ LT  4  second frequency object
+ BLT 1  EVERY 00:10:00 START 00:00:03  <randomize the seconds
+ BLT 2  EVERY 01:00:00 START 00:04:06   "  "
+ BLT 3  EVERY 00:10:00 START 00:06:09   "  "
+ BLT 4  EVERY 00:10:00 START 00:08:11   "  "
+ LTP 1  APN383 VIA WIDE2-2  <== hourly
+ LTP 2  APN383 
+ LTP 3  APN383 
+ LTP 4  APN383 
+
+This results in local info to mobile radio front panels every 
+10 minutes, and only one 2-hop beacon once an hour.
+
+2)  Your TOCALL in both the UNPROTO and the LTP's should use the 
+TOCALL of APN383 where APN identifies it as digipeater firmware.   
+The "3" identifies it as a KPC-3 and the "83" identifies it as ROM 
+version.  NOTE, that settings for -early- version 8.2 ROMS are 
+different and in a different file, and that version 9.0 should not 
+be used at a DIGI, or should be upgraded to the 9.1 Kantronics 
+release.  See the APRS list of  TOCALL versions for details of this 
+naming convention.  Obviously if you are using a 8.2 or 9.1 then 
+use APN382 or APN391...
+
+3) The BText can also be used for another locally recommended voice 
+repeater freq object.  Set your UNPROTO path to be direct (APN383 
+with no VIAs) since this info is ONLY of value in the footprint of 
+this digi and is SPAM everywhere else.  Be sure to include the 
+frequency and PL in the correct standardized format as detailed in 
+www.aprs.org/localinfo.html.
+
+The following BText format displays not only the Freq and tone info
+(T123) but also the range(R45m), net times(Net Th9PM) and meeting 
+dates (Mg3rdTh) for all mobiles in 
+the area:
+
+BTEXT:
+;146.835xy*111111zDDMM.hhN/DDDMM.hhWrT123 R45m Net Th9PM Mg3rdTh
+   or
+;146.835xy*111111zDDMM.hhN/DDDMM.hhWrT123 -060 Net Th9PM Mg3rdTh
+
+BEACON EVERY 10
+UNPROTO APN383
+
+This local frequency object is sent DIRECT to make sure it is only 
+visible in the area where the repeater can be used!  This eliminates 
+QRM and also frustration at seeing frequencies you cannot possibly 
+use.  Since these are originated at the digi, they do not QRM anyone, 
+beacuse the digi will only transmit them if the channel is clear.  
+Notice that the format has been designed to fit nicely on the 
+10x10x... byte windows on most mobile displays.  For details see 
+www.aprs.org/localinfo.html
+
+SIXTH:  Set large-N TRAPS for abusive paths:
+
+Set UIDIGI ON, WIDE4-4, WIDE5-5, WIDE6-6, WIDE7-7.  These specific 
+aliases act like traps because this digi will digipeat them once and 
+then no farther.  The closer you get to a high density area, the smaller
+N's you should limit.  In typical WIDE2-2 METRO areas, set UIDIGI to 
+include WIDE3-3,WIDE4-4,WIDE5-5,WIDE6-6.  Also, if you are getting lots 
+of W4-1 packets, for example, from a distant city that is not trapping 
+4-4 at the source, you can also trap those specifically by adding WIDE4-1 
+to your UIDIGI alias list.  For more on this be sure to see how we did 
+it in Los Angeles, and prevented anything above two hops from getting 
+into the Los Angeles Basin.  
+
+   http://www.aprs.org/fixingLA.html
+
+*** SPECIAL NOTE FOR KPC-3 DIGIS WITH THE LAST 8.2 VERSION 7265:
+This ROM will not work right with WIDE1-1,WIDE2-1 mobile paths unless
+one of the UIDIGI Aliases includes WIDE1-1.  So in those digis, set
+UIDIGI ON WIDE1-1,WIDE4-4,WIDE3-3,WIDE3-2.
+
+
+SEVENTH:  Now set the digi to INFORM users of its capabilities and
+other local information of value to the mobile operator.  See
+www.aprs.org/localinfo.html
+
+1) Set the two DIGI information LOCATION TEXTS with this exact 
+format for the consistent display to the users as to the 
+capabilities of this digi:
+ 
+   FORMAT: PHGxxxx W2, SSSn-N, remaining comments....
+
+a) "PHGXXXX " plots a cricle showing the working range of the digi
+b) "W2, SSSn-N"  informs users of the recommended hops and section.
+c) The "S" character between the LAT/LONG shows an "S" overlay
+d) If you feel you must use the altitude /A=001377, please add it at 
+   the end, not first.  Since those first 20 bytes are the most 
+   important to show up on some limited displays (D7  etc).
+   In my opinion, Altitude is redundant since the more valuable info
+   of height above average terrain is included in PHG.
+
+CONCLUSION:
+
+The best way to set up an APRS digi is to FIRST do a RESET or RESTORE
+to FACTORY DEFAULTS to make sure you dont have any bad settings that
+have crept into your system.  Then the ONLY commmands  you have to
+change are the ones below.  For the Local-Direct BText advertising a 
+local voice repeater, I assumed a local Voice repeater on 146.940 with 
+a PL of 107 for this example:
+
+MYCALL    XXXXXX <== preferably a LOCATION understood by travelers
+MYREMOTE  XXXXXX
+MYNODE    XXXXXX-7
+NUMNODES  2
+INTERFACE TERMINAL
+RTEXT   (your secret password string)
+BText  ;146.835xy*111111zDDMM.hhN/DDDMM.hhWrT123 R45m Net Th9PM Mg3rdTh
+UNPROTO APN383  <== ID's the KPC-3+ ver 8.3 local,direct no VIA's
+HID OFF 
+CD SOFTWARE
+TXD 18
+XMITLVL xxx <== adjust to well below distortion point
+
+LT  1 !DDMM.hhNSDDDMM.hhW#PHGphgd W2, SSn-N, new digi in kalamazoo, etc
+LT  2 !DDMM.hhNSDDDMM.hhW#PHGphgd W2, SSn-N, new digi in kalamazoo, etc
+LT  3 ;EL-123456*111111zDDMM.hhNEDDDMM.hhW0FFF.FFFMHz Tnnn CALLSIGN-R
+LT  4 ;IRLP-4040*111111zDDMM.hhNIDDDMM.hhW0FFF.FFFMHz Tnnn oXXX CALLSIGN
+       The first two DIGI LTexts must be identical so the Position 
+       Beacon is not always changing and using up the new-posit LOG 
+       files on every user's PC...
+
+BLT 1    EVERY 01:00:00 START 00:00:03
+BLT 2    EVERY 00:10:00 START 00:04:06
+BLT 3    EVERY 00:10:00 START 00:06:13
+BLT 4    EVERY 00:10:00 START 00:08:17
+LTP 1    APN383 VIA WIDE2-2   
+LTP 2    APN383 
+LTP 3    APN383 
+LTP 4    APN383 
+
+UIDIGI ON WIDE4-4,WIDE5-5,WIDE6-6,WIDE7-7 
+UIFLOOD SS,30,ID       <for your SS state or SSS or SSSS ARRL section
+UITRACE WIDE,30        <makes all WIDEn-N traceable
+UIDUPE 30              <new command for the 9.1 ROMS
+
+LOCAL VOICE REPEATER RECOMMENDEDl:  Use the LTexts and the BText to 
+show the locally recommended voice repeater objects and frequencies for 
+travelers through the area.  These objects go DIRECT only and the 
+freqnecy shows up on the front panel of all APRS mobiles with displays 
+in their cars.
+
+BText: ;146.835xy*111111zDDMM.hhN/DDDMM.hhWrT123 R45m Net Th9PM Mg3rdTh
+   or
+BText: ;146.835xy*111111zDDMM.hhN/DDDMM.hhWrT123 oXXX Net Th9PM Mg3rdTh
+
+This shows the 146.835-a repeater (xy make it unique)
+with a TONE of 123 HZ (leave off tenths)
+with a weekly net at 9 PM on Thursdays
+with Monthly meetings on the 3rd Thursday
+with a range of 45 miles or an offset of +000 or -000 in 10's of KHz
+
+BEACON E 10     <== every 10 minutes direct
+UNPROTO APN383
+
+see the web page: www.aprs.org/localinfo.html
+
+That's all there is to it.  Please don't diddle with any other 
+parameters.  The defaults for those are the correct settings.  If you
+dink with them you can only make performance worse.  Also please use
+the consistent abbreviations for Wn, SSn-N so users know what is going 
+on.
+
+de WB4APR, bob
+

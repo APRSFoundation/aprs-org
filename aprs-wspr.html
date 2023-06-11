@@ -1,0 +1,182 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+   <TITLE>APRS-WSPR</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (Win95; I) [Netscape]">
+   <META NAME="Author" CONTENT="Bob Bruninga">
+   <META NAME="Description" CONTENT="ParkinsonSat APRS Satellite Project">
+   <META NAME="Keywords" CONTENT="Psat, outernet, ax.25, packet satellite, PCsat, buoy, ocean,environmental sensors, APRS, APRsat, buoys, oceanography, Satellite, Cubesat,  Tracking, Bruninga, LEO, GPS">
+   <META NAME="Classification" CONTENT="Science">
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#48D1CC" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000">
+
+<IMG SRC="OUTNET/WSPR-map280.png" align=right>
+
+<P><B><U><FONT SIZE=+2>
+<center>
+APRS-WSPR, A Reliable HF link
+<BR> for wilderness and mobile APRS Operation 
+
+</FONT></U></B>
+
+<P>
+
+
+
+<P>Bob Bruninga, WB4APR
+lastname@usna.edu
+<P>
+</center>
+</FONT><BR>
+
+<P>
+<B>APRS over WSPR is the ideal marriage of two very powerful Ham radio capabilities for communicating over great distances while mobile or portable in remote or wilderness areas.  Both protocols are very low bandwidth with only minimal data payload requirements.
+</B>
+<P>
+.
+<P>
+<B>WSPR is a low power HF system:</B>  What WSPR brings to APRS is a 27 dB signal processing gain on the use of HF for mobile and portable APRS communication.  This
+enables a 1 Watt transmitter to perform as if it was 500 watts!  Although the WSPR 
+links are extremly slow, about<B><i> 22 bits in two minutes</B></i> it is extremely
+effective at HF communications.  When combined with the APRS HFgate connectivity to the 
+APRS-IS, this brings a whole new level of remote area connectivity.
+
+<P>
+
+<B>COMMUNICATING WITH ONLY 22 BITS!</B>
+<P>
+<IMG SRC="OUTNET/WSPR-screenX.png" align=right>
+
+As you can see on the WSPR user operating screen here at right, the only thing the WSPR channel is configured
+to transmit is just the <I><B>callsign, Gridsquare and Transmit power</B></i> (circled in red) for
+studying the HF propogation and alerting Ham operators to band openings.  But if we operate
+APRS-WSPR on a different HF frequency just for APRS, so as not to confuse the HF propogation application, we can define those 4 characters of the Grid Square differently and specifically for the APRS application.
+
+<P>
+<B>APRS WSPRgates:</B> And since the goal of APRS-WSPR is to get APRS reporting back into the APRS-IS, we can have many APRS WSPRgates listining all over the country on all HF bands to make sure that all data eventually reaches the APRS-IS any time of day or night in most cases.
+<P>
+
+<B>The APRS-WSPR Challenge:</B>  It turns out, that we have alredy done that on our
+next <A HREF="qikcom-2.html"><B>QIKCOM-2</B></A> satellite.  We use the 4 character field
+not only for position reporting (very useful for a remote Outernet APRS user) but also to
+encode text messages.  In addition, we can use
+these 15 bits effectively for Disaster and Emergency Response communications.  It turns
+out that in 15 bits we can convey about 32,000 different codes.  If each code, or subset
+of codes conveyed valuable information, then our mission is complete.  
+<P>
+For example, we have already encoded much of the following information in Four Bytes
+on the <A HREF="qikcom-2.html"><B>QIKCOM-2</B></A> satellite and can do even more with the extra 7 power bits as a "type" identifier.  For example:
+<P>
+
+<LI> POSITION to 12x18 miles using the four byte Gridsquare and some of the other 7 power bits.
+<LI> MESSAGES, just two digits can convey any of the 
+     <A HREF="http://nts.ema.arrl.org/node/30"><B>43 ARRL Standard Radiograms</B></A>
+<LI> SPECIAL APRS Messages - an additional 
+     <A HREF="http://aprs.org/QIKcom/Q2-DTMF-messages.txt"><B>50 APRS messages</B></A> 
+     have been included
+     
+<LI> MODIFIERS - and each message can have a 2 digit modifier for tailoring the message meaning.
+<LI> EMERGENCY CODES use message #30 and the modifier to select any of the 14  
+    <A HREF="https://www.cospas-sarsat.int/en/emergency-codes-maritime-and-non-maritime">
+    <B>Maritime Emergency Codes</B></A>.
+<LI> POSITION to 3x3 miles for stations with 5 byte calls and position to 0.7x0.5 miles for 4 byte calls.
+
+<P>
+
+<P>
+
+<IMG SRC="OUTNET/WSPR-TX-W5OLF.png" height=120 width=300 align=right>
+
+<B>WSPR HF Transmitter:</B> Because of the extremely high processing gain of the WSPR system, over 28 dB,
+a simple 1W transmitter is equivalent to a regular 500 Watt SSB transmitter to provide the return data path.  WSPR 'stations' transmit a 
+programmed message with their licensee's call sign and Four Digit OUTNET code in AFSK at extremely low speed. 
+It requires almost two minutes to complete one transmission. These transmissions are precisely timed to 
+begin at the start of the even minute, carefully calibrated to UTC or GMT by a GPS. Since a single WSPR signal is
+only about 6 Hz wide, probably 15 can easilly fit in the 200Hz wide WSPR channel and by transmitting only once
+every 20 minutes, then nearly 150 can share the channel.  Further, 12 of these channels can fit in a single
+2500 Hz HF voice channel for a total of 1800 users. 
+Shown here is the 1 Watt 
+<A HREF="http://wsprnet.org/drupal/node/5112"><B>Transmitter designed by W5OLF</B></A> for the 30 meter Amateur Band.
+Or the very tiny 
+<A HREF="https://docs.google.com/document/d/1bLKEDmJvKQegqUwDXEy3V7wQTqupIfyg2LkN0dOuPY4/edit">
+<B>0.1W WSPR transmitter</B></A> designed by TAPR for the Rasberry Pi shown in the lower right.  This would make an excellent
+companion to the Rasberry Pi based Outernet System.
+
+<P>
+
+
+
+<P>
+
+
+SOME HELPFUL WSPR LINKS: (<A HREF="http://www.qsl.net/k3rll/wspr.htm"><B>stolen from K3RLL's web page</B></A>)
+
+<IMG SRC="OUTNET/WSPR-TX-TAPR92.png" height=200 width=400 align=right>
+
+<LI><A HREF="http://dev.wsprnet.org/drupal/"><B>WSPRNet Home Page</B></A>
+<LI><A HREF="http://wsprnet.org/drupal/wsprnet/map"><B>WSPRNet Real-time Signal Map</B></A>
+<LI><A HREF="http://www.stellarwspr.com/"><B>Stellar WSPR</B></A>. Source for WSPR Receivers, kits or built.
+<LI><A HREF="http://wsprnet.org/drupal/node/5112"><B>W5OLF's new WSPR Transmitter Kit by AE5X</B></A>
+<LI><A HREF="https://www.scribd.com/doc/76568246/N-V-2012-01"><B>The Radio Whisperer' by George Steber</B></A>. 
+            Scroll down about half-way through this 'Nuts & Volts' introduction to WSPR
+<LI><A HREF="http://physics.princeton.edu/pulsar/K1JT/">
+    <B>Joe Taylor's Weak Signal Communication Software page at Princeton</B></A>. Scroll down to WSPR
+  
+<P>
+
+  
+
+
+
+
+<P>
+Bob Bruninga, WB4APR
+<BR>lastname at usna dot edu
+
+<HR SIZE=5 WIDTH="100%">
+
+<IMG SRC="OUTNET/Inmarsat-I4-coverage-APRSx.png" align=right>
+
+<B>The APRS Mobile Wilderness Return Path!:</B> The above APRS-WSPR capability can then
+be married with the global APRS-OUTNET system to make the remote wilderness operator a full two way link.  A subsset of APRS is now carried on the <A HREF="http://outernet.is"><B> OUTERNET</B></A> system via three geostationary Inmarsat satellites with worldwide
+coverage as shown here.  <B>Outernet</B>  is a low data rate worldwide satellite downlink to provide web content (downlink files only) to  remote areas anywhere in the world....  This can provide the return path for APRS operators.
+<P>
+
+
+
+<IMG SRC="OUTNET/OUTNET-conops-wspr.png" align=right>
+
+
+<A HREF="outnet.html"><B>OUTNET</B></A> is the APRS identifier for routing APRS traffic via the <B>Outernet</B> system with their typical low rate position and text data
+when operating remotely in support of Disaster or Emergency Resonse communications.
+Hams may use any existing Amatur Radio APRS channels for this return traffic such as HF
+or the APRS amateur satellites for this path.  Hence the exploration for using WSPR as an other such return path.
+
+<P>
+
+<B>LICENSE REQUIRED:  Of course, all of this is Amateur Radio and so only legal ham radio content can be acarried by the APRS system and all operators must have an Amateur Radio Operators license.  If you are new to Amateur Radio, or want to get a license, see THE RULES (im still looking for a good link).</B>
+
+<P>
+
+
+As you can see from the WSPR plot above,this kind of reliable links
+fits in with the overall APRS OUTNET Concept of Operations (CONOPS) as shown in the zoomed 
+in portion shown at right.  The WSPR links are shown on the right in red.  
+
+<A HREF="outnet.html"><B>Return to the main APRS-OUT web page></B></A>
+<P>
+<HR SIZE=5 WIDTH="100%">
+<TABLE BORDER=2 CELLPADDING=2 >
+<TR>
+
+<TD>
+<P><FONT SIZE=+1><A HREF="sitemap.html"> WB4APR's overall Site Map </A></FONT></P>
+</TD>
+</TR>
+</TABLE>
+</UL>
+
+
+</BODY>
+</HTML>

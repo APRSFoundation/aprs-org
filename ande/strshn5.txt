@@ -1,0 +1,74 @@
+ANDE COMMAND AND CONTROL SYSTEM                              WB4APR
+-------------------------------------------------------------------
+                                                       27 June 2002
+
+This Naval Academy command and control system for ANDE has 
+been flight proven on PCsat and will provide the following 
+capabilities on orbit with the minimum power requirements suitable 
+for this mission:
+
+1) Routine telemetry every 1 minute when in view of command station
+2) Telemetry of 5 analog parameters (0-5 volts)
+3) Three on/off command channels and bidirectional RS-232 channel
+4) AX.25 1200 baud compatibilitiy with all existing packet systems 
+   and the worldwide internet linked APRS gnd stations on 145.825.
+5) PCsat style communications worldwide at low duty cycle
+6) Reception by student stations with only a whip antenna.
+6) Average power requirement of only 0.2W
+
+The average power requirement of 0.2 watt for a mission life of one
+year can easily be met with either of the following two power 
+systems:
+
+  * Ten 1.5" square solar panels equally distributed on the sphere
+  * OR, the equivalent of 120 Alkaline D Cells.
+
+The extremely low power budget is met with the following operations
+plan which does not sacrifice any significant operational functions
+of the PCsat type mission but achieves a 20 to one power savings.
+
+1) Except for a microwatt timer, all electronics are off
+2) Once every 20 seconds for 2 secs, the TNC and receiver are powered up.
+3) If no one connects to the TNC, then it powers back off.
+4) If someone connects, the CONNECTED state holds the system ON.
+5) While SYSOP is connected, TNC and RX are on, the system is fully
+   usable like PCsat.  It will send once a minute telemetry, it
+   will respond to the 3 ON/OFF BIT commands, and it is optionally
+   available to users to use as a packet relay.
+
+POWER BUDGET:
+
+To determine the power budget, the Satellite is assumed to be in view
+of each command station on 4 passes a day.  There are about 6 full
+time commmand station areas, East USA, West USA, East Europe, West
+Europe, east Australia and Japan.  The satellite may be used in other
+locations, but the duty cycle will be insignificant to these six.
+
+Each such pass is assumed to last 10 minutes.  Thus the total access
+times average to about 120 minutes a day for an 8% dutycycle.  All the
+rest of the time, the TNC/Receiver are only waking up for 2 seconds
+out of every 20 for another 8% duty cycle.  The transmitter is assumed
+to transmit 10 Telemetry packets, 10 overhead packets, and 10 user
+packets per pass for a total of 30 in 10 minutes for a 5% duty cycle
+per pass.
+
+  Receiver  - 30ma @ 9 volts @ 16%       = .06 W
+  TNC       - 15ma @ 9 volts @ 16%       = .03 W
+  XMTR      - 900ma @ 9 volts @ 5% of 8% = .05 W
+  Total AVERAGE Power                    = .14 W
+
+This power can be met with the equivalent of 120 Alkaline D Cells
+(120* 16 AHrs * 1.5 volts)/(365*24) = .2 W for one year or 10 evenly
+spaced solar panels of 0.2 W each.  An illumination factor of
+1.8 is assumed which accounts for the cosine-theta illumination of
+multiple panels and a 200% charge factor is assumed to make up for
+the 70% charge efficiency and 45% maximum eclipse.
+
+This 0.2 W solar panel requirement can be met with about 1.5 square 
+inch of silicon.  To maximize active surface material, only 4 PV cells 
+per panel are used to give a self regulating charge to a single 1.2 
+volt NICAD cell.  Each of the 5 NiCd cells is connected to two solar 
+panels on opposide sides of the spacecraft to guarantee sun. 
+
+Some of this data is obsolete and needs to be revised...
+de WB4APR, Bob Bruninga

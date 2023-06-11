@@ -1,0 +1,94 @@
+APRS COVERAGE IN THE NATIONAL PARKS                        20 Oct 2020
+----------------------------------------------------------------------
+
+20 Oct 2020 new data from Eric W3GK
+ 1 Nov 2012 updated Grand Tetons and Mammouth Cave
+If you have better info, let us know!
+If an HT has coaverage, let us know.  Otherwise 50W MObile is assumed.
+
+This file was put together to help make sure that we had digis to 
+cover the National Parks.  Since 0.5% of the USA population are hams, 
+and with thousands of visitors a day in some parks, this means that 
+there can be as many as 32 hams a day in the Grand Canyon for example.
+
+May as well let them find each other on APRS!
+
+TOURIST AREA       VISITRS/YR HAMS/DAY APRS  CALL -or- REPORTED BY
+-----------------  ---------- -------- ----  ---------------------
+Acadia Natl Pk     2,469,000    16     ?     N1DP-5
+Arches NP            786,000     6     yes   N0NHJ BALD?
+Assateaque Is      1,810,000    12     some  WB4APR
+Badlands ND        1,105,000     7     ?     KD0S-1
+Banff, Yoho, Kootenay   ?        ?     YES   VE6SZR
+Big Bend (W.TX)                        no    KD4LXC-1
+Biscayne N.P.           ?        ?     yes   K4HG
+Bryce Canyon NP    1,099,000     7     no    KE7JVX-10
+Blue Ridge Pkwy   19,153,000   130     yes
+BlackCanyon of Gun                     yes   WATRDG
+Black Rock Desert in Nevada            yes   N3GXH Ed
+Carlsbad Caverns                             DARKCN
+C&O Canal (MD)     3,115,000    21     yes   Hrprs Fy to Whites Fy
+Canyonlands NP       401,000     3     yes   N0NHJ (2005)
+Cape Cod Seashore  4,581,000    30     yes   N1CCK-15 in Brewster
+Chatahoochee Rvr   2,659,000    18     yes
+Cape Hatteras      2,647,000    18     yes   KB4DOH-10 @ 1200'
+Crater Lake          450,000     4     yes   WLKMTN
+Colorado Natl Mnt      ?         ?     yes   N0NHJ
+Death Valley       1,179,000     8     none in valleys. OK to E & S
+Denali Natl Park AK                    yes   KL1SF-3.
+Devils Tower         383,000     2     no    N2IPH & KC5JIF
+Dry Tortugas N.P.      ?         ?     yes   K4HG
+Dinosaur Natl Mnt      ?         ?     yes   N0NHJ
+Everglades         1,000,000     7     yes   N4TCW
+Gateway Arch                                 K0ATT-10 I-gate
+Garden of the Gods     ?         ?     spottyWA8LMF
+Gettysburg         1,542,000    10     yes
+Glacier NP         1,728,000    12     ?     HUDBAY
+Grand Tetons       2,590,000    17     no    REX
+Great Basin N.P        ?         ?     no    ELY
+Great Smokies     14,486,000    95     yes   spotty
+Great Sandunes                               ALMOSA
+Grand Canyon       4,460,000    32     yes   N7XYR-1 CANYON
+Glen Canyon        2,568,000    17     no    WB4APR (99)
+Gunnison NP                            some  N0NHJ (2005) Black Canyon
+Guadalup Mtns                                DARKCN
+Haleakala                              yes   NH7C-5
+Hawaii Volcanoes   1,514,000    10           WH6FQI-10
+Hot Springs                            yes   HOTSPR
+Indiana Dunes      1,820,000    12     yes   W9LRT-3
+Joshua Tree                            yes   AA3JY (2016)
+Lake Meade         8,755,000    60     yes   N7ZEV
+Lasson Volcanic                        yes   KF6VAN-10
+Mamouth Cave       1,749,000    12     no    Visited 1 Nov 2012
+Mesa Verde           452,000     4     yes   PARRTT
+Mount Rainer       1,344,000     9     ?
+Mt Rushmore        1,868,000    12     no    N2IPH & KC5JIF
+Natchez Trace Pky  5,737,000    38     some? Spotty near Nashville
+North Cascades                         no
+Olympic                                      packet
+Ozarks             1,568,000    10     ?
+Petrified Forest       ?         ?     no    PORTER
+Pinnacles                              no
+Redwood                                      KE6SLS-3
+Rocky Mountain     3,185,000    21     some  one near Estes Park
+Shenandoah NP      1,419,000     9     probably
+San Antonnio(Alamo)1,394,000     9     yes   K5ZZT
+Sequoia              838,000     6     some  KG6JVE
+Saguaro                                yes   KFOX-10
+Shiloh                80,000     1     yes   KA4BNI-4  (KB4YTM)
+Virgin Islands       704,000     6     no    WB4APR (1995)
+White Sands                            yes   LRIDGE
+Yellowstone        3,100,000    20     P    REX
+Yosemite           3,400,000    22     yes   KF6HJO  sysop for K6IXA-2 
+Zion Natl Pk       2,432,000    16     no    KF6RAL-13
+ 
+The criteria here are those areas that are remote from the existing
+terrestrial APRS infrastructure and which probably do not have enough
+permanent locals to support a digi... "Coverage" means that you can
+communicate from the parking lot of the biggest Campground or
+Headquarters (Hiking to the TOP of the mountain doesn't count).
+ 
+If you can supply any info above, please send to me and I will update this
+list... Including of course, adding other areas.
+
+de WB4APR, Bob

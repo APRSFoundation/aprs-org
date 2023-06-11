@@ -1,0 +1,44 @@
+CAMELBACK-9 Report 2016
+-----------------------
+Kevin McCauley KB3EJM
+
+I arrived at the top of camelback at 0930 and was up and running by 0946.
+My intentions were most to monitor the event and trouble shoot the the 
+permanent repeater.I had my d700 pre configured and 2 old beam antennas, 
+two 7amph batteries in parallel and a harbor freight solar panel to keep 
+the batteries topped off. Was up and running by 0946.The very first packet 
+heard at 0946 was Ezinox-12; @ 0948  GRYLCK-11;@ 0949  AB1PH-12 ; @ 0953  
+SLIDE-10 ;@ 0957  CAMLBK-9 ;@ 1123  HWKSBL-6 ;@ 1124  GDHILL-8 ;@ 1128  
+MDMTN-7; @ 1151  AOMTN-5.
+
+These were the first stations heard repeating form the permanent repeater 
+(camlbk-9) . I took screen shots of the rest of the event to follow.
+I'm still trouble shooting why I was not able to decode and re-transmit 
+on 9600. However my beacons could be heard both north and south. Also I 
+did not hear nor was I heard on UHF. I did notice that when I tried to 
+switch A band for B band the tuning knob was skipping the menu wildly to 
+the point I couldn't send text or set the frequencies any more so I'm 
+attributing the problems t my radio. Before switching the A band for the 
+B band, with the advice from Lynn I had messaged slide-10 to start hop7-7' 
+I had received an ack and he was able to start the chain from me northward. 
+
+I saw no issues with the permanent repeater and seemed to skip mountains. 
+I'm currently scouting new areas to set up another repeater as camlbk-9 is 
+sharing a space with the 145.010 main digipeater/ node for this area. 
+Blue mountain ski area seems very willing to accommodate us at the moment 
+and I will see how the coverage will be. Another site on the AP trail 
+would be tott gap mtn (40.96.96N, 75.59.58W) which has an open north/ 
+south view.
+
+The camlbk-9 repeater is in the privy on top of Big Pocono state park. 
+It consists of a KPC+ TNC a Yaesu 2 meter pushing 25 watts and a F22A a
+ntenna and coax donated by KE3MX. DCNR has been very open and kind to our 
+needs and seems willing to help us any way they can. thank you DCNR. 
+A lot of members of KB3YMY set these repeaters and I thank them too. 
+Our next project is in the works of setting up a hammesh system. Donald-
+WK2RP had made it to the top of the mountain towards the end of the event 
+to help me break things down. He also acted as PI for this event with 
+all the curious onlookers.
+
+Screenshots of the home monitoring of the event will follow within the 
+next couple days. Kevin-KB3EJM

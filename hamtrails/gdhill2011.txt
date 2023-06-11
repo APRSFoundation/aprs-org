@@ -1,0 +1,99 @@
+GOVERNOR DICK HILL 2011 REPORT                            26 July 2011
+----------------------------------------------------------------------      
+                                                           Bob, WB4APR
+I guess GD-Hill gets top honors as the weakest link.
+
+At the time, everything seemed just fine.  Everything got up the hill
+OK with the huge shoulders of Rorie Shaffer, KC2UML and AJ Bruninga,
+WA4APR.  Packets from the south were immediately seen, and the lack
+of packets from the north did'nt yet bother us too much at first.  But 
+here is the rest of the story...
+
+Unbeknownst to us, Murphy, N0LID followed us up the hill, and then 
+even climbed the tower with us.  Here are all his contributions.
+
+1) I missread EST/EDT on GPS and was an hour late in predicting arrival.
+
+2) Car full of everything on the list, but I forgot the backpack to 
+carry it up the mountain (.6 mile) and the final vertical ladder climb 
+(70').  Rorie showed up to save the day with a spare pack.
+
+3) Immediately on hooking up, noticed steady carrier on 144.34 that 
+took 100% squelch to quiet and allow my transmissions.
+
+4) 1st heard was SPRINGER-1 from Georgia!  Checked path (1st hop) and 
+noted it was via MDMTNS.  IMpossible.  Incorrectly assumed there was a 
+rogue TNC with the wrong call.  Later realized that we are not using 
+UITRACE so will not see anything but LAST DIGI.  (my first time using 
+the PATH display in the D710 on a network without UITRACE (where I am 
+used to seeing 1st and last digi to show))
+
+5) Operated for 2 hours hearing everything to south, and nothing north.  
+Blamed it (falsely) on CAMELBACK.
+
+6) Both adjacent nodes MDMTNS and CAMLBK were unmanned so we had NO 
+ONE to talk to to confirm they could hear me, nor what they were 
+hearing.  SO no feedback if I was working or not.
+
+5) Celled 2nd hop north (manned) close to 2 PM and he said Cammelback 
+was OK.  SO I went looking for why we were not hearing it.
+
+6) Swapped APRS to band B instead of Band A, and BINGO, packets from 
+North via CAMLBACK started arriving.  Turns out my D710 band A was
+DEAF (later measured as 13 dB down!).
+
+7) Sent my son to check out 5PTS possible future site only 10 mi away.
+But now, our 445.925 coordination frequency was on the bad side of 
+the radio, and not hering him for nearly an hour, I assumed he was
+just enjoying the scenery and taking his time (as I had suggested). 
+Eventually, I made a concerted effort to call him uwing a UHF HT held
+outside of our faraday cage and got him.  He had been calling me all
+along!  An hour was lost.  See #8.
+
+8)  AJ said it was not 10mi away, but actually 25 miles to this 5PTS
+site.  He also told us he was seeing CAMELBACK but not even us!  
+DUH... at 1450 then is when I realized GDHILL-8 WAS NOT DIGIPEATING!
+
+9) FIxed it (UIFLOOD HOP was off).  But then got message from COMERS 
+that they were securing at 1500 only 10 minutes later.  I replied with 
+message saying please stay 30 more minutes.
+
+10) THen I missinterpreted a response from Hawksbill which said "Now 
+or never" which I think I wrongly interpreted that they needed to get 
+down off the mountain now-or-never (maybe a big storm coming)...  
+SO I sent out OK, THANKS meaning they could secure.
+
+11) Then I sent out a bulletin that everyone could secure since 
+without COMERS, we would lose everything to south.  Later realized 
+Hawksbill may have meant the opposite.  That they would stay "now-or-
+never" to make sure it worked.  But too late, my messages were out.
+
+12) As noted above, comms was re-established with the 5PTS test site
+with an HT outside the cage on the ledge to hear 5PTS on UHF, and 
+then transmitting with the 50W side A so 5PTS could hear us.  It was
+a kludge and hard to hear with all the mom's and kids clambering all 
+over the tower too.  This evolution wasted a lot of time.
+
+13) But at 1530, still seeing all to south were still online, we 
+realized I misinterpreted the Hawksbill message.  I Sent out BLN 
+asking distant stations to pse send a BLTN so we could try for the 
+golden packet.  But it was probably too late.
+
+13) We Saw CLINGMANS planning to sercure at 1545 due to coming 
+storm so we sent out "ALL. Secure at 1545" and started packing up.
+
+Looking forward to diging into the logs to figure it all  out.  But 
+it was great to see ACTIVITY on all 15 mountain tops!  Can't wait 
+till NEXT YEAR!
+
+Great going guys!  I will write a QST article.  Send me your best 
+shot of your station (preferably with you in it).
+
+During all this Rorie had some time to set up the FT-817 and a screw
+driver (manual) whip grounded to the Farraday cage surrounding us.
+He could hear activity on teh SOTA frequency but was unable to be 
+heard.
+
+Bob, WB4APR
+
+

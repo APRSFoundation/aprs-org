@@ -1,0 +1,147 @@
+ID/NOID AND WHY ALL APRS DIGI's SHOULD BE NO-ID!               29 Oct 2001
+---------------------------------------------------------------------------
+                                                                     WB4APR
+
+All APRS DIGI's should be set with the UIFLOOD WIDE,28,NOID.  They should
+never be set to "ID" or if they are, then they should be clearly marked,
+since they will screw up the interpretation of APRS path data.
+
+This missunderstanding has been with us since 1998, and it NEEDS TO BE
+FIXED.  Here was my latest attempt at educating the owners of DIGIS with
+the "ID" parameter improperly set.
+
+> ...From the perspective of a digi operator who is interested in seeing
+> the network's performance, I really don't care what digi a station
+> entered the network from. I am more interested in how *I* heard the
+> station.
+
+This is useless information.  If you hear it, then you hear it.  Done.  It
+is not how you hear it that is important, but *what will hear you* (or
+what will hear your users)...
+
+> When I am in Mississippi or Alabama driving in the
+> boonies, why do I care what digi heard the originator? He should either
+> have a proper position entered or else he should be using a GPS.
+
+More than half of APRS packets contain no position data.  And when one
+needs to *communicate via message*, none of the packets do.  WIth ID
+enabled, every digi destroys the oritinators original path entry and thus
+all flexibility in optimizing paths for passing real information (not just
+posits) is lost.
+
+ALso in your ALA/MISS example, *you, the mobile* are  the "originator"
+that may have the biggest interest  in knowing what digi heard *you*.
+
+ANd one final comment before I turn to the REASONS file and the thing that
+caused me to raise this topic in the first place.  This was while I was
+a visitor in Atlanta for the AMSAT convention.  In that area, most of the
+digis are set to "ID".  While I was there, I monitored 144.39 and could learn
+nothing about the local network,  Every packet for 3 days arrived as
+
+XXXXX>APRS,N4NEQ-2*,WIDEn-N:...
+YYYYY>APRS,N4NEQ-2*,WIDEn-N:...
+ZZZZZ>APRS,N4NEQ-2*,WIDEn-N:...
+ad nausium.
+
+Yes after the first packet, I could see that I was hearing N4NEQ-2.  But
+the fact that the originators path information was destroyed in the
+thousands of other packets coming in over 4 states, is what weakens the
+APRS network.   The entire time I was in the city I could gain nothing 
+from the network by monitoring path data.  BECAUSE "ID" WAS SET and it
+was obliterating all other path data!
+
+Here is what I wrote the last time this came up:
+
+WHY UIFLOOD WAS DESIGNED TO DEFAULT TO NOID:
+
+The setting of ID has always been very controversal because it is NOT how
+APRS WIDEn-N digipeating was designed to work.  When new digi owners in
+the West were the first to start putting up WIDEn-N digis, they
+thought it made sense to turn ID on.  It took years to get them to
+understand that that is not the intent, was not the design, and was not
+how WideN-N is supposed to work.  The default for the UIDIGI command is
+NOID.  That is how it is supposed to work.
+
+Notice, that slowly but surely most regions of the country have now
+switched back to NOID.  And now, finally Jeff Brenton changed his
+recommendations on the dididahdahdidit web page so that this
+confusing information is finally out of the way.
+
+Here is the rationale for three very reasonable USER paths:
+
+A) VIA WIDEn-N          User chose shortest possible path
+B) VIA DIGI1,WIDEn-N    includes originating digi for return path info
+C) VIA WIDE,WIDEn-N     Same as B, but user is not sure of his digi
+D) VIA RELAY,WIDE       Same as C, but user may need to use a home stn.
+
+Now lets look at how these are displayed after going through a WIDEn-N
+digi, (lets call it DIGIZ) with each of the two settings of ID and NOID:
+
+If ID is set:
+A) WIDEn-N       arrives as DIGIZ*,WIDEn-X  making all packets longer
+B) DIGI1,WIDEn-N arrives as DIGIZ*,WIDEn-X  and source info is lost
+C) WIDE,WIDEn-N  arrives as DIGIZ*,WIDEn-X  and source info is lost
+D) RELAY,WIDEn-N arrives as DIGIZ*,WIDEn-X  and source info is lost
+
+If NOID is set.
+A) WIDEn-N       arrives as WIDEn-X         preserving shortness
+B) DIGI1,WIDEn-N arrives as DIGI1*,WIDEn-X  and source info is kept
+C) WIDE,WIDEn-N  arrives as DIGI1*,WIDEn-X  and source info is kept
+D) RELAY,WIDEn-N arrives as DIGI1*,WIDEn-X  and source info is kept
+
+Thus, the NOID setting preserves the original intent of the sender.
+The ID setting destroys the intent of the sender.
+
+THus having NOID set is the way APRS WIDEn-N digipeating was designed.  It
+has many,many advantages:
+
+1) It preserves the intent of the sender
+2) It preserves the source digipeater always
+3) It allows everyone to see their OUTGOING path successes.  (It is
+the success of your OUTGOING path that determines your ability to
+communicate, not your incoming path).
+
+4) It allows tracking any TNC without a GPS or position data to the
+nearest digipeater anywhere in the world.  I can build a cigarette pack
+sized TNC tracker (with no GPS) that will wake up and send a packet once
+an hour for a YEAR on 4 AA batteries.  I can track it anywhere in the
+world if digis use NOID.  Because I can always see which digi HEARD IT
+first.  Compare that to a tracker that can only last 5 hours on the same
+4 AA batteries because of the GPS..
+
+5) It allows reverse pathing for sending back efficient messages. All I
+need to see is ONE packet from you and I can see what digi you are near.
+Even without any POSITION info from you, I can look at a map, see where
+that digi is, and send you back a reply.
+
+6) If a person uses a HOME digi to get out of a canyon or a building in an
+"ID" network, no one will ever be able to send him anything, because they
+do not know that they must include WIDEn-X,HOME as the return path.
+Conversly, In a NOID network, his packets all arrive everywhere as
+HOME,WIDEn-X so everyone knows you must reverse the path via WIDEn-X,HOME
+to get back to him...
+
+Note, the ONLY advantage of "ID" is so that you can see what your local
+digipeater is.  But Geeze.  That is  easy.  And not worth the
+destruction of all other path data...  If you want to see what your local
+digi is, send a packet via WIDE and it should come back with its callsign
+inserted.
+
+Please consider changing your digis to the way WIDEn-N was designed and
+intended and all of its advantages...  Thanks!
+
+But I am no longer being emotional about this.  If you have good reason to
+have set ID, then at least mark those digis with the "I" overlay so that
+users will know how to interpret packets in your area.  Because without
+this knowledge, then the following packet can mean two totally different
+things:
+
+      WB4APR,DIGIX,WIDE3-2:Anybody copy?
+
+Did it begin in a NOID network with the first hop of DIGIX?
+or did it end in an ID network via  the last  hop of DIGIX?
+
+Thanks, for  your consideration...
+
+Bob, WB4APR
+

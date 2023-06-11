@@ -1,0 +1,64 @@
+***************************************************************************
+*                  ATGP 2018 Report for MT Equinox-12                    75
+***************************************************************************
+
+Again this year I traveled to Mt Equinox in Vermont for the ATPG event; 
+four hours to get there and five hours to get home (back roads). I arrived 
+on the mountain at ~ 9:30am and setup. Although several hams I spoke to on 
+146.52 simplex said otherwise, I followed the rules and kept the setup 
+inside the car, with a D710G, 35Ah battery system and two 5/8 mag-mount 
+antenna on the car ( one for 144.39 and the other for ATPG). I had a D72 
+for 144.39 APRS and messaging.
+
+By ~10:30am I made contact with Greylock-11/N4FWP by voice and packet. Next 
+I heard from John/N2YP on Mt Utsayantha in New York, and John subsequently 
+sent and received ATPG packets. Shortly thereafter I made voice contact with 
+Mt Wash-13/WA1KLI and learned that his D7xx radio was dead and he would not 
+be able to digipeat. Also on Mt Washington was KB1POR, and he and WA1KLI got 
+together to setup a beacon  station using a Yaesu FTM-350.
+
+As morning turned to afternoon, I received packets from MTSTJO-14, but voice 
+contact was difficult. MTSTJO-14 was in voice contact with MTWASH-13. MTSTJO 
+and MTWASH spent time trying to allow the chain to continue using KATADN-15 
+to MTSTJO-14 to EQUNOX-12 to bypass the MTWASH digipeat issue, unsuccessfully.
+
+In early afternoon, MTWASH made voice contact with KATADN and subsequently 
+received beacon packets. Since the rely-thru-MTSTJO seemed not to work, we 
+settled on  KATADN-to-MTWASH voice and packets, and then MTWASH beaconing  
+with his message identifying the contact with KATADN. There was lots of 
+additional work done between MTSTJO, KATADN and MTWASH in the afternoon.
+
+By 1:00pm I received packets from SAMSPT-10, but neither I or GRYLCK or 
+UTSAY were able to make voice contact with SAMSPT. After the SAMSPT packets 
+came through, I began to receive ATPG packets from south and eventually 
+logged packets from all of the stations south of me, 1 to 11 and UTSAY. 
+This, along with the northern work above appeared to represent a successful 
+chain from my perspective.
+
+I also logged packets from KX4O-8, but never received and  packets or voice 
+from the two new Canadian stations.
+
+FWIW, I made several contacts on 146.52, 55 and 58 via an HT and mag-mount 
+antenna.
+
+I shutdown at 3:00PM and left Mt Equinox.
+
+Comments and questions welcome.
+
+Jeff Marden//N1JCM
+EQUNOX-12
+----------------------------------------
+
+Additional comments:
+
+Everything packet I got from Sam's point was digipeated through Graylock or 
+Equinox. Interestingly I also see from others reports that only a few of my 
+beacons got out down the chain. They would have been N2YP (Ftm-350 vehicle 
+through the Mt U Digi before I changed said for the ftm350), The digipeater
+was UTSAY, and USAYNT was the ftm-350 when I changed it out about half way 
+through.
+
+John Rudolph
+Amateur Radio Op N2YP
+Unadilla,NY
+

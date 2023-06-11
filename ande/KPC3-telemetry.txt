@@ -1,0 +1,79 @@
+USING THE KANTRONICS TNC FOR SATELLITE CPU                  22 DEC 2006
+-----------------------------------------------------------------------
+                                                                 WB4APR
+
+Now that we have 8 Kantronics TNC's in orbit serving as complete 
+stand-alone satellite command and control systems (PCSAT-1,2, ANDE
+RAFT and MARScom) here are some notes about how  their telemetry
+systems work.
+
+> could you explain the 8 status bits, please?  And the meaning of the 
+> last 3 digits? 
+> 
+> T#529,083,002,036,035,071,10000000,000
+>                           ^^^^^^^^ ^^^
+
+This is the standard APRS telemetry frame which can report up to
+5 analog inputs, and 8 digital discretes.
+
+In the original 1995 APRS Mic-E MIM module they were a fully independent
+8 bit I/O port.  Useful for discrete status bits.  In the Kantronics 
+9612+ TNC, they are also a separate 8 bit I/O port (as used on PCSAT-1 
+and PCSAT-2) good for both inputs and commanding.  But on the KPC-3+ 
+TNC, they are mostly the same port as the analog telemetry pins.  
+
+We find these Kantronics TNC's to be very powerful.  That is why we now 
+have a total of 8 of them in space as the primary command/control system 
+for several satellites, and use another few dozen in out LAB satellites 
+for the students to learn elements of satellite comms.  See all about
+our LABSATS on http://www.ew.usna.edu/~bruninga/labsats.html
+
+Actually the KPC-3+ has 8 A/D inputs, but only 2 are brought to the 
+connectors.  We bring out 3 more for a total of 5.  But 3 are used 
+internally and so that is why we only have 5 channels of telemetry.  
+The first two bits are used for RS-232 handshaking inputs, DTR and RTS.  
+On RAFT we actually use the DTR line (the first "1" above") as the SIGN 
+bit for the battery current sensor.  If it is 1, then the current into 
+the battery is negative.  In this case, 002 shows no input current from 
+the sun, so the 036 current is out of the battery.
+
+On ANDE, we use both the DTR and RTS pins as a 2 bit counter to indicate 
+which of the four sets of telemetry are being transmitted.  We call 
+those the FRAME counter bits.  So here is the definition of those 8 bits 
+on any KPC-3+ TNC:
+
+   DR5I3210
+
+   Where D and R are the DTS and RTS inputs
+   I is used internally?
+   5,3,2,1,0 are the 5 analong inputs which show in the telemetry
+             frame as T#SSS,000,111,222,333,555
+
+But we have always called them 1,2,3,4,5 in our documents for
+simplicity.
+
+So in the 8 discrete bits, the "1"'s and "0"'s besides the first two and 
+the internal one, are simply a binary reflection of the same 5 channels  
+of telemetry as the actual 5 analog inputs.  If they are above the digital 
+threshold, they show as a "1" and if below the threshold, they show as 
+a "0".  Since the "I" pin is used internally (something to do with the 
+optional real-time clock chip, it is not invovlved in the TELEMETRY 
+command.
+
+However, you can see it's value and might be able to still use it as a 
+on/off discrete indicator I guess.
+
+Anyway, with the inputs, and outputs, and password protected logon built 
+into every TNC, we find them a powerful tool for all kinds of applications, 
+not just APRS...
+
+OH!  And the last 3 digits on the end are a memory wash counter.  We are 
+looking for SEU hits on the RAM chip.  All unused RAM is painted with a 
+bit pattern, and periodically, the TNC checks for bit errors.  It 
+acumulates a total  until the next reset.  This was custom code we asked 
+Kantronices to add for this mission to give us some "science" data.  But 
+there was never enough time to test it completely and we noticed on the 
+ground that it would often jump to 999 on its  own even on boot up.  So 
+we will probably ignore it...
+
+Bob, WB4APR

@@ -1,0 +1,65 @@
+READING DATA on the TM-D700 FRONT PANEL                       18 Jan 07
+-----------------------------------------------------------------------
+                                                    Updated 10 Jan 2011
+
+The display head of a D700 radio is attached to the top of a clipboard
+at Headquarters.  The net control can read APRS messages with scores
+there.
+
+This gouge sheet tells the new operator how to retrieve incoming 
+message data from the APRS front panel of the D700 mobile radio on the
+clipboard.  This makes it easy to keep a backup paper log of all 
+incoming data from the event stations that are using a D7 for message 
+data entry.  THey have a separate gouge sheet.
+
+BASICS:  Hit the lower left FUNCTION key or ESC key to get out of any
+menu or function you may accidentally get into.  When a new message
+comes in, it will FLASH on the screen for 10 seconds, and will then 
+go away.  You can force it to go away earlier with the ESC key.
+
+DUAL BAND:  The TM-D700 is dual band with band A on the voice frequency 
+of 146.43 MHz and the band B is on the APRS data channel for this 
+event of 445.925 MHz.
+
+POSITION REPORTING: If used, Manually enter the LAT/LONG of your station 
+using the POS key.  A list of station positions is provided.  If used,
+activate automatic position reporting once every 10 minutes via the MENU
+select APRS, select DATA TX = AUTO.  Select TX INTERVAL 10.
+
+MESSAGE BASICS:  The D700 uses a multi-press key function to enter 
+characters from the microphone key pad.  The NETCON operator will
+probably not be sending any messages, however.  Pressing the ABC key 
+three times generates the letter "C".  Pressing it four times 
+generates "2". etc...  If two consecutive characters from the same 
+KEY are needed, press the A DTMF A key to move to the next byte 
+position.  THe "0" key is also the SPACE key.
+
+MESSAGE RECEIPT:  To read any incoming messages, simply press the
+MSG key.  Then select LIST.  This will display a list of 5 message
+headers at a time.  You can scroll up and down the list with either
+the up and down arrow buttons, or the tuning knob to select a message
+to read.  Then press the OK button.
+
+Or if you are already reading a message, you can also go up and down
+to the next or previous message with the same up/dn keys or tuning
+knob.  When you have read a message you can delete it with the DEL
+key, or you can just leave it there and let it be overwritten by the
+next incoming message.  A MESSAGE UN-READ indicator shows those 
+messages that have been read, and those not yet read.
+
+OPERATIONS:  You can either use the UN-READ message indicators to keep
+track of new messages, or just delete each message as it is recorded
+to keep the message list clean and ready for new messages.
+
+CAPACITY:  The D700 can hold up to 16 messages.  Unlike the D7, you
+can individually delete them.  IF you have read all your messages,
+then each time you enter a new one, or receive a new one, the oldest
+one will be overwritten.  If you get 16 new messages without ever
+reading any, then the radio will reject any new messages.  This is 
+bad as it blocks all further communication.  But once you read at 
+least ONE unread message, then all 16 are vulnerable to being 
+overwritten.  So each time you check messages, read all new traffic.
+
+WB4APR
+
+

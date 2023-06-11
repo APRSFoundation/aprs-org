@@ -1,0 +1,72 @@
+2009 Roan Mountain Event Summary                           28 Jul 09
+--------------------------------------------------------------------
+                                                              KC4TVO
+
+Arrived abt 11:30, .  Setup in the Cloudland parking lot adjacent to 
+the Ranger entrance gate.  The Elk 5-element log periodic antennas 
+(2 meters, a gain of 6.6 dBd / 8.9 dBi and front-to-back ratio of 
+20+ dB) were 25-30 feet above-ground elevation, spaced about 10 feet 
+apart,  The two antennas connected with the matching bridle, were 
+aimed at 54 degrees magnetic (NE) towards Comer's Rock and 249 
+degrees magnetic  (WSW) towards Clingman's Dome.  Experienced 
+intermittent problems with voice and digi, With the help of KI4HDU, 
+finally traced it down to some bad coax connections in the bridle.  
+Removed it and went direct to 1 antenna and problems disappeared.  
+Was able to work Clingman voice & digital off the back side with 
+no problem.  Tried unsuccessfully to reach the Comer's Rock crew on 
+both the 445.925 simplex and the 2 meter repeater they were 
+supposedly monitoring, and after reading the mail I understand why.  
+Best laid plans and all that!
+
+No good contact with anyone on the recommended 440 simplex frequency. 
+Most of the rigs operate at reduced power on that band.   Was able 
+to talk to Clingman enough to suggest a 2 meter freq.  From then on, 
+no problems on simplex.  Suggest for future exercises, we use a 2 
+meter simplex freq. to allow full power on simplex We had good 
+contact on the Mt. Mitchell  (145.190) repeater, but talked only to 
+KI4HDU. [editors note:  But using 2m coordination blocks critical
+packets on the event channel, so we will actually work to eliminate
+any 2m coordination if possible for next year]
+
+We were able to digi Clingman's, Springer, Lookout to our South and 
+did send some msgs..  No attempt was made to use Echolink.  We 
+secured about 3PM.
+
+Amateurs on site were, KC4TVO, KI4ZUI, and KZ5ED.  Equipment used 
+was: Elk 5 element Log Perodic 2mtr/440 antennas; d710, d700, and 
+dual band yaesu radios;
+
+Don't know if this is feasible, but Winlink VHF Packet could be used 
+for setup coordination and debugging between stations. .  At the 
+heights the stations were operating from , almost all could reach an 
+RMS Packet station somewhere.  We had no cell service at Roan on 
+either G3 or CDMA systems.  
+
+We enjoyed the outing, learned at lot, and are looking forward to next 
+years attempt.
+
+
+Bob Rodgers
+KC4TVO
+-------------------------------------------------------------------
+
+KZ5ED, Eric reported:
+
+I received the following message from Todd with the 
+copies of his UIVIEW Messages texts and the UIVIEW Terminal  Log.
+I found then quite interesting and maybe you will as well
+
+<QUOTE of Tod AL0I>
+I noticed you (and perhaps others) were running the event station 
+on Roan Mtn., TN this afternoon.  I was running a passive iGate here 
+in Boone, NC on 144.34 MHz, and I thought you might find the 
+UI-View32 Terminal and Messages output interesting.  Copies are 
+attached.
+
+Thanks for taking the time to help make the event happen.  Perhaps 
+next time the chain of stations will be a little more complete.
+
+Todd
+AL0I
+
+<ENDQUOTE>

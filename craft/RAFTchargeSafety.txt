@@ -1,0 +1,92 @@
+RAFT PRE-SEPARATION CHARGING SAFETY ANALYSIS                          9 Feb 2006
+--------------------------------------------------------------------------------
+
+
+The RAFT picosat separation switches are in the main battery-to-load circuit but 
+they do not disconnect the solar panels from the system bus.  In normal 
+configuration, the alternate battery pack is wired to trickle charge from the 
+bus.  This configuration poses a pre-separation charging hazard to address.  
+
+HAZARD #1:  The maximum possible Solar Power current in full sun on three solar 
+panels, is 290 mA of which 60 mA is a constant load of the receiver.  This 
+leaves 230 mA available for inadvertant charging.  This is about 0.2C or about 
+twice the trickle charge rate of the 1100 mAH NiCd battery system.  However, 
+while the picosats are in the launcher potential charging currents are 
+drastically reduced.
+
+CONDITIONS:  The Picosats are only handled and procesed indoors.  Exposure to 
+full sun during processing would be extremely rare and is easily avoided.  After 
+being integrated with the SSPL Launcher, they are totally enclosed and can only 
+be exposed to full sun via light leaks in the deployer top and sides.  The top 
+has  a 1? finger hole in it and one side has an access panel with 120 ¬? holes 
+in it.  This represents about 7 square inches of light leakage.
+
+MITIGATION:
+1)  The sun cannot be orthogonal to both the side and the top at the same time.  
+This reduces the possible exposure from 7 down to about 6 sq in.
+
+2)  The solar panels are series strings of 18 cells each and the current from a 
+solar panel is limited by its weakest cells.  In this case, more than 90% of all 
+cells remain in the dark, so the spotty light can not possibly produce rated 
+current.
+
+3)  The holes in the access panels fall equally half on one picosat and half on 
+the other.  This reduces the effective area to only 3 sq in per picosat.
+
+CHARGING EFFECT:  The potential charging current then is only 3 sq in compared 
+to the on-orbit value of about 50 sq in (the Cosine(Theta) equivalent of corner 
+illumination of three 25 sq in panels.  This is 3/50 times 230 mA or about 15 
+mA.  Since the nominal 10 hour trickle charge capacity for these cells is 110 mA 
+and the safe "float" rating is about 1/3rd of that (35 mA), then this 15 mA can 
+be maintained indefinitely with no damage, nor overheating of the cells.  This 
+15 mA would produce no more than about 0.12 Watts of waste heat.
+
+This 0.12 Watts of waste heat is insignificant relative to the same heat gain 
+the launcher top  would receive from the Sun.  Assuming a conservative 
+absorptivity of 0.3, the solar heat gain of the launcher lid under the same sun 
+conditions would be about 5 Watts.  Thus the heat dissipated in the batteries 
+due to inadvertant charging is less than 3% of the heat transfer and is 
+insignificant.
+
+HAZARD #2:  Battery B2 is trickle charged from the main bus during all non-
+transmitting conditions (96% of the time).  It has one cell less than the main 
+battery.  To prevent abnormal circulating battery-to-battery currents in the 
+case of a failed (shorted) cell in B2, a dual fault tolerant design is used 
+consisting of the following features:
+
+  1) The voltage drop of the missing cell is made up by the sum of the voltage 
+drops across a diode (0.7) and transistor Q1 (0.7).  So under normal conditions 
+there is no energy transfer from B1 to B2.  When the solar bus (or B1) is above 
+7.2 volts nominal (1.2v per cell) charge current will flow into B2 as set by the 
+forward bias of Q1 which is set to approximately 110 mA (the safe continuous 
+trickle charge rate for B2).
+
+  2) Under the condition of a failed cell in B2, there are multiple current 
+limiting protection mechanisms:
+  
+  A. The current is limited by Q1 to 110 mA (0.1C trickle charge rate)
+  B. The current is limited by PTC fuse to 250 mA  (0.23C rate)
+  C. The solar panel system is current whole orbit limited to 120 mA avg
+
+3. Peak power dissipation under these overcharge conditions of 0.23C capacity is 
+2 Watts, but the B2 battery pack is thermally conductive to the overalls 
+paceframe which is already under a nominal solar flux dissipation condition of 
+22 Watts to the blackness of space.  The additional 2 Watts of excess 
+dissipation under fault conditions could only raise the temperature of the 
+spacecraft about 2% (or about 6 degrees C).  Even if the thermal resistance from 
+B2 to the spaceframe is poor, say 50% then any temperature rise in the B2 cells 
+due to a shorted cell is insignificant to the normal temperature fluctuations 
+(+/- 10C) expected per orbit.  The nominal spacecraft temperature is between 0 
+to +20C
+
+CONCLUSIONS:  The charge current resulting form solar energy leakage onto the 
+solar arrays while in the launcher and in the Payload Bay is about 1/3rd of the 
+safe, indefinite float rating of the cells.  Further this 15 mA would produce no 
+more than about 0.12 Watts of waste heat which is insignificant to the solar 
+heat gain the launcher top  would receive from the Sun.  
+
+Bob Bruninga
+US Naval Academy Satellite Lab
+410-293-6417
+
+

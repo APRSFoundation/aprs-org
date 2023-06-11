@@ -1,0 +1,46 @@
+POSTING OBJECTS from the D7 or D700                      29 Oct 07
+------------------------------------------------------------------
+
+You can use your D7 or D700 radio to place any kind of object on 
+the APRS system to alert other drivers of traffic problems, 
+slowdowns, incidents, meetings, nets, or other local event with 
+only a few button presses.  This works by changing your MYCALL 
+temporarily to the OBJECT name and then sending a few packets to 
+put it on the map.  You can even put this configuration in one of 
+the radio's Program Memories (PM) if you want to generate it 
+quickly.  Make these settings:
+
+MYCALL:     <objname> 
+STATUS TXT: FFF.FFFMHz ... comments
+COMMENT:    Special
+ICON:       <choose one>
+
+Typical OBJECT names (have to be 6 characters):
+
+  TRAFIC,  CRAWL,  PROBLM,  POLICE,  INCDNT, SPECAL, etc
+
+If you want this object visible on FINDU and unique from all other
+similar objects from other people, be sure to make your object
+name unique.  Since this object name is transmitted in the call-
+sign part of the Mic-E packet, it is limited to only 6 characters
+and the SSID unilike a normal object which can have a 9 letter
+name.   The FREQUENCY (if used) is shown in the correct format so 
+that it can be auto-tuned by anyone with a D710.
+
+POSITION:  The position transmitted for this object will be your
+current position.  If needed, you can manually enter a better
+location for the object using the POS button.
+
+TRANSMITTING THE OBJECT:  Toggle the BCON button a few times until 
+you are sure that your packet got digipeated a few times so that 
+others can see it.  You should see MY PACKET when you are succcessful.
+
+Be sure to change your setting back to you regular MYCALL, Comment
+and STATUS as soon as you are finished with transmitting this object.
+
+For more details on setting up the D700 for a variety of Mobile 
+operations tasks, please see:
+
+http://www.aprs.org/D7xx/d700-faq.txt
+
+Bob, WB4APR

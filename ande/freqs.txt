@@ -1,0 +1,89 @@
+ANDE FREQUENCY SELECTION CONSIDERATIONS                        by WB4APR
+------------------------------------------------------------------------
+                                                              13 Novt 02
+
+The COMMS mission of ANDE and the other APRS Satellites is unique in
+the Amateur Satellite Service as they are designed to support the text 
+messaging and position tracking needs of Schools, mobiles and handhelds 
+only and links into the terrestrial internet system.   As such, the link 
+margins to user OMNI antennas require downlinks in the 2 meter band.
+
+For international operation, 145.825 will be shared with other existing
+AX.25 packet satellites which all agree to a low dutycycle downlink making
+channel sharing possible.  The following design summary should provides 
+the background.
+
+UPLINKS AND RECEIVE GAINS:  User up&downlinks fall into several different 
+classes based on ERP and receiver antenna gain as shown below.  The column 
+labeled Standby-receive gain is for the user who is not aware of, nor 
+optimized for satellite reception.  For example, an HT in a pocket, or 
+a mobile parked under trees.
+  
+             ERP  ERP Rcv Rcv Rcv  
+             UHF  VHF UHF VHF STBY 
+ USERS       (W)  (W) dBi dBi dBi  Applications
+   --------- --- ---- --- --- ---  ------------------------------
+   HANDHELDS   3    5   3   3  -6  Sailboats, Hikers, Wilderness
+   MOBILES    70  100   5   5  -6  Boats, Remote Travelers
+   HOME STNS 700 1000  13  13      Not intended for PCsat
+  
+ NETWORK
+   IGATE RCV            7   5      Omni Internet receive site
+   MSG NODE   70  100              Internet to user UPLINK site   
+   COMMAND   700 1000  13  13      US Naval Acadmy Ground Station
+  
+MISSIONS:  Since several other amateur satellties have provided imaging
+and file store-and-forward for the last several years, the APRS satellite
+mission concentrates on the current trend towards personal real-time 
+wireless messaging using UI digipeating.  In this context, the following 
+list prioritizes these needs.
+
+ 1) Handheld/Mobile message uplink to Internet (emergency and routine)
+ 2) Handheld/Mobile message downlink delivery from Internet
+ 3) Handheld/Mobile to Handheld/Mobile real-time communications
+ 4) Nationwide Bulletin delivery to all users
+ 5) Handheld/Mobile GPS position tracking to internet
+ 6) GPS tracking of buoys, telemetry devices, wildlife, expeditions
+ 7) Other UI digipeating applications (TBD)
+ 8) Message Store-n-forward (limited special applications only)
+
+FUNDAMENTAL ASUMPTIONS:
+ 
+ 1) Optimum ALOHA CSMA channel effeciency is about 18% due to collisions
+ 2) VHF links have a 9 dB advantage over UHF links (omni to omni)
+ 3) 1200 baud AFSK has a 7 dB advantage (measured) over 9600 baud FSK
+ 4) T/R delays render 9600 only twice as fast as 1200 for short bursts
+ 5) UHF uplinks require wide bandwith to avoid doppler (- 4 dB)
+ 6) UHF downlinks require user tuning throughout pass (not desired)
+ 7) There are available off-the-shelf handheld and mobile radios now
+    that can serve as stand-alone digital satellite transceivers
+ 
+REQUIREMENTS/CONSTRAINTS Design Drivers:  The following are some of
+the obvious first-order alignments of requirements to hardware and
+frequencies.  From these, then, we determined the optimum trade-offs to
+arrive at our final design and frequency requirement on the 2 meter band.
+
+ 1) MSG delivery to HT in Standby requires best possible downlink 
+    (1200 baud VHF).  Igate uplink is relatively unconstrained.
+ 2) MSG receipt from HT requires best possible uplink (1200 baud VHF).  
+    Downlink to internet is relatively unconstrained.
+ 3) HT/Mobile real-time messaging requires same up/downlink baudrate
+ 4) GPS HT/Mobile tracking is relatively unconstrained.
+ 5) Low power GPS tracking devices requires best uplink (1200 baud VHF)
+    and the uplink must not be used by any other satellite uplink to
+    avoid unintentional interference to other systems.
+ 6) Reundancy and Backups are desired.
+ 7) UHF downlinks are of little value due to poor link budget and doppler
+ 8) KISS applies (Keep it Simple, Stupid)
+   
+HARDWARE ALIGNMENT:  Using the above as the basis, we chose the KPC-3
+TNC to satisfy as many of the above requirements as possible.  Operating
+half duplex in the 2 meter satellite band.
+ 
+Our AMSAT/ITU Frequency request is to share 145.825 with other low duty-
+cycle AX.25 packet Satellites.
+
+Bob Bruninga, WB4APR@amsat.org
+
+
+

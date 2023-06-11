@@ -1,0 +1,85 @@
+A-STAR Gateway Spec                                       14 Dec 2010
+---------------------------------------------------------------------
+                                                               WB4APR
+
+This note attempts to broadly define the functionality of an A-STAR
+gateway.  An A-Star gateway is identical to a D-star gateway on the 
+D-star side. (at least for the initial understanding).  On the APRS 
+side, it does the following:
+
+RECEIPT OF A D-STAR QSO REQUEST:
+
+When it sees a connect request to its own CALLSIGN, it accepts the 
+connection, brings up the analog repeater PTT and passes D-star 
+audio to the repeater.  If there is voice on the repeater input, 
+it passes this back to D-star.  The callsign of the A-star gateway
+is included in the stream.  If the analog audio has been identified
+by an APRS PTT packet, then that callsign is streamed to D-star.
+
+If the A-star gateway node sees a connect request to an APRS callsign 
+that it has heard on its own TNC, within the last 10 minutes, it 
+accepts the connection, as above.  It also sends out an APRS packet 
+message on the APRS-IS to alert the APRS user that he has a call:
+
+FROM: A-STAR gateway APRS-callsign 
+TO:   the called callsign 
+MSG:  QSY FFF.FFFMHz de [D-Star callee].
+
+RECEIPT OF AN APRS USER-to-D-STAR QSO REQUEST:
+
+This request will be heard as an APRS message on the A-Star 
+repeater's input using a simple TNC: 
+
+FROM: the CALLING APRS user. 
+TO:   CALLEE callsign of the called party 
+MSG:  A*
+
+The A-star gateway will then make this connection via the D-star 
+network using the MYCALL of the APRS Caller, with the URCALL of 
+the CALLED station, with the R1 callsign of the local A-star 
+repeater, and the R2 callsign of the local A-star Gateway. 
+
+Presumably the A-star repeater will have to use one of the special 
+D-STAR dongles to have the proper A/D and D/A conversions.
+
+APRS-DETAILS:
+
+Notice, that during any A-star operation, the APRS mobile has his
+radio's TNC operating on the same band as his voice.  The mode will
+be in PTT mode so that his ID packet goes out whenever he drops his
+PTT.  But at any other time, the APRS user can be tuned to any other
+frequency as long as his APRS band is on the national APRS signalling
+channel.  THis way, he can receive the incoming QSY message.
+
+FOr the D700 and D710 radios different program memories can be used
+for these modes.  PM1 might contain the operators normal APRS and
+Voice operating mode.  But PM2 switches the TNC over to the A-star
+frequency and places the TNC in PTT mode and puts voice PTT on the
+same band.  The APRS user interface will be as follows:
+
+RECEIPT OF CALL (while not on the A-star repeater):  He receives an 
+audio message alert and a POP-UP message on the front panel of the 
+radio telling him who has called and what A-star repeater to tune to.  
+In the newer radios, he simply presses the TUNE or QSY button to 
+instantly change his B side (voice) band to the A-Star repeater 
+channel to receive the call.  In other words, ONE BUTTON response.
+
+RECEIPT OF CALL (while on the A-star channel).  Since the APRS 
+operator is already on the A-star channel, the A-star gateway will
+know that he is alreay there and ready for a call. The APRS operator
+will simply see a front panel pop-up showing who has called and
+from where and who is being called.  His voice will be heard as soon
+as he speaks.  
+
+INITIATE A CALL:  He simply tunes his voice band and TNC to the 
+A-star repeater.  Then he presses the MSG button, selects a previous 
+A-STAR message, and edits the callee callsign to who he wants to 
+call and presses OK.  If the connection is successful he can begin 
+to QSO the called party.  The D710 radio keeps the last 100 messages
+so it is easy to call up a previous connection from preveious calls
+without having to key-pad it in.
+
+Have I missed anything?
+
+Bob, WB4APR
+

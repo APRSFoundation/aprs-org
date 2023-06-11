@@ -1,0 +1,64 @@
+ANDE TELEMETRY DEFINITIONS AND EQUATIONS       Rev-1     13 Oct 2006
+--------------------------------------------------------------------
+
+The 20 channels of ANDE telemetry are multiplexed into 4 sequential
+frames.  Each frame consists of 5 analog channels, and 8 status 
+bits which include the two FRAME counter bits.  It takes 4 frames 
+to constitute the complete telemetry picture of ANDE.  Frame Format:
+
+ANDE>BEACON,SGATE:T#SSS,111,222,333,444,555,FF111111
+
+Where the header is ANDE>BEACON,SGATE: (These fields may vary)
+Within the actual data portion of the packet are these fields:
+
+  SSS      is the serial number 
+  111      is the first channel telemetry
+  222      is the second channel
+  333      is the third channel
+  444      is the forth channel
+  555      is the fifth channel
+  FF111111 the 8 internal bits (including the FRAME counter)
+ 
+FF  CHANNEL 1   CHANNEL 2  CHANNEL 3  CHANNEL 4  CHANNEL 5
+--  ----------- ---------- ---------- ---------- ----------
+11  BUS-Volts   SOLAR-X    SOLAR-Y    SOLAR-Z    5V BUS
+10  Temp-BAT    Temp-SOL-X Temp-SOL-Y Temp-SOL-Z Temp-Retro
+01  Laser-Volts A1-Amps    A2-Amps    B1-Amps    B2-Amps
+00  Temp-Bat-B  Clock      Temp-Laser Time-to-Go On-Time
+
+Telemetry equations are generally of the form y = aX + b 
+where X is the 3 byte decimal telemetry count in each channel 
+in the data. Temperature is a cubic y=aX^3 + bX^2 + cX - d.
+
+ Define Function for Temperature:
+   Tof(V) = .00001 * X ^ 3 - .0039 * X ^ 2 + .829 * X - 40.4
+   
+   IF Frame is "00" THEN
+      Temp-Bat-B  = TempOf(X1)
+      Clock       = X2 * 1
+      Temp-Laser  = TempOf(X3)
+      Time-to-Go  = X4 * 1
+      On-Time     = X5 * 1
+      
+   IF Frame is "01" THEN
+      Laser Volts = X1 * 0.1
+      A1-Amps     = X2 * 1.7 - 4
+      A2-Amps     = X3 * 1.7 - 4
+      B1-Amps     = X4 * 1.7 - 4
+      B2-Amps     = X5 * 1.7 - 4
+      
+   IF Frame is "10" THEN
+      Temp-Bat-A  = TempOf(X1)
+      Temp-SOL-X  = TempOf(X2)
+      Temp-SOL-Y  = TempOf(X3)
+      Temp-SOL-Z  = TempOf(X4)
+      Temp-Retro  = TempOf(X5)
+      
+   IF Frame is "11" THEN
+      BUS-volts   = X1 * 0.1
+      SOL-X       = X2 * -.0196 + 1
+      SOL-Y       = X3 * -.0196 + 1
+      SOL-Z       = X4 * -.0196 + 1
+      5-volt-ref  = X5 * .0235
+
+de WB4APR, Bob

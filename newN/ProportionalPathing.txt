@@ -1,0 +1,137 @@
+Proportional Pathing and Decayed Beaconing                    10 Nov 08
+-----------------------------------------------------------------------
+                                                                 WB4APR
+10 Nov 08 updated to include trackers
+23 Mar 06 Original draft
+
+Proportional Pathing was introduced in 2006 as an additional 
+improvement on the original APRS decaying algorithm.  It was 
+immediately implemented in all digipeaters under the New-N Paradigm
+and also in the new Kenwood D710 radio.  It is recommended for ALL
+future APRS applications.
+
+With PROPORTIONAL PATHING, packets go frequently locally and direct, 
+and less frequently at more and more hops.  For digipeaters, this
+significantly cut the load on the network.  Now digis ID once every
+10 minutes local direct, once every 30 minutes via 1 hop, and once
+an hour via 2 hops.  THe local 10 minute updates do not QRM with
+any users, since the digi will not TX if the channel is busy.
+
+For Mobiles, Proportional Pathing provides good local tracking 
+continuity and presence,  but overall, much less load on the APRS 
+network.  Also, it works for both routine operations and special 
+events without any setting changes by the operator!  Operator setting 
+errors is one of the biggest problems with paths on the APRS network.  
+Here is what Proportional Pathing does for a mobile:
+
+- Every minute the packet goes DIRECT path (no digi)
+- Every 2nd minute it goes via WIDE1-1 path
+- Every 4th minute it goes via WIDE1-1,WIDE2-1
+- Every 8th minute it goes via WIDE1-1,WIDE2-2 (only if 3 hops is OK)
+
+The good news is that any existing KPC-3+ Digipeater OR tracker can 
+do this already.  See:  www.aprs.org/txt/P-Pathing-kpc3.txt
+
+Proportional Pathing of digis and mobiles drastically reduces channel 
+load and should be included in all new designs and firmware upgrades.
+The beauty of Proportional pathing is that it does not need to be 
+tweaked by the user as he changes from routine to special event.  or
+goes from area to area.  Always his packets are higher rate close in 
+and lower QRM at a distance.  Tackers can pre-program these settings 
+and never worry again.  Of course some simple on/off switch options
+should be considered.  One is the HOPS 2/3 switch, and the other is
+the RATE 2/3 switch.
+
+The HOP switch determines how far out the longest path goes.  In the
+above example it is set to 2.  If it was "3" then every 8th minute
+a packet would go via WIDE1-1,WIDE2-2 for a total of 3 hops.
+
+The RATE switch determines how rapidly the QRM falls off with 
+distance.  In the above examples, the rate is "/2" meaning the
+rate goes down by two at each additional hop.  But if the RATE
+switch is set to "/3" then the QRM is further reduced since at
+each additional HOP tier  the rate is 1/3rd the rate.  For example:
+
+- Every minute his packet goes DIRECT path (no digi)
+- Every 3rd minute it also goes via WIDE1-1 path
+- Every 9th minute it also goes via WIDE1-1,WIDE2-1
+- Every 27th minute it also goes via WIDE1-1,WIDE2-2
+
+The beauty of Proportional Pathing is simply that other than the
+on/off switch options above, it does not need precise tweaking for
+most situations.  Yet works at either extreme, local and multi-hop.
+
+OPEN ROAD:  The local 1 minute update rate is also ideal on the open 
+road out of range of all digis.  With joint-crossing speeds of 140 
+MPH on the open road, you need a 1 minute rate if you want any chance 
+of hearing another local APRS mobile running Voice Alert.
+
+DECAYED BEACONING:  It should be noted that APRS was never designed 
+for fixed rates.  Because APRS recognizes the priority that new fresh
+data should have over old stale data!  Too many APRS clones ignored
+this fundamental principal and operate at fixed rates that are either
+too HIGH and cause QRM, or are too low and provide little real-time
+continuity.
+
+The Decay algorithm was fundamental because only new-changed data 
+was transmitted 'now', and that if the data did not change, then 
+the time to the next transmission of that data would double.  So, 
+for positions for example, set to a 1 minute rate, if the mobile 
+stopped for any reason, then the next packet would go out 2, then 
+4, then 8 then 16 and then 30 minutes later.  As soon as the 
+position changed (new data) then the rate was reset back to the 
+selected rate (1 minute).  Too bad so many APRS clones and 
+follow-on devices simply used fixed rates for simplicity
+even when the data is not changing.  This really added QRM to the
+network!
+
+THe decay algorithm is trivial to implement.  Mobiles should simply
+compare new position data with the last transmitted data, and if 
+unchanged, double the period to the next packet (to a max of 30 mins).
+
+RESULTS:
+The result is that for close in work or meeting someone or local 
+events or whatever, the tracker gets good smooth high rate tracking 
+(1 minute for example) and minimum QRM to anyone else.  For the local 
+area (each digi he can hit), he gets a comfortable 2 minute rate.  
+For a region and those watching out 2 hops, he gets a 4 minute rate.  
+And for observers a long distance away, he gets an 8 minute rate.  
+And with decayed algorithm, if he stops, he also generates less QRM 
+too.  Yet if he operates his tracker at a special event, even without 
+making any changes, he is also seen once a minute direct which is a 
+good rate for an event.
+
+This resolves the tradeoff between too high a rate (QRM)and too low 
+a rate (LATENCY, and LOW TRACK QUALITY)...
+
+PROPORTIONAL PATHING / Decayed Beaconing would cut the QRM from each 
+mobile by a factor of 8 or more while moving, and 30 to 1 when
+stopped.  And since mobiles are the largest load on the network, this 
+would make a HUGE difference to the network while still providing 
+good local tracking.
+
+HUMAN INTERFACE:
+
+The options for setting up a mobile APRS unit (tracker) in my 
+opinion should simply be the selection of the HOP count and RATE 
+divisor as introduced above.  The basic rate is always 1 minute 
+(if changing):
+
+HOP SWITCH:  2 or 3
+RATE SWITCH:  /2 or /3
+
+This is just a continuation of the original APRS decay-algorithm 
+which causes older packets to be transmitted less and less often 
+and new data to be updated quickly.  In the case with Proportional 
+Pathing, it also makes NEAR data more important than FAR data as 
+well as NEW data versus old duplicate data.
+
+Also, since the WIDE1-1,WIDEn-N should work everywhere, this one-
+size-fits-all appproach would make setting up a mobile tracker 
+trivial, and help make the network immune to user set-up errors.
+
+This is part of the recommended APRS1.2 Addendum:
+http://www.aprs.org/aprs12.html
+
+de WB4APR, Bob
+

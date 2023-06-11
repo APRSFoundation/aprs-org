@@ -1,0 +1,139 @@
+***************************************************************************
+*                  ATGP 2018 Report for MT Utwsayantha                   75
+***************************************************************************
+
+This was my first time participating and I was able to scrounge up a 710 
+and 72 for use during the event in addition to my ftm350 and I covered 
+Mt Utsayantha in Stamford NY just West of Albany. We were on the air but 
+9:10 and dispite the location and to my surprise we could only hear Greylock 
+and Equinox direct. As the various links came up and successfully 
+digipeating we ended up copying stations 1-14. We even tried putting the 
+antenna 60' up the fire tower with no improvement in reception over a mag 
+mount on the vehicle. We could only hear Equinox via UHF as well. This 3214 
+feet apparently was not enough to link to the stations South of us which 
+was quite surprising. I figured we would at least hear Sam's Point.
+
+I am looking forward to next year and would be willing to possibly try a new 
+location or find someone real good with heights to set the station and 
+operate it from the Top of the tower and no feedline to the ground.
+
+N2YP
+--------------------------
+We did have access into the fire tower but I personally can only make it 
+halfway up due to a unpleasant relationship with heights. We did try 
+placing our antenna up at that height but only had 8x @150' length and 
+it made no improvement on received packets and UHF coms got worse. Access 
+to the building observation tower is possible but is no where near the 
+60' of the fire tower. One of my helpers did go up to the top with a 
+small yagi and HT and didn't hear anything different on the UHF voice 
+frequency. It was a long shot but we did try.
+
+I would be willing to go to sometime with some more equipment and see 
+what we could do via Sam's and the next station south. Voice equipment 
+or non-digipeating would be easier to obtain on this end for testing 
+since I had to borrow the Kenwood's but I have a ftm350AR. To the North 
+Equinox was by far a winner over Graylock In signal strength.
+
+As for the discussion about a 9600 backbone I am fairly sure something 
+could be arranged there. The biggest hinderance would be a certified 
+and insured climber to do that work.
+
+John Rudolph
+Amateur Radio Op N2YP
+Unadilla,NY
+
+--------------------------
+John -
+
+I doubt that you can find a better spot than Utsayantha for propagation or 
+convenience anywhere in the western Catskills.  The Village of Stamford 
+owns the fire tower and the wooden observation tower, and I think access 
+can be arranged.  The observation tower has AC power.
+
+If Sam's Point was hearing you over top of the central Catskills, you should 
+be able to hit Camelback with a directional antenna.  A more detailed 
+propagation survey would help.  Add 60 ft to Utsayantha's elevation of 3214 ft.
+
+If Utsayantha can link with Camelback, as well as the established link to 
+Equinox, we could extend the chain beyond the present end points by skipping 
+Greylock and Sam's Point with some packets.  
+
+I spent hours in that fire tower sixty plus years ago with the USAF Ground 
+Observer Corps during Saturday exercises.  We had a GOC post in the village, 
+but all manned fire towers were also in GOC so I would hike up the mountain 
+on a Saturday and do my thing while enjoying the scenery.  Access is through 
+a trap door at the top of the stairway.  I doubt that I still have the 
+combination to the lock.
+
+By the way, the mountain is name for a legendary Indian princess in a story 
+that was probably fabricated by the hotel proprietors in Stamford about 150 
+years ago.
+
+Gordon Davids / WJ3K
+MDMTNS-7 in 2018 
+
+--------------------------
+John -
+
+I was operating MDMTNS-7 yesterday 21 July.  When I saw your packets from 
+Mt. Utsayantha, I about jumped from my comfortable chair.  I was at
+MDMTNS-7 because we suddenly had a need for some local ops to step up and 
+fill some gaps.
+
+My long-term plan had been to go to Stamford (my old home town) and put 
+Utsayantha into the ATGP network.  I went on the mountain in May to check 
+propagation and intermod, and I was successful with the regular APRS digis 
+on Greylock and Equinox (actually Equinox was better) but I had nothing to 
+check on Camelback. There was some skepticism here about the path from 
+Utsayantha to Camelback, but I figured that I could bend the signal around 
+some of the higher (by not much) hills and make it.
+
+That's the brief story so far.
+
+Now, how did you make out with connections?  I'm sure you could hit Equinox, 
+but how did you go south?
+
+Here are the two packets that I caught from you:
+
+UTSAY>TRRS9T,MDMTNS-7*,HOP7-2,HOP7-7:`f?Bl  #/]">m}=
+N2YP>4R2S9S,MDMTNS-7*,HOP7-3,7-7:`f?Bl  v\`">i}GP MT UTSAYANTHA_"
+
+According another HT that I was monitoring your first packet was from a 
+Kenwood TM-D710, and the second one from a Yaesu FTM-350 (or 400).  
+Of course, Kenwoods are the standard in this operation because they digipeat, 
+and the Yaesu's do not.  I have both, and they are useful for different 
+purposes.  I was running the MDMTNS-7 digipeater with a TM-D710A.
+
+My logger was an old Kenwood TH-D7G with a terminal emulator on my notebook 
+computer to monitor the transmissions from my digi. That's why you see 
+MDMTNS-7* as the first alias in the path.
+
+Your decremented HOP count received by my digi was HOP7-3, and it transmitted 
+7-2 to the next node and to my logger.  The repeat count of your packet to me 
+would have been 4.  You sent 7-7, the others repeated it as 7-6, 7-5, 7-4, 
+and then 7-3 as I received it and then passed it as 7-2.  That is one more 
+hop than the "short route" which would be 
+UTSAY>SAMSPT-10>CMLBK-9>GDHILL-8>MDMTNS-7.  I suspect that it first went
+north to either EQUINX-12 or GRYLCK-11>, then 
+SAMSPT-10>CMLBK-9>GDHILL-8>MDMTNS-7.
+
+The repeat count of your second packet, from N2YP, would be 3 by the same 
+reasoning, probably via the "short route."
+
+In either case, with Utsayantha being able to hit Equinox, as I know we can, 
+and Sams Point to the south, as I think we have seen, we might eliminate 
+one node in the chain and extend the system by one link using HOP7-7,HOP7-7.  
+If Utsayantha could hit Camelback, probably with a directional antenna, that 
+would allow extension by two links.
+
+Again, many thanks for activating Utsayantha.  I would like to stay in touch 
+and maybe work out some more details.
+
+I'm familiar with Unadilla, too, because in one of my earlier lives I was 
+the D&H Railroad Track Supervisor at Oneonta.  I laid the rail through Wells 
+Bridge in 1970.  It might still be there.  Do you know any Otego firemen who 
+were D&H railroaders, too?
+
+73,
+
+Gordon / WJ3K

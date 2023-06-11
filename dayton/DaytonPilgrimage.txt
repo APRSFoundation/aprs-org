@@ -1,0 +1,217 @@
+Dayton Mobile Settings:                                 30 April 2010
+---------------------------------------------------------------------
+
+Some of these items are even for NON APRS radios and users.  But for
+those with APRS radios, many people never use them to their full
+potential.  Here are some tips for the annual Dayton Travel weekend 
+you can use to make your radio very useful to you AND to others.  
+Here are the topics in this file:
+
+- Voice Channels and Voice Alert
+- Milemarks for tracking other voice users
+- DTMF reporting via APRStt
+- Load OBJECTS:  TRAFFC, WRECK, SLOW, STOPPD, POLICE, SMOKIE, DONUTS
+- Community Digipeater Settings to benefit travelers
+
+
+ALL TRAVELERS AND ALL RADIOS EVEN WITHOUT APRS:
+-----------------------------------------------
+
+- Monitor 146.52, and/or 144.39 with CTCSS 100
+
+146.52 is great for stumbling into existing QSO's but unless you call
+CQ there every 2 minutes, you may miss others passing.  Instead, 
+monitor 144.39 with CTCSS 100.  Whenever any other APRS mobile
+running APRS voice alert gets within simplex range, you will 
+automatically hear a fractional second tone burst once every minute 
+or so from their APRS Voice Alert System.  
+
+VOICE ALERT:  Only the direct packets from an APRS mobile running
+Voice Alert have CTCSS 100 on them.  This isolates them from the
+hundreds of other digipeated packets that saturate the channel.  By
+setting CTCSS 100 and monitoring the channel, you can hear when another
+voice operator running voice alert is in range.  When you hear one,
+just key up, make voice contact and QSY to 52 or 446.00 (so you are 
+not competing with all the other packets on the 144.39 channel).  
+446.00 is preferred by APRS operators, since the UHF will not 
+interfere with their APRS reception while talking.
+
+Even if you are not running APRS, you can still monitor for these
+other operators.  Why is this better than 52?  Because it is like an 
+automatic "CQ 52"  once a minute.  This guarantees you will be able 
+to make contact even in a passing situation.  On 52, most contacts 
+are ships-passing-in-the-night completely unaware of each other 
+unless everyone is calling CQ every minute the entire trip.  In a 
+crossing situation, you are only in simplex range for about 3 minutes 
+or so (2 miles a minute crossing situation).
+
+By using the automatic APRS Voice Alert system, you can't miss 
+someone.  Come join us. 
+
+NON-APRS TRACKING TO DAYTON:  Even if you don't run APRS or a GPS but 
+do have an old TNC, you too can be tracked within a few tens of miles 
+all the way to Dayton.  This is because the Global APRS system can at 
+least identify where was the last digipeater that heard your TNC.  Just 
+make these basic settings in the TNC:
+
+ MYCALL (your call)
+ BTEXT Dayton or bust (or suitable short text)
+ BEACON once every 3 minutes
+ UNPROTO APRSBT VIA WIDE2-2
+
+Even without a position report, this packet, anywhere, anytime on 
+the APRS frequency (144.39 in America) will allow your position to
+be identified to the nearest 10 to 20 miles or so.  Tell family to
+use this URL (with your callsign):
+
+http://www.findu.com/cgi-bin/find.cgi?call=wb4apr&vicinity=1
+
+Notice that it is just a normal FINDU.COM URL, but you add 
+"&vicinity=1" on the end of it to tell it to display the nearest
+digi that heard you.
+
+
+VOICE ALERT WITHOUT APRS?!  Sure, anyone can receive voice alert 
+just by setting CTCSS on 144.39.  But you can also PING if you 
+want.  Just load something like ">Joe Enroute Dayton Voice Alert" 
+into the Btext of any old TNC and set the beacon rate to once 
+every minute, again with CTCSS 100.  Now all APRS people will 
+hear you when they get in simplex range of you and may call you 
+and you both then can go to 52.  Be sure to set your UNPROTO 
+PATH to "UNPROTO APRS" without any digipeaters, because beyond 
+simplex range, you are only QRM.  see this web page:
+
+                 http://aprs.org/VoiceAlert3.html
+
+
+FOR USERS WITH APRS RADIOS!
+-----------------------------
+
+APRS MOBILE SETTINGS FOR DAYTON:  Set your TNC or tracker to the 
+path of VIA WIDE1-1,WIDE2-1.  This will get you out farther than 
+you can talk though any voice repeater, and should be sufficient.  
+Set your beacon rate to 1 minute and proportional pathing if you
+have it so that you have 1 minute updates locally, but less QRM
+farther away.  Anything over 3 minutes is too old and at 140 MPH
+crossing speeds you can miss each other.
+
+APRS LAPTOP SETTINGS FOR DAYTON:  First, let someone else drive 
+so you can spend the 8 hour trip playing APRS like never before.  
+Use the above path, but also put whatever Voice channel you are 
+monitoring, make sure that is included in your POSIT PACKET so 
+that all other APRS mobiles can see what voice repeater you are 
+monitoring.
+
+SOFTWARE SELECTION AND MILEMARKS:  Make sure you use an APRS 
+program that fully supports the fundamental milemarks and Dead-
+reckoning!
+
+MILE-MARKS:  Most mobiles will not have APRS, but ALL of them 
+will know their position by their milemark.  APRS has a built 
+in mile-mark system that will allow you to place someone you are 
+in QSO with on the map by just asking them their mile mark, 
+entering the route number and mile mark, and BINGO you have 
+placed a vehicle object on the map at their location.  Assuming 
+they are headed to Dayton, then you can enter an estimated CSE
+and SPEED.  
+
+From that point on, that CAR and its object will continue to move 
+on your APRS map toward Dayton and so even without GPS, you have 
+a good approximation where that person is.  You can AMAZE him by 
+calling him every half  hour or so and mentioning "I see you are 
+approaching Crabtown".  "How can you tell that?"  Because I am 
+tracking you with APRS.  "But I don't have APRS".  And you answer.  
+"But I do"...
+
+MILEMARKS and Dead Reckoning were fundamental to allow APRS to 
+see the Tactical Situation around them, INCLUDING all stations 
+participating even if they don't have APRS.  Once you put "joe" 
+on the map moving to Dayton, ALL OTHER APRS mobiles within 100 
+miles or more of you will also see JOE on their maps.  And if 
+they have Dead Reckoning Enabled, then Joe should continue to 
+move on their maps too.  You can even enter his frequency in his
+object text, so that others know what freq to contct him on.  
+If joe stops for a rest stop, next time he mentions a milemark, 
+just click and drag him to the new milemark, and his DR will be 
+updated on everyone else's map too.
+
+Without Dead Reckoining, the map display of an APRS client is 
+always wrong.  It always shows where things were 1, 3, 5, 10, 
+30 minuets ago, which is pretty useless in maintaining 
+"situational awareness"!!!  Turn on DR going to Dayton!  
+And USE MILE MARKS and objects to show us everyone else on the 
+road in range, not just the APRS folks.  APRS was never desigend 
+to be an end-in-itself, but to be a tool for ALL OF Amateur Radio.
+
+PRELOAD OBJECTS INTO YOUR PM MEMORIES:
+
+Pre-load your D700/710 with a few OBJECT names...  If you see a
+situation of interest to your fellow travelers, you can send out
+the OBJECT at your present location..  You would never use this
+of course, to avoid a SMOKIE speed trap, but only to help fellow
+motorists find a partially hidden policeman (or other object) in
+time of need...
+
+You can save up to 4 such objects in your other 4 PM's
+temporarily.  The only requirements in those PM's are these:
+
+  MYCALL = SLOW [or WRECK, TRAFFC, STUCK, LUNCH, DINNER, SMOKIE,
+           DONUTS, POLICE, etc]
+  STATUS = "de CCCCCC"  <= your call
+  GPS ON   clearly you cannot use a fixed posit here...
+
+And optionally set these items if available:
+  PATH   = WIDE1-1 or more (though any path will do...)
+  PKT TX = MANUAL, (but any existing one will do)
+
+Notice that only the first three are required, and one status
+can be re-used by any PM.  So for the Dayton travel weekend, you
+can actually re-use any of your existing PM's by making only
+those 2 changes, and then remembering to change them back after
+the trip.
+
+When you want to transmit an OBJECT, just switch to that PM,
+press the BCON button a few times in the next 30 seconds until
+you think you got out.  Do not keep sending it further down the
+road, because you don't want it to follow you!  THEN switch back
+to your regular traveling PM.  Enjoy!
+
+COMMUNITY DIGIPEATER SUPPORT FOR TRAVELERS:
+-------------------------------------------
+
+ALL DIGIPEATER OWNERS:  Make sure your digitpeater has the proper 
+settings for the New-N paradigm.  For details see:
+
+                  http://aprs.org/fix14439.html
+
+DIGIS IN DAYTON:  Turn off WIDEn-N support except for ONE HOP.  
+This whould be able to support 150 APRS mobiles which is typial 
+of APRS in Dayton.  TO do this (assuming you have set your digi 
+for New-N above):
+
+1) Set UITRACE to TEMP,30
+2) Set UIDIGI ON WIDE1-1,WIDE2-2,WIDE3-3
+
+This will cause these digipeaters to digipeat any/all mobiles 
+ONE HOP no matter whether they are using 1, 2, or 3 hops.
+This will prevent any outside QRM from coming in.
+
+WATCH FOR RECEOMMENDED VOICE REPEATER FREQUENCEIS ON THE FRONT 
+PANEL OF YOUR MOBILE APRS RADIO:  Many areas are supporting the 
+"New Local Info Initiative" which transmits local-direct info 
+on the recommended voice repeater in their area for direct 
+display on the D7, D700 and HamHUD mobile Displays.  See:
+
+                  http://aprs.org/localinfo.html
+
+Hope I got everyting covered.  I'll be PASSENGER mobile this 
+year and will be playing APRS all the way from Maryland to 
+Dayton on Thursday night and Friday morning.
+
+For more Dayton detail Recommendations, please see this page:
+
+                  http://aprs.org/dayton/DaytonPilgrimage.txt
+
+
+Bob Bruninga
+WB4APR

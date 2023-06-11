@@ -1,0 +1,53 @@
+PCSAT LOAD TEST RESULTS.  27 JUNE 2002                             WB4APR
+--------------------------------------------------------------------------
+
+On THurs, 27 June we conducted a short fuse user LOAD Test on PCSAT:
+ 
+> ...Before it goes back into maximum ecllipses, I would like to load
+> PCsat with as MANY different users as we can.  Target is TOMORRW.
+> THURSDAY AFTERNOON, GOING HOME RUSH HOUR, USA, 27 JUNE 2002
+ 
+RESULTS:  A Qualified success.  With a user load of 56 simultaneous users,
+          the success rate was over 97%, thus validating the viability of
+          the PCsat and other Space digipeaters (ISS) as a means of letting
+          a large number of users share a satellite during a pass.
+ 
+DISCUSSION:  But it was still not a full load test, since the digipeater
+was still only lightly loaded (maybe 10% of design load).  The design goal
+of PCsat was to be able to  support on average about 300 to 500 users per
+day in the USA...  THe following details show you how I arrived at the
+above numbers...
+ 
+SUCCESS:  30 out of 31 with the correct settings were successful (97%)
+ 
+LOAD:     16 others were trying (QRM) but had the wrong digipeater
+          callsign because PCsat reset in Eclipse and was not properly
+          configured.  Of these, one station reported transmitting every
+          12 seconds throughtout the pass in frustration.  Compared to
+          the requested nominal 2 minute rate, he counts for an added
+          channel load of 10 more users... for a total of 56.
+ 
+The desired transmit dutycycle per user was to be one packet every 2
+minutes.  Most users appear to have adhered to that objective and still
+were able to achieve success.
+ 
+I am so sorry that PCsat was not available during Field Day due to run
+down batteries.  Maybe then we could have seen how the design would have
+worked with  a full load of several hundred users.  PCsat is still usable
+in the afternoon sun, but not in the morning or at night due to not being
+charged up.  PCsat is running out of battery power and resettting itself
+every eclipse.
+ 
+If we make it to the next full sun period in September, maybe we can try
+again to get a full user load to valideate the design...
+  
+These calls were successful:
+ AA3VO,AA9LC,AB7QN
+ K5OE,K9ORP,KA0AZS,KB0VBZ,KB1GUE,KB5HPL,KC0JHQ,KC4ZGQ,KD7MJC
+ N3SOK,N4QWF,N6CO,N6JLH,N7VMR,N9ORP,N8ORJ,NP3ZY
+ W3SMK,W4JBB,W8AAS,WA4SAS,WA4SSP,WB4APR,WB4JBB,WB8NW
+ VE3DOH,XE2ARF
+ 
+Thanks for all your participation.
+Bob Bruninga
+WB4APR

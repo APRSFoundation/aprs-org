@@ -1,0 +1,198 @@
+HAM-TRAILS.txt              APRS for TRAILS                       WB4APR
+                 and HAM RADIO PUBLIC SERVICE/OUTREACH
+------------------------------------------------------------------------
+
+HAM-TRAILS is an amateur radio project to provide health-&-welfare
+traffic for persons hiking the Appalachain Trail (or any other trail). 
+It consists of small solar powered data entry boxes that collect traffic
+from hikers and then transmit a one packet summary every 15 minutes
+or so.  These packets can also contain weather data as well.
+
+Just as NTS and other amateur radio services have offered the public
+a complementary communications service for brief messages to demonstrate
+our ability to handle health-and-welfare traffic, this HAM-TRAILS
+system provides a similar communications outreach and public education
+objective.  Each HAM-Trail box has a descriptive plaquard which also
+has local HAM club information on it.
+
+Each device operates under automatic digital control usually
+from high places along the trail at very low power with only one hop.
+This way these data packets do not collide with any normal higher
+priority APRS packets, but do get relayed if the channel is clear.
+The hikers have no control over the operation of the packet system.
+They can only enter their personal data or view other's data to find
+friends along the trail.  The sketch below shows the suggested front
+panel of the device:
+
+
+   +----------------------------------+
+   |    HAM-TRAIL COMMUNICATIONS      |
+   |        +------------+            |
+   |  () UP | Welcome to | () BACK    |  <== a two-line by 16 character
+   |  () DN | Ham-Trails | () NEXT(OK)|  <== screen and four buttons
+   |        +------------+            |
+   | This comm service is provided    |
+   | by the local HAM radio club in   |
+   | this area. It accepts health-    |
+   | &-welfare messages from hikers   |
+   | and delivers them via HAM radio  |
+   | to www.aprs.net.  Friends can    |
+   | see your messages there.         |
+   | Next device <----  15 miles      |
+   | Next device -----> 10 miles      |
+   |                                  |
+   | Northern Maryland Amateur Radio  |
+   | Club. www.NMARC.org 410-293-6417 |
+   +----------------------------------+
+
+The menu system on the 16 character by-two-line display guides then
+through entering or viewing data.
+
+The APRS-TRAILS device reports the following items for each hiker in
+a single 5 byte ABCDE field.  Up to 16 fields can be transmitted
+in a single report.  If there are more than 16 active hikers being
+reported, then different packets are transmitted each cycle period
+on a rotating basis.
+
+FORMAT:  Each hiker can select these data entry fields:
+
+ID        - a three ID character field.     (The person's initials)
+IN        - An additional 1-7 ID  (3 bits)  (choose randomly)
+Dir       - N/S/E/W,NE,SE,NW,SW   (3 bits)  (general direction of travel
+hrs-to-go - 0-13 hours to go      (4 bits)  (This field and Speed combined
+Speed     - in MPH (0 to 15)      (4 bits)  (with time to transmit distnce
+Message   - type (1 of 32)        (5 bits)
+          - Modifier (1 of 7)     (3 bits)
+
+MESSAGE        MODIFIFIER (1 of 7)
+-------------  ---------------------------------------------------------
+1 Progress     Way Ahead, ahead, OK, behind, way behind, giving up
+2 Attitude     Marvelous, Great, OK, alive, surviving, depressed, broken
+3 Needs        Money, food, clothes, supplies, mail, phone, radio
+4 FRS Radio Ch 1,2,3,4,5,6,7
+5 FRS Radio Ch 8,9,10,11,12,13,14
+6 HAM freqs    APRS, 144.39(PL100), 146.52, 446.00, 52.525
+7 Meet@next    Road, Shelter, Camp, town, creek, peak
+8 Stopping at  1,2,3,4 5,6,7 (pre arranged possibilities)
+9 Custom       1,2,3,4,5,6,7
+...
+31 .......
+
+POSITION:  Since there can be no local clock at these sites, the time
+elapsed since entry is combined with the speed to predict a distance
+traveled in the direction indicated.  This transmission is canceled
+when the hours-to-go has expired.  Thus these two entries can be used 
+to give 5 bits of distance in one-mile increments (32 miles
+maximum).  Since each device knows the exact trail directions, it translates
+the hiker's rough cardinal direction into a more precise vector so that
+the future predicted direction can be fairly accurate.
+
+
+DATA ENTRY:  The data entry device must be very robust and simple. For
+this reason a single 16 character by two line PROMPT window is used
+along with  UP/DOWN and BACK/NEXT(OK) push buttons. The hiker is prompted
+through his data entry and he can also query the system about others
+along the trail.
+
+PLAQUARD:  The plaquard associated with each HAM-TRAIL device is where
+the benefit to HAM radio is involved.  It is  a great opportunity for 
+local clubs to proselitize about HAM radio.  The sample text above might 
+work for your club.  In general, the entire device is probably no bigger 
+than a 6" utility box and should be secrued from physical damage and 
+weather as much as possible.
+
+LOCATIONS:  For the physical sercurity and best utility of these devices,
+the following guidelines should be considered:
+
+1) Locate them in the clear to minimize vandalism
+2) Mount them to maximize southern sun exposure on solar panel
+3) Northern facing LCD panel might be easier to read
+4) Locate them on hill tops and crests to maximize comms
+5) Locate them far from roads and camps and public access.  They are
+   for through-hikers and not day hikers and kids
+6) Camoflage or hide the conduit and solar panel so that the device
+   blends with nature except for the plaquard and display unit.
+
+POWER BUDGET:  This system must be very low power to operate forever
+on the average sun from a 1/4 watt (3" square solar panel).  This yields
+an average 24/7 available power of about 40 milliwatts.  If the
+processor and display run on 40 mA at 10 volts but sleep most of the
+time when not in use, this gives the following power budget.
+
+  Transmit 1W for 1 second every 12 minutes             2 mw
+  User Entry (Processor running) 30/day * 3 mins   8%  30 mw
+  Processor wake/sleep maintenance                 2%   8 mw
+  ----------------------------------------------------------
+  Total Average power                                  40 mw
+
+  And to provide average power during up to 5 days of overcast the
+  battery capacity can be met with 5 Watt hours of batteries
+  or simply 6 AA NiMh cells.
+ 
+CUSTOM DATA:  The following site-specific data will need to be programmed
+into each device:
+
+ * APRS Position packet
+ * Exact trail vectors in the two (or more) directions so that dead-
+   rekoning of positions works out well
+ * Distance to next device in each direction (if known)
+ * Transmit rate (may need to be adjusted to match solar power)
+ * Device NAME and CALLSIGN
+
+APRS PACKET FORMAT:  The format for these packets will come from the
+experimental APRS data format "{HT" and uses the PRINTABLE subset of
+the ASCII code.  That is, 8 bit values are permitted, but no bytes
+will be control codes.  The overall packet format is as follows:
+
+ MYCALL>AT1234,WIDE:{HTtswdrABCDEabcdeABCDEabcdeABCDEabcdeABCDE......
+
+Where MYCALL is the license holder
+      AT1234 is the Mile mark along the Appalachain Trail (or any trail)
+      {HT    is the format identifier for this application
+      vtswdr is Volts, Temp, Solar flux, wind speed, direction, rain/Hr
+      ABCDE  are up to 16 fixed length 5 byte hiker reports
+
+Notice that the TOCALL may be just about anything to match the application
+and that this does not correspond with the standard APRS-TOCALL filters.
+This was done intentioanlly since this format is new and is not backward
+compatible with any existing code, and cannot be displayed meaningfully
+without NEW code.  THus, new code can ignore the TOCALL filter for this
+new data type.
+            
+WEATHER DATA:  If additional instruments are added, then the once every
+12 minute report can also report local weather data.  The battery Voltage
+Temperature and Solar flux will be in every report (since they are only
+a thermister and a zenith pointing solar cell.  These bytes use a (tbd)
+set of base 91 characters to give roughly 1% precision in the data.
+
+HIKER DATA:  Hiker data consists of a 3 byte ID field and then two other
+bytes as follows:
+
+ ABC bytes consist of 5 bits for the initials, and one bit that is
+     always a "1" so that control characters are never generated.
+     The remaining two bits are for the additional 3 bit "N" ID and
+     the 3 bit DIRECTION which are encoded one bit per byte as follows:
+
+        A bits are:   N2, D2, "1", 5 bits (letters A through Z)
+        B bits are:   N1, D1, "1", 5 bits (letters A through Z)
+        C bits are:   N0, D0, "1", 5 bits (letters A through Z)
+
+     Since the hiker's Initials, "N" ID and Direction do not change
+     thoughtout his trip (in general), then these three bytes are
+     unchanging and represent his full UNIQUE identification.  On
+     the Appalachain trail, for example, he is either going NE or
+     SW no matter what his instantaneous direction might be...
+
+ D   The DISTANCE byte consists of the two lower-order direction bits
+     followed by a "1" to avoid any control codes, followed by a 5 bit
+     DISTANCE (0 to 32 miles) showing the predicted progress along the
+     vector.
+
+     D bits are:  D1, D0, "1", 5-bits-of-distance
+
+ E   byte consists of 5 bits of message types and 3 bits of modifiers.
+     But, again, to avoid embedded ASCII control characters, there are
+     only 1-of-seven possible modifiers, as the 000 combination is not
+     permitted.
+
+     E bits are:  M2, M1, M0, 5-bits-of-message-type

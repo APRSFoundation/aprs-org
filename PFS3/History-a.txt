@@ -1,0 +1,52 @@
+Some History From Jim White WD0E on 10/13/2017:
+-----------------------------------------------
+Amazing how once on the www things live forever.
+
+This exchange was right after launch when we were having trouble getting the initial
+software booted up and running.  Turns out the flash stored boot loader and initial
+housekeeping software had become corrupted just before launch.  While we don't know for
+sure we suspected that happened when we were doing last minute battery charging and
+through operator error 'browned out' the processor repeatedly.
+
+SpaceQuest (who built the avionics) was able to provide this snapshot using their boot
+loaded / command software suite. Subsequent to this they were able to provide a modified
+set of firmware we uploaded and as you can see from the dates FS3 has been operated for
+over 10 years. Check the current uptime telemetry line. The first number is the days it
+has been operating without interruption.
+
+Jim
+
+
+On 10/13/2017 7:32 AM, Robert Bruninga found this email from TEN YEARS ago!
+>
+> From: Richard M. Hambly [W2GPS]         Sent: Friday, March 30, 2007 9:31 AM
+> From: Billy Smith [Naval Academy]       Sent: Friday, March 30, 2007 9:24 AM
+> From: Latimer, Ellis H [Boeing.com]     Sent: Friday, March 30, 2007 8:36 AM
+> From: Lawrence TJ Lt Col [AirForce Academy] Thursday, March 29, 2007 9:14 PM
+> Subject: FalconSAT-3 Update
+>
+> All-
+>
+> SpaceQuest was able to send us the "raw count" telemetry from their 
+> software and we were able to translate it into the following:
+>
+> Battery Voltage = 10.1 V (expected 8.0-10.6V) UHF Transmitter Power = 7.584W draw, 
+> 1 W output (expected values) Total power from the 4 solar panels = 12.7 W Power 
+> Distribution Board Power = 3.36V (needed to enable payloads, 3.3V required)
+> Core Temperature: 6.9 C
+> ADCS: +Y direction was facing the sun as they took this data
+>
+> We were able to check 54 data channels, and all indications are that 
+> the satellite is in a healthy state.
+>
+> We are still talking to SpaceQuest to sort out why our software was 
+> "hung up" at initialization, have developed some new theories and will 
+> do extensive testing on our Qual Model tomorrow here at USAFA.
+>
+> Thanks for all of the positive emails, I emailed the cadets today 
+> (they are on Spring Break) and told them to rest up since they will be 
+> put to work when they return as we start commissioning :)
+>
+> V/R,
+> Timothy J. Lawrence, Lt Col, USAF, PhD Director, ...Department of 
+> Astronautics United States Air Force Academy USAFA, Colorado 80840 

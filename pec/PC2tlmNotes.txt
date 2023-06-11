@@ -1,0 +1,59 @@
+TELEMETRY DESCRIPTION FOR PCSAT2                25 AUG 2005
+-----------------------------------------------------------
+Updated 3 Dec 2005
+
+PCSAT2 has 20 channels of telemetry becuse we used 4 pole
+multiplexers on each of the available 5 analog channels built
+into the KPC-9612 TNC.  So first, one has to realize that
+at one frame every 10 seconds, it takes 40 seconds to get
+a complete telemetry set and the only values sampled at the
+same time are the 5 in each group.  The others are uncorrelated.
+Also there are some subtle things to observe as well. Since we 
+needed two additional data points after the system was mostly
+designed, we fudged some additional data points:
+
+FAIL-SAFE-120hour-TIMER:  There is a 120 hour binary counter
+that counts up if it has not been reset by ground command.
+This assures that after a possible worst-case lockup of
+both TNC's and the 2 other methods of TNC reset, that a
+reset of both TNC's will be forced.  We cannot read the 
+timer, but the 60 hour bit is wired to short the 5volt
+telemetry channel to ground.  Thus, on the 11 frame, if you
+see the 5v bus showing near 0, then the timer has passed
+the 60 hour point and the command station should get involved
+and clear it.
+
+POWER SHUNTS:  For man safety, we had to have a fail-safe
+load on the batteries that could prevent overcharge of 3
+cells if one of the 4 cells failed as a short.  But this
+LOW-V-SHUNT also will run down a good battery of 4 cells
+if it is not toggled off.  Again, we had no spare telemetry
+channel, so if the LOW-V-SHUNT is on we had it short to
+ground, the thermister on the battery.  Thus, a -30 or null
+value on that channel indicates this LOW-V-SHUNT condition
+which must be toggled ASAP by the command station.  These
+conditions show up on the BATTERY TEMP chart.
+
+RX HEATER CURRENTS:  If we ever turn on the RX heaters, the
+current is drawn from the TNCA circuit and so you will see
+the increased current there.  This current is dependent on the
+temperature.  If it is hot, the heaters only draw about 50 mA
+at 40C but 100 mA at -6C.  Also, the RX control circuit drops
+out at 13.3v to avoid running the battery too low.
+
+PSK-31 TRANSPONDER:  Not only will you see the high TXA
+transmitter current when the PSK31 transponder is on, but also
+the PSK-31 Receiver is powered by the TNCB circuit and so it 
+will show about 15 mA added current when the receiver is on.
+(The PSK-31 mode is currently inop).
+
+MINOR ITEMS:  The RXA and RXB currents will show no change unless
+the hardware fails.  Similarly, the TLM and RX temperatures as
+well as the DECK and BATTERY temperatures will all be about the
+same since they are all mounted to the same thick aluminum plate.
+The cumulative battery CELL voltages are also of little interest
+except to the power system manager, but the total BATTERY VOLTS
+tells you the sum and says a LOT about the state of charge of the
+battery.
+
+de Wb4APR, Bob

@@ -1,0 +1,62 @@
+Pretty Good Test Report on USA pass of ISS at 1834 to 1839 UTC on 27 Oct 2017
+-----------------------------------------------------------------------------
+
+While not hearing that QIKCOM-1 has powered up, we dedicated the rest of the
+pass time on the mid-afternoon pass over the USA of the ISS downlink.
+
+Conclusion, HT's outdoors with whip antennas do not hear as well as we thought 
+and the Uplink is more challenging than we thought.  But certainly gave the 
+thrill expected of monitoring the ISS pass with an HT.  This was during mid-
+afternoon class time on a Friday over Maryland with noob operators.
+
+We had 6 radios, One was an Oscar class ground station plus 5 HT's outside.
+* The Oscar station heard 11 stations (out of 32 packets total)
+* HT with long dual band whip heard 4 stations
+* HT with full size 1/4 whip heard 3 stations
+* HT with long dual band whip heard 2 stations
+* HT with rubber duck heard 2 stations
+* HT with arrow heard one (but had bumped radio on 145.830!)
+
+Of the 11 different stations heard by the OSCAR station:
+* Two were heard 6 or 7 times
+* One was heard three times
+* four were heard twice, one using 5W & ELK, one 10W & quad, one 10W & ARROW
+* four were heard once, one was a mobile,
+
+HTs Receive performance: all of the stations heard by the HT's were from the 
+same 5 in the middle of the pass, with none being more than  250 miles away.
+The other six stations heard by the Oscar class ground station were up to a 
+bit farther up to 600 miles away.
+
+All 5 of our HTs were on the Planned-Test-1-minute schedule and NONE were 
+heard by the ISS(digipeated).
+
+Of all the 11 stations, three of the four heard twice were following the 
+suggested protocol and so were assumed to be on a 1 minute schedule.  So, 
+during an 8 minute pass, only got two packets through even though they had 
+modest beams on uplink.  Again, probably during the middle of their overhead 
+geometry.  But for our 4 minute window, then they had a 50% success rate.
+
+The APRS-IS captured a total of 30 packets during the same time frame that we 
+got 32 and only 2 or 3 were missed by either of us.  There were 8 different 
+Igates with four of them contributing 4 to 6 packets and four contributing 
+one or two.  All of this data was from the 4 minute pass window from first 
+station heard by the Oscar class station to the last one heard by that 
+station.  The APRS-IS of course heard other stations before and after, but 
+the window was only taken during our OSCAR class pass.
+
+The downlink was sparse and it is doubtful that there was too much overload 
+on the uplink, (though we all know that the downlink says NOTHING about what 
+the uplink receiver on ISS is having to deal with).  But that could be 
+eliminated if we could get someone in Hawaii to do the same test.  Horizon 
+to horizon with a few radios at the same time. On the same 1 minute test 
+schedule.
+
+The students with the handhelds were not skilled operators and so the 
+attitude of the HT's and antennas relative to the ISS track should be 
+considered completely random.
+
+For what it's worth.
+
+Bob, WB4aPR
+

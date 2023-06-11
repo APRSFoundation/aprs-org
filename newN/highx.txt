@@ -1,0 +1,115 @@
+APRS UHF BACKBONES for HIGH-SITE DIGIS                       17 April 2002
+--------------------------------------------------------------------------
+                                                                    WB4APR
+
+To solve the problem of TOO MUCH TRAFFIC on 144.39, the HIGH sites that are
+hearing too much in dense areas must be silenced or converted to backbones.
+
+This is an easy overnight cold-turkey phase-1 approach.... Leave these
+digis in place, listening on 144.39 but transmit on UHF.  That reduces
+channel load immensly right off the bat.   I call these digis as HIGHx
+sites.  
+
+SPLIT WIDEn-N TRAFFIC TO UHF:  Or you can leave a 144.39 RELAY/WIDE digipeater 
+at this high site to serve local users, but disable WIDEn-N packets so that 
+this digi does not FLOOD the area with DX WIDEn-N traffic.  If everyone still 
+wants to see this WIDEn-N traffic, simply add a second WIDEn-N TNC that 
+continues to listen on 144.39, but its transmitter is on UHF.  Thus none of 
+this traffic is lost if someone wants to put an IGate on the UHF channel 
+or tune there just to read the mail.  THis is a right-now-no-new-hardware 
+approach.
+
+INTERLEAVING MULTIPLE RECEIVERS:
+The next step at these sites, is to install multiple 144.39 
+receivers and TNC's but with separate BEAMS situated so that packets 
+arriving from different directions do NOT collide, but are each processed 
+simultaneously by the different TNC's.  For example, a HIGH3 site has three 
+different beams in 3 directions...
+
+HIGH1:  1 RX on 144.39.  hears everything but transmits on UHF.
+HIGH2:  2 RX on 144.39.  Beams collect packets from valleys on either side
+HIGH3:  3 RX on 144.39.  3 directions covered with narrower beams
+HIGH4:  4 RX on 144.39.  4 directions covered with low tower leg beams
+
+They all transmit only on UHF so thats a 50% channel booster already even
+for a HIGH1 site.  A HIGH4 site can see a 8 fold increase in traffic...
+
+Notice the INSTANT advantages of these HIGHx site conversions:
+
+1) Factor of 2, 4, 6 or 8 improvement in throughput and reduction in QRM.
+First a factor of two because each HIGH digi is now operating cross band
+full duplex. So it is not adding to  channel QRM.  Additional factors of X
+because each site has X multiple receivers.
+
+2) Notice that even for the HIGH4 digi, the output can still be 1200 baud!
+Since the ALOHA saturation rate is on the order of 18%, then that means 5
+such channels can all be heard at a HIGH4 site and fed into a single 1200
+baud UHF transmitter without saturation.
+
+3) Instant gratification in that this is still just a DUMB digipeater, and
+no software, firmware or anythign has to be developed.  ALthough I think
+DIGI_NED software on an old  PC may be required for the multiple ports.
+
+4) Regional IGates simply listen to the UHF output of their HIGH digi so
+they can still hear everything, just like what the HIGH site hears.
+
+5) FIxed stations or mobiles desiring to see everything the HIGH site is
+hearing can also just tune in to the UHF output for their area.  They
+still transmit on 144.39.
+
+6) Coordination (other than to get a UHF freq) is not required.  The HIGH
+sites only listen on 144.39, so they cannot add to QRM on 144.39.
+
+7) Low local digis still listen and transmit on 144.39 and provide full
+100% APRS connectivity to everyone in the local area using the simple RELAY
+and WIDE local paths, but their digipeated packets go no further than the 
+nearest HIGH site where they then are backboned to the internet, or adjacent 
+other HIGH sites or whatever..
+
+USERS:  Users may think that they are being cut off.  But this should not
+be the case.  What it does is eliminate all out-of-area QRM from their
+area so that now they CAN hear their "local" low area digi.  They can hear
+the HIGH stuff any time by tuning in the UHF downlink.
+
+Now LOCAL areas can gain BACK some control over their 144.39 LAN by
+installing their OWN low-area 144.39 digis for their area of interest.
+These digis support the APRS universal RELAY,WIDE and WIDEn-N so that APRS
+gets back to working like it is supposed to.  A few hops through these low
+digis should cover quite an area.  And everything gets into an IGate
+somewhere for FINDU and all the other magic of APRS...  In these digis
+WIDEn-N digipeating of out-of-area packets can be turned on and off at
+will remotely to throttle out of area QRM from flooding the local network.
+
+This will give us a year or two of breathing room to develop any
+higherorder backbone logic that would then LINK the HIGH's together.
+
+For HIGH2,3, or 4's, remember, that you dont need sensitivity, what you
+need is DIRECTIVITY.  SO you can run 100 feet or RG58 if  you need to one
+beam on one side of the hill (low down) and then another cable to the
+other side of the hill at the base of the tower so that both independent
+144.39 receivers do in fact hear two different areas at the same time.
+
+Yes, they will hear opposite side signals too, but they should be 10 dB or
+more weaker and that is all you need for FM capture effect.  These
+directional receivers are NOT intended to hear mobiles, but only the
+cluster of LOW digis on that side of the mountain.  The multiple low digis
+are supposed to hear the mobiles and they CAN because they are no longer
+QRM'ed by bazillions of other cross state traffic on 144.39 coming in from
+the mountaintops...
+
+It would be fun to sit down with a TOPO map of SOCAL and look at each HIGH
+digi and figure out whether it needs to be a HIGH1,2,3 or 4 site...
+
+In summary, GET CONTROL OVER YOUR LAN.
+1) Disable WIDEn-N digipeating of long haul traffic entering your busy LAN
+1) Shut down the XMTRS of the really high sites, or move them to UHF
+2) Connect a second TNC to route WIDEn-N packets to UHF.  Keep RELAY/WIDE on 39.
+3) IGates listen to the high site UHF outputs
+4) Start installing more low site RELAY/WIDE digis that dont do WIDEn-N
+
+Just a suggestion.  Again, this only applies to HIGH site digis that can
+see LARGE population densities.  It does NOT necessarily apply to HIGH
+site digis in remote areas.  Each area needs to design to TOPOGRAPHY.
+Every site is different.
+
+de WB4APR, Bob

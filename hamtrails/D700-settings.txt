@@ -1,0 +1,128 @@
+Golden Packet D700 portable DIGI CONFIGURATION:          20 JULY 2012
+---------------------------------------------------------------------
+
+20 July 12 Updated
+21 July 10 Separated out the D710 data to its own file
+22 July 09 Original file for 2009
+
+The fundamental requirements for a temporary Golden Packet Digi are:
+
+* Support HOPn-N paths (with 1 level of trace history)
+* Support TEMPn-N paths with tracing
+* Posit Beacon once every 10 minutes via HOP7-7,HOP7-7 (mainline stn)
+* Posit Beacon once every 10 min via TEMP2-2 (alternate station)
+* Do not support WIDEn-N
+
+There are many ways to operate one of the AT stations, but the 
+fundamental functions that must be accomplished in using the D700, 
+D710, D72 or FTM-350 as a digipeater are the following.  On the D700, 
+these all must be set using a PC terminal program.  On the D710, and 
+72 they are all available via the APRS menus... See the separate help
+file for that radio.  I dont know about the FTM-350 so someone could 
+really help out here by sharing with us the settings for that radio 
+too.
+
+STATION FUNCTIONS: (Set from the front panel MENU)
+ - Enter MYCALL for your site
+ - Enter LAT/LON POSITION for your site
+ - set to beacon once every 10 minutes
+ - Using the path of HOP7-7,HOP7-7 (mainline, TEMP2-2 alternate)
+
+STATIONS FUNCTIONS SET FROM PC PORT
+ - Set MYCALL for your site plus SSID
+ - Set BTEXT !DDMM.mmN/DDDMM.mmW;comments
+ - Set UNPROTO APGOLD VIA HOP7-7,HOP7-7
+ - Set BEACON EVERY 60  (that's 10 minutes)
+ - UIFLOOD HOP,ID
+ - UITRACE TEMP
+ - HID OFF
+
+To avoid all the potential problems of client software that can 
+inadvertently change parameters and settings in any TNC, it is 
+reeommended that the D72/D700/D710/FTM350 digi be completely stand 
+alone and operated in APRS mode or PACKET mode according to the 
+above settings.
+
+TEST though, because I am not sure how TNC parameters get saved
+in a PM and/or if the UIFLOOD and UITRACE parametrs get saved in
+the PM or not..
+
+To communicate and operate a full APRS station at the same location, 
+it is recommeded that a second low-power radio and APRS station be 
+used and that the callsign be the same root call as the station call 
+but without an SSID.  So for example, GDHILL-8 is our digipeater and
+GDHILL is the call of our operating station.  This way both stations
+will receive any incoming messages, but only the one with matching 
+SSID's will ack.
+
+AUTO PM-STORE-OFF!  What follows are the exact settings for each 
+radio.  It is VERY important for setting up these radios for special 
+events that you be sure and set the AUTO-PM-STORE to OFF!  This 
+makes sure that once you store the configuration in a PM, that any 
+screw-ups in operations will not automatically overwrite the desired 
+config that you originally saved...  The configuration remains as
+programmed until you RE-SAVE the PM.  You can set this AUTO-PM-
+STORE-OFF in each PM, so remember to do it if you set up multiple
+PM's.
+
+
+AT EVENT DIGIPEATER SETTINGS FOR THE D700:
+------------------------------------------
+
+1) Prior to event, make these TNC settings in PACKET mode using 
+a dumb terminal.  These settings can remain permanently in the
+radio and it can still used normally on the normal APRS channel
+or it can be used for Field Day or the Annual AT event or any
+other emergency where HOPn-N or TEMPn-N paths are used.
+
+ - UIFLOOD HOP,ID
+ - UITRACE TEMP
+ - HID OFF
+
+If you are going to operate the radio in APRS mode, then all the
+rest of the settings you make in APRS Mode.  But if you are 
+going to operate in PACKET mode, you have to also set the 
+BTEXT, UNPROTO, and BEACON TNC commands listed earlier if they
+are not  provided by any client APRS software.
+
+2) Power cycle radio and then test the digipeater with another 
+radio using HOP7-7.  It should digipeat, and substitute its own
+call (MYDIGI) and decrement the N number.  The digipeated path 
+should look like this:  W3XYZ>APRSAT,MYDIGI,HOP7-6:.......
+
+3) For the event, then set APRS mode and these MENU items:
+   RADIO - DISPLAY - KEY FUNCTION MODE3 (D700 only)
+   RADIO - MEMORY - AUTO PM STORE OFF   (D700)
+   AUX   - AUTO PM STORE OFF            (D710)
+   APRS  - MYCALL to your assigned station call-SSID
+   APRS  - GPS UNIT OFF
+   APRS  - MY POS (set to your assigned position, see web page)
+   APRS  - STATION ICON (set to digipeater star)
+   APRS  - STATUS TEXT (set as required, but keep it short!)
+   APRS  - STATUS TX RATE 1/1
+   APRS  - PACKET PATH HOP7-7,HOP7-7 (Mainline, TEMP2-2 if alt)
+   APRS  - PACKET TX AUTO
+   APRS  - TX INTERVAL 10 minutes
+
+3a) Again, if operating PACKET mode, then you have to also
+set up the TNC BTEXT, BEACON and UNPROTO commands if not done
+by any client software.
+
+4) BAND-A set to 144.34 MHz, volume up, DATA channel, SQL tight
+
+5) BAND-B set to 445.925 MHz
+
+6) FUNCTION - PM-IN - PM#  Save this for rapid reconfiguration.
+
+7) Cycle F Function button (including holding 1 sec) until you 
+get the TNC button on the lower left.  Cycle it until you get 
+the APRS TNC display in the upper left of the display.
+
+8) Cycle F button to find the "BCON" button, and cycle it until 
+BCON displays on the top line of the display to enable beacons.
+
+Operating procedures will be in a different file: AT-checklist.txt
+
+Bob, WB4APR
+
+

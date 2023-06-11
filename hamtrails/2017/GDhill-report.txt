@@ -1,0 +1,92 @@
+***************************************************************************
+*                  ATGP 2017 Report for GD Hill                          75
+***************************************************************************
+SNAFU says it all.
+
+All packed and ready to go, set GPS for Mt Aetna in PA just so I could get 
+an ETA and then headed out.  Got within repeater range of GDHILL 90 minutes 
+later and heard Andy calling me on the agreed 145.39 repeater.  But neither 
+the APRS object, nor the repeater itself, nor Andy ever told me the PL.  
+So, no contact.
+
+Meanwhile roads were looking less familiar.  As I approached Lebanon PA, 
+I realized that has nothing to do with GD Hill so I pulled over and just 
+started randomly zooming around on my teenee-weensie GPS screen to see if 
+I could find anything familiar.  Finally found Mt GRETNA (not Aetna).  
+And had to backtrack, losing probably a half hour.  Yep, got lost on the 
+way to my site that I have done 9 years in  a row!
+
+Got to parking lot, didn't see Andy but raised him weakly on 445.  I asked 
+if he had already gone up to the tower and he said yes, so l got everything 
+out and put it all on my backpack.  Huffed and puffed up to the tower and 
+then from the base, called Andy again to send down a rope.  Turns out, 
+he was not on the tower, in fact, he was just now arriving down in the 
+parking lot!  So I pulled out a spare battery and solar panel and left 
+them with a lady sitting on a bench to give Andy when he came up. (less 
+load for me).  Turns our Andy had a lot of gear and so he brought up the 
+solar panel and spare battery and left his down at the bottom too.
+
+Proceeded to climb the tower along with the usual moms and dads and screaming 
+kids.  As usual, one kid was stuck half way white knuckled on the ladder and 
+so I went up the other ladder.  Eleven ladders only 8 feet tall each to get to top.
+
+Got to top and began setting up at 1110 and Andy had already caught up 
+and was there already.  Extended antenna on push up mast through the iron 
+bar Faraday cage and hookup was quick.  Then began programming the new D710G.  
+Wow, what a lot of settings.  Was not getting digipeated.  Finally re-found 
+the * to mark the path *OTHER. Andy was giving guidance, and local tours 
+to the kids and parents on the crowded tower.(of which all my stuff was 
+taking up 1/3rd of the platform).
+
+Dick at MD7 was there from the getgo on UHF but we were not hearing 
+anything from Camelback.  I tried digipeating to confirm my station was 
+digipeating using an HT and no-joy.  Finally figured again, I had fumbled 
+the *OTHER path in it too.  FIxed that and finally around 1125 we were 
+good on all counts.
+  
+Eventually Cameblack came up at 9600 at around 1315 and the north started 
+coming through (after a lot of hand wringing over digi settings at Camelback).  
+Then Dick at MD7 was hard at work getting everyone down south coordinated 
+through a lot of backchannel work.  My  first 4 AH NiCd battery failed at 
+about 1330, so swapped in the second and moved it over closer to the solar
+panel so they could be connected.
+
+Next, I pulled out the VCH1 (not used in a decade) and prepared to put fresh 
+AA batteries in it... only to find old alkalines still in it and all corroded!  
+Cleaned all the contacts; still no joy.  But since our digi station was going 
+great at 9600, I climbed down the tower, hiked down the hill (in sandals, 
+on rocks!) a half mile back to the car to get a spare VCH1, put batteries in 
+it THERE and tested and then went back up the hill through the greenbriars 
+and reclimbed the tower.  Meanwhile I could hear on the HT I had with me that 
+everyone was switching to 1200 at around 1350.
+
+Fortunately, Andy had experience with the D710 and so he changed the radio 
+and I could hear and see packets on my HT as I climbed back up.  Talk about 
+crazy, fumbling with an HT, sending messages, and changing baud all on a 
+steep trail of rocks in sandals with overgrown greenbriars tugging at my 
+arms the whole way.  (Later after it was over I came down the hill on the 
+public gravel road (twice as long) path comfortably)...
+
+Back up on the tower, packets were flying at 1200 baud and around 1415 we 
+got the word that 1-15 had communicated. I took two pictures with the handheld 
+VCH1 SSTV unit attached to a D72 with a rubber duck.  I held it through he 
+bars outside the Faraday cage and sent two pictures to MD7 and he sent back 
+two as well.
+
+By 1540 we sent out the QRT message and were sorry to shut down.  But it 
+was a total success. APRS and SSTV. The Laser test was abandoned as the 
+trees are now so high, there are only a few directions where we can see 
+the horizon and we did not recognize anything we could see that would give 
+us confidence that Andy could find it, so we put off the laser test till 
+next year.  THough we could see the tall rides at Hershey Park!
+
+Weather was absolutely beautiful, cool, breezy, no rain, clouds at times.  
+And for the first time, I forgot my tarp, and so did not have a sun shade...  
+Got pretty burned but picked up a jar of vinegar on the way home and that 
+cures it beautifully.  I hope to write up again for QST and by adding SSTV 
+and 9600 maybe get their interest.
+
+Thank you all SO MUCH for the effort, I know it sure takes a lot!  And a 
+Village!
+
+Bob, WB4APR

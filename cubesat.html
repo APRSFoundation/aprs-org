@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+   <TITLE>CubeSats</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (Win95; I) [Netscape]">
+   <META NAME="Author" CONTENT="Bob Bruninga">
+   <META NAME="Description" CONTENT="Cubesat APRS Satellite Project">
+   <META NAME="Keywords" CONTENT="PCsat, APRS,Cubesat,Picosat,Nanosat, APRsat, Satellite,  Tracking, Bruninga, LEO, GPS">
+   <META NAME="Classification" CONTENT="Science">
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#58F1FC" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000">
+
+<CENTER><P><B><U><FONT SIZE=+2>USNA CUBESAT Notes</FONT></U></B>
+
+<IMG SRC="iss-aprs/usnalogo.gif" HSPACE=5 HEIGHT=90 WIDTH=90 ALIGN=TEXTTOP>
+
+<P>Bob Bruninga, WB4APR, Naval Academy Satellite Lab<BR></CENTER>
+<P>
+Cubesats were pioneered by Bob Twiggs at
+<A HREF="http://ssdl.stanford.edu/cubesat/"><B>the Stanford Small Satellite Labs </B></A>
+and later explored by DOD with
+<A HREF="http://www.skyrocket.de/space/doc_sdat/mepsi.htm"><B> MEPSI</B></A>, and 
+<A HREF="http://www.darpa.mil/mto/mems/summaries/Projects/Aerospace_1.html"> Others</A>.
+Cubesats
+offer a unique opportunity to get small student
+satellite payloads into space.  Although the Cubesats are limited to a 4 inch cube,
+there are still lots of useful payloads that can fit into this space.  Some suggested
+ideas for Payloads that we can build are the following:
+<P>
+<LI><A HREF="raft.html">CUBEsat-RAFT </A> A cubesat with a NAVSPASUR Radar Fence Transponder
+<LI><A HREF="http://www.aprs.org/nemisis.html">NEMISIS </A> A CUBEsat for EMI detection
+<LI><A HREF="http://www.aprs.org/marscom.html">MARScom </A> A Cubesat for Navy-MARS communications
+<LI><A HREF="http://www.aprs.org/cubesats/cubefreq.txt">Some comments on selecting VHF/UHF up/dn links</A>  
+<LI><A HREF="http://www.aprs.org/cubesats/projects.txt"> A list of suggested Cubesat and other Satellite projects</A>
+<LI><A HREF="http://www.aprs.org/cubesats/optisat.txt"> A Visual Communications satellite!</A>  
+<LI><A HREF="http://www.aprs.org/cubesats/mode-v.html"> A Mode-V 10m up and 2m down transponder</A> 
+<LI><A HREF="http://www.aprs.org/cubesats/PSKsat.html"> A PSK-31 Satellite TRANSPONDER Ideas</A> 
+<LI><A HREF="http://www.aprs.org/cubesats/PSKsatP.html"> A PSK31 Parrot Transponder as a PCsat AUX Payload</A> 
+<LI><A HREF="http://www.aprs.org/cubesats/boombox.jpg"> BOOMbox</A> A gravity gradient bus (not a cubesat) <== NEW
+
+<P>
+Of course, every Cubesat needs a Telemetry, Command and Control system, and finding
+a small off-the-shelf solution was one of our first priorities.  The following pages
+suggest two simple solutions to this Telemetry and Command requirement 
+using the ubiquitous AX.25 amateur radio data standard.  AX.25 can be received
+by hundreds of thousands of amateur radio operators worldwide.
+ :
+<P>
+<B> The MIM Module:</B>
+The simplest Telemetry module is the 
+<A HREF="http://www.toad.net/~wclement/mim2.html">MIM module</A> 
+shown below which provides for multiple periodic AX.25 packets
+at 1200 baud AFSK.  Different rates can be set for the BEACON, Telemetry, GPS position
+and CW Identification.  The module has no comand and control capability, but that
+is easily added with CTCSS or DTMF receivers/decoders in about the same size package.
+<P><IMG SRC="http://www.aprs.org/cubesats/mimcube.jpg">
+<P>
+<B> 1200 Baud TNC:</B>
+The second and much more capable telemetry is the use of a Kantronics KPC-3PLUS TNC
+carved down to fit within the four inch cube.  As can be seen in the photo below,
+the board will fit diagonally if the connectors are removed and the power supply
+portion of the board are relocated.  This gives the same Telemetry, Beacon, GPS and
+CW ID capability as with the MIM module, but includes a full TNC DIGIPEATER and
+4 channel COMMAND/CONTROL channel as well.  With the full TNC, a complete digital
+communications transponder mission, 
+<A HREF="pcsat.html"> such as PCSAT,</A> can be supported.  PCsat is just one of
+a possible constellation of student built satellites supporting the 
+<A HREF="astars.html">ASTARS Mission. </A>
+<P>
+<IMG SRC="http://www.aprs.org/cubesats/cubtnc.jpg">
+<P>
+The <A HREF="astars.html">ASTARS Mission </A>is a generic mission to provide real-time message, position, and 
+status relay via satellite to a worldwide internet linked amateur radio tracking 
+system.  Any amateur or university payload can support this mission by simply enabling
+DIGIPEAT ON on an AX.25 compatible transponder.  The users of such a system can be
+for
+<A HREF="http://www.aprs.org/boats.html">Boats at Sea, </A> cross country travelers, 
+expeditions, or any other travelers which are far from any existing 
+<A HREF="http://www.aprs.org/digis.html">APRS terrestrial tracking infrastructure.</A>  
+The satellite downlink from such travelers would be fed into the existing 
+worldwide internet linked APRS system by a few permanent ground stations.  This
+dedicated APRS satellite would join our own
+<A HREF="pcsat.html">PCsat, </A> The South African
+<A HREF="http://sunsat.ee.sun.ac.za/ham.htm"> SUNSAT </A> and 
+<A HREF="astars.html"> several other on-orbit experiments</A>
+that have been conducted over the years to demonstrate this capability. 
+<P>
+<IMG SRC="http://www.aprs.org/photos/kenwoods.jpg">
+<P>
+The photo above shows the Kenwood digital packet radios that can be used as
+the ground user equipment to communicate via these ASTARS compatible satellites.
+The more of these satellites we can get into orbit, the more continuous the
+coverage provided to the users.
+<P>
+ The Space segment of PCsat/ASTARS has been demonstrated a number of times in space via 
+<A HREF="mirex.html">MIR School tests</A>, the <A HREF="sarex.html"> Shuttle SAREX</A>, 
+and the <A HREF="http://www.aprs.org/spre.html">SPRE mission. </A>.  It is also a spin off of an previous
+launch opportunity that we had in 1998 called <A HREF="http://www.aprs.org/natsat.html"> NATSweb</A> that
+almost got launched on SEA-LAUNCH..
+PCsat is a  project to produce a viable spacecraft in a very short time frame using off
+the shelf components where possible.  Here are the background topics of design:
+<P>
+<LI><A HREF="pcsat/pcsatpln.txt">The Mission and PCsat Team</A>
+<LI><A HREF="pcsat/freqs.txt">Frequency Request and Mission details</A>
+<LI><A HREF="pcsat/design.txt">The Design</A>
+<LI><A HREF="pcsat/pwrsys.txt">Power System</A>
+<LI><A HREF="pcsat/links.txt">Link Budgets</A>
+<LI><A HREF="pcsat/cooling.txt">Cooling Experiment</A>
+
+<P> APRS is the Automatic Position Reporting System that the Naval Academy uses for 
+tracking its boats and a variety of other vehicles and networks using the 
+<A HREF="http://web.usna.navy.mil/~bruninga/aprs.html">APRS
+Automatic Position Reporting System</A> .  The Satellite described here in would be 
+operated under the rules of the Amateur Satellite Service and the rules of the FCC.  
+Although the satellite would  be developed as a proof of concept for the Naval Academy, 
+it would be available for all radio amateurs and their vehicles.</P>
+<P>
+Other Cubesat WEB pages:
+
+<LI><A HREF="http://ssdl.stanford.edu/cubesat/">Stanford CUBESAT Program</A>
+<LI><A HREF="http://www.cubesat.auc.dk/">Aalborg University, Denmark</A>   <=== New!
+<LI><A HREF="http://www.sbarasat.org">Stanford/BARC CUBESAT Program</A>
+<LI><A HREF="http://www.stensat.org/">Stensat Group</A>
+<LI><A HREF="http://www.calpoly.edu/~aero/polysat/">Cal Poly CUBESAT</A>
+<LI><A HREF="http://engineering.dartmouth.edu/~dartsat/radio.html">Dartmouth CUBESAT Program</A>
+<LI><A HREF="http://www.ssel.montana.edu/merope/">Montanna State CUBESAT</A>
+<LI><A HREF="http://uasat.arizona.edu/">University of Arizona</A>
+<LI><A HREF="http://www.css.tayloru.edu/~physics/picosat/">Taylor University</A>
+<LI><A HREF="http://dat15.t.u-tokyo.ac.jp/cubesat/index-e.html">University of Tokyo</A>
+<LI><A HREF="http://horse.mes.titech.ac.jp/srtlssp/cubesat/index.html">Tokyo Institute of Technology</A>
+<LI><A HREF="http://www.golotech.org/index2.html">Wilcox High School</A>
+<LI><A HREF="http://ssdl.stanford.edu/cubesat/">Technical University of Denmark</A> (no WEB LINK yet)
+
+
+<P><FONT SIZE=+1>You are visitor: 
+<IMG SRC="http://web.usna.navy.mil/cgi-bin/counter/counter?bruningaCU1">
+ </FONT>.<BR>
+<HR SIZE=5 WIDTH="100%">
+
+<CENTER><TABLE BORDER=2 CELLPADDING=2 >
+<TR>
+<TD>
+<CENTER><P><FONT SIZE=+1><A HREF="satstation.html">USNA
+Satellite Ground Station</A></FONT></P></CENTER>
+</TD>
+
+<TD>
+<CENTER><P><FONT SIZE=+1><A HREF="http://www.aprs.org/w3ado.html">Midshipmen Amateur Radio
+Club</A></FONT></P></CENTER>
+</TD>
+</TR>
+</TABLE></CENTER>
+</UL>
+
+</BODY>
+</HTML>

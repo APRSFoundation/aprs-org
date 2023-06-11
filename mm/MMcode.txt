@@ -1,0 +1,40 @@
+MILE-MARK BASIC CODE                                        30 DEC 2003
+-----------------------------------------------------------------------
+This pseudo BASIC code is my routine for reading the MM.DAT file while 
+looking for the road that matches the given interstate name. When found 
+it draws 1 mile ambiguity circles for every Nth mile mark. 
+
+'This routine overlays Mile-Mark circles every Nth mile along the
+'highway named HWY$. The names are of the form SS## where SS is the
+'state abbreviation and ##... is the interstate number.
+   
+ INPUT "State-Interstate (SSNN)", HWY$: HWY$=UCASE$(HWY$) 
+ OPEN "MM-DATA.DAT" FOR INPUT AS #3
+ LINE INPUT #3, a$    'skip the first line comment
+ Nth = 2                   'sets every  2nd MM below  2 mile Range Scale
+ IF RS >  2 THEN Nth =  5  'sets every  5th MM below 16 mile Range Scale
+ IF RS > 16 THEN Nth = 10  'sets every 10th MM below 32 mile range scale
+ IF RS > 32 THEN Nth = 20  'sets every 20th MM above 32 mile range scale
+ DO UNTIL Id1$ = "END"                  'read data ID's till the end
+    INPUT #3, Id1$, K1, LA1, LO1        'read the next data line
+    IF HWY$ = Id1$ THEN                 'If Highway is found then do it
+       INPUT #3, Id2$, K2, LA2, LO2     'Get starting point (or next one)
+       FOR Mk = 0 TO 900 STEP Nth       'For up to 900 MM's do every Nth 
+           IF Mk > K2 THEN              'Get next line if needed
+              Id1$ = Id2$: K1 = K2           'and save the values
+              LA1 = LA2: LO1 = LO2           'before reading in the next
+              INPUT #3, Id2$, K2, LA2, LO2
+           END IF
+           IF HWY$ <> Id2$ THEN EXIT FOR     'exit at end of highway
+           LA = LA2 - (K2-Mk) * (LA2-LA1) / (K2-K1) 'interpolate LAT
+           LO = LO2 - (K2-Mk) * (LO2-LO1) / (K2-K1) 'interpolate LON
+           y = Yval(LA)       'convert LAT to my Y map coordinates
+           x = Xval(LO)       'convert LON to my X map coordinates
+           r = 175 / RS: IF r < 6 THEN r = 6 'scale 1 mile circle with
+           CIRCLE (x, y), r, 15              'map Range Scale (RS)
+           CALL DoLabels(x, y, STR$(Mk))     'Add mile mark label 
+       NEXT
+    END IF
+ LOOP
+ CLOSE #3
+       

@@ -1,0 +1,40 @@
+***************************************************************************
+*                  ATGP 2017 SSTV Report for Roan                        75
+***************************************************************************
+
+For my side, I downloaded the SSTV Slow Scan TV app from the Apple/iTunes 
+store and installed it on my iPhone 6. The cost was $2.99. Here is a link 
+to the app:
+https://itunes.apple.com/us/app/sstv-slow-scan-tv/id387910013?mt=8
+ 
+For transmitting, I made an effort with the receiving station to try and 
+find an encoding that our apps had in common. John KK4BSM at Comers Rock 
+was using an Android app that did not support all of the encoding options 
+I had available in my app. We picked Scottie 1 which turned out to be a bad 
+choice because it took a full minute to transfer the image if I remember 
+correctly. All that I did was key the microphone and hold it near the 
+earpiece on my iPhone, and then hit the transmit button in the app.
+
+For receiving SSTV images, my app is always attempting to decode SSTV data 
+heard via the built-in microphone on the iPhone when it is running in the 
+foreground. When I was ready to exchange SSTV pictures with John KK4BSM at 
+Comers Rock, I simply advised him via UHF voice that I was ready and then 
+held my phone near the speaker. The app detected the encoding used by the 
+transmitting station (Robot, Scottie, etc) automatically. I didn't have to 
+do any configuration to it. This worked pretty good. It would, of course, 
+be better if I could pipe the audio directly into the iPhone. With the 
+lesson learned from my transmission, we picked a Robot encoding that would 
+sacrifice image quality but deliver the image much less time.
+
+The big lesson learned for me is that smaller and lesser quality images 
+are better. The amount of accurate information that can be conveyed in a 
+small black and white image is going to be much better than trying to push 
+a large full color image over the air. Example: the app I was using had a 
+Black & White 8 second encoding available. The images were thumbnail sized, 
+but it was very easy to see what I was looking at and the quality when 
+tested at home in the shack was excellent.
+
+I will defer to John for the app that he was using on his end at Comers 
+Rock. It would also be neat to see the image that he received if possible.
+
+Glenn Crissman

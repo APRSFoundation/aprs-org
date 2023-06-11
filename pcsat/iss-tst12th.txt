@@ -1,0 +1,74 @@
+ISS/PCsat JOINT OPERATIONS TEST 12 OCTOBER 2002             13 Oct 2002
+-----------------------------------------------------------------------
+                                                                 WB4APR
+
+At 1920z on 12 October, was the first reported successes in the joint
+ISS/PCsat operations test.  This test began on 10 October when ISS 
+changed frequency to 145.825 to fly as a dual satelite constellation
+with PCsat.  With the 92 and 102 minute periods of the two spacecraft,
+about every 9 orbits the two spacecraft are within range of each other.
+
+On this 1920z pass both ISS and PCsat were within range of each other
+over the USA.  At 19:56:15 or so, PCsat passed DIRECTLY 420 km over ISS 
+and this was about 100km NW of Natashquan, Quebec.  A minute 48 seconds
+earlier, N4ZQ successfuly digipeated via both spacecraft and then 40 
+seconds later after the closest point of approach, there were several
+successes over the next minute.  By that time the distance between ISS 
+and PCsat was about 600 km.
+
+Although ISS and PCsat were in view over the entire USA, these succeses
+occured after most of the USA was no longer in view.  The next pass was
+also directly over USA, but ISS had switched back to voice on 145.800
+and so no packet tests were possible.  But I did get to talk to Valery
+(did anyone record it?).  The data follows.  THe lines have been 
+truncated to fit the 80 character line format.
+
+[19:54:27] N4ZQ>QST,W3ADO-1,RS0ISS*,SGATE,WIDE<<UI>>:
+
+[19:56:58] KB1GVR>CQ,RS0ISS*,W3ADO-1/1:=4436.18N/06826.92W-> QSL TEST
+[19:56:59] KB1GVR>CQ,RS0ISS,W3ADO-1*/1:=4436.18N/06826.92W-> QSL TEST
+
+[19:57:05] KB2M-3>SYQQ0W,W3ADO-1*,RS0ISS/1:'fH~l j/]www.qsl.net/kb2m
+[19:57:06] KB2M-3>SYQQ0W,W3ADO-1,RS0ISS*/1:'fH~l j/]www.qsl.net/kb2m
+
+[19:57:09] KB1GUE>CQ,RS0ISS*,W3ADO-1,SGATE,WIDE/1:>FN42IL/- CQ from Glenn
+[19:57:10] KB1GUE>CQ,RS0ISS,W3ADO-1*,SGATE,WIDE/1:>FN42IL/- CQ from Glenn
+
+[19:57:16] KB2M-5>APRSAT,RS0ISS*,W3ADO-1/1:=3911.01N/07445.00W`www.qsl...
+[19:57:17] KB2M-5>APRSAT,RS0ISS,W3ADO-1*/1:=3911.01N/07445.00W`www.qsl...
+
+[19:57:28] WB4APR>APRS,RS0ISS*,W3ADO-1,ARISS/1::ALL      :TEST in
+[19:57:29] WB4APR>APRS,RS0ISS,W3ADO-1*,ARISS/1::ALL      :TEST in
+
+[19:57:58] KB2M-5>APRSAT,RS0ISS*,W3ADO-1/1:=3911.01N/07445.00W`www.qsl...
+[19:57:58] KB2M-5>APRSAT,RS0ISS,W3ADO-1*/1:=3911.01N/07445.00W`www.qsl...
+
+
+Here is the full text of the successful packets.
+
+KB1GVR>    :=4436.18N/06826.92W-> QSL TEST
+KB1GUE>    :>FN42IL/- CQ from Glenn in Bedford Mass. - KB1GUE@amsat.org
+WB4APR>    ::ALL      :TEST in progress
+KB2M-5>    :=3911.01N/07445.00W`www.qsl.net/kb2m
+
+Notice that packets went BOTH ways.
+
+One other station, KB1EAA inadvertantly got a Triple hop, but with a
+ground station in between because he had a WIDE on the end of his path
+(which we have recommended for better IGate success once the packet
+reaches the ground).  But in this case, with ISS also having the WIDE
+alias, it went back up via satellite!
+
+[15:54:19] KB1EAA>APK002,W3ADO-1,SGATE,RS0ISS*/1::PCSAT    :HI{9
+
+With the satellites being WIDE also, this is no longer a good idea.
+
+For this pass, I got to the ground station after the pass was HALF over
+and  was still able to comand PCsat into power saving mode with the UHF
+RX's off and the Transmitters isolated.  Thus, PCsat was fully functional
+with enough power for the test!
+
+de WB4APR@amsat.org, Bob
+
+PCsat WEB  page     http://www.ew.usna.edu/~bruninga/pcsat.html
+ISS-APRS FAQ:       http://www.ew.usna.edu/~bruninga/iss-faq.html

@@ -1,0 +1,62 @@
+DIGIPEATER OVERLAY CHARACTERS for the new N-N PARADIGM        5 April 2005
+--------------------------------------------------------------------------
+
+Updated 8 Nov 2007:
+
+New n-N Paradigm digis should be labeled in a consistent manner for the 
+benefit of the users.  The salient characteristics of the New-N-Paradigm
+are the obsolescence of dupe-causing RELAY, WIDE, TRACE, etc paths, the
+improved algorithms for DIGI Beacons, and trapping of large values of N
+when using WIDEn-N paths.  Digis that implement these functions should be
+clearly distinguishable from older obsolete digis with clearly labeled
+overlays.  New-N Digis that support SSn-N routing should get an "S" 
+overlay.  If for some reason they are limited and do not support the 
+local SSn-N, then they may be an "L" overlay.   The old "F" overlay for
+FLOOD digis is also obsolete, since we have now figured out how to make
+these old version 8.2 KPC-3's work well with the New-N paradigm.
+
+The next most important parameters in the digi position texts is the short-
+hand describing the capabilities of the digi using Wn and SSn etc.  If we 
+do these in a consistent manner, then users can easily see what to expect.  
+Also remember the 10 x 10 x 8 byte display on many of the mobiles when 
+editing your beacons for best display in the mobiles...  Here are the 
+overlays:
+
+N for WIDEn-N's      "R,W,Wn..."      The old OBSOLETE flooding WIDEn-N's
+L for Limited WIDEn  "W2..."          W2 receommended. SSn-N not supported
+S for State Systems  "W2, SSn-N..."   W2 recommended. Supports SSn-N
+1 for FILL-IN DIGIS  "W1-1..."        For a FILL-IN WIDE1-1 only digi
+1 for 1-hop enforced "11,22,21,33..." Such as LA, etc
+P for PacComm digi   "11,22,21,33..." or what ever is in ALIASlist
+A for Alt-Input digis"W2, SSn-N...    Alt-Input on 144.99
+X for eXperimental
+
+The OBSOLETE LEGACY Overlays are:
+
+R  for RELAY only digis      <== OBSOLETE.  MYALILAS should be WIDE1-1 now
+W  for WIDE or R,W digis     <== OBSOLETE.  Should be WIDE1-1 only
+T* for PacComm TRACE digis   <== should be changed to "P"
+F* for old KPC ver 8.2       <== should be updated to New-N as an "S"
+U* for UIdigi       *Should use "S" (or "L") when updated to New n-N
+D* for DIGI_NED     *Should use "S" (or "L") when updated to New n-N 
+
+We do not need to distinguish UIDIGI and DIGI_NED anymore by Overlay, 
+since they also can do the New N-N paradigm very well and we can tell 
+their software type by the APNXXX in their UNPROTO TOCALL which should 
+be APNU.. or APND..  But since DIGI_NED has additional features, be 
+sure to put "DIGI_NED" in your comment text something like "PHGXXXX 
+W3, SSn-N,  DIGI_NED  Capable... etc" so that it shows up well on the 
+Mobiles who are the most likely of these users...
+
+PACCOMM DIGIPEATERS:  The old Trace only digipeaters that used to use the
+old "T" overlay can be re-programmed to be compatible with the New n-N
+Paradigm.  In this case, their overlay should change to a "P" overlay.
+These digipeaters should eventually be programmed with UIDIG-ROMS so
+that they can support the full power of the New n-N Paradigm.
+
+OLD WIDE and RELAY ONLY digis:  RELAY and WIDE are obsolete.  And many 
+fill-in digis may no longer be needed as the QRM from the many many dupes
+are eliminated.  But if a FILL-IN digi is required, it should only support
+WIDE1-1 (and it should get a "1" Overlay and have W1-1 in its text)
+
+de WB4APR, Bob

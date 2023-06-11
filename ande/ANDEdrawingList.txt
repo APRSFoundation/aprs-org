@@ -1,0 +1,51 @@
+USNA ANDE Communications System Drawing List:               16 Sep 2004
+                                                            22 Mar 2005
+-----------------------------------------------------------------------
+
+Drawing No 		Name				Description				
+----------------  ----------------------  -----------------------------
+
+NA-AN-SY-1000	Comms Block Diagra      Overal Comms System
+NA-AN-SY-1010	Connector Layout        Shows mechanical Cross section
+NA-AN-ID-1020	Cable Plan              Shows all box interconnects
+NA-AN-ID-1030	Wiring Diagram		Wiring harness details
+                  ANDE_MAA_wirelistA3.xls wiring list side A
+                  ANDE_MAA_wirelistB2.xls wiring list side B
+
+NA-AN-EP-2000	Electrical Power System Block Diagram & Life Management
+NA-AN-EP-2010	Battery Schematic       One of 4 battery boards
+
+NA-AN-SY-3000	Interface Board         Custom board implements all
+                                          ANDE comms circuitry
+NA-AN-LD-3010	Component Layout        From ExpressPCB board layout
+NA-AN-PB-3020	PCB Top Layer
+NA-AN-PB-3030	PCB Bottom Layer
+NA-AN-TC-3100	Interface Brd Schematic TX/RX and TNC connections
+NA-AN-TC-3300	Sleep Wake Timers
+NA-AN-TC-3410	TNC and Telemetry Mods  See MFR's TNC package below
+NA-AN-TC-3500	Solar and Temp Sensors
+NA-AN-TC-3510	20 Ch Telm Multiplexer
+NA-AN-TC-3520	Telemetry conditioning ckts
+NA-AN-EX-3600	Text-to-speech Experiment
+
+NA-AN-RF-4000	Antenna System
+NA-AN-RF-4100	Antenna Matching Circuit
+
+Additional Documentation Package:
+-----------------------------------------------------
+
+1.0		Kantronics Terminal Node Controller (TNC)
+1.1		TNC Block Diagram
+1.2		TNC Specifications
+1.3		TNC Parts Layout
+1.4		TNC Parts List
+1.5		TNC Schematic
+
+2.0		Transmitter Package
+2.1		Hamtronics TA-51 VHF FM Exciter 
+3.0		Receiver Package
+3.1		Hamtronics R-100 VHF FM Receiver
+
+4.0		Component Spec Sheets
+4.1		Current Sensor Spec sheet
+4.2		NTC Thermisters

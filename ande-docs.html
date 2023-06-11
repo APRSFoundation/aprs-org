@@ -1,0 +1,273 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+   <TITLE>ANDE-DOCS</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (Win95; I) [Netscape]">
+   <META NAME="Author" CONTENT="Bob Bruninga">
+   <META NAME="Description" CONTENT="ANDE Telemetry/Communications Payload">
+   <META NAME="Keywords" CONTENT="APRS, ANDE, Amateur, APRsat, Satellite, Cubesat, Starshine, USNA, 
+   Tracking, Bruninga, LEO, GPS,PCsat">
+   <META NAME="Classification" CONTENT="Science">
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#48D1CC" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000">
+
+<CENTER><P><B><U><FONT SIZE=+2>
+<IMG SRC="iss-aprs/usnalogo.gif" HSPACE=5 HEIGHT=90 WIDTH=90 ALIGN=TEXTTOP>
+ANDE - MAA Documents</U></FONT>
+<IMG SRC="ande/photos/ANDEdoneXxx.JPG" HSPACE=5 HEIGHT=90 WIDTH=90 ALIGN=TEXTTOP>
+<B>50.8 kg</B>
+
+<BR>US Naval Academy Satellite Lab
+<BR>Bob Bruninga, WB4APR</B>
+<BR>Midn's Orloff(05), Kinzbrunner(05), Rose(05) and Schwarzer(05)
+<BR>Midn's Aaron(04), Villalbi(04), and Weisenberg(04)
+<BR>Midn's Kelley(03), Keller(03), Harris(03), Patterson(02), & Ensign Sillman(02)</B><BR>
+Antenna Designers/Modelers: Bob WB4APR, Phil KF8JW, Bobby WB8FEW, Bob KC8QPM & Rick K8CAV
+
+<SCRIPT language=Javascript>
+var rndNum = Math.floor(Math.random() * 10000);
+eval("var CDTDate" + rndNum + " = 'June 12, 2006 9:41:00 PM EDT';");
+document.writeln("<form name='CDTform" + rndNum + "' action='Javascript:void(0);'>");
+document.writeln('<font size=4 color=darkblue>Countdown to Delivery to KSC</font><br>');
+document.writeln("<input type=text value='' size=20 name='WrittenByJamesMVenglarikII'>");
+document.writeln("</form>");
+if (theFunction) theFunction += "var d = new Date();";
+else var theFunction = "var d = new Date();";
+theFunction += "var c = new Date('" + eval("CDTDate" + rndNum) + "');";
+theFunction += "var diff = (c - d)/1000;";
+theFunction += "var days = Math.floor(diff / 86400);";
+theFunction += "var rem = diff - (days * 86400);";
+theFunction += "var hours = Math.floor(rem / 3600);";
+theFunction += "rem = rem - (hours * 3600);";
+theFunction += "var minutes = Math.floor(rem / 60);";
+theFunction += "rem = rem - (minutes * 60);";
+theFunction += "var seconds = Math.floor(rem);";
+theFunction += "if ((days < 0) | (hours < 0) | (minutes < 0) | (seconds < 0)) ";
+theFunction += "var out = 'Liftoff of STS-116!';";
+theFunction += "else ";
+theFunction += "var out = ' ' + days + ' days ' + hours + 'hr ' + minutes + ':' + seconds + '';";
+theFunction += "document.forms.CDTform" + rndNum + ".elements.WrittenByJamesMVenglarikII.value = out;";
+setInterval(theFunction, 1000);</SCRIPT>
+
+
+ </CENTER>
+<P>
+<B>MAIN ANDE Page:</B>  See also the <A HREF="ande.html"><B> main ANDE page</B></A>
+ that describes the mission, purpose and application of the ANDE spacecraft project.
+<P>
+
+<B>DOCUMENTATION PAGE:</B> This page will contain the latest drawings and documents related
+to the ANDE project:
+<LI><A HREF="ande/ANDE%20Flight%20Functional%20RF%20Test.doc"><B>Flight Functional RF Test Plan</B></A>(download)
+<LI><A HREF="ande/ANDE-laser-power-Decision-d.doc"><B> Power System Safety Clarifications</B></A> download (rev 3, 13 July 06)
+<LI><A HREF="ande/ANDE-laser-power.doc"><B>Laser Power Modifications</B></A>.
+<LI><A HREF="ande/ANDEdrawingList.txt"> Drawing List</A> and numbering plan
+<LI><A HREF="ande/ANDEparts.doc"><B>Parts List</B></A>(MS Word format)
+<LI><A HREF="ande/ANDEcomFunctionalTest.txt"><B>Functional Test Plan</B></A>(text file)
+<LI><A HREF="ande/ANDElaserFunctionalTest.txt"><B>Laser Functional BOX level Test Plan</B></A>
+
+<P>
+<IMG SRC="ande/photos/ANDEstackHx.JPG" HEIGHT=260 WIDTH=240 >
+<IMG SRC="ande/photos/ANDEfinalTweak.JPG" HEIGHT=260 WIDTH=320 >
+<BR><A HREF="ande/photos/ANDEantMatch.JPG"> Antenna Matching PI Circuit</A>
+<BR><A HREF="ande/photos/ANDEswrTest.JPG"> SWR Testing</A>
+
+
+<P>
+<B>ANDE LICENSING:</B>  ANDE is <A HREF="ande/ande-itu.txt"><B> Licensed for operations in the Amateur Satellite Service</B></A>
+<P>
+<IMG SRC="ande/ANDEsection.gif">
+
+<P>
+<B>LITHIUM PRIMARY BATTERY POWER SYSTEM: </B>  ANDE runs on 112 "D" cell Lithium thionylchloride cells
+arranged in 4 packs of 7 strings of 4 cells in series.  For higher resolution photos than these,
+<A HREF="ande/ANDEbatbox-fit.JPG"><B> see batteries in box</B></A>
+and <A HREF="ande/ANDEbatbox-on-disk.JPG"><B> battery box on disk</B></A>
+
+<P>
+<IMG SRC="ande/ANDEbatbox-fitS.jpg">
+<IMG SRC="ande/ANDEbatbox-on-diskS.jpg">
+<BR>
+<LI> Battery Box Preliminary design sketches: 
+     <A HREF="ande/ANDEnewpack.jpg"><B> Cell Arrangement</B></A>,
+     <A HREF="ande/ANDEbatbrd.jpg"><B> Circuit Board</B></A>,
+     <A HREF="ande/andebatbox.jpg"><B>initial concept</B></A>.
+<LI> Battery Board <A HREF="ande/ANDEpower.gif"> <B> Schematic Drawing</B></A> and
+     <A HREF="ande/batbrdlayout16.gif"><B>Battery Board PCB layout</B></A>
+<LI> <A HREF="ande/ANDEbatsim.gif"><B> Battery simulator</B></A>.
+<LI><A HREF="ande/ANDEbat-mgt4.GIF"><B>Battery Life Management </B></A> 
+    uses 2 battery systems separately to yield measurable life data.
+    <A HREF="ande/ANDEbat-mgt3.gif"><B>Earlier plan </B></A> 
+<LI>Present design yields 1.5 year <A HREF="ande/ANDEpwrplan2.txt"><B> Power Budget</B></A>.  The
+<A HREF="ande/andebatled.jpg"> lithium discharge profile</A> is very flat to end of life.
+
+<LI>Primary Lithium Battery Type: 
+    <A HREF="http://www.tadiranbat.com/specs6/tl_5930.htm"><B> Tadrian TL-5930</B></A>.
+    Thermal <A HREF="ande/ANDEbatheat.jpg"><B> Specific Heat test </B></A>.
+<LI>Separation Switches <A HREF="ande/ANDE-sep1.jpg"><B> location</B></A>, 
+     <A HREF="ande/ANDE-seps.jpg"><B> Detail Sketch</B></A>,
+     and Sep Switch Functional<A HREF="ande/ANDEsepbk.bmp"><B> Block Diagram</B></A>.
+<P>
+<B>Lithium Battery Testing:</B>
+<LI><A HREF="ande/InadvertantActivation.txt"><B> Inadvertant Separation Switch Activation</B></A> analysis.
+<LI>Lithium Battery Reverse-Charge<A HREF="ande/ANDEbattest.doc"><B> Test Plan</B></A>, 
+    <A HREF="ande/ANDEcelltest.jpg"><B> Test Schematic</B></A>, and 
+    <A HREF="ande/ANDEbattstset.jpg"><B>Cell Discharge Test</B> </A> configuration.
+<LI>1st Lithium Battery Reverse-Charge Test:
+    <A HREF="ande/badrchgv.jpg"><B> Voltage</B></A>, 
+    <A HREF="ande/badrchgi.jpg"><B> Current</B></A>, and 
+    <A HREF="ande/badrchgt.jpg"><B> Temperature</B></A>.
+<LI>2nd Lithium Battery Reverse-Charge Test:
+    <A HREF="ande/Batchg-V.jpg"><B> Voltage</B></A>, 
+    <A HREF="ande/Batchg-I.jpg"><B> Current</B></A>, and 
+    <A HREF="ande/Batchg-T.jpg"><B> Temperature</B></A> and
+    <A HREF="ande/batchgcelli.jpg"><B> Cell current.</B></A>
+<LI>3rd Lithium Battery Reverse-Charge Test #3 <A HREF="ande/Batchgtest3.jpg"><B> Test Plan</B></A>
+<LI>Flight Inspection:  Test Plan, Test Report.  High Temperature Test Plan, and Test Report
+<LI>Cell acceptance Test Plan:
+    <A HREF="ande/ANDEleakhot.doc"><B>Hot (85C) Test Plan</B></A>
+<LI>UL Report on Tadiran batteries.  Follow this link and enter the report number MH12193.  
+<A HREF="http://database.ul.com/cgi-bin/XYV/template/LISEXT/1FRAME/gfilenbr.html"> Click here</A>
+
+<P>
+<B> WIRING HARNESS AND CABLING:</B> The cabling and wiring design is 98% complete.  Only the
+following issues remain to be resolved:  <i>Exact connector for GSE, and exact connector for
+Laser harness.</i>  Also how to mount the two shell connectors and the cross-connect connectors
+is still open.
+<LI><A HREF="ande/ANDEantbrd2c.GIF"><B>Antenna cabling</B></A>   (New 5 Aug 2005)
+<LI><A HREF="ande/ANDEgse.gif"><B> Flight/GSE Plug </B></A>, 
+    <A HREF="ande/ANDEgse.txt"><B> GSE</B> Test Plan</A>.
+    <A HREF="ande/ANDEcomTEST.GIF"><B> GSE Test Set</B></A>,
+    <A HREF="ande/ANDEcomTEST-GSE.GIF"><B> GSE Interface Box</B></A>.
+
+<LI><A HREF="ande/ANDEcables.gif"><B>Cable Layout</B></A> (preliminary concept Sep 04)
+<LI><A HREF="ande/ANDEharness.gif"><B>Connector and Wiring harness layout</B></A> (22 Mar)
+<LI><A HREF="ande/ANDEwire2.GIF"><B> Wiring diagram </B></A>(rev 2, 10 May 05),
+    <A HREF="ande/ANDEwireA.gif">Old Wire diagram (Mar 05)</A>,  
+    <A HREF="ande/ANDEwire.gif">Old Wire diagram (Sep 04)</A>.
+<LI><A HREF="ande/ANDE_MAA_wirelistA4.xls"><B>A side Wiring List Spread Sheet</B></A> (New 20 July)
+<LI><A HREF="ande/ANDE_MAA_wirelistB4.xls"><B>B side Wiring List Spread Sheet</B></A> (New 20 July)
+<LI><A HREF="ande/ANDEswitch.doc"><B>Separation Switch Test Report</B></A>.
+<P>
+<B>COMMUNICATIONS SYSTEM:</B>
+<P>
+The communications system consists of a Kantronics KPC-3+ TNC, a Hamtronics
+transmitter and receiver and a custom interface board to hook it all together.
+These are all mounted in a 1" tall box on top of the battery boxes.
+<P>
+<IMG SRC="ande/ANDEblock.gif">
+<P>
+<LI><A HREF="ande/ANDE-TXassy.GIF"><B>Flight TX modifications and assembly</B></A>, and
+    <A HREF="ande/ANDE-RXassy.GIF"><B>RX mods and assembly</B></A>.
+
+<LI><A HREF="ande/ANDEcomTEST.GIF"><B> Comm Interface Test Set </B></A>.
+     and <A HREF="ande/ANDEcomTestPlan.txt"><B> Test Plan</B></A>.  [New 14 May 05]
+<LI><A HREF="ande/ANDEtxrx2.gif"><B>TX-RX Connections</B></A>. [New 14 May 05]
+
+
+<LI><A HREF="ande/ANDEcomBrds.gif"><B> Interface Board and Comms tray Layout</B></A>.
+<LI><A HREF="ande/ANDEpcb.gif"><B>Interface Board Printed Circuit Design</B></A>.
+<LI><A HREF="ande/ANDEibrdsilk.bmp"><B>Interface Board Parts Locations</B></A>.
+<LI><A HREF="ande/ANDE555.gif"><B> Sleep/wake timer</B></A>...
+    See the background <A HREF="ande/Ande-1.jpg"> TNC-ON Transients</A>,
+    <A HREF="ande/Ande-2.jpg"> OFF-Transients</A>,
+    and <A HREF="ande/Ande-3.jpg"> DCD Detection</A> waveforms.
+<LI><A HREF="ande/ANDEspeak.gif"><B>Text-to-Speech Schematic</B></A>....
+    with the supporting<A HREF="ande/ANDEspeech.txt"><B>Text description</B></A> 
+    and a <A HREF="http://www.digac.com/oemtts.htm"> link </B></A> to the MFR's documentation.
+<P>
+<B>TELEMETRY SYSTEM:</B>
+<LI><A HREF="ande/ANDEtlmMODS.gif"><B>TNC Mods for Telemetry</B></A>
+    and a <A HREF="ande/tncmods.jpg">Photo of TNC mods </A> to bring TLM to DB-25 connector
+
+<LI><A HREF="ande/ANDEsensors.gif"><B>Sensors</B></A>.
+
+<LI><A HREF="ande/ANDEeqns.txt"><B>Telemetry Equations</B></A>.
+<LI><A HREF="ande/ANDEtlm2.GIF"><B>Telemetry Schematic</B></A>, <A HREF="ande/ANDEtlm.gif"> Old version</A>.
+
+<LI><A HREF="ande/ANDEeqns.gif"><B>Telemetry Conditioning Circuits</B></A>.
+<LI><A HREF="craft/RAFTthermisterCurve.gif"><B>Thermister Curve</B></A>
+
+
+<P>
+<B>ANTENNA SYSTEM:</B>
+<LI><A HREF="ande/ANDEantbrd2c.GIF"><B>Antenna cabling</B></A>   (New 5 Aug 2005)  
+<LI><A HREF="ande/ANDE-TRsw.GIF"><B>T/R Switching Circuit</B></A>     
+<LI><A HREF="ande/ANDEantbrd.gif"><B>Preliminary Antenna Matching Circuit</B></A>.
+<LI><A HREF="ande/ANDEantPCB.jpg"> <B> Prelimiinary Antenna testing connections</B></A>.
+<LI><A HREF="ande/gap-swr.jpg">Preliminary SWR resonance achieved at 145 MHz.</A> on orignal Peterson Model.
+
+
+<P>
+<LI><A HREF="ande/Problems.txt"><B>Debugging problems</B></A>     
+<LI><A HREF="ande/ANDEfirmware.txt"> <B>TNC ROM defaults</B></A>.
+
+<P><B><U>Background notes and supporting justification used in the design:</B></U>
+    
+<LI><A HREF="ande/KPC3TNC.jpg">Terminal Node Controller (photo)</A>
+<LI><A HREF="ande/VHFXMTR.jpg">VHF 3 Watt Transmitter (photo)</A>
+<LI><A HREF="ande/VHFRCVR.jpg">VHF receiver (photo)</A> (pots are removed for flight model).
+<LI><A HREF="ande/freqs.txt">ANDE Frequency Selection (2m downlink)</A> and the actual
+    <A HREF="ande/ANDE-IARU.doc">IARU Frequency Request</A>
+<LI><A HREF="ande/ANDEcontract.txt">ANDE User Expectations</A> 
+<LI><A HREF="ande/ANDElinks.txt">Link Budget</A>
+<LI><A HREF="ande/ANDE-i-2o.pcb"><B>Click here to download EXPRESSPCB.pcb file</B></A>.  
+    Use the free ExpressPCB software to view it.
+
+<LI><A HREF="ande/ANDEchnls.gif"><B>Telemetry Multiplexer </B></A>,
+    <A HREF="ande/runtime.jpg"><B> RunTime Counter</B></A>, and
+    <A HREF="ande/IntBRDmods.txt"><B> Interface Board changes required </B></A>.
+<LI><A HREF="ande/ande-tlm.txt">Telemetry format and equations </A>.
+    
+
+<P>
+<B> Other Documents and drawings:</B>
+<LI><A HREF="ande/ANDElift2.jpg"><B>Two man lift</B></A> system.
+<LI><A HREF="ande/ANDEgse.txt"><B> GSE</B> Test Equipment and Test Plan</A>.
+
+<P>
+Here are several additional PHOTOS, DRAWINGS and Documents reorganized by topic:
+<LI><A HREF="ande/satCART.jpg">The Prototype</A> 
+<LI><A HREF="ande/guts.jpg">Preliminary Internal Structure Sketch</A> 
+<P>
+<P><FONT SIZE=+1>You are visitor: 
+<IMG SRC=http://www.aprs.org/cgi-bin/Bruninga/ande.cgi> since 1 October 2002.
+<P>
+Send comments, suggestions, feedback to bruninga@usna.edu
+<P>
+<B>Obsolete ideas:</B>
+<LI><A HREF="ande/strshn5.txt"> The original COMM plan</A>
+<LI><A HREF="ande/satpln.txt">Original Comms proposal</A> 
+<LI><A HREF="ande/ande-cw.jpg">Suggested Morse Code sequence for Lasers.</A>
+<LI>Original <A HREF="ande/ande-wire-bat.jpg"> A/B Battery/Shell Harness</A>
+     and<A HREF="ande/ande-Xcnct.jpg"> A/B Cross Connect harness</A>.
+<LI><A HREF="ande/andesep.jpg"><B> Temprorary Sketch of possible sep system</B></A>
+<LI>Look at this idea for mounting the Laser Driver <A HREF="ande/ANDEshellaser.jpg"><B> on the shell</B></A>.
+<LI><A HREF="ande/ANDE-sep.jpg"><B>Sep Switch locations</B></A>
+<LI>Space Test Program <A HREF="ande/ande-stp.txt"> Payload Requirements Document</A>
+<LI>A commercial <A HREF="http://www.ntt-at.com/products_e/spherical/#spec"> 
+wideband spherical antenna design</A>.  Probably not applicable to our needs.
+<LI><A HREF="http://www.aprs.org/photos/drawing.gif">Drawing template</A>
+
+ </FONT>.<BR>
+<HR SIZE=5 WIDTH="100%">
+
+<CENTER><TABLE BORDER=2 CELLPADDING=2 >
+<TR>
+<TD>
+<CENTER><P><FONT SIZE=+1><A HREF="satstation.html">USNA
+Satellite Ground Station</A></FONT></P></CENTER>
+</TD>
+
+<TD>
+<CENTER><P><FONT SIZE=+1><A HREF="http://www.aprs.org/w3ado.html">Midshipmen Amateur Radio
+Club</A></FONT></P></CENTER>
+</TD>
+</TR>
+</TABLE></CENTER>
+</UL>
+
+</BODY>
+</HTML>

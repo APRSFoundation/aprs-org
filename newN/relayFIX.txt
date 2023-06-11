@@ -1,0 +1,57 @@
+The FIX to the RELAY-DUPLICATION Problem                      2 April 2005
+--------------------------------------------------------------------------
+Revised 20 March 2006.
+
+The original APRS path method of RELAY is obsolete in the USA and its 
+legacy causes 2 to 5 times as many duplicated packets as required for 
+those stations that use it in areas where KPC-3 TNC's are predominantly
+used.  Until he New-N Paradigm, there had been no workable subsitute that 
+would eliminate the dupes and still work seamlessly with WIDEn-N and still 
+use existing hardware.  But on the suggestion of WA8LMF and refined by 
+discussion on the SIG, we found the solution in April, 2005.
+Here is the overall APRS USER recommendation for most situations:
+
+WIDE1-1    One HOP works everywhere and via HOME stations
+WIDE2-2    General mobile recommendation and metro areas
+WIDE3-3    Rural areas with no mountains for hundreds of miles
+
+But for mobiles that live in an area where FILL-IN digis are common,
+(these used to be called RELAY digis in the USA) then there are two new 
+paths that will work the way the old RELAY,WIDE2-2 paths used to work:
+
+RELAY,WIDE2-2       The OBSOLETE way which causes dupes and 3 hops
+WIDE1-1,WIDE2-1     New TWO hop path which is safe to use everywhere
+WIDE1-1,WIDE2-2     New 3 hop path that may be used in remote areas
+
+This solution eliminates the really bad DUPE problem caused by the old
+RELAY,WIDE... paths.  All it does is substitute the exact "WIDE1-1"
+path for "RELAY".   This is not needed in Europe where most digis
+eliminate dupes between RELAY's and WIDEN-N's.  Here is how it works:
+
+Both DIGIS and the fill-in home digis will respond to WIDE1-1, but only
+for one hop.  This is just like RELAY used to be.  But the real advantage
+is that once it is digipeated by any digi, even a home station, that same
+digi will never digipeat it again, because it always looks like a WIDEn-N
+packet and the WIDEn-N system has the perfect DUPE-ELIMINATION algorithm.
+
+WARNING:  However, like anything, the setting can be abused.  Just like
+RELAY, users should never use WIDE1-1 anywhere except the first hop in a path.  
+Just like RELAY was never used beyond the first hop, because it keys up all
+of the fill-in-digis at once.
+
+Now that this solution solves the RELAY-DUPE problem in the USA but still 
+allows us to to continue with the ability to have fill-in digis that still 
+will help the mobiles in  fringe areas, we can proceed full speed with 
+implementing the New n-N Paradigm.  That is:
+
+SUMMARY:
+
+Everything is now WIDEn-N with small values of N (typically 2 in most areas).
+RELAY, WIDE, TRACE, TRACEn-N and SS are all obsolete in the USA, though 
+RELAY may still be used in Europe or other continents without the RELAY
+problem.  For occassional state-wide nets, the alternate of SSn-N is also 
+supported in most states.
+
+Done!
+
+de WB4APR, Bob

@@ -1,0 +1,47 @@
+***************************************************************************
+*                ATGP 2018 Report for CLINGMAN's DOME                    75
+***************************************************************************
+
+Hello All ATGP operators,
+
+This was my 3rd year to participate and my 2nd year assisting / running 
+CLNGMN-2. Arrived on the Dome around 8:45am with David Hulsey, KK4DQO, to 
+a sunny but VERY windy morning. The heavy storms had roll through around 
+5am with much thunder and lightening as we were camped in my camper at 
+Smokemont camp ground.   Winds were easily sustained at 20mph gusting 
+upwards to 50mph, strong enough to roll my Tahoe backward while in park.  
+Antenna setup of my N9TAX dual band JPole on the 20' telescopic fiberglass 
+Crappie pole. I also had a ARROW Yagi pointed South for talking "long 
+distance" on 2 meters.
+
+My TM-D710G was still configured from last years run so a run though of the 
+settings to confirm all was ok then tested the voice links. Discovered I 
+had either a bad coax jumper or a bad UHF passthrough in my go box. 
+Connected coax directly to D710G and all was good. We were up and running 
+fully operational around 10:30am or so. Very soon I was seeing seeing 
+SPRNGR-1 and ROAN-3. Voice  on 445.925 was good to Springer but Roan had 
+some issues and was sending me messages to let me know that he was copying 
+my traffic. Mark, N4YH, over near Chattanooga was monitoring with his iGate 
+and we spoke several times as he was seeing the stations beginning to report. 
+He was very helpful.
+
+Overall I saw stations 1-10 . No others made it my way as you can see in 
+the list on my radio.
+
+Picture can be seen here
+https://www.facebook.com/EtowahValleyAmateurRadioClub/posts/1756376144483725 
+
+
+I do wish we could organizer an event like this in our regions and do 
+this more than once a year to hep us improve our knowledge of our gear.
+
+I missed Larry Ford, K4AEC, and hope he will rejoin me on the Dome next 
+year.
+
+Automobile/pedestrian traffic at the Dome is like your largest Christmas 
+lights tour, Hi Hi! We had many people asking if we were tracking bears 
+or the weather!
+
+Looking forward to next year!
+
+Greg de-KK4YLX

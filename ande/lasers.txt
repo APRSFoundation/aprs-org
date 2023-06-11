@@ -1,0 +1,41 @@
+ANDE MAA LASER GENERAL DESCRIPTION:                        10 Dec, 2006
+-----------------------------------------------------------------------
+                                                   Bob Bruninga, WB4APR
+
+The purpose of the lasers on ANDE is to provide an optical cue to the
+Maui Laser Ranging Station, an idea on the spin rate of the spacecraft.
+They are powerful 400 mw lasers at 810 nm but are no more visible to the
+eye than a simple red LED since the Eye cannot see above about 700 nm.
+But CCD cameras can.  Since there is always amateur interest in trying, 
+here is all the info we have on the lasers.  We have an avid amateur 
+astronomer who will help communicate bout this project.  He is  David 
+B. Toth [ve3gyq@amsat.org].
+
+Here is the info on the 6 ANDE MAA lasers for general interest:
+
+Power is:    400 mw optical power
+Wavelength:  810 nanometers (near infrared)
+
+Each laser is pointed in one of the 6 orthogonal directions and simply
+has a truncated fiber optic cable at the surface of the spacecraft.
+THis truncated fiber will disperse the light over a cone of at least
+45 degrees.
+
+Each laser is pulsed differently so you can tell the difference:
+
+Side A: 1.75Hz, 2.75Hz, 3.75Hz
+Side B: 1.50Hz, 2.25Hz, 4.25Hz
+
+The "on" time for each laser is 100msec/ pulse.
+
+For 400mw optical output, each laser needs 2V @ 720ma = 1.44 watts.
+The laser driver is 90% efficient. Thus, total power for each laser
+is 1.60 watts.
+
+The DC/DC converter module is 76% efficient. Thus, the total 12 volt 
+input power needed per board = 4.95/0.76 = 6.513 watts.
+
+
+Total average current is about 300ma.
+
+Bob

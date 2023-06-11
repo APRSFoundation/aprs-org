@@ -1,0 +1,123 @@
+PCsat DESIGN DETAILS:
+ 
+STATIONS:  This table shows the uplink power and receive antenna gains
+for all expected stations in the PCsat system.  Standby receive 
+gain is for the user who is not aware of, nor optimized for satellite
+reception.  For example, an HT in a pocket, or mobile parked under trees.
+ 
+            ERP  ERP Rcv Rcv Rcv  
+            UHF  VHF UHF VHF STBY 
+USERS       (W)  (W) dBi dBi dBi  Applications
+  --------- --- ---- --- --- ---  ------------------------------
+  HANDHELDS   3    5   3   3  -6  Sailboats, Hikers, Wilderness
+  MOBILES    70  100   5   5  -6  Boats, Remote Travelers
+  HOME STNS 700 1000  13  13      Not intended for PCsat
+ 
+NETWORK
+  IGATE RCV            7   5      Omni Internet receive site
+  MSG NODE   70  100              Internet to user UPLINK site   
+  COMMAND   700 1000  13  13      USNA
+
+ 
+MISSION GOAL:  Handheld and Mobile digital communications with Whips.
+ 
+ 1) Handheld/Mobile message uplink to Internet (emergency and routine)
+ 2) Handheld/Mobile message downlink delivery from Internet
+ 3) Handheld/Mobile to Handheld/Mobile real-time digital comms
+ 4) Nationwide Bulletin delivery to all users
+ 5) Handheld/Mobile GPS position tracking to internet
+ 6) GPS tracking of buoys, telemetry devices, wildlife, spies
+ 7) Other UI digipeating applications (TBD)
+ 8) Message Store-n-forward (limited special applications only)
+ 
+
+BOUNDARY CONDITIONS:
+ 
+ 1) Optimum ALOHA CSMA channel effeciency is about 20% due to collisions
+ 2) VHF links have a 9 dB advantage over UHF links (omni to omni)
+ 3) 1200 baud AFSK has a 7 dB advantage (measured) over 9600 baud FSK
+ 4) T/R delays render 9600 only twice as fast as 1200 for short bursts
+ 5) UHF uplinks require wide bandwith to avoid doppler (- 4 dB)
+ 6) UHF downlinks require user tuning throughout pass (not desired)
+ 7) Commercial amateur radio Handheld and Mobile all-in-one digital 
+    transceviers are now readily availaable (Kenwood and Alinco)
+
+ 
+REQUIREMENTS/CONSTRAINTS Design Drivers:  The following constraints were
+used to arrive at the optimum hardware/operational configuration:
+ 
+ 1) MSG delivery to HT in Standby requires best possible downlink 
+    (1200 baud VHF).  Igate uplink is relatively unconstrained.
+ 2) MSG receipt from HT requires best possible uplink (1200 baud VHF).  
+    Downlink to internet is relatively unconstrained.
+ 3) Continent wide Bulletin Delivery requires existing 144.39 (1200 baud)
+ 4) HT/Mobile real-time messaging requires same up/downlink baudrate
+ 5) GPS HT/Mobile tracking is relatively unconstrained.
+ 6) Low power GPS tracking devices requires best uplink (1200 baud VHF)
+    and the uplink must not be used by any other satellite uplink to
+    avoid unintentional interference to other systems.
+ 7) Other UI digipeating applications should be crossband full duplex
+    and should use same up/downlink baud rates
+ 8) Store-n-forward is relatively unconstrained with equal baud rates
+ 9) Spread of applications among multiple receivers to minimize
+    collisions is desired.
+10) Synchronizing of downlink transmissions is desired to maximize
+    the available half-duplex satellite receive time.
+11) Reundancy and Backups are desired.
+12) UHF downlinks are of little value due to poor link budget and doppler
+13) UHF Uplinks without Doppler tuning is possible with a 30 Khz Sat Rcvr
+14) KISS Principle should reign. (Keep it Simple, Stupid)
+ 
+ 
+HARDWARE:  PCsat consists only of two KPC-9612 dual port TNCs that can 
+gate packets between either port.  Since we only have two transmitters on
+VHF for best downlink, we can output both the 1200 and 9600 baud channels
+to the same transmittter, one for each TNC as shown below:
+ 
+                    KPC-9612 #1
+     145.825 ------> 1200 Baud -*-----> 145.825 (ITU Satellite subband)
+                        \ /     |
+                        / \     |
+      UHF-U1 ------> 9600 Baud -*
+ 
+                    KPC-9612 #2
+      VHF-U2 ------> 1200 Baud -*-----> 144.39  (over USA and AUS)
+                        \ /     |               (or more later...)
+                        / \     |
+      UHF-U2 ------> 9600 Baud -*
+
+TRANSMITTER SCHEDULING:
+
+To maximize receive (uplink) time, a cycle timer is used to drive the
+channel-busy inputs of each of the four TNC channels.  By holding off
+both transmitters for N seconds and then allowing them to both transmit
+simultaneously, we minimize the VHF transmit time and thus maximize
+VHF receive time.  We also bundle multiple packets into one burst
+thus, amortizing the TX Delays into only one TXD for further savings..
+UHF receive time is unaffected.
+ 
+Since both the 1200 baud and 9600 baud TNC outputs will use the same
+transmitter, we must also use these external channel-busy inputs to
+prevent the 9600 baud channel from trying to transmit at the same time
+as the 1200 baud channel.  This can be done with a two step timing 
+circuit:
+                 
+HOLDOFF to 1200 BAUD TNC Channels                 
+    ...----------------*    *------------------------*    *------- . . .
+                       |    |                        |    |
+                       *----*   <- xmit time         *----*
+                 
+HOLDOFF to 9600 BAUD TNC CHANNELS                 
+    ...---------------------*    *------------------------*    *-- . . .
+                            |    |                        |    |
+                            *----*   <- xmit time         *----*
+When each of these signals goes low to allow the transmitter to key,
+if there are packets pending, they will be transmitted.  If there
+are none pending, then no transmission occurs.  
+
+
+Bob Bruninga, WB4APR
+
+
+
+

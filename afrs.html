@@ -1,0 +1,209 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+   <TITLE>AFRS</TITLE>
+   <META NAME="Author" CONTENT="Bob Bruninga">
+   <META NAME="Description" CONTENT="APRS Homepage">
+   <META NAME="Keywords" CONTENT="IRLP, ECHOlink, Winlink, APRS, Frequency, Bruninga,radio, position, w3ado, wb4apr, GPS, APRS, Satellites, USNA">
+   <META NAME="Classification" CONTENT="Science">
+</HEAD>
+
+<BODY TEXT="#001F6F" BGCOLOR="#CCCCCC" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000"> 
+
+<H1 ALIGN=CENTER><B>AFRS </B></H1>
+
+<H2 ALIGN=CENTER><IMG SRC="logos/satellite.gif" HSPACE=30 HEIGHT=32 WIDTH=32 ALIGN=TEXTTOP>
+<B>Automatic Frequency Reporting System</B><IMG SRC="logos/satellite.gif" HSPACE=30 HEIGHT=32 WIDTH=32 ALIGN=TEXTTOP></H3>
+<CENTER>
+
+<font SIZE="+2" COLOR="#0000AF"><img SRC="logos/tnc.gif" X-CLARIS-USEIMAGEWIDTH
+    X-CLARIS-USEIMAGEHEIGHT ALIGN="middle" width="100" height="30"></font>
+    <font color="#0000AF" size="5">
+
+
+</CENTER>
+<!-- begin comments and the next line ends them
+//-->
+<FONT COLOR="#000000"><FONT SIZE=3>
+<P>
+The purpose of AFRS is to have a simple national system where anyone, at any time
+can easily locate another station and more importantly, be able to find out what
+frequency he is monitoring.  The incentive for adding FREQUENCY to APRS came
+from the ARRL's request to the Amateur Radio Community after the August 2005
+Hurricane 
+Katrina disaster in the Gulf Coast.  Ham radio needed a system for locating hams 
+and being able to contact them on the air.
+<P>
+With one out of every 500 people in the USA being a HAM operator we should be
+able to communicate easliy and efficiently and quickly.  Yet, the biggest advantage
+of HAM radio in time of need, its thousands of available frequencies, is also its
+biggest stumbling block for rapid contact, making it virtually impossible to find 
+the channel on which to contact another station.
+<P>
+
+<IMG SRC="info/InfoList1+1x.JPG" height=200 width=400> 
+<IMG SRC="info/AB9FXd710list1.JPG"  height=200 width=400>
+<P>
+
+In 2005, there were a number of recent initiatives that had made strides towards that
+objective of identifying nearby Amateur Radio Resources.  In the images above, Frequency was
+added to APRS not only to identify nearby recommended frequencies for travelers but also
+to let each mobile show his present voice operating frequency as shown above. .
+ Here are several initiatives:
+<P>
+<LI> APRS adds <A HREF="localinfo.html"><B>Local Voice Repeater Info</B></A> to all digipeater beacons
+<LI> <A HREF="aprs.html"><B>APRS</B></A> itself displays the location of all operators
+so they can all find each other and communicate by text-messaging
+<LI>APRS mobiles also use the 
+<A HREF="VoiceAlert3.html"><B> Voice Alert System </B></A>
+for contact any time on the national APRS channel using voice and PL-100.
+<LI> IRLP/Echolink nodes may transmit their Position and Frequency on APRS.
+<A HREF="avrs.html"><B>See AVRS</B></A> (Automatic Voice Relay System)
+<LI> Winlink nodes have the provision to transmit their Position and Frequency on APRS.
+<LI> All APRS users have the provision to transmit their frequency and position on APRS
+<LI> All digipeaters have the provision for transmitting local club Frequency and net information
+<LI><A HREF="aprs-jota.txt"><B>National Generic Callsigns</B></A> 
+for supporting national events such as 
+<A HREF="http://www.findu.com/cgi-bin/msg.cgi?call=scouts"><B>SCOUTS</B></A> and 
+<A HREF="http://www.findu.com/cgi-bin/msg.cgi?call=jota"><B>JOTA</B></A>.
+<LI>Using <A HREF="mm/tampaMM.gif"><B>MileMarks</B></A> for voice reporting into APRS.   
+     <A HREF="mm/milemark.txt"><B>Description</B></A>, and 
+     <A HREF="mm/MMcode.txt"><B>Basic code</B></A>, and 
+     <A HREF="mm/mm-data.dat.txt"><B>mm-data.dat</B></A> file.
+<LI> By 2006 APRS was including <A HREF="localinfo.html"><B>local frequency</B></A> info on local maps
+<LI> By 2007, Kenwood implemented <A HREF=""><B>operating frequency</B></A> into the 
+     position format of the TM-D710 radio. 
+<LI> In 2008, the provision of frequency reporting for ANY operator with a DTMF radio
+was added in the <A hREF="aprstt.html"><B>APRStt Project</B></A>.
+
+<P>
+The purpose of this web page was to formalize these initiatives and to encourage
+the use of a standard Frequency reporting format, so that the operating 
+frequencies of all these disparate systems would all appear easily and consistently
+on the national APRS frequency to serve as a resource for all of Amateur Radio.
+<P>
+<A HREF="txt/AFRSspec.txt"><B> Please see the AFRS plan</B></A>
+
+<P>
+<B>AUTOMATIC RADIO INTERFACE:</B>  The ultimate objective of this initiative
+was to have each radio report its current operating frequency automatcially to
+the APRS system.  But we do not have to wait for new radios!  ANY radio with a
+serial interface for radio control can already report its frequency.  All we
+need is new firmware for any of the many APRS Tiny-Trackers or Pocket Trackers
+to read out this frequency and automatically include it in the station's position
+report.  For example, the fully-self contained POCKET TRACKER made by Byonics and Microtrak shown below fits
+inside an Altoids container and could simply be plugged into the serial port
+of a radio and mounted at roof level to put that radio's frequency information
+onto APRS:
+<P>
+<IMG SRC="trackers/pockettracker4.gif"> EXPANDED INTERNAL VIEW <IMG SRC="trackers/pockettracker8.jpe">
+<P>
+The algorithm would probably be that whenever the dial is not moved for more than
+3 minutes a new Freqeuncy report will go out.  Then it will be repeated LOCALLY once
+every 10 minutes after that.  And once every 30 minutes via 2 hops.
+<P>
+<HR SIZE=5 WIDTH="100%"></P>
+With all these initiatives, <B>APRS</B> then becomes the single channel information
+resource for tactical real-time identification and rapidly exchanging
+digital data of immediate value to local operations such as frequency.  
+The integration of APRS and
+other systems into the Internet made this a global resource as well.  The
+map below shows the typical stations on the air within 100 miles of Baltimore in the
+mid 1990's.
+<P>
+<IMG SRC="maps/aprseast.jpg">
+<P>
+Now, in 2005, there are over 100 stations within just the surounding 30 miles
+between Baltimore and Washington DC.  The below image is a LIVE snapshot, right now, 
+today, this minute of who is on the air in the central Maryland area on APRS:
+<P>
+<IMG SRC="http://www.findu.com/cgi-bin/dosmap2.cgi?call=*&amp;last=1&amp;map=http://www.ew.usna.edu/~bruninga/mdstate.mp&amp;scale=1.51632&amp;offsetx=1162&amp;nocall=&amp;offsety=590&amp;width=640&amp;height=280">
+
+<P>
+All of these stations should have FREQUENCY information in their position
+reports so that other operators can quickly and efficiently contact them
+if needed.
+
+Here are some other LIVE maps from around the country and the world showing the global, 
+yet LIVE aspect of APRS:
+
+-<P>USA MAP:...........
+<A HREF="http://www.findu.com/cgi-bin/dmap.cgi?&amp;offsetx=20&amp;offsety=-90&amp;scale=1.3&amp;width=640&amp;height=&amp;height%20%20%20%20%20%20%20%20&amp;map=usa.mp&amp;last=24&amp;nocall=1">(Whole Country, but without callsigns)</A>
+<P>USA WEST:........ 
+<A HREF="http://www.findu.com/cgi-bin/dmap.cgi?&amp;offsetx=50&amp;offsety=100&amp;scale=0.4&amp;width=640&amp;height=&amp;height%20%20%20%20%20%20%20%20&amp;map=usa.mp&amp;last=24">Southwest</A>, 
+<A HREF="http://www.findu.com/cgi-bin/dmap.cgi?&amp;offsetx=50&amp;offsety=-50&amp;scale=0.4&amp;width=640&amp;height=&amp;height%20%20%20%20%20%20%20%20&amp;map=usa.mp&amp;last=24">Northwest</A>, 
+<A HREF="http://www.findu.com/cgi-bin/dmap.cgi?&amp;offsetx=-50&amp;offsety=220&amp;scale=1.0&amp;width=640&amp;height=&amp;height%20%20%20%20%20%20%20%20&amp;map=usawest.mp&amp;last=24">4-Corners</A>, 
+<A HREF="http://www.findu.com/cgi-bin/dmap.cgi?&amp;offsetx=-50&amp;offsety=120&amp;scale=1.0&amp;width=640&amp;height=&amp;height%20%20%20%20%20%20%20%20&amp;map=ca.mp&amp;last=24">Central CA</A>, 
+<A HREF="http://www.findu.com/cgi-bin/dmap.cgi?&amp;offsetx=550&amp;offsety=520&amp;scale=0.80&amp;width=640&amp;height=&amp;height%20%20%20%20%20%20%20%20&amp;map=ca.mp&amp;last=24">Southern CA</A>,
+<A HREF="http://www.findu.com/cgi-bin/dmap.cgi?&amp;offsetx=300&amp;offsety=140&amp;scale=2.5&amp;width=640&amp;height=&amp;height%20%20%20%20%20%20%20%20&amp;map=http://www.ew.usna.edu/~bruninga/hawaii.mp&amp;last=24">Hawaii</A>
+
+
+<BR>USA CENTRAL:
+<A HREF="http://www.findu.com/cgi-bin/dmap.cgi?&amp;offsetx=250&amp;offsety=-10&amp;scale=0.4&amp;width=640&amp;height=&amp;height%20%20%20%20%20%20%20%20%20&amp;map=usa.mp&amp;last=24">North Central</A>, 
+<A HREF="http://www.findu.com/cgi-bin/dmap.cgi?&amp;offsetx=450&amp;offsety=-10&amp;scale=1.5&amp;width=640&amp;height=&amp;height%20%20%20%20%20%20%20%20%20&amp;map=iailinmo.mp&amp;last=24">Midwest</A>, 
+<A HREF="http://www.findu.com/cgi-bin/dmap.cgi?&amp;offsetx=570&amp;offsety=420&amp;scale=1.0&amp;width=640&amp;height=&amp;height%20%20%20%20%20%20%20%20%20&amp;map=usacen.mp&amp;last=24">South Centeral</A>
+
+<BR>USA EAST:........
+<A HREF="http://www.findu.com/cgi-bin/dmap.cgi?&amp;offsetx=150&amp;offsety=60&amp;scale=1.50&amp;width=640&amp;height=&amp;height%20%20%20%20%20%20%20%20%20&amp;map=neweng.mp&amp;last=24">New England</A>, 
+<A HREF="http://www.findu.com/cgi-bin/dmap.cgi?&amp;offsetx=450&amp;offsety=-50&amp;scale=1.0&amp;width=640&amp;height=&amp;height%20%20%20%20%20%20%20%20%20&amp;map=usaeast.mp&amp;last=24">Northeast</A>, 
+<A HREF="http://www.findu.com/cgi-bin/dmap.cgi?&amp;offsetx=550&amp;offsety=280&amp;scale=0.8&amp;width=640&amp;height=&amp;height%20%20%20%20%20%20%20%20%20&amp;map=usaeast.mp&amp;last=24">Mid Atlantic</A>,
+<A HREF="http://www.findu.com/cgi-bin/dmap.cgi?&amp;offsetx=720&amp;offsety=333&amp;scale=.20&amp;width=640&amp;height=&amp;height%20%20%20%20%20%20%20%20%20&amp;map=usaeast.mp&amp;last=24">Wash-DC</A>,
+<A HREF="http://www.findu.com/cgi-bin/dmap.cgi?&amp;offsetx=550&amp;offsety=120&amp;scale=1.0&amp;width=640&amp;height=&amp;height%20%20%20%20%20%20%20%20%20&amp;map=usaseast.mp&amp;last=24">Southeast</A>,
+<A HREF="http://www.findu.com/cgi-bin/dmap.cgi?&amp;offsetx=570&amp;offsety=420&amp;scale=0.85&amp;width=640&amp;height=&amp;height%20%20%20%20%20%20%20%20%20&amp;map=usaseast.mp&amp;last=24">Florida</A>
+
+<BR>WORLD:............
+<A HREF="http://www.findu.com/cgi-bin/dmap.cgi?&amp;offsetx=0&amp;offsety=120&amp;scale=1.50&amp;width=640&amp;height=&amp;height%20%20%20%20%20%20%20%20%20&amp;map=europe.mp&amp;last=24">Europe</A>,
+<A HREF="http://www.findu.com/cgi-bin/dmap.cgi?&amp;offsetx=261&amp;offsety=200&amp;scale=0.7&amp;width=640&amp;height=&amp;height%20%20%20%20%20%20%20%20%20&amp;map=world.mp&amp;last=24">S.America and Africa</A>,
+<A HREF="http://www.findu.com/cgi-bin/dmap.cgi?&amp;offsetx=870&amp;offsety=285&amp;scale=.36&amp;width=640&amp;height=&amp;height%20%20%20%20%20%20%20%20%20&amp;map=world.mp&amp;last=24">Australia/NewZealand</A>,
+<A HREF="http://www.findu.com/cgi-bin/dmap.cgi?&amp;offsetx=920&amp;offsety=133&amp;scale=.1&amp;width=640&amp;height=&amp;height%20%20%20%20%20%20%20%20%20&amp;map=world.mp&amp;last=24">Japan</A>
+<P> 
+<font SIZE="+1" COLOR="#FF0000">
+
+<B> Wouldn't it be nice if all those stations contained their CURRENT FREQUENCY too?</B>
+</font><font color="#0000AF" size="5">
+<P>
+</FONT><FONT SIZE=2>
+<P><B><U> OVERALL APRS CONCEPT LINKS FOR NEW USERS:</U></B>
+<LI><B> <A HREF="APRS-docs/APRS.TXT"><B> APRS Introduction </B></A>.
+<LI><B> <A HREF="sitemap.html"> Overall WB4APR SITE-MAP</A></B> and
+    <B> <A HREF="http://www.aprs.org/APRS-docs/"> Original TEXT files</A></B>.  Select topic by filename.
+<LI><B> IRLP and I-LINK VOICE for APRS!  See <A HREF="avrs.html"> AVRS</A>
+<LI><B> <A HREF="astars.html"><B> APRS Satellite concepts</B></A> and Naval Academy
+    <B> <A HREF="http://www.ew.usna.edu/~bruninga/satstation.html"><B> APRS Satellite Projects </B></A>
+<LI><A HREF="http://www.aprs.org/radio.html">VHF RADIO</A> <B>Live APRS </B>activity<B> </B>on
+local 144.39 VHF frequency</LI>
+
+<!--COMMENTED OUT BUT IT WORKS
+<LI><A HREF="http://www.aprs.net/dayton.html">DAYTON-98 HAMVENTION</A> : <B>Live</B> display of activity around Dayton!</LI>
+<LI><A HREF="jamb.html">BSA JAMBOREE</A> : Past <B>Live</B>
+event at Ft. AP Hill.</LI>
+//-->
+
+<P>
+This web page is brand new and this WEB page is in work.
+But we hope you agree that simply including operating frequency
+information into APRS position reports will be a valuable asset
+in times of emergency.
+<P>
+<HR SIZE=5 WIDTH="100%">
+
+<TABLE BORDER=2 CELLSPACING=5 CELLPADDING=3 >
+<TR>
+<TD><BR>
+<A HREF="aprs.html">Back To APRS</A></TD>
+</TR>
+</TABLE>
+
+<P><FONT SIZE=+1>You are visitor number: <IMG SRC="http://www.aprs.org/cgi-bin/Bruninga/afrs.cgi">
+Since 7 Nov 2005. </FONT>.<BR>
+<HR SIZE=5 WIDTH="100%">
+
+<P><FONT SIZE=-2>The Naval Academy is a registered user of APRS
+and WinAPRS. The purpose of this web page is to show several applications
+currently in use at this site and should not be considered as an advertisement
+or an endorsement of any commercial product.</FONT>
+
+</BODY>
+</HTML>

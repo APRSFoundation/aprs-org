@@ -1,0 +1,73 @@
+MOUNT WASHINGTON, KB1POR 2011 REPORT                      26 July 2011
+----------------------------------------------------------------------      
+                                           as reported by Lynn, KJ4ERJ
+
+Ok, so what's the story with KB1POR-9, the "bonus" AT GP station on Mt 
+Washington?
+
+When I got my first call from John, WA1KLI on Sugarloaf, he reported 
+being in place and ready, but not hearing anyone yet.  I confirmed 
+that the south end was coming online, but I hadn't yet heard anything 
+from the north end.  So, I decided to bring up a few MultiTrack 
+windows (an APRSISCE/32 feature) on each of the northern stations to 
+see if anything was moving on the national APRS frequency.
+
+When I opened up GP-KATHDN, there was nothing moving anywhere in the 
+vicinity.  Not a surprise there.
+
+However, when I opened up GP-MTWASH, there was an APRS station, 
+KB1POR-9, that had just left the top of the mountain.  Closer 
+inspection showed that it was an FTM-350, and so was message capable.  
+Not a digipeater, but at least a station.  So, I sent him an APRS 
+message asking him to call my phone number.  About 2 minutes later, 
+the phone rang.
+
+Geoff said that my phone number came up on his radio.  I asked if he 
+had heard of the Golden Packet event and he had.  I told him that 
+our Mt Washington station was not yet on site, but the station to 
+the north was available and would he mind going back up to the top 
+to attempt a contact.  Amazing to me, he had both the time and the 
+inclination to do so!  I filled him in on the HOP7-7 path and 
+144.340 frequency and waited.
+
+It was only 6 minutes later that I received contact confirmation 
+between John on Sugarloaf and Jeff on Mt Washington.  Aren't 
+Amateur Radio Operators amazing!  Thank you Jeff for being willing 
+and able!
+
+And it was only 2 minutes later that John called from Sugarloaf to 
+report reception of the real MTWASH-13 station.  Geoff said that when 
+he left the parking lot there was someone there setting up an 
+antenna!
+
+So, we ended up with a bonus contact on the links on the north end 
+of the trail.  And that, as Paul Harvey was wont to say, is The Rest 
+of the Story (http://en.wikipedia.org/wiki/The_Rest_of_the_Story for 
+those youngsters out there).
+
+Lynn (D) - KJ4ERJ - Author of APRSISCE for Windows Mobile and Win32
+--------------------------------------------------------------------
+And here is Geoff's REPORT:
+
+Great job Tim!  The first few transmissions you made I could not hear 
+you direct on Mt. Washington, however you must have moved because as 
+you said I was able to hear you through the noise (S0-S1, but almost 
+100% copy), if I was able to stay at the top when you had your beam 
+I'm sure it would have been even better!  There was no way I could 
+decode an APRS packet from you however with that much noise, that may 
+be why MTWASH-13 couldn't copy you.  332 miles though is a great hall 
+for 5W and a rubber duck!!
+
+As a side note, I had ZERO interference on top of Mt. Washington on 
+both the upper and lower parking lot with my FTM-350, there was an S0 
+noise floor as well so it worked out perfectly.  I received my Kenwood 
+TH-D72 back from repair today, so if we do this again and are in need 
+of a station, I have a digipeater capable radio.
+
+Geoff
+KB1POR
+
+
+
+
+

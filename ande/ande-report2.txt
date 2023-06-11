@@ -1,0 +1,61 @@
+ANDE-MAA /RAFT status as of            2100z on 22 December 2006
+----------------------------------------------------------------
+                                                          WB4APR
+
+RAFT:  Concentrated on RAFT, since all the noise would
+wake up ANDE anyway and the internet would capture any telemetry
+packets.  Got good logon into RAFT and lots of pings.  ALL OK
+there.  She seems like a healthy spacecraft.  Voice spoke to me 
+too.  Donno why it seemed nearly impossible yesterday.
+
+ANDE woke up and we got 8 packets from her, but not one of them
+was the SOLAR one.  Now it is in the dark over Europe and of
+course, as luck would have it, they get a solar one.  But I did
+attempt a LOGON to ANDE towards the end of the pass and it
+responded immediately with a successful logon.  Caught me so
+much by surprise, I lost a few seconds... Then I turned on 10
+sec telemetry, but then had LOS... 
+
+Good news is that the 10 sec rate didn't keep it alive beyond
+its normal go-to-sleep-when-not-in-use circuits.  So when it got
+to Europe 20 minutes later, it was asleep again.  That is a GOOD
+test and lets us know that the power system will go to sleep and
+Last the mission even with hanging commands.
+
+SUMMARY:  It's a great Day.  Both ANDE-MAA and RAFT appear
+normal on good high elevation passes. Logon and command/control
+of both spacecraft are nominal on those passes.  Volts, currents
+and temps are fine.  My guess is that ANDE is outta-tha-can,
+since its signal levels are about what I expected.  But then,
+on-the-other-hand the can could make a nice cavity resonator too
+and give some good signals in some directions...  Oh, ANDE-2
+(side B) also woke up, got 2 of 4 telemetry packets (but again,
+not a solar one and it was over Europe at the time in the dark
+anyway)...
+
+P.S.  On the next pass at the very end got a +X solar sensor
+seeing about 10% of sun illumination, just as it was entering
+eclipse.  But there was one 2 mins earlier with XYZ dark and
+ANDE was in the sun.  Would be a coincidence for XYZ to all
+point to black space and none at earth or sun.  Oh, half of
+earth was in the dark, so this could still happen.  SO still no
+proof about being out of the can.  Also, ANDE continues  to
+cool.  Its down to -10 on the  outside and +5 in the core, and
+this is at the end of the day side pass.
+
+> 21st at 1822z Temp was that of CAPE inside payload bay.
+> 21st at 2202z Temp 25 C
+> 22nd at 1616z Temp 17 C
+> 22nd at 1925z Temp  6 C at end of sun side
+> 22nd at 2234z Temp -9 C in 40% of eclipse
+
+Also, we are getting good telemetry capture via the internet and
+our team of volunteer groundstations, so we can keep an eye on
+it via the WEB.
+
+PLANS:  We do not intend to go after NMARS until they separate 
+enough so that pass times do not overlap.  I need undivided attention
+horizon to horizon to try to work on NMARS.
+
+Bob Bruninga
+USNA Satellite Lab

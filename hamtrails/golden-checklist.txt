@@ -1,0 +1,223 @@
+GOLDEN PACKET     COMM COORDINATION CHECKLIST              7 July 2016
+----------------------------------------------------------------------
+
+Lessons Learned
+
+a) importance of 2nd HT on 144.39 for receiving ANSRVR announcements
+b) Temporarily turn off INTERRUPT display to see your D710 digi, 
+c) New 5m BCON rate at Springer & Katahdin & GDHILL. All others 10m 
+d) 4 AH battery plus a spare seems to be enough for a 3 hour event
+e) Minimize messages and if used, use BLN#XXXX's to avoid ACKS.
+f) Communicate status by updating your status when things change
+
+OVERALL CHECKLIST:
+
+1) CAMERA:  Take camera and a book. Book is in case all works 100%
+
+2) SIGNAL MIRROR:  For signalling other peaks in view as part of the
+Boy Scouts Operation On-Target or any other cooperating target.
+
+3) ARRL PAMPHLETS:  Take Ham radio hand-out pamphlets for onlookers
+
+4) APRS HT:  (required) Use a 2nd APRS radio (HT) to maintain APRS text
+communications with the designagted Shack Potato and all other 
+stations using NORMAL APRS on 144.39.  Use the root callsign of your 
+station without any SSID.  Begin using it as you leave home!  
+Periodically send status updates to ANSRVR with 1st words: "CQ AT ..."
+
+See: http://aprs.org/ansrvr.html  The dual band APRS HT can also be 
+used to monitor your local published Voice repeater. Use EL
+power or long RG58 coax and a beam to the nearest digi to minimize
+self-QRM to your primary operations on 144.34.
+
+5) BATTERY:  You will need about 4 AHrs.  Take two to have a main and 
+a spare.  And give you a half-way indication when the first one is out.
+ 
+6) 144.34 DIGIPEATER: Set up your D7XX APRS digipeater radio BAND-A on 
+144.34 MHz and set the volume so you can hear what is going on on the 
+channel.  This channel is shared with Balloons and ATV, so we want to 
+be aware of any conflicts, and hear how the packets are sounding...  
+
+7) BAND-B on 445.925 MHz CTCSS 100:  Use BAND-B 445.925 simplex for
+voice coordination to adjacent sites.  This avoids QRM to the 2 meter 
+event band!  This is important!  Also a VOICE-RELAY around a failed
+APRS mountain top will still count.
+
+8) SETTINGS:  Set up your D700/D710 radio as a HOPn-N and TEMPn-N 
+digipeater operating in APRS mode.  The D710's can all be set from the
+frotn panel, but a PC is required for the initial setup of the D700 
+prior to the event, but is not required during operations.  This 
+digipeater radio will be used only for the 144.34 DIGI, for 
+APRS DIGI beacons (STATUS text updated as needed) and for voice 
+UHF coordination on 445.925 MHz voice.  See radio  settings:
+
+www.aprs.org/hamtrails/Radios/D72-settings.txt
+www.aprs.org/hamtrails/Radios/D700-settings.txt
+www.aprs.org/hamtrails/Radios/D710-settings.txt
+www.aprs.org/hamtrails/Radios/D710G-settings.txt
+
+*** TURN OFF any AUTO-REPLY MESSAGES in the digipeater radio!
+
+9) DUPLICATES:  The D7XX has a bug that will cause your own station 
+to digipeat its OWN packet a second time.  Fortuneately the others 
+digipeaters will not, because they will see that second one as a dupe.  
+We just live with this quirk (and it does slightly improve success).
+
+10) LOGGING:  If possible, have a SECOND APRS receive-only station 
+running APRS on the event channel with a PC for logging all packets.  
+This station can be left unattended down at the car or at home since
+it can hear all packets from your station's digi. Do not let it 
+beacon on the event channel! even once... too much QRM. 
+
+11) COORDINATION/STATUS:  Use your mobile (enroute) or your APRS HT 
+(note 4 above), to be in communication with everyone at all times 
+on 144.39.  LOGON TO ANSRVR early on EVENT day on your normal 144.39 
+APRS channel even before you leave, so that you will receive all EVENT 
+group messages that day.  Checkin to either the "CQ AT" Eastern group 
+or the "CQ OT" On Target group.  To do this, use your assigned station 
+callsign (without SSID) send a message to ANSRVR and include in the 
+message your stataus:  
+
+MESSAGE TO:   ANSRVR
+MESSAGE BODY: CQ AT  leaving home... etc...
+      -or-    CQ OT  headed up the mountain to... etc
+
+ANSRVR GROUP STATUS:  These messages will be reflected by the 
+ANSRVR engine to all other similar stations who have also sent their 
+message to the same AT or OT group on ANSRVR.  You will remain logged 
+onto ANSRVR for a few hours, so send a new message each time your 
+status changes so that others will see your status and so that you 
+remain logged onto the ANSRVR.  This lets all other participants over 
+the 2000 miles to see the status of all other stations in real time, 
+even before the -event- links are established.
+
+See http://aprs.org/ansrvr.html
+
+12) BEACON RATE:  Set the Springer and Katahdin rates to 5 minutes.
+If these get through, then we know the intermediate ones are still
+there.  The middle GDHILL-8 will also be at 5m since its path is 
+just a single HOP7-7 and will get to both ends!
+
+If either of the end stations are not yet on line, then the next one
+in can set 5 minutes until they show up.
+
+13) DIGIPEATER CHECKOUT:  With the menu 625 INTERRUPT Display set to
+FULL ALWAYS, you cannot see your own TX meter to confirm your digi
+is digipeating.  Tempporarily turn it off to see if you are TXing.
+
+14) IRLP/ECHOLINK:  As an additional exercise of own ham radio 
+skills, it might be nice to try to also use your local Echolink node 
+to connect to the designated ECHOLINK CONFERENCE NODE (if any) for 
+the event.  This way we can all TALK if needed.  This is more of a
+test of capability than essential, since few of us do this regularly.
+(We should practice!)... .
+
+15) CALLSIGNS:  Use ONLY the designated callsigns and SSID's below in
+the DIGIPEATER D700/D710/D72.  The SSID's help us remember the 
+sequence from Georgia to Maine.  Use the ROOT CALL (without SSID) 
+for your secondary station on 144.39 but use the SSID always on 
+144.34 during the event:
+
+APPALACHIAN TRAIL     PCT TRAIL
+-----------------     ---------
+SPRNGR-1              SANDGO-1
+CLNGMN-2              SOCAL-2
+ROAN-3                etc
+COMERS-4              etc
+AOMTN-5
+WHTRCK-6 (HWKBLL-6, or STNYMN-6)
+MDMTNS-7
+GDHILL-8
+CAMLBK-9
+SAMSPT-10
+GRYLCK-11
+NHRELY-12
+MTWASH-13
+SUGRLF-14
+KATHDN-15
+LOKOUT-1  Lookout montain 1 hop beyond Springer
+HTSVLE-1  Huntsville, 2 hops beyond Springer
+STNMTN-1  Atlanta Georgia
+SAWNEE-1  Sawnee Mountain GA
+BTBALD-1  Brass Town Bald
+CTLINK-1  Connecticut Group if they link up
+etc
+
+
+16) STATUS TEXT:  Keep it updated and BRIEF.  first must be your 
+FCC call, then update to inform others what is going on at your 
+station.  Here are some examples:
+
+WB4APR online 11:15
+WB4APR See 3-7 and 9-12 <== showing stations heard
+
+17) MESSAGES:  Use VERY sparingly.  APRS MESSAGES are inefficient 
+since they require ACKS and severly load the channel.  Update your
+STATUS text instead.  If you must send a MESSAGE be sure to send it
+as a BLN#XXXXX (incrementing the # from 0 upwards for each new 
+bulletin.  By using bulletins, everyone can read the mail along the 
+way. The extra bytes XXXXX go along for free, so if you want to 
+indicate a RECEPIENT, use their abbreviation and/or SSID there.  
+Such as BLN2MD-7 would be an outgoing 2nd bulletin line to MARYLAND 
+MOUNTAINS-7, though everyone else can read it along the way. 
+
+REPLY:  If you get an incoming STATUS or BULLETIN addressed to
+you, please respond in your STATUS or a BULLETIN so that the other
+end konws you got it.  This has a much higher probablity of
+success than ACKS.
+
+ANSRVR MESSAGE (ANNOUNCEMENT) SERVER:  Use your 144.39 APRS HT 
+to maintain your status on normal APRS via the ANSRVR using the 
+CQ AT or CQ OT group as noted above.   Once every half hour or 
+so, UPDATE your main-line STATUS and also send out a status 
+update on 144.39 via the ANSRVR to keep everyone informed of your
+status.
+
+EVENT MESSAGES:  IF we get end-to-end main-line beacons successful,
+then we may authorize an end-to-end SHORT message test.  Once those
+are successful, we may authorize other aauxilliary or off-line
+stations or hikers to join with their BEACONS on a 5 minute update.
+
+EMAIL:  If you have smartphone email capabilities you can send
+an occasional update on our at-golden-packet@YAHOOGROUPS.COM every 
+hour or so to keep everyone informed.
+
+MESSAGE OVERFLOW!  Be warned, the D7 and D700 can only hold 10 or 16
+messages/BULLETINS and then it will REJECT ALL FURTHER MESSAGES.  
+You will not be alerted, but your station will then hear no more and 
+you will be jamming the net with REJECT packets.  So copy down notes 
+of any important messages, because once you READ one message, the 
+NOT-READ flag is cleared on ALL messages, so they are all availaible 
+then for pushing out of the buffer.
+
+*** MESSAGE BUG!!!!  There may be some D710 radios that will ACK all
+incoming BULLETINS and messages to ALL.  If so, replace the radio or
+update it with new firmware!
+
+SUMMARY CHECKLIST for any COORDINATION COMMS (subject to change):
+
+0) FRIDAY before you leave, print out this page, and adjacent sites
+1) Begin day with msg to ANSRVR: CQ AT or CQ OT from root station call
+2) Initial coordination on ur PUBLISHED repeater for adjacent nodes
+3) Monitor 445.925 simplex direct when you are in place
+4) As emergency backup VOICE on the AT channel 144.34 might work
+5) Use assigned AT-CALLSIGN-SSID on DIGIPEATER station on 144.34
+6) Use same root CALL on other 144.39 coordination packet station
+7) Maintain your status via occasional ANSRVR message on 144.39 
+8) Do not message stations on 144.34 event channel until OK'ed.
+9) If you do message on .34, send to BLN#XXXXX
+9) Remember all identical root callsigns will capture a message 
+A) but only the SSID-MATCHING station will send back an ACK
+B) Do NOT expect acks!  They are unreliable.  Assume ur msg worked.
+C) Minimize messages on 144.39 due to desensing your main event RX
+G) READ your incoming messages periodically to make sure your buffer
+   does not saturate with unread messages and then send REJECTS
+   (D700 holds 10 (or 16?) but D710 holds 100)
+
+Save settings and callsigns in a PM, so that if power is cycled, 
+you come back up and can continnue operating properly.  Be sure to
+have set AUTO-PM-SAVE-OFF so that any screw-ups during operating
+do not get re-saved into the PM...
+
+Bob, WB4APR
+

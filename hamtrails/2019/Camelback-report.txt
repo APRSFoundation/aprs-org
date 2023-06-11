@@ -1,0 +1,48 @@
+***************************************************************************
+*               ATGP 2019 Report for Camelback by Rory, NJ3U             75
+***************************************************************************
+
+Beautiful day on top of MtPocono state park for the APRS 2019 ATGP event.  
+This years team was Frank W3OKW and NJ3U Rory.
+
+Rory arrived at approx 0900 and proceeded to set up Diamond 2/440 Omni for 
+APRS packets at 40 feet on mil surplus mast sections.  Voice was covered
+with a 2/440 Yagi at 40 on mil masts .  Radios where Kenwood D710 for 
+packet and Yaesu FTM400xdr for voice.  Power was over 32ah of AGM s
+upplemented by rigid solar panels .  Vehicle batteries where available as 
+a benefit of drive up site!
+
+Initial voice coms to SamsPt where excellent as we worked to trouble shoot 
+his config- that effort broke off as his Astron decided to release the 
+magic smoke forcing a hasty retreat into his car for backup position.   
+We found the issue and he was beaconing in short order.   GDHill voice has 
+weak until we Armstrong’d the Yagi around to Bobs heading and that have us 
+59 with voice to GDHill and still had solid coms to SamsPt off the back 
+side of the beam.
+
+We saw packets end to end including MtStJo but never Sugrlf .   Worked with 
+WB4APR Bob to trouble shoot Maryland Mt deaf receiver and started seeing 
+more Southern stations coming up the trail.
+
+Saw first GP from KATHDN-15 @1338 so after followed up with SPRNGR-1 GP.
+
+Switched to 9600 bd and reduced bcon rates as directed by Lynn and GDHill.
+
+Passed 9600 packets solid to our N&S links.
+
+Secured ops at 1500 per GDHill and passed message North to SamsPt via voice 
+to pass North.
+
+Off the CAMLBK-9 approx 1615.
+
+Lessons learned - 1) bring logging PC to capture info - nothing other the 
+D710 and a couple notes - Good thing we have Lynn monitoring the traffic 
+for analysis !   2) Yagi on a mast and high power is the solution for 
+solid voice.  3) QRM is heard on this location but didn’t effect packets 
+or voice coms.
+
+Thnx to the entire ATGP team for another successful and fun exercise !  
+Special thanks to my teammate on CAMLBK-9 Frank W3OKW.
+
+Rory NJ3U
+

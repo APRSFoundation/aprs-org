@@ -1,0 +1,345 @@
+This APRS/PACSAT Experiment was done as a special event in support of the annual
+ARMY/NAVY Game footbal tracking exercise and was conducted while the football
+entourage was enroute from Annapolis to Philly on Friday evening 3 Dec and Saturday
+morning.  The Friday night's passes were just warm ups, with most of the activity on
+Saturday..
+
+*** 1947 EST IO26  WB4APR, with 44 UI packets
+*** 2045 EST AO16  WB4APR, WS4Z with 24 UI packets ALso WE1U,VE3FRH,W4MO,VE3BCG
+                   checked into the PACSAT BBS
+*** 2107 EST LO19  WB4APR just idling at 11 packets
+*** 2124 EST IO26  WB4APR with 20
+*** 2222 EST AO16  WB4APR,N5ZNL,WS4Z with 54 and N5ZNL,VE3FRH,N0ALJ on BBS
+*** 2245 EST LO19  WB4APR,N5ZNL exchanged lots of packets (80)
+*** 2307 EST IO26  WB4APR, 26 packets
+*** 0005 EST AO16  WB4APR,28, with WA5QGD,We1U,N0ALJ logged on
+
+SATURDAY.  I missed the first two early passes
+
+*** 1035 EST AO-16 The remaining passes, I have excised all the UI packets below...
+
+PACSAT-11>PBLIST:PB: Empty.
+PACSAT-12>BBSTAT:Open ABCD: 
+PACSAT-11>BSTAT:B: 1694152342
+PACSAT-1>TIME-1:PHT: uptime is 1903/09:53:45.  Time is Sat Dec 04 15:37:02 1999
+PACSAT-1>LSTAT:I P:0x14CA o:0 l:877 f:1024, d:1 st:5
+KB2WQM-1>FM29PE,PACSAT-1*:=3911.08N\07445.00WSJeff SNJ pacgate kb2wqm@amsat.org
+PACSAT-11>PBLIST:PB: W4MO\D
+WB4APR>APRS,PACSAT-1*:               <== 8 of these to test uplink
+KB2WQM-1>FM29PE,PACSAT-1*:hello fr Jeff in SNJ
+WB4APR>APRS,PACSAT-1*:=3909.  N/07636.  Wy000/000/Bobs
+N8DEU>APS199,PACSAT-1*,WIDE:>041436z[199XK]n8deu@amsat.org - PacSat Gateway
+WB4APR>APRS,PACSAT-1*::WB2WQM   :How copy?{10
+PACSAT-1>TIME-1:PHT: uptime is 1903/09:54:45.  Time is Sat Dec 04 15:38:02 1999
+KA2UPW-9>APRS,PACSAT-1*,WIDE,WIDE:=4036.93N/07441.25W$000/000/UPW HB soundcard modem
+KB2WQM-1>FM29PE,PACSAT-1*:fine here bob
+PACSAT-1>AMSAT:December 1999
+AO-16 Pacsat owned and operated by AMSAT-NA
+AO16 Command Team <WJ9F>
+KA2UPW-9>APRS,PACSAT-1*,WIDE,WIDE:=4036.93N/07441.24W$000/000/UPW HB soundcard modem
+WB4APR>APRS,PACSAT-1*::WB2WQM   :How copy?{10
+KB2WQM-1>FM29PE,PACSAT-1*:you copining ka2upw?
+KB2WQM-1>FM29PE,PACSAT-1*:>041534z[199XK]Jeff kb2wqm@amsat.org pacgate
+WB4APR>APRS,PACSAT-1*::WB2WQM   :How copy?{10
+PACSAT-1>TIME-1:PHT: uptime is 1903/09:55:45.  Time is Sat Dec 04 15:39:02 1999
+WB4APR>APRS,PACSAT-1*:;FBALL    *231539z3955.  N/07509.  W[000/000/
+KA2UPW-9>APRS,PACSAT-1*,WIDE,WIDE:=4036.93N/07441.24W$000/000/UPW HB soundcard modem
+WB4APR>APRS,PACSAT-1*::N8DEU    :I see you on today!{11
+WB4APR>APRS,PACSAT-1*::BLNA     :Football has arrived philly!{12
+WB4APR>APRS,PACSAT-1*:;FBALL    *231539z3955.  N/07509.  W[000/000/
+PACSAT-11>PBLIST:PB: N8ULD\D
+WB4APR>APRS,PACSAT-1*:=3909.  N/07636.  Wy000/000/Bobs
+PACSAT-1>TIME-1:PHT: uptime is 1903/09:56:45.  Time is Sat Dec 04 15:40:02 1999
+KA2UPW-9>APRS,PACSAT-1*,WIDE,WIDE:=4036.93N/07441.24W$000/000/UPW HB soundcard modem
+PACSAT-11>PBLIST:PB: VE2KAD\D
+PACSAT-1>TIME-1:PHT: uptime is 1903/09:58:45.  Time is Sat Dec 04 15:42:02 1999
+WB4APR>APRS,PACSAT-1*::KA2UPW-9 :ur sound card is working great!{15
+WB4APR>APRS,PACSAT-1*:=3909.  N/07636.  Wy000/000/Bobs
+KB2WQM-1>FM29PE,PACSAT-1*:fb on the football run
+WB4APR>APRS,PACSAT-1*::KA2UPW-9 :ur sound card is working great!{15
+N8DEU>APS199,PACSAT-1*,WIDE::N8DEU-4  :Test{251
+KB2WQM-1>FM29PE,PACSAT-1*:>041534z[199XK]Jeff kb2wqm@amsat.org pacgate
+PACSAT-1>TIME-1:PHT: uptime is 1903/09:59:45.  Time is Sat Dec 04 15:43:02 1999
+PACSAT-11>PBLIST:PB: VE3FRH\D
+KA2UPW-9>APRS,PACSAT-1*,WIDE,WIDE:=4036.93N/07441.23W$000/000/UPW HB soundcard modem
+PACSAT-11>PBLIST:PB: VE3FRH\D VE2KAD
+PACSAT-1>TIME-1:PHT: uptime is 1903/10:00:45.  Time is Sat Dec 04 15:44:02 1999
+PACSAT-11>PBLIST:PB: VE2KAD
+N8DEU>APS199,PACSAT-1*,WIDE::N8DEU-4  :test{254
+PACSAT-11>PBLIST:PB: VE3FRH VE2KAD
+PACSAT-1>TIME-1:PHT: uptime is 1903/10:01:45.  Time is Sat Dec 04 15:45:02 1999
+KA2UPW-9>APRS,PACSAT-1*,WIDE,WIDE:=4036.93N/07441.24W$000/000/UPW HB soundcard modem
+PACSAT-1>TLM:þ6I8d’lte-^i@	-
+KA2UPW-9>APRS,PACSAT-1*,WIDE,WIDE:=4036.93N/07441.24W$000/000/UPW HB soundcard modem
+PACSAT-1>TIME-1:PHT: uptime is 1903/10:02:45.  Time is Sat Dec 04 15:46:02 1999
+PACSAT-11>PBLIST:PB: VE3FRH VE2KAD
+N8DEU>APS199,PACSAT-1*,WIDE::ALL      :AO-16 PACSAT-1 is now linked this pass on the Inet{249
+KB2WQM-1>FM29PE,PACSAT-1*:fb n8deu
+PACSAT-1>TIME-1:PHT: uptime is 1903/10:03:45.  Time is Sat Dec 04 15:47:02 1999
+N8DEU>APS199,PACSAT-1*,WIDE::KB2WQM   :Good morning from Huntsville, AL - Tim{255
+KB2WQM-1>FM29PE,PACSAT-1*:}KB2WQM>APW233,TCPIP,KB2WQM-1*::N8DEU    :ack255
+PACSAT-1>AMSAT:December 1999
+AO-16 Pacsat owned and operated by AMSAT-NA
+AO16 Command Team <WJ9F>
+KB2WQM-1>FM29PE,PACSAT-1*:}KB2WQM>APW233,TCPIP,KB2WQM-1*::N8DEU    :ack255
+KB2WQM-1>FM29PE,PACSAT-1*:we r also pacgating
+PACSAT-1>TIME-1:PHT: uptime is 1903/10:04:45.  Time is Sat Dec 04 15:48:02 1999
+N8DEU>APS199,PACSAT-1*,WIDE::KB2WQM   :Excellent, I had some PSK h/w trouble last night{256
+
+
+
+*** 1058 LO-19 PASS (Plagued by lots of Win98 crashes etc...)
+
+KB2WQM-1>PACGAT,LUSAT-1*,WIDE,WIDE::KB2WQM   :email kf4fdj@amsat.org GM Mike{2266
+WB4APR>APR844,LUSAT-1*:            <== 5 of these to test uplink
+WB4APR>APR844,LUSAT-1*:;FBALL    *231539z3955.  N/07509.  W[000/000/
+WB4APR>APR844,LUSAT-1*::WB2WQM   :How copy?{10
+WB4APR>APR844,LUSAT-1*::N8DEU    :I see you on today!{11
+WB4APR>APR844,LUSAT-1*::BLNB     :Im on 145.91{13
+WB4APR>APR844,LUSAT-1*::N8ULD    :I see you logged onto the BBS{14
+WB4APR>APR844,LUSAT-1*::WU2Z     :Test via pacsat{19
+KB2WQM-1>PACGAT,LUSAT-1*,WIDE,WIDE::EMAIL    :kf4fdj@amsat.org GM Mike via pacsat{2267
+LUSAT-1>AMARG:
+January 20 - 1999.
+9 years of LUSAT in the space !
+On Board Computer reload in progress.
+Digipeater active.
+Norberto - LU8DYF.
+LUSAT-1>LSTAT:I P:0x3000 o:9 l:12644 f:12644, d:1 st:2
+
+*** 1118 IO-26 pASS
+
+WB4APR>APR844,ITMSAT-1*:     <7 of these to test uplink
+KB2WQM-1>PACGAT,ITMSAT-1*,::EMAIL    :n3zll@amsat.org Hello{2268
+KB2WQM-1>PACGAT,ITMSAT-1*,::EMAIL    :kb2wqm@amsat.org  via pacsat{2273
+ITMSAT-1>BCRXMT:v_max=741097 v_bat=732791 temp=587799 
+ITMSAT-1>STATUS:·>I8€°°33€#s
+ITMSAT-1>LSTAT:I P:0x3000 o:0 l:12883 f:12883, d:1 st:0
+N8DEU>APS199,ITMSAT-1*,::KB2WQM   :Hey Jeff{260
+KB2WQM-1>PACGAT,ITMSAT-1*,::KB2WQM   :hello test{2274
+KB2WQM-1>PACGAT,ITMSAT-1*,::WB4APR   :ack23
+IY2SAT-1>AMSAT:*** 21st November 1999 *** 
+ITAMSAT is in good shape. Digipeater is ON.
+Best wishes from the ITAMSAT Command Team
+KB2WQM-1>PACGAT,ITMSAT-1*,:=3911.08N\07445.00WSJeff SNJ pacgate kb2wqm@amsat.org
+WB4APR>APR844,ITMSAT-1*::WU2Z     :Testing via IO26{26
+WB4APR>APR844,ITMSAT-1*:;FBALL    *231622z3957.16N/07509.48W[000/000/
+KB2WQM-1>PACGAT,ITMSAT-1*,::EMAIL    :n2sxj@citnet.com GM via pacsat{2272
+KB2WQM-1>PACGAT,ITMSAT-1*,::EMAIL    :kb2wqm@amsat.org  via pacsat{2273
+KB2WQM-1>PACGAT,ITMSAT-1*,::EMAIL    :kf4fdj@amsat.org GM Mike via pacsat{2267
+ITMSAT-1>TIME-1:PHT: uptime is 075/19:36:19.  Time is Sat Dec 04 16:20:59 1999
+KB2WQM-1>PACGAT,ITMSAT-1*,::EMAIL    :n3zll@amsat.org Hello{2268
+KB2WQM-1>PACGAT,ITMSAT-1*,::}KB2WQM>APW233,TCPIP,KB2WQM-1*::N8DEU    :ack260
+KB2WQM-1>PACGAT,ITMSAT-1*,::}KB2WQM>APW233,TCPIP,KB2WQM-1*:=3911.20N/07445.00W_Jeff 
+N8DEU>APS199,ITMSAT-1*,WIDE::N8DEU-4  :test{262
+KB2WQM-1>PACGAT,ITMSAT-1*,::KB2WQM   :hello test{2274
+WB4APR>APR844,ITMSAT-1*::BLNC     :Im having WIndows Problems!  Darn B.Gates!{24
+KB2WQM-1>PACGAT,ITMSAT-1*,::EMAIL    :n3zll@amsat.org Hello{2268
+N8DEU>APS199,ITMSAT-1*,::WB4APR   :Need some Windex{264
+ITMSAT-1>TIME-1:PHT: uptime is 075/19:37:49.  Time is Sat Dec 04 16:22:29 1999
+WB4APR>APR844,ITMSAT-1*::K4HG     :Test via ITMSAT!{25
+WB4APR>APR844,ITMSAT-1*::WU2Z     :Testing via IO26{26
+IY2SAT-1>AMSAT:*** 21st November 1999 *** 
+ITAMSAT is in good shape. Digipeater is ON.
+Best wishes from the ITAMSAT Command Team
+ITMSAT-1>BCRXMT:v_max=741097 v_bat=212600342 temp=587799 
+ITMSAT-1>LSTAT:I P:0x3000 o:0 l:12883 f:12883, d:1 st:0
+WB4APR>APR844,ITMSAT-1*:>231543zArmy/Navy football Run!
+KB2WQM-1>PACGAT,ITMSAT-1*,::KB2WQM   :hello test{2274
+K5QXJ>NICK,ITMSAT-1*:hijeff
+WB4APR>APR844,ITMSAT-1*::KA2UPW-¹ :ur sound card is working great!{15
+N8DEU>APS199,ITMSAT-1*,WIDE::KB2WQM-1 :ack2275
+K5QXJ>NICK,ITMSAT-1*:hi bob
+KB2WQM-1>PACGAT,ITMSAT-1*,:SB modem is a big step!
+WB4APR>APRx44,ITMSAT-1*::K5QXJ    :I see0ya in there{31
+ITMSAT-1>TIME-1:PHT: uptime is 075/19:39:49.  Time is Sat Dec 04 16:24:29 1999
+K5QXJ>NICK,ITMSAT-1*:hi test
+N5ZNL>AP0922,ITMSAT-1*:=3226.55N/09005.70WG Rick in Madison MS.
+WB4APR>APR844,ITMSAT-1*::K5QXJ    :I see ya in there{31
+
+
+*** 1215 AO-16 Pass (Note several BBS users)
+
+WB4APR>APR844,PACSAT-1*:   <==9 of these to test uplink
+PACSAT-1>STATUS:LI8€}°»»€	
+PACSAT-1>TIME-1:PHT: uptime is 1903/11:31:48.  Time is Sat Dec 04 17:15:05 1999
+PACSAT-11>PBLIST:PB: Empty.
+PACSAT-11>PBLIST:PB: W4MO\D
+PACSAT-1>LSTAT:I P:0x14CA o:0 l:877 f:1024, d:1 st:5
+PACSAT-12>BBSTAT:Open ABCD: 
+PACSAT-11>BSTAT:B: 1694236396
+PACSAT-1>AMSAT:December 1999
+AO-16 Pacsat owned and operated by AMSAT-NA
+AO16 Command Team <WJ9F>
+PACSAT-1>TIME-1:PHT: uptime is 1903/11:32:48.  Time is Sat Dec 04 17:16:05 1999
+PACSAT-11>PBLIST:PB: K0RZ\D
+WB4APR>APRS,PACSAT-1*:    <== seven of these to test uplink
+WB4APR>APRS,PACSAT-1*::K5QXJ    :HOws it going Nick?{32
+WB4APR>APRS,PACSAT-1*::BLNG     :Im on 145.91{36
+WB4APR>APRS,PACSAT-1*::BLNG     :Im on 145.91{36
+WB4APR>APRS,PACSAT-1*::BLNI     :Fball has arrived Philly for game!{38
+PACSAT-11>PBLIST:PB: K0RZ\D
+PACSAT-11>PBLIST:PB: N8ULD
+WB4APR>APRS,PACSAT-1*::BLNH     :Lots of hand waving going on here!{37
+WB4APR>APRS,PACSAT-1*::K0RZ     :Hows things going.  Bob here{39
+WB4APR>APRS,PACSAT-1*::K0RZ     :Hows things going.  Bob here{39
+WB4APR>APRS,PACSAT-1*:;FBALL    *231717z3957.40N/07509.72W[000/000/
+PACSAT-11>PBLIST:PB: K0RZ N8ULD
+WB4APR>APRS,PACSAT-1*::BLNI     :Fball has arrived Philly for game!{38
+WB4APR>APRS,PACSAT-1*::K0RZ     :Hows things going.  Bob here{39
+WB4APR>APRS,PACSAT-1*:>231543zArmy/Navy football Run!
+PACSAT-1>LSTAT:I P:0x14CA o:0 l:877 f:1024, d:1 st:5
+PACSAT-1>AMSAT:December 1999
+AO-16 Pacsat owned and operated by AMSAT-NA
+AO16 Command Team <WJ9F>
+PACSAT-11>PBLIST:PB: N8ULD K0RZ
+PACSAT-11>PBLIST:PB: K0RZ N8ULD
+WB4APR>APRS,PACSAT-1*:;FBALL    *231717z3957.40N/07509.72W[000/000/
+PACSAT-1>TIME-1:PHT: uptime is 1903/11:34:50.  Time is Sat Dec 04 17:18:07 1999
+WB4APR>APRS,PACSAT-1*::BLNI     :Fball has arrived Philly for game!{38
+WB4APR>APRS,PACSAT-1*::N8ULD    :Glad to see some activity today{41
+WB4APR>APRS,PACSAT-1*::BLNH     :Lots of hand waving going on here!{37
+PACSAT-1>TIME-1:PHT: uptime is 1903/11:35:50.  Time is Sat Dec 04 17:19:07 1999
+PACSAT-11>PBLIST:PB: K0RZ
+N8DEU>APS199,PACSAT-1*,WIDE:}W4HFZ-3>FN31XK,TCPIP,N8DEU*::KB2WQM-1 :Hi Jeff{000
+KB2WQM-1>PACGAT,PACSAT-1*,WIDE,WIDE::W4HFZ-3  :ack000
+KB2WQM-1>PACGAT,PACSAT-1*,WIDE,WIDE::EMAIL    :n3zll@amsat.org Hello{2268
+WB4APR>APRS,PACSAT-1*::N5ZNL    :Sleep in?{35
+WB4APR>APRS,PACSAT-1*::KB2WQM   :Thanks for keeping the PACSAT/IGATE up{40
+WB4APR>APRS,PACSAT-1*::N8ULD    :Glad to see some activity today{41
+WB4APR>APRS,PACSAT-1*::BLNJ     :Dids you see the sound card modem on earlier?{42
+KB2WQM-1>PACGAT,PACSAT-1*,WIDE,WIDE::KB2WQM   :hello test{2274
+WB4APR>APRS,PACSAT-1*::BLNH     :Lots of hand waving going on here!{37
+WB4APR>APRS,PACSAT-1*::BLNH     :Lots of hand waving going on here!{37
+N5ZNL>AP0922,PACSAT-1*,WIDE,WIDE:=3226.55N/09005.70WG Rick in Madison MS.
+N5ZNL>AP0922,PACSAT-1*,WIDE,WIDE:=3226.55N/09005.70WG Rick in Madison MS.
+N8DEU>APS199,PACSAT-1*,WIDE::N5ZNL    :GM Ricke de Tim in Huntsville, AL{266
+PACSAT-11>PBLIST:PB: Empty.
+PACSAT-1>COMPAC:COMMAND E ACK
+PACSAT-11>PBLIST:PB: N8ULD
+N5ZNL>AP0922,PACSAT-1*,WIDE,WIDE:GM Tim..
+WB4APR>APRS,PACSAT-1*::K5QXJ    :HOws it going Nick?{32
+WB4APR>APRS,PACSAT-1*::K0RZ     :Hows things going.  Bob here{39
+PACSAT-1>TIME-1:PHT: uptime is 1903/11:37:50.  Time is Sat Dec 04 17:21:07 1999
+KB2WQM-1>PACGAT,PACSAT-1*,WIDE,WIDE::WB4APR   :my pleasure, was good to see all this activity{2277
+KB2WQM-1>PACGAT,PACSAT-1*,WIDE,WIDE::KB2WQM   :hello test{2274
+KB2WQM-1>PACGAT,PACSAT-1*,WIDE,WIDE::EMAIL    :kb2wqm@amsat.org  via pacsat{2273
+N5ZNL>AP0922,PACSAT-1*,WIDE,WIDE::WB4APR   :ack35
+PACSAT-1>TIME-1:PHT: uptime is 1903/11:38:50.  Time is Sat Dec 04 17:22:07 1999
+N8DEU>APS199,PACSAT-1*,WIDE::KB2WQM-1 :Up to Sat and ack through Inet, pretty cool{270
+KB2WQM-1>PACGAT,PACSAT-1*,WIDE,WIDE::N8DEU    :ack270
+KB2WQM-1>PACGAT,PACSAT-1*,WIDE,WIDE:hello rick
+PACSAT-11>PBLIST:PB: K0RZ
+N5ZNL>AP0922,PACSAT-1*,WIDE,WIDE:Hi to all de Rick
+KB2WQM-1>PACGAT,PACSAT-1*,WIDE,WIDE::N8DEU    :ack270
+KB2WQM-1>PACGAT,PACSAT-1*,WIDE,WIDE::WB4APR   :my pleasure, was good to see all this activity{2277
+KB2WQM-1>PACGAT,PACSAT-1*,WIDE,WIDE::KB2WQM   :hello test{2274
+PACSAT-11>PBLIST:PB: K0RZ
+N5ZNL>AP092:,PACSAT-1*,WIDE,WIDE:=3226.55N/09005.70WG Rick in Madison MS.
+KB2WQM-1>PACGAT,PACSAT-1*,WIDE,WIDE:=3911.08N\07445.00WSJeff SNJ pacgate kb2wqm@amsat.org
+N5ZNL>AP0922,PACSAT-1*,WIDE,WIDE:Hi Jeff de Rick
+PACSAT-1>TIME-1:PHT: uptime is 1903/11:39:50.  Time is Sat Dec 04 17:23:07 1999
+KB2WQM-1>PACGAT,PACSAT-1*,WIDE,WIDE:had a great time with this today...
+PACSAT-11>PBLIST:PB: K0RZ
+PACSAT-11>PBLIST:PB: TG9IKE K0RZ
+WB4APR>APRS,PACSAT-1*::N8DEU    :I see you on this pass too..{45
+WB4APR>APRS,PACSAT-1*::WU2Z     :Testing via PACSAT. 1 more pass{47
+N8DEU>APS199,PACSAT-1*,WIDE::WB4APR   :ack45
+WB4APR>APRS,PACSAT-1*::WU2Z     :Testing via PACSAT. 1 more pass{47
+WB4APR>APRS,PACSAT-1*::BLNJ     :Dids you see the sound card modem on earlier?{42
+WB4APR>APRS,PACSAT-1*::BLNJ     :Dids you see the sound card modem on earlier?{42
+PACSAT-1>TIME-1:PHT: uptime is 1903/11:40:50.  Time is Sat Dec 04 17:24:07 1999
+N5ZNL>AP0922,PACSAT-1*,WIDE,WIDE:=3226.55N/09005.70WG Rick in Madison MS.
+WB4APR>APRS,PACSAT-1*::BLNM     :Now I find 145.915 best{48
+WB4APR>APRS,PACSAT-1*::TG9IKE   :Wow, some DX!{49
+WB4APR>APRS,PACSAT-1*:=3909.  N/07636.  Wy000/000/Bobs
+WB4APR>APRS,PACSAT-1*::BLNK     :Shucks, lost lock for a minute!{43
+N8DEU>APS199,PACSAT-1*,WIDE::ALL      :AO-16 PACSAT-1 now linked via Sat and Inet for APRS{271
+WB4APR>APRS,PACSAT-1*::TG9IKE   :Wow, some DX!{49
+KB2WQM-1>PACGAT,PACSAT-1*,WIDE,WIDE:yes I did he sent me an email last week
+PACSAT-11>PBLIST:PB: K0RZ TG9IKE
+N8DEU>APS199,PACSAT-1*,WIDE::WB4APR   :ack45
+N5ZNL>AP0922,PACSAT-1*,WIDE,WIDE:Hi Bob
+N8DEU>APS199,PACSAT-1*,WIDE:}W4HFZ-3>FN31XK,TCPIP,N8DEU*:=4126.20N/07203.91WIPHG5100/WinAPRS 2.2.2 -CTNEWGALES FE-233-<530>
+PACSAT-1>TIME-1:PHT: uptime is 1903/11:42:50.  Time is Sat Dec 04 17:26:07 1999
+PACSAT-11>PBLIST:PB: TG9IKE
+WB4APR>APRS,PACSAT-1*:>231543zArmy/Navy football Run!
+PACSAT-1>AMSAT:December 1999
+AO-16 Pacsat owned and operated by AMSAT-NA
+AO16 Command Team <WJ9F>
+
+*** 1238 LO-19 Pass
+
+LUSAT-1>TIME-1:PHT: uptime is 491/03:56:51.  Time is Sat Dec 04 17:31:29 1999
+LUSAT-1>AMARG:
+January 20 - 1999.
+9 years of LUSAT in the space !
+On Board Computer reload in progress.
+Digipeater active.
+Norberto - LU8DYF.
+LUSAT-1>LSTAT:I P:0x3000 o:9 l:12644 f:12644, d:1 st:2
+WB4APR>APR844,LUSAT-1*:       <== 8 of these to test uplink
+LUSAT-1>TIME-1:PHT: uptime is 491/03:57:51.  Time is Sat Dec 04 17:32:29 1999
+KB2WQM-1>PACGAT,LUSAT-1*,WIDE,WIDE:=3911.08N\07445.00WSJeff SNJ pacgate kb2wqm@amsat.org
+KB2WQM-1>PACGAT,LUSAT-1*,WIDE,WIDE::KB2WQM   :hello test{2274
+N8DEU>APS199,LUSAT-1*,WIDE::ALL      :LO-19 LUSAT-1 is now linked via SAT and Inet for APRS{277
+KB2WQM-1>PACGAT,LUSAT-1*,WIDE,WIDE::WB4APR   :my pleasure, was good to see all this activity{2277
+WB4APR>APR844,LUSAT-1*:     <== 14 of thees to test uplink
+KB2WQM-1>PACGAT,LUSAT-1*,WIDE,WIDE::EMAIL    :kb2wqm@amsat.org  via pacsat{2273
+N8DEU>APS199,LUSAT-1*,WIDE::ALL      :LO-19 LUSAT-1 is now linked via SAT and Inet for APRS{277
+WB4APR>APR844,LUSAT-1*:;FBALL    *231740z3957.64N/07509.96W[000/000/
+LUSAT-1>TIME-1:PHT: uptime is 491/03:58:51.  Time is Sat Dec 04 17:33:29 1999
+KB2WQM-1>PACGAT,LUSAT-1*,WIDE,WIDE::EMAIL    :n2sxj@citnet.com GM via pacsat{2272
+N8DEU>APS199,LUSAT-1*,WIDE::N5ZNL    :GM Rick de Tim{274
+WB4APR>APR844,LUSAT-1*:>231543zArmy/Navy football Run!
+KB2WQM-1>PACGAT,LUSAT-1*,WIDE,WIDE:hello tim
+LUSAT-1>TIME-1:PHT: uptime is 491/03:59:51.  Time is Sat Dec 04 17:34:29 1999
+
+
+KB2WQM-1>PACGAT,LUSAT-1*,WIDE,WIDE::WB4APR   :my pleasure, was good to see all this activity{2277
+N8DEU>APS199,LUSAT-1*,WIDE::N8DEU-4  :test{278
+WB4APR>APR844,LUSAT-1*:    <== 5 of these to test  uplink
+N8DEU>APS199,LUSAT-1*,WIDE::ALL      :LO-19 LUSAT-1 is now linked via SAT and Inet for APRS{277
+WB4APR>APR844,LUSAT-1*::BLNN     :Im trying 145.875 now{51
+WB4APR>APR844,LUSAT-1*::BLNO     :I guess this is the last pass till tonight'{53
+LUSAT-1>TIME-1:PHT: uptime is 491/04:00:51.  Time is Sat Dec 04 17:35:29 1999
+WB4APR>APR844,LUSAT-1*::BLNP     :MOved downt to 145.870 and it works fine{54
+KB2WQM-1>PACGAT,LUSAT-1*,WIDE,WIDE::EMAIL    :n2sxj@citnet.com GM via pacsat{2272
+KB2WQM-1>PACGAT,LUSAT-1*,WIDE,WIDE::BLNA     :a big thanks to WB4APR for the football run...{%fVp#
+KB2WQM-1>PACGAT,LUSAT-1*,WIDE,WIDE::WB4APR   :my pleasure, was good to see all this activity{2277
+LUSAT-1>TIME-1:PHT: uptime is 491/04:01:51.  Time is Sat Dec 04 17:36:29 1999
+LUSAT-1>TIME-1:PHT: uptime is 491/04:02:11.  Time is Sat Dec 04 17:36:49 1999
+KB2WQM-1>PACGAT,LUSAT-1*,WIDE,WIDE:=3911.08N\07445.00WSJeff SNJ pacgate kb2wqm@amsat.org
+N8DEU>APS199,LUSAT-1*,WIDE::N8DEU-4  :test{278
+WB4APR>APR844,LUSAT-1*::BLNQ     :Darn W98 locked up again!{55
+N5ZNL>AP0922,LUSAT-1*,WIDE,WIDE:=3226.55N/09005.70WG Rick in Madison MS.
+KB2WQM-1>PACGAT,LUSAT-1*,WIDE,WIDE::BLNA     :a big thanks to WB4APR for the football run...{%fVp#
+KB2WQM-1>PACGAT,LUSAT-1*,WIDE,WIDE::EMAIL    :kb2wqm@amsat.org  via pacsat{2273
+KB2WQM-1>PACGAT,LUSAT-1*,WIDE,WIDE::EMAIL    :n2sxj@citnet.com GM via pacsat{2272
+KB2WQM-1>PACGAT,LUSAT-1*,WIDE,WIDE::KB2WQM   :hello test{2274
+LUSAT-1>TIME-1:PHT: uptime is 491/04:03:11.  Time is Sat Dec 04 17:37:49 1999
+WB4APR>APR844,LUSAT-1*::BLNO     :I guess this is the last pass till tonight'{53
+KB2WQM-1>PACGAT,LUSAT-1*,WIDE,WIDE:=3911.08N\07445.00WSJeff SNJ pacgate kb2wqm@amsat.org
+N5ZNL>AP0922,LUSAT-1*,WIDE,WIDE:=3226.55N/09005.70WG Rick in Madison MS.
+WB4APR>APR844,LUSAT-1*::BLNQ     :Darn W98 locked up again!{55
+WB4APR>APR844,LUSAT-1*::BLNS     :But nothing can beat the internet :-({57
+WB4APR>APR844,LUSAT-1*::BLNR     :I think the sound card modem will make this popular{56
+N8DEU>APS199,LUSAT-1*,WIDE::N8DEU-4  :test{278
+WB4APR>APR844,LUSAT-1*::BLNP     :MOved downt to 145.870 and it works fine{54
+N8DEU>APS199,LUSAT-1*,WIDE::N8DEU-4  :test{278
+LUSAT-1>TIME-1:PHT: uptime is 491/04:04:11.  Time is Sat Dec 04 17:38:49 1999
+N8DEU>APS199,LUSAT-1*,WIDE:=3448.16N/08641.80W`Huntsville, Alabama
+KB2WQM-1>PACGAT,LUSAT-1*,WIDE,WIDE:>041714z[199XK]Jeff kb2wqm@amsat.org pacgate
+WB4APR>APR844,LUSAT-1*::BLNT     :There is a learning curve here.  Im gettin better{58
+KB2WQM-1>PACGAT,LUSAT-1*,WIDE,WIDE:SB will allow pacsat w/laptop & mobile
+LUSAT-1>TIME-1:PHT: uptime is 491/04:05:11.  Time is Sat Dec 04 17:39:49 1999
+
+*** Win98 crash here
+
+N8DEU>APS199,LUSAT-1*,WIDE::WB4APR   :now tx on 145.911{281
+WB4APR>APR844,LUSAT-1*:>231543zArmy/Navy football Run!
+LUSAT-1>TIME-1:PHT: uptime is 491/04:06:51.  Time is Sat Dec 04 17:41:29 1999
+KB2WQM-1>PACGAT,LUSAT-1*,WIDE,WIDE:73
+
+
+

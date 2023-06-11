@@ -1,0 +1,103 @@
+***************************************************************************
+*                    ATGP 2018 Report for Springer                       75
+***************************************************************************
+
+
+SPRNGR-1 (KG4VUB) is on the air at 11:15 from Mt. Oglethorpe
+Already rcvd CLNGMAN-2 and ROAN-3
+Operators onsite, KG4VUB, K4SJR, AA4OC, AB4NX, W4OMR
+
+
+Larry Whited (prev WB4FGF) says hello from Springer/Oglethorpe. He attended 
+this year.
+
+So, Springer saw 1-10, never got past SAMSPT.
+
+After waking up to major storms this morning that came south through N. GA, 
+it turned out to be a great, cool day on the mountain.
+
+Tom
+KG4VUB
+
+
+The first year I (Tom) visited Glenn when he operated from Springer, he was 
+at a wide spot in the road just down the road from the parking area. 
+
+2016 was first year myself and Frank, K4SJR operated, we were in the field 
+adjacent to where we met Glenn that prior year.. That was the year Larry 
+had radio issues at Clingman and we were cut off from the event. We had a 
+number of North West Georgia local operators visit including Greg KK4YLX 
+who started working with Larry at Clingman last year. 
+
+As I've been busy the past few years and needed to make it an easy day, I 
+thought about operating from Mt Oglethorpe which was the original terminus 
+of the AT. Property owners had only recently at that time started to create 
+a park there with hiking trails and overlook platforms. It used to be gated 
+off from the public because of a FAA communications tower and cell tower. 
+
+In spirit of it being the original terminus, new park, closer to drive to 
+and drive up access, the practical (and lazy) in me thought about attempting 
+Oglethorpe last year. We operated from a 10x10 overlook on the north end. 
+It was a success. 
+
+It is not over the trees but is near the peak of the mountain. In fact, I 
+pulled a short ground plane antenna up with para cord going over a tree limb 
+using a sling shot to get the rope up. 
+
+Gave us a comfortable, no mud, easy access setup. I was concerned about the 
+FAA radio site and a repeater up there but we were about 2-300' away and 
+slightly down hill from them. 
+
+This year we operated from a pavilion that had been constructed more to the 
+east of the hill. It's about 200' from the platform mentioned above. The 
+pavilion is covered with a couple picnic tables. The lazy in me wanted to 
+operate there so we'd have less equipment to set up and potential of very 
+bad weather was forecast. It isn't in the clear as much as original 
+platform(deck)
+
+Unfortunately the pavilion location is about 50' from the FAA tower and also 
+closer to the 146.805 repeater. This year we experienced interference when 
+both services transmitted at the same time. The interference was brief so 
+we decided to stay there. If it had been too bad we could easily have moved 
+to the original platform. I lowered the Comet GP-1 hanging from the limb and 
+we still had contact with Clingman but interference was still there. 
+
+We switched to an Arrow yagi at 15' and it worked just as well to Clingman 
+with a little less interference. When 805 was transmitting we didn't have 
+issue. It was the mix with AM airband that had us hearing the repeater and 
+ATC on 144.34. 
+
+BTW, Oglethorpe to Stone Mountain can be done HT to HT with stock antennas. 
+Stone Mountain is SE of Oglethorpe. 
+
+We and Greg at Clingman had contact with Mark (call escapes me) near 
+Chattanooga. He was in touch with Lynn and had been watching APRS.fi during 
+the event. I received instructions from Lynn through him. 
+
+Frank and I have a tower site about a 1/4 mile from where we were and it's 
+about 100-200' lower. I would like to put a digi there when we can get 
+around to installing an antenna. 
+
+I also have a tower site on Pine Log Mountain near Waleska Ga. It is about 
+19mi WNW of Oglethorpe. Greg was able to bring up my repeater from Cljngman. 
+A digi on Pine Log should be able to get us stretched out toward Huntsville. 
+However Mark in Chattanooga could possibly provide the link to Huntsville too. 
+
+I sent you a writeup for Springer in 2016 but I think you missed it. 
+I apologize I didn't get a report for last year. I will try and get 
+something for you for this years event. Unfortunately I didn't capture any 
+logs this year. 
+
+APRS in Ga isn't as popular as it once was. I think there are more weather 
+stations on the map than operators. Some of the high profile digis I think 
+are off the air. I can get something on Oglethorpe and Pine Log. I think 
+the one in Rome is still operational. 
+
+What we need are digis out on I-20, I-16 east of Macon and I-75 between 
+Macon and Valdosta. 
+
+Had fun this year, looking forward to next year. 
+
+-Tom
+--------------------------
+

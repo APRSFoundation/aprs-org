@@ -1,0 +1,52 @@
+HIGHPOINT log Analysis
+
+5PTS-8   ( 8) VIA GD-8   ,CBK-9, (TEMP3-1)
+AOMTN-5  ( 1) via CBK-9* ,HOP7-2     A
+AOMTN-5  ( 1) via CBK-9* ,HOP7-3
+CAMLBK-9 (24) direct (no path?)
+CLNGMN-2 ( 4) via GD-8   ,CBK-9*,7-6 B
+CLNGMN-2 ( 2) via CBK-9* ,HOP7* ,7-7
+CLNGMN-2 ( 1) via SPT-10*,HOP7-5,7-7 C
+CMRRCK-4 ( 4) via CBK-9  ,HOP7-2
+CMRRCK-4 ( 1) via SPT-10*,HOP7-1
+GDHILL-8 (24) via CBK-9* ,HOP7-6,7-7
+GDHILL-8 ( 5) via CBK-9* ,HOP7-4,7-7 D
+GRYLOK-11( 5) via SPT-10*,HOP7-6,7-7
+GRYLOK-11( 5) via CBK-9* ,HOP7-5,7-7
+HWKSBL-6 ( 6) via CBK-9* ,HOP7-4,7-7
+HWKSBL-6 ( 1) via SPT-10*,HOP7-3,7-7
+KB3EJM-2 (16) via CBK-9* ,WIDE       E
+MTWASH-13( 3) via SPT-10*,HOP7-5,7-7
+MTWASH-13( 3) via CBK-9* ,HOP7-4,7-7
+N3QBI    ( 5) via CBK-9* ,HOP7-4,7-7
+ROAN-3   ( 1) via CBK-9* ,HOP7-2,7-7 A
+ROAN-3   ( 2) via CBK-9* ,HOP7-1,7-7
+SAMSPT-10(43) direct (18)
+SAMSPT-10(19) via CBK-9* ,HOP7-6,7-7
+SAMSPT-10( 6) via SPT-10*,HOP7-5,7-7
+
+Notes:  The purpose of the High Point, NJ tests were to
+detremine if Sam's Point and Camelback could be replaced
+by High Point with one less hop. But since no packets 
+above were heard direct from GD-Hill nor from Greylock,
+it appears this is not a valid assumption.    Here are
+some other anomolies noted.
+
+A: From the South up to CAMLBK-9 there were 2 packets that
+skipped a mountain somehow.  1 from AOMTN,  and one from
+ROAN.
+
+B: Four packets from CLNGMN-2 somehow triggered callsign
+substitution by GDHILL-8 *and* by CMLBK-9?
+
+C: One packet from CLNGMN-2 bypassed 5 sites and got to
+Sams Point in only 2 hops
+
+D: Five packets from GDHILL-8 ping-ponged south first before
+turning north to get to CBK-9 taking up an extra 2 hops.
+
+E: KB3EJM still using obsolete WIDE path.
+
+I hope I got them all.
+
+Bob, Wb4APR

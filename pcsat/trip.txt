@@ -1,0 +1,38 @@
+From: Bob Bruninga <bruninga@usna.edu>
+To: amsat-bb@AMSAT.Org
+Cc: TAPR APRS SIG <aprssig@lists.tapr.org>
+Subject: [amsat-bb] PCSAT BBS and special traveler
+ 
+Our first remote traveler has applied for PCsat access for his 18 hour,
+300km trips in the most northern remote areas of Canada.  As such, he will
+be the first user of several PCsat APRS features:
+ 
+1) He will use a special uplink to digipeat his packets down on 144.39.
+2) His pos/status will be captured and relayed later over N.America on .39
+3) He & handlers will use the PCSAT PBBS for exchanging packet mail
+ 
+This is PCsat's mission, but it only works out of range of the USA, Europe
+and other hot spots where the remote users do not have much congestion
+and can use the PBBS without retries, dupes and failed connects.
+ 
+For example, a download of just a 7 line Mail-For List which times out,
+can result in 70 packets being transmitted before the lost connection
+times out.  This will kill PCsat's batteries each time it happens.  This
+is why NO ONE is authorized to use the PBB on PCsat except those
+with special training and who are in remote areas.
+ 
+But if you are planning such travels, take your D700 or D7 with you and
+send us a reservation for access.
+
+On Mon, 25 Feb 2002, James Ewen wrote:
+ 
+> Darrel VE4DS-9 is going to be running his truck between Yellowknife and
+> the Diavik Diamond mine. The route is 18 hours one direction, and there
+> is nothing up there for APRS... He's running a D700 in his truck...
+> You're not going to get much further out into the boonies than Darrel
+> will be!
+> James
+> VE6SRV 
+
+de WB4APR, Bob
+

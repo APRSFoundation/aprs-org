@@ -1,0 +1,93 @@
+APRS Frequency Tracking of all Voice Users             11 Jan 2008
+------------------------------------------------------------------
+
+Frequency and Situational Awareness.
+
+This is another primary function of APRS (as identified during 
+the Katrina disaster).  That is, APRS should show us the operating 
+frequency of every operator on the air in real time.
+
+This can be a neat club project and a way to get your ENTIRE club 
+on the APRS map with Frequency.  Also Pic Project inventors could 
+get rich selling these by the thousands.  Even YeaCommWood could 
+add these in every radio...
+
+1) Install a TNC and 144.39 radio at the repeater site.
+2) The TNC will digipeat packets from the repeater input to 144.39
+3) Everyone add a simple PTT "tracker" to their Mic jack
+
+Done.  No GPS, no rig interface, yet on APRS we will see:
+
+- The location of the voice repeater.
+- Special surrounding icons of all users using it
+- (or a popup table of all users using it)
+- Everyone exists in APRS with a frequency
+- Everyone's position exists within the PHG vicinity
+
+If they move to another repeater, their frequency AND position 
+changes and they show up there.  I have promoted this TNC at
+every voice repeater for years.  But now that we are 
+standardizing on the frequency field in APRS, this idea is time 
+to be implemented.  Here is how it works.
+
+The Mic-dangle pic generates this packet on release of PTT:
+
+    WB4APR>APFxxx-2:...
+
+This packet is a minimum of 16 bytes long.  It needs NO TXD delay.  
+This takes less than 0.2 second on the end of a PTT.  Most people 
+will not even think of it as a packet, but a simple chirp on the 
+end of a voice transmission.  As with all PTT mode APRS PIC's, it 
+only does this once every 3 minutes (not every single PTT).
+The "..." on the end just shows that the packet can actually
+carry any other data as well (though it makes it longer)...
+
+The AX.25 TOCALL is APFxxx-2 where xxx can indicate the type of
+device that is generating this packet.  The -2 SSID is one of the 
+rarely used APRS generic digipeating schemes.  It does not take 
+up 7 bytes for WIDE2-2, yet it means the same thing.  This has 
+been defined in APRS since 1994 or so, but not used much.  The
+-2 adds no bytes to the basic packet (since the SSID byte is 
+there whether used or not).  The TNC added to the voice repeater 
+with SSID digipeating enabled does two things:
+
+ 1) It has a MYCALL of FFFFFF which means FFF.FFF MHz
+ 2) It mutes the repeater output for the 0.2 seconds
+ 3) It digipeats the packet with callsign substitution.
+ 4) The packet enters APRS on 144.39 as:
+
+WB4APR>APFxxx-1,FFFFFF*:abc
+
+Now since APRS has seen the normal position beacon from the FFFFFF 
+TNC, it knows the location, and PHG data for that FFFFFFF repeater.  
+Each APRS client that has implemented the APRS Vicinity plotting
+feature will do the following:
+
+1) Vicinity plotting will add each such station with a special 
+icon (just for this application) in the vicinity of the FFFFFF 
+repeater (this is just normal APRS "vicinity plotting").
+
+2) Optionally, with new code, can build a table for each such 
+FFFFFF repeater that LISTS each user and the last time he was heard.
+
+CONCLUSION:  If we can look on APRS and see about where everyone 
+is and what frequency they are monitoring, then APRS is truly the 
+situational awareness tool it was intended to be.  These PIC chips
+could be a great club project and could conceivably fit inside
+many existing microphones!  My first such in-the-mic APRS tracker
+was back in 1994 or so using the MIM chip.  Surely we can do it
+better now.
+
+ALL OF THIS CAN BE DONE NOW. 
+  Some TNC's did implement SSID routing
+  The KPC-3 implements the voice repeater MUTE function
+  APRSdos and some others already do VIcinity Plotting
+  Most PIC Trackers can be set to BEACON only
+
+Notice that NOTHING IN THE PACKET is used.  That is why any PIC
+tracker that can operate in PTT mode can already be used for this
+purpose.  Its there... just do it!
+
+Bob, WB4APR
+
+

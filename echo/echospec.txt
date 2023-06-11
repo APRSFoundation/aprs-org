@@ -1,0 +1,149 @@
+ECHO APRS SPECECIFICATION FOR HANDHELD DIGITAL COMMS       18 OCT 2003
+----------------------------------------------------------------------
+revised 21 Nov 2003
+updated 08 Dec 2005
+updated 11 Jul 2006
+                                                                WB4APR
+
+The purpose of this specification was to detail the firmware/software
+requirements needed on ECHO to fully support mobile and handheld 
+digital communications using the Kenwood and other APRS data radios.  
+Kenwood specifically recalled and re-released the TH-D7(G) model just
+so that it would be compatible with Mode J Satellite Digipeating!
+
+The specification below was provided to help make sure that ECHO was 
+compatible  with this potential for handheld satellite digital 
+communicators.  The items are listed from the most important and 
+significant down through the nice-to-have items:
+
+REQUIRED:
+  1) Enable UI digipeating in the digital modes when possible.
+
+SHOULD HAVE:
+  2) Support digipeating aliases of WIDE, APRSAT and ARISS and optionally
+     the additional paths of WIDE1-1 and WIDE2-2 and possibly WIDE3-3.
+  3) To prevent uninformed users to attempt wasteful end-to-end AX.25 
+     "connections", change the code to be sure that ONLY "UI" packets 
+     are digipeated and not any other packets (ie CONNECT REQUESTS & ACKS).
+
+SUPPORTING CHANGES:
+  4) Do callsign substitution on the above four aliases such that the
+     digipeated packet contains ECHO's callsign instead of the alias.
+  5) Add a 200 ms delay before UI packets are inserted in downlink.
+  6) Add a 1 minute 20-28 byte UI APRS formatted STATUS packet in the downlink
+  7) The AX.25 TOCALL for status must be TO BEACON or ALL or QST or APxxxx
+     in order to be seen on an APRS radio
+  
+
+ADDITIONAL OPTIONAL CHANGES:
+  8) Provide memory buffers for up to four 64 character BULLETINS.  The
+     ECHO team can update these bulletins as needed to inform users of
+     things going on.  These will be seen on the front panel of mobile
+     users monitoring the downlink with D7 or D700 radios. 
+  
+NICE TO HAVE ITEMS:
+  9) Operate the downlink on 435.275 which is the same downlink frequency
+     of PCSAT2 which will also be in orbit at the same time.  This lets
+     the same IGates serve both PCSAT2 and ECHO.  And lets us operate
+     a UI Digipeating satellite constellation of TWO birds.
+
+     Or operate on PCSAT's alternate 9600 baud downlink on 437.975.
+ 
+ 10) Operate the UI digipeating uplink on 145.825 which is the same as
+     PCSAT2.  Since APRS uses generic digipeating callsigns, remote
+     travelers wouldnt need to change anything to operate whatever bird
+     is in view at any time.  The constellation of 2 birds works transparently.
+
+JUSTIFICATION:  These changes will permit ECHO to serve not only as a 
+bent-pipe transponder between handheld and mobile data transceiver users 
+themselves and the internet, but also for ECHO to report its status 
+and some bulletins to all users on the radio's front panel.
+
+IMPLEMENTATION DETAILS:
+
+ECHO STATUS and BULLETINS to MOBILES:
+
+Kenwoods HT's have a 3 line by 10 character STATUS display screen
+and this same 3 line by 10 characters is flashed on the front panel
+of the mobile D700 when a new STATUS is received.  Further, the
+HT has a 5 line by 12 character display screen arranged on two pages
+for up to 10 Bulletins.  ECHO can hit these displays direct.  We want 
+ECHO status and Bulletins to be viewable by these mobiles and HT's.
+
+The status and bulletin traffic looks much better if the 
+line-wraps are considered in the display formats of Bulletins and 
+Status.  Bulletins will be formatted by the SYSOPS on the ground 
+prior to uplink to the Bulletin buffers, but the ECHO 20 or 28 
+character status text should be formatted to look nice on the two 
+line display as follows.  In these examples, the AX.25 packet is shown 
+in the typical TAPR-2 standard header format:
+
+APRS STATUS FORMAT:  
+-------------------
+
+RAW PACKET:    ECHO-1>QST:>xxxxxxxxxxyyyyyyyyyyzzzzzzzz
+                        Begins with ">" and 28 characters follow
+                     
+DISPLAY on D7:    FLASHED on D700:   SAVED on D700:
+
++--------------+  +--------------+   +--------------------------------+
+| ECHO-1:      |  | ECHO-1:      |   | ECHO-1:                        |
+|   xxxxxxxxxx |  |   xxxxxxxxxx |   |   xxxxxxxxxxyyyyyyyyyyzzzzzzzz |
+|   yyyyyyyyyy |  |   yyyyyyyyyy |   +--------------------------------+
++--------------+  +--------------+
+
+The last 8 characters are lost on the D7 and not flashed on the D700.
+But when the display is called up again on the D700, the full 28 are
+available.  Thus, the first 20 bytes are seen by everyone, so the last
+8 should be less important optional information.
+
+For example, this typical UO-22 status packet is not well formatted for
+quick human consumption:
+
+UOSAT5>STATUS:Fri Jan 28 01:48:46 2000 Up: 23/17:11 EDAC= 88 
+              F:147696 L:146688 d:1 [0].
+
+The objective is to make the 20 characters of status the most useful
+to casual viewers of the bird.  Maybe something like:
+
++--------------+     +--------------------------------+
+| ECHO-1:      |     | ECHO-1:                        |
+|   FM Voice / |     |   FM VOICE /PSKenabled on Lbnd |
+|   PSKenabled |     +--------------------------------+
++--------------+
+
+The trick being to understand what ECHO status is most important to
+these mobile and HT users and to figure out the best arrangement of the 
+20 (or 28) characters to be most human readable...
+
+BULLETIN FORMAT
+---------------
+
+Although the Kenwood can receive and save up to 10 BULLETINS, these 
+also compete with personal messages to the same users, so in general
+users do not like to see BULLETIN SPAM.  But they do like to see
+what is going on.  So, although I recommended a 4 Bulletin buffer
+capability in ECHO, in general, they are not all four needed to be
+on all the time.  The AX.25 APRS format for a Bulletin is as follows:
+
+ECHO-1>QST::BLN1ECHO :This is a bulletin text up to 64 bytes long.
+ECHO-1>QST::BLN2ECHO :The 64 count begins with the word "The" in this line.
+ECHO-1>QST::BLN3ECHO :The BLN# is requied by the APRS format.  The ECHO is optional.
+ECHO-1>QST::BLN4ECHO :Notice the packet data begins with a :xxxxxxxxx: field.
+
+The :xxxxxxxxx: is a 9 byte fixed length TOFIELD which is used for APRS messages.
+In this case, the message is TO the callsign of BLN#ECHO which identifies it as
+a bulletin to all users on frequency, with a sequential number, and then an
+optional bulletin group (ECHO).  Notice that it has to be padded to the full 9
+byte length with an extra SPACE character to match the APRS 9 byte call field.
+
+On the D7 the bulletin is read as 4 lines of 12 bytes each on 2 pages.
+On the D700, the bulletin is read as 3 lines of 22,22,21 bytes in length.
+But since these bulletins will be composed and  uploaded from the ground, there
+is no need to worry about the detailed word-wrap formatting here.  Just make
+sure it begins with the :BLN#ECHO : APRS header and it will work...
+
+de WB4APR
+Bob
+
+

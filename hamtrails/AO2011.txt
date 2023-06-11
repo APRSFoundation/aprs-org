@@ -1,0 +1,52 @@
+APPLE ORCHARD MTN 2011 REPORT                             26 July 2011
+----------------------------------------------------------------------      
+                                        David, n4wdc@va.metrocast.net]
+
+AT Golden Packet Apple Orchard Mountain 2011 Results:
+
+AOMTN Team: Chuck, K4QS, Jim, NX4Q, David, N4WDC Since this site was 
+the location of an FAA radar installation, we had to park about 3/4 
+mile and hike south on the AT in order to not violate the "Do Not 
+Enter" sign. The AT followed along the western ridgeline through the 
+"Guillotine" then up to the top. 
+
+We carried a 33 AHr gell cell strapped to two of the 10 ft. poles.
+We had some A123 nanophospate cells, but just not sure they would last, 
+not knowing how much power we would need.
+
+We set up on top of Apple Orchard Mtn. just east of the AT AOMTN 
+marker. See pic.  We used a Diamond X510N omni atop 30 ft. of 1 1/2 
+inch galvanized pipe.  The mast was leaned against an old dead tree, 
+but was guyed to support.  The feedline was about 60 ft of LMR400.
+
+The Kenwood TM-D710 was configured in accordance with WB4APR's 
+instructions.
+
+We went live at 1052 EDT. Mike, KI4RIX, about blew me off the rocks 
+when he came booming in on the UHF voice freq about 1145! Mike could 
+copy me reliably at the low power setting on the D710. John, KX4O, 
+atop Hawksbill Mtn needed me on the mid power setting.
+
+We were able to see packets as far north as GDHill-8 and 5PTS-8 and
+as far south as Springer-1. Our digipeater appeared to repeat without 
+any problems.  
+
+We had to shutdown at 1545 due to an approaching storm coming in 
+from the southwest.  I would like to have stayed longer, but the 
+only shelter was the radar installation with posted signs everywhere 
+stating "Keep Out" or you will be prosecuted!
+
+Several AT hikers stopped by to see what we were doing, no further 
+interest noted.  We didn't run across any black bears, but did see 
+bear scat (fortunately it didn't have any bits of gnashed up HT in 
+it).
+
+The temp was a pleasant 85 and sunny.
+
+Chuck made a successful SOTA activation of Apple Orchard Mtn, W4/RA-
+001 with 19 CW QSOs in the log book!  Cave Mountain Lake Campground 
+was very enjoyable.  Looking forward to next year when I'll be in 
+better shape!
+
+David, N4WDC
+

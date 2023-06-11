@@ -1,0 +1,80 @@
+GROUND STATION USER EQUIPMENT:
+
+Today we did the same DATA performance tests on two D700 mobile radios as we
+reported last week for the Handheld D7.  The results were very similar with 1200
+baud being about 7 dB better than 9600.  Thus, we conclude that for
+reliable delivery of short text messaging to mobile and handheld satellite
+users, that a 1200 baud 2m downlink is by far (7 dB) the most effective from a
+power budget standpoint.  Going to 9600 baud requires 5 times more power
+and only gains about a doubling of throughput due to TX delays...
+
+TEST CONDITIONS:  Two D700's were separated by about 1/4 mile with 30 
+to 40 dB of attenuators on both ends connected to mobile whips.  Radios
+were operated at the lowest power setting.  Attenuators were adjusted to
+find the 50% and 100% performance rate at 1200 and 9600 baud on the
+Smeter.  Then we used a HP Sig gen to calibrate these readings to dBm.
+S meter readings shown are the number of LCD segments lit.
+ 
+BAND  FREQ    DATA RATE   50%          100%      Comments
+----  ------- ---------  -------     ----------  ----------------
+ A    145 MHz 1200 baud  S0 -123dBm  S0 -120dBm
+ B    145 MHz 1200 Baud  S0 -121dBm  S0 -118dBm  About 2 dB worse
+ A    145 MHz 9600 baud  S2 -116dBm  S3 -113dBm  About 7 dB worse
+
+ B    435 MHz 1200 baud  S0 -122dBm  S0 -119dBm
+ B    435 MHz 9600 baud  S3 -115dBm  S3 -111dBm  About 7 dB worse
+
+PACSATS:  The above tests are between two identical radios.  My PACSAT
+experience has shown that the 9600 baud PACSAT downlinks often decode with
+even less signal, often at S0!  So they do seem to have optimized signals.
+
+
+HANDHELD PERFORMANCE:
+
+During July 2000, W4HFZ on temporary assignment to the Academy, and I 
+compared 1200 and 9600 baud performance using the SAME radios under the
+same channel under controlled conditions.  The results in this test do
+show about a 7 dB difference between 1200 baud AFSK and 9600 baud FSK.
+
+TEST CONDITIONS:  Two THD7 Handhelds were separated by 100 feet of RG58 with
+70 dB or more of SMA RF attenuators on both ends and with RF clamp on
+ferrite chokes at 4 places along the coax.  Radios were operated at
+Extremely Low power setting.
+
+PROCEDURE:  Attenuators were adjusted to find the 50% and 100% performance
+rate at 1200 baud, then we changed to 9600 baud and re-adjusted
+attenuators to get the same performance.  S signals are the number of LCD
+segments lit.
+
+BAND  FREQ    DATA RATE   50%          100%      Comments
+----  ------- ---------  -------     -------     ----------------
+ A    145 MHz 1200 baud  S1 -120dBm  S1 -117dBm
+ A    145 MHz 9600 baud  S5 -113dBm  S5 -110dBm  About 7 dB worse
+
+ B    435 MHz 1200 baud  S0 -119dBm  S0 -116dBm
+ B    435 MHz 9600 baud  S3 -111dBm  S3 -109dBm  About 7 dB worse
+
+S-METER:  Although the above test shows that there is a difference in
+the S meter on the two bands, the RF signals are about the same.  Within
+each S meter range, there appears to be about 3 dB and that is the
+difference between solid and marginal decoding.
+
+PACSATS:  The above tests are between two identical radios.  My PACSAT
+experience has shown that the 9600 baud PACSAT downlinks often decode with
+even less signal, often at S0!  So they do seem to have optimized signals.
+
+CAVEATS:  Even though the radios are identical, it is still an apple and
+oranges comparison, because, of course, the audio path and filtereing is
+different  between the two modems.  But if we "assume" that kenwood did the
+best they could with each, within their other constraints, then this does
+give us a data point that tends to confirm the performance difference
+between 1200 AFSK and 9600 FSK baud.
+
+Given that there is a further 9 dB or so PATH loss difference between VHF
+and UHF, this gives us a baseline for trying to design the optimum simple
+2-way digital messaging satellite links to handhelds.  On the downlink, we
+want to deliver a message to an HT in your pocket.  On the uplink, we want
+to be able to transnmit to the bird with the whip held in the clear.
+
+
+Bob Bruninga, WB4APR

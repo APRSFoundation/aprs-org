@@ -1,0 +1,89 @@
+Comers Rock - 2013                                           22 July 2013
+-------------------------------------------------------------------------
+
+Zach, KJ4QLP
+
+The following is the report from Comer's Rock for this year's Golden 
+Packet Event.  This year I ran the site solo representing The Virginia 
+Tech Amateur Radio Association (club call K4KDJ).  Our setup consisted 
+of a single D700 (pre-programmed with the serial cable before the event) 
+connected to a diamond X-50 collinear antenna on about a 15 foot mast.  
+Everything was powered off a 35aH SLAB.  I arrived onsite about 0900.  
+I hauled everything up to the concrete slab at the lookout (a couple 
+hundred yards up some stone steps/trail), and had the site up and running 
+by about 1000.  I also had a 9'x9' popup tent for shade, table, camping 
+chair, and backup equipment (basically all the radio gear listed above 
+times two, including an extra 35AH SLAB).  
+
+Around 1100 the adjacent sites came online and I had solid UHF voice 
+comms with Roan Mountain and Apple Orchard for the entire event.
+I ran High power on VHF for the digipeater and Medium power on UHF for 
+voice.
+
+For pretty much the entire event I saw solid traffic between sites 2 
+through 5.  I had full bars on 144.34 from my adjacent sites.  Towards 
+the end of the event (around 1330 I think) I got single packets from 
+Sites 8 and 9.  Maybe an hour later I got single packets from sites 
+6 and 7.  Never heard anything from north of site 9 or south of site 2.
+Next year I will focus on condensing the required amount of equipment 
+to haul up to the top of the hill, hopefully into a single Man Portable 
+Pack type configuration.  
+
+I also want to get a piece of logging software together that will time 
+stamp and log any packets sent or received from the digipeater.  What 
+I'm thinking is a small laptop connected via serial to the D700.  Every 
+time the digipeater receives a packet it would output to the serial port.  
+The computer would then time stamp the packet arrival and store it in a file.  
+The hope would be that every packet sent through the site would then be 
+logged (with a timestamp), and at the end of the event the log could be 
+sent to Bob for further analysis.  If every site did this then at the end 
+of the event there would be a complete history of what happened, where it
+ happened, and when it happened.  Any guidance on how to achieve this 
+would be greatly appreciated.
+
+That's about it, pretty straight forward event this year at Comer's Rock.  
+Had about 5 families stop by the site at various times and told them what
+ was going on, an excellent opportunity for VTARA to interface with the 
+public.  If there are any questions or anyone wants more details feel 
+free to contact me at this email address or at zleffke@vt.edu.
+
+73s,
+Zach, KJ4QLP
+
+P.S. regarding Effort!
+----------------------
+
+In maybe 5 different trips back and forth, I carried 2 35AH SLABs, 
+1 9x9 tent, a fold up camping chair, two backpacks (full of radios, cables,
+ handtools, lunch, water, first aid kit, etc.), a mast kit (8 fiberglass 
+4 foot mast sections, plus ropes and a tripod adapter), a small tripod 
+(backup for the mast kit), 2 Diamond X-50 antennas, a 2'x4' collapsible 
+table, my amateur radio Acer laptop, my personal laptop (to work on my 
+Thesis in my down time during the event), and our club sign to hang off 
+the tent.
+
+Carried it all up, and when the event ended, carried it all down. It wasn't
+ very far from the parking area to the peak, maybe 150 yards or so.  
+The tough part was the steepness of the trail (though it is made easier
+ by steps carved in the rocks).
+
+Don't know the total weight, but the batteries were the heaviest single 
+items.  Thought about leaving the backup equipment in the truck, but wanted 
+it on hand to reduce the amount of time off air in the event of a failure.
+Not too bad really, I arrived plenty early, so it was nice and cool, and 
+took my time and carried the heavy stuff first when I was fresh.
+In the future though, I doubt a 35 AH battery is required, let alone two.  
+
+I want to look into condensing everything into a single pack (something like 
+hard mounting everything on an ALICE pack frame), and leave all backup items 
+in the truck, unless needed.  
+
+In fact one could probably operate the Comer's Site from just the parking 
+area with the same results (its an excellent site), but if your going to 
+sit on a mountain all day, you might as well sit on the peak and enjoy the view.
+
+-Zach, KJ4QLP
+
+
+
+

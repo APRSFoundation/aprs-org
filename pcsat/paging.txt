@@ -1,0 +1,67 @@
+WORLDWIDE APRS MESSAGING                   WB4APR (draft 8 Sep 2001)
+------------------------
+
+Inherent in PCsat is the ability to deliver short one-line APRS type
+messages to a handheld anywhere.  THis can be done live by anyone 
+within the footprint of the recepient for delivery on the 145.825 
+downlink.  In addition, there is the potential for delivery of such
+messages to anyone anywhere via the existing national terrestrial
+144.39 frequency as well.
+
+But since each such message will add to the channel load in each of
+the almost 1000 local 144.39 LAN's nationwide, this capability must
+be used sparingly.  To limit usage of this system, it is reserved
+only for special events, or remote travelers who make a reservation
+for such service in advance.  Users will submit a travel plan which
+will include the following data:
+
+  CALL
+  Email address
+  phone numbers
+  description of event, travel, or need
+  List of authorized sending stations (HAM calls)
+  beginning date
+  duration in number of days
+  LAT/LONG (in whole degrees) of center of travel area
+  frequency (144.39 or 145.825)
+
+An automatic centralized server system will accept such trip plans and
+will assign a priority to each reservation.  During the travel period,
+any APRS messages addressed to those individuals from the authorized
+sending stations will be held until PCsat is over that location.  The
+packets will be transmitted once a minute during the pass.
+
+It is easy to see that such a delivery system can quickly become
+saturated with only a few lines for only a few people.  Thus the need
+for very careful management of the message load.
+
+CENTRAL PCsat SERVER:
+
+A central PCsat server will perform the following functions:
+
+1) Accept and prioritize all Travel Plans
+2) Respond with priorities and limitations
+3) Accept and queue up authorized messages
+4) Respond to each with a copy of the sorted queue of messages for
+   that persons intended recepient so he can eliminate prior
+   OBE messages and or delete old traffic, or note the
+   messages that are above or below the load threshold.
+   
+5) Maintain a load threshold to limit the downlink to only say a dozen
+   or so of the highest priority messages.  Some messages may be
+   below the threshold.  Inform senders of status of all messages
+
+6) At the predicted time for the LAT/LONG of the location of the
+   target traveler, inject live messages into the APRS internet 
+   system marked for RF delivery for THE specific PCsat SATGATE
+   for that area.  ALL timing is done at the central server
+   although the SATGATES will have a built-in 30 second delay to
+   allow several packets to be bundled into a single uplink.
+
+The only other packets on the 144.39 downlink will be a single once a
+minute PCsat position report.  The purpose of this packet is to 
+alert mobile and portable statiosn that PCsat is in view and that a
+QSY to 145.825 will allow them to work the bird live if they desire.
+
+de WB4APR
+Bob Bruninga

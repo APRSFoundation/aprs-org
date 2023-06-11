@@ -1,0 +1,91 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+CAVES.TXT         APRS FOR CAVE COMMUNICATIONS
+<BR>===========================================================================
+<BR>Document dated:   16 Apr 97
+<BR>Author(s):        Bob Bruninga, WB4APR <bruninga@nadn.navy.mil>
+<BR>ABSTRACT:         CAVES.TXT Using APRS for cave communications.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+<P>
+    The August 96 issue of QST carried an article by Mike Bedford, G4AEE
+about the difficulty of radio/emergency communications underground.  The
+only thing that works is induction methods using VLF frequencies.  Ranges
+are limited to about 600 feet or so...  VHF and UHF are useless except
+for line of sight...   OR IS IT?   I wonder if they have considered the
+advantages of packet radio as a means to extend the range of VHF/UHF radio
+via multiple hops?
+<P>
+Although APRS is normally based on GPS position reporting, its map
+display could be ideal for tracking underground teams in the cave!
+(A sketch of the cave passages can be easily prepared in just a few
+minutes using a mouse since absolute lat/long accuracy is not required
+because a GPS could never be used underground anyway).  As long as
+the sender places himself on the map approximately by cursor movement,
+all receving stations will see him at that location!  Even positions in
+uncharted passages can be reported by estimating your location relative
+to the known sketch.
+<P>
+     The advantage of using packet is based on one fact....  That you
+can EXTEND VHF/UHF radio ranges by simply dropping packet digipeaters
+along the cave route as you pregress inward.  These digipeaters can
+relay VHF or UHF communicatinos over and over again (up to 8 times)!
+<P>
+DIGIPEATERS can be built with a single HT and tiny packet TNC.  Running
+on AA cells each digipeater could last for a few days and be packaged
+into less than a 1/2 liter volume.  The effecient APRS connectionless
+protocol and GENERIC callsign ALIASES make it easy since the cave units
+do NOT have to remember the callsigns of the digipeaters or how to
+construct the path!  Simply enter the path of HOP7-7 for a maximum
+seven hop path.  And set all TH-D72 radios to UITRACE HOP to enable 
+the NOPn-N digipeating.
+<P>
+If you were able to get even 1/4 mile between digipeaters, then you could
+use this system for up to two miles inward!  Here is how I would do it:
+
+<LI> Set a digipeater in the mouth of the cave which couples well, both
+    into the main cave passage and well out to the above ground team.
+
+<LI> Proceed into the cave.  You can "ping" the digi at any time.  When you
+    begin to see the signal strength get low and when you make a major
+    path change, drop a digi or set it on a convenient rock shelf.
+
+<LI>  Repeat step 2 as you proceed. 
+
+<LI> Add a digipeater on a nearby hilltop to extend the comms link back
+    to town for arm-chair tracking by loved ones back home..
+<P>
+THis APRS generic digipeating is ideal in caves because not more than a
+few digis will hear each other at any time.  Every APRS'er knows that
+a packet launched to WIDE7-7 could bounce around dozens of times
+in a conventional above ground network.  This would practically kill a
+network trying to support dozens of users.  But since the cave application
+will only have a few stations underground, and they will only use the
+HOPn-N path, then any leaks will not decimate the normal APRS network.
+
+<P>
+The BIG
+advantage of APRS and digipeating is for the long straight paths and the
+ability to couple the communications over long straight distances
+underground to automatic links above ground.  This enables you to
+establish solid APRS packet COMMs from anywhere above ground well down
+into a "forward outpost" deep in the cave.  Those last 600 feet can still
+use the bulky LF loops for crawlers as needed.
+<P>
+Areas for research:
+
+<LI>  How far does VHF/UHF go in a cave?  Is UHF or VHF better?
+<LI>  Is there a waveguide effect or is it reflections?
+<LI>  What is the best way to couple energy between passages?
+<LI>  Does a long wire couple VHF/UHF deep into passages?
+<LI>  What is the ideal portable APRS terminal?  The HP palmtops? (update 2010: The D72 HT!)
+<LI>  Is there a digital control capability to avoid the infinite
+       loop that would result from the use of DIgital voice record
+       /playback chips via multiple simplex repeaters?
+<P>
+The advantage of straight APRS packet, though, is that NO development
+is required!
+
+<P>
+Bob Bruninga, WB4APR
+<BR>WB4APR at AMSAT dot ORG

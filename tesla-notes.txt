@@ -1,0 +1,21 @@
+*******************************************************************************
+*      Notes on drawing home backup power from the 12v battery in a Tesla     *
+*******************************************************************************
+
+I got these comments from James Whewell:
+
+yes it is sneaky.
+
+It works fine with the car occupied, but in park mode, you can enable Dog mode
+or Camp mode to keep things running.  I have a Relay off a circuit that remains 
+on in dog mode; then I tap directly into the 12v circuit, at the DC : DC-
+converter, rather than the battery, as that is what other engineers have found
+the best source.  However, once an unexpected very high load, like 80A is 
+detected; the Telsa goes into an error state.  The terms-and-conditions state 
+you cannot run your house from an inverter from your car!!! they want to sell 
+you a power wall.
+
+Now, if you could tap the high voltage DC and get an inverter on that, it would 
+be way more useful; 4kw to the house.  but that would void the warranty for sure.
+
+James

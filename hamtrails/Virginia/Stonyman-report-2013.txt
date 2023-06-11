@@ -1,0 +1,147 @@
+Stony Man - 2013                                             22 July 2013
+-------------------------------------------------------------------------
+
+
+What an interesting day on Stony Man.  We got there in plenty of time.
+
+We set the 2m antenna up slightly in the woods to be out of other folks'
+ way.  That was a bit of a problem last year.  After a quick install, 
+we attached the coax to the diplexer.
+
+I lost my nice collinear 440 antenna so brought along a "connector" 
+monopole with bent down leads, measured to 440 with my trusty wavelength 
+measuring tape, bend the tip, hung it on a small tree branch and hooked 
+up the coax to the diplexer.
+
+I connected the coax to the radio, hooked up a battery expecting this 
+would be a cinch... because nothing changed at all from last year.
+
+I did expect that makeshift 440 antenna to not produce as good results 
+as last year, but figured there was plenty of margin.
+
+So... I fired up the rig and loaded PM3 (same as last year) and made a 
+few edits to status messages.
+
+We were early so didn't hear much for quite a while.  Soon Dave from 
+Apple Orchard 5 gave a shout on 445.925.  We responded on the 710.  
+Nice signals both ways, not bone crushing, but adequate.  I thought to 
+my prideful self... "Awesome, VHF will be even better especially with 
+the bigger antenna."
+
+I heard Dave's APRS packets just fine.  He could not hear a thing from me.   Hmmm... transmit UHF on sloppy antenna good... transmit VHF on better antenna nonfunctional.
+
+Later, Dick came online with Maryland Mountains 7.  Same thing... booming
+ voice signals on 445.925 and very weak to almost nothing heard from us 
+on VHF.  His APRS packets boomed in to us without problem.
+
+So there we were wondering if we weren't digipeating or something.  Eric 
+monitored my VHF APRS transmit signals and they were there.  I switched 
+over to PM2, my regular mobile setup, and quickly received many ACKs of 
+my beacon.  I switched back to PM3.
+
+Then Eric and I tried another 2m/440 antenna.  Same result.  UHF rocked, 
+VHF transmit didn't.
+
+We tried Eric's voice radio on his antenna.  Same result.  UHF rocked, 
+VHF transmit didn't although both AO5 and MM7 heard a faint FM voice 
+from us.
+
+Arggggg...
+
+We moved the 2m antenna back to the rock tip and removed the diplexer... 
+VHF antenna was now straight to the APRS 710.  Eric handled UHF with his 
+radio.
+
+Same thing.  I could receive APRS VHF packets easily, but no one could 
+hear us.  In fact, by this time, I can say I heard beacons from station 
+2 to 9.
+
+Dick from MM7 diagnosed his A-Band receiver was deaf and moved the APRS 
+functionality to the B-Band.  Now MM7 could hear my packets with the 
+greatest of ease.
+
+I could also hear GDHill 8 packet chatter quite easily although I don't 
+know if it was strong enough for APRS.
+
+AO5 still could not decode packets from us although I think he said he 
+could hear them.  So while Dick's receive was a problem there was still 
+something odd going on with propagation.
+
+Finally, I simply upped the APRS VHF power to 50 watts.
+
+Everything worked... well enough.
+
+Every functional check I made on the antennas suggest they were working 
+just fine.  Once the receiver issue at MM7 was resolved, Dick and I had 
+the usual solid signals on both UHF and VHF.  This left the link between 
+Stony Man and Apple Orchard to wonder about.
+
+It's easy to see why UHF signals from AO5 to SM6 might be stronger than 
+VHF... Dave has a very big collinear antenna with, I think, 3 phased 
+portions for VHF and 5 or so for UHF.  That should mean a slight gain 
+advantage.
+
+It doesn't explain why Dave could not hear us on VHF very well despite 
+our antenna and radio swaps.  I don't think his VHF receiver was deaf 
+since he could hear Station 4 just fine.
+
+----
+
+So the end result is, we did get things working and have already scouted 
+out a slightly higher spot on Stony Man to favor Apple Orchard a bit 
+better next year.
+
+Plus the fact the UHF link between SM6 and AO5 with a dinky antenna hung
+on a branch completely blew away the big VHF link with its stately, 
+bigger, better antenna.
+
+It sure looks like a VHF transmit problem from Stony Man.  A problem in
+common with two radios and two antennas in every combination.
+
+Fun.
+
+John Huggins, K4XO
+--------------------------
+
+Regarding Stoneyman to GSD hill direct packets:
+
+
+Stonyman was heareding GD Hill reliable with one bar.  Note, I put 
+10 Watts to the Maryland Mountains because that was more than enough. 
+At some point I move my antenna and upped the power to 50 Watts so 
+AO-5 could hear me.  This was overkill for Maryland Mountains.  
+So I was ten watts at first then 50 later.  This could account for you 
+seeing me with two bars while I saw you with one. 
+- - - - -        
+
+
+John Said:
+
+I get -19 dB from the point where 95% occurs.  I'd say more like 65% 
+probability is what I'm seeing with Radio Mobile.
+
+As far as average signal strength goes, however, it says two bars... 
+just like you saw.
+
+I saw a reliable and repeatable 1 bar from you so we were pretty well 
+symmetrical.  In fact once things settled in, south bound packets got 
+into a rhythm of weak packet (from GDHill), booming packet (MMtns), 
+digipeat from me, and then one more packet heard (I guess from AO MTN.
+
+John
+
+I'll need to look at KD6AKC's log again to see if I ever decoded you 
+straight.
+
+On Mon, Jul 22, 2013 at 11:11 AM, Bob Bruninga <bruninga@usna.edu> 
+wrote:
+
+John, just curious what the link looks like from Stonyman to GD hill, 
+since I heard them at 2 bars and decoded  some of their packets.  
+I don’t plan on skipping MDMTN, but just curious what your LINK 
+calculator gives for this link for comparison to my actual results.
+ 
+Bob. Wb4aPR
+
+
+

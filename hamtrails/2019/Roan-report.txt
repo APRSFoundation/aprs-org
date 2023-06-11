@@ -1,0 +1,49 @@
+***************************************************************************
+*      ATGP 2019 Report for ROAN MOUNTAIN - Glen N4AZR & Bill KB4KFT     75
+***************************************************************************
+
+Ops: Glenn N4AZR and Bill KB4KFT
+
+After a nice overnight stay in Marion NC, I arrived on-site at about 
+1015am. I had my D700 up by about 1030am and my D72 / Linux laptop up soon 
+after. Established links to Comers and Clingmans quickly. I noticed that 
+I wasn’t digipeating right away.. My D700 keeps losing the serial port 
+settings after power off. Easy enough to reprogram in the field though. 
+But maybe it’s time for an upgrade to a new D710?
+
+
+Bill KB4KFT arrived a short time later. I was glad to see him as he saved 
+me from battery issues last year.. This year I tested with a new LiFePO4 
+10AH battery. I was initially trying to be conservative with the new 
+smaller battery, but it did fine. I had my marine battery just in case...
+verified fully charged this time :)
+
+
+For some reason I cannot reach Clingmans via 440. I can hear them fine 
+although a weak S1, but even with high power I barely got through at times. 
+I may explore some other areas to operate on Roan for 2020. The park is 
+large with a lot of areas that may offer better links than where I have 
+been operating. To work around this I sent messages to Clingmans using my 
+D72 on 2m via HOP7-2 which worked fine.
+
+
+At any rate the event was pretty much the same previous years. The southern 
+stations established link pretty fast. We eventually saw all the way to 
+Katahdin and Mt Saint-Joseph. 9600bps works great too.
+
+We had some big storms come up around 1230pm and again around 245pm that 
+made us go QRT for good. Otherwise mostly cloudy skies and temps in the 
+60s to 70s. We were fortunate with 6k+ feet of altitude on our side with 
+the heat wave affecting other areas.
+
+Sorry we had to shut down early, but that lightning was too close for 
+comfort! We dropped the antenna and had to wait about 30 min for a break 
+to pack it all up. Thanks to Bill KB4KFT for staying late and helping me 
+pack up in the rain.
+
+See you all next year!
+Glenn Crissman
+__._,_.___
+________________________________________
+
+________________________________________

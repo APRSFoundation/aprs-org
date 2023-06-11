@@ -1,0 +1,75 @@
+MOUNT EQUINOX REPORT - 2016
+---------------------------
+Richard Crow, N2SPI
+
+SUCCESSES:
+
+1) At 1200 Baud, stations from COMERS-4 to EQINOX-12, plus SLIDE-10, 
+were heard, decoded ,and displayed. (I got a really nice real-time 
+display of all these stations in a line on my UiView map of the 
+eastern U.S.)
+
+2) At 9600 Baud, stations from PAMTN-9 to EQINOX-12, plus SLIDE-10. 
+were heard, decoded, and displayed. (Again..., nice uiView map display.)
+
+3) On 445.925 MHz FM simplex, GRYLCK-11 and SAMSPT-10 were clearly 
+heard, although SAMSPT-10 couldn't hear me due to local RFI. 
+
+4) I took the liberty of running "uiIView"at EQINOX-12, so it would 
+be super easy to hammer out APRS-type messages on my Toshiba laptop. 
+Consequently, messages were sent to SAMSPT-10, SLIDE-10, and GRYLCK-11. 
+All messages were sent successfully, as "acks" were received for all.
+
+5) In fact, I used uiView to  exchange quite a bit of message traffic 
+with SAMSPT-10, which was fortunate since he couldn't hear me on 445.925. 
+
+6) In return, replying messages were successfully received from all: 
+SAMSPT-10, SLIDE-10, and GRYLCK-11
+
+
+PROBLEMS:
+
+1) Nothing heard from the station to my north, MTWASH-12. Apparently 
+they never showed up. In past years, their signals have been 
+exceptionally strong. So if they were there, they would have "blown me 
+over" on all frequencies.
+
+2) I'm sorry to say this, but the 2m packet signal from GRYLCK-11 was 
+marginal, "on-again/off-again". For example, sometimes not only could 
+I hear that GRYLCK-11 was digipeating my beacon, but my TM-D710G would 
+also decode and display the digipeat. However, at other times, though 
+I could hear that GRYLCK-11 was digipeating my beacon, my D710G was 
+unable to decode the signal received. I should add that the 2m packet 
+signal from GRYLCK-11 was always a little bit noisy.
+
+By comparison, my TM-D710G could always decode my beacon digipeats and 
+all other packet transmissions from SAMSPT-10. In other words, I could 
+always hear SAMSPT-10 directly, loud and clear, no digi necessary, no 
+problem.
+
+So, knowing it's line-of sight from EQINOX-12 to the summit of Mt. 
+Greylock, I asked Don at GRYLCK-11 if they were at the summit. He 
+replied they were not due to strong RFI there. Whatever location 
+they were using,  I'm sure GRYLCK-11's signal in other directions 
+was great. But in the direction of EQINOX-12, not so much.
+
+Now, at EQINOX-12, I use a DCI-146-4H 2m Bandpass Filter to prevent 
+just this sort of RFI issue. To facilitate this, however, I operate 
+my TM-D710G as a 2m packet single-bander. Inconvenient as this may 
+or may not be to some, it nonetheless may be a solution to GRYLCK-11 
+"summit RFI problems". It sure would be nice to see GRYLCK-11 operate 
+from the Greylock summit, just as the "W2SZ/1 Contest Group" does 
+every year, year after year.
+
+Later, if I get a chance, I may post some photos of my uiView map 
+display during Golden Packet 2016, plus my activity log for the event. 
+So, be on the "lookout".
+
+P.S. ...Just a thought: Another bandpass filter, say a DCI-445-10C 
+(70cm Bandpass) , might solve SAMSPT-10's problem hearing FM simplex 
+on 445.925 MHz.
+
+73,
+Richard Crow, N2SPI
+__._,_.___
+n2spi@yahoo.com 

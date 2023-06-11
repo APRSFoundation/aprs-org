@@ -1,0 +1,94 @@
+Mid Atlantic New n-N Paradigm Plan                           8 Dec 2004
+-----------------------------------------------------------------------
+
+We must modernize APRS in the Mid-Atlantic region.  And it can be done
+overnight by remote-digi-sysops, with little impact on existing users
+and yet open up more efficient pathing and troubleshooting.  It is based
+on the principles of the new n-N paradigm:
+
+1) Long Chain Interstate ##LNKn-N chains
+2) Continuing to support WIDEn-N where possible
+3) 100% traceability of WIDEn-N to better tune the network
+4) Full support of Mobiles using RELAY,WIDE, or SS2-2
+
+These recommendations are based only on what I can see on the air from
+Maryland.  Feel free to greatly extend these LINKS indefinately as far 
+as the interstate goes!  This system fully supports the long haul traveler, 
+AND reduces WIDEn-N QRM to the rest of us by a hundred-fold compared to
+comparable WIDEn-N routing with abusive long paths.
+
+The design is simple.  DIGI sysops have TWO GENERICn-N paths they can
+support, UIFLOOD and UITRACE.  Simply drop WIDEn-N and replace it with
+the local interstate ##LNKn-N and change the UITRACE paramter to your
+state SSn-N which will be fully tracable and does not then need a
+leading WIDE which causes more dupes.  
+
+Interstate-64 64LNKn-N Kentucky to Norfolk:
+DIGIS:   KF4UCI-4 KF4UCI-3 N9WMU-3  N4EVA-11 
+UIFLOOD: 64LNKn-N 64LNKn-N 95LNKn-N 64LNKn-N
+UITRACE: VAn-N    VAn-N    64LNKn-N VAn-N
+
+Interstate-95 95LNKn-N NC-to-NY City:
+DIGIS:   W4NHV-9  KD4PBS-3 N9WMU-3  K4MQF-1  KV3B-2   N3KTX-1  N3IP     KB2EAR-1
+UIFLOOD: 95LNKn-N 95LNKn-N 95LNKn-N 95LNKn-N 95LNKn-N 70LNKn-N 95LNKn-N 95LNKn-N
+UITRACE: NCn-N    NCn-N    VAn-N    VAn-N    MDn-N    MDn-N    PAn-N    GSPKYn-N
+
+Interestate-81 81LNKn-N Tennessee to Eastern PA
+DIGIS:   N4ZZQ-3  Roanoke? K4EME-3  N4DSL-3  N3KTX-4  N3XBO-5  W3ND-2
+UIFLOOD: 81LNKn-N 81LNKn-N 81LNKn-N 81LNKn-N 70LNKn-N 81LNKn-N 81LNKn-N
+UITRACE: VAn-N    VAn-N    VAn-N    VAn-N    81LNKn-N PAn-N    PAn-N
+
+PA Turnpike PATPKn-N Pittsburg to NJ:
+DIGIS:   WF8X-4   KB8CVP-7 N8YIB-2  KF3M-1   W3ND-2   N3XBO-5  N3IP
+UIFLOOD: 70LNKn-N PATPKn-N PATPKn-N PATPKn-N 81LNKn-N PATPKn-N 95LNKn-N
+UITRACE: PATPKn-N PAn-N    PAn-N    PAn-N    PATPKn-N PAn-N    PATPKn-N
+
+Interstate-70 70LNKn-N  Ohio to Baltimore
+DIGIS:   WF8X-4   N3KTX-5  N3KTX-4  N3KTX-2  N3KTX-1
+UIFLOOD: 70LNKn-N 70LNKn-N 70LNKn-N 70LNKn-N 70LNKn-N
+UITRACE: PATPKn-N PAn-N    81LNKn-N MDn-N    95LNKn-N
+
+Inter-Coastal-Waterway or EAST COAST COASTn-N Florida to NJ 
+DIGIS:   WA4KXV   N4EVA-13 N4EVA-12 XXXXXXX- WX2NJ13  WX2NJ15
+UIFLOOD  COASTn-N COASTn-N COASTn-N COASTn-N COASTn-N COASTn-N
+UITRACE  VAn-N    VAn-N    VAn-N    VAn-N    GSPKYn-N GSPKYn-N
+
+Notice that if you want to continue to support WIDEn-N for a while, please 
+move it to the UITRACE parameter so that at least they are traceable.  
+There is no need to trace the long-haul LINKn-N's because they are linear 
+and we dont care what it takes to get there, because collateral damage is 
+vastly reduced compared to all-directional-flooding like we used to have!
+
+Remember, if you are not ready to go cold-turkey on WIDEn-N yet, you
+dont have to, this is just adding a new capability and dropping the
+old TRACEn-N which no one is using.  But if you are fed up with WIDEn-N
+like I am, then please feel free to drop it now.
+
+ALSO, all digis along an interstate Corridor do not need to support the
+##LNKn-N, only enough to cover the long haul.  Where there is plenty
+of overlap, this allows more flexibiitly for other state SSn-N's or
+LANn-N's.
+
+If you dont like this plan, then let us know your plan for reducing QRM.
+But if you want to get control of our network so that it works locally
+for users and low power trackers, then please lets get moving on this! 
+Please report when these or other LINKS have been made so that we can
+now PLAN OUR NETWORK instead of letting it just drown in uncontrolled
+WIDEn-N flooding...
+
+DIGIS marked with a * are actual!  All others are recommendations only.
+This page will be updated periodically.  The neat thing will be that
+once it is going, we can simply search FINDU for a MAP of every digi on
+every chain! (as long as you put the name ie: 81LNK in the BText)
+
+Be sure to also update your BLT's and LTPaths and PHG's and BEACONS
+while you are at it.  See
+
+http://www.ew.usna.edu/~bruninga/aprs/digi-rates.txt 
+
+Or read all about the new n-N paradigm on
+
+http://www.ew.usna.edu/~bruninga/aprs/fix14439.html 
+
+de WB4APR, Bob
+

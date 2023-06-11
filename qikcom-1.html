@@ -1,0 +1,266 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+   <TITLE>QIKcom-1 Module</TITLE>
+   <META NAME="Author" CONTENT="Bob Bruninga">
+   <META NAME="Description" CONTENT="QIKCOM-1 Satellite Project">
+   <META NAME="Keywords" CONTENT="cubesat, satellite, PCsat, buoy, ocean,environmental sensors, APRS, APRsat, buoys, oceanography, Satellite, Cubesat,  Tracking, Bruninga, LEO, GPS">
+   <META NAME="Classification" CONTENT="Science">
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#48D1CC" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000">
+
+<IMG SRC="QIKcom/Held-in-hand0019.jpg" align=right>
+
+<IMG SRC="logos/aprs.gif" HEIGHT=112 WIDTH=200 align=left>
+<CENTER><P><B><U><FONT SIZE=+2>
+QIKCOM-1 - Deployed from ISS on 27 Oct 2017
+<BR>APRS User Data and Text Messaging Transponder 
+
+</FONT></U></B>
+
+<P>
+<P><FONT SIZE=-1>
+Bob Bruninga, WB4APR, Instructor, US Naval Academy,(last name at usna dot edu)
+<BR>Todd Bruner, WB1HAI, Student Mentor and Control Operator (EX USNA Div Dir 1994/98)
+<BR>Midshipmen students: Skinker(2015), Segalla(15), Hunt(15), Diasordaz(15)
+</FONT><BR></CENTER>
+
+
+<P>
+<B>Frequency: . . . 145.825 1200 baud AFSK
+<BR>Digipath Alias: APRSAT</B> 
+<P>
+
+<B>DEPLOYMENT:</B> The host spacecraft was deployed from ISS at 0915 UTC over Europe but heading into eclipse.  It probably deployed its solar panels 30 minutes later while still in the dark.  The QIKCOM-1 module would not get powered up until the Host spacecraft determines it has good, stable power.  Nothing was heard on first pass over the USA but it was just coming into sun for first time since it was built 2.5 years ago, and may not yet have decided it has stable power.  Subsequent passes and we are still monitoring...
+
+<P>
+
+<B>OPERATIONS TEST:</B>  To test the uplink quality we asked that all participating users include a special STATUS text in their uplink to indicate the transmit power and antenna gain. Nominally they were to transmit no more often than once a minute and only WHILE ATTENDED. For QIKCOM-1 the requested digipeater path
+was to only use the alias of <B>APRSAT</B> so as to not also bring up the ISS digipeater until after they well separate. Here are some example Status texts:
+<LI><B>TX 5W HT rubber duck</B>, or 
+<LI><B>TX 5W HT 19" whip</B>, or 
+<LI><B>TX 5W HT handheld beam</B>, or
+<LI><B>K4KDR-6...QIKCOM-1 test 10w :: 2m X-Quad</B>
+<LI><B>N1PEB TX 5W THD74 ELK^ </B>
+<LI><B>WN9Q...5w 14el klm cross yagi</B>
+<LI><B>K3RLD-1...WELCOME QIKCOM-1! 10W D710G ARROW FN20=</B>
+    
+<P>
+
+<A HREF="QIKcom/ARISS-test-report.txt">
+<B>ARISS TEST REPORT:</B></A>  Having heard no packets yet from QIKCOM-1 for the last East coast pass of the day, we asked users to return
+to using the <B>ARISS</B> path and we used the time to collect statistics on the ISS digipeater instead. During the four minute pass, we heard 11 stations out of about 30 packets heard by our Oscar class ground station.  The APRS-IS heard about the same number of packets and same stations from a total of 8 Igates with four of them getting 4 to 6 packets each and the other four contributing 1 or 2 packets each.  We also had 5 students with HT's outdoors and they captured from 2 to 4 stations each out of 5 of the same stations in the middle of the pass.  But the ISS did not hear any of them with their omni whip antennas at only 5 watts.  Of the other stations, the only ones heard were running at least 5 to 10 watts into a modest beams.
+<P>
+
+<B>This might be the Last Naval Academy Amateur Student Project (of 10)?:</B>  The AirForce responsible for the DoD Space Test Program has told the Naval Academy they will no longer accept any Amateur Radio student educational/experiment/projects for launch even though low cost self training and education is one of the primary values of Amateur Radio.  As a result, our next several student cubesats are in limbo, and the student design begun in 2016, <A HREF="hfsat.html"><B>HFSAT</B></A> was not allowed to brief this year for any potential future DoD launches. Stay tuned...
+
+<P>
+<B>QIKCOM-1 Project Summary:</B>  The Ham Radio QIKCOM-1 module built by students at the Naval Academy and attached to the 
+<A HREF="https://www.nasa.gov/mission_pages/station/research/experiments/1982.html">
+<B>NovaWurks NanoRacks SIMPL spacecraft</B></A> was designed to complement the existing ISS packet radio digipeater by relaying packets addressed via <B>ARISS</B> or <B>APRSAT</B>, the module was also a pathfinder to be followed by other much more capable modules this year such as <A HREF="qikcom-2.html"><B>QIKCOM-2</B></A> which has an additional APRS DTMF uplink and Voice synthesizer downlink.  <i><B>NOTICE: We have TWO flight units of QIKCOM-2 and welcome any other flight opportunity anyone can find!</B></i>
+<P>
+
+<B>BEACON EXPERIMENT:</B> The unique experiment on QIKCOM-1 was its terrestrial beacon to be turned on by GPS over North America on the terrestrial mobile frequency of 144.39 and over Europe on 144.80 MHz.  Just like any mobile on the national APRS frequencies, the once a minute beacon under the callsign of QIKCOM-11 would alert mobile APRS operators that the satellite was in view.  It would know it was over the USA or Europe by monitoring the GPS signal from the Host spacecraft.  The STATUS text would say "145.825MHz QSY 4 OPS " telling mobile operators that the spacecraft is in view and all they have to do is QSY to 145.825 to operate it during the next 5 minutes.  In most new APRS radios, the <B><i>QSY</B></i> or <B><i>TUNE</B></i> button would them make this a one-button operation to give more APRS operators the experience with satellites!
+
+<B>Note:</B> QIKCOM-1 was 
+<A HREF="QIKcom/QIK8%20Nov2014.doc"><B> coordinated </B></A>
+by the IARU for this un-conventional terrerstrial beacon experiment in Nov 2014 before the IARU changed its policy in 2016 to not coordinate any operations outside of the satellite sub band between 145.8 and 146.0.  Fortunately, the mission is short lived because it is attached to a large spacecraft with high drag from the low altitude of the ISS.
+<P>
+
+
+<IMG SRC="QIKcom/Temperature-equation-linear.png" height=300 width=500 align=right>
+
+<B>DOWNLINK:</B> Just like the ISS user packets show up on <A HREF="http://ariss.net"><B>www.ariss.net</B></A> the QIKCOM-1 downlink will show up on the <A HREF="http://pcsat.findu.com"><B>www.pcsat.findu.com</B></A> and on 
+<A HREF="http://59.167.159.165/satreporter/index2.html"><B>SAT-REPORTER</B></A> where all other APRS satellite data is collected from IGates around the world.   
+<P>
+
+<B>TELEMETRY:</B> Due to the short fuse opportunity, we simply used the 5 analog channel telemetry packet that is included in the Byonics MTT4 radio module for simple health parameters as listed here.  The critical values will be the temperatures.  QIKCOM-1 is exposed directly to space and has no control over its temperature.  It can get extremely cold or extremly hot depending on which direction the SIMPL spacecraft is pointing.  Watching the Beacon Transmitter temperatures which will be exciting!  
+<P>
+
+<LI> Format: T#SSS,CH1,CH2,CH3,CH4,CH5,X000X000 - Where
+<LI> CH1 - System voltage from the host (28 volts in tenths)
+<LI> CH2 - System current in Milliamps
+<LI> CH3 - Beacon supply Voltage (12 volts in tenths)
+<LI> CH4 - Bottom Temperature (attached to Host spacecraft) equation at right ==>
+<LI> CH5 - Beacon Transmit Power Amp Temerpature (closest to top plate) equation at right ==>
+<LI> xxxx1xxx - USA beacon is enabled, 1xxx1xxx - European beacon is enabled
+<P>
+
+
+<B>QIKCOM-1</B> was supposed to be a very quick reaction student built amateur radio relay module to take advantage of a flight opportunity as an attached amateur radio payload to the Novawurks <A HREF="https://www.nasa.gov/mission_pages/station/research/experiments/1982.html">
+<B>SIMPL spacecraft</B></A>
+ for launch from ISS. Although the students finished the module in one semester and delivered it in the spring of 2015 and it was launched to the ISS in December 2015, it was held from release due to a SNAFU with the FCC over radio licensing.  The problem appeared to be the SIMPL spacecraft (host) comms on S-band was licensed under an STA from the FCC as an experimental license and it appeared that the FCC was concerned that students at a Federal Academy could not fly an independent Amateur Radio module under FCC rules and had to go via the NTIA even though its design and mission and objectives are 100% amateur.  The resolution was to add the Amateur Frequencies to the 
+<A HREF="https://apps.fcc.gov/oetcf/els/reports/STA_Print.cfm?mode=current&amp;application_seq=72678&amp;RequestTimeout=1000"><B> NovaWurks STA</B></A>
+ in parallel with the Amateur API Notice filed by our QIKCOM1 control operator, WB1HAI.
+
+<P>
+<B>Filling the APRS Constellation:</B> Now that the ISS digipeating has resumed operation on 145.825 MHz VHF (after the
+late October 2016
+<A HREF="http://www.arrl.org/news/view/apparent-ariss-radio-failure-prompts-shift-to-russian-service-module-ham-gear"><B>failure and switch to UHF</B></A>), users will now have the opportunity to enjoy double the access times as both the ISS digipeater and QIKCOM-1 will both support the same user uplink path VIA ARISS used on 145.825.  (...and possibly the launch of 
+<A HREF="qikcom-2.html"><B>QIKCOM-2</B></A> also this year filling the constellation to maybe 4 satellites at the same time!). 
+
+<P>
+
+<IMG SRC="pcsat/PC2-PC1%20long.GIF" align=right>
+<B>Dual Hop Experiments:</B>
+Since the uplink and digipeated downlink are on the same 145.825 MHz simplex channel, radio amateurs might find it possible to do dual-hop communication.  But due to all the congestion on the channel, this will likely only be possible when one spacecraft is over users, and the other is thousands of miles away over an ocean with virtually no users in its footprint to clog its receiver.   Once they drift about 1000 miles apart, then a 2 hop path of ARISS,ARISS might be heard by a very distant remote individual still in the fooprint of that second isolated digi.  This direction has an order of magnitude better probability of success than expecting for the digi over the populated area to hear the other one.  Therefore, coastal stations should listen closely for dual hop packets before the spacecraft sees too many users, such as the success seen several years ago using PCSAT-1 and 2 as shown here.  
+
+<P>
+<B>Recognizing dual-hop packets:</B>  The digipeaters on ISS and on QIKCOM-1 have slightly different ways of indicating a successful digipeat. The ISS does path-callsign-substitution and replaces the uplink ARISS path with the ISS callsign RS0ISS and marks it with a <B>(*)</B>.  Conversly, the QIKCOM-1 module does callsign-insertion and so it inserts its callsign in front of the ARISS alias that was used and marks that alias with a <B>(*)</B>.  As a result, there are the two ways that a dual hop packet might appear:
+<P>
+<LI> A3GGW-2]CQ,<B>QIKCOM-1,ARISS,RS0ISS*</B>,qAO,ESAJ-2::CQ :Hello! 73!</B> . . <B><-- via Q1 first, then ISS</B>
+<LI> A3GGW-2]CQ,<B>RS0ISS,QIKCOM-1,ARISS*</B>,qAO,ESAJ-2::CQ :Hello! 73!</B> . . <B><-- Via ISS first, then Q1 </B>
+<P>
+<B>Capturing the packets:</B> 
+In addition to live monitoring the downlink by individuals everywhere, amateurs can also check the live downlink web pages daily looking for dual hops captured by our worldwide APRS internet linked ground station network:
+<LI>packets relayed by <A HREF="http://ariss.net"><B>ARISS on the ISS</B></A> captured by FINDU.COM
+<LI>packets relayed by <A HREF="http://pcsat.findu.com"><B>QIKCOM-1 and other APRS satellites</B></A> captured by FINDU.COM
+<LI>packets captured by <A HREF="http://59.167.159.165/satreporter/index2.html"><B>SAT-REPORTER</B></A>
+<P>
+
+<B>This transponder will join a number of Networked APRS transponders operating in the Amateur Satellite Service </B> that are, or will be, on Orbit in 2017  and all will appear on the live web pages above.
+
+<P>
+
+
+<A HREF="outnet.html"><B>OUTNET</B></A> a global APRS channel on 3 GEO satellites!
+<BR><A HREF="PFS3.html"><B>FALCONSAT3</B></A> an AirForce Academy satellite turned over to APRS use in 2017
+<BR><A HREF="pcsat.html"><B>PCsat-1</B></A> in orbit since 2001 semi-operational
+<BR><A HREF="ariss.html"><B>ARISS</B></A> on the ISS since 2007
+<BR><A HREF="psat.html"><B>PSAT</B></A> Operational May 2015
+<BR><A HREF="bricsat-1.html"><B>BRICSAT-1</B></A> launched with PSAT, but insufficient power budget
+
+<BR><A HREF="qikcom-1.html"><B>QIKCOM-1</B></A> with terrestrial APRS alert beacon on ISS, awaiting astronaut deployment 
+<BR><A HREF="qikcom-2.html"><B>QIKCOM-2</B></A> with APRStt (TouchTone uplink and Voice downlink) for launch late 2016
+<BR><A HREF="psat2.html"><B>PSAT2</B></A> To be Launched spring of 2018
+<BR><A HREF="bricsat-2.html"><B>BRICSAT-2</B></A> To be Launched spring of 2018
+<BR><A HREF="hfsat.html"><B>HFSAT</B> a linear 24/29 MHz transponder [pulled. AirForce has ordered no more Academy Amateur Satellites]
+<BR><A HREF="astars.html"><B>ASTARS missions:</B></A> Prior APRS missions on other spacecraft, ISS, Shuttle and MIR
+
+
+<P>
+<P>
+Please see the <A HREF="QIKcom/QIK8%20Nov2014.doc"><B>IARU Coordination Letter</B></A>
+<BR> and how it fits
+<A HREF="QIKcom/QIK-ITU-rules-c.txt"><B> in the Amateur Satellite Service </B></A> 
+<BR>and also the FCC <A HREF="QIKcom/FCC%20Public%20Notice.doc"><B> Public Notice </B></A> 
+rules for operating in the Amateur Satellite Service.
+<P>
+
+
+
+
+<IMG SRC="buoy/constellation.GIF"> . 
+<IMG SRC="QIKcom/Group0022x.jpg">
+<P>
+
+<IMG SRC="QIKcom/Back-corner0006x.jpg" align=right>
+
+<B>OVERVIEW:</B> . QIKcom-1 is an amateur radio module built by a group of students as their senior project at the Naval Academy to take advantage of a launch opportunity offered by a spacecraft integrator (NovaWurks).  The module was delivered on 2 March 2015 and
+launched to ISS on 9 Dec 2015 as an attached module to
+<A HREF="http://www.nasa.gov/mission_pages/station/research/experiments/1982.html"><B> the SIMPL Host spacecraft</B></A>. The spacecraft is awaiting clearance from the FCC prior to deployment.  It was
+a very short fuse flight opportunity so students took as much that we had that was already
+developed for previous APRS amateur radio transponders and since it flies on a host spacecraft, we get 28v power and did not need to develop solar panels or an attitude control system.   It
+continues the <A HREF="pcsat.html"><B>PCsat</B></A> and <A HREF="psat.html"><B>PSAT</B></A> missions containing
+an APRS packet radio communications transponders for relaying remote amateur user position, text messages and other user experimentdal data back to 
+Amateur Radio experimenters via a global network
+of internet linked volunteer ground stations.  
+
+<P>
+<B>Terrestrial Alert Beacon:</B>The data transponder also includes simple
+telemetry on the health of the module and its host power.  To assist the APRS position reporting mission, it also includes position and attitude data derived from the Host's GPS. In addition, a  secondary module will transmit an alert bulletin on the North American (144.39) terrestrial APRS mobile frequency to alert wilderness travelers (outside of the normal terrestrial network) when the satellite is in view and tell them the Space Frequency (145.825) to tune.  Mobiles with intergrated Kenwood or Yaesu APRS radios will be able to simply press the QSY button on their radios to shift to the 145.825 satellite frequency when they see this alert and will have about 8 minutes of possible satellite operating time.  <i>Note, this module was coordinated, built, and delivered before the IARU policy change of 2016 that will no longer coordinate such becons outside of the satellilte 2m subband.</i> 
+<P>
+
+<B>Short Several Months Lifetime:</B> The expected Orbit lifetime is short since it will be deployed from the ISS.  It is attached to the
+<A HREF="http://www.nasa.gov/mission_pages/station/research/experiments/1982.html"><B>  SIMPL spacecraft </B></A> with large 
+solar panels to be deployed from the ISS (image below).  If the solar panels deploy as designed, the high drag will cause the spacecraft to re-enter in a few months.  
+
+<P>
+
+<B>PRESENTATIONS:</B>
+<LI><A HREF="QIKcom/QIKcom1Presentation.pptx"><B>QIKcom-1 Presentation</B></A>
+
+<P>
+
+<B>Operations in the Amateur Satellite Service:</B>
+The transponder and beacon on QIKCOM-1 are operated in the Amateur Satellite Service to encourage 
+amateur radio students, 
+educators and experimenters 
+around the world to contribute additional satellities to this constellation on 145.825 MHz or
+to build interesting self motivated remote sensors suitable for the uplink channel.
+ See some other student project ideas such as 
+<A HREF="buoy.html"><B>ocean or bay oceanographic data buoys</B></A> for examples.
+  
+This kind of Amateur Radio experimentation fits well in the ITU rules
+<A HREF="QIKcom/QIK-ITU-rules-c.txt"><B>(see QIKcom-1 ITU RULES)</B></A> 
+for operating in this service
+and well serve our educational and outreach goals for student projects encouraging young people to
+be interested in Science, Technology, Engineering and Math.
+
+<P>
+<IMG SRC="QIKcom/Open-box034x.jpg">
+
+<P>
+
+<IMG SRC="QIKcom/Beacon-countries.gif" align=right>
+
+<B>The QIKcom-1 System</B> is composed of three significantly modified commercial off-the-shelf amateur
+packet radio modules from <A HREF="http://byonics.com"><B>Byonics.com</B></A> as shown above.  On the lower right is the main packet transponder module (the MT-TT4 all-in-one APRS packet system with internal RF transceiver).  The MicroAmp-3 above it boosts that to 4 Watts. In the center vertically is the 4 Watt QSY Alert Beacon transmitter for use over North America.  A European alert was also planned since the beacon did have an A & B frequency selection, but this was disabled due to coordination issues.  The final board on the left is our designed combination power supply system and antenna release mechanism.
+<P>
+
+<B>QIKcom-1 APRS Packet Transponder:</B> The APRS packet transponder 
+is an AX.25 Packet Radio Relay similar to what is flying on 
+<A HREF="pcsat.html"><B>PCSAT</B></A>, 
+A HREF="psat.html"><B>PSAT</B></A> and the
+<A HREF="http://www.aprs.org/ariss.net"><B>ISS</B></A>.  This ongoing mission in space on the original PCSAT 
+is now over 16 years old and pioneered
+this very popular operating mode since 2001 and via the ISS since 2006.  Both of these 
+missions deliver packets to users worldwide via the global network of
+volunteer ground stations feeding the three downlink capture pages:
+<A HREF="http://pcsat.findu.com"><B>psat.findu.com</B></A>, 
+<A HREF="http://ariss.net"><B>ariss.net</B></A> and
+<A HREF="http://59.167.159.165/satreporter/index2.html"><B>SAT-REPORTER</B></A>.
+  These pages display live maps such as the one above, of the most
+recent user position data and capture all message traffic between users. 
+See the <A HREF="psat/APRS%20Link%20Budgets%20for%20Psat-a.doc"><B>APRS link budgets</B></A>. 
+<P>
+
+<IMG SRC="QIKcom/HISAT-integrated.png" height=450 width=400 align=right>
+<IMG SRC="QIKcom/SIMPL-image-w-Q1.png">
+<P>
+
+<B>QIKCOM-1 Integrated on top of the 
+<A HREF="http://www.nasa.gov/mission_pages/station/research/experiments/1982.html"><B> SIMPL</B></A>
+Satellite:</B>  The image above shows the complete
+SIMPL spacecraft with the QIKCOM-1 module on top. The large solar panels will have significant drag and are the reason for the relatively short few months or so life of the mission.  Above right is a solid works view with the spacecraft still attached to its separation plate and before the solar panels are deployed.
+  
+<P>
+
+<P>
+<B>Global Experimental Data Channel:</B>  QIKcom-1 is the 6th USNA student transponder in this
+initiative to encourage both new satellite construction in support of this experimental
+data channel and lower cost amateur radio terrestrial applications and experimentation at other schools.  
+Today, the only AMSATs that are available for 
+easy access by schools with such experiments are the Naval Academy student's PCSATs.  But with 
+QIKcom-1 along with PCsat, ISS, and Psat (spring 2015) we hope to continue an ongoing full time presence in
+space to continue this support of the 145.825 data uplink channel for future experiments.  
+To this end we hope other schools to either build additional 145.825 MHz relay satellites 
+and/or to build experimental sensors.  The complete QIKcom-1 modules are commercial off-the-shelf items and easy to build inito spacecraft systems.
+<P>
+
+
+<P>
+<HR SIZE=5 WIDTH="100%">
+<TABLE BORDER=2 CELLPADDING=2 >
+<TR>
+
+<TD>
+<P><FONT SIZE=+1><A HREF="sitemap.html"> WB4APR's overall Site Map </A></FONT></P>
+</TD>
+</TR>
+</TABLE>
+</UL>
+
+</BODY>
+</HTML>

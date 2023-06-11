@@ -1,0 +1,220 @@
+APRStrfc     APRS TRAFFIC SPEED MONITORING AND REPORTING     08 Sept 2002
+-------------------------------------------------------------------------
+                                                                   WB4APR
+
+APRStfc.exe is a special version of APRS865 that has added a very simple
+method for reporting traffic speeds to mobiles and all map displays
+to help commuters and other traffic in times of stress.  There only
+needs to be one copy of APRStfc running in an area, since it can
+generate all of the traffic speed posts.  To fit the new code, APRStfc
+is APRS865 without NTS messages, Fade Circle DFing and own-station
+GPS or WX inputs.
+
+Since 1995, APRS has always had the SIGN-POST ICON that is supposed to
+display a variable 3 digit number on it.  One purpose of this ICON is
+to show the speed of traffic past a point. (or any other variable
+information you want to pass to drivers)...  THe problem has always
+been, how to determine the speed of traffic.  In the past, I tried or
+suggested Radar guns, Acoustic signiture and DSP, or OBJECT posting by
+observers, but no one has done it.
+
+SOLUTION:  Is simple.  Already each APRS vehicle that passes a point is 
+a "probe" that reports traffic speed.  All we need is code to take
+advantage of preserving this information for the next commuter on the
+same road.  As APRStfc builds these objects, it is 100% transparently
+compatible with all existing APRS hardware and software.  Actually,
+I had put it in APRSTouchTone so it could SPEAK the traffic, but it
+didn't catch on.
+
+Here are the salient parts of this traffic monitoring system:
+
+1) APRStfc monitors 144.39 for all moving objects with speeds.
+2) APRStfc has a list of TRAFFIC choke points that it wants to monitor
+3) APRStfc compares each new Vehicle POSIT to each Choke Point location
+4) Whenever a vehicle passes within 1 mile of a Choke-Pt (going in the
+   desired direction of travel), APRStfc notes the speed of the vehicle
+   and then places that speed and TIME on a sign-post object and
+   adds the sign-post to the usual APRS decaying uplink schedule for
+   new data...
+5) Once the data is more than say 30 minutes old, or is replaced by
+   another data point in the vicinity of the same choke-point, the timing
+   on the uplinking of that sign post is canceled.
+6) Operators should chose a DIGI path that is optimum for the area and
+   not broadcast these objects beyond the area of their use
+
+The result is that all APRS stations will see these SIGN-POSTS and will
+see on their map, the speed of the traffic flowing past.  Note, inherent
+in the definition of the SIGN-POST ICON is the fact that these sign posts
+are NOT supposed to be displayed above the 8 mile range-scale so that they
+do not clutter the map, but that to the person that is zoomed into below
+the 8 mile range scale (the guy who needs the info) will see them.
+
+The Kenwood Users will not see the actual posted SIGN-POST Icon, but since
+the speed is included in the OBJECT format as a number in braces
+such as "{55}", and since the TIME of the report will also be included,
+then the mobile D7 or D700 operator has this info available to him as
+well... as shown below:
+
+Screen 1 shows the speed and location.  Screen 2 shows the distance and
+direction from the mobile, and screen 5 shows the actual direction
+the probe was traveling and the callsign of the probe.
+
++--------------+   +-------------+   +-------------+
+| 1:Bowie-50W  |   | 1:Bowie-50W |   | 1:Bowie-50W |
+|   {45} MPH   |   |             |   | CSE214 s038 |
+|   Time 0735  |   |   3 mi  --> |   | fm:W3ADO    |
++--------------+   +-------------+   +-------------+
+
+Notice that the name of the SIGN-POST OBJECT will be the physical name of
+where the post is located.  For example our biggest commuter choke point
+is Route 50 in Bowie.  So the SIGN-POST for that location might be
+"Bowie-50W"  (meaning west-bound) then the commuter simply looks through his
+Kenwood station list for the SIGN-POST name along his commuting route and
+clicks on it and boom... he sees the data...  Just what APRS was designed
+to do...
+
+THe SIGN-POST ICON is supposed to look like this when displaying 55 MPH.
+
+   +----+
+   | 55 |
+   +----+
+     ||
+     ||
+
+The SYMBOL characters for a SIGN-POST Object are "\m" and the "55" is
+placed on the sign by the format "{55}" in the object text.  Also
+so that the Direction of the sign post will show on the map the object
+can have a CSE and SPD.  This requires a mod to APRSdos so that it
+does not dead-reckon this sign!  ALso, the SPEED is shown in MPH
+whereas the normal speeds in APRSdos are Knots on the air.
+
+The UI packet format to cause the displays above on the Kenwood the
+data sent to the TNC in converse mode should look like this:
+
+;Bowie-50W*DDHHMMzLLLL.LLN/LLLLL.LLWmCCC/SSS/{45} MPH  TIME 0735 by W3YZ
+
+The "fm:W3ADO" is the callsign of the TNC that was used to transmit
+this packet (the Traffic server) and the "by W3YZ" is the source of
+that speed data that does not show on the D7, but does show on the D700
+and other APRS displays.  Notice the double space between MPH and TIME...
+
+
+TRAFFIC.HST FILE:
+
+To tell APRStfc where the local traffic choke points are located, I
+used the standard APRS .HST file format.  Here are sample entries for
+our area (Commuters from Annapolis, MD into Washington, DC). 
+
+POINT     DAYTIME LAT      LONG      DIR DL  RNG STRT STOP
+--------- ------- -------- ------------- --- --- ---- ----
+Bowie-W   +123456z3857.00N\07644.00Wm270/010/1.0 0600 0900
+Bowie-E   +123456z3857.00N\07644.00Wm090/010/1.0 1500 1800
+NwCrltn-W +123456z3856.70N\07648.00Wm270/010/1.0 0600 0900
+NwCrltn-E +123456z3856.00N\07654.00Wm045/010/1.0 1500 1800
+SevrnBR-W +123456z3901.00N\07629.00Wm270/010/1.0 0600 0900
+SevrnBR-E +123456z3859.50N\07631.50Wm090/010/1.0 1500 1800
+
+Here DIR is the direction of travel, DL is the delta angle acceptible
+to be considered on that route, RNG is the acceptible range from that
+point, and STRT and STOP are the start and stop times of voice
+reporting(not currently used).
+
+This exact TEXT format is included so that the Sign-post shows up 
+properly on the D7 screen but also additional information is included 
+which shows the direction of the traffic lane at that point that is to 
+be monitored and the range from that point that is of interest.
+
+APRStfc scans through this list on receipt of any new moving vehicle
+position report checking to see if the vehicle is within range of
+the choke point.  Interestingly, when traffic slows down to say
+30 MPH or less, then even a 2-minute tracker has a very good chance of
+being captured in that window (2 packets within a mile of the
+choke point)...
+
+I have always wanted APRS to show travelers the local road conditions,
+now I finally figured out how to get the data!  We get it from us!
+
+Also for the sake of APRStfc VOICE announcements, each of the entries
+above also includes a TIME window when the data is of interest.
+If a traffic report comes in during those hours, then APRStfc will
+AUTOMATICALLY announce by voice the speed at that CHOKE POINT.
+
+
+MAKING YOUR TRAFFIC.HST FILE:
+
+The easy way to make a TRAFFIC.HST file is to use APRSdos to simply move
+your cursor around to the various choke points and hitting INPUT-
+ADD-OBJECT and entering the NAME of the SpeedPost.  Then for the COURSE
+enter the direction and for the speed, enter the ANGLE LIMIT (typically
+10 to 20 deg (plus/minus)).  In the comment field, type the 3 digit
+RANGE limit (usually 1.0 miles).  You may also enter the START and STOP
+times (thought at this point, they are ignored).  Then FILE-SAVE hitting
+"T" to force a TRAFFIC.HST file.  Similarly, you can edit a TRAFFIC.HST
+file by using the FILE-NEW command to clear memory, and then using
+FILE-LOAD and also selecting "T".  THen you can continue to INPUT-ADD
+new SPEED-POSTS or on the P-LIST, edit or delete entries.
+
+TO see your data file on the map, I added MAPS-OVERLAYS-TRAFFIC
+to the overlay commands.  These points show a DIRECTION indicator
+to help you assess their applicability.
+
+PROGRAMMERS NOTE:
+The source code for APRStfc.EXE is APRS-W and use COMPILE-.BAT and
+LIKST-. files.
+
+DIFFERENCES TO APRS864:
+1) removed Fade-DFing, NTS message formats, GPS and WX interface
+2) Upped Capture size from 101 to 173 stations (5 pages)
+3) Added MAPS-OVERLAY-TRAFFIC for viewing SPD-POSTS in TRAFFIC.HST file
+4) Turned off DRing of SPD-POSTS. (should do in all APRS)
+6) FILE-LOAD command (if FILE-NEW has cleared memory) can select "T"
+   to allow loading the TRAFFIC.HST file.
+7) FILE-SAVE command has the "T" option to save TRAFFIC.HST
+   (Always keep a backup! because it is easy to overwrite...)
+   (Save a copy as xxxx.SS where SS is your state. To use it,
+   (rename it to xxxx.ST)
+8) CONTROLS MENU (TAB) has CONTROLS-TRAFFIC to toggle on and off
+   traffic SPD-POST generation.  The status of TRAFFIC is shown
+   in the middle of the CONTROLS DISPLAY (hit TAB).
+
+USEFUL APRSDOS FEATURES:  In addition to the above special commands
+added to APRStfc, there are several normal APRSdos features you
+will find useful for use with traffic monitoring:
+
+* Use JUST-MOBILES on the map or the POS-LIST.
+* Use JUST-OBJECTS on the map or the POS-LIST
+* Use OPS-REPLAY to see what happened since you last looked at the map
+
+
+TESTING WITH HANDHELD TH-D7:
+
+To facilitate testing of SPEED-POINTS, I wanted to use my TH-D7 to
+enter some positions near the speed points to see if the software
+captured it.  But since a manual D7 position, contains no COURSE
+nor SPEED, it wouldnt trigger APRStfc.   So I put a back-door
+in there for the D7 that is for position comment = CUSTOM 6.
+If a TH-D7 manual post with CUSTOM 6 is heard within range
+of a SPEED POINT, then it will be captured but with a CSE and SPEED
+of zero..
+
+START STOP TIMES:
+The start and stop times are in there for managing QRM if you really
+want to have lots of choke points.  With the start/stop times you
+can only activate the ones that are important at certain times of
+the day.  For now, this is not yet implemented,and probably wont be
+until we have a problem that needs it.
+
+RANGE CONSIDERATIONS:
+Having watched APRStfc now for more than a week, I am stil pleased
+with the result and suggest for people not to be enthusiastic
+and make their RANGE entries too large.  The temptation is to make
+the 1 mile larger to 2 miles so that you get a 100% chance of
+geenerating an object everytime when a 70 MPH 2 minute tracker
+passes through.
+THis is nice for testing, but after a while, might make you less
+popular because of the generation of all these (no-traffic-problem)
+objects.  Keeping those at 1 mile or less are your best way to fine
+tune the system..
+
+de WB4APR, Bob
+

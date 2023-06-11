@@ -1,0 +1,533 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List href="psk31uplink_files/filelist.xml">
+<link rel=Edit-Time-Data href="http://www.aprs.org/psk31uplink_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+
+<title>PSKsat DESIGN NOTES </title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>bruninga</o:Author>
+  <o:LastAuthor>bruninga</o:LastAuthor>
+  <o:Revision>12</o:Revision>
+  <o:TotalTime>1004</o:TotalTime>
+  <o:Created>2002-11-19T14:48:00Z</o:Created>
+  <o:LastSaved>2004-01-29T23:56:00Z</o:LastSaved>
+  <o:Pages>3</o:Pages>
+  <o:Words>1029</o:Words>
+  <o:Characters>5867</o:Characters>
+  <o:Company>USNA</o:Company>
+  <o:Lines>48</o:Lines>
+  <o:Paragraphs>11</o:Paragraphs>
+  <o:CharactersWithSpaces>7205</o:CharactersWithSpaces>
+  <o:Version>9.2720</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+<style><!--
+ /* Font Definitions */
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:16792199 0 0 0 65791 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+h1
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:12.0pt;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:0pt;}
+h2
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:12.0pt;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";
+	text-decoration:underline;
+	text-underline:single;}
+
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	font-weight:bold;}
+
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	background:navy;
+	font-size:12.0pt;
+	font-family:Tahoma;
+	mso-fareast-font-family:"Times New Roman";}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+@list l0
+	{mso-list-id:1104034217;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-564002468 1666750744 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l0:level1
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:-;
+	mso-level-tab-stop:42.0pt;
+	mso-level-number-position:left;
+	margin-left:42.0pt;
+	text-indent:-.25in;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1030"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<p class=MsoNormal><b><u><span style='font-size:22.0pt;mso-bidi-font-size:12.0pt'>PSK-31
+Linear/FM Satellite Transponder</span></u></b><span style='font-size:22.0pt;
+mso-bidi-font-size:12.0pt'><span style='mso-tab-count:1'>  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:8.0pt;mso-bidi-font-size:12.0pt'>27
+Nov 2002<b><u><o:p></o:p></u></b></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt'>Bob Bruninga, WB4APR, <o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt'>Peter Martinez, G3PLX<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt'>Mirek Kasal, OK2AQK<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText>With the sweeping popularity of PSK-31 as a very
+narrowband and weak signal digital communications mechanism requiring only a PC
+sound card and radio, there is great potential to use PSK-31 as a low cost
+easy-entry satellite application.<span style="mso-spacerun: yes">  </span>In
+only 3 KHz of bandwidth, as many as 20 or more simultaneous users can be
+accommodated.<span style="mso-spacerun: yes">  </span>Usually, the same
+advantage of the very narrow bandwidth that makes this possible also tends to
+make normal operation via satellites impossible due to very high Doppler
+shifts.<span style="mso-spacerun: yes">  </span>But the following idea solves
+that problem.<span style="mso-spacerun: yes">  </span>It evolved from many
+ideas we explored with Peter Martinez back in 2000 while looking for ways to
+use PSK-31 via satellite.<span style="mso-spacerun: yes">  </span><a
+href="http://www.aprs.org/cubesats/PSKsat.html">See the Paper</a>.<span style="mso-spacerun: yes"> 
+</span>As this idea matured, we solicited Mirek Kasal, OK2AQ of Brno University to build the <a
+href="http://www.ew.usna.edu/~bruninga/pec/Pc210rx1.jpg">Flight Receiver</a></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'>
+<![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1028" type="#_x0000_t75" style='width:325.5pt;
+ height:137.25pt'>
+ <v:imagedata src="./psk31uplink_files/image001.gif" o:title="PSKSATfm"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=434 height=183
+src="psk31uplink_files/image001.gif" v:shapes="_x0000_i1028"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><b><u>ADVANTAGES OF THE 10m Linear Uplink =&gt; FM Downlink<o:p></o:p></u></b></p>
+
+<p class=MsoNormal><b><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:-.25in;mso-list:l0 level1 lfo2;
+tab-stops:list 42.0pt'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:"Times New Roman"'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'>No
+downlink Doppler (other than crude FM 5 KHz steps)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:-.25in;mso-list:l0 level1 lfo2;
+tab-stops:list 42.0pt'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:"Times New Roman"'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'>All
+users remain in same relative position in analog passband<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:-.25in;mso-list:l0 level1 lfo2;
+tab-stops:list 42.0pt'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:"Times New Roman"'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'>Stations
+accommodate Uplink Doppler to fit in common analog Passband<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:-.25in;mso-list:l0 level1 lfo2;
+tab-stops:list 42.0pt'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:"Times New Roman"'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'>Downlink
+FM transmitter can be on 2m/70cm band with minimal Doppler issue<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:-.25in;mso-list:l0 level1 lfo2;
+tab-stops:list 42.0pt'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:"Times New Roman"'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'>No
+requirement for Linearity on Downlink Transmitter<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:-.25in;mso-list:l0 level1 lfo2;
+tab-stops:list 42.0pt'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:"Times New Roman"'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'>Downside
+is higher power budget and full power even if 1 user.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:-.25in;mso-list:l0 level1 lfo2;
+tab-stops:list 42.0pt'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:"Times New Roman"'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'>Each
+user can adjust Uplink power for equal audio level in downlink<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:-.25in;mso-list:l0 level1 lfo2;
+tab-stops:list 42.0pt'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:"Times New Roman"'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'>Easy
+reception with any FM scanner<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:-.25in;mso-list:l0 level1 lfo2;
+tab-stops:list 42.0pt'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:"Times New Roman"'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'>Uplink
+Geometry on 10m band almost guarantees equal user signal levels<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<h2>DOPPLER Expected</h2>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'>The
+Doppler on the 10m band is about 15 times less than on 70 cm and changes at a
+rate between about 1 to 5 Hz per second.<span style="mso-spacerun: yes"> 
+</span>The following table is a worst case (350 km orbit) and it shows the rate
+of change of Doppler for typical passes below the peak elevations shown. <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'>50deg
+40deg 30deg 20deg 10deg<span style="mso-spacerun: yes">  </span>Peak Elevation
+of Pass<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'>-----
+----- ----- ----- -----<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun: yes"> </span>4%<span style="mso-spacerun: yes">   
+</span>8%<span style="mso-spacerun: yes">    </span>16%<span
+style="mso-spacerun: yes">   </span>33%<span style="mso-spacerun: yes">  
+</span>67%<span style="mso-spacerun: yes">   </span>Percentage of total passes above
+this angle<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'>-----
+----- ----- ----- -----<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun: yes"> </span>0.1<span style="mso-spacerun: yes">  
+</span>0.2<span style="mso-spacerun: yes">   </span>0.3<span
+style="mso-spacerun: yes">   </span>0.7<span style="mso-spacerun: yes">  
+</span>1.2<span style="mso-spacerun: yes">   </span>Doppler change in Hz per
+second<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun: yes"> </span>0.3<span style="mso-spacerun: yes">  
+</span>0.5<span style="mso-spacerun: yes">   </span>0.7<span
+style="mso-spacerun: yes">   </span>1.1<span style="mso-spacerun: yes">  
+</span>1.9<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun: yes"> </span>1.0<span style="mso-spacerun: yes">  
+</span>1.3<span style="mso-spacerun: yes">   </span>1.5<span
+style="mso-spacerun: yes">   </span>2.4<span style="mso-spacerun: yes">  
+</span>2.5<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun: yes"> </span>3.5<span style="mso-spacerun: yes">  
+</span>3.8<span style="mso-spacerun: yes">   </span>4.0<span
+style="mso-spacerun: yes">   </span>4.1<span style="mso-spacerun: yes">  
+</span>3.0<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun: yes"> </span>9.0<span style="mso-spacerun: yes">  
+</span>7.3<span style="mso-spacerun: yes">   </span>6.5<span
+style="mso-spacerun: yes">   </span>5.0<span style="mso-spacerun: yes">  
+</span>3.0<span style="mso-spacerun: yes">   </span>(Peter computes absolute
+worst case is 16 Hz/Sec)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun: yes"> </span>6.0<span style="mso-spacerun: yes">  
+</span>5.5<span style="mso-spacerun: yes">   </span>5.0<span
+style="mso-spacerun: yes">   </span>3.5<span style="mso-spacerun: yes">  
+</span>2.5<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun: yes"> </span>1.9<span style="mso-spacerun: yes">  
+</span>3.6<span style="mso-spacerun: yes">   </span>2.1<span
+style="mso-spacerun: yes">   </span>3.0<span style="mso-spacerun: yes">  
+</span>2.3<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun: yes"> </span>0.5<span style="mso-spacerun: yes">  
+</span>0.9<span style="mso-spacerun: yes">   </span>0.9<span
+style="mso-spacerun: yes">   </span>2.0<span style="mso-spacerun: yes">  
+</span>1.5<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun: yes"> </span>0.1<span style="mso-spacerun: yes">  
+</span>0.2<span style="mso-spacerun: yes">   </span>0.3<span
+style="mso-spacerun: yes">   </span>0.9<span style="mso-spacerun: yes">  
+</span>0.9<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun: yes"> </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'>So
+2/3rds of the time the Doppler rate of change is in the range of about 3 Hz per
+second or less.<span style="mso-spacerun: yes">  </span>It looks like<span
+style="mso-spacerun: yes">  </span>90% of the time it is 5 Hz or less.<span
+style="mso-spacerun: yes">  </span>And worst case is 16 Hz change per
+second.<span style="mso-spacerun: yes">  </span>Peter G3PLX is working on a
+second order AFC tracking loop to keep up with this dynamic rate of change.<span
+style="mso-spacerun: yes">  </span>But it will be better if all users correct
+their Doppler in their uplink instead of the downlink.<span
+style="mso-spacerun: yes">  </span>Notice also that for LEO spacecraft the
+Doppler rate of change is always downward.<span style="mso-spacerun: yes"> 
+</span>For AO-40 in an elliptical orbit, however, the rate of change can be
+either direction depending on whether the satellite is accelerating towards you
+coming in from Apogee, or slowing down as it goes outward from Perogee.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'>Actually,
+for software written for this application, it is best if the software adjusts
+for this Doppler on the Uplink so that the relative position of everyone in the
+passband will remain constant.<span style="mso-spacerun: yes">  </span>This
+should be easy to do, however, because the Satellite is full duplex, so your
+sound card can be monitoring your signal on the downlink and making AFC changes
+on the uplink to keep you at the same frequency on the downlink…<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><b><u>CONCEPT OF FULL DUPLEX PSK-31 OPERATIONS:<o:p></o:p></u></b></p>
+
+<p class=MsoNormal><b><u><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></u></b></p>
+
+<img src="psat/PSK31slide2.jpg" align=right>
+
+<p class=MsoBodyText>Because the software will be working FULL DUPLEX so that
+it can listen to its own Doppler shifted uplink in the downlink to run its AFC,
+this means that the user will typically operate KEY DOWN on 10m the whole 8
+minute pass.<span style="mso-spacerun: yes">  </span>But while he is
+transmitting, he will be SEEING everyone else on the band.<span
+style="mso-spacerun: yes">  </span>Thus this will be a new mode of PSK-31
+operations, kind of like a chat room full of people with everyone seeing what
+everyone is saying in real time and being able to KEYBOARD to them all as fast
+as one can type.<span style="mso-spacerun: yes">  </span>Each pass will all be
+over in 8 minutes or less, though.</p>
+
+<p class=MsoBodyText><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoBodyText>The ideal downlink band is on 2 meters where the Doppler
+is less than +/- 3 KHz so <B>no</B> FM downlink tuning is necessary if the deviation on
+the transmitter remains below about 3 KHz deviation.<span style="mso-spacerun:
+yes">  </span>But if the 70 cm Amateur Satellite Downlink is required, then the
+operator will have to change the frequency of his UHF FM receiver 3 or 4 times
+a pass to keep up with the +/- 9 KHz of total FM carrier Doppler on the
+downlink.</p>
+
+<P>
+To the right you can see a typical passband showing about 10 stations.
+Everyone sees the same spectrum and adjusts their uplink to keep their
+signal where they choose.
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><b><u>PASSBAND POWER SHARING:<o:p></o:p></u></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'>One
+of the biggest problems with linear transponders is power sharing of power in
+the linear passband.<span style="mso-spacerun: yes">  </span>This results in
+the strongest signal getting most of the power at the expense of the other
+operators.<span style="mso-spacerun: yes">  </span>This is compounded when the
+AGC reduces the overall passband gain to prevent the strongest signal from
+overloading the system, which results in everyone losing power.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'>One
+of the greatest advantages of this 10 meter PSK-31 Transponder is the inherent
+self leveling of uplink power in the passband as enumerated in the following
+diagram:<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1026" type="#_x0000_t75" style='width:6in;height:324pt'>
+ <v:imagedata src="./psk31uplink_files/image002.gif" o:title="pskuplink"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=576 height=432
+src="psk31uplink_files/image002.gif" v:shapes="_x0000_i1026"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><b><u>USER LICENSE REQUIREMENTS:<o:p></o:p></u></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'>Another
+unique aspect of this transponder is that it will be the first amateur
+satellite to use 10 meters as the uplink band.<span style="mso-spacerun: yes"> 
+</span>As noted above, all of the advantages of this PSK-31 low-doppler and
+balanced passband design depend on the use of 10m as the uplink band.<span
+style="mso-spacerun: yes">  </span>Unfortunately, the ARRL (and probably other
+countries) band plans suggest only 29.300 to 29.510 for “Satellite
+Downlinks”.<span style="mso-spacerun: yes">  </span>This apparent limitation of
+10m for only downlinks is only a legacy of the early Mode A satellites and is
+not part of the FCC nor the ITU rules.<span style="mso-spacerun: yes"> 
+</span>The entire 10m band is legal from that perspective.<span
+style="mso-spacerun: yes">  </span>A second issue is that only the 28.1 to 28.3
+MHz sub band is authorized for Novice and Tech-Plus licensees in the USA.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'>Therefore,
+we originally proposed that this PSK-31 Satellite UPLINK be a 3 KHz wide
+spectrum somewhere in the 28.1 to 28.3 MHz CW/Digital sub-band not only so that
+Novice and Tech-Plus operators may use it, but also, to prevent the obvious
+temptation for an SSB user to saturate the entire passband with his single
+Voice QSO.<span style="mso-spacerun: yes">  </span>Currently PSK-31 QSO’s on
+the 10m band congregate near 28.120 and a Transceiver Kit crystal controlled on
+that frequency is readily available from <a
+href="http://smallwonderlabs.com/PSK10_Text.htm">Small Wonder Labs</a> making
+this an easy satellite for students to access.<span style="mso-spacerun: yes"> 
+</span>
+<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'>In
+the future, I would like to proceed with the Frequency Coordination process to
+request an assignment of 28.117 to 28.120 MHz CW/Digital band for such a PSK-31
+satellite uplink.<span style="mso-spacerun: yes">  </span>This seems like a
+good choice since it is immediately adjacent to the 28.120 to 28.1235 PSK-31
+segment and can be easiliy tuned by the crystal controlled PSK-31 Transcevier
+kits readily available.<span style="mso-spacerun: yes">  </span><a
+href="pec/pskband.jpg">See the Band Plan</a><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun: yes"> </span>Send comments to WB4APR@amsat.org.<o:p></o:p></span></p>
+
+</div>
+
+</body>
+
+</html>

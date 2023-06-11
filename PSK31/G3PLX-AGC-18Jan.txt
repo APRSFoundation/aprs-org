@@ -1,0 +1,61 @@
+Comments form Peter, G3PLX the father of PSK31:                 18 Jan 2014
+---------------------------------------------------------------------------
+
+PRIOR QRITING: I recall that I wrote-up my ideas from the PCSAT2 experiment 
+somewhere - was it in an AMSAT Journal?  You might like to dig that out and 
+post it.
+
+AGC:  One of the things I didn't like about the PCSAT2 PSK31 transponder 
+was the low gain of the overall signal path. I would STRONGLY urge you to 
+make the overall gain such that the antenna noise level of the 28MHz 
+receiver FULLY modulates the downlink baseband. AGC action should then 
+ensure that the downlink baseband remains fully modulated at all times. 
+
+Unlike a linear transponder, there is no reason to keep the downlink signal 
+level low under the "no-signal" condition.  Strong AGC action should then 
+keep the downlink modulation depth constant regardless of the uplink signal 
+level.  I suggest a combination of a mean (or r.m.s.) level detector plus a 
+deviation clipper, rather than a peak-level detector.  This strategy will 
+ensure that uplink noise will be the limiting factor at all times even if 
+the downlink SNR is poor. 
+
+The strong AGC action does mean that the user will not see changes in the 
+level of his own downlink baseband signal as he changes his uplink power. 
+Uplink power control, based on measuring the level of one's own downlink 
+signal, will therefore not work, but my experience was that this method 
+would be unworkable anyway - it would be very difficult to set levels in 
+the user's downlink receiver in order to ensure that all users shared the 
+downlink.  
+
+However, I did trial uplink power control based on the user 
+measuring the SNR of his own downlink signal, and that worked very well 
+and it only requires all users to agree on a reference SNR value to be 
+set into the user's groundstation software and doesn't depend on receiver 
+baseband levels.  This reference downlink SNR value could even be hard-
+coded into the user software in order to force all users to the target 
+value (~10dB?).  
+
+We would need contributions from the authors of existing PSK31 software 
+packages to add this feature into their software. We would in any case need
+contributions from these authors to include the uplink Doppler correction, 
+in which the uplink frequency is controlled to keep the frequency of one's 
+own downlink signal fixed. To achieve both the uplink power and Doppler 
+control, the user software needs to have an auxiliary receive channel which 
+will be aligned to the frequency of the user's own transmission.  Most of 
+the PSK31 software packages can do this now.  I had both these features 
+working on PCSAT2, and was probably the only person to do so within the 
+short lifetime of the PCSAT2 transponder (before the antenna fell off!) 
+so I can contribute ideas here.
+
+[WB4APR comment: I hope to require uplinks to use 1/4 wave vertical antennas
+with 25W transmitters.  The horizon-to-zenith antenna pattern matches
+inversly with the range-gain of the typical pass over any one station.  
+Thus, the power received on the spacecraft is nearly level within a few 
+dB independent of where a particular station is located with respect to 
+the instantaneous position of the bird. (plus or minus, of course, all 
+the other variables ;-)
+
+73
+Peter G3PLX
+
+

@@ -1,0 +1,40 @@
+***************************************************************************
+*        ATGP 2019 Report for Mount St Joseph  (Canada)  by Dan VA2KEY   75
+***************************************************************************
+
+Left the west-island of Montreal at 720, got to the summit of the drive-up 
+around 11.  I called Shack Potato to check in and said I'd be OTA in 30 
+minutes. 
+
+Turned on the TH D-72 and beaconed my location on 144.39, retuned HT to 
+144.34 and continued beaconing. 
+
+ I brought along an old scanner connected to a homebrew vertical dipole 
+with the scanners audio output into a laptop running DireWolf (software 
+TNC).  My intention was to log the packets coming across my summit.  First 
+lesson learned : I quickly realised that my homebrew dipole heard way 
+fewer stations than my TM-D710.  The better way to do logging is to 
+interface the main radio with the better antenna.  This "logging" station 
+didn't hear Tim on Kathadin.  I'm attaching the log file, if anyone's 
+interested. 
+
+For the TM-D710 configuration, I relied on an old PM that I didn't review 
+before heading out. Luckily, Lynn talked me through the proper config.  
+Second lesson learned : ALWAYS check the config beforehand. 
+
+I had solid voice contact with Kathadin.  I called out on voice to 
+MT-Washington but didn't hear back. Packet to MT-Washington worked. 
+
+I was glad to see packets from Mt-Carleton and MT-Blanc, so my main 
+station could hear Kathadin.
+
+My wife came along and we had a nice picnic.  GP is a Great reason to 
+head out to the mountains.  
+
+My location was:
+Latitude	45.44757299	45° 26' 51? N
+Longitude	-71.12033188	71° 7' 13? W
+
+I think this location is a capable replacement to SugarLoaf. 
+
+

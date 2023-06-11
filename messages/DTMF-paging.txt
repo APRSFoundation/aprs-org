@@ -1,0 +1,156 @@
+DTMF-Paging <=> APRS Gateway Spec                         12 Feb 09
+-------------------------------------------------------------------
+
+The conversion between APRS and DTMF-Paging formats are discussed 
+in this document.  Even in 2007 there are probably as many DTMF
+text paging radios as there are APRS display radios.  Hence the 
+need for a common translation between the two.
+
+In the late 1990's there were tens of thousands of FT-51 and TH-78 
+DTMF paging radios which can send and receive text messages
+using DTMF.  Although text messages were usualy constrained to
+6 or 12 byte strings, they can be combined together to the full
+message memory which is ten such sextets or 60 characters.
+
+There are several major categories of applications:
+
+1) Two way text and data exchange between these radios
+2) Displaying local APRS data ON these radios
+3) Sending APRS type data from these radios
+4) Using *ANY* HT to send DTMF data to these radios or Net control
+   
+Generally these operations take place on a separate simplex channel
+than the APRS traffic.  The radio is set to receive-paging mode, 
+and it will monitor and display any APRS traffic converted to DTMF,
+or any DTMF data from other radios.  THe radio can also send DTMF
+data that is converted back to APRS and placed on the APRS channel.
+
+Operating scenario 4 has the largest potential since it will let 
+ALL amateur radio operators at an event use ANY of their existing 
+HT's with a DTMF pad to send in data to net control.  For 
+applications, please see www.aprs.org/messages/DTMF2net.txt
+
+This spec defines the DTMF-Paging-to-APRS translation between the 
+APRS side or the gateway and the DTMF side.  This system is a
+subset of the overarching APRStt (touchtone) which can apply to
+all DTMF radios but uses voice synthesis for the return path to
+the user.  See www.aprs.org/aprstt.html
+
+MESSAGE RECEPTION:  The special DTMF radio must be in Message 
+Paging Receive mode.  The display consists of three parts:
+
+XXXXX YYYYY
+Z Z Z Z Z Z
+
+Where XXXX and YYYY are the usual dual band frequency displays
+and Z Z Z Z Z Z is a larger font 6 character message window.
+When a page or text message is received, the frequency field
+say, XXXX, changes to display the SENDING station's 3 digit 
+paging address or group code and memory number and the ZZZZZZ 
+window displays any text. 
+
+Although multiple incoming messages will fill any available 
+message memory sextets, the sending station ID is lost in the
+additional memories, so it is best to keep all data to a single
+6 byte window where possible.  Obviously, Messages are expected
+to use as many of these memories as needed.  But first it is
+important to understnd how these message memories are handled:
+
+If the 10 message sextets are full then there are two options: 
+1) additional incoming messages are ingored. 
+2) incoming messages are overwritten into memory #0 (default).
+
+ADDRESSING:   The paging and messaging system uses 3 digit addresses
+for both individual messages and group calls.  For APRS we will
+define the individual callsign addresses as simply the numeric
+equivalent of the amateur call's suffix.  APR for example is 277.
+Then we have defined several group codes 990 to 999 for the several
+types of APRS traffic.  This way, receipients can select or opt-out 
+of certain data types. The header for a page or text message contains
+the GROUP number, GGG and the Senders Callsign ID, CCC like this:
+
+GGG*CCC
+
+MESSAGE TYPE:  The radios can monitor for up to 6 group codes and so
+the following assignments have been made for the several data types
+that everyone might want to receive:
+
+  999 can mean STATUS data (or any free text)
+  998 can mean FIXED position data
+  997 can mean MOVING vehicles
+  996 can mean WX data
+  995 can mean DIGIpeater data
+  994 can mean MESSAGES
+  993 can mean satellites-in-view
+  xxx are individual messages from xxx
+
+The Radio operator enters all of these GROUP codes into his paging
+memory so that he can receive these data.  Or he can selectively
+eliminate some types of data by omitting the 3 digit group code.
+
+ON-AIR-FORMAT:   The on air format for these messages are:
+
+GGG*CCC     - which opens the Paging squelch.
+#MMMMMMMMM# - which is the message function up to 6 bytes.
+#mmmmmmmmm# - or additional message lines up to 10 lines.
+
+These messages may be manually stored in ANY DTMF radio  and can be
+used to manually send messages to the FT51/TH78 series radios.  This
+method can be very powerful for remote data entry at amateur radio
+field events.  Please see www.aprs.org/aprsevent.html
+
+DTMF PAGING RADIO SETUP: 
+
+Each FT51/TH78 has to be set up for DTMF paging and messaging.
+This involves setting the USER's digital ID, which for this appliaction
+should be the numeric equivalend of his three letter callsign suffix.
+For example, WB4APR has the suffix of APR which is 277 on a DTMF pad.
+Next, the user must store the above 3 digit APRS group ID's that
+he wants to receive.  Then he must enable TEXT PAGING which squelches
+the radio on that channel so that it will only respond to PAGING.
+
+APRS-to-DTMF FORMATS:
+
+This process is the conversion from normal local APRS traffic into a
+DTMF equivalent
+
+CALLSIGNS:  First the callsign is converted to 6 bytes.  This provides
+the DTMF user the ability to see the full callsign of the station and
+be able to match it to the CCC numeric equivalent ID.
+
+   CCCCCC is used if no SSID is present
+   CCCCCS is used for 5 byte calls with one digit SSID's
+   CCCCSS is used for 4 byte calls with two digit SSID's
+   CCCCSS is used for all other calls with PREFIX dropped to fit.
+
+POSITION:  The position data is converted to a BEARING and RANGE from
+the DTMF/APRS gateway location.  The BEARING is converted to angles-of-
+the-clock which gives 30 degree resolution.  This uses the digits 0-9 
+and then T,E,V for Ten, Eleven and twelVe o'clock directions.  The 
+distance is expressed in two digits of MILES or Kilopmeters according 
+to local usage.  The resulting 3 digit POSITION field is labled as
+CMM for "Clock bearing and 2 digits of miles".
+
+FREQUENCY:  If a FFF.FFFMhz frequency string is present, then it is 
+converted to 6 bytes FFFFFF.
+
+HEADING/SPEED:  Two bytes are used. HS where Heading is N,S,E,W and
+speed is in 10's of MPH or KPH.  Example, 60 MPH is "6".
+
+MESSAGES:  Any Messages heard on the APRS channel directed to any 
+station with the suffix of XYZ will be sent as a page on the DTMF 
+paging channel to the paging address of ### which is the DTMF hash 
+of the XYZ callsign suffix.  The DTMF Gateway further encodes the
+APRS sender's call into its comparable 3 digit DTMF number ###.
+On receipt, the message lines will appear as being from station ###.  
+For now, the DTMF gateway does not store nor prepare a traffic list 
+for future replay.  Instead, for now, it simply repeats the message 
+each time the APRS packet is seen. 
+
+ANYWAY I will work very closely with any volunteer to finalize the 
+details of this spec for optimum compatibility with existing and 
+future APRS. 
+
+
+Bob, WB4APR 
+

@@ -1,0 +1,104 @@
+Calling Plan Established for Boy Scout Camps               29 May 2006
+---------------------------------------------------------------------
+
+By Daniel Fisher, AI4GK, South Brevard County, Florida PIO, ARRL
+and Bob Bruninga, WB4APR, Technical Coordinator, MD/DC Section ARRL
+
+This file covers three topis:
+
+1) Using FRS radios as an intro level to amateur radio and getting
+scouts to use FRS radio planning in all activities. 
+See www.aprs.org/frsnight.html
+
+2) A Scout Camps Calling Protocol (SCCP) for the HF bands. See below.
+
+3) A global scouts CQ CALLING system for APRS.  See below.
+
+THE SCOUT CAMP CALLING PROTOCOL (SCCP):
+------------------------------------------------------------------
+A small group of Amateur Radio operators involved in Boy Scouts of 
+America recently established a calling plan for Boy Scout camps.
+
+In late April 06, Nathaniel Frissell, W2NAF, posed a challenge, on
+the Scout Radio Yahoo group http://groups.yahoo.com/group/ScoutRadio, 
+to come up with a summer camp net so that Scouts can talk to one 
+another. 
+
+After a very few weeks of discussion led by Frank Krizan, KR1ZAN, 
+President of the K2BSA Amateur Radio Association, the members came 
+up with an HF calling plan, dubbed Scout Camps Calling Protocol, 
+or SCCP. This is a plan for ham-Scouts and Scouters throughout the 
+world to make contact with other Scouts and Scouters for Radio Merit 
+Badge requirements, Amateur Radio demonstrations, emergency 
+preparedness, passing NTS traffic, or any other purpose, including 
+ragchewing. 
+
+"The intent is to encourage camps and folks at home to get on the air 
+at prescribed times and provide radio contacts for scouts at camp - 
+for many of whom this will be their first amateur radio contact," 
+said Krizan. 
+
+The SCCP plan's strength is its simplicity.
+
+1.	Scout camps, and any interested ham-Scouters not at camp, are 
+encouraged to get on the air at 1300, 1900, and 2100 hours local time.  
+And or send out an APRS message to SCOUTS on VHF at any time 
+(see details below).
+
+2.	Calling times extend from 5 minutes before to 5 minutes after 
+the hour. The recognized call will be "CQ SCOUT CAMPS."
+
+3.	Use the traditional Scout calling frequencies, +/- 10 KHz, 
+avoiding any nets. See the web page:
+http://www.arrl.org/FandES/ead/jota.html#frequencies 
+
+      BAND	SSB	CW
+      80 Meters	3.740 / 3.940 MHz	3.590 MHz
+      40 Meters	7.270 MHz *	7.030 MHz
+      20 Meters	14.290 MHz **	14.070 MHz ***
+
+4.	There are two frequency bands for each time. Participating 
+stations will use the higher band during the 5 minutes before the hour 
+and the lower band during the 5 minutes after the hour to maximize 
+propagation conditions.
+
+5.	The bands to use are:
+      1.	Daytime (1300 and 1900 hours): 20m/40m.
+      2.	Nighttime (2100 hours): 40m/80m.
+
+6.	Scout camps, Scouts and Scouters from the United States, 
+Canada, and the rest of the world are encouraged to monitor 
+according to the plan from 1700Z to 2000Z and from 2300Z to 0400Z 
+to support Scout camps with traffic handling and talking with Scouts.
+
+*   7.270 might be unusable in the evening and night hours due to 
+Asian broadcast stations. Tune up or down to find an opening.
+**  Avoid 14.300, since the Maritime Mobile Service Net and the 
+    Intercontinental Traffic Net use this frequency.
+*** Although 14.070 is listed as the Scout CW calling frequency, do 
+    not use it because it is the international PSK-31 frequency. 
+    Suggested frequency is 14.065. Please refer to the following 
+    link for more details.
+    http://homepage.mac.com/k2frd/JOTA.htm 
+
+GLOBAL CQ's ON APRS:
+--------------------------------------------------------------------
+Bob Bruninga, WB4APR, developer of Automatic Position Reporting 
+System (APRS) and another avid ham-Scouter, has added the following 
+suggestions for Scout camps and ham-Scouters equipped with APRS.
+
+1. If your camp has APRS, send a message to CQSRVR at the beginning 
+and end of all operating periods.  
+
+2. In the message, use the text "CQ SCOUTS CQ SCOUTS ..." where "..." 
+is free text relevant to your situation.  This message will go to ALL
+other similar stations in the world LIVE.  Please see the web page:
+www.aprs.org/cqsrvr.html
+
+3.	Make sure that your station is using the APRS symbol for Scouts. 
+That way, any other station in the world can check the APRS FINDU Web 
+page and see live which other SCOUT stations are on the air.
+http://www.findu.com/cgi-bin/symbol.cgi?icon=/,&limit=2000 
+
+Bob Bruninga
+WB4APR

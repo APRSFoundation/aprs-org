@@ -1,0 +1,115 @@
+Mount Greylock - 2013                                       22 July 2013
+-------------------------------------------------------------------------
+
+AB1PH, Don Rolf:
+
+I will upload photos documenting our location and setup to the yahoo 
+groups files section.
+
+Station was manned by Jeff Marden KB1TJI and Don Rolph AB1PH from Walpole 
+Emergency Communications Association operating under call sign WA1PLE.  
+Our thanks to Roger Turner W1ZSAand Jeff Marden for their work to 
+establish the D710A go kit.  Our intent was to test the D710A go-kit 
+as a tool to support our emcomm efforts.
+
+Equipment was:
+
+- D710A running about 50 watts
+- Diamond X-200 antenna on about 18 foot painter pole
+- AVMAP GS6 APRS gps unit with map
+- primary power supply:  two 7 AHr batteries
+- back up power supply: 35 AHr battery
+
+This was supported by:
+
+- V71 supplemental transceiver with X-200 antenna
+- D72A with roof top magmount to support ANSVRV communications
+- D72A with rubber duck used to monitor digipeated packets
+
+We arrived at Greylock a few minutes past 10 AM.  We reconnoitered 
+positions on the notch road, and up the summit road, and settled on the 
+intersection of summit road, Rockwell road and Notch road.  There is an 
+excellent pull off and parking area which is perfect for the set up 
+location and with a painter pole has a reasonable path to Equinox.
+
+We were established about 10:30 and began confirm voice communications 
+on 445.925 with Equinox.  We were able to confirm packet digipeating and 
+proceeded to watch the neighboring stations stabilize.
+
+We eventually had voice communication with both Sam's Point with full 
+scale and Equinox with about half scale.
+
+Packet communications confirms direct connections with
+
+- Camelback
+- Sam's Point
+- Equinox
+
+One packet was apparent heard direct form mdmtn-7.
+
+By about 11:30 AM full packet communication was in process, although there 
+was some occasional instability with Equinox when they moved locations.
+
+Our primary power source failed at about 12:30 PM, detected   when Equinox 
+reported no longer seeing our packets.  The secondary 35 AHr was swapped 
+in and we were on air again at 12:40 PM.
+
+At about 2:40 PM Equinox indicated that Mt Washington was securing and 
+that Equinox was securing.  When we were unable to contact Sam's Point at 
+about 3 PM, we began securing.  We were fully packed  up and on the road 
+at 3:35 PM.
+
+We did not have a computer capturing packets, so do not have a packet log 
+to add to the report.
+
+My thanks to the AT Golden Packet team for organizing the event:  it was a 
+great deal of fun and confirmed the capabilities of our APRS go kit.
+
+73,
+AB1PH
+Don Rolph
+-----------------------------
+
+Companion Report from Mt Dennis:
+
+Due to various reasons, the official trip to Dennis Hill in Northwest 
+Connecticut was canceled this year.  After a brief conversation with 
+Pete KB1PCK,  I ended up making a spontaneous trip to Dennis Hill anyway.
+
+The Connecticut group is woefully lacking in terms of Kenwood equipment. 
+ All that I had for this outing was my TH-D7 and a Diamond dual band 
+mobile antenna.  Additionally, I had brought a Belkin 12-volt UPS and 
+an Arduino programmed as a digipeater specifically for this event in 
+case it was needed.  The digi uses the TNC inside the TH-D7 over KISS.  
+The digipeater was never activated.
+
+I arrived at Dennis Hill shortly after 11:00.  The HT was set to monitor 
+144.340 and 445.925 in Dual mode.  There was no problem receiving packets 
+or voice from Greylock.  I heard no voice communication from any other 
+site.
+
+I had no computer with me, so there was no way to see the path of the 
+packets that I did receive.  In all, I decoded at least a few packets 
+originated from all stations from Camelback-9 through Katahdin-15.  
+I presume the majority were digipeated by Greylock-11.  It was 
+interesting that on some occasions I did hear multiple bursts before 
+the packet displayed.  This indicated to me that that I was receiving 
+a few digipeated packets from various sites.
+
+Severe weather was closing in around 2:00 PM.  At that time I decided 
+to beacon a few packets with the CTLINK-1 ID.  All beaconed packets 
+were digipeated by Greylock, and Greylock confirmed they had seen the 
+beacon.  I was pleased to see that Sam's Point had also logged the 
+beacon.  I am curious to hear what other stations received those packets.  
+Beacons were sent at 2:10, 2:20 and 2:25 according to the car's clock.
+
+At 2:30 the storm had reached Dennis Hill.  NWS had issued a severe 
+thunderstorm warning for that particular cell, and I decided to secure.  
+I was unable to raise Greylock on 70 centimeters at that time, probably 
+due to weather.
+
+Respectfully Submitted,
+Dana Borgman, KA1WPM
+
+
+

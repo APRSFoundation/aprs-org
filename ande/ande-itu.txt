@@ -1,0 +1,180 @@
+|OPERATIONS of ANDE IN THE AMATEUR SATELLITE SERVICE       18 Nov 2002
+|-----------------------------------------------------------------------
+|                                                                 WB4APR
+|
+|This paper addresses the licensing of ANDE in the Amateur Satellite
+|Service.  It extracts the pertinent sections of the IARU (International
+|Amateur Radio Union) guildelines for INFORMATION FOR PROSPECTIVE OWNERS
+|AND OPERATORS OF SATELLITES UTILIZING FREQUENCIES ALLOCATED TO THE
+|AMATEUR-SATELLITE SERVICE  which helps assure compliance with the ITU
+|rules.   This document may be viewed in its entirety at:
+|http://www.iaru.org/satellite/prospective.html
+|
+|RULES:
+|  "Amateur-Satellite Service: A radiocommunication service using space
+|  stations on earth satellites for the same purposes as those of the 
+|  amateur service." [RR S1.57]
+|
+|  "Amateur Service: A radiocommunication service for the purpose of 
+|   self-training, intercommunication and technical investigations 
+|   carried out by amateurs, that is, by duly authorised persons 
+|   interested in radio technique solely with a personal aim and without 
+|   pecuniary interest." [RR S1.56]
+|
+|ANDE COMMENT:
+|
+|Sponsoring Organization:     US Naval Academy
+|Operating Organization:      US Naval Academy Amateur Radio Club W3ADO
+|Station Trustee:             Bob Bruninga, WB4APR
+|Satellite Station Licensee:  Ryan Johnson, K3FOR
+|
+|Bob Bruninga is the senior research engineer in the Naval Academy Student
+|project lab who gives engineering guidance to student satellite projects.
+|
+|Ryan (Skip) Johnson is an active friend of the Academy, a past president 
+|and Officer Representative of the Amateur Radio Club, who still meets with 
+|it regularly.  He is an unpaid Naval Reservest with NO PECUNIARY association 
+|with the US Naval Academy, NRL, NASA nor any other Organization involved in 
+|this project.
+|
+|RULES:
+|
+|  "VI. OPERATIONAL GUIDELINES. The following operational guidelines, based
+|   on interpretations by IARU of the Radio Regulations and good amateur
+|   practice, are intended to help in planning the missions, management, and
+|   control of satellites planned to operate in the amateur-satellite service.
+|
+|   Organisations building satellites should compare their mission plans to
+|   the requirements of the amateur-satellite service. Then, they should
+|   determine if it is possible to comply with the requirements of the
+|   amateur-satellite service or if licensing and operation should be in some
+|   other radio service which is more consistent with the nature and
+|   requirements of the mission.
+|
+|   A. The purposes of an amateur satellite should be:
+|
+|      (1) To provide communication resources for the general amateur radio
+|          community and/or
+|      (2) To conduct technical investigations in all respects consistent with
+|          the Radio Regulations. [See RR S1.56 and RR S1.57.]
+|
+|   Technical investigations carried out using frequencies allocated to the
+|   amateur-satellite service should be relevant to the development of "radio
+|   technique," that is, have a reasonable possibility of application to the
+|   development of radio communication systems.  [See RR S1.56 and RR S1.57.]
+|
+|   Examples of such technical investigations include: propagation studies,
+|   operational analysis of protocols used for digital voice and data
+|   communication, development of attitude determination methods, development
+|   of command and control procedures, studies of radiation effects on various
+|   electronic components, studies of meteor trail reflection, and measurement
+|   of the orbital environment useful in designing future amateur satellites.
+|
+|   While many other types of technical investigations are conceivable, those
+|   not having a reasonable possibility of application to radio communication
+|   systems are probably not in accordance with the treaty requirements. An
+|   administration can reject whatever it decides is inappropriate use of the
+|   amateur-satellite service or questions may be raised by other
+|   administrations.
+|
+|ANDE COMMENT:   ANDE is fully in compliance with the purposes above.
+|
+|1) ANDE communications system is designed as a PCsat follow-on AX.25 packet
+|radio UI packet digipeater for all users in the Amateur Satellite Service.
+|
+|2) Secondly, the ideal spherical surface of ANDE will have the least drag and
+|the most symetrical dynamics of any amateur satellite ever launched.  To this
+|end it downlinks telemetry on the temperature of the sphere which might get
+|locked into a single sun orientation in the space environment.  Further, it
+|contains 6 lasers that will be used for attitude determination by optical
+|observation from the ground.  Commanding these lasers are consistent with
+|the "development of attitude determination methods" noted above.
+|
+|RULES:
+|
+|   B. Station Control.
+|
+|   All stations operating in the amateur service and the amateur- satellite
+|   service, including space and Earth stations, must be controlled by "duly
+|   authorised persons," that is, licensed amateur radio operators who must be
+|   acting "solely with a personal aim and without pecuniary interest." [See
+|   RR S1.56 and RR S1.57.]
+|
+|   AMSAT-NA, for example, is an organisation which owns and builds space
+|   stations to operate in the amateur-satellite service. But, because it is
+|   an organisation and not an individually licensed radio amateur, it may not
+|   control an amateur station. Licenses under which AMSAT-NA owned amateur
+|   stations are operated are issued either in the name of an individually
+|   licensed amateur radio operator or an amateur radio club... where a 
+|   licensed amateur radio operator is named on the license as trustee
+|   for the club station.
+|
+|   In every case, an individual licensed amateur radio operator, who is
+|   neither employed nor paid by [the club or organization], is legally 
+|   responsible for the operation of every amateur station or amateur-satellite 
+|   station.  Commonly, the licensee is an unpaid member of the organisation...
+|
+|   Thus, the individual responsibility of the licensed amateur radio
+|   operator, effectively imposed by the Radio Regulations, works as a kind of
+|   legal safety check for the organisation and the amateur to protect both of
+|   their interests as well as that of the amateur satellite service itself.
+|
+|ANDE COMMENT:  ANDE's organizational structure and operators are
+|compliant with these rules.  The operating organization is the school's
+|Amateur Radio Club with WB4APR as the licensed trustee of the station 
+|and the licensed control operator for the satellite will be Skip Johnson,
+|K3FOR as noted above.  The interest of these individuals is in the
+|operation of the satellite for personal training and intercommunications 
+|with other satellite experimenters in the amateur satellite service and 
+|without pecuniary remuneration for such interest.  Bob Bruninga has a 20
+|year non-pecuniary history with the Amateur Satellite Service, the author 
+|of dozens of related papers in AMSAT and other Amateur Radio publications,
+|and the instigator of Packet Radio APRS position reporting via SAREX, MIR, 
+|ARISS, SUNSAT, SAPPHIRE, and PCSAT for purely personal aims of promoting
+|the Amateur Satellite Service.
+|
+|
+|RULES:
+|   D. Plain Language. The amateur-satellite service, by its nature, involves
+|   stations of more than one country. International communi- cation between
+|   amateur stations in different countries must be in plain language. [See RR
+|   S25.2.] The plain language requirement includes telemetry and data
+|   exchanged between users.
+|
+|   To meet the plain language requirement, technical descriptions of all
+|   emissions, codes, and formats must be made publicly available.  No system
+|   intended to conceal the meaning of a transmission may be used.
+|
+|   NOTE: Space telecommand transmissions for critical spacecraft functions
+|   are generally accepted as exempt from the requirement to use plain
+|   language.
+|
+|ANDE COMMENT:  The design, telemetry, data and all aspects of ANDE are
+|in plain language (AX.25 protocol) and all details are published and 
+|maintained current on the following WEB page:
+|http://www.ew.usna.edu/~bruninga/ande.html
+|
+|RULES:
+|   E. Open Access. All telecommunication facilities, except telecommand,
+|   operating in amateur-satellite service allocations should be open for use
+|   by amateur radio operators world-wide. All experiments utilising
+|   frequencies allocated to the amateur-satellite service should be freely
+|   available for use by radio amateurs world-wide and for reception by
+|   students and educators.
+|
+|ANDE COMMENT:  All communications modes (except command) and all telemetry
+|will be available to all amateur radio operators worldwide in accordance 
+|with the published user operating recommendations.    There is no other
+|usage of these communications transponders, nor circuits beyond what has
+|been described here for use in the Amateur Satellite Service.  There may
+|be periods when the transponders are commanded off for the purpose of
+|saving power, or keeping temperatures under control, but such OFF times 
+|will apply to all users equally.  When communications modes are activated, 
+|they are open to all radio amateurs worldwide who adhere to the recommended 
+|user station requirements and uplink parameters.
+|
+|Bob Bruninga, WB4APR
+|Trustee,
+|US Naval Academy Amateur Radio Club
+|410-293-6417
+

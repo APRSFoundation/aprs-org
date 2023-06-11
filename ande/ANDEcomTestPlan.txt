@@ -1,0 +1,91 @@
+ANDE COMM Card Test Procedure:                       Rev1   14 May 2004
+-----------------------------------------------------------------------
+
+This procedure uses the ANDE COMM Test Set to functional test all
+aspects of the Comm Module.
+
+EQUIPMENT: 
+   ANDE Comm Test Set and cable assembly
+   Bench Power supply for 14.6 volts at 1.2 amp
+   Sensor Simulator Plug
+   Laptop running USNA-gnd.EXE
+
+SETUP PROCEDURE:
+
+1) Run USNA-gnd.ex.  Enter password "lmur", hit ENTER.
+2) Configure for ANDE with alt-S-USAGE-ANDE to see ANDE screen.
+3) Plug ANDE COMM Test Set into Interface Module and the
+   DB-9 Serial port into Laptop.   
+4) Plug Sensor Simulator into Interface Module
+5) Set power supply to 14.6 volts, current limit initially
+   set to 100 mA.  Turn all switches on the Test Set to
+   off (down).  Plug the Red and Black leads into the power
+   supply.
+
+TEST PROCEDURES:
+
+Turn on Battery 1 switch.      Verify < 1mA and top alt-pwr LED lights
+Turn on Sep-Switch.            Verify less than 0.01 Amp 
+Turn on the Receiver Switch.   Verify about 0.07 Amp or less
+Turn on the Current Limit Override switch to prepare for XMIT.
+Wait 15 seconds.   Verify first Bulletin packet, and > 0.50 Amps
+On Keyboard, execute these commands:
+   C       to get the software to Communicate with the TNC 
+   ^C      to get to command mode (cmd: prompt (after some delay))
+   MXM ON  to enable monitoring of ANDE's own packets
+   TE 1    to set telemetry to every 10 seconds.
+   ESC key to get back to telemetry monitoring screen
+After 40 seconds, verify all telemetry fields are updated (except Sol):
+ 
+              A     B                      A       B
+   VOLTS    14.4  13.7          Currents:  52 mA   58 mA
+   X-SOL     .25   .23          Volts:    2.1 V   1.9 V
+   Y-SOL     .25   .23
+   Z-SOL     .23   .23
+   5-volts   5.0   5.0          Temperatures:  all ambient
+
+Jumper 51 Ohm resistor on Sensor Simulator with 14.6 volts momentarily.
+Verify Solar Cell currents about 0.25 volts.  You may also see
+sensor simulator temperatures rise.
+
+Flip Battery 2 switch up.      Verify Lower Power LED ON.
+     Verify telemetry shows split of power between bat 1 & 2, mostly on 1.
+
+Flip Battery 1 switch down.    Verify all current shifts to Bat 2.
+
+Send LEDS ON.     Verify nothing happens
+
+Send CTRL A ON.   Verify LASER Test LED comes on. current ^ 600 mA
+
+Flip Battery 1&3 switchs on and then Battery 2 switch off.  
+     Verify laser LED off showing that only battery 2 powers laser.
+
+Send CTRL A OFF then CTRL B ON.  Verify laser LED comes ON
+
+Flip Battery 4 switch on and then battery 3 switch off.
+     Verify laser LED off showing that only battery 3 powers laser.
+
+Send CTRL A ON.   Verify laser LED comes ON.
+
+Send LEDS OFF.    Verify laser LED goes off.
+
+After  1 min 45 seconds verify receipt of second Bulletin
+After  4 min 15 seconds verify receipt of third Bulletin
+After 10 min 30 seconds verify receipt of fourth Bulletin
+
+Send LEDS ON.  Verify laser LED comes ON.
+Flip RCVR Switch off.  Verify laser LED OFF and power drops below 0.01
+immediately or within 45 seconds.
+
+Verify RX wakes up for 2 seconds every 16 or 57 secs (A or B).
+
+Wait till RX lamp lights and send an RF packet from the Handi-Talkie.
+     Verify system stays awake for 45 seconds or so.  And then goes off.
+
+Turn Power supply off.
+Exit USNA-gnd.EXE with the FILE-QUIT-YES command.
+Disconnect connections as needed.
+
+Bob Bruninga
+USNA Satellite Lab
+410-293-6417

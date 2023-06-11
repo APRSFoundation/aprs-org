@@ -1,0 +1,353 @@
+ISS-PCsat JOINT CONSTELLATION TEST                             28 Oct 2002
+--------------------------------------------------------------------------
+                                                                    WB4APR
+
+On 10 October the ISS crew changed the ARISS packet radio system frequency
+from 145.800 to the PCsat frequency of 145.825 for the first experiments
+in the Amateur Satellite Service with two digital communications
+spacecraft operating in constellation with each other.  Both spacecraft
+were configured to relay digital packets between ground users and each
+other to accomplish the following objectives:
+
+  1) Doubling the channel access times for all users from as low as 50
+     minutes (6 passes a day) with a single spacecraft to as much as  2
+     hours (12 passes a day) with both.
+
+  2) Operating identically and generically so that users could communicate
+     with their same station configuration independently of which
+     spacecraft was in view.
+
+  3) Operating as a constellation of two for satellite-to-satellite relay
+     of user communications to extend the terrestrial range over
+     greater distances or from continent to continent.
+
+  4) Operating in support of ech other so that one spacecraft could relay
+     to ground stations over the horizon, the telemetry from the other.
+
+  5) Operating synergistically with dozens of worldwide fixed-tuned,
+     no-track-omni internet linked ground stations providing near
+     worldwide live connectivity to anyone with a browser to monitor the
+     mutual downlinks. (www.ariss.net and pcsat.aprs.org).
+
+  6) Establishing a baseline verification of ISS antenna, transmitter and
+     receiver performance by comparison with known ERP, antenna and
+     sensitivity measurements on PCsat.
+
+TEST LIMITATIONS:
+
+As an experiment of opportunity, there were several limitations on the
+conditions of the test.  First PCsat was in a maximum eclipse phase, and
+was only working in sunshine.  Second, the phases of PCsat and ISS in
+their orbits were as-is, so joint periods when they wre both in line-of-
+sight with each other were occuring randomly and often over areas where
+PCsat was in the dark, or where there were no ground station observers.
+Third the ISS PMS was not on the 145.825 frequency of operational all the
+time.
+
+TEST RESULTS:  (see http://www.ew.usna.edu/~bruninga/pcsat.html)
+
+Even with these limitations, the test was a great success with the
+following highlights:
+
+1) On 12 October over the East coast of the USA, 6 stations relayed
+successful packets between both spacecraft while they were within 260 to
+600 miles of each other.  One station was a mobile.  Multiple successful
+packets were captured as well into the internet linked ground station
+system.
+
+2) On 22 October over the USA, another 7 stations were successful and the
+successful ranges between spacecraft ranged between 260 to 1880 miles.
+Further highlights were:
+
+   * New satellite-to-satellite distance record of 1880 miles.
+   * DX record was made by a mobile operator while driving (in motion).
+   * Successful sat-to-sat packet from a hiker with a handheld radio.
+   * Successes despite lack of optimization of PCsat early in the pass.
+   * PCsat successfuly reported its telemetry over the horizon via ISS.
+   * Packets were received by the worldwide internet linked ground stns.
+   * Generic spacecraft operation demonstrated by identical relay of
+     the same source packet into both satelliite footprints.
+
+3) These tests confirm the link-budget of omni-directional satellite-to-
+satellite links using the installed ISS and PCsat antenna systems and
+nominal 2 and 5 watt ERP systems.
+
+4) This test demonstrated the viability of operating numerous 145.825
+UI-Digipeating satellites in a loose constellation in the Amateur
+Satellite Service to provide near continuous and remote area low data rate
+communications from simple (mobile and handheld) stations.  Using generic
+relay aliases and routing, all such satellites operate synergisitically
+to support users on the ground transparently to their individual settings.
+
+5) The test validated the worldwide system of simple fixed frequency,
+omni-directional (no-track) internet linked ground stations combined with
+the synergy of multiple spacecraft to provide near global connectivity
+between the mobile/remote user and the global infrastructure.
+
+CONCLUSION:  The test was a success.  It demonstrated that just a few, or
+as many as 10 such satellite transponders can be accommodated on the
+single 145.825 frequency with out problem while providing near continuous
+global coverage to handheld, mobile, educational and other simple ground
+stations in the Amateur Satellite Service.
+
+Bob Bruninga, WB4APR
+Senior Research Engineer
+US Naval Academy Satellite Lab
+
+END EXECUTIVE SUMMARY--------------------------------------------------
+
+ADDITIONAL REPORT DETAILS:
+
+DUAL HOP GEOMETRY:  In general, ISS and PCsat were within range of each
+other about 4 hours a day.  This ranges from 5400km grazing passes to
+420km when PCsat is directly overhead ISS.  For reliable comms, this test
+has validated about 2000km as the limit or about an hour a day.  But with
+HAM activity in only about 10% of the Earth's surface, the probabiliy of
+good geometry for a dual hop is rare.
+
+But dual hop is not really a primary objective of a multisatellite
+constellation over populated areas because all packets are heard by
+numerous internet linked ground stations and eventually are distributed
+worldwide anyway.  The advantage of dual hop paths are over the Oceans and
+Poles, where remote travelers will be able to link remote packets two hops
+to the nearest IGate.
+
+ISS AVAILABILITY:  During this test, the ISS PMS system was occassionally
+moved back to the primary 145.800 freqequency for voice and also the PMS
+appears to have locked up twice for long periods as shown below.  This
+PMS activity log was gathered with the help of Miles, WF1F.
+
+ 8 Oct ARISS TELCOM confirmed test was still a go
+10 Oct 1715z PMS heard on 145.825
+       2150z Was back on 145.800 voice pass over USA
+12 Oct 1556z SUCCESful dual hop packets on 145.825
+14 Oct 1300? last time heard on any frequency
+15 Oct ..... Nothing heard
+16 Oct ..... Nothing heard
+17 Oct ..... Nothing Heard
+18 Oct ..... Nothing heard
+19 Oct ..... Nothing heard
+20 Oct ..... Nothing heard
+21 Oct 0735z Packet back on 145.825
+22 Oct 0152z Valery heard on voice and had found PMS locked up
+       2001z SUCCSESSFUL dual hop tests on 145.825
+       2300z Valery on voice on 145.800
+23 Oct 1653z Back on 145.825
+24 Oct 1108z On 145.825
+25 Oct 2045z Last time heard on any frequency
+26 Oct ..... Nothing heard
+       2237z Packet back on 145.825
+27 Oct 1830z Back on packet 145.825
+       2020z Valery on voice on 145.800
+28 Oct 0000z Scheduled End of joint ISS/PCsat tests
+       1940z ISS still on 145.825
+
+The Following two sections are the detail reports for the two
+successful opportunities...
+
+------------------------------------------------------------------------
+Date: Sat, 12 Oct 2002 18:06:24 -0400 (EDT)
+From: Bob Bruninga <bruninga@usna.edu>
+Subject: [aprssig] Dual Hop SUCCESS! (corrected copy)
+
+ISS<==>PCSAT SUCCESS:
+
+This was a pass of ISS and PCsat over USA with PCsat almost directlly
+overhead of ISS over Canada.  To fit in 80 character Email, the first data
+is truncated to Header andtruncated text and the second list is just the
+CALLSIGN and the DATA part of the successful packets.  These times are
+within 1 second of UTC.
+
+At 19:56:15 or so (12 Oct), PCsat passed DIRECTLY 420 km over ISS and this
+was about 100km NW of Natashquan, Quebec.  A minute 48 seconds earlier,
+N4ZQ got the first successful packet and 40 seconds after the conjunction,
+a series of successes lasted for another minute.  By that time the
+separation between ISS and PCsat was about 960 km.
+
+Although ISS and PCsat were in view over the entire USA, these succeses
+occured after most of the USA was no longer in view.  The next pass was
+also directly over USA, but ISS had switched back to voice on 145.800
+and so no packet tests were possible.  But we did get to talk to Valery
+and thank him for the test.  Here are the successful double hop packets.
+
+[19:54:24] N4ZQ>QST,W3ADO-1,RS0ISS*,SGATE,WIDE<<UI>>:
+
+[19:56:58] KB1GVR>CQ,RS0ISS*,W3ADO-1/1:=4436.18N/06826.92W-> QSL TEST
+[19:56:59] KB1GVR>CQ,RS0ISS,W3ADO-1*/1:=4436.18N/06826.92W-> QSL TEST
+
+[19:57:05] KB2M-3>SYQQ0W,W3ADO-1*,RS0ISS/1:'fH~l j/]www.qsl.net/kb2m
+[19:57:06] KB2M-3>SYQQ0W,W3ADO-1,RS0ISS*/1:'fH~l j/]www.qsl.net/kb2m
+
+[19:57:09] KB1GUE>CQ,RS0ISS*,W3ADO-1,SGATE,WIDE/1:>FN42IL/- CQ from Glenn
+[19:57:10] KB1GUE>CQ,RS0ISS,W3ADO-1*,SGATE,WIDE/1:>FN42IL/- CQ from Glenn
+
+[19:57:16] KB2M-5>APRSAT,RS0ISS*,W3ADO-1/1:=3911.01N/07445.00W`www.qsl...
+[19:57:17] KB2M-5>APRSAT,RS0ISS,W3ADO-1*/1:=3911.01N/07445.00W`www.qsl...
+
+[19:57:28] WB4APR>APRS,RS0ISS*,W3ADO-1,ARISS/1::ALL      :TEST in
+[19:57:29] WB4APR>APRS,RS0ISS,W3ADO-1*,ARISS/1::ALL      :TEST in
+
+[19:57:58] KB2M-5>APRSAT,RS0ISS*,W3ADO-1/1:=3911.01N/07445.00W`www.qsl...
+[19:57:58] KB2M-5>APRSAT,RS0ISS,W3ADO-1*/1:=3911.01N/07445.00W`www.qsl...
+
+
+Since the above were truncated to fit the 80 column format, here is
+the full text of those same successful packets.
+
+KB1GVR>    :=4436.18N/06826.92W-> QSL TEST
+KB1GUE>    :>FN42IL/- CQ from Glenn in Bedford Mass. - KB1GUE@amsat.org
+WB4APR>    ::ALL      :TEST in progress
+KB2M-5>    :=3911.01N/07445.00W`www.qsl.net/kb2m
+
+Notice that packets went BOTH ways between the spacecraft.
+
+One other station, KB1EAA inadvertantly got a Triple hop, but with a
+ground station inbetween because he had a WIDE on the end of his path
+(which we have recommended for better IGate success once the packet
+reaches the ground).  But in this case, with ISS also having the WIDE
+alias, it went back up via satellite!
+
+[15:54:19] KB1EAA>APK002,W3ADO-1,SGATE,RS0ISS*/1::PCSAT    :HI{9
+
+For this pass, PCsat was not commanded into optimum configuration
+until about the middle of the pass but it was in proper mode and fully
+functional with enough power by the time of the successful packets!
+
+de WB4APR@amsat.org, Bob
+----------------------------------------------------------------------
+
+Date: Tue, 22 Oct 2002 20:47:26 -0400 (EDT)
+Date: Tue, 22 Oct 2002 23:50:12 -0400 (EDT) <= a later update>
+From: Bob Bruninga <bruninga@usna.edu>
+Subject: [aprssig] Joint ISS/PCsat dual hop success (2) (UPDATE)
+
+On 22 October from 2001z to 2013z both ISS and PCsat were in view of the
+USA.  Dual hop packets reported are below:  Long packets are truncated to
+make them fit an 80 column Email format:
+
+[20:01:16] K7FZO-1>4W3YVV,RS0ISS,W3ADO-1*,SGATE,WIDE:'2^Al#1k/]"41}@arrl.net
+[20:01:30] K7FZO-1>4W3YVV,RS0ISS,W3ADO-1*,SGATE,WIDE:'2^Al#1k/]"41}@arrl.net
+[20:02:11] K7FZO-1>4W3YVV,RS0ISS,W3ADO-1*,SGATE,WIDE:'2^Al#1k/]"4/}@arrl.net
+[20:02:53] K7FZO-1>4W3YVV,RS0ISS,W3ADO-1*,SGATE,WIDE:'2^Al#1k/]"40}@arrl.net
+[20:03:06] K7FZO-1>4W3YVV,RS0ISS,W3ADO-1*,SGATE,WIDE:'2^Al#1k/]"41}@arrl.net
+[20:03:36] K7FZO-1>4W3YVV,RS0ISS,W3ADO-1*,SGATE,WIDE:'2^Al#1k/]"40}@arrl.net
+[20:05:12] K7FZO-1>4W3YVV,RS0ISS,W3ADO-1*,SGATE,WIDE:'2^Al#1k/]"42}@arrl.net
+[20:05:42] COMAND-1*>WB4APR-3 <UA>prompt:OUTPUT was 11111111,0111,1)
+[20:06:21] W3ADO-1*>BEACON,SGATE:T#020,165,165,067,219,213,00111111,0111,1
+[20:06:25] COMAND-1*>WB4APR-3:TELEMTRY was WAIT 6/WAIT 18
+[20:07:43] WB6OLA]CM99GK,W3ADO-1,RS0ISS*,qAR,WB0WNX:Hi WD5EEV
+[20:08:09] WD5EEV>CQ,W3ADO-1>RS0ISS*:]            de John
+[20:08:09] K7FZO-7>TWRWYS,W3ADO-1,RS0ISS*,WIDE3-3:'1Dol [/>
+[20:08:18] WB6OLA>CM99GK,W3ADO-1,RS0ISS*:
+[20:08:22] K7FZO-7>TWRWYS,W3ADO-1,RS0ISS*,WIDE3-3:'1Dol [/>Thom's D7 v146.52
+[20:08:25] W3ADO-1>BEACON,RS0ISS*:T#022,079,067,077,101,213,00111111,0101,1
+[20:08:31] K7FZO-1>4W3YVV,W3ADO-1,RS0ISS*,WIDE:'2^Al#1k/]"4.}k7fzo@arrl.net
+[20:08:33] N4ZQ>QST,W3ADO-1,RS0ISS*:
+[20:08:36] N8IGJ>CQ,RS0ISS,W3ADO-1*,WIDE:
+[20:08:40] K7FZO-7>TWRWYS,W3ADO-1,RS0ISS*,WIDE3-3:'1Dol [/>
+[20:08:40] W3ADO-1>ID,RS0ISS*:W3ADO-1/R XBAUD/G MAIL-1/B
+[20:08:49] K7FZO-1>4W3YVV,W3ADO-1,RS0ISS*,WIDE:'2^Bl#1k/]"4/}k7fzo@arrl.net
+[20:08:52] RS0ISS*>CQ,SGATE:>ARISS - International Space Station
+[20:09:02] N8IGJ>RS0ISS>W3ADO-1*>WIDE>CQ:
+[20:09:20] WB4APR-3>APRS,W3ADO-1,RS0ISS*,ARISS: Ping...# 2
+[20:09:20] WF1F>MILES,W3ADO-1,RS0ISS*:
+[20:09:37] N8IGJ>CQ,RS0ISS,W3ADO-1*,WIDE/1:
+[20:09:39] WF1F>MILES-3,W3ADO-1,RS0ISS*: I got a doble ping
+[20:09:43] WB6OLA>CM99GK,W3ADO-1,RS0ISS*:Hello de Carl in Chico,Ca
+[20:09:39] WF1F>MILES,W3ADO-1,RS0ISS*/1:I got a doble ping
+[20:09:43] WB6OLA>CM99GK,W3ADO-1,RS0ISS*/1:Hello de Carl in Chico, Ca
+[20:09:52] WB4APR-3>APRS,W3ADO-1,RS0ISS*,ARISS/1:Lets try OPS NORMAL for a while
+[20:09:52] WB4APR-3>APRS,W3ADO-1,RS0ISS*,ARISS/1:Ping...# 3
+[20:13:59] KB1GVR>CQ,RS0ISS,W3ADO-1*/1:=4436.18N/06826.92W-> Ellsworth ME6
+
+The first packet was a DX record for satellite-to-satellite packet of 1880
+miles between spacecraft.  To see the geometries involved, see the maps on
+the PCsat web page below.
+
+    http://www.ew.usna.edu/~bruninga/pcsat.html
+
+In the above dual-hop packets between ISS and PCsat, there are a few
+packets of special interest that deserve comment:
+
+The first packets were when ISS was out over the pacific with only the
+west coast in view, thus there was little interference for the numerous
+(7) easy DX successes (the first was over 1880 mi):  This packet decodes
+as a packet from a mobile IN MOTION in Seattle, WA:
+
+> [20:01:16] K7FZO-1>4W3YVV,RS0ISS,W3ADO-1*,SGATE,WIDE:'2^Al#1k/]"41}@arrl
+
+The next packet below documents when the USNA Ground station set PCsat to
+optimum power mode (after those initial packets).  The 7 previous
+successful packets shows us that PCsat can support dual hop packets even
+without command station support (placing it in best power mode).
+
+> [20:05:42] COMAND-1*>WB4APR-3 <UA>prompt:OUTPUT was 11111111...
+
+The next packet shows the Batterys almost fully charged at 16.5 volts
+each!  But these are very weak NiCd's that are "soft" and near the end of
+their life, so a high voltage under charge doesnt really mean things are
+all that great... and the telemetry counter of #020 shows us it has only
+been alive for 20 minutes even though it has been in the sun almost 40.
+
+> [20:06:21] W3ADO-1*>BEACON,SGATE:T#020,165,165,067,219,213,00111111,0111,1
+
+The next packet is another first, from a Handheld in the hands of a hiker
+in the mountains of Washington State:
+
+> [20:08:09] K7FZO-7>TWRWYS,W3ADO-1,RS0ISS*,WIDE3-3:'1Dol [/>
+
+The next two packets are another first.  it is the first time a satellite
+has reported its own telemetry and ID via another satellite.
+
+> [20:08:25] W3ADO-1>BEACON,RS0ISS*:T#022,079,067,077,101,213,00111111,0101,1
+> [20:08:40] W3ADO-1>ID,RS0ISS*:W3ADO-1/R XBAUD/G MAIL-1/B
+
+The next packet shows that ISS is now configured to also digipeat its own
+packets via another satellite or ground station with the alias of
+SGate.  I was supposed to add SGATE as a UI-DIGI alias on PCsat so that
+PCsat would do the same for ISS.  That is, it would relay the ISS beacons
+when ISS was normally out of range of any other ground stations.
+(The SGATE alias was not configured on PCsat for this pass).
+
+> [20:08:52] RS0ISS*>CQ,SGATE:>ARISS - International Space Station
+
+The next two packets show a single original packet picked up by both
+spacecraft and then both spacecraft relay it successfully via the other.
+This is the normal APRS generic routing method where the packet was
+generically transmitted using the path of via WIDE,WIDE, and then each
+satellite recognizes the alias of WIDE and then digipeats the packet while
+substituting its callsign in place of the generic WIDE so that the actual
+path taken is shown.  (This only works when PCsat is commanded to enable
+its WIDE alias DURING the pass. THus it worked here, but don't plan on it,
+because PCsat now forgets all settings every 100 minutes due to eclipses).
+
+[20:09:51] WB4APR-3>APRS,RS0ISS,W3ADO-1*,ARISS/1:Lets try OPS NORMAL
+[20:09:52] WB4APR-3>APRS,W3ADO-1,RS0ISS*,ARISS/1:Lets try OPS NORMAL
+
+And the last packet was again excellent DX as both satellites passed
+over the East coast and yielded a 1340 mi path between spacecraft.
+
+> [20:13:59] KB1GVR>CQ,RS0ISS,W3ADO-1*/1:=4436.18N/06826.92W-> Ellsworth ME6
+
+Again, the purpose of this test was to show the utility of a simple UI
+digipeating TNC on orbit especially if we have multiple such TNCs and
+satellites on the same frequency.  Remember, ANY satellite can do this if
+it just has a TNC on 145.825.  That's all PCsat is, a TNC and a 555 timer
+to reset it every now and then.  PCsats RESET problems are not related to
+that design, but only to the loss of one solar panel on launch and
+subsequent negative power budget during periods of eclipse.
+
+We hope to see more satellite launches in the future with digipeating
+TNC's to expand this comunications capability into a constellation of UI
+digipeating satellites on 145.825 with one always in view of the most
+remotest of travelers or portable operators.
+
+de WB4APR@amsat.org, Bob
+
+PCsat WEB  page     http://www.ew.usna.edu/~bruninga/pcsat.html
+ISS-APRS FAQ:       http://www.ew.usna.edu/~bruninga/iss-faq.html
+CUBESAT Designs     http://www.ew.usna.edu/~bruninga/cubesat.html
+APRS LIVE pages     http://www.ew.usna.edu/~bruninga/aprs.html
+APRS SATELLITES     http://www.ew.usna.edu/~bruninga/astars.html
+
+

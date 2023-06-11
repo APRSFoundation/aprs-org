@@ -1,0 +1,53 @@
+ONE YEAR IN SPACE FOR PCSAT                                   30 Sept 2002
+--------------------------------------------------------------------------
+
+On her 1st day of her second year in orbit, PCsat just reset at 2238z on
+30 Sept 2002 over Europe during a 22 minute eclipse and drawing to a close
+the end of a week of full sun-full ops..  She will still be operational
+while in sun over the next few weeks until the batteries just wear out.
+But doubtful will last to the next Full sun period  Nov 9-22.
+
+In tribute, I went to the pcsat.aprs.org WEB page and just captured the
+last 3 hours of traffic to see how people were using her.  The text has
+been drastically cut to fit here and may appear cryptic, but all show the
+fun and excitement spread by PCsat.
+
+Typical data captured by WEB page on 30 sept 2200z to 2340z:
+
+Netherlands: PE2JMR: EU, When RX Ple qsl 73 de jan,pe2jmr@amsat.org
+             PE2JMR::g4fip :pcsat today one year in space!
+France:      F4CEP-3=4833.35N/00240.78E-73 via SAT! 32 8
+             F5SDM-7]TS1QY9,W3ADO-1*,qAr:'v_Hl ]/]73 Via Satellite
+England:     G4FIP-1!5258.97N/00018.20W-73 de Ken, Heckington, England
+             G3LQC]:OE5RPP :Hello from OXFORD de Ray{00
+             G3LQC]:DO4OSS-8 :good evening Stephen.. de Ray{05
+Germany      DO4OSS-8:HAPPY BIRTHDAY PCSAT! One year in space - Live long!{03
+             DO4OSS::IW1FT :Hi! Vy 73 back to you! Steffen/DO4OSS
+             DO4OSS=5224.32N/01046.07E-Steffen,do4oss@darc.de, Email pse
+Arctic       KC0JHQ]N7QAM-10,W3ADO-1*:]FM19sa/- Command Station...
+USA:         W2KQ=4015.70N/07403.23W-PHG4130/Ocean Twp NJ
+             KB1GVR>N0AN-6:=4436.18N/06826.92W-Hi VE3DOH
+             KB1GVR:WA9BNZ :Hello from Mark in Maine.{00
+             NO44]!9 Lets try OPS NORMAL for a while...
+Canada:      VE3FFR$GPGGA,221823.66,4416.1787,N,07629.3012,W - Ontario
+             WA9BNZ:v,(l -/]%BILL,KNOXVILLE,IL
+             KB1GVR]:AK4KO-2 :Hello from Mark, Maine.{00
+             KB1GVR]=4436.18N/06826.92W-EllsworthMaine.
+Sweeden:     OK2JJA]APU16N,W3ADO-1*,qAr,DF5FF-10:]302236zUI-View V2.39
+Finland:     OH1NP]APU24V=6032.61N/02234.91W-Pentti, KP10GN, oh1np@sral.fi
+Denmark?:    DG4BR]=5309.56N/00727.87E-Alfred Ihren JO33RD
+Austria:     OE5RPP:]302041zGruesse aus St.Georgen i.A. de oe5rpp@qsl.net
+             OE8MI-9]:OE5RPP : qsl [73] de Reinhard JN66SS mobile
+             OE8MI-2][73] v PCSAT + PsionS5,TH-D7!Reinhard oe8mi@aon.at
+             OE5RPP]=4756.16N/01329.53E-Hello to all from Austria!
+Ireland:     EI8ETB=5151.84N/00826.93W-, Op. Thomas, Cork City, Ireland,
+Czech Rep:   OK2JJA=4957.22N/01657.47E-Op. Honza,Sumperk,JN89LW,TH-D7E {UIV23}
+             OK2LE:301902zHello fr Czech Republic, mymail:ok2le@c-box.cz
+             OK2LE]=4913.39N/01740.59E-73 op Lada in Zlin {UIV32}
+Italy:       IW1FT]APU16K,=4453.96N/00826.67E-Riccardo IW1FT@yahoo.it
+             IW1FT]:::DO4OSS-8 :HI! Best 73 to you and QRA!{00
+Hungary:     HA3IU]!4652.49N/01803.65E-Op.:Csaty in Hungary
+Swiss:       S57NML]APRS,W3ADO-1*,qAr,DF5FF-10:=4608.88N/01514.50Ey
+
+de WB4APR, Bob
+USNA Satellite Ground Station

@@ -1,0 +1,98 @@
+                  HANDHELD COMMUNICATIONS TEST VIA MIR
+                         Bob Bruninga, WB4APR
+                           ENS Chirs Morgan
+
+THE TEST:   During the week of 2 June an impromptu test was  conducted via
+the MIR Digipeater to demonstrate the capability  for an Amateur Radio
+hand-held Satellite messaging system.  Taking  advantage of the thousands
+of Kenwood TH-D7 hand held radios with  built-in TNC and APRS, the
+objective was to see how many operators  were able to exchange data using
+only the 5 watt radio and rubber duck antenna.
+ 
+RESULTS:  The results were enthusiastic.  Almost everyone that tried
+was eventually successful in digipeating at least one packet via  MIR on
+each pass.  A total of 67 stations submitted reports  showing over 190
+different stations were logged.  For this test, success was  measured by
+the ability of a station to transmit his position, status and a short (few
+words) message.  Thus the ability  to use Amateur Satellites for two-way
+messaging between handheld data radios was aptly demonstrated.  Using such
+simple UI Digipeaters in space could support hundreds of such stations per
+footprint per pass. (several hundred over the USA alone).
+ 
+Imagine the benefit to HAM radio and survivable communications
+if we had a few such UI Digipeating Satellites in space!
+ 
+APRS DATA RADIOS:  For readers unfamiliar with the Kenwood THD7
+APRS radio, it has a built in TNC and user interface so that you
+can capture and display the STATUS, POSITION and MESSAGES from
+as many as 40 other stations.  It can send your own STATUS and
+position as well as single line messages up to 45 characters in
+length.  This communications uses the APRS Mic-Encoder format so
+that these packets are typically less than a half second in length
+at 1200 baud.  THey are transmitted in the unconnected or UI mode
+so that no acks are requred.  When the HT does see its own packet
+digipeated, it displays "MY PACKET" so you can tell that it
+was successful.   This is very valuable at reducing QRM on the
+uplink, since successful stations can then stop transmitting.
+The TH-D7 can transmit two types of packets:
+ 
+  POSITION/STATUS - contains your LAT/LONG, and map ICON.
+                    ALso contains one of 7 pre-defined "comments"
+                    Also may contain up to 20 chars of STATUS
+  MESSAGES - Any text up to 45 characters in length. 
+ 
+Note that every APRS station will receive and display your POSITION/
+STATUS, but MESSAGES are only captured by the receipient.  For this
+reason and to vastly improve your chances of success via a space 
+digipeater, stations were encouraged to send their traffic addressed
+as a BULLETIN to all, so that everyone could see the traffic.
+ 
+POWER and ANTENNAS:  Although most people have not considered 5W
+as a viable power level to operate MIR, there are many advantages
+in the handheld scenario making it much more successful:
+ 
+  1)  Lack of coax provides 3 dB average improvement on XMT & RCV
+  2)  ABility to tilt antenna to match downlink polarity can gain
+      3 to 10 dB over fixed base station antennas at some times.
+  3)  All stations were using the same power and rubber duck antenna
+      thus getting equal chance moderated only by the ever changing
+      satellite geometry.  Sooner or later your geometry is optimum.
+  4)  Only one or two packets were needed for "success"
+  5)  Low power allowed operation without interferce to other PMS users
+ 
+TYPICAL PASS:  Using the THD7, you typically would load your position 
+and status and a brief message (bulletin) before the pass.  THen
+on hearing the MIR packets, your display would begin flashing
+the calls, locations and bulletins of other stations heard.  When
+you heard a silent gap in packets, you could hit the BCON button
+to force your own position/status packet.  On being successful, by
+seeing your own packet digipeated, you could then bring up your
+message list and press the TRANSMIT button to force your longer
+BULLETIN message if desired.
+ 
+STATISTICS:
+ 
+Since the MIR digipeater shares the same radio with the BBS, and
+the BBS users are usualy running considerably higher power, then
+the lower power HT stations were only successfull during dead time
+between BBS packets.  To consider the statistics of all packets on
+the downlink during a pass, the following data was recorded during
+three passes over the USA (MD) and Europe.  Note, "DM" frames are "BUSY-
+REJECT" packets which just waste air-time).
+ 
+EUROPEAN PASS:  32 of 33 stations trying to log on (280 DM frames(80%))
+    BBS:   330 packets to transfer 27 useful lines of text = 8%   success
+    CNCT:   17 packets to transfer  1 useful line  of text = 6%   success
+    UI:      2 packets to transfer  2 useful lines of text = 100% success
+ 
+USA PASS1: 4 of 15 users trying to log onto BBS (15 DM frames 19%)
+    BBS:   54 pkts to transfer 10 useful lines of text = 18% success
+    UI:    31 packets conveyed 26 useful text lines    = 84% success
+ 
+USA PASS2:  4 of 16 users trying to use BBS (23 DM frames (15%)
+    BBS:   98 pkts to convey 18 useful lines of text   = 18% success
+    CNCT:  29 pkts to convey 1 text line               =  3% success
+    UI:    28 pkts to convey 26 useful lines or text   = 93% success
+ 
+The lower number of users on the USA passes were mostly due to the time
+being a weekday and the European pass was a nighttime or weekend pass.

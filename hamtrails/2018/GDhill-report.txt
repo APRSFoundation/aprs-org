@@ -1,0 +1,47 @@
+***************************************************************************
+*                  ATGP 2018 Report for GD Hill                          75
+***************************************************************************
+
+Andy KB3UCH arrived at the parking lot at 9:30 and Bob showed up 45 minutes 
+late as usual and we began the hike up the hill at maybe 10:25.  Dark skies 
+but still no rain.  
+
+We climbed the tower and just as we began to setup antennas it began to 
+rain and never let up.  Operational by 11:15 and almost immediately saw 
+stations from 9 north of us down to 1.
+
+We hunkered down inside the tower on the top landing with bob and equipment 
+on the dry side and Andy dodging water on the other.  Andy had brought a
+backup twin-lead Jpole and with enough coax, we were able to operate the
+second radio from down inside the tower also.  What surprised us was the 
+number of people still hiking and that still climbed the tower.  All of
+them having to step over and around Bob and all the equipment in the 2' 
+wide space.
+
+See inside tower: http://aprs.org/hamtrails/2018/GDhill-inside-tower.png
+
+Had voice immediately with MDMTN7 but not CAMLBCK-9 (as usual).  Didnt chat 
+to save power. The ATGP channel seemed quite lightly used, but that is good 
+for less collisions and higher reliability.  
+
+Only about half the stations had any STATUS text and/or updated it so we 
+could see what was going on.  But several sent MSGS and I sent several
+ messages and BLNS since I was in the middle and my messages could make 
+both ends using only a single HOP7-7.
+
+Around 14XX, after I had seen all stations from 13 down to 1,  I sent MSG 
+to ALL asking 13 and 1 to both send a GP message to ALL.  I got it from 
+Springer-1, but not from 13.
+
+By 1430 in consultation with the shack potato, we sent the message to 
+suggest everyone QRT at 1500 since it did not look like much would change.  
+And we were getting wet.  Sorry, we didn't try 9600, but there were so still 
+several weaknesses in the chain that it seemed it would only add more confusion.
+
+At 1500 we secured and drove over to the next hill 3 miles away and visited 
+the LRTS Ham Club shack on the ridge line and explored with them putting a 
+permanent site there.  More on that when we figure out the best 2m packet 
+frequency to minimize the number of cavities needed to avoid repeater inputs 
+at all the possible permanent sites.
+
+Bob, WB4APR

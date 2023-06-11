@@ -1,0 +1,810 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+   <TITLE>PCsat</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (Win95; I) [Netscape]">
+   <META NAME="Author" CONTENT="Bob Bruninga">
+   <META NAME="Description" CONTENT="PCsat APRS Satellite Project">
+   <META NAME="Keywords" CONTENT="PCsat, APRS, APRsat, Satellite, Cubesat,  Tracking, Bruninga, LEO, GPS">
+   <META NAME="Classification" CONTENT="Science">
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#58F1FC" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000">
+<center>
+<IMG SRC="logos/satellite.gif" HSPACE=5 HEIGHT=90 WIDTH=90 ALIGN=TEXTTOP>
+
+<B><U><FONT SIZE=+2>PCSAT-1, Amateur Radio Satellite NO-44</FONT></U></B>
+<IMG SRC="logos/aprs.gif" HSPACE=5 HEIGHT=90 WIDTH=90 ALIGN=TEXTTOP align=left>
+
+<BR><B> New OSCAR-44. object number 26931 --- PCsat</B> 
+<BR><B> FREQUENCY: 145.825 MHz.</B>
+<BR><B> DIGIPEATER PATH: via PCSAT-1 (or via ARISS if enabled)</B>
+
+<SCRIPT language=Javascript>var rndNum = Math.floor(Math.random() * 10000);
+eval("var CDTDate" + rndNum + " = 'September 30, 2001 02:40:00 UTC';");
+document.writeln("<form name='CDTform" + rndNum + "' action='Javascript:void(0);'>");
+document.writeln('<font size=4 color=darkblue>Mission Elapsed Time</font><br>');
+document.writeln("<input type=text value='' size=25 name='WrittenByJamesMVenglarikII'>");
+document.writeln("</form>");
+if (theFunction) theFunction += "var d = new Date();";
+else var theFunction = "var d = new Date();";
+theFunction += "var c = new Date('" + eval("CDTDate" + rndNum) + "');";
+theFunction += "var diff = (d - c)/1000;";
+theFunction += "var days = Math.floor(diff / 86400);";
+theFunction += "var rem = diff - (days * 86400);";
+theFunction += "var hours = Math.floor(rem / 3600);";
+theFunction += "rem = rem - (hours * 3600);";
+theFunction += "var minutes = Math.floor(rem / 60);";
+theFunction += "rem = rem - (minutes * 60);";
+theFunction += "var seconds = Math.floor(rem);";
+theFunction += "if ((days < 0) | (hours < 0) | (minutes < 0) | (seconds < 0)) ";
+theFunction += "var out = 'Liftoff of PCSAT-1!';";
+theFunction += "else ";
+theFunction += "var out = ' ' + days + ' days ' + (hours-1) + ' hr ' + minutes + ' m ' + seconds + ' s ';";
+theFunction += "document.forms.CDTform" + rndNum + ".elements.WrittenByJamesMVenglarikII.value = out;";
+setInterval(theFunction, 1000);
+</SCRIPT>
+
+<BR>PCSAT Command Station, Bob Bruninga, WB4APR 
+<P>
+</CENTER>
+
+<IMG SRC="pcsat/PRshotS.jpg" ALT="Bob Bruninga and Midshipmen" 
+align=right HSPACE=5 BORDER=1 HEIGHT=240 WIDTH=320>
+
+<B>PCSAT-1 was the first dedicated APRS satelilte.  It was launched in 2001</B>, 
+but is now just one of many APRS Networked Amateur Satellites that are, were, or will be, 
+on Orbit in 2019  and all live user data will appear on the live 
+<A HREF="http://pcsat.findu.com"><B>APRS satellite downlink page</B></A> and  
+<A HREF="http://ariss.net"><B>ISS downlink page</B></A>:
+
+<P ><A HREF="pcsat.html"><B>PCsat-1</B></A> in orbit since 2001 semi-operational
+<BR><A HREF="ariss.html"><B>ARISS</B></A> on the ISS since 2007
+<BR><A HREF="psat.html"><B>Psat</B></A> Operational May 2015
+<BR><A HREF="bricsat-1.html"><B>BRICSAT-1</B></A> launched with PSAT, but insufficient power budget
+
+<BR><A HREF="qikcom-1.html"><B>QIKcom-1</B></A> sat on ISS for over a year.  By time of release, host never powered up
+<BR><A HREF="qikcom-2.html"><B>QIKcom-2</B></A> Pulled from launch at last minute due to FCC insistance on DoD license
+<BR><A HREF="psat-2.html"><B>PSAT-2</B></A> Launched 25 Jun 2019
+<BR><A HREF="bricsat-2.html"><B>BRICSAT-2</B></A> Launched with PSAT2 in June 2019
+<BR><A HREF="astars.html"><B>ASTARS missions:</B></A> Prior 3 decades of APRS missions on other spacecraft, ISS, Shuttle and MIR
+
+<P>
+
+<B>Some old photos:</B>  Back in 2001 we didnt take a lot of photos.  But before they are all lost, here are a few I found of the real PCSAT before it flew:
+<LI><A HREF="pcsat/photos/PCsat-Full-Photo-VIBE.JPG"><B>Best closeup</B> on the vibe table</A>,
+<LI><A HREF="pcsat/photos/PCsat-PR-full.JPG"><B>My favorite PR shot</B></A>
+<LI><A HREF="pcsat/photos/GPSb4Vac.jpg"><B>Drastic Mass reduction techniques</B> then night before delivery
+<LI><A HREF="pcsat/photos/wiringharness.jpg"><B>Wiring inside</B></A>
+<LI><A HREF="pcsat/photos/PCsat-Full-Photo.JPG"><B>The painted equitorial antennas</B></A> which give it the 0.6 RPM spin and the LED beacon experiment (which wont work now because you cant see it in the sun which is the only place it has enough poewr to light them.
+<P>
+
+<B>UPDATE 31 July 2015:</B>  In poor eclipse seasons, PCSAT crashes without power on every orbit when it passes into eclipse.  When it repowers on the next orbit, it enters a <B><i> SAFE Recovery</B></i> mode (W3ADO-1 callsign) with its backup USA transmitter enabled in case the primary transmitter has failed. Unfortunately, that backup transmitter on the USA APRS frequency of 144.39 is the weak signal part of the band in Europe and can be heard by Meteor Scatter operators.  We must remind all users worldwide that W3ADO-1 is not to be used as a digipeater while in this mode.  This is the "crash" rule after #9 in the
+<A HREF="pcsat/contract.txt"><B> PCSAT User Service Agreement</B></A>.  This Recovery mode uses the callsign W3ADO-1 and is not authorized for digipeating use.
+When PCSAT is available for use, then its aliases are PCSAT, ARISS and APRSAT.  These are diabled in this
+W3ADO-1 safe condition.  Attempts to digipeat via the Recovery callsign of W3ADO-1 are not authorized and cause interference to weak signal operators in Europe..
+<P>
+
+<B>PCSAT SOLAR PANELS:</B> PCSAT pioneered the use of innexpensive Tedlar coated solar
+panels in space for low cost short duration missions.  
+These panels are off the shelf and cost less than 1% of the cost 
+of normal space rated panels, yet they provide about 50% of the performance
+and life.  About half way down this page you can see how we used 4 of these $30 panels
+for each side of PCSAT.  Or you can see how we built our first 5" cubesat using one
+panel per side. <A HREF="pcsat/RAFT-NMARS.jpg"><B>See photo</B></A>. 
+<P>
+
+
+<B>Operations 2014:</B> Wow, 6 years since last time we commanded or at least updated the web page!
+But PCSAT continues to operate every day now for 13 years. Though we seem to no longer be able to recover it from reset mode. You can see its live 
+<A HREF="http://pcsat.aprs.org"><B> downlink</B></A>.  On 3 April 2014 we logged on and
+recorded 
+<A HREF="pcsat/SpinData-Apr2014.txt"><B> 4 minutes of solar panel data</B></A> and plotted the
+Z axis solar currents and determined that she is spinning at one revolution per 100 seconds 
+or 0.6 RPM the same as it was 12 years ago.  So the passive black/white differential solar radiative 
+pressure spin system is still working fine.  You can see the black/white equitorial antennas here.
+<P>
+
+
+<B>Typical Full Recovery Attempt (Dec 2008):</B>
+<P>
+
+<IMG SRC="pcsat/Earths-mag-field-map50usna.GIF" align=right>
+
+<B> 1220z 14 Dec - No Joy: </B> Signals too weak, and sun angle worsening.  We wish to thank those
+many volunteer ground stations around the world that worked so hard to attempt this season's
+recovery.  Some may continue to try, so we ask digipeater users to continue holding off
+their packets for another week.  But on 24 December 2008 when PCSAT re-enters eclipses and full recovery 
+is no longer possible, then PCSAT
+will return to semi-operational status. If you ever see us
+commanding, please cease any transmissions.
+<P>
+
+
+<B> 1325z 12 Dec - No Joy: </B> Still too many user packets robbing power when PCSAT is over USA.  No success.
+<BR>
+<B> 1145z 12 Dec - No Joy:</B> Plotted packets heard vs latitude, and optimum is best
+between 35 to 40 deg ascending over Atlantic (no user packets).
+<P>
+<B> 1658z 11 Dec - Hawaii:</B> Ron reports a few packets.  Later pass over USA and PCSAT is dead again.
+<BR>
+<B> 1530z 11 Dec - Recovery Holding:</B>  pcsat.aprs.org data appears to show NODIGI and PCSAT-11 are on separate freqs.
+<BR>
+<B> 1350z 11 Dec - Recovery Holding:</B> Side A is holding, but ctr-B XMTR cross-connect was not.  Restored.
+<BR>
+<B> 1210z 11 Dec - Success:</B> Set NODIGI and low power modes.
+<BR>
+<B> 1615z 10 Dec - No Joy:</B> Too high latitude.  Can only get in on N.bound pass around 30 deg Lat due to Sun.
+<BR>
+<B> 1430z 10 Dec - No Joy:</B> Could not get logged on.  One user hit it at same time as us and killed it.
+<BR>
+
+<B> 1245z 10 Dec - Success:</B> Logged on.  Set low power mode, digi off.
+Lets hope it holds.  If good for 2 orbits, will enable digi.
+<BR>
+
+<B>1640z 09 Dec - No Joy:</B> Missed best sun angle 
+(below 45 deg Lat). Above 50 deg latitude PCSAT was silent. Last pass of day.
+<BR>
+<B>1500z 09 Dec - No Joy:</B> The first sun pass did not hold.  Too many user
+packets still using W3ADO-1, consuming critical power. 
+<BR>
+<B>1315z 09 Dec - Success:</B> Logged on, set low power, set NODIGI.
+We think it had reset before the end of the pass.
+<P>
+
+<IMG SRC="pcsat/Earths-mag-field-map50nz.GIF" align=right>
+<P>
+
+<B> Importance of Magnetic Field and Latitude:</B> The plots below show the impact of the
+-Z panel facing the south pole.  The magnetic field lines have an impact as much as 40
+degrees East and West on the attitude. (and almost 180 degrees on <i>up/down</i> attitude
+not shown here).  So the East/West offsets are to our advantage during ascending
+passes on the East coast and descending passses over the West coast and NewZealand. The
++Z panel faces UP away from Earth in the Northern Hemisphere and down towards Earth
+in the Southern hemisphere.  The
+blue line is both the ground-track of PCSAT and also the DAY/NIGHT terminator and is the 
+only time we can recover PCSAT becuse it is in full sun throughout the orbit for about one week..
+
+<P>
+Although this is the only time we can get a full receovery and stay alive due to full Sun 
+(when the ground track is over the terminator),
+you can see from these two plots it is also the worst time for getting Sun on our South 
+facing best panel.  What would really be valuable is a visualization model on STK that
+would help us visualize sun on the -Z panel and therefore when to take our best shot
+at commanding...
+<P>
+
+
+
+<P>
+<B>HELP: . We cannot recover PCSAT-1 to full operation if the uplink is satruated by
+packets, nor can we recover W3ADO-1 command link if users are digipeating packets that
+consume valuable power while we are trying to recover.</B>   We must get several
+successfull packets and then a full orbit with no usage before we can restore normal 
+operation.  This is hard to do.
+The use of the W3ADO-1 callsign is not authorized and interferes with recovery attempts.
+
+<P>
+
+<B>THIS PAGE MOVED around 2008?:</B>  The original Naval Academy PCSAT web page was recovered to 
+this APRS.org site, but some links in the remiander of this page maybe did not 
+crossover well...<P>
+
+<P>
+<B>The remainder of this Page is in reverse chronological order. Newest stuff is first.</B>
+<BR>  See also the <A HREF="http://pcsat.aprs.org"><B>PCSAT live downlink page</B></A>
+ (last 50 stations heard via PCsat).
+<P>
+<B>DEC 2008 OPERATING WINDOW:</B> . PCSAT-1 will enter full sun on 9 Dec and after
+restoration, and one orbit to fully charge, should be usable in normal mode.  
+This is exciting because the ISS
+packet station may also be in APRS packet mode allowing for a combined user
+access time of as many as 12 passes per day.  THis is because both ISS and PCSAT
+use the same digipeating aliases of ARISS. . With this kind of access, it is a 
+good time to conduct a 
+<A HREF="sset.html"><B>Satellite Simulated Emergency Test (SSET)</B></A> also.
+ . We expect normal operations through
+about Christmas eve, 24 Dec. . Then on the first user overload after that, it will 
+crash again and be unuseable until the next full sun period in Feb 2009.
+<P>
+
+<B>FEB 2008 OPERATING WINDOW:</B> . PCSAT-1 entered full sun on 9 Feb and will be
+fully operational in support of the AMSAT 
+<A HREF="sset.html"><B>Satellite Simulated Emergency Test (SSET)</B></A>.  . This test
+demonstrates the ability of Amateur Satellite operators to send emergency messages
+from a devistated area using simple handheld or mobile radios. . This period, no
+attempt will be made to keep the satellite loaded with the PCSAT-1 callsign. .
+ We are using side B for keeping the
+commands loaded to maintain positive power budget, but isolating both sides so
+that crashes on side A to not affect side B. 
+<P>
+<B>ALIASES SUPPORTED:</B> ARISS, APRSAT and PCSAT-1.
+<P>
+
+<IMG SRC="pcsat/PC2-PC1%20long.GIF" align=right>
+
+<B>FALL 2007 OPERATING WINDOW:</B> . PCSAT-1 was fully operational from 
+2 to 20 November 2007 .  During this full sun period,
+PCSAT-1 shared the 145.825 MHz
+frequency with <A HREF="ande-ops.html"><B>ANDE</B></A> and the
+<A HREF="http://www.aprs.org/iss-faq.html"><B>ISS</B></A> for a great multi-satellite
+constellation period in support of the first
+<A HREF="sset.html"><B>SSET</B></A>.
+ .  Some dual hop packets were also recorded. . At the same
+time the <A HREF="GO32-ops.html"><B>GO32 Satellite</B></A> is also fully supporting
+APRS communications (at 9600 baud). . 
+<P>
+During this operating period a new operating technique was implemented to
+reduce the number of duplicate packets being attempted by users.  By
+changing the aliases on PCSAT-1 to only support the WIDEn-N path, the
+satellite could enfore a restriction of only one duplicate packet per minute
+per user.  This significanly reduced the overload conditions over Europe.
+See how the <A HREF="http://www.aprs.org/aprs/fix14439.html"><B>WIDEn-N configuration</B></A>
+works to reduce channel load.
+<P>
+
+<B>JANUARY 2007 OPERATING WINDOW:</B> This PCSAT-1 full-sun recovery period lasted from 
+1 to 19 Jan 07 and saw one of the highest activity periods in years (over 100 users per
+day).  This was heightened by
+the deployment of <A HREF="ande-raft-ops.html"><B> ANDE and RAFT </B></A> on 21 Dec 06 to
+join PCSAT-1 as a constellation of three APRS digipeating satellites on 145.825.  PCSAT-1
+continued to operate back into eclipses up to 28 minutes long (out of a max of 35) before it 
+was lost again on the 19th. 
+<P>
+<B>FALL 2006 OPERATING WINDOW:</B> From 26 Sept to 11 Oct 2006, PCSAT-1 was fully
+operational in full Southern Sun.  When recovered, she operates as PCSAT-1 
+and supports the aliases of APRSAT, ARISS and WIDEn-N.  
+If you see the default W3ADO-1 callsign then she is running down every orbit 
+in the dark and does not have enough energy for most packets.  This call should not be used for digipeating!
+
+<P>
+<B>SPRING 2006, JOINT OPS WITH PCSAT2:</B> The spring full sun period lasted 16 days 
+from 8 to 24 March 2006.  On the 10th, its companion PCSAT2 on the ISS was switched to 145.825 
+for joint operations to experiment with dual satellite-to-satellite hops.
+Many dual hop packets were observed including this longest path so far as shown at right: <B>==></B>
+<P>
+<IMG SRC="pcsat/pc2-pc1xx.GIF" HEIGHT=340 WIDTH=470 align=right >
+
+<P>
+<B>SPECIAL EVENT 2 Dec 2005.  Annual Army/Navy game Football Run:</B>
+PCSAT-1 participated in this annual event by supporting position reporting and
+tracking of the special 
+<A HREF="football.html"><B>Army/Navy game ball from Annapolis to Phily</B></A>.  
+The 120+
+students in the 13th company each run the ball in relay teams over the 128
+miles from Noon on Friday to arrive for the game the next morning.
+<P>
+<B>FALL 2005, OPS NORMAL 25 Nov to 17 Dec 2005:</B>:  During this full sun operating
+period, we switched
+<A HREF="pcsat2.html"><B>PCSAT2</B></A> to the 145.825 frequency for joint dual-satellite 
+operations with PCSAT-1.
+  The image <B><i>at right</i></B> shows the double hop telemetry packet we received from PCSAT2 via PCSAT-1 and you can see
+<A HREF="pcsat/pc2-pc1x2.GIF"> the later 12/05 pass </A> too.
+
+<P>
+<B>JANUARY 2005 JOINT PCSAT/ISS TEST:</B>  From 24 Jan to 16 Feb, PCSAT-1 was
+recovered to full operation.  On 2 to 4 Feb 2005, the ARISS packet system on ISS 
+moved to the PCSAT frequency of 145.825 for joint operations with PCSAT.
+In addition to doubling APRS satellite coverage
+for several days, we detected 3 successful dual-satellite  communications paths.
+Very high activity was observed on both systems.   .
+Typically 70 or more operators per day...
+<P>
+<B>PCsat Model On Display:</B> at the Udvar-Hazy Smithsonian Space Center near Dulles Airport.
+   <A HREF="pcsat/PCsatDullesX.jpg"><B>photo</B></A>.
+<P>
+<B>OPERATING GUIDELINES:</B>  
+During normal operations, users are requested to only operate in accordance with
+the <A HREF="pcsat/contract.txt"><B>User Service Agreement</B></A>
+<P>
+
+<B>FALL 2004 OPERATING PERIOD:</B> PCSAT-1 operated for a month starting 24 Oct 2004.
+<P>
+<B>DECEMBER 2003 OPERATING PERIOD:</B> PCSAT-1 was recovered for month starting on 
+15 Dec 2003, when her orbit entered a period of full sun.
+As of 1 Feb 2005, PCSAT-1 will have logged 42 months in space and has 
+<A HREF="pcsat/users2004.txt"><B>logged over 2678 individual users</B></A>.
+<P>
+<IMG SRC="pcsat/SapphireMsmall.jpg" ALT="Dr. Mike Swartout" HSPACE=5 BORDER=1 HEIGHT=240 WIDTH=320 align=right>
+<P>
+
+<B>Magnetic Stabalization:</B>  See 
+<A HREF="pcsat/ZaxisAngle.gif"><B>plot</B></A> of +Z current versus latitude that confirms 
+our passive magnetic attitude alignment.
+<P>
+
+
+
+<B>Sapphire Revived!</B> On 5 Nov, 2003, Mineo Wakita, JE9PEL, a JAMSAT member sent the
+RESET commands to Sapphire and this allowed command stations to regain control of this
+satellite.  Sapphire and PCsat were launched on the same launcher and Sapphire is a
+joint project between the Naval Acadmey and the builders of Sapphire at Washington
+University and earlier at Stanford.  
+<A HREF="http://students.cec.wustl.edu/~sapphire/sapphire_overview.html"><B> (See original
+Sapphire WEB page) </B></A>.  Now Sapphire joins PCsat as a digipeater in the APRS
+constellation of satellites called 
+<A HREF="astars.html"><B>ASTARS</B></A>.
+<P> 
+<B>FALL 2003, OPERATING PERIOD:</B> PCSAT-1 returned to full health from 13 Sept to 9 Oct 2003 
+in full Sun and supported 50+ users a day on the 
+<A HREF="http://pcsat.aprs.org"><b>live downlink page</B></A>!
+<P>
+<B>FULL SUN PERIODS:</B> PCSAT-1 was prematurely declared dead when she would not respond 
+during the last phase of full Sun, on 10 July.  Subsequently we discovered
+that she works quite well even during
+max eclipses when the +Z solar panel (our best) 
+during a noon time northern hemisphere pass is pointed
+directly at the Sun. . 
+Since we are having student telemetry labs soon, here are some capture files the
+students took of high-rate telemetry this month.  
+<BR>
+
+
+<LI><A HREF="pcsat/3s031205.txt"><B>1605z 3 Sept 2003</B></A>.
+<LI><A HREF="pcsat/3s041140.txt"><B>1540z 4 Sept 2003</B></A>.
+<LI><A HREF="pcsat/3s150939.txt"><B>1339z 15 Sept 2003</B></A>.
+
+<IMG SRC="pcsat/PRshotS.jpg" ALT="Bob Bruninga and Midshipmen" HSPACE=5 BORDER=1 HEIGHT=240 WIDTH=320 align=right>
+
+<LI><A HREF="pcsat/3s161757.txt"><B>2157z 16 Sept 2003</B></A>.
+<LI><A HREF="pcsat/3s171238.txt"><B>1238z 17 Sept 2003</B></A>.
+<LI><A HREF="pcsat/3o011404.txt"><B>1404z 01 Oct  2003</B></A>.
+<LI><A HREF="pcsat/3o071458.txt"><B>1458z 07 Oct  2003</B></A>.  <== short file, but Side A/B were crossconnected
+
+<P>
+<A HREF="pcsat/tlm-eqns.htm">Click here for our Telemetry format and equations</A>
+for use in decoding these files.
+
+<P>
+<B>PREMATURE EPITAPH (posted July 17th):</B> PCsat appears to have died after 21 months, 
+10 days.  We commanded her well on 10 July (both sides), but she did not make it to the 
+17-31 July full sun period when we expected her to bounce back to life. 
+She died 7 days short. . <i>[POSTSCRIPT:  We have since learned that she dies every
+summer even in full sun, while she is fully recoverable evey winter in full sun...]</i>
+
+<P>
+<B>SPECIAL EVENT, FIELD DAY 2003:</B>
+We were able to properly configure PCsat for two passes over the National Emergency
+Communications weekend called Field Day (last weekend in June).  
+On Saturday, an hour before FD officially began, and then
+Sunday, one hour before it ended:
+
+
+
+<LI>Saturday we saw:  KB1GVR, WB4APR, VA2VA, KB2ZE, N3ZLL-5
+<LI>Sunday we saw:    VE3TKB, KE2T, N9YUK, KB1GVR, N1FD, W3ADO, VE3DOH, WB4APR
+<P>
+<IMG SRC="pcsat/HARP.jpg" align=right>
+
+<B>END OF MISSION:</B> PCsat was in full sun 10-20 April 2003 and continued to be power
+positive until 26 April.  At that point it was back into heavy eclipses and the
+batteries were so weak that even in the sun, they can barely support a single packet.
+For official purposes, we declared PCsat mission as complete.  
+It operated reliably for 19 months and
+supported over 2000 users worldwide.  We were seeing typically 50 users in each 8 hour
+period on pcsat.aprs.org.  So she has been well used.  PCsat will remain ON for
+continued experimentation, but the only packets you can probably get through PCsat now are 
+very short ones.  Here are several ways to generate short packets:
+<P>
+<LI> Mic-E formatted Packets (position, Course, SPeed and ICON)(only 9 bytes in the payload)
+<LI> Kenwood D7 and D700's use the Mic-E format (Turn off any status text)
+<LI> Transmit VIA XBAUD and your 1 second 1200 baud packet will be digipeated
+     back down at 9600 baud
+<LI> Set your radio to crossband and TX at 9600 baud on the UHF input.
+  
+<P>
+<B> RECENT NORMAL OPERATIONS:</B> PCsat was in full sun 11-26 Feb and continued normal
+operations in positive power budget for 47 days to 30 Mar 2003.  
+Prior to that, the previous Full Sun period was 9-22 Nov 2002. 
+But with dilligant oversight by the command stations around the world keeping her in low
+power modes, she was fully operational until a reset on 1 Jan 03 during a nighttime pass 
+over Europe which put her back in daylight-only operations. PCsat is always usable during
+ the day.  As of 14 Feb 2003 over 1950 stations had used PCsat 
+<A HREF="pcsat/pc1list.txt"><B>See list</B></A>.
+<P>
+<B>BBS EXPERIMENT:</B>  During the March full sun period, we activated
+the PCSAT BBS. It has no RAM backup battery, so it was never a formal part of the
+PCSAT mission, but during the 2 week period, over 70 users sent and received messages
+via the BBS.  The BBS is now OFF and should not be used.  It is a power hog due
+to all the RETRIES and inefficiencies of trying to use connected packet on a satellite
+and as such was never part of the mission.
+<P>
+
+<B>HARP DETECTION:</B>ex-N5JXU alerted us to the WEB page for the HARP radar in Alaska.  It captured PCSAT
+as shown at right.  
+This chart is a waterfall plot of the readings taken by the 
+<A HREF="http://www.haarp.alaska.edu/haarp/Monitor.html">HARP Monitor</A>.
+Spectrum samples are taken at 20 minute intervals throughout the day. 
+The color indicates intensity, from deep blue to red. 
+
+<P>
+<IMG SRC="pec/arctic.jpg" align="left">
+There are a few remote environmental sensor projects that use PCsat or its cousins of
+ISS or UO22 for reporting remote data back to the worldwide APRS system.  This one is 
+in the Arctic and there are 
+<A HREF="http://www.thistle.org/ANI/construction1.htm"><B> two in Antarctica</B></A>. See
+<A HREF="buoy.html"><B> more about Buoys</B></A>
+<P> .
+<P>
+
+<BR><B>PCSAT FOLLOW-ON MISSIONS:</B> The next two PCsat type digipeaters in work
+are the 
+<A HREF="ande.html"><B> ANDE experiment </B></A> which is a 1 year battery powered digipeater and
+<A HREF="pcsat2.html"><B> PCSAT2</B></A> which is a 1 year external attachment for the ISS.
+<P>
+<IMG SRC="pcsat/is-pc22w.jpg" height=300 width=400 align=right>
+
+<B>SPECIAL JOINT ISS TEST:</B> From 11 Oct to 30 Oct 2002, the ISS digipeater QSY'ed from its 
+normal 145.800 frequency to join PCsat on 145.825 for some joint operations tests flying
+as the first ever two satellite constellation in the Amateur Satellite Service.  The
+test was successfulwith 13 stations completing double hop packets between both
+spacecraft over distances as great as 1880 miles.  See the
+<A HREF="pcsat/isstestsum.txt"><B> Summary Report </B></A> or original
+<A HREF="pcsat/isstest.txt"><B> Test Plan</A></B>.
+The following image from APRStk.exe shows the geometry of the second reported success
+on 22 October over the USA.
+<P>
+
+<BR>
+This second test followed 6 days of ISS being off the air.  This time K7FZO on the west
+coast was the first successful packet and established a new DX record for joint satellite 
+hop of 1880 miles.  At the end of the pass over the East Coast, another DX hop of
+1340 miles was made by KB1GVR in Maine.  
+<A HREF="pcsat/iss-pc22sum.txt"><B> Click for Details</B> </A>
+<P>
+Previously on 12 October were the first 5 successes over the East coast of the USA as
+shown below.
+
+<IMG SRC="pcsat/ISS-PCtst.jpg">
+<BR>
+At 19:54:27 N4ZQ got the first dual hop packet through ISS and then PCsat.  Then a minute
+later as PCsat passed directly overhead of ISS by 420 km, the other 4 successful packets
+followed over the next minute, ending at 19:57:58.
+<A HREF="pcsat/iss-tst12th.txt"><B> Click for Details</B></A>.
+<P>
+<B>HERE IS WHERE THE ORIGINAL PCSAT BACKGROUND WEB PAGE BEGINS:</B>
+<P>
+<P><B>PCsat, a Prototype Communications Satellite,</B> is a US Naval Academy Aerospace 
+student project designed to give students real
+hands on experience in satellite design and operations.  This web page is frequently updated
+with current information about the Satellite operations.  New information is added at the
+top of the page.  Go further down to get the original background information if this is
+your first visit.
+<P>
+<IMG SRC="pcsat/PCsatPR.jpg"HSPACE=5 BORDER=1 HEIGHT=240 WIDTH=320>
+<IMG SRC="pcsat/group23.jpg" ALT="The PCsat Team 2000-2001" HSPACE=5 BORDER=1 HEIGHT=240 WIDTH=320>
+<P>
+
+<B>RECENT ACTIVITY:</B>  
+PCsat was in full Sun 20-29 Sept, and supported full GPS operations then.
+PCsat also completed its one-year anniversary at 0240z on 30 Sept 2002.
+<A HREF="pcsat/oneyear.txt"> See note</A>.
+On 2 October, eclipses were up to 27 minutes long, but PCsat was still holding its
+command set without a reset.  But as soon as we get a reset, PCsat will be back to SUNSHINE
+only operations as she continues to deep cycle her Nicads on every orbit to eventual
+failure.
+
+ <P>
+<B>SUMMER SUMMARY:</B>
+Between 6 to 16 August, PCsat returned to normal ops (Day and night) as eclipse periods dropped from
+the usual 35% down to 30% thus improving the power budget into positive range for about a
+week.  We conducted comms experiments with four of our sailboats on summer
+cruise and tracked them automatically on almost every pass.  Ted Rogers KH6JJD made this 
+<A HREF="pcsat/csts5.jpg"><B> summary </B></A> and this
+<A HREF="pcsat/KH6JJD3.jpg"><B> detail </B></A> plot
+of his satellite successes from his boat. On 16 Aug, PCsat returned 
+to DAYLIGHT only operations.  
+<P>
+PCsat was in full Sun from 8-23 June and was fully operational for a variety of GPS
+tests.  Unfortunately due to an erroneous GPS command, we ran the batteries down 
+overnight before Field Day so that PCsat was quite unusable on 22 June.  
+But by the next day, PCsat was back to full power and with  many new
+users.  On 27 June we conducted a USER LOAD test and with 56 users trying, we achieved
+a 97% success rate. <A HREF="pcsat/loadtest.txt"> (See report)</A>.  Also during this time
+we were able to complete  analysis on the following data:
+<BR>See <A HREF="pcsat/bat-data.jpg"> 16 hour plot</A> of Battery volts
+<BR>Solar Panel <A HREF="pcsat/sun-spin.jpg">Spin Plot</A>
+<BR>GPS SNR <A HREF="pcsat/gps-14-june.pdf">Spin Plot</A>
+<P>
+From 10 May to 8 June, PCsat was in maximum eclipse cycle and we had to turn off the digi.  
+When we do this, the callsign changes to NODIGI as a means of alterting USERS to this 
+situation.  PCsat is now in its fourth such low power period where it experiences
+ over 380 deep cycles on its batteries...
+<A HREF="pcsat/hurrah.txt"> See 6 Mar-10 Apr report</A>, and 
+<A HREF="pcsat/pcsat-z.txt"> recovery</A>!  During these periods we depend on the dedicated 
+efforts of  G6LVB, IT9GSV, LU7ABF, LW2DTZ, VK3JT, WB4APR, ZL1AOX, ZR1FN, ZR1CBC, VK2XGJ, 
+to keep us in the best power situation...
+<P>
+<B> See the <A HREF="pcsat/PCsatZpoles.html"> Full Analysis and plots </A></B> of PCsats Orientation with
+the sun and predictions of improving solar angles!
+<P>
+<B><U>NEW ITEMS:</B></U>
+<P>
+<B><A HREF="http://www.aprs.org/photos/fdsat-02.jpg">PCsat Operations at Field Day 2002 </A></B><BR>
+<B><A HREF="http://www.aprs.org/pcsat/isspc-test.txt">ISS-PCsat joint test plan</A></B> (A short test to fly to DIGI's in space on same frequency)<BR>
+<B><A HREF="pcsat/gpsplot.jpg"> EZNEC Plot</A></B> of PCsat GPS antenna.<BR>
+<B><A HREF="pcsat/PCcalls.txt">USER LOG </A></B> as of 9 April (1118 calls).  Produced from Steve
+Dimse's FINDU.COM.<BR>
+<B><A HREF="pcsat/Z-wobble.jpg"> Z axis Wobble </A></B> as determined from +Z array currents.
+<BR>
+<B><A HREF="pcsat/NO44eff2.png">Solar Incidence angle</A></B> and its effect on the loss of the -Z panel (by ZR1CBC).
+<BR>
+<B><A HREF="pcsat/Solar-IV.htm">Solar Panel I-V curves.</A></B> and Solar Panel </B><A HREF="pcsat/PowerPlot.htm"> Power Plot. </B></A>. 
+<BR>
+<B><A HREF="pcsat/pcsattlm.html"> Graphics Telemetry Summary </B></A> from 1 Dec to 10 March.
+Thanks to Steve Dimse's FINDU.COM.
+<BR><B><A HREF="pcsat/trip.txt"> The first Remote Traveler </A> </B> signs up for PCsat wilderness access.
+   <A HREF="pcsat/ca-trip.jpg"> See Map </A> of area,
+<A HREF="http://www.findu.com/cgi-bin/find.cgi?ve4ds-9"> his position</A>, or
+<A HREF="http://www.findu.com/cgi-bin/msg.cgi?VE4DS-9"> his MSGS </A>. </B>
+
+<BR><B><A HREF="ftp://tapr.org/aprssig/dosstuff/APRSdos/pcsat018.zip"> Download PCSAT.EXE </A></B> for
+decoding PCsat telemetry and keyboarding via PCSAT and ISS.
+<BR><B><A HREF="http://www.aprs.org/iss-faq.html">ISS returns to packet!</A> </B> PCsat operates in Synergy by also supporting the ARISS digi path!
+<BR><B><A HREF="http://pcsat.aprs.org">PCSAT.APRS.ORG</A></B> shows the LIVE downlink captured from PCsat. 
+<BR><B><A HREF="http://www.ariss.net"> www.ariss.net</A></B> shows the LIVE downlink from the International Space Station
+<BR><B><A HREF="http://www.aprs.org/pcsat/launch.mpg"> Click Here for a video</A></B> of the Launch!
+<BR><B><A HREF="http://www.aprs.org/email.txt"> How to send Email via PCsat</A></B> (or other APRS satellites).
+<BR><B><A HREF="pcsat/uidigi.txt"> Recommended UNPROTO paths </A></B> for normal operations.
+<P>
+
+<A HREF="pcsat/eclipse1.jpg"> (See Eclipse Plot) </A>.  
+<P>
+<B> SAPPHIRE Activated: </B>  On 28 Jan, Sapphire has been activated for APRS/UI
+digipeating on a limited basis (no unattended operation).  Please
+review the <A HREF="pcsat/contract.txt"> user service agreement </A>.
+ for details. 
+<P>
+<B> PRI-COMM Activated:</B>
+On 24 Jan we activated the experimental PRI-COM feature on PCsat which can capture 
+Emergency and Priority messages from the THD7 and D700 anywhere on the planet and 
+hold them for retransmission over the USA on 144.39.  
+<A HREF="pcsat/Pri-comms.txt"> See details. </A> VE4DS is our first user as he drives
+the 300km ice bridge in the Canadian Northwest Territories.
+<A HREF="pcsat/trip.txt"> The first Remote Traveler.</A> 
+
+<P>
+<IMG SRC="pcsat/PRshotS.jpg">
+<IMG SRC="pcsat/glenn3s.jpg">
+<P>
+
+<B> OPERATING ITEMS and EVENTS: </B>
+<LI> <B> Remote Environmental Sensing:</B> PCsat has a low power uplink receiver for remote experiments.
+<A HREF="buoy.html"> See Buoy Project</A>
+<LI> <B> New PCSAT.EXE (DOS)</B> operations and telemetry program released 
+<A HREF="ftp://tapr.org/aprssig/dosstuff/APRSdos/pcsat018.zip"> (download) </A>
+
+<LI><B>PCsat Special Event!</B> 12 December commemorated the 100th anniversary of Marconi's
+transatlantic Radio transmission and the 40th anniversary of the first Amateur Satellite
+OSCAR-1 launched in 1961.  PCsat heralded the event around the world by 
+transmitting Marconi's letter "S" and OSCAR-1's "HI HI" once every 3 minutes in Morse code. 
+<A HREF="http://www.aprs.org/marconi.html"> See Details. </A>
+
+<LI> <B>PCsat Mobile Command Station:</B>  See our mobile Command station for 24/7 Operations:
+<A HREF="pcsat/VanAnt.html"> (See details)</A>
+
+<LI><B> Flying APRS in an F-16 experiment</B> The following photo shows an APRS experiment
+flying in an F-16 for real time tracking...
+<BR> <IMG SRC="pcsat/af-aprs2.jpg">
+
+<P><B>PCsat, a Prototype Communications Satellite,</B> is a US Naval Academy Aerospace 
+student project designed to give students real
+hands on experience in satellite design and operations.   The project was
+funded by the Naval Academy, and a Grant from Boeing Corporation, and the launch was secured
+through the DOD's Space Test Program in cooperation with NASA.  The project is the first
+of the USNA Small Satellite program under the guidance of LTCL Billy Smith and supported by
+the Satellite Project Engineer, Bob Bruninga, WB4APR.
+<P><B>
+The mission,</B>
+to fit within the ITU regulations for operations in the Amateur Satellite Service,
+is to provide mobile and Handheld Satellite digital communications for amateur satellite operators
+worldwide using the Automatic-Packet-Reporting-System (APRS).  PCsat augments the terrestrial
+APRS system <A HREF="http://radio.artsfac.csuohio.edu/javaprs/nat.html">(See LIVE map)</A>
+with a flying worldwide Relay to extend APRS coverage globally.  To see those users relaying
+their data via PCsat only, see Steve Dimse's  
+<A HREF="http://pcsat.aprs.org">PCSAT.APRS.ORG</A>.
+<P>
+  This mission demonstrates mobile vehicle tracking and communications for
+GPS equipped remote travelers such as the 
+<A HREF="http://www.aprs.org/boats.html">Naval Academy Boats</A> at sea, cross country travelers, 
+expeditions, or any other travelers which are far from any existing 
+<A HREF="http://www.aprs.org/digis.html">APRS terrestrial tracking infrastructure.</A>  
+The PCsat satellite downlink from such travelers is fed into the existing 
+worldwide internet linked APRS system by several volunteer ground stations.  PCsat
+is the first satellite that was designed specifically for this APRS mission.
+It follows from many experiments that we conducted over the last few years on ISS, MIR, 
+<A HREF="http://sunsat.ee.sun.ac.za/ham.htm"> SUNSAT </A> 
+and the older AO-16, IO-26 and LU-19 birds.
+<A HREF="astars.html"> (ASTARS)</A>
+<P>
+For those remote areas of the world where there are no IGates in the same footprint
+as the wilderness or arcitc traveler, PCsat also has a limited <A HREF="pcsat/sar.txt">
+Emergency Status and Reporting (SAR)</A> capability that can be used by a few such travelers.
+<P>
+As an example of the PCsat mission, here is a photo we just received of one of our 
+graduated students testing PCsat from his Boat.
+<BR>
+<IMG SRC="pcsat/ssn683.jpg">
+<P>
+
+<P>
+<P><B>Launch </B> was at 0240z 30 Sept 2001 from the 
+<A HREF="http://www.akaerospace.com/frames1.html"> Kodiak Alaska Launch Complex</A>.  
+You can easily track PCsat with any tracking program as NORAD object number 26931. or
+try <A HREF="http://heavens-above.com/"> Heavens-above.com </A>. 
+
+<P><B> User Services:</B>  PCsat was activated for users as of 1930z on 3 Oct and demonstrated
+<A HREF="http://www.homestead.com/ke4eni/amsat2001.html"> (photos)</A> at the 2001 AMSAT
+Symposium in Atlanta, GA on 5 Oct.
+Note
+that due to frequent resets to SAFE mode on orbit which causes PCsat to revert to its
+pre-launch callsign of W3ADO-1.   This call should not be used for digipeatging!  Users should
+read and affirm the <A HREF="pcsat/contract.txt">PCsat User Service Agreement</A>.  
+<P>   
+PCsat is 
+a unique design with NO CPU other than two TNC's, and a unique mission for everyone.  In this
+context it is different from all other amateur satellites.  We hope you will adhere to the
+ <A HREF="pcsat/contract.txt">User Service Agreement</A>
+(1 packet per 2 minutes for routine unattended ops) so that as many people as possible get to
+operate via PCsat reliably.
+<P>
+ The following graphic shows the first
+4 orbits starting at separation off the coast of Somalia 
+70 minutes after launch.  The graphic shows what populations of 
+amateur satellite operators first heard signals.  As of 0600Z we had heard
+of confirmations from our
+<A HREF="pcsat/lnch-pln.txt">Launch Information Network</A> of key stations.
+<A HREF="pcsat/network.jpg">(See MAP). </A>
+Early Reports then came in from Alaska, Hawaii, 
+<A HREF="http://esl.ee.sun.ac.za/~lochner/aflaai/20010830_klitsers.jpg"> the SANAE station in Antarctica)</A>,
+and South Africa and in the next 12 hours from everyone around the world.
+  
+ 
+<P>
+<!--
+LAUNCH was covered by NASA TV and its associated 
+<A HREF="http://www.nasa.gov/ntv/ntvweb.html"> WEBCASTS</A>.
+//-->
+<P>
+<IMG SRC="pcsat/pc-atsep.jpg">
+<P>
+PCsat was an auxilliary payload on the Kodiak Star mission which has a total of 3 amateur satellites
+on board.  
+The <A HREF="http://students.cec.wustl.edu/~sapphire/sapphire_overview.html"> Sapphire satellite</A>
+is also a Naval Academy mission in a joint venture with Washington University.  
+<A HREF="http://www.azinet.com/starshine/">Starshine </A> is
+the primary NASA payload and it also uses APRS style telemetry packets.
+The following frequencies are used:
+<LI>145.828 1200 baud PCsat downlink  (Telemetry, and low-power stations)
+<LI>145.828 9600 baud PCsat downlink  (Telemetry, Mobiles and higher power stations) (OFF to save pwr)
+<LI>144.390 1200 baud PCsat downlink over USA for brief PCsat posit and Telemetry
+<LI>145.828 9600 baud Starshine downlink (Telemetry 1 packet per 2 minutes) (OFF to save pwr)
+<LI>437.100 1200 baud Sapphire downlink (and Voice synthesizer)
+
+<P>
+<IMG SRC="pcsat/pc-lowv.jpg">
+<P><A HREF="pcsat/tlm50ecl.jpg">Click here </A> to see the telemetry 50% through the
+ sunny side during periods of maximum eclipse.
+<A HREF="pcsat/eclipse1.jpg">Click here</A> to see eclipse plot for next 6 months.
+<A HREF="pcsat/eclipse1.jpg">And here</A> for next year. 
+<P>
+<B> COMPLETE TELEMETRY PLOTS:  <A HREF="pcsat/pcsattlm.html"> Click Here </B></A> for
+complete telemetry graphics covering the period from 1 Dec to 10 March 2002.  This
+data was generated by Steve Dimse's FINDU.COM which is an SQL data base holding all
+APRS packets captured worldwide.
+<P>
+
+<B>Here are several additional PHOTOS, DRAWINGS and Documents reorganized by topic:</B>
+<P>
+<B>SPECIAL EVENTS!</B>
+<LI> ARMY/NAVY Football Run:  On 30 Nov, 120 Midshipmen from 13th Co ran 
+the annual A/N Game ball from Annapolis, MD to the game in Philadelphia over 150 miles 
+and 24 hours.  PCsat was used to help update the 
+<A HREF="http://www.aprs.org/fball2001.html"> FBALL Web page</A> which
+tracked the positions of the Ball and Chase vans
+and members of the USNA Radio Club providing communications for the event.
+
+<LI>LED Experiment:  At 1929 EST on 25 Nov, we repeated the LED experiment
+as PCsat passed from sunlight to Eclipse over Atlanta.  Most of the East Coast was socked in
+by clouds but stations in Texas had a good view.... of the Moon!  It was too bright to see
+PCsat.  We will reschedule in a few months when things line up again.
+This LED radiator consists of <A HREF="pcsat/leds.jpg"> 80 standard RED LED's </A>
+and might be visible to someone
+with binoculars if it points in their direction.  Phillip Masding and Mike Tyrrell
+ who frequently
+<A HREF="http://www.btinternet.com/~mikejtyrrell/anim_frameset.htm">
+photograph the Space Station </A> via their telescopes will watch for us next time.
+<P>
+
+<B>STATUS AND LAUNCH INFO:</B>
+<LI><A HREF="pcsat/lnch-pln.txt">Launch Monitoring Team Plan</A> 
+<LI><A HREF="pcsat/paging.txt">PCsat USA Nationwide Paging system</A> 
+<LI><A HREF="pcsat/tlm-eqns.htm">Telemetry format and equations 
+<LI><A HREF="http://www.usna.edu/PAO/pressreleases/USNA1-sat.html">Press Release</A> 
+<LI><A HREF="http://129.247.179.151/pcsat/pcsatclient.html">PCsat tracking WEB paged by DLR</A>
+<LI><A HREF="pcsat/contract.txt">PCsat User Service Agreement</A> 
+<LI><A HREF="pcsat/freqs.txt">Frequencies (2m downlink)</A> 
+<LI><A HREF="pcsat/opsplan.html">DESIGN and OPS PLAN</A> 
+<P>
+<B>PHOTO VIEWS:</B>
+<LI><A HREF="pcsat/springs.jpg">Ultraviolet Release Experiment</A>  
+<LI>Photos of the <A HREF="pcsat/pZweb.jpg">+Z View</A>,<A HREF="pcsat/-Zweb.jpg">-Z View</A>,
+    <A HREF="pcsat/-Yweb.jpg">-Y View</A>  
+<LI><A HREF="pcsat/PCsatCART.jpg">The Prototype</A> 
+<LI><A HREF="pcsat/flatsat.jpg">Working Prototype</A>
+<LI><A HREF="pcsat/harness.jpg">Wiring Harness (so far)</A> 
+<P>
+<B>MECHANICAL DETAILS:</B>
+<LI><A HREF="pcsat/vibs.txt">Vibration spec</A>
+<LI><A HREF="pcsat/stack75.jpg">Upper bay stack</A> 
+<LI><A HREF="pcsat/PCwires.jpg">Stacking and Wiring Plan</A>  
+<LI><A HREF="pcsat/tncmods.jpg">TNC mods for telemetry</A>  
+<LI><A HREF="pcsat/PCSAT3.jpg">Vibration Test and Antenna Photo</A>   
+<LI><A HREF="pcsat/PCsatFrame.jpg">Structure and Frame (photo)</A>
+<LI><A HREF="pcsat/PCsatSOL.jpg">Solar Panel/power simulation (photo)</A>
+<P>
+<B>ANTENNA AND EXTERIOR DETIALS:</B>
+<LI><A HREF="pcsat/ant-pln3.jpg">Antenna Sketch / Launch Configuration</A>
+<LI><A HREF="pcsat/Ant-Box.jpg">Dimensioned Antenna Launch Envelope</A> 
+<LI><A HREF="pcsat/PCstack.jpg">Internal sketch showing optional GPS location</A> 
+<LI><A HREF="pcsat/Solar-z.jpg">Optional bottom Solar Panel</A>
+<P>
+<B>MODULE DETAILS:</B>
+<LI><A HREF="pcsat/kpc9612.jpg">TNC/XMTR/RCVR diagram</A>
+<LI><A HREF="pcsat/TNC.jpg">Terminal Node Controller (photo)</A>
+<LI><A HREF="pcsat/VHFXMTR1.jpg">VHF 3 Watt Transmitter (photo)</A>
+<LI><A HREF="pcsat/VHFRCVR1.jpg">VHF receiver (photo)</A>
+<LI><A HREF="pcsat/UHFRCVR.jpg">UHF receiver (photo)</A>
+<LI><A HREF="pcsat/9612tlm.jpg">KPC-9612 Sixteen Channel Telemetry Circuit</A>
+<LI><A HREF="pcsat/tlm77.jpg">Final Telemetry Board</A>  
+
+<P>
+ The Space segment of PCsat has been demonstrated a number of times in space via 
+<A HREF="mirex.html">MIR School tests</A>, the <A HREF="sarex.html"> Shuttle SAREX</A>, 
+and the <A HREF="http://www.aprs.org/spre.html">SPRE mission. </A>.  It is also a spin off of an previous
+launch opportunity that we had in 1998 called <A HREF="http://www.aprs.org/natsat.html"> NATSweb</A> that
+almost got launched on SEA-LAUNCH..
+PCsat is a  project to produce a viable spacecraft in a very short time frame using off
+the shelf components where possible.  Here are the background topics of design:
+<P>
+<LI><A HREF="pcsat/pcsatpln.txt">The Mission and PCsat Team</A>
+<LI><A HREF="pcsat/freqs.txt">Frequency Request and Mission details</A>
+<LI><A HREF="pcsat/design.txt">The Design</A>
+<LI><A HREF="pcsat/paths.jpg">User Routing Paths via PCsat</A>
+<LI><A HREF="pcsat/pwrsys.txt">Power System</A>
+<LI><A HREF="pcsat/links.txt">Link Budgets</A>
+<LI><A HREF="pcsat/cooling.txt">Cooling Experiment</A>
+<LI><A HREF="APRS-SPHEV.html">My Solar Prius</A>
+
+<P> APRS is the Automatic Packet Reporting System that the Naval Academy uses for 
+tracking its boats and a variety of other vehicles and networks using the 
+<A HREF="http://web.usna.navy.mil/~bruninga/aprs.html">APRS
+Automatic Packet Reporting System</A> .  The Satellite described here in would be 
+operated under the rules of the Amateur Satellite Service and the rules of the FCC.  
+Although the satellite would  be developed as a proof of concept for the Naval Academy, 
+it would be available for all radio amateurs and their vehicles.</P>
+
+<P><FONT SIZE=+1>You are visitor: 
+<IMG SRC=http://www.aprs.org/cgi-bin/Bruninga/pcsat.cgi> since 17 Feb 2001 when old counter was lost.  
+Average hits have moved up from about 1000 to 2000 per week.
+</FONT>
+ <BR>
+<HR SIZE=5 WIDTH="100%">
+<TABLE BORDER=2 CELLPADDING=2 >
+<TR>
+Return To:
+<TD>
+<CENTER><P><FONT SIZE=+1><A HREF="satstation.html">USNA
+Satellite Ground Station</A></FONT>
+</TD>
+
+<TD>
+<CENTER><P><FONT SIZE=+1><A HREF="sitemap.html"> Site Map </A></FONT></P></CENTER>
+</TD>
+</TR>
+</TABLE></CENTER>
+</UL>
+
+</BODY>
+</HTML>

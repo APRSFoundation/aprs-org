@@ -1,0 +1,378 @@
+APRS RFID SPEC version 1.13                           10 May 2010
+-----------------------------------------------------------------
+
+1.13 cleans up definitions using similar terms to APRStt
+     changes +A-G+II/XY to +A-G+ss/XY (step-size)
+1.12 changes to +A-G+II/XY and adds options to freetext
+1.11 changes +AA-GG+III to +IIN
+
+This Spec makes it possible to build an APRS HotSPot RFID reader 
+for under $30 RFID and any old standard TNC/Radio.  This makes 
+it possible for clubs to implement HotSpots at low initial cost 
+and to begin looking for applications.  The result is that any
+tag detected by the HotSpot causes an APRS packet to go out for
+the callsign of the Tag holder showing his position, and his
+beacon text or text associated with that HotSpot.  This spec may 
+be expanded in the future, but for now it applies to low cost
+RFID tags with these specs:
+
+  EM4001 ISO based RFID IC
+  125kHz Carrier 
+  2kbps ASK Manchester encoding 
+  32-bit unique ID 
+  64-bit data stream [Header+ID+Data+Parity]
+  www.sparkfun.com/commerce/product_info.php?products_id=8310
+
+And the RFID Reader module:
+
+  ID Innovations EM module series V21 model ID-2
+  www.sparkfun.com/commerce/product_info.php?products_id=8709
+
+
+APRS RFID CONCEPT:  Anyone carrying a $3 RFID card in their 
+right shoe can signal their presence at any APRS HotSpot 
+stepping  on the clearly marked HotSpot or walking through
+a HotZone.  This action will generate an APRS packet on local 
+RF and into the global APRS system indicating that ham's 
+presence at this site.  The packet may include additional 
+information such as the local frequency in use at this HotSpot.
+
+Typical applications will be at Ham clubhouses, EOC's, Ham 
+stores Hamfests, Meetings, conventions, and of course, Dayton.
+
+HARDWARE:  There are three pieces to the APRS RFID concept.
+
+1) The $3 RFID cards purchased by hams to signal their call
+2) The RFID HotSpot: Under $30 RFID reader, TNC, & Radio
+3) The ASSOCIATOR software that ties it together and generates
+   the on-air APRS position packet for that user at that
+   location.  Only one ASSOCIATOR is needed for all local
+   HotSpots.
+
+RFID CALLSIGN CARDS: These $3 cards are standard credit card size
+and are white and blank.  They have a unique 32 bit code number 
+(expressed as 5 bytes or 10 hex characters).  With 32 bits there 
+can be over 4 billion unique cards.  For ham radio, the users 
+CALLSIGN and SSID is associated with each of his RFID cards. 
+There are two schools of thought depending on your own use of 
+your tags. Either make them all have your CALL-7 SSID to show
+you were walking, or make them the same as your car CALL-9 so 
+that when you arrive or leave a place, your CALL-9 goes with you 
+and is not left at the HotSpot. It is imperative to associate 
+one and only one callsign permanently with each card because 
+that association will be impossbible to reliably change later 
+thorought the entire APRS system. For multiple shoes, buy 
+multiple $3 RFID cards. Write the callsign on the RFID card.
+
+For a specsheet and info on ordering cards, please see:
+www.sparkfun.com/commerce/product_info.php?products_id=8310
+
+HOTSPOT CARD READER HARDWARE: The RFID reader is an under $30
+reader module connected to a 5" to 24" coil of wire and its 
+serial output connected to a TNC and Radio. The data is at 9600 
+baud and is connected to the TNC TXD line.  Additional provision 
+is needed for 5 volt power for the RFID reader and an optional
+Beeper and/or LED can be added on the reader's TAG-READ 
+output pin to beep/flash when a tag is detected.  The RFID 
+module can even be installed inside the box of most TNC's (but 
+then the wires to the coil must be short or taken into account 
+during coil tune-up). The TNC operates in UNPROTO converse and 
+sends the raw output of the RFID reader on a dedicated channel 
+(for a multi-site system) or on the local APRS channel to he 
+ASSOCIATOR.
+
+For a specsheet on the reader see:
+http://www.sparkfun.com/datasheets/Sensors/ID-12-Datasheet.pdf
+
+But the spec sheet is confusing in two areas:  1) the RS232 
+equivalent output is on pin 8 (labeled CMOS) and the ground on 
+Pin 1 is left off their diagram!  Further, the pin spacing
+is not the standard 0.1" and so I broke apart a high-quality
+DIP socket and then put individual pin sockets on the pins
+so that I did not bugger up the module during testing.  Later
+modules, I just soldered to the pins.
+
+For purchasing information see:
+www.sparkfun.com/commerce/product_info.php?products_id=8709
+
+RFID READER SERIAL OUTPUT:
+
+The RAW output from the RFID reader is at 9600 baud and consists
+of 16 bytes. The format is only sent once each time the card is 
+within the few inches of the coil. A second read is only 
+possible if the card is removed from the coil area and then 
+brought back in range.  The format is:
+ 
+  SddddddddddKKCLE 
+ 
+  Where S is STX (02h) 
+  where dddddddddd is the 5 byte tag# in 10 ASCII HEX characters 
+  where KK is a HEX checksum 
+  where CL is CR/LF
+  where E is ETX (which is unfortunately 03h (^C))
+
+
+HOTSPOT OUTPUT FORMAT:  The HotSpot TNC transmits this raw
+format via the Radio usually on a special local RFID TAG-to-
+ASSOCIATOR frequency.  This format is not of direct use to any 
+existing APRS system except for the ASSOCIATOR where the 
+tag number is associated wih a callsign and a position. Then it 
+gets converted into the standard APRS format for distribution 
+throughout the APRS RF and IS system.  The HotSpot TNC outputs 
+any of these AX.25 formats depending on how the TNC was setup:
+
+  SPOTID-SS>APRFID,path:SddddddddddKKCLE
+  SPOTID-SS>APRFID,path:ESddddddddddKKCL
+  SPOTID-SS>APRFID,path:ESddddddddddKKC
+  SPOTID-SS>APRFID,path:SddddddddddKKCL
+  SPOTID-SS>APRFID,path:SddddddddddKKC
+  SPOTID-SS>APRFID,path:LESddddddddddKKC
+
+  Where SPOTID-SS is the unique call of that HotSpot TNC
+  Where APRFID is the special TOCALL for the EM4001 ISO tags
+  Where Path gets the packet to the CALL-ASSOCIATOR or Igate
+  Where SddddddddddKKCLE is the raw Tag info
+
+The different versions above depend on how the TNC processes 
+the ending CR, LF and ETX byte.  In normal UNPROOTO-CONVERSE
+mode, the LF and ETX can wrap around and can become attached 
+to the beginning of the next tag read.  The first (preferred) 
+format can be forced, but takes detailed TNC set-up of many 
+commands and we expect set-ups will make mistakes.  THus, the 
+ASSOCIATOR needs to be able to recognize all of these 
+possibilities or have to fight sysops forever until they get 
+their TNC's set up right.
+
+HOTSPOT TNC SETUP: The settings for most common TNC to be used 
+at the HotSpot are listed here. These are the commands for 
+the KPC-3 in pseudo english, but other TNC's have similar 
+commands. 
+
+  MYCALL FCCALL is the FCC callsign of the HotSpot TNC
+  ABAUD 9600    sets serial port to match RFID reader port 
+  BT ;SPOT-NAME*111111zDDMM.mmNHDDDMM.mmWA+A-G+ss/XY.SiteText...
+  BEACON Evy 10 minutes 
+  UNPROTO APRFID VIA WIDE1-1 (get to Igate) 
+  COM $04       Changes command-mode from ^C to ^D 
+  SENDPAC $03   Makes it send packet on $03 instead of CR
+  CR OFF        Makes the TNC not include the $03 in the packet
+  LFADD OFF     Makes sure the TNC does not add linefeeds
+  
+There is another command (I haven't found yet) that makes sure 
+the TNC will start up in CONVERSE mode every time from a power 
+up.  If you can find it, add that as well. 
+
+HOTSPOT OBJECT NAME:  The format of the HotSpot beacon above is 
+configured to convey all the important information that the
+ASSOCIATOR needs to generate the user APRS OBJect packet.  First
+of course, it contains the name of the hotspot in the 9 byte
+OBJect Name field.  THe APRS spec allows both upper and lower
+case to differentiate simillarly named objects (though many
+systems -wrongly- ignore case).  The ASSOCIATOR should be case
+sensitive.
+
+HOTSPOT MAPLIST ORIGIN:  The +A-G+ss/XY field of the HotSpot
+object tell the ASSOCIATOR where to build the on-map-list when 
+placing RFID users at this HotSpot. The +/- A is an offset in 
+hundredths of a minute of Latitude as to where the ORIGIN of the
+on-map-list of calls will go and the +/- G is the offset in 
+hundredths of minutes of Longitude.  
+
+The +/- ss/XY field contains 
+the ss latitude step-size (in thousandths of a minute) that tells 
+the ASSOCIATOR what vertical spacing to put between the calls on 
+the map.  The "X" byte tells the associator how many columns it
+may use to list callsigns on the map.  The "Y" byte tells it 
+how many rows of objects it can make in each column.  The number 
+of calls in a column is actualy 3Y for a maximum of 27 high if 
+Y is 9.  When the first column fills up the longitude is 
+decremented by 10 times the amount of Latitude step-size (ss) 
+and should also be divided by the COSINE of the latitude so that 
+the spacing is not distorted at high latitudes.  In the Eastern 
+Hemisphere, the longitude is incremented.
+
+The offsets and step-size are chosen to give the best list 
+display at a zoom level appropriate for the situation.  For one 
+reader at a ham radio clubhouse, the list might be formed with a
+step-size of .09 minutes latitude so the list can be easily viewed 
+at an 8 or 16 mile local range scale.  Whereas for putting people 
+in a room at Dayton, the step-size might be .002 minutes of 
+latitude so that everyone fits in the room when viewed at the 
+1/4 mile range scale.
+
+HOTSPOT OBJECT AGE:  The standard timeout in APRS is 80 minutes.
+In general a callsign ASSOCIATOR may use this 80 minute time out
+as a means to re-use slots in the map list.
+
+
+HOTSPOT SiteText:  The "SiteText..." field is variable 
+length but users are encouraged to limit it to 8 bytes if 
+possible so that it fits nicely on the thousands of D700 mobile 
+screens.  This Freetext has TWO possible sources, the HotSPot or 
+the User.  As indicated above, the HotSpot Beacon defines a 
+default SiteText that is significant to its particular location, 
+such as the monitoring frequency in that area. It begins with
+a "." separator to indicate it is from the HotSpot.  Thus 
+everyone stepping on that HotSpot will get that SiteText (if 
+they have not otherwise pecified one themselves).  If the
+HotSpot wants to force its text on the users default, then
+the separator is a "=" and will appear on user packets as
+"=SiteText"
+
+USER UserText:  But a User can also override this SiteText and 
+force his own UserText to be associated with his RFID tag.  He 
+specifies that UserText as part of his ASSOCIATION MESSAGE 
+(see below).  If he enters no UserText or UserText with a SPACE
+separator his UserText is only used if the HotSpot does not 
+have one.  But if he uses an "+" separator (or no separator so
+he can get oe more byte onto an HT or mobile display), then he 
+wants his UserText to override the default ".SiteText" of the 
+HotSpot.  If he wants to insist that his UserText be used at 
+all times, then he uses a "!" when associating his text.
+
+Again, a useful applicaiton is to associate one's own personal 
+calling frequency with his tag.  His own UserText can be set to
+override the HotSpot ".SiteText".
+
+It is recommended that important information be contained only 
+in the first 8 bytes of this free text so that it can display 
+well on all D700 mobile radios.  A very common application of 
+this field will be the frequency in use in the area of the 
+HotSpot...  Such as 147.075 MHz at my Lab.
+
+FREETEXT SUMMMARY:
+ HotSpot .SiteText... is used if no other text specified
+ User    +UserText... is used if user specified
+ User    UserText.... same as above, but allows one more char
+ HotSpot =SiteText... is used over either of the above
+ User    !UserText... is used over all of the above
+
+
+ASSOCIATOR FUNCTIONS AND OUTPUTS:
+
+The ASSOCIATOR has three functional responsibilities:
+
+ - Watching for user callsign-to-RFID  registration messages
+ - Collecting the locations of HotSpots object beacons
+ - collecting the HotSpot objects map-list origins
+ - watching for any raw APRS RFID tag number packets
+ - Confirming checksum (otherwise ignoring the packet)
+ - Associating good tag numbers with a callsign
+ - Building map-lists at those origins using offset & increment 
+ - Transmitting the assembled position packet for the tag user
+
+
+CALLSIGN ASSOCIATOR USER PACKET:
+
+The callsign ASSOCIATOR receives the above RIFID from a given 
+SPOT-NAME and matches it to a callsign and generates the 
+following standard APRS position packet for the local RF 
+network: 
+
+Header: CALL-SS>APRFID,WIDE2-2: 
+Packet: !DDMM.mmNRDDDMM.mmWAdddddddddd@SPOT-NAME.Freetext !DAO! 
+
+ Where CALL-SS is the callsign associated with the tag number 
+ Where the APRS SYMBOL is "RA". 
+ Where !DDMM.mmNRDDDMM.mmWA is the standard positon format 
+ Where the tag number is the first 10 bytes of position comment
+ where @SPOT-NAME is the name of the HotSpot where detected
+ Where .Freetext is either the SiteText or UserText 
+
+Example HotSpot names are "HARAarena", "Northhall", "ARRLbooth", 
+"KENWOOD", or " Yaesu ", etc.  Example SiteText for a clubhouse
+might include a frequency 147.105 or even for Dayton, each 
+HotSpot can have a separate call frequency so that you can call
+someone standing there.
+
+The result of the specific above on-air format is that it will 
+show up well on D7, D700 and VX8R radio front panels.  Here are 
+some examples 
+
+On a D7:                    Or on a D700 as:
++------------+              +------------+
+| WB4APR-7   |              | WB4APR-7   |
+| 1234567890 |              | 1234567890 |
+| @HARAarena |              | @HARAarena |
++------------+              | .SiteText  |
+                            +------------+
+If SiteText was a freq:
++------------+              Or on a VX-8R:
+| WB4APR-7   |              +----------------------+
+| 1234567890 |              | WB4APR-7             |
+| @HARAarena |              | 1234567890@HARAarena |
+| =147.555   |              | =147.555 or more txt |
++------------+              +----------------------+
+
+The individual position of each user triggering the RFID 
+HotSpot is built by incrementing or decrementing the tiny 
+step-size of Latitude from the map-list-origin associated 
+with that RFID HotSpot.  
+
+Notice that the above format includes the higher resolution 
+!DAO! format so that the list of calls in a given room can 
+actually be placed in a list without overlap when viewed at 
+a reasonable map scale for that application. This works with 
+all clients, since the pseudo maplist is compiled at the
+ASSOCIATOR for consistent viewing at all clients.  Viewers 
+just zoom in close enough and the list will appear.
+
+HIGH RESOLUTION !DAO! HUMAN READABLE FORMAT:  For this 
+application the !DAO! Human readable format will be used for 
+the user calls placed on the map in the maplist. Using simply 
+!W10! for example means to use WGS-84 datum and the latitude 
+thousandths digit for this user is "1" in latitude and "0" in 
+longitude.  The next user up (about 6 feet) in the list would 
+have !W20! and so forth.
+
+
+CALLSIGN ASSOCIATION: The users CALLSIGN and SSID is associated 
+with each of his RFID tags. There are two schools of thought 
+depending on your own use of your tags. Either make them all have 
+your CALL-7 SSID to show you were walking, or make them the same 
+as your car CALL-9 so that when you arrive or leave a place, your 
+CALL-9 goes with you and is not left at the HotSpot. It is 
+imperative to associate one and only one callsign permanently 
+with each card because that association will be impossbible to 
+reliably change later thorought the entire APRS system. For 
+multiple shoes, buy multiple $3 RFID cards. Write the callsign 
+on each RFID card.  Two shoes means you can carry two calls
+and select which one is read by how you step. 
+
+The ASSOCIATOR must accumulate a file of all tag numbers and 
+associated calls.  There are any number of ways to do this.
+The initial RFID number to callsign association can be made 
+at the local ASSOCIATOR or point-of-sale of the RFID card 
+-OR- anywhere else that a keyboard or keypad is attached.  
+But the easiest method is for the user himself to transmit it 
+into the APRS system by a special message.  
+
+The actual method used does not matter, since once even a local
+association is made, the resulting on-air packet will contain
+the association.  From that, ALL systems locally or globally 
+can collect these associations from the APRS-IS. Also clubs 
+with large numbers of card holders can submit RFID files to 
+pre-load the APRS-IS system.  Further a central server on the
+APRS-IS can be written as a clearing house to maintain the
+global association file and make ti available on the web for
+download.
+
+CALLSIGN ASSOCIATION MESSAGE:  The standard MESSAGE format for 
+a user to send to register his tag number and callsign 
+association is:
+
+ From:  The callsign to be associated
+ TO:    RFID
+ MSG:   ddddddddddkk+UserText  (overrides HotSpot default text)
+ OR:    ddddddddddkk!UserText  (overrides HotSpot pri text)
+
+The ASSOCIATOR looks for these messages and adds them to the
+data base.  This way, anyone with any APRS system (mobile or 
+HT) can manually send a message to join the system.  From then 
+on, the association is made... *and should never be changed!*.
+It cannot be changed because the association will propagate 
+throughtout APRSdom and any attempts to change it will result
+in orphaned associaitns and the potential for conflict and
+confusion.
+ 
+Bob, Wb4APR  

@@ -1,0 +1,59 @@
+How to Enter an APRS Omni-DF Signal Report in UI-VIEW          12 May 2006
+--------------------------------------------------------------------------
+
+> From: "Robert Bruninga" bruninga@usna.edu 
+> Date: Fri May 12, 2006 9:27am(PDT)
+> Subject: Making Omni-DF reports in UIview
+>
+> APRS as a tactical situational awareness system with maps anticipated 
+> that Direction finding and localizing signals would be equal in 
+> application to GPS  and Weather tracking.  We are disappointed in how 
+> this capability has atrophied recently since many APRS clones didn't
+> implement this fundamental APRS technique.
+>
+> Although the very powerful APRS omni-direction finding signal strength 
+> plotting was not included in UIview, the UIview operators can still 
+> contribute very significantly when a signal needs to be localized.
+>
+> To see how APRS plots singal strength data, see an example going on 
+> right now in Washington DC:
+>
+> http://www.ew.usna.edu/~bruninga/dfing.html 
+>
+> To enter a signal report in UIview, simply do the same that you do to 
+> enter your PHG data.  But change the "power" digit to a subjective 
+> signal report between 0 and 9 and enter that digit instead.  Example, 
+> for an S1 report:
+>
+> Your present PHG data is  PHG7132
+> Your DF report would be   DFS1132
+>
+> That is all there is to it.  In PHG, the "7" means 50 watts and the 
+> "132" means your antenna is at 20' with a gain of 3 dB and your favored 
+> direction is East.
+>
+> The only thing that changes when you make a DF signal report is the 
+> signal strength.  Your location, and your antenna characteristics 
+> are already known in your PHG and so this now makes it possible for 
+> software to overlay these signal strength reports on the map to quickly
+> localize a signal.
+>
+> We need to get all hams to be aware that when they listen for an 
+> inteferrring signal, that they have much to contribute by a simple 
+> signal report.  And a ZERO report is just as valuable as hearing
+> it.  This is for several reasons:
+>
+> 1) 100% of everyone can give a valuable report
+> 2) Most people will have a zero report.
+>
+> But the zero reports quickly show all the areas where the signal cannot 
+> be!  And their rejection of those areas, quickly constrains the omni
+> reports from the few that do hear it.  Usually using this technique, 
+> the signal can be localized to a few mile area as soon as enough
+> reports come in.
+>
+> Just remember, that to make a report, just change PHGxxxx to DFSsxxx..    
+> And dont forget to change it back after the signal is found!
+>
+> Thanks
+> de Wb4APR

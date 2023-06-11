@@ -1,0 +1,84 @@
+AT Golden Packet Report, Mount Washington Site              27 July
+-------------------------------------------------------------------
+
+Participants on site were: 
+John Briggs, KC6TVF
+Michele Briggs, W7LIF
+Paul Cecil, KA5FPT
+
+Successes:   
+Communications with Greylock Mountain (KB1LOY) on UHF 445.925 
+simplex, several beacons received on APRS, 144.34, and brief voice 
+checks on 144.34.  Echolink to the WASHDC conference node.   
+
+Discussion:  
+ECHOLINK:  We established Echolink to the WASHDC conference at 
+11:00 am and continued to hold the link through about 12:30 pm.  
+Talked with Apple Orchard mostly.  Found that the 144.39 Augusta 
+repeater I was using for the Echolink shares the same PL tone as 
+the Mt Equinox repeater in VT.  I was bringing up both repeaters 
+at the same time.  This caused some confusion in the Equinox 
+area but I tried to clearly state what was going on to the guys 
+there and they were understanding.  We cleared off Echolink at 
+12:30 pm and stayed off their repeater for the remainder of the 
+day.   We should investigate an Echolink node on a discrete 
+frequency to use avoid the multiple repeater issue.  
+
+REPEATERS:  Too many repeaters in the northeast on the same PL 
+tone.  This included the Echolink repeater mentioned above and 
+the 147.21 repeater to talk with the guys from the Merrymeeting 
+Amateur Radio Association (our home club).  Tremendous coverage 
+to all of New England, even simplex, from the highest mountain 
+top in New England.  
+
+APRS Relay Stations:  No communications with KQ1L.  We tried 
+several times to get a response from KQ1L-6 with no replies.  
+No beacons heard from KQ1L-6.  No voice communications with 
+anyone associated with KQ1L nodes.  Not sure what happened 
+there.  
+
+No communications with Dale Paquin (N1NCI).  Email from him 
+indicated a radio failure that precluded him from playing.  No 
+voice communications on the designated UHF simplex either. 
+Some successes in communicating with the next station to the 
+south, Greylock Mountain.  We established voice communications 
+on the UHF simplex 445.925 frequency.  This proved useful to 
+coordinate activities.  APRS contacts on 144.34 were sporadic 
+at best.  We saw several successfully decoded beacons.  These 
+showed a path of 147 miles at 220 degrees.  Greylock never 
+showed any successfully decoded beacons or messages from us.  
+They could hear the sounds but nothing passed decoding.   We 
+did try several brief voice comms on 144.34 to test the path.  
+Those were clear and readable.  
+
+We established voice communication with Bruce (W1ZE) and Donny 
+(WD1F) on 147.21.  We were interested to see if our D700 was 
+putting out a good signal on APRS.  We had them listen on 144.34 
+with their TNC to see if they could see our APRS beacons.  Bruce 
+has some non-decoded packets but Donny had full copy.  
+
+EQUIPMENT USED:  We had a Kenwood D700 mounted in the vehicle.  
+The antenna is a Larsen NMO 2/70 dual band.  The Kenwood radio 
+also uses a DCI dual band filter in the antenna line to help 
+remove out of band RF sources, and there were quite a few on 
+the mountain.  There is a second radio in the truck, an Icom 
+IC-2100.  The antenna is a Larsen 5/8 wave NMO150B single band 
+antenna mounted on the vehicle.  All antennas use NMO mounts 
+in the center of the roof of the truck.  We were using high 
+power to communicate with Greylock Mountain.  We could use 
+medium power to communicate with all other stations.
+
+OPERATIONS:  We were set up and running by 9:30 am.  We closed 
+up and started down the mountain at about 2:30 pm.  The auto 
+road to the top of the mountain opens at 8:00am and closes at 
+6:45 pm.  Cost is $28.00 per vehicle and $3.00 for each extra 
+body.  The road can accommodate full size pickup trucks but it 
+is steep, curvy, and narrow.   The road is 8 miles from the 
+bottom to the top and an elevation change of about 5300 feet.  
+Summit elevation is 6288 feet.  It is important to note that 
+weather is variable to a major degree.  Both days show 
+temperature differences from the valley to the summit of over 
+20 degrees F.
+
+John Briggs, KC6TVF
+

@@ -1,0 +1,41 @@
+2016 Governor Dick Hill - Report 16 July 2016
+---------------------------------------------
+
+Bob Bruninga WB4APR with Gordon WJ3K and Jon AE3JG plus Rory N3JU
+
+We left on time at 07:30 but on the baltimore beltway, Bob had a
+blowout tire and hobbled to the side of the interestate in a place 
+with Jersey walls to put on the tiny donut spare.  Unloaded all the 
+ATGP gear and put it all into Gordons SUV.  Then drove both cars 
+5 miles to find a parking place to abandon Bob's car.  Then proceeded
+to GD Hill about 90 minutes away.  In total, we lost about an hour.
+
+Arrived at GD hill around 1100? and found Rory N3JU already there.
+We immediatley climbed the tower and put Bob's station on 1200 baud
+and Rories's at 9600 baud.  Gordon and Jon carried all the backup
+gear up the hill from the parking lot about a mile away.  Rory used
+a rope to raise his gear realizing that the backpack does not need
+to fit through the 4" bars, only the gear he pulls from it.
+
+We came on line about 1130? and began to see adjacnet nodes of 
+MDMTN-7 and CAMLBK-9 plus linked nodes from the South.  It took a 
+while to begin hearing Sam's point, but then SLIDE Mountain filled 
+in.
+
+Lots of other climbers on the tower.  Many showed interest in our ops.
+Weather remaind perfect the entire time.
+
+Rory established all the same links on 9600 as we hat on 1200 and he
+also made Yaesu WIRES voice contacts too.
+
+9600 baud worked as well as 1200.  North Carolina to NY in 5 hops.
+ 
+There were some broken links that limited the longest link to be from 
+North Carolina to Masachusetts, with small links at the end, but the 
+focus this year was on the switch to 9600 baud. After the switch the 
+9600 baud data was connected from North Carolina to PA and NY to Vermont 
+with solid links. More detail will follow as reports are filed. Another 
+new data point came from Slide Hill where an alternate path from PA to 
+Connecticut was found to work as well as Sams Point.
+ 
+Bob, Wb4APR

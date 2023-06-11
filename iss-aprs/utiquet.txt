@@ -1,0 +1,80 @@
+Date: Tue, 10 Apr 2001 23:52:09 -0400 (EDT)
+
+From: Bob Bruninga <bruninga@usna.edu>
+
+To: amsat-bb@AMSAT.Org
+
+Cc: TAPR APRS Special Interest Group <aprssig@tapr.org>
+
+Subject: [amsat-bb] ISS UtIquette
+
+ISS UtIquette:
+
+
+
+UI digipeating from space has great potential for bringing live-human
+
+QSO's back to digital satellites.  This mode was quite well exercised
+
+during the last year of MIR giving many stations lots of operating
+
+experience.  One lesson was...
+
+
+
+Since TNC's and PC's can be rather tireless at sending packets, the
+
+following rule of "ISS UtIquette" might be a good idea...
+
+
+
+1)  If your station is attended, then operate in accordance with good
+
+operating practice... Make packets as short as practical and share, and
+
+use the minimum power necessary to communicate.... etc...
+
+
+
+2)  If your station is unattended, put it in RECEIVE only mode.
+
+
+
+3)  If you need to conduct special tests which might not fit either
+
+category above, then please limit your ERP to 5 Watts or less.  This way,
+
+your packet will probably not QRM anyone trying to work ISS; yet if the
+
+channel is clear, it will get through.
+
+
+
+ERP means Effective Radiated power.  This includes antenna gain.  Or said
+
+another way, an HT on an OMNI, not on a BEAM... etc.  It WILL work "if the
+
+channel is clear".  In fact, 1W has been shown to work on rare ocasions...
+
+
+
+A summay of past and present UI digipeating in space can 
+be found on http://aprs.org/astars.html
+
+
+
+DISCLAIMER:  I have no official position with ISS, ARISS, or AMSAT and I
+
+hope I am not suggesting something out of place....
+
+
+
+de WB4APR, Bob
+
+
+
+
+----
+
+Via the amsat-bb mailing list at AMSAT.ORG courtesy of AMSAT-NA.
+

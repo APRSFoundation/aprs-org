@@ -1,0 +1,59 @@
+ANDE TELEMETRY                                          4 Sept 2003
+-------------------------------------------------------------------
+
+ANDE uses the same telemetry frame format as used by PCsat which
+consists of a packet header, serial number counter and then five
+channels of 8 bit decimal telemetry followed by 8 on/off status 
+bits.  The 5 channel A/D converters are multiplexed to 4 banks
+of five telemetry channels each for a total of 20 channels.
+
+Routine telemetry is transmitted once a  minute whenever ANDE is 
+over a ground station or users.  The  banks are switched every 45
+seconds or so, so that in 4 minutes, we see all 4 banks.
+
+The ANDE Telemetry Frame Format is the standard APRS format as 
+shown below:
+
+   ANDE>APRS,SGATE:T#nnn,CH1,CH2,CH3,CH4,CH5,xxxxxxxx
+   
+   Where: ANDE       - AX.25 callsign of ANDE
+          APRS       - AX.25 generic TOCALL
+          SGATE      - digipeater address for Internet Gateways
+          T#nnn      - a 3 decimal digit serial number
+          CH1 to CH5 - 5 telemety channels (3 digit decimal)
+          xxxxxxxx   - an 8 byte (8 bit binary) number showing
+                       the state of the output bits
+
+The telemetry multiplexer can feed any of the four banks of
+telemetry channels to the standard format as shown below:
+
+FRAME 00:   CH1 - 8v Regulator Voltage
+            CH2 - X arrays solar current 
+            CH3 - Y arrays solar current
+            CH4 - Z arrays Solar current
+            CH5 - 5v Reference voltage
+
+FRAME 01:   CH1 - Laser Battery voltage
+            CH2 - Battery A1 current
+            CH3 - Battery A2 current
+            CH4 - Battery B1 current
+            CH5 - Battery B2 current
+
+FRAME 10:   CH1 - Temperature Battery A
+            CH2 - Temperature Solar cell 1
+            CH3 - Temperature Solar cell 2
+            CH4 - Temperature Solar cell 3
+            CH5 - Temperature Retro Reflector 1
+
+FRAME 11:   CH1 - Temperature Battery B
+            CH2 - Sleep Timer clock phase
+            CH3 - LASER Temperature
+            CH4 - Time-to-Go (how much of the 1 minute timer remains
+            CH5 - Run-time-counter (25.5 hours max)
+
+Since ANDE cold boots from sleep mode on each pass, the serial 
+number will only show counts from the start of each pass and will
+have no long term significance.  The Communications run-time 
+counter is modulo 25.5 hours of ON time.  This should give an
+expected end-around count is every 10 days or so of anticipated
+operations.

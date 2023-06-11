@@ -1,0 +1,76 @@
+***************************************************************************
+*                  ATGP 2018 Report for Hawksbill                        75
+***************************************************************************
+
+Shawn, N3AE and Detrick, K4IZ, arrived at the Upper Hawksbill parking area
+at 08:30.  Detrick was a last minute fill-in for Eric, WG3K, who was 
+dealing with a family emergency.  Detrick's help was MUCH appreciated.  
+
+We had some light drizzle on the way up to Hawksbill peak. Advance photo
+recon using pictures on the web suggested a novel way to anchor N3AE's
+fiberglass mast at the observation area.  The area is surrounded by a stone
+wall.  But at one point there is a 2" drain extending through the wall at 
+its base. We put a long bungee through the pipe, grabbed the other end 
+and basically made a vertical bungee band around the stone wall.  The 
+fiberglass mast was lashed to the bungee with some cable ties.  This worked
+very well, even with the wind we experiences at the summit.
+
+Our antenna was a home brew roll up J-pole suspended on top of the 15 ft
+mast.  Rig was a Kenwood D700 pre-configured for the GP event by WG3K.
+Power was a 25AH LiFePO4 battery.  No laptop.
+
+We got on the air at about 10:00 and quickly copied beacons from MDMTN
+to the north.  AOMTN came up a bit later, but there were issues between
+AOMTN and Hawksbill.  More on that later.
+
+Our weather turned from light drizzle to more of a mist and fog as we 
+were "in the clouds."  Over the course of the event, the clouds briefly
+opened up several times for a great view of the valley below.
+
+Hawksbill Mountain is the highest point in Shenandoah National Park and
+as such has numerous hikers coming up regardless of the weather. We
+were always asked about what we were doing.  Guesses ranged from the 
+correct answer, amateur radio, to conducting some kind of weather 
+research.  I think the GP event provided more of an opportunity to 
+discuss and present amateur radio than any field day event I have ever
+participated in.
+
+Mid event we were visited by Eric, W4EON, and his grandson.
+
+Regarding the challenges between AOMTN and Hawksbill... AOMTN reported
+that they could hear us but rarely were able to decode our packets.
+MDMTN to the north had no issues hearing us and decoding our beacons.
+We never had problems hearing and decoding AOMTN.  AOMTN reported no 
+problems hearing and decoding beacons to their south.  So the issue
+was just AOMTN decoding Hawksbill.
+
+We tried changing power level to see if RF feedback was the culprit but
+that made no difference.  We briefly changed frequency to 144.39 and 
+launched a beacon or two.  Detrick used his smart phone to access aprs.fi
+and there we were.  Good decoded packets received by at least three stations.
+
+After coodinating with WG3K, John at AOMTN relocated their antenna.  This
+had the positive effect of significantly increasing our received signal
+strength at AOMTN but they still issues decoding our packets.
+
+Other tests followed, such as us changing frequency 5 KHz up and 5 KHz down
+thinking there might be an oscillator error in the D700.  AOMTN did't hear
+us when off-frequency so that was not the issue.
+
+My personal theory is that a strong and persistent multipath exists between
+Hawksbill and AOMTN, causing enough received symbol overlap at AOMTN to make
+good packet decodes difficult.  Around 1500, both we and AOMTN switched to
+9600 baud briefly and SUCCESS.  They heard and decoded our beacons and we
+heard and decoded theirs without problems.  This might support the multipath
+theory since signal timing changes with the different baud rates.  Or the
+Kenwood D7xx series is better dealing with 9600 baud. Over to the experts to
+think about this further.
+
+Shortly after 1500 we secured our operation and hiked down to the parking 
+area, followed by a difficult drive home due to the pouring rain to the east.
+
+Other lessons learned...it would sure have been nice to have a small laptop
+to monitor the packet traffic.  Maintaining situational awareness using
+only the D700's front panel display is not very effective. 
+
+Shawn - N3AE

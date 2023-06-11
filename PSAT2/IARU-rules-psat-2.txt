@@ -1,0 +1,264 @@
+|OPERATIONS of PSAT-2 IN THE AMATEUR SATELLITE SERVICE       18 Nov 2016
+|-----------------------------------------------------------------------
+|                                                                 WB4APR
+|
+|This paper addresses the licensing of PSAT-2 in the Amateur Satellite
+|Service.  It extracts the pertinent sections of the IARU (International
+|Amateur Radio Union) guildelines for INFORMATION FOR PROSPECTIVE OWNERS
+|AND OPERATORS OF SATELLITES UTILIZING FREQUENCIES ALLOCATED TO THE
+|AMATEUR-SATELLITE SERVICE  which helps assure compliance with the ITU
+|rules.   This document may be viewed in its entirety at:
+|http://www.iaru.org/uploads/1/3/0/7/13073366/iarusatspec_rev15.7.pdf
+|
+|RULES:
+|  "Amateur-Satellite Service: A radiocommunication service using space
+|  stations on earth satellites for the same purposes as those of the 
+|  amateur service." [RR S1.57]
+|
+|  "Amateur Service: A radiocommunication service for the purpose of 
+|   self-training, intercommunication and technical investigations 
+|   carried out by amateurs, that is, by duly authorised persons 
+|   interested in radio technique solely with a personal aim and without 
+|   pecuniary interest." [RR S1.56]
+|
+|PSAT-2 COMMENT:
+|
+|Sponsoring Organization:     US Naval Academy
+|Operating Organization:      US Naval Academy Amateur Radio Club W3ADO
+|Station Trustee:             Bob Bruninga, WB4APR
+|Satellite Station Licensee:  Todd Bruner, WA1HAI
+|
+|Bob Bruninga is the senior research engineer in the Naval Academy 
+|Student project lab who gives engineering guidance to student 
+|satellite projects.
+|
+|Todd Bruner is an active friend of the Academy, a past faculty at
+|USNA and now retired Naval Officer who lives only blocks from the
+|Academy. He has NO PECUNIARY association with the US Naval Academy, 
+|NRL, NASA nor any other Organization involved in this project.
+|
+|RULES:
+|
+|  "VI. OPERATIONAL GUIDELINES. The following operational guidelines, 
+|  based on interpretations by IARU of the Radio Regulations and good 
+|  amateur practice, are intended to help in planning the missions, 
+|  management, and control of satellites planned to operate in the 
+|  amateur-satellite service.
+|
+|  Organisations building satellites should compare their mission 
+|  plans to the requirements of the amateur-satellite service. Then, 
+|  they should determine if it is possible to comply with the 
+|  requirements of the amateur-satellite service or if licensing and 
+|  operation should be in some other radio service which is more 
+|  consistent with the nature and requirements of the mission.
+|
+|RULE:  A. Positive Transmitter Control.
+|
+|  You must be able to turn off the space station transmitter 
+|  immediately in case of interference. [RR25.11 & RR 22.1]
+|
+|  In practice the meaning of "immediate" probably varies a little, 
+|  depending on the situation.  If interference is caused to a SAFETY 
+|  SERVICE, immediately means NOW:  no more than minutes or a few 
+|  tens of minutes. Interference to other services should  terminate 
+|  in no more than a few hours.
+|
+|  Positive transmitter turn-off signals shouild use an independent 
+|  telecommand receiver on the space station.  Telecommand on a user 
+|  input frequency means that another transmitter can interfere easily 
+|  with your telecommand signal so so as to obstruct control.
+|
+|  An adequate network of well placed earth statinos capable of 
+|  sending control signals to the satellite reduces the time required 
+|  to issue the turn off command.  Other mechanisms might be (1) a 
+|  transmitter time-out timer independent of the houskeeping or 
+|  control computer; or (2) limiting the space statio's power budget
+|  so that it will run out of energy and sop operating in a reasonably
+|  short time.
+|
+|PSAT-2 Comment:  PSAT-2's packet transmitter operates in a time-division
+|multiplex environment where it operates in a low-TX-duty-cycle
+|mode, designed to share the channel with users, and other satelites
+|and systems.  PSAT-2's transmitter can be shut down within the
+|requirement of this rule:
+|
+|1) PSAT-2 has an independent packet-length watch dog timer that limits
+|packet length to 1.5 seconds maximum each.
+|
+|2) PSAT-2's Comm control system has a watchdog timer on the comm
+|system that detects loss of control once a minute and re-boots the 
+|comm processor which would also reset any stuck transmitter.
+|
+|3) PSAT-2's command and control processor also has a watchdog timer
+|that reboots the command and control system to defaults if the 
+|process or locks up.
+|
+|4) PSAT-2's 4 watt transmitter power (8 watts DC input) exceeds the
+|spacecraft's power budget by a factor of 5 or more, and will
+|deplete the system power in under an hour of a stuck transmitter.
+|
+|5) PSAT-2 uses FM for the command link, and so even in the presence
+|of a jamming signal, a command signal only 10 dB stronger than
+|the jammer is needed to execute the transmitter off command.  This
+|10 dB command ratio is easily assured:
+| 
+|   a) Through the use of multiple ground command stations through
+|   out the world separated in time by 10's of minutes in different 
+|   footprints that can avoid any single jammer.
+|
+|   b) The geometry of any single pass over a command station and
+|   jammer varies by at least 6 to 8 dB simply due to the range
+|   equation, plus 4 to 8 dB due to the variation in antenna
+|   pattern.  Combined, these allow a variation between 10 to 32 dB
+|   between the jammer and the command station, giving assurance
+|   that the one-second shut-down command can be received.
+| 
+|RULE: B. The purposes of an amateur satellite should be to:
+|
+|      (1) Provide communication resources for the general amateur 
+|          radio community and/or
+|      (2) Self training and technical investigations relating to 
+|          radio technique. [See RR S1.56 and RR S1.57.]
+|
+|   "Radio technique," means having a reasonable possibility of 
+|   application to radio communication systems.  [RR S1.56 and 
+|   RR 11.57 and RR 25.2]
+|
+|   Examples relating to radio technique include but are not limited 
+|   to communiction protocols, attitude determination methods, command
+|   and control procedures, receivers, transmitters, and transponders.
+|   Also antennas, sensors to study spacecraft performance, telemetry
+|   protocols, power supplies and controls for use in space. In 
+|   addition, spacecraft computers, memory operating systems, programs
+|   and related items; radiation effects on electronic components;
+|   radio wave propogation, meteor trail reflection, and measurements 
+|   of orbital environment.
+|
+|   While many other types of technical investigations are conceivable, 
+|   those not having a reasonable possibility of application to radio 
+|   communication systems are probably not in accordance with the 
+|   treaty requirements. An administration can reject whatever it 
+|   decides is inappropriate use of the amateur-satellite service or 
+|   questions may be raised by other administrations.
+|
+|PSAT-2 COMMENT:   PSAT-2 is fully in compliance with the purposes above.
+|
+|1) The PSAT-2 communication system primary mission is to be a two-way 
+|transponder in support of amateur radio communications, particularly 
+|remote data relay, text messaging, and situational awareness. 
+|
+|2) The secondary (PSK31) communications transponder operates as a two-
+|way PSK-31 transponder in full support of amateur users.
+|
+|3) The extremely low-cost design and components on PSAT-2 provide space
+|heritage for other small amateur satellite builders.
+|
+|RULES: C. Station Control.  Who may operate a transmitter
+|
+|   All stations operating in the amateur service and the amateur- 
+|   satellite service, including space and Earth stations, must be 
+|   controlled by "duly authorised persons," that is, individual 
+|   licensed amateur radio operators who must be acting "solely with 
+|   a personal aim and without pecuniary interest." [S1.56 & S1.57.]
+|
+|   Even with these limitations, organizations and amateurs have 
+|   common interests and work together for their mutual benefit. 
+|   (For this discussion, an organisation can be a university, 
+|   research institute, for-profit or not-for-profit corporation, 
+|   association, club, or other similar entity.)
+|
+|   AMSAT-NA, (North America) for example, is an organization which owns 
+|   and builds satellites to operate in the amateur-satellite service. 
+|   But, because it is an organization and not an individually licensed 
+|   radio amateur, it may not control an amateur station. The FCC does
+|   not issue specific amateur radio spacecraft licenses.  The AMSAT-NA
+|   spacecraft are simply operated under the individual Licenses of the 
+|   individual amateur radio operator who is solely responsible for the 
+|   proper operation in accordance with the FCC and ITU/IARU rules.  The 
+|   license of an amateur radio club (in this case, AMSAT-NA itself) may
+|   also be used where a licensed amateur radio operator is named on the 
+|   license as trustee (the person responsible)  for the club station.
+|
+|   In every case, one individual, a licensed amateur radio operator, 
+|   who is neither employed nor paid by AMSAT-NA, is legally 
+|   responsible for the operation of each amateur station or amateur-
+|   satellite station.
+|
+|   Commonly, the licensee is an unpaid member of the organization 
+|   owning the amateur station equipment or is a volunteer acting 
+|   in close association with it. In these cases, the owner's interest 
+|   and the licensee's "personal interest" are usually the same.
+|
+|   Of course, it is theoretically possible (although to the best of 
+|   our knowledge, it has never occurred in practice) that the 
+|   licensee or trustee of an amateur station or amateur-satellite 
+|   station may determine that something he or she has been requested 
+|   to do is not in accordance with the rules and regulations of the 
+|   licensing administration. If this happens, the licensee would 
+|   inform the organization and, if possible, they would work out a 
+|   solution that satisfies and protects both.
+|
+|   Thus, the individual responsibility of each licensed amateur 
+|   radio operator, imposed by the Radio Regulations, works as a 
+|   legal safety check for the organization and the amateur to protect
+|   both of their interests and those of the amateur satellite service 
+|   as well.
+|
+|PSAT-2 COMMENT:  PSAT-2's organizational structure and operators are
+|compliant with these rules.  The operating organization is the school's 
+|Amateur Radio Club with WB4APR as the licensed trustee of the station 
+|and the licensed control operator for the satellite will be Todd Bruner,
+|WB1HAI as noted above.  The interest of these individuals is in the
+|operation of the satellite for personal training and intercommunications 
+|with other satellite experimenters in the amateur satellite service and 
+|without pecuniary remuneration for such interest.  Bob Bruninga has a 30
+|year non-pecuniary history with the Amateur Satellite Service, the author 
+|of dozens of related papers in AMSAT and other Amateur Radio publications,
+|and the instigator of Packet Radio APRS position reporting via SAREX, MIR, 
+|ARISS, SUNSAT, SAPPHIRE, PCSAT1,2, ANDE, RAFT and PSAT for purely personal
+|aims of promoting student education and the Amateur Satellite avocation.
+|
+|
+|RULE:  E. Permissible communications:
+|   The amateur-satellite service, by its nature, involves stations of 
+|   more than one country. Transmissions between amateur stations of 
+|   different countries must be limited to communications consistent with
+|   the purpose of the amateur service [RR 1.56] and to remarks of a
+|   personal character [RR25.2].
+|
+|   Transmissions between amateur stations on different conutries may not
+|   be obscured.  THis means that (1) technical descriptions of all
+|   emissions, codes, and formats must be made publicly and widely 
+|   available and that (2) technical descriptions must be sufficient to 
+|   enable any technically competent licensed amateur radio operator to
+|   use the system.  You may do nothing intended to conceal the meaning
+|   of a tranmission, except in the case of space telecommand 
+|   transmissions for critical spaeccraft functions [RR 25.2A]
+|
+|PSAT-2 COMMENT:  The design, telemetry, data and all aspects of PSAT-2 are
+|in plain language (AX.25 protocol) and all details are published and 
+|maintained current on the following WEB page:
+|http://www.aprs.org/psat-2.html
+|
+|RULE:  F. Open Access. 
+|   All telecommunication facilities, except telecommand, operating in 
+|   amateur satellite service allocations should be open for use
+|   by amateur radio operators world-wide. All experiments utilizing
+|   frequencies allocated to the amateur-satellite service should be freely
+|   available for use by radio amateurs world-wide and incidentally for 
+|   reception by students and educators.
+|
+|PSAT-2 COMMENT:  All communications modes except telecommand and all
+|telemetry will be available to all amateur radio operators worldwide in 
+|accordance with the published user operating recommendations.    There is 
+|no other usage of these communications transponders, nor circuits beyond 
+|what has been described here for use in the Amateur Satellite Service.  
+|PSAT-2's transponders are available to radio amateurs worldwide who adhere 
+|to the published recommended user station requirements and uplink 
+|parameters.
+|
+|Bob Bruninga, WB4APR
+|Trustee,
+|US Naval Academy Amateur Radio Club
+|410-293-6417
+

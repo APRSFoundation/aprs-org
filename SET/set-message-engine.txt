@@ -1,0 +1,49 @@
+APRS Simulated Emergency Test Message WEB Page            18 Aug 2009
+=====================================================================
+
+We need a Message Engine for SET's ( Simulated Emergency Tests).  It 
+is an automated Message Server that simply acknowledges the receipt 
+of incoming messages, makes them available withing the ARRL Section
+organization and then is able to SUMMARIZE statistics on such emails 
+on a web page.
+
+For Example: We should be able to ask ALL hams during any COMMS test 
+to try to send a SET test message from his radio.  Of course, that
+can be done by anyone by sending an APRS email to himself, but then 
+we have no way of collecting the degree of success of that evolution, 
+either locally, Section-wide or globally.
+
+This SET-TEST ENGINE would simply have a web page that reports
+incoming statistics and lists all incoming traffic).
+
+EXAMPLE:  An APRS message to "SET-MDC" would be added to the 
+Maryland - DC section list on the SET message web page.  ANyone
+could check the page for counts or even read the messages.
+
+Remember when we had PCSAT-1, the ISS, and GO-32 all operating
+APRS, we had set up a special web page to encourage all AMSAT 
+operators to learn how to send an APRS message to EMAIL.  We
+want to do that again this year, but there are no reliable 
+working satelites anymore for APRS.  But we could tell ALL hams
+to learn how to send an APRS message for such an exercise.
+
+OK, here is the idea in a nutshell..  The SET Message Engine does 
+the following:
+
+1) Wwatches the APRS-IS for any message to SET-xxxxx
+2) Sends back an APRS ack
+3) Has a main WEB page to LIST message statistics and 71 links
+4) One page for each of the 71 ARRL Sections (MDC for example)
+5) Every message to SET-MDC goes to the MDC page.
+6) The main page has FOUR columns of numbers for each section
+   - one shows the messages in the last hour
+   - another one shows messages in the last 4 hours
+   - th ethird one shows messages in the last 24 hours
+   - the 4th one shows messages in the last 7 days
+
+The idea for this SET Messge engine is summarized as follows:
+
+1) Using this for easy MESSAGE testing and all can see results
+2) Use it for real, for capturing local situatin message traffic.
+
+Bob, WB4APR

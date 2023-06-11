@@ -1,0 +1,128 @@
+KF4PSB   ÝWK4R     Ý<A000>Good Morning!
+KZ5ED-3  ÝCQSRVR   Ý<A1>CQ_AT CQ AT ON SITE
+CQSRVR   ÝKZ5ED-3  Ý<A>Invalid command
+CQSRVR   ÝKZ5ED-3  Ý<A>Invalid command
+K4IJ-7   ÝCQSRVR   Ý<AY>CQ AT COMERS NOGO
+K4IJ-7   ÝWB4APR-9 Ý<A>COMERS NOGO
+K4IJ-7   ÝAOMTN-5  Ý<A>COMERS NOGO
+K4IJ-7   ÝMDMTN    Ý<A>COMERS NOGO
+K4IJ-7   ÝGDHILL   Ý<A>COMERS NOGO
+K4IJ-7   ÝKJ4ERJ-12Ý<A>COMERS NOGO
+K4IJ-7   ÝMDMTN-7  Ý<A>COMERS NOGO
+K4IJ-7   ÝKI4HDU-7 Ý<A>COMERS NOGO
+K4IJ-7   ÝKJ4LFJ   Ý<A>COMERS NOGO
+K4IJ-7   ÝCLNGMN   Ý<A>COMERS NOGO
+K4IJ-7   ÝGRYLCK-11Ý<A>COMERS NOGO
+K4IJ-7   ÝN8DEU-12 Ý<A>COMERS NOGO
+K4IJ-7   ÝMTWASH-13Ý<A>COMERS NOGO
+CQSRVR   ÝK4IJ-7   Ý<A>13 messages sent to AT
+K4IJ-7   ÝGDHILL-8 Ý<A>COMERS NOGO
+K3PDK-7  ÝK4IJ-7   Ý<A>CQ AT mdmtn-7ota 144.34 and 445.925
+MDMTN    ÝK4IJ-7   Ý<A>CQ AT mdmtn-7 ota 144.34 and 445.925
+KZ5ED-5  ÝROAN-3   Ý<A01}>looks like it is      working on my         end 73
+ROAN     ÝROAN-3   Ý<A01}>looks like it is      working on my         end 73
+ROAN     ÝCQSRVR   Ý<A02}>CQ AT CQ AT ROAN-3 ON SITE AND DIGI
+ROAN     ÝK3PDK-7  Ý<A>CQ AT ROAN-3 ON SITE AND DIGI
+ROAN     ÝWB4APR-9 Ý<A>CQ AT ROAN-3 ON SITE AND DIGI
+ROAN     ÝAOMTN-5  Ý<A>CQ AT ROAN-3 ON SITE AND DIGI
+CQSRVR   ÝROAN     Ý<A>15 messages sent to AT
+ROAN     ÝMDMTN    Ý<A>CQ AT ROAN-3 ON SITE AND DIGI
+ROAN     ÝGDHILL   Ý<A>CQ AT ROAN-3 ON SITE AND DIGI
+ROAN     ÝKJ4ERJ-12Ý<A>CQ AT ROAN-3 ON SITE AND DIGI
+ROAN     ÝMDMTN-7  Ý<A>CQ AT ROAN-3 ON SITE AND DIGI
+ROAN     ÝKI4HDU-7 Ý<A>CQ AT ROAN-3 ON SITE AND DIGI
+ROAN     ÝKJ4LFJ   Ý<A>CQ AT ROAN-3 ON SITE AND DIGI
+ROAN     ÝCLNGMN   Ý<A>CQ AT ROAN-3 ON SITE AND DIGI
+ROAN     ÝGRYLCK-11Ý<A>CQ AT ROAN-3 ON SITE AND DIGI
+ROAN     ÝN8DEU-12 Ý<A>CQ AT ROAN-3 ON SITE AND DIGI
+ROAN     ÝMTWASH-13Ý<A>CQ AT ROAN-3 ON SITE AND DIGI
+ROAN     ÝK4IJ-7   Ý<A>CQ AT ROAN-3 ON SITE AND DIGI
+ROAN     ÝGDHILL-8 Ý<A>CQ AT ROAN-3 ON SITE AND DIGI
+CQSRVR   ÝROAN     Ý<A>Sending too soon to AT
+CQSRVR   ÝROAN     Ý<A>Sending too soon to AT
+CQSRVR   ÝROAN     Ý<A>Sending too soon to AT
+ROAN-3   ÝROAN     Ý<A5>RR
+CQSRVR   ÝROAN     Ý<A>Sending too soon to AT
+ROAN     ÝCLNGMN-2 Ý<A03}>This is ROAN we are opperational
+SPRNGR   ÝROAN     Ý<A>CQ AT QSO12, Status 3?
+ROAN     ÝSPRNGR-1 Ý<A05}>WE SAW A DIGI FROM YOU WE WILL BE HERE 1600
+CLNGMN-2 ÝRONE-3   Ý<A9>test
+CQSRVR   ÝROAN     Ý<A>0 messages sent to AT
+MDMTN    ÝROAN     Ý<A>CQ AT mdmtn-7 ota 144.34 and 445.925
+MDMTN-7  ÝROAN     Ý<A>CQ AT mdmtn-7 ota 144.34 and 445.925
+CQSRVR   ÝROAN     Ý<A>Sending too soon to AT
+K0NWT-7  ÝSPRNGR-1 Ý<A>Congrats to the sprnger team!
+K0NWT-7  ÝCLNGMN-2 Ý<A>Congrats George and team for making it up there
+CQSRVR   ÝROAN     Ý<A>Sending too soon to AT
+ROAN     ÝMDMTN-7  Ý<A>CQ AT ROAN-3 ON SITE AND DIGI
+CQSRVR   ÝROAN     Ý<A>2 messages sent to AT
+ROAN     ÝMDMTN    Ý<A>CQ AT ROAN-3 ON SITE AND DIGI
+CLNGMN-2 ÝSPRNGR-1 Ý<AC>we have copied rone and they can copy us!
+CQSRVR   ÝROAN     Ý<A>Sending too soon to AT
+SPRNGR-1 ÝCLNGMN-2 Ý<A>Copied that news!  Great!
+SPRNGR-1 ÝHTSVLE-2 Ý<A1>Greetings from Sprinter
+MDMTN-7  ÝROAN     Ý<A>CQ AT mdmtn-7 ota 144.34 and 445.925
+CLNGMN-2 ÝROAN-3   Ý<AD>test
+CLNGMN-2 ÝSPRNGR-1 Ý<AE>thanks!
+SPRNGR-1 ÝHTSVLE-2 Ý<A>Greetings from Springer!
+N8DEU-2  ÝWA4YYM-9 Ý<AA>hi frm HT
+HTSVLE-2 ÝSPRNGR-1 Ý<AR>hi frm HSV
+SPRNGR-1 ÝHTSVLE-2 Ý<A1>Copy your hi, thanks
+ROAN     ÝCOMERS-4 Ý<A08}>THIS IS ROAN ARE YOU WORKING?
+SPRNGR-1 ÝWA4YYM-9 Ý<A6>Copy that address, thanks
+ROAN     ÝAOMTN-5  Ý<A09}>THIS IS ROAN ARE YOU WORKING?
+SPRNGR-1 ÝHTSVLE-2 Ý<A9>Copy?
+ROAN     ÝWHTRCK-6 Ý<A0B}>THIS IS ROAN          ARE YOU WORKING?      AT GOLDEN
+ROAN     ÝMDMTN-7  Ý<A0C}>THIS IS ROAN ARE U    WORKING GOLDEN AT
+MDMTN-7  ÝROAN     Ý<A06}0C>Yep, whiterock has bad settings, can't talk to ao
+HTSVLE-2 ÝSPRNGR-1 Ý<AS>rr
+MDMTN-7  ÝROAN-3   Ý<A07}>is Apple Orchard up?
+W4DOC    ÝCLNGMN-2 Ý<A>Do you copy us from the Atlanta area?
+CLNGMN-2 ÝWA4YYM-9 Ý<AF>copy that good working yot today. 73
+N8DEU-2  ÝSPRNGR-1 Ý<AB>hi frm HT
+ROAN     ÝCQSRVR   Ý<A0E}>CQ AT WE HAVE POS     SOUTH TO LOOKOUT
+ROAN     ÝMDMTN-7  Ý<A>WE HAVE POS SOUTH TO LOOKOUT
+CQSRVR   ÝROAN     Ý<A>2 messages sent to AT
+ROAN     ÝMDMTN    Ý<A>WE HAVE POS SOUTH TO LOOKOUT
+CQSRVR   ÝROAN     Ý<A>Sending too soon to AT
+SPRNGR-1 ÝW4VAB-8  Ý<A1>Greetings from Springer Mt
+CQSRVR   ÝROAN     Ý<A>Sending too soon to AT
+ROAN     ÝMDMTN-7  Ý<A0D}06>WE HAVE COMS TO       HTSVLE-2
+MDMTN-7  ÝROAN     Ý<A>CQ AT mdmtn-7 ota 144.34 and 445.925
+SPRNGR-1 ÝKF4QVI-4 Ý<A2>Received your test
+CQSRVR   ÝROAN     Ý<A>Sending too soon to AT
+KF4QVI-4 ÝSPRNGR   Ý<A3>TEST
+KF4QVI-4 ÝROAN     Ý<A4>TEST
+ROAN     ÝCQSRVR   Ý<A0F}>WE HAVE NO COMES      GOING NORTH
+CQSRVR   ÝROAN     Ý<A>Invalid command
+SPRNGR-1 ÝN8DEU-2  Ý<A>Copied your beacon
+CQSRVR   ÝROAN     Ý<A>Invalid command
+SPRNGR-1 ÝROAN-3   Ý<A>Copied you via Clingman's
+WB4APR-9 ÝROAN     Ý<A>cq at eta 1120am cell is 410 570 xxxx
+CLNGMN-2 ÝSPRNGR-1 Ý<AG>1600 is the plan
+SPRNGR-1 ÝKF4QVI-4 Ý<A6>Copied your test
+N8DEU-12 ÝSPRNGR-1 Ý<AR>hi frm HSV
+N8DEU-12 ÝSPRNGR-1 Ý<AS>rr
+N8DEU-12 ÝSPRNGR-1 Ý<AU>we copy
+N8DEU-12 ÝWA4YYM-9 Ý<AV>see ROAN-3 in list now
+N8DEU-12 ÝROAN-3   Ý<AW>cpy?
+SPRNGR-1 ÝKI4HDU-3 Ý<A9>Copied your beacon
+KF4QVI-4 ÝROAN     Ý<A5>TEST
+N8DEU-12 ÝROAN     Ý<A>securing HTSVLE-2 as LOKOUT-1 has secured
+ROAN     ÝKF4QVI-4 Ý<A0G}5>THIS IS ROAN RR
+KI4HDU-3 ÝSPRNGR-1 Ý<A23>thanks
+KF4QVI-4 ÝSPRNGR   Ý<A6>CLINGMANS_D
+KF4QVI-4 ÝSPRNGR   Ý<A7>CLINGMANS_DOME
+SPRNGR-1 ÝROAN     Ý<A14>Good to hear you from Springer
+ROAN-3   ÝSPRNGR-1 Ý<A0>STILL NOTHING FM NORTH
+SPRNGR-1 ÝROAN-3   Ý<A16>COMERS-4 Reported NOSHOW earlier
+MDMTN-7  ÝROAN     Ý<A>CQ AT mdmtn-7 ota 144.34 and 445.925
+ROAN     ÝWB4APR-9 Ý<A0H}>THIS IS ROAN          NOTHING NORTH         TIME 1500
+ROAN     ÝCQSRVR   Ý<A0J}>CQ AT CQ AT           ROAN CLOSING 1500
+ROAN     ÝMDMTN-7  Ý<A>CQ AT ROAN CLOSING 1500
+CQSRVR   ÝROAN     Ý<A>4 messages sent to AT
+ROAN     ÝMDMTN    Ý<A>CQ AT ROAN CLOSING 1500
+ROAN     ÝWB4APR-9 Ý<A>CQ AT ROAN CLOSING 1500
+ROAN     ÝN8DEU-12 Ý<A>CQ AT ROAN CLOSING 1500
+CQSRVR   ÝROAN     Ý<A>Sending too soon to AT
+CQSRVR   ÝROAN     Ý<A>Sending too soon to AT

@@ -1,0 +1,47 @@
+PECsat                 COMMS Parts List                    23 Oct 2002
+----------------------------------------------------------------------
+                                                                WB4APR
+
+The following lists the major components of the communications payload
+for PECsat.  It consists of a dual redundant pair of transmitters and
+receivers and the comm and data handler referred to as a TNC.  A third
+UHF transmitter is included as the default downlink transmitter to 
+allow for spectrum agility to avoid any conflict with existing ISS
+ARISS payloads.
+
+
+Part  DISCRIPTION    Part Number   SIZE           MFR
+----  -------------- ------------  -------------  --------------
+
+TXA   2W UHF XMTR    TA-451        3" x 5"        Hamtronics Inc
+
+TXB   2W UHF XMTR    TA-451        3" x 5"        Hamtronics Inc
+
+TXC*  2W VHF XMTR    TA-51         3" x 5"        Hamtronics Inc
+
+RXA*  VHF RCVR       R-100         4" x 3.43"     Hamtronics Inc
+ 
+RXB*  VHF RCVR       R-100         4" x 3.43"     Hamtronics Inc
+
+RXC   PSK-31 RCVR    tbd           4" x 5" tbd    USNA
+
+TNCA* Terminal Node  KPC-9612+     6.5" x 6.5"    Kantronics
+      Controller
+
+TNCB* Terminal Node  KPC-9612+     6.5" x 6.5"    Kantronics
+      Controller
+
+IBRD  Interface Brd  tbd           5" x 5" TBD    USNA
+
+ANT1* Antenna        tbd           19" & 6" whip  USNA
+
+ANT2* Antenna        tbd           19" & 6" whip  USNA
+
+
+*NOTE:  Items marked have flown before on PCsat.
+
+Manufacturers:
+  
+Kantronics Inc, 1202 E 23rd St, Lawrence, KS 66056 Phone:  785-842-7745
+  Hamtronics Inc, 65 Moul Rd, Hilton, NY 14468-9535 Phone 716-392-9430
+  USNA = US Naval Academy Small Satellite Lab

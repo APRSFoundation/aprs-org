@@ -1,0 +1,63 @@
+4 Dec 1999
+Satellite Buffs, and Digital Mobile operators,
+
+Here is a quick summary of the APRS QSO party conducted 3/4 Dec on the three
+1200 Baud PACSATS.  During the 5 Saturday passes over 400 UI packets were 
+exchanged with at least 11 stations seen (even while 6 stations were logged
+on and downloading PACSAT Protocol).  All downlink  packets were also
+linked into the worldwide APRServe internet system.  During some warm up
+passes on Friday, 287 packets were exchanged.
+
+One station, KA2UPW was using only a sound card on his PC to generate the
+necessary MANCHESTER uplink.  Others were using APRSdos, APRSplus or
+WinAPRS and some with just terminal software.  The sound card method
+makes it possible for anyone with a laptop and a 2m radio to uplink while
+mobile.
+
+With 3 satellites, ALL with uplinks on 145.90, (I was running only 20 
+watts into a mobile WHIP antenna!) there is great potential
+for providing mobile APRS POSITION/STATUS reporting for travelers via
+satellite.  For example, the orbits of these birds gives the following
+coverage pattern everywhere (local sun time):
+
+DAY:  0930-1230 About 7 or 8 passes lasting 8-15 minutes each
+NITE: 1930-0030 About 7 or 8 passes lasting 8-15 minutes each
+
+Now all we need is someone to write the 1200 baud PSK downlink modem in
+software for a sound card, and then these 9 year old satellites will be
+VERY USABLE again...
+
+APRS STATIONS:  WB4APR, KB2WQM, N8DEU, KA2UPW, K5QXJ, N5ZNL, W4HFZ, WS4Z
+PACSAT USERS:   W4MO,VE3FRH,VE2KAD,N8ULD,K0RZ,TG9IKE,VE3BCG,WE1U,N0ALJ
+
+NOTES:  The throughput of these 1200 baud satellites can be an order of
+magnitude greater than terrestrial systems for several reasons:
+
+   1) Each has 4 simultaneous receivers.  Thus even with only a 25%
+      success rate on each uplink, the downlink can be kept full
+   2) Since everyone hears the satelite direct, there need be only
+      ONE digipeater hop, instead of the 3 or more duplications on
+      the ground
+   3) Since the satelite is crossband full duplex, the downlink is
+      on 100% of the time instead of the maximum 50% for a simplex digi.
+
+Thus, the birds could handle many hundreds of stations per pass per
+satellite!  Right now, LO19 and IO26 are 100% dedicated to UI or APRS
+digipeating.  AO16 is shared, since its PACSAT BBS is still functional and
+usually has a few users on the weekends...  With 9 years in space, I find
+that the birds may have shifted somewhat from their published uplink
+frequencies.  I found these freqs best for me.  THese are just one each
+of the 4 channels availaable on these birds.
+
+AO16  145.910 start, 145.915 finish
+LO19  145.890 start, 145.895 finish
+IO26  145.880 start, 145.885 finish
+
+I will post the results on our TRAKNET web page so you can browse the
+captured files if you are interested:
+
+    http://web.usna.nadn.mil/~bruninga/traknet.html
+
+de WB4APR, Bob
+
+

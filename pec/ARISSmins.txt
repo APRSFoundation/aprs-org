@@ -1,0 +1,113 @@
+Preliminary Results of the Amateur Radio on the International Space 
+Station (ARISS) meeting at NASA Goddard 5-7 Dec 2002
+------------------------------------------------------------------------
+                                                                 WB4APR
+
+EXECUTIVE SUMMARY:  It appears we have gotten approval from ARISS to
+proceed with PCsat2 (though we won't know the exact wording or limitations
+(if any) until the formal minutes.  We also made many other contributions
+to the ARISS committee meeting and future project concepts.  Because PCsat
+pushes the envelope of the Amateur Satellite Service on the International
+Space Station, we were tasked with developing a draft freuency planning
+doecument for the future of all applications within the ARISS perview.
+
+DETAILS:  The PCsat2 Project Opportunity was presented to the ARISS
+delegates at the semi-annual meeting held this year at NASA Goddard.  The
+4 day meeting opened with the chairman noting some of the challenges in
+the coming year and one of the topics mentioned was the potential for
+external ISS experiments that may want to use the Amateur Satellite
+Service while pushing the envelope of what may or may not be appropriate
+for that service.
+
+While this comment was intended only as a summary comment, the ensuing
+animated discussion made it obvious that this was a tough issue and it was
+soon clear that the Naval Academy presentation scheduled for Friday would
+be the focal point of this topic.
+
+By the time Friday came, the agenda was a half day behind and so the
+PCsat2 presentation was moved to Saturday morning to assure adequate time
+to discuss this important issue.  To summarize the presentation, the hot
+issues of pecuniary interest, proprietary data, and DOD involvement
+immediately pushed many buttons and much comment was generated before even
+the first few slides could be presented.
+
+PCSAT2 PRESENTATION: But after the initial response, and as the
+presentation was able to proceed as planned, voiced concerns faded and by
+the end of the presentation, there seemed to be a general feeling of
+guarded optimism with only a few delegates reserving judgment until they
+had time to digest the material.  We closed with the comment that what we
+needed from ARISS was an endorsement of the concept and that we also
+needed from AMSAT a statement in principle that the PCsat mission as
+presented was in fact fully within the rules and intent of the
+International rules for the Amateur Satellite Service.
+
+PCsat2 RESULTS:  The Committee agreed to meet in closed session after the
+formal agenda but before any of the primary delegates left the USA.  As of
+this writing, I have heard that the results were "good news" though it may
+be a day or so before I have any details.
+
+CONCLUSION:  I think the way we organized the PCsat2/MISSE5 experiment
+and prepared the communications design to fit within a fully compliant
+niche in the ITU rules was the key to the success of this approach, and in
+fact, could pave the way for many follow-on missions to the ISS using the
+MISSE experiment container.
+
+FUTURE ARISS COORDINATION:  Further, although there was quite a range in
+the delegations betwen technical and non technical members, I am pleased
+with the personal raport we developed with the key Russian delegate who
+was very interested in the techincal details and compatibility.  He also
+seemed to share my vision for the future of many of the other experiments
+planned and proposed for ARISS.
+
+ARISS FREQUENCY PLANNING:  We came away tasked with the job of working
+up a frequency planning document for all future ARISS missions, since
+PCsat2 will be the first excursion beyond the very hard won international
+frequencies determined back in the l997 time frame.  Fortunately the
+global reach of APRS back then had placed us in the key position of
+vacating a single APRS frequency yielding an otherwise unavailable
+frequency for ISS.  This compromise lead to a global uncontested frequency
+for ARISS and North American clear channel for APRS.  Further it
+established the seeds of cooperation between the two interests that serve
+us both well.
+
+HF CONCEPT OF OPERATIONS:  Further, seeing the Russian plans for adding HF
+frequencies and equipment to ARISS in 2003, we propsed a concept of
+operations that had not previously been considered. This concept of
+operations offers an order of magnitude better communications between the
+crew and schools on the ground by operating in full duplex, allowing the
+schools to observe ,if not directly participate, in any other school
+contacts, not just their own.
+
+FULL DUPLEX SCHOOL COMMUNICATIONS SYSTEM:  A final contribution we made to
+the meeting was the observation that the long awaited full duplex
+communications system for school contacts did not have to wait until the
+future Phase2 hardware, but that there was sufficient transmitters and
+receivers on board right now to accompliesh this mission with the only
+missing ingredient being a simple audio cable. We proposed an effort to
+send up the audio cable on a Russian resupply mission soon, instead of
+waiting for the full phase two.  ALso, by having the audio cable, then the
+old phase 1 simplex Erricsson radios did not have to be abandoned when
+phase 2 hardware was eventually activated in the USA Habitability module
+but that it could continue to operate as a second system in the FGB for
+the Russian segment for several more years.
+
+ASTRONAUT-SCHOOL CONACT BACKLOG:  THe ARISS Operations committee reported
+that the current school backlog for Astronaut to school communications was
+on the order of 2 years and growing longer. But with PCsat-2, I was able
+to point out that the School-to-astronaut backlog could be improved by an
+order of magnitude by using the full duplex transponder on PCsat2. to
+simply link school events to Astronauts at JSC "via" ISS instead of having
+to schedule and use up the very valuable time of the Astronatuts in space.
+To the school and the students, the geometry, and communications would be
+the same, but it could be done on many orbits, not just one every week or
+so because it used a larger pool of astronauts on the ground.
+
+THe meeting was a very rewarding event.
+
+
+Bob Bruninga
+USNA Satellite Lab
+410-293-6417
+
+
+

@@ -1,0 +1,75 @@
+GOLDEN PACKET SETTINGS FOR THE TM-D710                   7 July 2016
+--------------------------------------------------------------------
+
+ALl of the digipeater settings for a D710 can be made from the front
+panel.  Here are the settings:
+
+Remember the Tuning knob is also the SELECT button for navigating 
+menu's.
+
+Press F key and then TUNING knob
+Select APRS menu
+
+600 BASIC settings set MYCALL to MDMTN-7
+601 Set data to A-BAND, 1200 baud and 200 ms
+602 GPS port INPUT OFF
+605 MY POSITION - enter lat long and make sure that the 
+    ASTERIX is associated with this #1 memory selection.   
+    Do that with the USE button when that memory is selected
+606 Set Speed to OFF
+607 Set comment to SPECIAL
+608 *1 enter text:  (update this frequently with your status)
+609 Position Limit to OFF (or 0)
+610 station icon: select the TENT (Portable)
+611 Beacon TX algorithm
+    METHOD  Auto
+    initial interval 10 minutes (Springer and Katahdyn set 5 min)
+    Decay OFF
+    Proportional OFF
+612 PATH
+    TYPE OTHERS (Press USE button to set the Asterix*) IMPORTANT!
+    PATH: HOP7-7,HOP7-7
+613 Select APRS
+614 Set Voice Alert OFF
+616 DIGIPEAT (MYCALL) ON
+617 UICHECK TIME 10 seconds (default is 28)
+618 Set UIDIGI OFF
+619 UIFLOOD ON
+    ALIAS HOP
+    SUBSTITUTION ID
+620 UITRACE ON
+    ALIAS TEMP
+
+TUNE RADIO ON BAND A to 144.34 MHz
+TUNE RADIO ON BAND B to 445.925 MHz Set CTCSS 100
+
+Set A to HIGH power if your battery can afford it.  
+Otherwise use Medium Power.  Use minimum voice power on side
+B as required.  Keep the DATA band squelch tight.
+
+PRESS TNC button (lower right) until "D" shows on band A
+"APRS12" should show on the top of SIDE A
+
+PRESS "BCON" button until BCON displays on the top line
+of the display.
+
+PM - PROGRAM MEMORIES:  *** IMPORTANT***  Save in a PM! (IE PM#5)
+
+1) Press [F] - PMin - Select PM number.  I use #5 to save it
+2) But NOW you need to select PM5 to operate from.  Press PM - 5
+3) NOW there is the all important new options in the AUX MENU
+4) go to AUX and make two more settings:
+   900 Set the NAME of your PM to AT-GP
+   922 Set Auto-PM-store OFF !!! (might be MENU 521 in old radios)
+
+NOW THEN DO ANOTHER [F] - PMin - 5 to SAVE this in PM5.
+
+Power off the radio and back on and it should come up in PM5.
+RE-SAVE the PM.
+
+Operating from a PM and having AUTO-PM-STORE - OFF will assure that
+nothing you will do will mess up PM 5 unless you purposfully make 
+changes and then do another [F] - PMin - 5 SAVE.
+
+Bob, Wb4APR
+

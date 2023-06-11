@@ -1,0 +1,69 @@
+APRStrfc     APRS TRAFFIC SPEED MONITORING AND REPORTING      24 May 2004
+-------------------------------------------------------------------------
+                                                                   WB4APR
+TRAFFIC.HST FILE:
+
+To tell APRStfc where the local traffic choke points are located, I
+used the standard APRS .HST file format.  Here are sample entries for
+our area (Greater Baltimore/Washington-DC area).
+
+POINT     DAYTIME LAT      LONG      DIR DL  RNG STRT STOP
+--------- ------- -------- ------------- --- --- ---- ----
+Bowie-W   +123456z3857.00N\07644.00Wm270/010/1.0 0600 0900
+Bowie-E   +123456z3857.00N\07644.00Wm090/010/1.0 1500 1800
+NwCrltn-W +123456z3856.70N\07648.00Wm270/010/1.0 0600 0900
+NwCrltn-E +123456z3856.00N\07654.00Wm045/010/1.0 1500 1800
+SevrnBR-W +123456z3901.00N\07629.00Wm270/010/1.0 0600 0900
+SevrnBR-E +123456z3859.50N\07631.50Wm090/010/1.0 1500 1800
+
+Here DIR is the direction of travel, DL is the delta angle acceptible
+to be considered on that route, RNG is the acceptible range from that
+point, and STRT and STOP are the start and stop times of voice
+reporting(the times are not currently used).
+
+This exact TEXT format is included so that the Sign-post shows up 
+properly on the D7 screen but also additional information is included 
+which shows the direction of the traffic lane at that point that is to 
+be monitored and the range from that point that is of interest.
+
+APRStfc scans through this list on receipt of any new moving vehicle
+position report checking to see if the vehicle is within range of
+the choke point.  Interestingly, when traffic slows down to say
+30 MPH or less, then even a 2-minute tracker has a very good chance of
+being captured in that window (2 packets within a mile of the
+choke point)...
+
+MAKING YOUR TRAFFIC.HST FILE:
+
+The easy way to make a TRAFFIC.HST file is to use APRSdos to simply move
+your cursor around to the various choke points and hitting INPUT-
+ADD-OBJECT and entering the NAME of the SpeedPost.  Then for the COURSE
+enter the direction and for the speed, enter the ANGLE LIMIT (typically
+10 to 20 deg (plus/minus)).  In the comment field, type the 3 digit
+RANGE limit (usually 1.0 miles).  You may also enter the START and STOP
+times (thought at this point, they are ignored).  Then FILE-SAVE hitting
+"T" to force a TRAFFIC.HST file.  Similarly, you can edit a TRAFFIC.HST
+file by using the FILE-NEW command to clear memory, and then using
+FILE-LOAD and also selecting "T".  THen you can continue to INPUT-ADD
+new SPEED-POSTS or on the P-LIST, edit or delete entries.
+
+Since all of these choke-points do not actually show on the map unless
+they have current data, I added a new MAPS-OVERLAYS-TRAFFIC command
+which will overlay all of the choke points onto the map temporarily.
+These points show the location and a DIRECTION indicator
+to help you assess their applicability.
+
+DIFFERENCES TO normal APRSdos version 864:
+1) removed Fade-DFing, NTS message formats, GPS and WX interface
+2) Upped Capture size from 101 to 173 stations (5 pages)
+3) Added MAPS-OVERLAY-TRAFFIC for viewing SPD-POSTS in TRAFFIC.HST file
+4) Turned off Dead Reckoning of SPD-POSTS. (should do in all APRS)
+5) Users should use JUST-MOBILES command frequently to see mobile situation
+6) FILE-LOAD command (if FILE-NEW has cleared memory) can select "T"
+   to allow loading the TRAFFIC.HST file.
+7) FILE-SAVE command has the "T" option to save TRAFFIC.HST
+   (Always keep a backup! because it is easy to overwrite...)
+8) CONTROLS MENU (TAB) has CONTROLS-TRAFFIC to toggle on and off
+   traffic SPD-POST generation.  The status of CONTROLS-TRAFFIC is shown
+   in the middle of the CONTROLS DISPLAY (hit TAB).
+

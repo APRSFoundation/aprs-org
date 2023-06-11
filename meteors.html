@@ -1,0 +1,298 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+   <TITLE>APRS Meteor Scatter</TITLE>
+   <META NAME="Author" CONTENT="Bob Bruninga">
+   <META NAME="Description" CONTENT="APRS Meteor Scatter Experiment">
+   <META NAME="Keywords" CONTENT="Amateur Radio, APRS,Leonids,Persieds, Bruninga,Meteor Scatter,APRSdos">
+   <META NAME="Classification" CONTENT="Amateur Radio">
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#87CEFA" LINK="#0000EE" VLINK="#551A8B" 
+ALINK="#FF0000">
+
+<H1 ALIGN=CENTER><IMG SRC="logos/aprs.gif" HSPACE=5 HEIGHT=50 WIDTH=90 ALIGN=TEXTTOP>
+<B>APRS Meteor Scatter Email System</B>
+<IMG SRC="logos/aprs.gif" HSPACE=5 HEIGHT=50 WIDTH=90 ALIGN=TEXTTOP>
+
+<CENTER><B> 50.62 MHz and 147.585 MHz</B></CENTER></H1></B>
+<H4 ALIGN=CENTER>Bob Bruninga, <B>WB4APR</B>,
+US Naval Academy Satellite Lab, Annapolis, MD</H4>
+<!--
+this is how you do comments
+//-->
+
+<CENTER><P>
+<HR WIDTH="100%"></P></CENTER>
+<P>
+This MS Email page is a new direction from the 
+<A HREF="APRS-docs/METEOR.TXT"><B>original METEORS.TXT documentation</B></A>. The bursty
+mode of APRS works well with Meteor communications, but we dont see these long shots
+on 144.39 because the channel is busy most of the time and maskes these gems.  Also,
+6 meters works so much  better that that is where the greatest success is and because
+it is normally a quiet frequency.  But 2m works too if you go to a quiet freq.  Remember
+MS works all the time year round 24/7/365 with openings of a few seconds every few hours.
+Of course this improves dramatically during meteor showers, but the routine is also
+there.
+<P>
+
+<B>METEOR SHOWERS:</B>  Anytime, and especially during meteor showers tuen to these
+frequencies and if you have a beam point to distance population densities about 600 to 12000 miles away, set your beacon to a HIGH rate and capture any packets you receive.  Overnight
+is the best time for meteors.  Check your log and see what you got.
+<P>
+
+<B> 50.620 MHz 6 meter MS channel
+<BR> 147.585 MHz 2 meter MS channl </B>
+<P>
+
+Six meters is about 10 times better than 2 meters, but both can work.  Th original 
+APRSdos had a METERO mode built in that would send continuous packets for 15 seconds
+out of every minute on schedule with the four quadrants of the country, and then
+listen for the other three quadrants for the other 45 seconds.  But without that kind
+of systematic control, you can also just set your beacon rate to 10 seconds and
+see what happens.  Check  your log the next morning.
+
+<P>
+<B><FONT SIZE=+1>
+SPECIAL 6m PROJECT PROPOSAL:</B>  The operational scenario for this project is a minimal email
+capability out of an area for First Responders back to the internet.  . Maximum
+wait times on the order of a minute or less should be possible.
+. This capability would be available immediately before phone lines, internet, 
+satellite, and other wireless infrastructure
+are re-established.  An example would be mobile units enroute and arriving in
+the Katrina disaster area.  This Meteor Scatter basic communications link
+would give them this low data rate, but reliable channel.</B>
+<P>
+</FONT>
+The self plotting of APRS packets and global connectivity of
+the APRS-Internet System (APRS-IS) makes it ideal 
+for an Emergency Meteor Scatter Email System. . 
+Using 100 Watt 6 Meter radios and standard AX.25 packet, it should be possible
+to send outgoing APRS short text-message Emails and position/status reports
+ reliably. . There are several key factors making this possible.
+<P>
+
+<LI> Meteor Scatter is long term reliable for a few packets per minute average throughput
+<LI> Meteor Scatter ranges provide good coverage between 500 to 1000 miles
+<LI> 6 Meters is an ideal HAM band for Meteor Scatter
+<LI> Meteors are continuous, but generally 3 times better at 8AM than PM, and 4 times better in July than Feb.
+<LI> Surplus 
+     <A HREF="meteors/radio-set.JPG"><B> 100 watt 6m radios</B></A> are readily available 
+     and innexpensive 
+     <A HREF="meteors/6mRadios-all.JPG"><B>See stack of 100 of them</B></A>
+<LI> APRS Internet connected Gateways are found everywhere all over the USA
+<LI> Adding a 6m receiver at many IGates would immediately provide the Email-Receive capability
+<LI> MS paths are very spot specific, so multiple receivers greatly increases receipt probabilities
+<LI> The Automatic Email delivery system (WU2Z) is built-in to the APRS system and reliable
+</B>
+
+<P>
+The map below only shows the receiver gain plots from 5 possible IGates, but it
+is easy to visualize how dozens of IGates with their own coverage areas could
+blanket the USA with Meteor Scatter Receive sites. . I only used five to keep
+the map from being too cluttered.  Hopefully we would enlist dozens of 6m
+monitoring IGates. . It is this large distribution of receive sites that
+multiply the usually low probabilities of Meteor Scatter communication up
+into the useful range of a few packets per miunte. . This is an IDEAL APRS
+project beacuse the entire infrastructure exists already.
+<P>
+<IMG SRC="meteors/USAmap6m.JPG">
+<P>
+<B>ANTENNAS:</B> . Although the meteor scatter path is long term reliable,
+the signals are weak when they do occur, so high gain antennas are desireable.
+. Fortunately, a high gain antenna (in one fixed direction) can be errected
+as easily as stringing a long wire antenna. . Some EZNEC models are shown
+below.  The first plots are for a 200' piece of wire over perfect ground.
+. It is missleading because the AZ plot is showing the Main beam but it is up
+at 18 degrees which is not very good for MS.  The gain lobe is really a cone
+around the wire.
+<P>
+
+<IMG SRC="meteors/longwire1AZ.GIF">
+<IMG SRC="meteors/longwire1EL.GIF">
+<P>
+The next plots, the length is reduced to a more realistic 120 foot long wire 
+and a <B> real</B> ground which absorbs energy.  Also, in the next model, the
+backward wave is canceled with the
+terminating resistor.  This resistor does not impact forward gain, but
+eliminates standing waves and the backward lobe making the tuning much easier.
+. This plot is also a lower elevation slice and so the two lobes of the
+cone are more visible.  
+<P>
+<IMG SRC="meteors/longwire2AZ.GIF">
+<IMG SRC="meteors/longwire2EL.GIF">
+
+<P>
+The
+wire is fed 1/4 wave from one end with a series 1/4 wave section of two
+ 70 Ohm line lines
+to match the 400 ohm impedance of the long wire.  One quarter wave from
+the far end, a 400 ohm resistor suitable for half the TX power is located
+to absorb energy in the unused direction making this a unidirectional wire.
+For stations in the middle of the country, the resistor is not needed
+since a bidirectional antenna would be desirable.  But without the resistor,
+there are standing waves, and tuning is more critical.
+<P>
+<IMG SRC="meteors/longwireModel.GIF">  
+<IMG SRC="meteors/Matching.GIF">  
+<P>
+The map below shows why the use of a long wire antenna gain will work well for
+Meteor Scatter because we do not need gain exactly along the line between two
+stations, we just need their gain patterns to be illuminating the same
+part of the sky no matter where it is. . In this plot, the two major lobes
+show very clearly because this is taken at a 5 degree elevation slice.
+<P>
+<IMG SRC="meteors/USAmapFromMD.JPG">
+<P>
+<B>Radios:</B> . Mike Chisena, KB2ZEV of the AMRAD club has found a source of 110 
+Watt radios and is painstakingly converting each one to 6 meters for possible use in this
+projct.  Here is a photo of a complete radio set (and the stack it came from):
+<P>
+<IMG SRC="meteors/radio-set.JPG">  <IMG SRC="meteors/6mRadios-all.JPG">
+<BR>
+<A HREF="meteors/radio-inside-top.JPG"><B>Inside top view</B></A>, 
+<A HREF="meteors/Control-Head.JPG"><B>Control Head</B></A>, 
+<A HREF="meteors/radio-inside-all.JPG"><B>Inside bottom view</B></A>, 
+<A HREF="meteors/radio-PA.JPG"><B>Inside PA view</B></A>, and another 
+<A HREF="meteors/Radio-inside.JPG"><B>inside top view</B></A>
+<P>
+
+The map below shows the successful reported packets during the 1995 persieds
+meteor shower. . Although meteor showers show improved performance, the plot
+below is for 2 meters, and the results on 6 meters is usually an order of
+magnitude more sucessful.  This balances out well with routine meteor activity
+which is active 24/7/365. . By transmitting the outgoing email repeatedly over
+10 minutes or so, the successful reception by an IGate somewhere is virtually
+guaranteed.
+<P>
+<IMG SRC="meteors/MSresults95.GIF">
+<P>
+
+If you want more proof that Meteor Scatter works for APRS and to see easy
+ways to monitor for packets, please see the original
+<A HREF="meteorsB4.html"><B>original APRS meteor Scatter documentation</B></A>, 
+and the original APRS <A HREF="APRS-docs/METEOR.TXT">METEOR.TXT</A> file for details.
+There was also a write-up about the first <A HREF="APRS-docs/LEONIDS.TXT">LEONIDS.TXT</A>.
+
+<P>
+
+<B>DEVELOPMENT PLAN:</B>  . Here is a possible course of action to develop
+this meteor scatter communications network.
+<LI> First we need to add as many TNC and 6m receivers to IGates as we can muster up.
+<LI> These will work as is with existing IGate software for getting Emails out.  . Done!
+<LI> We need some special IGate code to be able to transmit back messages to MS back to the area.
+<LI> This code will receive APRS-IS messages, and then schedule each IGate to
+     continuously transmit the message for 5 minutes or so.
+<LI> We need to determine the optimum sheduling algorithm.  
+<LI> The original APRSdos was the typical 15 sec TX and 45 sec REC based on the
+     quadrant of the country.
+
+<P>
+<B>EMAIL PROTOCOL:</B> . The protocol for sending email via APRS is well established
+and operational. . This was developed by the Sproul Brothers and runs on a 
+computer at Rutgers University that monitors the global APRS internet channel
+and pulls out any messages addressed to EMAIL.  It wraps them in a standard
+internet mail protocol and injects them into the normal Email system.  The format
+is simply:
+<P>
+<B><i>
+WB4APR>APRSxx::EMAIL____:XXXXXX@YYYYYY.ZZZZ text goes here, any length (max one line)...
+</B></i>
+<P>
+This is a standard APRS message format, except the destination field simply 
+contains the word EMAIL padded to 9 spaces and the first word of the message
+body is an email address. . This format works well.  A packet transmitted anywhere
+in the world in this format on any APRS channel including the satellite channel
+ will result in an email to the intended XXXXX@YYYY.ZZZ recepient.  See the
+<A HREF="sset.html"><B>Satellite Emergency Email System</B></A>.
+<P>
+<B>IMPROVED MS PROTOTOL:</B> . Since brevity is paramount in MS packets, the
+above format can be improved slightly for better efficiency.  The following
+ideas are proposed to improve Email efficiency.  Lets assume a 64 byte
+text message.  The original format then takes 25 bytes of overhead and
+18 bytes of Eaddress for an efficiency of 60%.
+<LI> Change APRSxx to APMAIL and eliminate the nine EMAIL____ bytes. (a 9% improvement to 65%)
+<LI> Change APRSxx to APARRL or APJUNO or APASAT to partly eliminate 
+     some addressing bytes (25% improvement to 75%)
+<P>
+
+This format signals the Email engine to capture these unique 
+APARRL, APJUNO, APASAT formatted APRS messages as EMAILS, 
+and to also then preload any of the most commmonly used ham radio
+Email addresses or aliases.  In this case, the first word of the text message
+now only contains the unique part of the email address and not the common
+part of it. . Here is an example:
+<P>
+<B><i>
+WB4APR>APARRL::W3XY text:goes here, any length (max one line)...
+</B></i>
+<P>
+Notice that the two colons (:) still bracket the first 9 bytes of the APRS
+message format to keep it compatible with the rest of the APRS message system
+and all existing client software and radio firmware.  . But now this
+special MS Email engine converts the special APARRL
+to W3XY@ARRL.NET and the rest of the format is the message
+text (ignoring the required colon in the 10th byte position). .
+With this improvement, all redundant bytes are eliminated and the only overhead
+is 4 bytes or so plus the sender and receivers calls.
+
+<P>
+Other specialized keyword APXXXX's could be designated as needed. . That's
+pretty efficient. . The total length of this packet at 1200 baud is just 0.63
+seconds, which is quite practical for 6m Meteor scatter.
+<P>
+
+<B>RETURN MESSAGING:</B> . The above formats are standard APRS message formats
+supported by the existing APRS system, and IGate infrastructure. . It full fills 
+the original objective to get an emeregency Email out of a disaster area as
+long as the transmitting station transmits the packet repeatedly for X minutes
+to get a high probabiliy of receipt by any one of the dozens of country wide
+APRS receiving IGates...  But this part of the system has no mechanism for
+getting a response back into the affected area.  . That response system will
+take specialized software.
+<P>
+
+To get a message back into the affected area, the IGates must have new firmware
+to be able to capture an APRS message from the APRS-Internet system and to then
+schedule it for transmission back via MS. . Here is my proposal for that process.
+<P>
+<LI> New speical MS IGate sofware
+<LI> All MS IGates capture the message and schedule it for trasnsmission
+<LI> Each IGate transmits using the usual 15 second window for its area
+<LI> The four USA quadrants NE, SE, SW, NW transmit at the 00, 15, 30 and 45 seconds of each minute
+<LI> IGates are configured to be aware of other IGates in their general quadrant.
+<LI> For multiple IGates in the same general area, they too will stagger/share the TX window
+<LI> This process is repeated for say 15 minutes to give a 95% probability of delivery.
+<P>
+Further, if there is no MS traffic pending, these IGates will still periodically
+key up with a PILOT packet say once every hour for X minutes as a test packet.  This
+IGate will monitor the APRS-IS for its own successes, and use this average value
+to determine the amount of time to transmit traffic to get the 97% average 
+success rate or so...  This data will also be a way of performance monitoring of
+the entire APRS Meteor Scatter system!  
+<P>
+
+<B>PERFORMANCE MONITORING:</B> . Imagine the data we can learn using this
+self test feature of the APRS MS system.  With this system running 24/7, we
+will learn very quickly the value of this system and have dynamic proof of
+its probabiliites. . This can be fun!
+
+<P>
+WB4APR, Bob
+
+<CENTER><P>
+<HR WIDTH = "100%"></P></CENTER>
+
+Return to the <A HREF="index.html">APRS HOMEPAGE</A> 
+
+<HR WIDTH="100%"><FONT SIZE=-2>The Naval Academy is a registered user of
+APRS and WinAPRS. The purpose of this web page is to show several applications
+currently in use at this site and should not be considered as an advertisement
+or an endorsement of any commercial product.</FONT></P></CENTER>
+</CAPTION>
+
+</TABLE></CENTER>
+
+</BODY>
+</HTML>

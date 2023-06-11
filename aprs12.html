@@ -1,0 +1,205 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+   <TITLE>APRS SPEC 1.2</TITLE>
+   <META NAME="Author" CONTENT="Bob Bruninga">
+   <META NAME="Description" CONTENT="APRS Homepage">
+   <META NAME="Keywords" CONTENT="APRS SPEC, APRS1.1 erratta,Bruninga,radio, position, w3ado, wb4apr, GPS, APRS, Satellites, USNA">
+   <META NAME="Classification" CONTENT="Science">
+</HEAD>
+<BODY TEXT="#FF0000" BGCOLOR="#87CEFA" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000"> 
+
+<H1 ALIGN=CENTER><IMG SRC="logos/satellite.gif" HSPACE=30 HEIGHT=32 WIDTH=32 ALIGN=TEXTTOP>
+<B>APRS SPEC Addendum 1.2 Proposals</B><IMG SRC="logos/satellite.gif" HSPACE=30 HEIGHT=32 WIDTH=32 ALIGN=TEXTTOP></H1>
+<CENTER>
+<IMG SRC="logos/aprs.gif" HEIGHT=112 WIDTH=200>
+</CENTER>
+<!-- begin comments and the next line ends them
+//-->
+<FONT COLOR="#000000"><FONT SIZE=3>
+<P>
+
+<HR SIZE=5 WIDTH="100%"></P>
+<P>
+<B>APRS 1.2 SPEC ADDENDUM PROPOSALS:</B> The APRS protocol was well defined by the 1996 time frame 
+in the original <A HREF="APRS-docs/PROTOCOL.TXT">APRSdos docs</B></A>.  
+But it was then formalized in the <A HREF="doc/APRS101.PDF"><B>APRS1.01</B></A>
+publication in 2000.  The first
+<A HREF="aprs11.html"><B>APRS 1.1 ADDENDUM </B></A> 
+was completed and approved in July 2004. . This APRS1.2 addendum contains all the spec updates since then. .
+For a comparison of what has been implemented in what clients, please see the
+<A HREF="http://wetnet.net/~we7u/aprs_capabilities.html">Capabilities Chart</B></A>. 
+But first we will list as a reminder all of those items that have already been 
+included in <B>1.1:</B>
+<P>
+<B>Already in APRS1.1:</B>
+<LI> A baseline of APRS usage as defined through July 2004.
+<LI> Up-to-date SYMBOL tables, symbol attributes, and criteria for Just-mobiles and Just-WX
+<LI> Up-to-date TO-CALLS, Version ID's and Experimental Formats
+<LI> DIGI standards for Overlay Characters, Default Paths, the use of NOID and HID and SSID's
+<LI> Notes on DATUMs, map Range Scales, and PHG display, and packet time stamps
+<LI> Message details on the Reply-ACK Algorithm, and Polygon and Line OBJECTS
+<LI> notes on OBJECTS including punctuation, ownership, killing and equality with stations
+<LI> Formats no longer recommended: Compressed-Objects, ITEM Format, Raw Weather Formats,
+<LI> A link to the WXSVR Protocols and some small details on the APRS-Internet system
+<P>
+<B>New-N Paradigm:</B> . There were also some recommendations for the good of the APRS 
+national channel with 
+respect to Digipeater ID rates, HF freqs and TNC offsets, Voice-Alert, and Recommended
+ DIGI paths and settings. . These improvements were noted collectively as the
+<A HREF="fix14439.html"><B>New-N Paradigm</B></A> and were adopted in the USA beginning 
+in about 2004 and in Europe on 20 Nov 2008.  The New-N Paradigm has made dramatic improvements
+throughout the APRS network. 
+
+<P>
+
+
+<B> SPEC 1.2 ISSUES:</B> This web page documents the ideas that have been proposed 
+for further discussion and eventual addoption as APRS SPEC Addendum 1.2:
+<P>
+
+<B>SPEC ADDITIONS:</B>
+<LI> <B> Proposal (28 Apr 2020):</B> Allowing 000-999 in addition to the original 000-255 telemetry fields in the
+five channel T#sss,111,222,333,444,555... format.
+<LI> <B>Extension of top speeds above Mach 1.</B> For any speed S above 670 kts, display speed as S*112 - 74370 Knots.  IE Space Station encoded as 799 decodes to 15,118 kts <B>(This is a correction from earlier S*135-9000)</B>.
+<LI> <A HREF="aprs12/RR-bits.txt"><B>Use of the RR-bits</B></A> for the 
+     <A HREF="aprs12/precedence-bit.txt"><B>Precedence-bit</B></A> and the
+     <A HREF="aprs12/operator-bit.txt"><B>Operator-bit</B></A>.(Dec 2012)
+<LI> <A HREF="aprs12/preemptive-digipeating.txt"><B>Preemptive Digipeating</B></A> for gateways and more efficient events or travels (Dec 2012)
+<LI> <B>PHG in Mic-E format</B>.  The Mic-E text field can contain any normal Position comment field too.  Such as PHG. (important for Mic-E hardware digipeaters).
+<LI> <B>Original Mic-E Telemetry Format is depricated.</B> Overtaken by 
+<A HREF="aprs12/mic-e-types.txt"><B>MFR TYPE codes.</B></A> A new Telemetry format has
+been developed <A HREF="http://he.fi/doc/aprs-base91-comment-telemetry.txt"><B>See spec</B></A>
+.
+<LI> <A HREF="aprs12/datum.txt"><B>High precision !DAO! & datum option</B></A>
+     with precision to 1 ft with included datum.
+<LI><A HREF="info/freqspec.txt"><B>Adding Frequency to packets</B></A> Lets you find someone in the Freq domain!
+<LI><A HREF="aprstt.html"><B>APRS Touchtone formats</B></A> for using DTMF radios for simple APRS functions
+<P>
+
+<B>MESSAGE PROPOSALS:</B>
+<UL>
+<LI> <B>New <A HREF="aprs12/msg-obj.txt">OBJECT-in-MSG</B></A> format.  For any radio to send an object at present location.
+<LI> <B>New <A HREF="aprs12/utf-8.txt">UTF-8 text encoding and decoding</B></A> where possible.
+<LI> <B>New <A HREF="aprs-messaging.html">Universal Ham Radio Text-Messaging Initiative</B></A>
+<LI> <B>New <A HREF="aprs12/Igate-path-report.txt">Igate=>RF path report</B></A> packet to show how an IGate sent a packet on RF
+<LI> <B>New <A HREF="aprs12/item-in-msg.txt">ITEM-in-MSG</B></A> format:  </B><i>:USER.....:)OBJNAME!DDMM.mmN/DDDMM.mmW$comments....</i>
+<LI> <B>New FREQ-in-MSG format:  </B><i>:USER.....:FFF.FFFMHz Tnnn QSY?...</i> is a request to QSY
+<LI> <B>New FREQ-in-MSG format:  </B><i>:USER.....:FFF.FFFMHz Tnnn QSY!...</i> is a command to QSY
+<LI> <A HREF="txt/messages.txt"><B>APRS Message Entry</B></A> techniques.
+
+</UL>
+<P>
+
+<B>OPERATING IMPROVEMENTS:</B>
+<UL>
+
+<LI> <A HREF="localinfo.html"><B>Local Info Initiative</B></A> for pushing local freq, club, net an dmtg info to mobiles.
+<LI> <A HREF="fix14439.html"><B> New-N Paradigm </B></A> Encouraging implementation everywhere!
+<LI> <A HREF="txt/stewardship.txt"><B>Network Stewardship</B></A>   
+     Protecting the National APRS Channel and good operating practices.
+<LI> <A HREF="newN/ProportionalPathing.txt"><B>Proportional Pathing</B></A> for mobiles - higher rate direct, lower rate via 1 and 2 hops
+<LI> <A HREF="afrs.html"><B>Voice Frequency Format</B></A> for including operating frequency in APRS. 
+     <A HREF="info/freqspec.txt"><B>see spec</B></A>.
+<LI> <A HREF="aloha.html"><B>ALOHA Circle</B></A> range should be calculated and displayed on all user maps at all times
+<LI> <A HREF="aprs12/operator-bit.txt"><B>Operator Present BIT:</B></A> Indicates live human presence at a station within last 10 minutes
+<LI> <A HREF="aprs12/precedence-bit.txt"><B>Precedence Bit:</B></A> (replaces the
+     <A HREF="aprs12/priority-bit.txt"><B>Priority-Bit</B></A> to avoid confusion with Mic-E PRIORITY indication). 
+     Smart-digis can use Precedence to handl traffic during overloads. 
+</UL>
+<P>
+<B>SYMBOLS & OBJECTS:</B>  Although Symbols are maintained under the APRS11 addendum, here are the 
+links to those pages. 
+<UL>
+<LI> <A HREF="symbols.html"><B>Symbols page</B></A> - Best starting place for symbols
+<LI> <A HREF="symbols/APRSvicinity2.GIF"><B>VICINITY plots</B></A> - how to handle new packets W/O position data.
+     <A HREF="APRS-docs/VICINITY.TXT"><B>Vicininty text file</B></A>.
+<LI> <A HREF="symbols/symbols-overlays.txt"><B>April 2007 SYMBOL Set</B></A> Expansion Proposal. .  
+     <A HREF="symbols/symbols-new.txt"><B>New Overlay tables</B></A>.
+<LI> <A HREF="info/object-perm.txt"><B>Permanent Objects</B></A>
+</UL>
+<B>UPDATES:</B>
+<UL>
+<LI> <A HREF="aprs12/mic-e-types.txt"><B>Mic-E TYPE Codes</B></A> for different capabilities. 
+     See a set of <A HREF="aprs12/mic-e-examples.txt"><B>Mic-E Examples!</B></A>.
+<LI><A HREF="http://core.aprs.net/"><B>APRS-IS Core </B></A>
+    and <A HREF="http://www.aprs2.net/"><B> Tier-2</B></A> servers web pages
+    (an APRS-IS spec still does not exist).
+</UL>
+<P>
+<B>WEATHER:</B>
+<UL>
+<LI> <A HREF="aprs12/weather-new.txt"><B>New Weather fields</B></A> Radiation, Volts and Flooding
+<LI> <A HREF="aprs12/watergage.txt"><B>Water Gauge</B></A> symbol and report formats.
+</UL>
+
+<B>NEW IDEAS:</B>
+<UL>
+<LI> <A HREF="aprs12/IS-to-RF-b.txt"><B>IS-to-RF Gating (rev-b)</B></A> of local IS mobiles to local RF.
+     (<A HREF="aprs12/IS-to-RF-a.txt"><B>obsolete rev-a</B></A>).
+
+<LI> <A HREF="info/microwave-exp-proj.txt"><B>Microwave Experiment Antenna Pointing</B></A> using APRS
+<LI> <A HREF="aprs12/barcode.txt"><B> Bar-Code Formats </B> </A> for APRS
+<LI> <A HREF="http://www.aprs.org/USNAremoteHF.html"><B> SkyCommand </B> </A>additions to APRS
+<LI> <A HREF="aprs12/EmergencyCode.txt"><B> Emergency Codes</B></A> for non-Mic-E systems
+<LI> Displaying a Circle or other attribute around any IGate station that sends an IGATE Status packet. (independent of symbol)
+<LI> New <A HREF="aprs12/cached.txt"><B> Digipeater Object Caching </B></A> concept. (optional)
+<LI> <A HREF="http://www.aprs.org/D7points.html"><B>Manual Table Position reporting with the TH-D7</B></A> (without a GPS).(Optional)
+<LI> <A HREF="dfing.html"><B> Omni-DF-ing</B></A> techniques needing no DF equipment or antenna.
+<LI> <A HREF="aprs12/probes.txt"><B>Probes (PHGR)</B></A> concept addition to <B>PHG</B> for realtime
+     measuring of Network Reliability.
+<LI> <A HREF="mm/tampaMM.gif"><B>MileMarks</B></A> for interstate reporting.   
+     <A HREF="mm/milemark.txt"><B>Description</B></A>, 
+     <A HREF="mm/MMcode.txt"><B>Basic code</B></A>, and 
+     <A HREF="mm/mm-data.txt"><B>mm-data.dat</B></A> file.
+<LI> <A HREF="digis/smartdigis.txt"><B>SMART DIGI concepts</B></A>. 
+<LI> <A HREF="aprs12/navitraDX.txt"><B>Japanese APRS:</B></A>
+     APRS JGates for linking the Japanese NAVITRA system with APRS .
+<LI> <A HREF="avrs.html"><B>ECHOlink & IRLP </B></A> node status on APRS
+<LI>The EYEBALL ICON if it has a RNGXXX descriptor will cause everyone's
+map (if the feature is enabled) to CENTER and ZOOM to range RNGxxxx
+on first receipt.
+<P>
+
+
+<B>APRS SPEC 1.3 proposals:</B>
+<P>
+<LI><A HREF="specfuture.html"><B>New APRS Areas </B></A> 
+evolving in HAM radio that involve APRS.
+<P>
+<B>WORK IN PROGRESS:</B>
+<P>
+Some additional notes were received from reviewers that have not yet
+been fully incorporated into either 1.1, 1.2 or 1.3 addendums.  These
+are listed as submitted:
+<P>
+<LI> Formula for sizing is not specified in spec. 
+<LI> Colors of circles are not specified. 
+<LI> DFSxxxx has slash after it? Not specified in spec. 
+<LI> DFSxxxx/ has speed/course after it? Not that way in the spec. 
+<LI> Where the spec describes objects/items, it doesn't allow for /BRG/NRQ. 
+Refer to page 97.  In other places where it talks about 
+/BRG/NRQ it specifically shows them as a possible option in the format. 
+<LI>The spec shows that DFS and /BRG/NRQ can exist in the same packets, 
+which is most likely wrong. The spec should be revised. 
+<LI> In the spec it shows that you can have DFS or Course/Speed, but not both 
+at the same time. In your example packets (from DOSaprs) you have both, with 
+DFS coming first. Which one is correct? One or the other should be revised so 
+that they agree. 
+<LI> For a zero (0) signal level, avoid the divide-by-zero error by 
+changing the 0 level signal to 0.8.   This is not in spec or on Bob's web pages. 
+<P>
+<B>OMNI-DF:</B> To see what the OMNI-DF screen (based inversly on PHG)looks like,
+ see: <A HREF="dfing.html"><B>Bob's DFing WEB page</B></A> 
+<P>
+<HR SIZE=5 WIDTH="100%">
+
+<A HREF="sitemap.html">Back To the APRS site-map</A></TD>
+<BR>
+<A HREF="aprs.html">Back To the MAIN APRS page</A></TD>
+
+<HR SIZE=5 WIDTH="100%">
+
+</BODY>
+</HTML>

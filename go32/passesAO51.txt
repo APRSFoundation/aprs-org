@@ -1,0 +1,74 @@
+Mobile Satellite operation via ECHO, AO-51             1 Aug 2008  
+-----------------------------------------------------------------
+
+The pass times of ECHO repeat every 5 days.  Just cut the table 
+below for your time zone.  Tape it to your dashboard and you can 
+see pass times for your mobile every day for the next few months 
+within about 5 minutes.
+
+To use it on any day, just look for a column near your date.
+Then move left or right the number of days to your day.  The best
+morning and best evening passes are shown.  There is a lower pass
+100 minutes earlier and 100 minutes later than the best passes
+shown.
+
+EASTERN Daylight Time
+01Aug 07Aug 13Aug 19Aug 25Aug
+----- ----- ----- ----- ----- 
+0800  0855  0815  0740  0835  
+0935              0920
+
+1910  2010  1930  1850  1950  
+                  2030  
+
+
+CENTRAL Daylight Time
+01Aug 07Aug 13Aug 19Aug 25Aug
+----- ----- ----- ----- ----- 
+0840  0800  0855  0820  0740  
+      0935              0915    
+
+1950  1910  2010  1930  1850
+      2050              2030    
+
+
+MOUNTAIN Daylight Time
+01Aug 07Aug 13Aug 19Aug 25Aug
+----  ----- ----- ----- ----- 
+0915  0840  0800  0855  0820   
+            0935          
+
+1850  1950  1910  2010  1930  
+2030        2050        
+
+
+PACIFIC Daylight Time
+01Aug 07Aug 13Aug 19Aug 25Aug
+----  ----- ----- ----- ----- 
+0815  0735  0840  0800  0720  
+      0915        0935  0855
+
+1930  1850  1950  1910  1830 
+      2030              2010    
+
+
+Details:  Morning passes will be a few minutes earlier in the North 
+and a few minutes or so later in the South.  Evening passes will be
+the reverse.  On the days when there are two passes, they are both 
+low, and you won't be able to work the one before or after.  On the 
+days with a single pass shown it is a very high pass and there will 
+be one before to the east and one after (100 minutes) to the west.
+
+Taking these in mind, consider your location in your time zone.
+If you are on the eastern edge, then the earlier pass will be
+better and the unprinted earlier pass will also be good.  To the
+west of your timezone, the later passes are better.  As the months
+progress, you can also shift earlier by 3 minutes per month for
+best accuracy.
+
+The tables above were generated at the center of their time zones
+120, 109, 94, and 78 degrees west and about 40 degrees latitude and
+for passes above 25 degrees or so.
+
+Bob, WB4APR
+

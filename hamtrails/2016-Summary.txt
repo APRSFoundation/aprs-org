@@ -1,0 +1,36 @@
+AT Golden Packet Event 16 July 2016
+------------------------------------
+
+9600 baud worked as well as 1200.  North Carolina to NY in 5 hops.
+ 
+Despite the hornet stings, blownout tire, abandoned vehicle, forgotten 
+date, blown radio, hot weather, and old Age, the Annual Appalachian 
+Trail Golden Packet Event was mostly a success and it was the first 
+time we switched to 9600 baud and found performance unaffected by the 
+data speed. Intermod and interference on mountain tops remains a 
+problem at some sites, but 9600 baud works! 
+ 
+There were some broken links that limited the longest link to be from 
+North Carolina to Masachusetts, with small links at the end, but the 
+focus this year was on the switch to 9600 baud. After the switch the 
+9600 baud data was connected from North Carolina to PA and NY to Vermont 
+with solid links. More detail will follow as reports are filed. Another 
+new data point came from Slide Hill where an alternate path from PA to 
+Connecticut was found to work as well as Sams Point. LOTS of details 
+will be filled in by folloup reports on the 
+http://aprs.org/at-golden-packet.html web page.
+
+A new  mountain in NY, Slide Mountain (the highest mountain in the
+Catskills) showed up and had great links to Greylock and MT Equinox 
+as well as south to Camelback and Sam's point.  There is excitement 
+that this one new hill might be able to replace to of the original 
+hops.  The down side, is that it is over a mile hike from the nearest
+parking.  
+
+Again, 9600 baud has little advantage to normal APRS  single packet 
+operation and mobile operation, but this test was focused on testing 
+the links for a potential level-4 network which can perform quite well
+at 9600 baud as it amortizes packet overhead in what is typically 
+longer packets on data transfers..
+ 
+Bob, Wb4APR

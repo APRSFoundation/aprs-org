@@ -1,0 +1,88 @@
+APRS SCORE REPORTING FOR KLONDIKE DERBY                    26 Jan 08
+--------------------------------------------------------------------
+Had another great Scout Event using APRS D7's for troop reporting.
+
+
+For this year's Klondike Derby (Four Rivers District Maryland) there
+were 17 event stations and 50 scout troops.  We were able to field 
+over half of the stations with D7's for score data entry(10).  In an 
+afterthought, we could have done at least 3 more for a total of 13 
+with data entry if we had thought to use D700's in some cars.
+
+Using the D7's substantially reduced voice traffic and transcription 
+errors, and repeats, while providing error free data recording at 
+the HQ tent.  See
+
+http://aprs.org/aprsevent.html
+
+This is APRS at its best!  Not only did the APRS data entry stations 
+not have to busy up the 146.43 voice net, but we operated on 445.925 
+with our data to avoid any QRM to the 2m voice traffic -AND- we 
+could also chat on the same UHF channel for data coordination.
+
+Further, every D7 operator could be tracked on the main APRS map 
+back at HQ as operators moved around the event -BUT- without the 
+encumberance of any GPS's, wires, or fussy cables.  We prepared a 
+LAT/LON grid on the event map, and every location in the entire 
+square mile venue could be entered by just dialing in the last 2 
+hundredths digit of LAT or LONG.  These were "scouts" and dads by 
+the way, who should know how to look at a map and estimated their 
+position.
+
+To make that even easier, we prepared the four XX/YY digits for 
+each of the 17 event stations in advance, so that if an operator 
+changed locations, he only had to adjust those 4 digits to update 
+his position.
+
+RESULTS:  It worked great!  Net control could leisurely look at 
+the incoming scores on the D700 control panel mounted to his 
+clipboard, and pass them to the score keepers.  The contrast 
+with Voice reporting is that each voice report, interrupts the 
+netcon's chain of thought and the voice net everywhere, and demands 
+immediate attention, while with the data messages, they arrive in 
+the background, and can be viewed by Netcon at HIS convenience.
+
+Even the newly trained D7 HT operators said it was great (after 
+they got the hang of it).  Of the 10 D7 operators, only 4 had 
+ever used a D7 before.  Training was 5 minutes on the spot when 
+they were handed a D7 and a gouge sheet.
+
+LESSONS LEARNED:
+
+1) Don't plan on the NETCON with the D700 on his clipboard at HQ 
+trying to use it also as his voice rig... Duh... everytime he 
+might decide to read some messages, a voice call might come in, 
+and the PTT bumps him off the message screen.
+
+2) Don't abbreviate Cub Scout and Boy Scout station as CS# and 
+BS#.  They sound the same on the air.  Call them BS# and WS# 
+(for Weblos).
+
+3) Don't assume the battery on your 10 year old D7 is any good.  
+Yours truely showed up with 5 overnight-charged D7's, but two of 
+them were dead in the first 15 minutes.
+
+4) The few other ops that had D7's also had D700's in their cars.  
+We should have realized that the D700's could just as easily been 
+used for data entry at those stations, thus freeing up their D7's 
+for use elsewhere.  Score reporting is only a one-time event every 
+45 minutes.  Easy enough to walk over to the car and enter the data 
+on the Mic Keys.
+
+5) The D7 is ideal for this application.  Operating dual band, it 
+was able to do both the 146.43 voice net and the 445 APRS data net 
+at the same time.  But to save power, either band could be toggled 
+off when not needed with the DUAL key.  Or both could be on for 
+voice but the TNC toggled off between entries.
+
+6) Owners of D700's and D7's need to learn how to send, receive and 
+edit messages.  These radios (and APRS) are much more than just 
+vehicle tracking!
+
+On the web page above, we had even prepared an APRSdos map so that 
+detailed tracking of multiple objects was possible.
+
+APRS, its not just vehicle tracking!
+
+Bob, WB4APR
+

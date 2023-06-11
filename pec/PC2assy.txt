@@ -1,0 +1,91 @@
+FLIGHT INTERFACE BOARD ASSEMBLY PROCEDURES                   21 April 2003
+--------------------------------------------------------------------------
+                                                               PC2assy.txt
+MUST DO:
+  Final flight ROMS need XM levels set to nominal levels 280/40?
+  Retest audio levels on PSK-31 receiver
+  Figure out TXA Keying decay anomoly
+  Test packet while in PSK mode
+  Test packet while in RPTR mode
+  Prior to flight DTR must be jumpered LOW
+
+BUGS:  Connected LED only comes on if stream is |1A [***FIXED in ROM]
+       But stream must be |2A for solar data        [***FIXED in ROM]
+       CHECK must default to 48 (480 secs, 8 mins)  [***FIXED in ROM]
+       AX25L2V2 OFF  This eliminates the CHECK packets and forces a timeout.
+                                                    [***FIXED in ROM]
+       UHF and VHF transmitters take different levels by a factor of 3.
+           must add attenuator for UHF Transmitters.
+
+
+Initial Part Assemblies:
+  Piggyback 1n4148 diodes on 150K R13 and R17
+  Install 11v zener at D27
+  Install 10v Zener above C62
+
+Board FLIGHT mods and work-arounds:
+  96 hr timer: Cut trace under CD4040 chip & jump to pin 11 of second chip
+  On TNCs, C45 needs to be one direction for TNC-A and opposite for TNC-B
+  Fix: Cut two lands under RY2 and add jumper
+  Fix Audio: Cut trace below RY21 and insert 10k 0.1W resistor 
+  Fix AC coupling of DTMF diodes: D11,14,15,18 on wrong side of Caps.
+     * Remove D18.  Reinstall anode and jumper cathode across R1A to via
+     * Cut D14 cathode top trace and jumper to small via near "iD" and "A"
+     * Cut D15 cathode top trace and jumper to small via near TBtxa
+     * Cut D11 cathode bottom trace.  Jumper to big hole near pin 13
+  Install: Insert R17/D17 backwards from silkscreen
+  Install: INsert the two LED's backwards
+  Install: Insert Fuse F13 "high" so it can be twisted out of the way of C12
+  Install: Install 100 ohm vice 24K in the vicinity of the 555 timer
+  Install: Install 220k vs 47k in the vicinity of the 555 timer
+  Install: Install C22 backwards
+  New: Install R49 and Q41 to add 48 hour alert on TNC temps
+  New: Install R6X(20k) and R6Y(12k) to correct audio levels and bias
+  Fix: Cut bottom horizontal trace to right of R65 and add C4 on top
+  Fix: Add 5v zener Dz5 from right end of C4 to Ground
+  New GSE ARM: Add diodes D1X,D1Y to pin 2 of TX/RX connector (TxcT)
+  New GSE DTR: Install DTR header to pin 20 of both TNC DB-25's
+  New: Install Rpm, Cpm and Dpm flight mods to mute PSK during packet
+  New: Install jumper from RXa and RXb to 9600 bd TNC inputs (pin 2's)
+          Also cut around land near R2C on bottom to be sure it is clear
+  Install: Install DTMF programming jumper near Multiplexer
+  Fix: Cut both port XCD lines to isolate the two TNCs.  Install diodes to
+          drive from SOLAREX (C4) and from TNC PTT's.
+  New: Current Sense for RX heaters. Cut isolate Q25 emitter. Run to F16
+
+  Resistors R3J,3L,3K,3M are not used
+
+Insert all Relays
+  * Insert all Telemetry 1% resistors as shown on Telemetry Schematic
+
+  * Insert all 1n4148 diodes (40)
+
+  * Insert all 5% 0.1 Watt miniature resistors.  Part numbers RCR05C?102JS
+    1.0 k  - R29
+    3.3 k  - R69
+     12 k  - Two small RS-232 pull-up resistors near DB-25
+     47 k  - R1G,1H,1J,1K  all near the DTMF's
+
+  * Insert all 5% 1/2 Watt Resistors
+      8    - R2C
+    100    - R64
+    560    - R1A, R1B
+    750    - R65
+    1.0 k  - R26,R3E
+    1.8 k  - R1.8K by 555 timer
+    4.7 k  - R16,R2D,2E,2F,2H,60, RLED
+     12 k  - R3,03,5,05,6,06,7,8,9,14,1C,1E,21,23,25,28,2B,Rc1,Rc2
+     22 k  - R11,R12
+     62 k  - R15,20,22,24,27
+    150 k  - R13,R17 (see above), R2G,2J,2K,2L,2N,2P,2Q,2R
+
+Capacitors:
+     47uF  - Four white Dot caps near Relays (C1D, C1E, C1F, C1G)
+
+Trims:
+    Jumper the 555 220k with 3.3k and test for 22 minutes.  
+               if so, then parallel with 2.2M for final.
+    Trim exact XMTR frequencies with R61,62,63  0.1W resistors
+
+Receiver board RXB needs trims on the squelch. Try 43k/56K
+         it also needs volume set at 12k/82k

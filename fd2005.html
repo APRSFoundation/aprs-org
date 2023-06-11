@@ -1,0 +1,134 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+   <TITLE>APRS Field Day Proposed Rules 2005</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.0Gold (X11; I; SunOS 5.5.1 sun4m) [Netscape]">
+   <META NAME="Author" CONTENT="Bob Bruninga">
+   <META NAME="Description" CONTENT="APRS Homepage">
+   <META NAME="Keywords" CONTENT="APRS, Field Day, Bruninga,radio, position, w3ado, wb4apr, GPS, APRS, Satellites, USNA">
+   <META NAME="Classification" CONTENT="Science">
+</HEAD>
+<!--<BASE HREF="http://web.usna.navy.mil/~bruninga/">-->
+<BODY TEXT="#FF0000" BGCOLOR="#87CEFA" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000"> 
+
+<H1 ALIGN=CENTER><IMG SRC="http://web.usna.navy.mil/~bruninga/satellite.gif" HSPACE=30 HEIGHT=32 WIDTH=32 ALIGN=TEXTTOP>
+<B>New Rules for APRS Field Day 2005</B><IMG SRC="http://web.usna.navy.mil/~bruninga/satellite.gif" HSPACE=30 HEIGHT=32 WIDTH=32 ALIGN=TEXTTOP></H1>
+<CENTER>
+<IMG SRC="http://web.usna.navy.mil/~bruninga/aprs.gif" HEIGHT=112 WIDTH=200>
+</CENTER>
+<!-- begin comments and the next line ends them
+//-->
+<FONT COLOR="#000000"><FONT SIZE=3>
+<P>
+<HR SIZE=5 WIDTH="100%">
+<B>POSSIBLE BALLOON for APRS on Field Day 2005!</B>  Stay tuned.  We may get a high altitude
+balloon launhced over the central USA for proper temporary digipeating on Field Day on a
+temporary frequency supporting the Field Day path of TEMPn-N!
+In fact, the more balloons and aircraft the better!
+<P>
+<B>The ARRL Field Day rules make no practical sense and are open for all kinds of
+confusing interpretations.  This page is intended to give one interpretation
+(right or wrong) so that at least we are all marching to the same tune for FD-2005.</B>
+<P>
+<B>APRS is a tactical-real-time-local digital communications network designed for rapid
+deployment in the field using come-as-you-are equipment for a LARGE number of
+simultaneous stations.  APRS is PERFECT for Field Day with HUMAN operators at all
+stations.  This is not at all what most APRS users are familiar with on a 24/7/365 basis. 
+<P>
+To meet the spirit of Field Day, the APRS System on that Day must include one
+temporary and portable digi and be independent of the existing global APRS infrastructure on
+144.39.  Here are the 2005 ARRL rules governing Field Day:</B>
+<P>
+<IMG SRC="http://web.usna.navy.mil/~bruninga/aprs/FDrules.gif">
+<P>
+<B>THE BIG PLAN:</B>
+<P>
+<B>SET PATH = <i>TEMP7-7 </i></B> or <B><i>DIGI1,TEMP7-7</i></B> or <B>DIGI1,DIGI2,DIGI3</B> 
+<P>
+<i>Our APRS objective for 2005 will be to SET UP during Field Day, an AD-HOC
+digital communications system for communications with as many Temporary APRS FD stations 
+as we can.  This means QSY'ing everyone's home and mobile and portable stations
+to an independent general purpose packet channel (145.01?), setting up at least one
+portable digi, and operating using the path of <B><i>TEMP7-7</i></B> or combinations
+of explicit DIGI callsigns if you have to use a hop through a non-TEMPn-N
+digi).
+ The universal Field Day PATH will be TEMPn-N and of course EXPLICIT DIGI CALLS.  On
+Field Day, set all stations, both home, digis, mobile and portable to digipeat and
+make sure they have a 10 minute beacon going 2 hops showing whether they support
+TEMPn-N or not (THIS IIS VERY IMPORTANT.  USERS MUST KNOW WHAT A DIGI CAN DO).
+If they have no UITRACE support, then set the alias to RELAY, but be sure to say
+in the BTEXT (RELAY ONLY).
+If your TNC digi does have UITRACE, then set UITRACE to  support TEMPn-N routing
+with the command UITRACE TEMP,28.  This
+UITRACE parameter of TEMP lets users use the path of TEMPn-N for maximum range.</i>
+The "28" just prevents endless loops by requiring at least 28 seconds between
+packets. 
+<P>
+<B>USING A D700 FOR A PORTABLE DIGI:</B> The D700 mobile makes an excellent digi,
+but to activate the UITRACE parameter for FIELD DAY, you must use a PC via the 
+serial port and set "UITRACE TEMP".  You don't add the "28" because that is already
+included as the default in the UICHECK 28 parameter.  The radio will remember these
+settings.  Also set HID off to prevent wasted packets.  But since
+we can use TEMPn-N in the future, there won't be any need to change this later.  
+Thus, after Field Day, it won't hurt to keep this TEMPn-N all the rest of the
+year!)
+
+<P>
+<B>PLANNING and ALERTING All Operators:</B>
+<BR>To meet these objectives, the following steps are recommended in your area to alert all
+APRS operators to this event and the procedures and let us see what everyone is planning.  
+<P>
+<LI> Set an OBJECT on normal APRS now until Field Day showing your station using the SSID of -FD and "camping" symbol
+<LI> Also give it the comment text saying something like <i>"FD on 145.01 using TEMPn-N"</i>
+<LI> These OBEJCTS will help everyone else in their pre-FD planning.  See them on the map or on
+     <A HREF="http://www.findu.com/cgi-bin/symbol.cgi?icon=/;&amp;limit=200"><B>FINDU.COM</B></A>
+<P>
+Next as the big day approaches, someone in your area should put out some BULLETINS alerting
+all those APRS users that are not aware of this event.  These bulletins inform everyone of
+the special Field Day frequency of 145.01 and the use of TEMPn-N temporary digis.
+<P>
+<LI> . . BLN1: For FD setup temp/portable DIGI on 145.01 with UITRACE set to TEMP,20.
+<LI> . . BLN2: For simple TNC's just set MYALIAS to RELAY
+<LI> . . BLN3: For APRS-FD: http://www.ew.usna.edu/~bruninga/aprs/fd2005.html
+<LI> . . BLN4: QSY ur home and mobile APRS FD to 145.01 and use TEMPn-N
+<P>
+<B>OPERATIONS: </B>
+<BR>With the above preparations and bulletins in place, then, here are the operating
+suggestions for Field Day itself.
+<P>
+<LI> Set your Home and mobile and Portable/temp digi stations to operate on 145.01
+<LI> If your Home or Portable/Digi TNC' have good coverage and are capable of UITRACE then:
+<BR> . . Set UITRACE to support TEMPn-N.  Also set UIDIGI aliases to RELAY
+<BR> . . Set your digi BText to beacon every 10 minutes: !DDMM.hhNFDDDMM.hhW# FD digi using TEMPn-N [or RELAY only]
+<BR> . . Set the unproto path to APRSFD VIA TEMP3-3 and set beacon rate to once every 10 minutes.
+<LI> Park your D700 on a hill with UITRACE set to support TEMPn-N
+<LI> Your Home station if it is being used for Field Day also makes an excellent UITRACE DIGI
+<LI> OPERATE using the path of VIA TEMPn-N (Keep N small for local QSOs) OR use explicit DIGI hops by callsign
+<LI> Run all 24 hours.  Stations come and go.  Get them when they appear.  Let your station support them.
+<P>
+For your reference, here are the APRSSIG emails that lead to this attempted plan for FD 2004
+but which was abandoned the day before FD, because the existing FD rules for 2004 were
+hopelessly contradicting and useless:
+<P>
+<BR><A HREF="http://web.usna.navy.mil/~bruninga/aprs/fdemail1.txt"><B>APRS for Field Day </B> using UITRACE FDn-N routing</A>
+<BR><A HREF="http://web.usna.navy.mil/~bruninga/aprs/fdemail2.txt"><B>APRS for Field Day </B> using Home Stations</A>
+<BR><A HREF="http://web.usna.navy.mil/~bruninga/aprs/fdemail3.txt"><B>APRS for Field Day </B> sharing digipeaters</A>
+<BR><A HREF="http://web.usna.navy.mil/~bruninga/aprs/fdemail4.txt"><B>APRS for Field Day </B> using 145.01 for QRM free operations</A>
+<BR><A HREF="http://web.usna.navy.mil/~bruninga/aprs/FDemail5.txt"><B>APRS FD 2004 reverts to 144.39</B> due to ambiguous rules</A>
+
+<P>
+<B>Begin now to get the rules changed for 2006! </B>.
+
+<P><FONT SIZE=+1>You are visitor number: <IMG SRC="http://web.usna.navy.mil/cgi-bin/Bruninga/fd2004.cgi">
+<HR SIZE=5 WIDTH="100%">
+
+<P><FONT SIZE=-2>The Naval Academy is a registered user of APRS
+and WinAPRS. The purpose of this web page is to show several applications
+currently in use at this site and should not be considered as an advertisement
+or an endorsement of any commercial product.</FONT>
+
+</BODY>
+</HTML>

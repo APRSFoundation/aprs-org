@@ -1,0 +1,41 @@
+****************************************************************
+*         The Top APRS IGATE/SATGates for July 2019            *
+****************************************************************
+
+These are the Satellite APRS Packets provided in July 2019 per 
+Callsign + SSID provided by KE6BLR. We hope to fill this list in
+to indicate how/why these stations are so productive such as
+LATITUDE, antenna, radio, TNC, iGate software, altitude, 
+location, etc. 
+
+
+1459 YF1ZQA-10
+1071 KG4PID-14
+1030 N6DAN-2
+1013 EA8BQD
+1008 N6DAN-1
+957 VK5ATN-3
+778 VK6HAM-2
+662 VK2TV-4
+587 PY5LF-10
+507 NH6Y-2
+442 W0ARP-15
+363 KK4NAM
+352 KC5ILO-12
+325 DM0AI-10
+322 W7KKE-13
+310 ON7EQ-10
+305 OK2KOJ-14
+289 OE4ENU-2
+262 K4KDR-15
+246 CU2ZG-1
+231 N6BA-10
+223 HS3LSE-11
+207 W0ARP-1
+201 SV3CIX-1
+183 T2SPAIN2
+
+73
+
+Robert MacHale
+. KE6BLR Ham Radio License

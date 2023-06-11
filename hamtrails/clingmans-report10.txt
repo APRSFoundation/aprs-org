@@ -1,0 +1,33 @@
+2010 AT Event Clingman's Dome REPORT                        26 Jul 10
+---------------------------------------------------------------------
+
+William McKeehan, KI4HDU reports:
+
+Things at Clingman's Dome went well today.
+
+As planned, AJ4HV & K4RTW pulled a camper to the Clingman's Dome 
+parking lot out of which we operated all day. The shelter was great 
+all day, but especially welcomed when the rain came in this afternoon.
+
+KF4QVI and KG4DSP provided the radios (two TM-D700s), a computer 
+(which we used to monitor most of the day) and antenna masts.
+
+I delivered two three-element beam antennas and a splitter provided 
+by W4VAB.
+
+The setup was smooth and we were operational early (well before 
+11 AM). After the setup, we monitored 445.925 and 144.340 for voice 
+communications. We also monitored the Mt Mitchell repeater (145.190). 
+Around noon, we heard signs of life from our neighbors. Both of which 
+had some unexpected difficulties to overcome.
+
+Once their stations were up and running, we were seeing and diging 
+packets from both Springer Mountain and Roan Mountain.
+
+Roan mountain reported problems communicating with any stations to 
+their North. At 3PM, we gave up and shutdown.
+
+--
+William McKeehan
+KI4HDU
+http://mckeehan.homeip.net

@@ -1,0 +1,47 @@
+POWER SYSTEM SCHEMATIC:  Panels are terrestrial teflon coated silicon cells.
+There are 4 panels per face connected in pairs to an "A" system and "B" 
+system for redundancy.  Each string produces about 18 volts open circuit
+and will be connected to our 12 cell, 14.4 volt NICAD battery for self
+regulation.  Charge will taper to under 50 ma if the batteries are fully 
+charged.  Dual battery systems provide dual power busses and the Transmitters
+are directly connected to the busses.  The following schematic shows one of
+the dual redundant systems:
+
+   *--->|-----------------------------------*    
+   |       *--->|---------------------------*  
+   |       |       *--->|-------------------*   
+   |       |       |       *--->|-----------*
+   |       |       |       |       *--->|---*-----*-------------*----> Bus 
+|-----| |-----| |-----| |-----| |-----|           |          ___|___
+|SOLAR| |SOLAR| |SOLAR| |SOLAR| |SOLAR|           =          | 3w  |
+|PANEL| |PANEL| |PANEL| |PANEL| |PANEL|          ---Bat 2    |XMTR |
+| top | |  2  | |  3  | |  4  | |  5  |           = 12 cells |     |
+|-----| |-----| |-----| |-----| |-----|          ---         |-----|
+   |       |       |       |       |              |            |
+   *I1     *I2     *I3     |       |              |            |
+   \       \       \       |       |              |            |
+   / 1     / 1     / 1     |       |              |            |
+   \       \       \       |       |              |            |
+   |       |       |       |       |              |            |
+   *-------*-------*-------*-------*--------------*------------*----> GND
+
+Solar array currents I1-I3 are measured as voltage drops across .1 ohm 
+resistors and converted to 0-5 volt telemetry voltage range with a
+transistor amplifier.  There are fuses to isolate the transmitters and/or
+batteries in case of failure and all systems are dual redundant.
+  
+Temperature and voltage telemetry are taken using voltage dividers: 
+
+    * Vbatt  (0-10v)         *-------------------* 5v
+    |                        | 
+    *--/\/\/---*-------------|-------------------> TVbat  (0-5v)
+        10k    |             |
+               *--/\/\/--*   *--/\/\/--*---------> TVtemp (0-5v)
+                   10k   |       R1    |
+                        ---      THRM  *--/\/\/--*
+                        ///                 R2   |
+                                                ---
+                                                ///
+
+TEMPERATURE:  There are temp sensors on every face (6), in the two TNC systems
+(2) and in the batteries (2) and one at the center of the spacecraft structure.

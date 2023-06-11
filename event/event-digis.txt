@@ -1,0 +1,95 @@
+MANAGING A DIGI FOR LOCAL EVENTS                        19 April 2007
+---------------------------------------------------------------------
+                                                               WB4APR
+
+Although the New-N Paradigm vastly improved the APRS network by
+eliminating most of the duplicate packets and QRM, there are still
+things that a Digipeater SYSOP can manage temporarily in real time 
+to make his local digi more responsive to local events.
+
+WIDE1-1,WIDE2-1:  The first thing to do even before any situation
+arises, is to educate all local operators that the most effective
+universal APRS path for mobiles is WIDE1-1,WIDE2-1.  Not only does
+this give them the best general path, it also greatly simplifies the
+job of the network manager since eveyrone is using a consistent path
+and so he can make temporary network adjustments in case of any given
+situation.
+
+IGATES:  If the APRS-Internet link is important to your event, it is
+very important that an IGate and backup be located as close as 
+possible to the event.  Preferably able to hear every possible 
+participant via the first hop from their locations.
+
+LOCAL NETWORK MANAGEMENT:  Given that most APRS packets on the air
+are using the traceable WIDE1-1,WIDE2-1 or WIDE2-2 paths, this allows
+the network to separatly manage what it does with FIRST Hop packets
+as distinguished from 2nd or more hop packets.  Since most packets at
+an event are local direct, or one-hop packets, this distinction can
+be used to great advantage to limit QRM and thereby improve network
+reliability in the local area.
+
+LOCAL EVENT DIGIS IN BIG SITUATIONS:  The following example is
+derived from the recommendations for the annual convergence of many
+thousands of hams and hundreds of APRS mobiles on Dayton Ohio.  
+This usually results in more than 150 APRS mobiles in range of
+one or two or more digis.  If these digis are operated normally,
+the overall network will be exceptionally unreliable for any
+individual since his packets will have unbelievable competition
+to be heard.  What follows are the receommendations for such a large
+event.
+
+OBJECTIVE:  LIMIT THE AREA TO ONLY LOCAL APRS TRAFFIC:  This 
+simple technique will eliminate all ROUTINE out of area packets 
+from  entering the local situation.  Here are the steps:
+
+- Record the existing DIGI settings so you can restore afterwards
+- Set UITRACE TEMP,30  (is normally UITRACE WIDE,30)
+- set UIDIGI ON WIDE1-1,WIDE2-2,WIDE3-3 (normally WIDE4-4,WIDE5-5,etc)
+- Post an APRS Bulletin announcing the area as a 1 hop area.
+
+These changes above will cause all conventional mobile and fixed
+station paths in the area to all be digipeated ONCE and then no 
+further propogaton occurs.  This assures that all mobiles and local
+stations can be seen, yet does not require the participants to make 
+any changes to their mobiles.
+
+FOR OLD KPC-3's VERSION 8.2:  The above steps apply to a modern KPC-3+ 
+v8.3 or later. The steps for an 8.2 ROM are diferent:
+
+- Record the existing DIGI settings so you can restore afterwards
+- Set UIFLOOD TEMP,30  (is normally UIFLOOD WIDE,30)
+- Set UIDIGI ON WIDE1-1,WIDE2-2,WIDE3-3 (normally is WIDE1-1,WIDE4-4,etc)
+- Post an APRS Bulletin announcing the area as a 1 hop area.
+
+The difference is that version 8.2's already have WIDE1-1 in the 
+UIDIGI list, but still need WIDE2-2 and WIDE3-3 added.  And in the
+version 8.2 WIDEN-N is supported in the UIFLOOD paramter instead
+of the UITRACE parameter.
+
+Notice that the way we turn of WIDEn-N is to simply replace it 
+with TEMPn-N.  THis way, the digi can still be used if needed as
+a TEMPn-N digi.
+
+EXPLAINATION:  The way this works, is that the UIDIGI ALIAS list
+takes precedence.  So if the packet has WIDE2-2, and the digi has
+that in its UIDIGI list, then it will digipeat, but do callsign
+substitution.  So the WIDE2-2 becomes just DIGICALL* and that is
+as far as the packet goes.  I included WIDE3-3 in the above 
+lists incase some clueless individual arrives with his tracker
+set that way.  It does no harm, becuse he like everyone else will
+be limited to only one hop anyway.  If you dont expect to need 
+this, you can leave out the WIDE3-3 from the UIDIGI list.
+
+If most out-of-area QRM is coming in from only one direction
+from a nearby city, then the above techniques may only need to
+be applied to that one digi only.
+
+MESSAGES INTO THE AREA:  Since you also assured that you have 
+IGate's within one hop of the event digis, that assures that
+all APRS messages from anywhere in the world can still get in
+or out of the area.  And further any APRS person seeing the above
+Bulletin in the area can work around these limitations as needed
+by simply useing a directed path DIGI1,DIGI2 and get his packets
+digipeated 2 hops any direction he wants.
+
+Bob, Wb4APR

@@ -1,0 +1,25 @@
+Here is the actual data for the USA Map Plot:
+
+COLOR     NUMBER    USERS   PCT
+          OF CELLS  Per Deg USRS
+--------- --------  ------- ----
+BLACK                  0
+GRAY       1915        5     15%   
+BLUE        566        8      7%
+LIGHT BLU   550       13     11% = 33% in WIDE4-4 areas
+
+DRK CYAN    400       20     13%  
+DRK GRN     400       34     22%
+BRT GRN     125       45      9% = 44% in WIDE3-3 areas
+
+BRT CYAN     75       57      7%   
+YELLOW       60       72      7%
+WHITE        30       91      4%
+RED          22      114      4% = 22% in WIDE2-2 areas
+
+Although 77% of users are in lighter density areas where
+longer hop counts are possible, it is important to remember
+that they surround the cities on all sides and can still
+overload high density areas.
+
+de WB4APR, Bob

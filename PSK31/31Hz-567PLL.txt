@@ -1,0 +1,33 @@
+31.25 Hz tone detection with a 567 PLL tone decoder chip        18 Jan 2013
+----------------------------------------------------------------------------
+Updated 20 Jan to suggest faster detections.
+
+I had completely convinced myself that a 567 PLL tone decoder chip would NOT 
+work for detecting the amalgamation of random phase 31.25 Hz  energy for 
+detection of user presence in the passband because it was not coherent.  
+And this was confirmed by responses from others.  
+
+But then looking closer at KA3WCA’s test and Peter’s comments also indicated 
+that in phase would occur now and then, so with a long enough HANG TIME, on
+the 567 chip used as a narrow band tone detector, then it could work well 
+enough by detecting even occasional coherent phase.
+
+Tune it to 31.25 Hz +/- .25 and +/- worst case component drift and let 
+detections re-trigger a 555 drop-out timer and Im done.  UPDATE:  Turns out
+that setting the bandwidth that narrow drastically delays detections and since
+KA3WCA's on0air tests show fades as rapid as one second, it is probably better
+to widen the bandwidth and speed up the detections.  Besides, we want to 
+detect anything in the passsband, so no need to be so narrow on the 31 Hz
+component.
+
+RADIATION:  WB4LNM says there are radiation problems with 567 and 555’s in 
+space.  But PCSAT going on its 13th year in space is 100% dependent on the 
+proper 1 minute retriggering of the critical 555 fail safe timer which powers
+the TNC's and there have been no known problems in over 12 years in its 800km 
+orbit during that time.
+  
+I’ll lead-shield the top and bottom of the 567 and 555 chips.
+
+Objections?
+
+Bob, WB4APR

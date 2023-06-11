@@ -1,0 +1,79 @@
+<HTML>
+<HEAD>
+   <TITLE>The ultimate APRS Digipeater</TITLE>
+      <META NAME="Author" CONTENT="Bob Bruninga">
+   <META NAME="Description" CONTENT="APRS Homepage">
+   <META NAME="Keywords" CONTENT="Bruninga,radio, position, w3ado, wb4apr, GPS, APRS, Satellites, USNA">
+   <META NAME="Classification" CONTENT="Science">
+   <META http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="google-site-verification" content="8DuiHL_9-k_dpMJ-1vDBFplfqZLWIcuqpvGw5NOyDrY" />
+
+</HEAD>
+
+<BODY TEXT="#FF0000" BGCOLOR="#87CEFA" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000"> 
+
+<H2><CENTER>
+<font SIZE="+2" COLOR="#0000AF"><img SRC="logos/tnc.gif" 
+    ALIGN="middle" width="100" height="30"></font>
+    <font color="#0000AF" size="5"></font>
+
+<B>The ultimate APRS Digipeater</B>
+
+<font SIZE="+2" COLOR="#0000AF"><img SRC="logos/tnc.gif" 
+    ALIGN="middle" width="100" height="30"></font>
+    <font color="#0000AF" size="5"></font>
+<CENTER>
+
+<IMG SRC="logos/aprs.gif" HEIGHT=112 WIDTH=200>
+</H2></CENTER>
+<BR><FONT SIZE=3>
+Bob Bruninga, WB4APR
+<BR>wb4apr att amsat.org
+</FONT>
+</CENTER>
+<!-- begin comments and the next line ends them
+//-->
+<FONT COLOR="#000000" SIZE=3>
+<P>
+<!-- begin comments
+//-->
+
+<P>
+
+<B>What is the Ultimate APRS digipeater?</B> (based on recent discussions on the APRSSIG)...
+<P>
+The diagram below are some ideas on the ultimate APRS digipeater.  All information is 
+available to the mobile operator on 144.39 (or other national freq).  But all local 
+user inputs are moved over to an uncongested input-only frequency such as 
+144.99 (which is +600 from 144.39 (if available)).  Also 9600 baud users TX on UHF and are
+also digipeated on 144.39 at 1200 baud.  But exclusive 9600 baud future traffic can stays 
+on UHF for future applications if desired.
+<P>
+<IMG SRC="aprs12/digi-ultimate.GIF">
+<P>
+However, such a digipeater does not yet exist.  In the meantime, one can make a close
+approximation using a KPC-9612 or several TinyTrack or other digipeater boards.  
+But one has to cross connect the TX audios and PTT's
+and XCDs all to the same 144.39 transmitter.  And also the UHF 9600 baud users have to
+use the special "gateway" path of "TOVHF" inorder for their packets to be converted
+to 1200 baud so that everyone can see them.  Here is a drawing:
+<P>
+<IMG SRC="aprs12/digi-kpc9612.GIF">
+<P>
+Clearly we need a lot more discussion here.  But we do need to start thinking forward.
+<P>
+
+
+<P>
+<HR SIZE=5 WIDTH="100%">
+
+<TABLE BORDER=2 CELLSPACING=5 CELLPADDING=3 >
+<TR>
+<TD><BR>
+<A HREF="index.html">Back To APRS.ORG</A></TD>
+</TR>
+</TABLE>
+
+
+</BODY>
+</HTML>

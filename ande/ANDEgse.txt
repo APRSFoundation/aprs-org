@@ -1,0 +1,76 @@
+ANDE Ground Service Equipment and Integration Tests            31 Oct 02
+------------------------------------------------------------------------
+
+The following details the Ground Support Equipment for ANDE from the
+perspective of the Communications Payload:
+
+GSE TEST SET:
+
+    RF Tests:
+       Wattmeter          - 5 Watt slug
+       Signal Generator   - 145.8 MHz
+       Data Transceiver   - 0.1Watt  Kenwood TH-D7A
+       Modem              - Kantronics KPC-3+
+
+    Communications Tests:
+       Laptop             - Windows 98 or earlier.  All sofware will fit
+                            on a single 1.44 Floppy disk
+       Serial cable       - Connects Laptop to GSE port on ANDE
+       Break-out-Box      - For voltage tests
+       Digital Multimeter - For voltage tests and continuity tests
+
+    General support:
+       ANDE GSE Power Supply - 1 amp at 10-15 volts
+       Tool box
+       Carrying case   
+
+GSE Tests Prior to hemisphere mating:
+
+    COMMUNICATIONS SYSTEM:
+
+       Final tweak of TX/RX frequencies to within 100 Hz of spec
+             Decision is OK if within 1 KHz
+       Final veriication of RX sensitivity (Tune to spec)
+             Decision is OK if within 3 dB of spec
+       Final verification of TX power out. (Tune for peak)
+             Decision is OK if within 2 dB of spec
+       Final verification of TNC operation.
+             TNC must be fully operational and pass all tests
+             Final ROM checksum will be recorded
+
+    POWER SYSTEM:
+       
+       On each battery pack, verify all 14 strings for voltage
+          Replace if any strings per pack show OPEN fuses
+       On each string verify a 100 mA 1 second Load test
+          Replace if any string is more than 20% not normal
+       Verify continuity and function of SEP switches with test magnet
+          Replace if any contacts fail open or closed.
+
+GSE TESTS AFTER MATING:  (conducted via GSE port)
+
+    COMMUNICATIONS SYSTEM:
+
+       Confirm operation of TNC's A and B
+          Replace if inoperative
+       Confirm operation of TX/RX's A and B
+          Replace if inoperative
+       Hang ANDE in RF range (or clear of all conductors) and do final
+          transmitter load match tuning via access hole
+
+    BATTERY SYSTEM:
+
+       Voltage checks on all four battery test points.
+          Replace if any packs have no output (bad fuses)
+       Perform 700 mA 1 sec load test on each battery tray
+          Replace if +/- 20% abnormal
+
+    SEPARATION SWITCHES
+
+       Verify continuity and function of SEP switches.
+          Replace if any contacts are failed open or closed.
+
+
+Bob Bruninga
+US Naval Academy
+Satellite Lab        http://www.ew.usna.edu/~bruninga/ande/ANDEgse.txt

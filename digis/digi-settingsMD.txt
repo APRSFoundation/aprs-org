@@ -1,0 +1,118 @@
+Settings for MD / VA KPC-3+ Version 8.3 DIGIPEATERs         10 April 2004
+-------------------------------------------------------------------------
+
+To implement the New n-N Paradigm in Maryland and Northern Virginia here
+are the objectives:
+
+1) Support WIDEn-N universal path with tracing
+2) Encourage WIDE2-2 or SS2-2 for general use in the States (MD and VA)
+3) Discourage RELAY,WIDE and WIDE,WIDE and WIDE,WIDE,WIDE paths
+
+Notice that RELAY, WIDE TRACE and TRACEn-N are now obsolete and are no 
+longer supported and RELAY is being replaced by "WIDE1-1".
+
+These settings apply to all version 8.3 KPC-3+ digipeaters and some of
+the later versions of 8.2 after xxxx 7265.  The 9.0 digis will have to 
+be upgraded due to problems in the DUPE elimination algorithm.
+
+FIRST:  RESET the TNC to factory defaults to get rid of any hacks and tweaks
+that you may have developed over the years.  And install your MYCALL and
+a geographic MYALIAS that is well known but best describes the coverage.
+
+SECOND:  Set the proper settings for APRS that are not the TNC defaults.  
+Set these two commands as below:
+
+  HID OFF     -  These packets are of no value to APRS but lots of QRM
+  CD SOFTWARE -  For the best collision avoidance method
+
+THIRD:  Eliminate the settings that are detrimental to the network.
+Although some of these may have seemed to be "beneficial" when you look 
+at them in the book, they are actually bad for an APRS network. UIDWAIT 
+should be OFF. (the default).  With it on, your digi is not 
+doing the fundamental APRS fratricide that is the primary mechanism for 
+suppressing multiple dupes.  All digis that hear the same packet are 
+supposed to DIGI it at the SAME time so that all those copies do not get 
+further digipeated back and forth between themselves.  (but outward 
+located digs will hear it without colision (and continue outward 
+propogation)
+
+FOURTH:  Set up the basic New n-N Paradigm:
+
+UIDIGI  WIDE3-3,WIDE4-4,WIDE5-5,WIDE6-6 <== in Central MD and N.VA
+UIDIGI  WIDE4-4,WIDE5-5,WIDE6-6,WIDE7-7 <== in rural MD and VA
+
+UIFLOOD MD,30,ID      <== for the State network (or VA,30,ID)
+UITRACE WIDE,30       <== so that WIDEn-N is now traceable
+
+FIFTH:  Set up the Digipeater's POSITION ID and Transmission rate:
+Improperly set BLTs and LTPaths can be generating as many as 160 
+packets per hour, per digi, a tremendous load on the net.  The recommended 
+way to still cover the same area with decent 10 minute local and 30 minute 
+surrounding copies is shown below and on:
+
+http://www.ew.usna.edu/~bruninga/aprs/digi-rates.txt
+
+BLT 1 EVERY 00:30:00 START 00:00:00 
+BLT 2 EVERY 00:30:00 START 00:10:00 
+BLT 3 EVERY 01:00:00 START 00:20:00 
+BLT 4 EVERY 01:00:00 START 00:50:00 
+LTP 1 APN383 
+LTP 2 APN383 
+LTP 3 APN383 VIA WIDE1-1
+LTP 4 APN383 VIA WIDE2-2 
+
+This results in a local ID once every 10 minutes, one hop every 30 mins 
+and 2 hops every hour.  (Remember that 2 hops from a digi hits all the 
+same stations and digis that a 3 hop path does from a home station.)
+
+SIXTH:  As noted above in the LTPaths, your UNPROTO should use the 
+TOCALL of APN383 where APN identifies it as digipeater firmware.   
+The "3" identifies it as a KPC-3 and the "83" identifies it as ROM 
+version 8.3 (or whatever)..  See the APRS list of TOCALL versions for 
+details of this naming convention.
+
+SEVENTH:  ADVERTISING LOCAL ASSETS:  Use your BTEXT to advertise any custom 
+local assets such as the best travelers Voice repeater in the area.
+Set your UNPROTO path to APN383 (direct) in most cases (no VIAs) since it 
+is used for your BText which should contain information only of *local* 
+value.  Be sure to include the frequency such as
+
+BText: ;APRS-RPTR*111111zDDMM.hhN/DDMM.hhW$147105p107 AARC CLub in Davidsonville
+BEACON EVERY 10  <== sets it up for LOCAL ONLY every 10 minutes
+UNPROTO APN383
+
+This is an object for the local voice repeater that welcomes APRS mobiles.
+Notice that it is only sent localy and DIRECT because of the UNPROTO
+path with no VIA's.  The date/time field is set to all 111111's which makes
+it a valid date and time, but also indicates it is fictitious and of no value.
+
+EIGHTH:  Setting your POSITION TEXT:  Your Position packet goes in 
+the LTPath statements.   Make your LTexts very descriptive of this 
+digi and its capabilities to the users, but they must all be identical
+to keep APRS logging software from seeing constant changes and logging 
+everyone of them all day long. 
+
+LT  1 !DDMM.hhNSDDDMM.hhW#PHGphgd/W2,MDn AARC Club Digi
+LT  2 !DDMM.hhNSDDDMM.hhW#PHGphgd/W2,MDn AARC Club Digi
+LT  3 !DDMM.hhNSDDDMM.hhW#PHGphgd/W2,MDn AARC Club Digi
+LT  4 !DDMM.hhNSDDDMM.hhW#PHGphgd/W2,MDn AARC Club Digi
+
+a) After the LAT/LONG# Always include the PHGXXXX  (See DIGIS.TXT)
+b) next, a list of capablities, such as W2,MDn,etc (or VA2)
+    W2 means WIDE2-2 is recommended. 
+c) The overlay character between the LAT/LONG should now be a "S"
+   showing it is a LIMITED WIDEn-N digipeater with SSn-N support.
+  (or a "P" if it is a modified PacComm one (see separate PacComm File).
+d) There is no need for altitude /A=001377 since this is all included
+   in a proper PHG statement.  If you insist, then put it at the end
+   so it doesnt take up space on the front panel of the kenwoods
+   (which only display the first 20 bytes)...
+
+CONCLUSION:
+
+That's all there is to it.  Please don't diddle with any other 
+parameters.  The defaults for those are the correct settings.  If you
+dink with them you can only make performance worse.
+
+de WB4APR, bob
+

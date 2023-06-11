@@ -1,0 +1,62 @@
+ANDE & RAFT respond,  FCAL heard.                2200z, 21 Dec, 2006
+--------------------------------------------------------------------
+                                                              WB4APR
+
+To date, we had RAFT with telemetry, but refusing to respond to
+logons, and ANDE stuck in the can.  FCAL was floating away with one 
+packet heard....
+
+During the 2200z pass over the Naval Academy, we decided to 
+concentrate on ANDE.  This involves sending 16 seconds of 1 second 
+packets to try to wake it up.  TO my surprise, RAFT relayed the 
+packet (it shouldn't have). 
+
+!T 22:02:00 !W3ADO-15>APRS,RAFT*,qAO,W3ADO:Ping...# 118 
+
+SO we scrambled to find our checkout plans from yesterday and
+logged onto RAFT and enabled the voice experiment.  It spoke!
+
+Then, apparently with all the noise on the channel, we also woke up 
+ANDE and got one telemetry packet from it.  Decoded, ANDE MAA
+reports:
+
+!T 22:02:55
+!ANDE-1>BEACON,qAO,W3ADO:T#003,041,135,137,148,146,10101110,000
+
+1) It had been awake for 3 minutes
+2) The +X, +Y, +Z and RETRO were at 25, 26, 28 and 29 deg C
+3) The B side battery temp was off-scale low 
+
+But we have seen this anomolous side B temperature before during
+testing and are not concerned since the temperature up there seems 
+to be a nice balmy day in space.  And we get correct side B temps 
+from the Side B system. (Have not yet tried side B).
+
+RAFT telemetry counter is about to roll over, having completed
+965 minutes of continuous operation since achieving power positive 
+status.  It will roll over to 000 in 25 minutes.
+
+!T 22:02:35 !RAFT>BEACON,SGATE,qAO,W3ADO:T#962,087,102,037,064,087,00000000,412
+!T 22:03:37 !RAFT>BEACON,SGATE,qAO,W3ADO:T#963,089,083,050,019,087,00000000,520
+!T 22:04:37 !RAFT>BEACON,SGATE,qAO,W3ADO:T#964,086,094,037,057,089,00000000,999
+!T 22:05:36 !RAFT>BEACON,SGATE,qAO,W3ADO:T#965,087,084,058,023,093,00000000,999
+
+The end values of 412, 520, and 999 are SEU counts from a wash
+of RAM in RAFT.  This was a just-for-grins piece of code that we
+do not necessarily believe.  We often saw 999's on the ground
+too.  So we will watch this as well.
+
+We have spent no time with the complexities of NMARS since all 4
+satellites are in view at the same time.  NMARS can wait until
+they separate enough so we can concentrate on one at a time.
+
+We are checking on why RAFT responded to a PING.  We had made a
+last minute flight rom change on NMARS so that it would respond
+to a PING from boot up, but maybe this change also got into the
+RAFT ROM as well.  Of course turning that feature on was one of
+our first steps, so it is good that it was on anyway.
+
+Bob Bruninga
+US Naval Academy Satellite Lab
+
+

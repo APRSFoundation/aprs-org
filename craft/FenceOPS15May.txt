@@ -1,0 +1,120 @@
+Posted 15 May 2007
+-------------------------------------------------------------
+
+We desperately need some AMSAT OSCAR class stations in the
+Central USA to complete the RAFT radar fence test ASAP. 
+
+Deorbit is in the next two weeks, much earlier than previous
+predictions, and so we will not get another comfortable evening
+pass window.  Prime passes now are occurring around 4 AM and
+moving earlier (sorry).  Before, we asked for Southern USA.  Now
+we realize that someone in most central states have command
+potential.  Anyone within about 1000 miles E/W of North Texas or
+600 miles north and south are ideal!
+
+Station requirements:
+1) OSCAR class tracking 2m beam for up/downlink 145.825
+2) Standard AX.25 1200 baud packet
+3) Simple HYPERTERM text commanding
+4) Familiarity with TNC's and TNC commanding
+5) Prepared to record 1 minute of audio heard on downlink
+
+Unfortunately I am going to Dayton this weekend, but we have to
+really be ready for this next week and get this test done.  None
+of the principals involved in this design can do it because we
+all live too far away from the 216.98 MHz RADAR fence
+transmitter in North Texas.
+
+See WEB:  http://www.ew.usna.edu/~bruninga/ande-raft-ops.html
+
+Thanks, WB4APR, Bob
+
+-----Original Message-----
+Sent: Tuesday, April 24, 2007 1:23 PM
+Subject: RE: [amsat-bb] RAFT Packet Operator assistance needed
+
+We only have 7 days left in this operating period and really do
+need a good OSCAR station in the Southern USA in a line from AZ
+to GA to conduct this test of RAFT flying through the 80
+megawatt radar transmitter beam originated in north Texas.
+
+There is only one viable pass per day per command station
+location in the early evening....  The trick is to command the
+satellite to turn on its downlink carrier and Radar receiver
+exactly 30 seconds prior to passing
+through the fence and then having an audio recorder running to
+"hear" (record) the tone when we pass through the radar beam.
+
+Commands are a simple CONNECT XXXX at the cmd: propt, then an
+exchange of passwords, and then sending a simple typed command
+at the right time.
+
+RAFT can he HEARD just fine on ALL FIVE passes leading up to
+this last pass per day, so you can test your RECEIVE capability
+on any pass, but can only command in the dark (due to
+overcharging on batteries makes uplink receier deaf)...
+
+If anyone can conduct this test please let us know.  Only one
+person per pass can attempt this, so we want the best gun at the
+stick.  Fully conversent at the TNC "cmd:" prompt and preerably
+with experimence with the KPC3+ remote-sysop command mode.
+
+Bob, WB4APR
+USNA Satelite Lab
+
+
+> ----- Original Message ----- 
+> Sent: Monday, April 23, 2007 12:32 PM
+> Subject: [amsat-bb] RAFT Packet Operator assistance needed
+> 
+> > We need AMSAT operator help with the RAFT satellite 
+> > Test.  We need somone with a 2m beam and familiarity 
+> > with packet that lives in the Southern USA from 
+> > Arizona to Georgia (AZ, NM, TX, OK, MS, ALA, GA).
+> >
+> > RAFT is past its mission life time half-way point, 
+> > and we have not been able to find anyone in the above 
+> > footprint to help us conduct the primary mission which 
+> > was for the satellite to detect its own passing through 
+> > the DOD's radar fence.  When it flies through the 
+> > North American Space-Object fan beam, we should hear 
+> > about 1 second tone that anyone can hear on the downlink.
+> >
+> > Due to its low orbit and small footprint, turning on 
+> > the Radar Transponder can only be done in the shared 
+> > footprint between the radar transmitter in North Texas 
+> > and the command station.  The ideal command station has
+> > these atributes:
+> >
+> > 1) Lives in AZ, NM, TX, OK, AK, LA, MS, AL, GA, W.FLA
+> > 2) A reasonable 2m beam for ops on 145.825
+> > 3) A packet TNC
+> > 4) Familiar with dumb-terminal TNC operations such as
+> >   A. Connections, Converse, UNPROTO, etc
+> >   B. Remote sysop logon to a Kantronics TNC
+> >
+> > The objective of these southern command stations is to
+> > logon, send the command to activate the RAFT Radar 
+> > receiver for 1 minute in anticipation of passing 
+> > through the fence.  Then hopefully recording any audio 
+> > heard on the downlink (145.825).  Of course, once the 
+> > radar receiver is on, everyone in the footprint should 
+> > be able to hear it.
+> >
+> > For info, see the ANDE-RAFT operations page:
+> > http://eng.usna.navy.mil/~bruninga/ande-raft-ops.html
+> >
+> > Several AMSAT hams built this tiny Radar receiver as a
+> > possible common device for all future HAMsats, and we 
+> > would like to get feedback on its performance.  But 
+> > they all live up North.  If you have a beam and 
+> > familiarity with TNC's please let us know.
+> >
+> > Bob, WB4APR.
+> > US Naval Academy Satellite Lab
+
+_______________________________________________
+Sent via AMSAT-BB@amsat.org. Opinions expressed are those of the author.
+Not an AMSAT-NA member? Join now to support the amateur satellite program!
+Subscription settings: http://amsat.org/mailman/listinfo/amsat-bb
+

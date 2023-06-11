@@ -1,0 +1,149 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+   <TITLE>APRS for OLPC</TITLE>
+   <META NAME="Author" CONTENT="Bob Bruninga">
+   <META NAME="Description" CONTENT="APRS Meteor Scatter Experiment">
+   <META NAME="Keywords" CONTENT="Amateur Radio, OLPC, XO, APRS,Leonids,Persieds, Bruninga,Meteor Scatter,APRSdos">
+   <META NAME="Classification" CONTENT="Amateur Radio">
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#87CEFA" LINK="#0000EE" VLINK="#551A8B" 
+ALINK="#FF0000">
+
+<H1 ALIGN=CENTER><IMG SRC="logos/aprs.gif" HSPACE=5 HEIGHT=50 WIDTH=90 ALIGN=TEXTTOP>
+<B>APRS Position & Messaging for OLPC</B>
+<IMG SRC="logos/aprs.gif" HSPACE=5 HEIGHT=50 WIDTH=90 ALIGN=TEXTTOP></H1>
+<H4 ALIGN=CENTER>Bob Bruninga, <B>WB4APR</B>,
+US Naval Academy Satellite Lab, Annapolis, MD</H4>
+<!--
+this is how you do comments
+//-->
+
+<CENTER><P>
+<HR WIDTH="100%"></P></CENTER>
+<IMG SRC="olpc/Drawing75c-X.JPG" height=300 width=200 align=right>
+<P>
+<B><A HREF="http://zielkeassociates.com/~jack/aprs-xo/"><B>APRSXO </B></A>
+ written by Jack Zielke, KG4GJY, is now available.</B>
+<P>
+
+<B>APRS Universal Messaging Initiative:</B> Putting a minimum APRS capability onto the
+OLPC XO laptop is just one part of the 
+<A HREF="aprs-messaging.html"><B>Universal Ham Radio Messaging Iinitiative</B></A>. .
+We want all wireless devices to be able to be used for <B>text-messaging</B> between
+ham radio operators by callsign-alone.  The XO is an excellent wireless PC for such
+an application whenever it is in range of a WI-FI network. . 
+<P>
+
+Here are Jack's instructions on how to 
+download and install APRSXO on your OLPC.  Probably better now that he has his own
+web page to go there for details.
+<P>
+<i>
+<LI> 1. start the Browse activity on your XO;
+<LI> 2. go to the <A HREF="http://zielkeassociates.com/~jack/aprs-xo/"><B>APRSXO web page</B></A>;
+<LI> 3. click on the latest APRSXO-N.xo bundle next to the word Download:
+<LI> 4. when it's finished, click OK on your XO.
+<LI> 5. press the Home key (fifth from the upper left) to see the taskbar on your XO.
+<LI> 6. scroll the XO taskbar to the right (by clicking on the arrow ) until you see the icon for the activity; click on it to start.
+<P>
+When the downloads finishes you should have a new icon on the tray bar. 
+It will be at or near the end. </i>  Run the activity and check into APRS from anywhere (WI-FI)
+<P>
+
+<FONT SIZE=+1> 
+<B>APRSXO Project:</B> . This web page was drafted early in 2008 to lay out the 
+design objectives of such a minimum APRS messaging client
+on such a device.   The project consists of these major elements:
+</FONT></B>
+<P>
+
+<LI> A web based APRS map page dedicated to the location of all XO's.
+<A HREF="http://www.findu.com/cgi-bin/symbol.cgi?icon=XA&amp;limit=200"><B>
+Click here for the FINDU version</B></A>
+
+<LI> An APRSXO application that sends a position report
+into APRS once every 10 minutes while the XO is active. <B>(Jacks APRSXO does this)</B>.
+
+<LI> The APRSXO application will also receive incoming APRS messages addressed to
+     this laptop. <B>(Jacks APRSXO does this)</B>.
+
+<LI> The APRSXO application will allow sending an APRS text message. 
+<B>(Jacks APRSXO does this)</B>.
+<P>
+
+The map below <i>could</i> be representative of such a web page. (it is a fake).
+<P>
+<IMG SRC="olpc/MSresults95.GIF">
+<P>
+
+But the
+<A HREF="http://www.findu.com/cgi-bin/symbol.cgi?icon=XA&amp;limit=200"><B>
+FINDU APRSXO web page</B></A> is real, because APRS has defined a special
+symbol for the <B>XO</B> so that FINDU can select them. 
+. In APRS, we suggest the XO laptop use an <B>"X"</B> overlayed 
+on the <B>A</B>lphabetic Box, which is specified
+in APRS as the <B>"XA"</B> symbol.
+<P> 
+</FONT></i>
+<P>
+<B>USER INTERFACE:</B> .
+The image below was a concept dialog-box for how the user would set up his
+XO client parameters.  Jack did a great job on implementing this in <B>APRSXO</B>.
+<P>
+<IMG SRC="olpc/APRS-XOsetup.GIF">
+<P>
+
+<B>APRS WIRELESS DEVICE IMPLEMENTATION:</B> .  The following items detail the 
+approach needed to design and implement something like APRSXO on any WIFI, Cell phone,
+Palm device or wireless laptop system.
+First all amateur radio XO's should the XO symbol so that they can
+     be displayed on APRS such as on the
+     <A HREF="http://www.findu.com/cgi-bin/symbol.cgi?icon=XA&amp;limit=200"><B>
+     FINDU System </B></A> .
+Second we need the <B>application</B> to send a formatted line in the
+APRS format and inject it into the APRS Internet System (APRS-IS).  The 
+above set-up parameters will be formatted as follows:
+<P>
+
+<LI><B><i>MYCALL>APOLPC:=DDMM.mmNXDDDMM.mmWA Name's Home XO. Text goes here...</i></B>
+<P>
+<LI><B><u>MYCALL</u>:</B> .  Where MYCALL is your amateur radio callsign.
+<P>
+<LI><B><u>DDMM.mmN DDDMM.mmW</u>:</B> This is the Latitude and Longitude in degrees 
+   and decimal minutes. . If zip code lookup is used, then the "mm" in Latitude
+and Longitude are replaced with two space characters to signal a one-mile ambiguity
+in the position.
+<P>
+
+<LI><B><u>MAP SYMBOL</u>:</B> The special symbol for OLPC consists of two bytes.  First
+the <B>"X"</B> between the lat/long and the <B>"A"</B> after the longitude. . We
+want all XO's to be forced to use the symbol for the XO. . If this application
+is run on any other PC, then the user is allowed to enter any of the
+other hundreds of APRS symbols as appropriate.
+<P>
+
+<LI><B><u>Name</u>:</B> . The name from the dialog set-up box is used with an apostrophy
+"'s " added. and combined with the word representing the kind of station from the 
+dialog box followed by a period.  This is just the default text if the user enters no
+other text.
+<P>
+<B><u>Text</u>:</B> . The user can enter any other free text if he likes to either
+replace the "Name's home XO." or to add onto the end of the free field.
+<P>
+
+<B>CONCLUSION:</B> . Using these kinds of simple <B> APRSXO </B> applications will be a
+great way for OLPC users and any other wireless device users to find each other 
+and for them to find local MESH's to join. . In fact, it is a great Application 
+for EVERY ham radio operator with an wireless device!.
+<P>
+WB4APR, Bob
+
+<CENTER><P>
+<HR WIDTH = "100%"></P></CENTER>
+
+</TABLE></CENTER>
+
+</BODY>
+</HTML>

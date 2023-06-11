@@ -1,0 +1,81 @@
+AT Golden Packet 2009 Quick Summary                    27 July 09
+-----------------------------------------------------------------
+                                                           WB4APR
+
+Here is my quick summary for everyone...  It will take me a while 
+to put it all together.  If you have better one-line wording for 
+this summary, lemme know.
+
+Katahdin     - no station
+Maine Relay  - not heard at Greylock? (switchover of KQ1L-6?)
+MtWashington - OK But isolated!
+NewHempshire - Radio crashed the night before... Poor guy...
+Greylock     - OK Heard maybe to MD mountains? (confirm?)
+Sams-pointNY - no station
+Camelback PA - OK Heard WV to Greylock, tho Glk vy rare
+G.D. Hill    - OK Heard WV to Greylock, tho Glk vy rare
+MD Mountains - OK Heard WV to Greylock, tho Glk vy rare
+WV Mountains - OK Heard WV to Greylock, tho Glk vy rare
+AppleOrchard - Not heard. Though 146.685 rptr heard 100%
+Comers Rock  - Pouring rain and did not get to top site
+Roan Mountn  - OK heard to Huntsville
+Clingmans    - OK.Heard Roan to Huntsville
+Springer Mn  - OK Heard Roan to Huntsville (no digi)
+Lookout Mtn  - OK Heard Roan to Huntsville direct to Clingmans
+Huntsville   - OK Heard Roan to Huntsville via Lookout
+ 
+Questions:  
+
+1) Did Mt Wash hear anything at all from anyone?
+2) How did the Echolink Conference go? (I was too late)
+
+Here are the FACTS I need from each site in summary form.
+Especially the readings on their LCD meter on the D700 of their
+neighbors.  We can correlate that exactly to signal strength.
+Here is my report.  Using this format we can quickly assess
+everything we need to know
+
+GDHILL:   D700 TX on Medium power packet and UHF:
+Antenna:  single dual band vertical (3 dBi and 4.5 dBi)
+Schedule: DIGI on Air on battery about 12:30?  
+          No PC power until 3 PM. Quit at 4PM.
+Echolink: net not joined because we were too late.
+
+RX SW to MD Mtns all 9 bars packet
+RX SW to MD Mtns all 9 bars on 445.925 voice
+RX NE to Cmlbck only 3 bars (but reliable)
+RX NE to CmlBck only 1 bar on 445.925 voice (needed HPwr)
+
+I was also using 445.925 for my own site simplex, as we spent 2
+hours lugging stuff and pulling 3200' of wire up and down the
+hill.  Probably drove my adjacent sites nuts...  Though with the
+lack of long-haul packet traffic, at least maybe it gave them
+some entertainment...
+
+Echolink?  I think this is an area where we can all learn a lot.
+This is a great system for long distance coordination, but I
+admit, I have never used it from the mobile either, and so we
+have a lot to learn.  I was unable to find a guru to write up a
+good plan for us so most of us were working in the dark.  But
+getting those ECHOLINK and IRLP Beacons into every digipeater so
+we can SEE the OPEN ones while we are mobile, makes it as simple
+as 123456 to call  home, and #to finish the QSO.  What could be
+a greater asset to the mobile operator!
+
+I have no info on the Echolink 11 to 12 test, since we had not
+even started climbing the mountain until after it was over.
+
+This was a great first year.  We will definitely plan for this
+next year along with trying to get other long haul trails
+interested.  At Field Day, we don't get no respect, never have
+in 20 years.  Im tired of that.  Lets make this a great annual
+event for VHF and Packet!
+
+I will make a more formal report, and Update ALL web pages with
+what you send me, but it will take a lot of time.  Also will get
+an article into QST.
+
+This Email LIST used on this particular message has more names
+added to it, so this is the one with everyone on it, I think.
+
+Bob, Wb4APR

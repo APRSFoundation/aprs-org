@@ -1,0 +1,310 @@
+KPC3 Version 8.2(early versions) Settings for WIDEn-N    14 Jun 2021
+--------------------------------------------------------------------
+
+Update 14 Jun 21 to add note about Problem(0) (long delayed packets)
+Update 19 Jul 14 to suggest using LOCATION names for DIGI calls
+Update 31 Aug 11 to add warnings about multiple 8.2's in an area
+Update 24 Jul 09 to add two LTexts for Echolink and IRLP local info
+Update  2 sep 08 to include KA-node set up for maintenance
+update 24 Mar 07 to include TXD 15 and audio level adjust
+Update 24 Jan 07 to clean up BText recommendation for local repeaters.
+
+Hit VER command to see what your TNC ROM version is.
+
+PROBLEM(0): There is a random problem with KPC3 digis that at some
+point hold up and then regurgitate LOTS of packets.  Here is a possible
+fix. Kantronics recommends shorting the RTS and CTS pins together 
+within my serial cable. (PINS 4/5 on DB25 and PINS 7/8 on DB9).
+Shorting the RTS and CTS together prevents the software from holding 
+the RTS pin low. If the RTS pin is at low voltage the KPC3+ will 
+start buffering and does not get caught back up.
+
+PROBLEM(1):  The 8.2 version digis do not mark a WIDEn-N or SSn-N 
+path as used up when they reach zero as they should.  This BREAKS all 
+WIDE1-1,WIDE2-1 mobile packets because after the 8.2 digi digipeats 
+the first field, then the second field will never get digipeated again.
+
+TEH FIX: is to put WIDE1-1 into a UIDIGI ALIAS so that it will get
+digipeated and callsign inserted AND will be marked as used, so that
+the second field, the following ...WIDED2-1 will get used.  This 
+allows this old version 8.2 digi to be used.  But there is a COST.
+
+THE COST:  But since this first hop did not actually use the true
+WIDEn-N algorithm with its powerful dupe suppression algorithm, then 
+this digi will not suppress additional copies of this packet that it 
+sees from other digis.  In fact, it will digipeat every other copy
+from all surrounding digis of their first hops too.  This is bad 
+enough for one 8.2 digi in an area, but is a nuclear incident in
+areas with lots of 8.2 digis.
+
+WHERE TO USE: So use this fix cautiously and only in aeras where 
+there are few digis and where not more than one digi can usually 
+hear a mobile.
+
+ALTERNATE FIX:  (NONE) If your version 8.2 digi is in a busy area,
+and if there is an IGATE in range, then simply do not apply the fix 
+and just let the 8.2 digi digipeat the WIDE1-1 normally recognizing 
+that the packet will only be digipeated once by this digi and the 
+packet will go no farther.  But it will get to all locals and to 
+the IGATE.
+
+REQUIRED BEACON TEXT:  In either case we want the version 8.2 digi
+to have the following beacon: We receommend instead of the usual 
+10 character "Wn, SSn-N ..." text that you use "NoW1 SSn-N ..." 
+instead.  There are two reasons:
+
+- If you do make the fix, then you want to discourage people from
+using WIDE1-1 in this area because it creates extra dupes.s
+
+- If you do not make the fix, then this nomenclature warns users
+that WIDE1-1 is not supported here and their packet will only go
+one hop.
+
+ACTION:  If your KPC-3 version 8.2 is version KPC3-3F427265-8.2
+or later you only need to make the TWO command differences than the 
+set-up for a version 8.3 or KPC-3+.  That is, add WIDE1-1 to the 
+UIDIGI LIST. and change the BEACON to include the "NoW1...".  
+Then go to the version 8.3 file for all other setups.  OF COURSE, 
+make all the other PATH changes to show APN382 instead of APN383.
+
+------------------------------------------------------------------
+The remainder of this file APPLIES only to really old Version 8.2 
+ROMS  in old KPC3's (not PLUS+) prior to version KPC3-3F427265-8.2.   
+
+Digipeaters using these early-8.2 ROMs should be sure to set the
+APN382 to show they are older TNC's.  This is because of 
+a bug in the UITRACE command that requires these old digis to support
+WIDEn-N only in the UIFLOOD parameter, not UITRACE as is being done 
+under the New-N paradigm.
+
+This special file shows the workarounds to allow these older version 
+8.2 ROMs and old plain KPC-3 TNC's to continue to be used while also 
+supporting most of the New N benefits.  Later versions of the Version 
+8.2 ROM after release xxxx-7265 are OK.  You can tell them apart by 
+typing this command:
+
+UITRACE WIDE,30
+
+If it doesn't like the presence of the "30" and says "eh?" then it is 
+an old ROM and needs to be set up according to this file.  The main 
+anomoly on these earlier 8.2 ROMs was how they handle digipeating:
+
+1) When packets were decremented to n-0, the path was not marked as 
+   being used up.  No one ever noticed this before, but it prevented 
+   these digis from supporting WIDE1-1 for fill-in digis.  
+
+2) The UITRACE parameter which supported TRACEn-N did not do proper 
+   dupe elimination in some of these 8.2 versions (the ones that don't 
+   like the UITRACE WIDE,30 command).
+
+The *workarounds* in these early version 8.2 ROMS are to simply add 
+WIDE1-1 as an alias in the UIdigi list so that WIDE1-1,WIDE2-1 for 
+mobiles can be supported, and to only use UITRACE to support SSn-N.  
+There will be some dupes, but they will not be further propogated by 
+any other proper New N digi.  Here are the ONLY differences to setting 
+up an old 8.2 digi compared to all the widely published information 
+on the 8.3 digis:
+
+Version 8.3:
+   UIDIGI  ON,   WIDE4-4, WIDE5-5, WIDE6-6, WIDE7-7
+   UIFLOOD  SS,30,ID
+   UITRACE  WIDE,30
+
+Version 8.2 (early releases) UNIQUE Settings:
+   UIDIGI  ON,   WIDE1-1, WIDE6-6, WIDE5-5, WIDE4-4
+   UIFLOOD  WIDE,30,ID
+   UITRACE  SS
+
+All of the other special New N Paradigm settings for tayloring the 
+DIGI's beacon timing and paths and other settings of the 8.3 will 
+also apply to these 8.2 versions.
+
+FIRST:  RESET the TNC to factory defaults to get rid of legacy errors.
+Then set the proper settings for APRS that are not the TNC defaults.  
+Set these as below:
+
+  MYCALL xxxxxx  Set to a geographical name understandable by travelers
+  MYNODE xxxx-7  Set up a KA node callsign
+  NUMNODES 2  -  SO SYSOP can use KA nodes to SYSOP other digis
+  INTERFACE   -  Terminal.  So you can enter the remaining parameters
+  HID OFF     -  These packets are of no value to APRS
+  CD SOFTWARE -  For the best collision avoidance method
+  UIDWAIT OFF -  To not waste time with multiple slots
+  TXD 18      -  To shorten the TX delay by 40% from the 300ms default
+ 
+
+SECOND, eliminate the settings that are detrimental to the network.
+
+1) UIDWAIT should be OFF. (the default).  With it on, your digi is not 
+doing the fundamental APRS fratricide that is the primary mechanism for 
+suppressing multiple dupes.  All digis that hear the same packet are 
+supposed to DIGI it at the SAME time so that all those copies only take
+up one additional time slot. (but outward located digs will hear it 
+without collision (and continue outward propogation)
+
+2) UIFLOOD should remain WIDE,30,ID  (this is different from other 
+digis under the New N Paradigm) but avoids the dupe problem of UITRACE 
+in the vesion 8.2 ROM.
+
+3) UITRACE should be SS where SS is your state or SSS ARRL Section
+abbreviation.  This will suport SSn-N routing (or SSSn-N if needed
+such as WPAn-N for Western PA section, etc)).  Only users in the 
+corners or edges of states would normally use this path so that they 
+can use larger N's to communiate in their state without QRM'ing 
+adjacent states.  SSn-N can also be used with a first hop of WIDE1-1,
+SSn-N if needed to help out on the first hop.  It also assures that
+the first hop is identified.
+
+3)  Properly set up the DIGI's beacon packet.  There are 5 possible
+beacons u sing the BTEXT and four LTEXTS.  Prior to July 09, we used
+all 4 LTEXTS for proportional pathing of the DIGI's own info.  Now
+we use only 2 of them so that 2 are available along with the BText
+for pushign local info such as receommended Voice repeater and
+EchoLink and IRLP frequency objects.
+
+This results in a local DIG ID plus these local info objects once 
+every 10 minutes simplex direct and only one 2 hop beacons every 
+60 minutes.
+
+4)  Your TOCALL in both the UNPROTO and the LTP's should use the 
+TOCALL of APN382 where APN identifies it as digipeater firmware.   
+The "3" identifies it as a KPC-3 and the "82" identifies it as ROM 
+version.  NOTE, Identifying ROM versions is very important!  See the 
+APRS list of TOCALL versions for other ROMS identifications of this 
+naming convention.
+
+5)  Your UNPROTO path for the BText should only be DIRECT (APN382 
+with no VIAs) since it is used for your local BText which should contain 
+information  only of *local* value. 
+
+6) LOCAL VOICE REPEATER RECOMMENDATION:  The BTEXT and two available
+LTexts should be used to send out local Frequency OBJECTs indicating 
+the best local voice repeater and Echolink or IRLP nodes for travelers 
+passing through your area.  See: www.aprs.org/localinfo.html
+
+BText: ;146.835-X*111111zDDMM.hhN/DDMM.hhWrT123 R45m Net 9PM Th Mg3rdTh
+   or
+BText: ;146.835-X*111111zDDMM.hhN/DDMM.hhWrT123 -060 Net 9PM Th Mg3rdTh
+
+
+Where 146.835-X is the frequency (-X makes it unique)
+T123 R45m  - is the Tone (no tenths) and Range in miles
+T123 -060  - is the Tone and Offset in 10's of KHz
+Net 9Pm Th - is the weekly net time
+Mg3rdTh    - is the monthly meeting date (Mtg3rdW also)
+
+BEACON EVERY 10
+UNPROTO APN382
+
+This beacon object is sent DIRECT only to indicate on the front panel 
+Mobile displays of travelers in the area to alert them to the best 
+voice repeater for Travelers or for other APRS operators.  This exact
+format has evolved to make the best use of the 10x10 byte windows on 
+many front panel displays.  
+
+7)  IMPLEMENT THE New n-N Paradigm changes.
+
+A.  Set UITRACE SS to support your SS State or SSSS ARRL section 
+instead of the old TRACEn-N.  SSn-N paths allow people on the edges 
+of a state to participate in a statewide (or section wide) net with 
+larger values of N than would normally be allowed.  But since the 
+geographic area covered by these digis is limited, then the damage for 
+large n-N QRM is also limited.
+
+B.  Keep UIFLOOD as WIDE,30,ID to continue support for WIDEn-N.  
+Packets through this digi will not be traceable as they will be in 
+other New-N-Paradigm digis, but this avoids the dupe problem in the 
+UITRACE parameter.  Be sure ID is set.
+
+C.  Remove the obsolete "RELAY", "WIDE", "TRACE", and "SS" aliases 
+in the UIDIGI parameter which are obsolete and generate too many dupes. 
+
+D.  Instead use the UIDIGI alias list to support WIDE1-1 first-hops 
+for mobiles and to TRAP the larger N's.  Set UIDIGI as follows:
+
+UIDIGI ON, WIDE1-1, WIDE4-4, WIDE5-5, WIDE6-6
+
+These specific aliases for the larger N's will act like traps because 
+this digi will digipeat them once and then no farther.  The closer 
+you get to a high density area, the smaller N's you should limit.  
+In typical WIDE2-2 areas, set UIDIGI to include WIDE3-3,WIDE4-4,
+WIDE5-5,WIDE6-6.  Also if you are getting lots of W4-1 packets from a 
+distant city that is not trapping 4-4 at the source, you can also trap 
+those specifically by adding WIDE4-1 to the UIDIGI alias list.  For 
+more on this be sure to see how we did it in Los Angeles, and prevented 
+anything above two hops from getting into the Los Angeles Basin.  
+
+http://www.ew.usna.edu/~bruninga/aprs/fixingLA.html
+
+8) IMPORTANT!  Set up the DIGI POSITION PACKET format to clearly 
+inform users what is supported using the CONSISTENT recommendations 
+below so that users can see from any digi exactly what the network is 
+doing in an area:
+
+a) Always start with the PHGXXXX
+b) Then "W2, SSn-N" shows that only 2 hops are receommended in this 
+   area.  And it shows what SSn-N path is supported.
+c) The overlay character between the LAT/LONG in these old 8.2 digis
+   should become an "F" to show that it has been upgraded to the 
+   New-N-Paradigm but WIDEN-N support is still in the uiFlood 
+   parameter and that packets will not be traceable through this digi.
+d) If you feel you must use the altitude /A=001377, please add it at 
+   the end, not first.  Since those first 20 bytes are what the D7 
+   and D700 users see and the other stuff above is more important.
+   In my opinion, Altitude is redundant since the more valuable term
+   of height above average terrain is included in PHG.
+
+CONCLUSION:
+
+The best way to set up an APRS digi is to FIRST do a RESET or RESTORE
+to FACTORY DEFAULTS to make sure you dont have any bad settings that
+have crept into your system.  Then the ONLY commmands  you have to
+change are the ones below.  For the BText, I assumed a local Voice
+repeater on 146.940 with a PL of 107 that only goes direct.
+
+MYCALL    XXXXXX  (use a local LOATION name understandable by trvlrs)
+MYREMOTE  XXXXXX
+MYNODE    XXXXXX-7
+NUMNODES  2
+INTERFACE TERMINAL
+RTEXT   (your secret password string)
+
+BText: ;146.835-X*111111zDDMM.hhN/DDDMM.hhWrT123 R45m Net 9PM Th Mg3rdTh
+BEACON E 10     <== every 10 minutes direct
+UNPROTO APN382  <== Identifes the KPC-3 ROM and local direct no VIA's
+
+HID OFF 
+CD SOFTWARE
+
+LT  1 !DDMM.hhNSDDDMM.hhW#PHGphgd W2, SSn-N, new digi in kalamazoo, etc
+LT  2 !DDMM.hhNSDDDMM.hhW#PHGphgd W2, SSn-N, new digi in kalamazoo, etc
+LT  3 ;EL-123456*111111zDDMM.hhNEDDDMM.hhW0FFF.FFFMHz Tnnn CALLSIGN-R
+LT  4 ;IRLP-4040*111111zDDMM.hhNIDDDMM.hhW0FFF.FFFMHz Tnnn oXXX CALLSIGN
+       The first two DIGI LTexts must be identical so the Position 
+       Beacon is not always changing and using up the new-posit LOG 
+       files on every user's PC...
+
+BLT 1    EVERY 01:00:00 START 00:00:03
+BLT 2    EVERY 00:10:00 START 00:04:06
+BLT 3    EVERY 00:10:00 START 00:06:13
+BLT 4    EVERY 00:10:00 START 00:08:17
+LTP 1    APN382 VIA WIDE2-2   
+LTP 2    APN382 
+LTP 3    APN382 
+LTP 4    APN382 
+
+
+UIDIGI ON, WIDE1-1,WIDE4-4,WIDE5-5, WIDE6-6
+UITRACE SS           <for your state or ARRL section
+UIFLOOD WIDE,30,ID   <Supports WIDEn-N
+
+That's all there is to it.  Note, these are diffferent from the 
+recommedations for the newer Version 8.2 and 8.3 and later ROMS.  
+But Please  don't diddle with any other parameters.  The defaults for 
+those are the  correct settings.  If you dink with them you can only 
+make performance worse.  Also please use the consistent abbreviations 
+for "Wn, SSn-N" or "Wn, SSSn-N" in the digis beacon and use the proper 
+"F" OVERLAY character for these older 8.2 digis. 
+
+de WB4APR, bob
+

@@ -1,0 +1,77 @@
+ANDE POWER SYSTEM ENERGY BUDGET                       1 Apr 2004
+----------------------------------------------------------------
+                                                    Bob Bruninga
+
+This revision adds in the drain of the backup side B currents.
+Also, as of first power of prototype the nominal currents are
+higher than expected.  The original (Oct 2001) baseline was
+30 mA average current for the life of the mission.  
+
+TNC/RX draw 78 mA.  Removing audio amp chip saves 12 mA down to 
+66 mA instead of the designed 45 mA.  TNC is drawing 32 mA 
+instead of 15mA as designed.  Timer circuits are drawing 10 mA
+instead of 1mA.  This average current increases average load
+by 50% reducing life by a third unless fixed.
+
+BATTERY SYSTEM:        Lithium-primary
+Battery Mass:          11.2 Kg                        
+Battery Construction:  112 Cells Tadiran TL-5930      
+                       Each cell is 93 g and 33 x 62 mm
+Battery volume:        7562 cu cm
+Battery configuration: 28 4-cell strings in parallel
+Battery volts:         12 volts (14.4v no load)
+Battery safety:        Every 4-cell string fuzed individually
+Battery capacity:      532 AHrs (7448 WHrs at 14 volts) 
+
+ANDE Telemetry/Command system:
+
+        nominal  dutycycle        10% ontime  result  Average   Percent
+System  current  standby          with-users  USAGE   CURRENT
+------  -------  ---------------  ----------  ------  --------  -------
+Rcvr A   35 mA    10% [1.5s ON ]     10%        20%     7   mA    20%
+TNC  A   20 mA    10% [15s  off]     10%        20%     4   mA    11%
+XMTR A  600 mA                       20%         2%    12   mA    34%
+LASERS  350 mA     3% over Maui      10%       0.3%     1   mA     3%
+Timers    3 mA   100%               100%       100%     3   mA     9%]
+Volt TLM  0.2    100% ea (2)        100%       100%     0.4 mA     1%]
+Temp TLM  0.7     10% ea (6)        100%        20%     0.4 mA     1%]
+5v ref    0.9     10%               100%        10%     0.1 mA     0%]
+Counter   1.2    100%               100%       100%     1.2 mA     3%]
+
+
+Rcvr B   35 mA     3% [1.5s ON ]                 3%     1   mA     3%
+TNC  B   20 mA     3% [45s  off]                 3%     0.6 mA     2%
+XMTR B  600 mA     0% backup only     0%         0%     0   mA
+Timers    3 mA   100%               100%       100%     3   mA     9%]
+Volt TLM  0.2    100% ea (2)        100%       100%     0.4 mA     1%]
+Temp TLM  0.7      3% ea (6)        100%         3%     0.1 mA     1%]
+5v ref    0.9      3%               100%         3%     0.03 mA    1%]
+Counter   1.2    100%               100%       100%     1.2 mA     3%]
+---------------------------------------------------------------
+Total                                                  35.5 mA   
+Growth compared to original proposal   12%
+
+NOTE:  30% of our power is in the on-always timers, counter and TLM.
+We must re-design to reduce this substantially.  As of 20 March we
+will do the following design changes:
+
+1) Note the Speaker Amp and RS-232 go away in flight configuration
+2) Double Voltage divider resistors (saves .4 mA always)
+3) Quadruple the Counter D/A resistors (Saves 1.8 mA always)
+4) Double Temp Sensor impedance to 10k for R2 (saves 0.6 mA)
+5) Install CMOS 555 timers (saves 6 mA) Actually, these later
+   measured a whopping 6 and 8 mA each (spec says 15 mA so
+   clearly a CMOS version is necessary.
+
+Battery life: 532 AHrs/36 mA = 15,000 hours = About 600 days.
+
+The total life is drastically dependent on the usage duty cycle.  
+The above figures assumed a worse case scenario.  Typical and 
+target values could allow for more than 1.5 year life and still 
+support nominal communications via the PCsat-style operations...
+The side B is dormant except for its 1.5 second wakeup every
+45 seconds.  Unless the A side fails, the B side is not used
+for transmitting otherwise.
+
+Bob Bruninga
+USNA Satellite Lab

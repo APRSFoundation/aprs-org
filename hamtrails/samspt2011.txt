@@ -1,0 +1,62 @@
+SAM'S POINT 2011 REPORT                                   26 July 2011
+----------------------------------------------------------------------      
+                                                    Roger Schultz NJ2R
+
+My son Peter and I hiked in to the north end of Lake Maratanza just 
+off Sam's Point Road on the highest spot we could find. Soon after 
+the equipment DH-72A and Diamond dual band mobile was set up we saw a 
+beacon from W2TTT at High Point. 
+
+We were able to contact them on 445.925 however the intermod from all 
+the other communications towers across the road made it pretty much 
+unusable for the entire day. I also became concerned because I could 
+not raise the Mt Greylock 146.910 repeater either which was easily 
+done last weekend. I suspect intermod was also affecting the 2 meter 
+link as well as 440. Chris at Greylock and I eventually exchanged a 
+few words between intermod blasts but that was sheer luck! As I 
+understand it, he could hear me pretty well his direction on 445.925.
+
+Over the course of the next 3 hours we heard:
+
+GDHILL-8
+5PTS-8... (the alternate test site for GD hill)
+CMLBK-9 KB3EJM KEVIN
+W2TTT at High Point, NJ
+GRYLCK-11
+MTWASH-13
+
+After the configuration change enabling the digipeater at GDHILL-8 
+just before 1500 local we then saw:
+
+HWKSBL-6
+CMRRCK-4
+CLNGMN-2  (this one turns out to be the longest hop of the event)
+
+Weather condx were changing frequently on the mountain and at one 
+point the lake disappeared in a cloud!
+
+My sense is that we would have done better with a much better omni, 
+a 50 watt radio, and perhaps a different location that is closer to 
+the actual AT.
+
+Since High Point is a good drive up location on the AT, I'd like to 
+see what the path looks like between Greylock, Bear Mountain, NY, 
+High Point, and Camelback though the latter as well as Governor Dick 
+Hill are not that close to the AT. Bear Mountain is LOS from High 
+Point as I recall and I imagine Greylock is as well. Bear Mountain is 
+a drive up site and even if the parking area by the observation tower 
+is full a couple paths exist to set up away from the visitors. 
+Because Bear Mountain is a state park on the AT, there are no comm. 
+sites to create interference.
+
+From this end it was an excellent effort with much success to enjoy, 
+lots of work by so many, and both Peter and myself had a great day 
+together doing "ham stuff".
+
+Thanks to Bob for all his hard work and to Lynn for his coordination 
+and reporting. It was really nice to know what was going on end to 
+end!
+
+73, Roger, NJ2R
+
+

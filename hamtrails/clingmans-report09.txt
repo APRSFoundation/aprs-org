@@ -1,0 +1,94 @@
+2009 AT Event Clingman's Dome REPORT                        27 Jul 09 
+---------------------------------------------------------------------
+
+William McKeehan, KI4HDU reports:
+
+Things went pretty well at Clingmans Dome, but it was not without 
+issues.
+
+W4VAB, Hugh, was the first on site and discovered our first issue; 
+the coordinates that were on the aprs.org web site had us down in 
+the woods. We figured that was not a good idea, so we re-evaluated 
+and picked a location that looked like it would be the highest point
+and would give us clear routes to Springer and Roan.
+
+KF4QVI, Rick, arrived and we began setup.
+
+Once setup, we heard Springer on the voice simplex frequency first; 
+they were in the process of setting up. Shortly after that contact, 
+we heard from WA4YYM @ Lookout Mountain.
+
+We received our first packet from Lookout Mountain around 11:15.
+
+We received our first packet from Springer around 12:07.
+
+We were trying to work ROAN most of this time. We were able to 
+coordinate on their coordination repeater on Mt. Mitchell. Simplex 
+voice communications were very scratchy on all of the frequencies 
+that we tried. We did some antenna adjustment, tried new antennas, 
+etc, but still had no luck reaching ROAN. We were then surprised 
+when ROAN had a booming voice signal on the 2-meter simplex 
+frequency that we were monitoring for them and told them that it 
+was much better than before; this was on a different radio with a 
+different antenna. With that revelation, they were able to discover 
+that they had a bad piece of coax. Once replaced, we were able to 
+copy ROAN easily.
+
+We had a good size group of hams show up for the event:
+W4VAB
+KF4QVI
+KG4DSP
+AJ4HV
+KI4DSO
+KG4UJC
+KI4CBU
+KJ4JEO
+
+KF4QVI provided the event D700, an omni-directional antenna (with 
+gain), two 10-foot tall masts with mounts, a 50' run of RG-8X a 
+battery, table, pop-up awning, a laptop (used for logging) and a 
+generator.
+
+W4VAB provided a pair of beam antennas, the splitter and a 30' run 
+of RG-8.
+
+KI4DSO's supplies were hardly touched (but he had a carload of 
+stuff), although we did use his Arrow Beam antenna when we were 
+having trouble reaching ROAN (thinking one of W4VAB's beams may 
+have been bad).
+
+I, KI4HDU, provided a second D700 which was used for coordination 
+and then logging.
+
+We had a couple of extra D700/710's in the group that I am aware of, 
+an extra antenna or two, multiple laptops, HT's, etc. figuring that 
+having too much equipment was the best way to avoid a visit from 
+Murphy.
+
+We were unable to reach the EchoLink node in Franklin, NC that we 
+had planned on using, but were bringing up a repeater in South 
+Carolina on the same frequency. It would not have done us much good 
+as no one in our group knew how to connect to the EchoLink 
+Conference.
+
+We got a bit of rain on us early in the day, but it was light and 
+KF4QVI's awning covered the group nicely.
+
+There were a number of pictures taken during the day; KI4CBU should 
+have a large number of pictures to share with the group.
+
+The park rangers did stop by to see what we were doing. They did not 
+have any issues with out setup.
+
+Many visitors to the area would stop by and ask us what was going on 
+and that gave us an opportunity to share a little about Ham radio
+with them.
+
+Overall, we had a wonderful time on the mountain and everyone that 
+I have talked with said they were looking forward to next year's 
+attempt.
+-- 
+William McKeehan
+KI4HDU
+http://mckeehan.homeip.net
+

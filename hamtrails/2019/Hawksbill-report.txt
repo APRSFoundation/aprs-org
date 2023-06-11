@@ -1,0 +1,190 @@
+***************************************************************************
+*                  ATGP 2019 Report for Hawksbill   by Ron, KB5LNC       75
+***************************************************************************
+
+
+Greetings fellow Appalachian Trail Golden Packeteers! 
+ 
+BLUF:  Hawksbill was online, on time, and eventually digipeating.  The new 
+guy didn’t screw it up too bad.  At least I hope I didn't.
+ 
+Here is my detailed, post event report for Hawksbill Mountain.  This report 
+is coming from the perspective of someone who has never taken part in the 
+ATGP, or used a Kenwood radio, let alone program it for APRS digipeating.   
+Some of this is basic information to most, but it is coming from the 
+perspective of a “newbie” to all the systems I used on Saturday.  I hope it 
+might provide information to someone who is on the fence about 
+participating, and how, with a day of preparation, although not 
+recommended, you can pull this off.
+ 
+What started as an email to Bob (WB4APR) to gain his interest and 
+availability to speak about the ATGP, and the recent launch of PSAT2 to 
+the Pentagon Amateur Radio Club, quickly turned into going solo to the 
+summit of Hawksbill Mountain.   What a view!  When you are up there, you 
+understand why it is called Hawksbill.
+ 
+On the Monday prior to the ATGP event, I sent an email to Bob.  In the 
+email I mentioned I had graduated from the Naval Academy (I got there a 
+year after Bob), was a retired Marine helicopter pilot, a ham, and lived 
+in Fredericksburg, VA.  I also mentioned I was “thinking” about going to 
+one of the ATGP sites to see what it was all about, and learn more about 
+APRS and packet.  
+ 
+I have never met Bob, but I knew of him through ham radio.  As you are 
+all aware, all you need to do is search the internet for anything 
+regarding APRS, you’ll find Bob.  Bob got straight to the point, “It looks 
+like Hawksbill is still not covered which is a huge gap in the chain.  
+That should not be far from Fredericksburg if you can give up a Saturday 
+morning for the adventure.”  I let Bob know I didn’t have a Kenwood radio, 
+and had never been to Hawksbill.  Less than 24 hours later, Bob found a 
+radio for me.   Where else but in the ham radio community would you find 
+someone willing to loan a brand new, TM-D710A still in the box, and a 
+battery box to a complete stranger.  Will (KW4WZ) did just that, and 
+Wednesday afternoon, I left the pentagon for Winchester, VA to pick up a 
+radio and battery box.   Work and life events prevented me from working on 
+any real preparations until Friday, but I had the main piece of equipment 
+needed to man Hawksbill.  Now all I needed to do was get the radio 
+programmed, figure out what else I needed, and hike up a trail.   Right…..
+ 
+From Tuesday through Friday I did what any Marine would do prior to 
+executing a mission, reconnaissance.  I pulled up the Hawksbill links on 
+the aprs.org website, and what’s posted on John Huggins website 
+(www.hamradio.me) regarding recent trips to Hawksbill for past ATGP 
+events.  I looked at google maps, google earth, information on the 
+trails, parking, and whatever else I could find regarding prior year’s 
+Hawksbill support.  Not having been there before and with limited 
+pictures from past events, I wasn’t exactly sure what it would be like 
+or what I would need.  What I did find was Hawksbill has had some 
+communication issues in the past.  Communications going north were never 
+an issue; it was going south where the problem lies.  So here I am, the 
+new guy going solo to Hawksbill, a potential comm void, with a new radio 
+to take part in something I have no experience with.  What could possibly 
+go wrong?
+ 
+With some help from Bob on Friday morning, I went out to my vehicle in 
+the pentagon parking lot, programmed the radio, and saved everything 
+into memory.
+ 
+THE GEAR:  To prepare, I figured I would start with the basic items 
+required to operate the station, and go from there.  I would need a radio, 
+antenna, battery, and coax.  Here is what I was starting with:
+ 
+Radio – Kenwood TM-D710A, borrowed
+Antenna – Diamond X-50, already owned one
+Battery – Hammo-PWR 12Ah, borrowed
+Coax – 50’ RG-58, already owned it
+ 
+These were the basic items needed and anything else I brought would have 
+to allow me to operate more efficiently, or get the signal out better.  
+Not knowing what to expect I ended up taking too much with me, but I had 
+what I needed to operate and make Hawksbill function.  Additional items 
+I took which I ended up using:  
+
+6 x 16.9oz water bottles, frozen
+550 cord (rope)
+towels to cover and keep radio off the ground and out of sunlight
+food, knife, wrench for antenna bolts
+tape to hold mast pieces together for travel
+Stakes
+ 
+THE ROUTE:  The shortest route to the top was ¾ of a mile with an 
+elevation change of 690’, Lower Hawksbill Trail.  Not a hiker, a 690’ 
+change in elevation over 4,000 didn’t sound like much…..it definitely 
+is when you are wearing a backpack, carrying a battery box, mast 
+sections, antenna, water, and other supplies.  Using the benefits of 
+hindsight, I should have taken Upper Hawksbill Trail, which is just over 
+a mile in length with a 520’ elevation increase.  Maybe next year.  The 
+route I chose took me approximately 1.5 hours and I was up on the top by 
+0900 setting up the gear.  
+ 
+THE SITE:  After looking at the highest point of Hawksbill, slightly to 
+the south and approx. ¼ mile away, I decided to stay with the lookout 
+even though it was lower than the summit.  The difference was only 
+around 40 feet, but the summit was surround by tall trees and it didn’t 
+have great access.  
+ 
+SITE BUILD:  With no good area to support an antenna mast, I remember a 
+previous post where the team used a bungee cord to go through the 
+drainpipe and over the wall to support the mast.  I lugged up five, 4’ 
+sections of military tent poles with the plan to get the antenna up as 
+high as I could.  I used the 550 type cord doubled through the drain and 
+over the wall to secure the top and bottom sections of the mast to the 
+lookout wall and some stakes to “wedge” in between the mast and the 
+drain wall to keep the mast base from moving.   One end of the looped 
+550 cord was around the base of the mast, went through the drainpipe, up 
+the outside of the wall, then over the top of the wall and around the 
+mast again.  This was approximately 3’ from the ground.  Once I got the 
+antenna assembled and clamped to a different section of mast, I 
+connected the coax and temporarily lifted the antenna and an additional 
+section of mast to do some initial comm testing.   The base of the 
+antenna was up 12 feet with the top of the antenna approximately 17’ 
+above the lookout base.
+ 
+OPERATION:  I laid a towel on the ground to protect the radio and 
+connected it to the battery box, the coax, turned it on, and waited.  
+In less than a minute, I heard AOMTN-5 and could read what was sent.  
+I was glad to hear something, so I was pretty sure the radio got 
+programmed correctly.  It wasn’t long after that I was able to pick up 
+stations 1-5, and CAMLBK-9.  Yes, that is correct, 1-5, and 9.  From 
+what I can remember, I was getting a great signal coming in from both 
+north and south.  5/9 from the south (AOMTN), but don’t remember the 
+reading for CAMLBK.
+ 
+TROUBLE ON HAWKSBILL – TO SQUELCH OR NOT TO SQUELCH:  By 1100, I 
+wasn’t very confident the radio was transmitting, or digipeating.  
+I could see information being received, but I would never see Will’s 
+radio transmit.  Not being able to raise anyone on UHF (more on that 
+later), I sent a text to the “Shack Potato” and after a little 
+trouble shooting the issue was resolved.  Apparently, you have to have 
+the squelch on for digipeat and/or beacon to function.  Never even 
+crossed my mind.  Once I adjusted the squelch knob, and performed a 
+beacon test, the radio came alive.  I could see the radio transmitting 
+and at least felt a little better that I didn’t kill the ATGP efforts 
+for the entire team.   I had the power set to high and didn’t try it 
+at any other power level setting.  It was working and I brought along 
+a spare, 9AH battery just in case.  I never needed it.  One other 
+issue which popped up was the HOP settings programmed in the radio.  
+It wasn’t until we switch to 9600 that I was notified I had it 
+incorrectly set to HOP7-7,HOP7,7.  I’m not completely sure what this
+does (Limits hops to a max of seven for the original packet, and an 
+additional seven to get station 15?)
+ 
+THE ENTIRE TRAIL:  Shortly after 1230, I believe after station 8 came 
+alive, I started seeing the more northern stations, and by 1345, I 
+heard 1-15.  
+ 
+END GAME:  I tried to follow the flow of information, but was confused 
+on when I needed to look at the main screen or look at the list of 
+messages to read them.  I have no idea what was sent in the “Golden 
+Packet” or when it digipeated through my node.  I do know I had to 
+figure out how to switch to 9600.  I started seeing messages regarding 
+9600, and was working to switch when I received a text from the “Shack 
+Potato,” I assumed the GP went through fine on 1200 and 9600.  Thank 
+you “Shack Potato!”
+ 
+I never did hear anyone on UHF.  I had the “B” side of the radio set 
+to 445.975 with a tone of 100.  After I got home I looked at the 
+information I had received, and depending on which one I looked at, 
+there were two frequencies, 445.925 and 445.975.   I was on .975, and 
+I assume everyone else was on .925.  I may have that backwards.
+ 
+THE HIKE DOWN:  The trip down the mountain was a little bit quicker 
+than it was coming up.  I didn’t have the 6 bottles of water to carry, 
+and with the 12 AH battery being drained to 43%; it was 57% lighter.  
+Not to mention, it didn’t require any work on my part to go down the 
+trail.  According to my high school science teacher, gravity was doing 
+all the work….tell that to my legs, joints and feet.
+ 
+FINAL THOUGHTS:  
+ 
+What a great learning experience.  I understand what we did, and why 
+we continue to do events like the ATGP, but I don’t completely 
+understand APRS and all of its capabilities.  I still have a lot to 
+learn.  Hopefully, if the time aligns again next year, I’ll do a bit 
+more planning, organizing, and I can make the trek to Hawksbill 
+Mountain again.  
+ 
+73,
+ 
+Ron
+KB5LNC

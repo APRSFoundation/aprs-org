@@ -1,0 +1,141 @@
+Setting up A WIDE1-1 FILL-IN Digipeater                     24 Jul 09
+-----------------------------------------------------------------------
+
+Updated  24 Jul 09 to add Local Voice Freq Objects (at very end)
+Updated   5 Feb 08
+Original 18 Nov 05 
+
+There are two very different applications of a one-hop digipeater.
+One is a forced-one-hop digi such as is used in Los Angeles, CA and
+is not the topic of this file.  For it, see www.aprs.org/fixingLA.txt.
+
+The more common use of a WIDE1-1 digi is as a first-hop or fill-in
+digi where existing outbound coverage for mobiles is poor.  
+
+WIDE1-1 fill-in digis provide a way for mobiles in a dead zone to be 
+able to be digipeated out without that same digipeater adding to the 
+congestion elsewhere by also digipeating every other packet heard from 
+everywhere else.  In otherwords, it only responds to 1st hop packets 
+from mobiles and/or stations that explicitly use the WIDE1-1 hop first
+in their path.  
+
+These digis used to be called RELAY digis, but RELAY is now obsolete 
+because it has no dupe-elimination process.  The WIDEn-N system 
+(including WIDE1-1) on the other hand compares all packets for dupes
+no matter what the path and will ignore any dupes.  Thus, in early 
+2005 it was time to change all RELAY-only digis over to WIDE1-1 only.
+
+To use these digis, mobiles typically use the path of WIDE1-1,WIDE2-1.
+This way the first hop can be done by ANY digipeater, including all of
+these possible WIDE1-1 digis.  All other WIDEn-N digis also respond
+to the WIDE1-1 path and so will ignore any dupes that might be
+generated from multiple digi's and multiple fill-in digis hearing the
+same packet.  Only one copy will be digipeaterd from all of these
+full-function WIDEn-N digis.
+
+Fortunately almost any TNC can be used as a WIDE1-1 or FILL-IN digi
+because no special algorithms are used.  The TNC is set to digipeat
+only packets addressed VIA "WIDE1-1" or VIA its own MYCALL.  Further
+it does not ID beyond its own DIRECT range, thus, it does not add
+any QRM to the network.  Also be sure to turn HID OFF so that this
+TNC does not polute the spectrum with the every 10 minute HID packet
+that is of no value to APRS.
+
+IMPORTANT:  Some digis are more sophisticated than others and can
+do callsign substitution such as the modern PacComm's, KPC-3+'s
+and Kenwoods  In those digis the settings for a WIDE1-1 fill-in digi
+are different and are listed later.  But in all simple older TNC's 
+that only have one alias, then, use the following settings to make 
+any TNC into a WIDE1-1 FILL-IN-DIGI:
+
+1) Reset to factory defaults to make sure no wierd settings are in it.
+2) MYCALL  CALLSIGN
+3) MYALIAS WIDE1-1
+4) BTEXT !DDMM.mmN1DDDMM.mmW#W1-1 any_other-comment_here
+5) B E 60 (60 is 60-ten seconds (10 minutes in TAPR-2))
+6) UNPROTO APNXXX   <The APNXXX identifies the type of TNC. See list)
+7) HID OFF          <this is important to eliminate this useless QRM)
+8) DIGI ON
+
+Other than figuring out exactly how your TNC handles time in the
+BEACON EVERY command (minutes or 10's of seconds or seconds)...
+We want a 10 minute -local- beacon from all DIGI's.  They are our
+lifelines and we need to know which ones are serving us.  Notice that
+for a WIDE1-1 digi, the UNPROTO path has no HOPS through other digis.
+This is to limit their visibility to only their coverage areaand
+to minimize QRM on surrounding systems.
+
+That is all there is to it for these older TNC's.
+
+FOR old PACCOM TNC's WITH CALLSIGN SUBSTITUTION:
+set MYA none     (available for other use if any)
+set MY1 WIDE1-1 
+set MY2 SAR      (to support Search and Rescue)
+set MY3 TEMP1-1  (this can be used during field day)
+
+FOR D700's & Kantronics KPC-3+'s THAT HAVE THE UIDIGI COMMAND:
+set MYALIAS none (available for other use if any)
+set UIDIGI ON WIDE1-1, SAR, TEMP1-1
+set UITRACE TEMP, 30    <== this supports TEMPn-N for Field Day
+
+Notice that TEMPn-N support is also encouraged in ALL TNC's that
+can support it that are NOT otherwise being used as big digis.
+This automatically gives us a workaround back-up digi system
+built into every D700 that can be used anytime anywhere in range
+of a D700, but at the same time, be3ing a capability that has
+no routine impact on the existing national APRS channel.  Please
+see the web age: aprs.org/TEMPn-N.html
+ 
+One use is for Field Day, where the ARRL rules prohibit using
+any existing permanent infrastructure.  But with TEMPn-N, you
+can use any D700 mobile as a digi...
+
+For all these TNC's, identify the type of TNC in the TOCALL of the
+UNPROTO path using the APNxxx TOCALLS below:
+
+  APN232 PK232
+  APNMFJ if MFJ
+  APNTC2 if any other TAPR-2 clone TNC
+  APN3xx Kantronics KPC-3 rom versions 
+  APN9xx Kantronics KPC-9612 Roms 
+  APNAxx WB6ZSU's APRServe 
+  APNXxx X-DIGI
+
+If you are using any other kind of TNC, then choose an APNxxx for
+it and let me know so I can add it to the list.  Thanks
+
+Using UIVIEW HOME STATIONS:  If your station is a good one with
+good RF coverage, yet no mobiles in your area can get out, then
+you can enable it for WIDE1-1 digipeating too.  Setting it for
+WIDE1-1 is the least harmful to our congested VHF network.  You 
+must be running your TNC in KISS mode to enable the digipeater in
+UI-View32.
+
+ Go to Setup -> Digipeater Setup
+ Enable Digi is checked
+ UI Only is checked
+ Alias substitution is checked
+ WIDEn-n is -not- checked
+ TRACEn-n is -not- checked
+ Alias(es) has W6UUU,WIDE1-1 <substitute your callsign for W6UUU>
+ Sub Alias has W6UUU <substitute your callsign for W6UUU>
+ Dupe secs = 30
+ Digi routes has 1=1
+
+ Click on OK and you're done.
+
+LOCAL FREQUENCY OBJECTS IN WIDE1-1 FILL-IN DIGIS:
+
+Notice that these fill-in digis can also help provide mobiles with
+local info on local ham radio assets.  THis can only be done in those
+modern TNC's however, that have multiple BTexts or LTexts.  For example
+KPC-3's or Paccomms, DIGI_NED or UIDIGI ROMS.  In those, in addition
+to the 10 minute -direct- DIGI position packet, you can set up also 
+the every 10 minute (direct) local VOice Repeater Object or EchoLink/
+IRLP object so that travelrs can see right there on their front panel
+the frequency of these important assets when the pass through.
+Please see www.aprs.org/localinfo.html
+
+Good luck,
+
+de WB4APR, Bob

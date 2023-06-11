@@ -1,0 +1,129 @@
+ANDE/RAFT COMMS USER SERVICE EXPECTATIONS                      de WB4APR
+------------------------------------------------------------------------
+                                                       (rev-5) 10 Feb 07
+New: RAFT and ANDE SPEAK:
+
+ANDE and RAFT have joined the constellation of USNA APRS Satelllites 
+that provide a worldwide position, status and message service for mobile 
+and handheld amateur radio satellite users and schools.  Unfortunately, 
+their downlinks are significantly weaker than PCSAT-1 and usually not 
+receivable except with a good beam.  ANDE is better than RAFT.  A few 
+packets can be heard in the middle minute or so of a high pass by a 
+mobile (omni antenna with short coax).  The downlink can be seen on 
+FINDU's http://pcsat.aprs.org.  We welcome any future satellite low 
+duty-cycle UI digipeating satellites on this shared frequency.
+
+POLICY STATEMENT:
+
+ANDE and RAFT transponders are open systems in accordance with the ITU 
+regulations for the Amateur Satellite Service.  To provide the best 
+overall throughput for the most users, ANDE and RAFT transponders are 
+protocol driven and require users to adhere to the fundamental protocol 
+requirements.  Only users that adhere to these published protocol and 
+operating standards are authorized to use the spacecraft. 
+                                                                    
+ANDE and RAFT USAGE:
+
+You may use ANDE and RAFT if you adhere to the following objectives:
+
+1) Keep informed of the current protocol requirements via the ANDE
+   and RAFT Operations web page and via bulletins in the downlink.
+   http://www.ew.usna.edu/~bruninga/ande-raft-ops.html
+
+2) Understand that the APRS mission on ANDE and RAFT and your objective 
+   is only to get your position and or status/message digipeated once or 
+   maybe twice per pass.  AND/OR a few messages spoken.
+
+3) Use only the authorized power levels, channel and periodicity for 
+   your station class and precedence as posted and published below.
+
+   STATION CLASS  PWR  BAUD  UPLINK   PERIOD   DIGIPATH  DOWNLINK
+   -------------  ---  ----  -------  -------  --------  ---------
+   Unattended     50W  1200  145.825  3 min    APRSAT    145.825
+   Attended BASE  50W  1200  145.825  1 min    APRSAT    145.825
+   Mobile         50W  1200  145.825  1 min    APRSAT    145.825
+   Handi-Talkie    5W  1200  145.825  1 min    APRSAT    145.825
+
+ALIASES AUTHORIZED:  VIA APRSAT, or VIA ARISS, or VIA satellite call.
+
+4) These Periods and Path recommendations may change at any time due to 
+   loading on the uplink.  If two satelltes are in view at the same time 
+   and both hear a WIDE2-2 packet, remember that both will key at the 
+   same time and both will then ignore the other one's digipeat.  The 
+   best way to get a dual hop packet (if they both hear you) is to go 
+   VIA APRSAT,APRSAT or VIA ARISS,ARISS.
+
+   NOTE:  This only works with PCSAT-1, since ANDE and RAFT are much
+   weaker and will only hear each other during a very close conjunction.
+
+5) Please include your Effective Radiated Power (ERP) and your beacon
+   rate in your packet so that all can compare the statistics and
+   performance of this satellite channel.  ERP is TX power plus antenna
+   system gain.  Example:  !DDMM.hhN/DDDMM.hhW-Bob,50W,2min mobile.
+
+4) Use a TXD no greater than 200ms if possible.  The satellites will 
+   work with as little as 100 ms if your rig will.  This lets more 
+   users in.
+
+5) Use the short packets.  Avoid redundant information.
+
+RAFT SPEECH or PSK-31:  RAFT has three modes in addition to digipeting.
+Packet-to-Voice-synthesizer -OR- PSK31-Transponder, and a RADAR xponder.
+The RADAR is only under COMMAND station control, and RAFT will only
+be in either the VOICE or PSK mode at any particular time.  The PSK-31 
+mode is by far the most power hungry, so normally the mode will be 
+VOICE except when announced.
+
+RAFT PACKET-TO-SPEECH:  RAFT is weak signal, and command stations must
+share the same channel, so do not TX if you cannot hear RAFT to avoid
+jamming other operations in progress.  Here are the ground rules:
+
+1) No automatic beacons greater than once every 1-3 minutes.
+2) Only a few voice packets per station per pass are authorized
+3) Do not transmit a voice packet if you cannot hear RAFT
+4) RAFT requires a good beam and high pass to hear the weak downlink.
+5) If you cannot hear it, please do -not-transmit to it.
+6) The RAFT voice module is only ON if someone has sent a CONNECT
+   REQUEST to "RAFT".  The connection does nothing else other than
+   turn on power to the speech module.  But the connected station
+   can send anything to be spoken directly.
+7) Once the voice module is on, then any OTHER station can send 
+   APRS formatted messages to TALK and those messages will also be 
+   spoken along with "XXXX says..." in place of the header.
+8) RAFT voice circuit will remain on for 5 minutes after the connect
+9) While on, RAFT will speak any UI APRS msg it hears, sent to "TALK"
+
+ANDE voice is the same process, except it can only be turned on by
+command stations.  Similarly, the command station can cause voice by
+the RPRINT "say this stuff" and it will be spoken.  Also while the voice
+is on, then it too, like RAFT will remain activated for that pass and
+will speak all UI APRS formatted messages to TALK.  On ANDE, there can 
+be a 10 second delay between the time your TALK message is digipeated 
+and when it speaks.  
+
+RAFT PSK-31 MODE:  The RAFT TX comes up for 1 full minute during which 
+all PSK-31 audio heard on 28.120 MHz USB will be relayed on the down-
+link.  Clearly this is a power hungry mode due to the long TX times.
+
+When PSK-31 is enabled, any station may bring up the transponder by
+a simple packet CONNECT TO RAFT.  When RAFT sees a connect request, it
+turns on the 10 meter receiver and the 145.825 TX for 1 minute.  (Maybe
+longer later).  During that time users can send and receive PSK-31 
+using a 10 meter SSB uplink and their 145.825 FM downlink to their
+PSK-31 software.  Due to the power load of the full time transmitter,
+this mode will be not available as often as the Voice system.
+
+Remember that RAFT downlink is WEAK.  Do not attempt to CONNECT TO
+RAFT to turn on either the VOICE or PSK-31 unless you can hear the
+10 second telemetry packets.   Thanks.
+
+ACCEPTANCE:
+
+If you accept the conditions of operation for ANDE and RAFT, you are
+authorized access.  Please sign this agreement and post it in your 
+primary operating station for your future reference.  Check back 
+to this page frequently for updates.
+
+SIGNATURE:
+
+___________________________________   Date:   _______________________

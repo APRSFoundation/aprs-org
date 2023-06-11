@@ -1,0 +1,66 @@
+SAM'S POINT REPORT 2016
+-----------------------
+
+July 16, 2016 SAMSPT-10,  Operator was Dwight, N2FMC
+
+I arrived at ~11:30, a tad late.  Sorry gents.
+
+Setup took about 20 minutes because I had to assemble the diamond X50NA before 
+I could push up the ~20' telescoping mast.  I installed a UHF Yagi but the 
+vertical antenna is VHF & UHF so I tried that without attaching the semirigid 
+hardline to the Yagi.  It would only have added weight when I pushed it up anyway.
+
+When I bought the D-710G and the antenna 3-4 months ago, I thought I had 
+programmed the radio with the correct settings for the '16 ATGP test.  If I did 
+(doubtful) they didn't stay till today.  Thankfully a kind gent named Dick 
+(from Maryland Mountain?) called and walked me through the settings.  He also 
+sent me the link to the settings that were key to my getting on the air by ~12:30.
+
+I'd also like to thank N3MUI on Slide Mountain for being there and acting as an 
+alternate path between PA and MA.
+
+I didn't get the message to change to 9.6kb right away so I think an email blast 
+would have worked for me.  If there was a scheduled time for the change, I wasn't 
+aware of it.   Sorry.
+
+As Bob pointed out several days ago, operation close to ham, public safety and 
+business emitters could cause issues.  I don't know if I had issues on VHF, but 
+I sure did on UHF.  There is an intermittent trunking data channel that wiped out 
+UHF Rx for me for most of the day.
+
+My simple setup consisted of 
+
+-a pretty new Kenwood TH-D-710G
+-a Diamond X50NA 2-band vertical ant
+-~30' of RG-214 with N connectors
+-N - UHF adapters
+-~20' of aluminum push up mast
+-a drive on mount to hold the mast up
+-an AC extension cord into the shelter
+-a switch mode power supply
+-tools
+-SPF 50 sunscreen
+-lawn chair
+-lunch
+-bottles and bottles of water
+-4 different ARRL public relations hand outs
+  
+Stream of consciousness take away thoughts for next year;
+
+-All sites should have contact info for adjacent sites.
+ https://docs.google.com/spreadsheets/d/1wSo0s2yIoXH7P87AKjYCGTabVTw4GaE61svfImY2A2o/edit#gid=1450439508
+
+-Couch potato could have our contact info so he can reach out to sites via their 
+ preferred mode to see what's up if the packets stop there.
+
+-Maybe we can get some hams on the AT just to see how a message that is originated 
+ in the field propagates through our deployed stations.  Maybe pick a low spot between 
+ nodes to check if it can be heard?
+
+-Site analysis prior to spring 2017 to see where permanent installations should be 
+
+-Continued research on the available dual baud rate TNCs available to install along the AT.
+http://www.aprs.org/ec9600net.html
+
+Thanks for another AT GP fun event!
+Dwight

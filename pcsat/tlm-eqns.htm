@@ -1,0 +1,2198 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List href="http://www.aprs.org/pcsat/tlm-eqns_files/filelist.xml">
+<title>2) Write up a TELEMETRY paper using the formats and stuff you used here
+to</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Preferred Customer</o:Author>
+  <o:LastAuthor>bruninga</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>31</o:TotalTime>
+  <o:Created>2001-08-24T16:46:00Z</o:Created>
+  <o:LastSaved>2001-08-24T16:46:00Z</o:LastSaved>
+  <o:Pages>2</o:Pages>
+  <o:Words>507</o:Words>
+  <o:Characters>2891</o:Characters>
+  <o:Company>Micron Electronics, Inc.</o:Company>
+  <o:Lines>24</o:Lines>
+  <o:Paragraphs>5</o:Paragraphs>
+  <o:CharactersWithSpaces>3550</o:CharactersWithSpaces>
+  <o:Version>9.2720</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>0</w:DisplayVerticalDrawingGridEvery>
+  <w:UseMarginsForDrawingGridOrigin/>
+  <w:Compatibility>
+   <w:FootnoteLayoutLikeWW8/>
+   <w:ShapeLayoutLikeWW8/>
+   <w:AlignTablesRowByRow/>
+   <w:ForgetLastTabAlignment/>
+   <w:LayoutRawTableWidth/>
+   <w:LayoutTableRowsApart/>
+  </w:Compatibility>
+ </w:WordDocument>
+</xml><![endif]-->
+<style><!--
+ /* Font Definitions */
+@font-face
+	{font-family:"Arial Unicode MS";
+	mso-font-charset:128;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-1 -369098753 63 0 4129023 0;}
+@font-face
+	{font-family:"\@Arial Unicode MS";
+	mso-font-charset:128;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-1 -369098753 63 0 4129023 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-font-kerning:0pt;
+	font-weight:normal;}
+h2
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	font-weight:normal;}
+pre
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Arial Unicode MS";}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.5in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<h1><b style='mso-bidi-font-weight:normal'>PC SAT Telemetry Analysis<o:p></o:p></b></h1>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<h2>PC SAT transmits a total of 32 telemetry values, 16 from each the A and B
+side. These are transmitted in four blocks of five values each (the fifth value
+is a constant representing the 5 Volt reference).<span style="mso-spacerun:
+yes">  </span>The different values being transmitted include temperatures on PC
+SAT, currents from solar panels and from batteries, and voltages from
+batteries.<span style="mso-spacerun: yes">  </span>In order to determine which
+set of values the packet contains, you must first determine if the values are
+from the A side or the B side.<span style="mso-spacerun: yes">  </span>This is
+determined by the call sign.<span style="mso-spacerun: yes">  </span>For the A
+side, the call sign (located in the beginning of the telemetry packet) is W3ADO.<span
+style="mso-spacerun: yes">  </span>For the B side, it is PCSAT.<span
+style="mso-spacerun: yes">  </span>Below is a sample of a telemetry packet from
+the A side.<span style="mso-spacerun: yes">  </span></h2>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h1><u>W3ADO</u>-1&gt;BEACON:SGATE:T#002,132,138,159,131,213,11111111,0001,0</h1>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><span
+style='mso-tab-count:3'>                                    </span><span
+style="mso-spacerun: yes">    </span>The “W3ADO” indicates that the telemetry
+packet comes from the A side.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>The
+next distinction for each packet is the cycle count.<span style="mso-spacerun:
+yes">  </span>There are four cycles for each side.<span style="mso-spacerun:
+yes">  </span>Each designated by a 0-3 binary code (00,01,10,11).<span
+style="mso-spacerun: yes">   </span>These two digits are located on the last
+two digits of the second to last number separated by commas as shown
+below.<span style="mso-spacerun: yes">  </span></span></p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h1>W3ADO-1&gt;BEACON:SGATE:T#002,132,138,159,131,213,11111111,00<u>01</u>,0</h1>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in'><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>The “01” <span
+style="mso-spacerun: yes"> </span>indicates that this is telemetry cycle 01.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>The
+four values that correspond to the telemetry values are those located directly
+after the telemetry count (which is represented by T#XXX).<span
+style="mso-spacerun: yes">  </span>On the telemetry packet above, the four
+telemetry values are “132,138,159,131.”<span style="mso-spacerun: yes"> 
+</span>The fifth value is a constant, which represents the 5V reference. The
+table below identifies the location of each value.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<table border=1 cellspacing=0 cellpadding=0 style='border-collapse:collapse;
+ border:none;mso-border-alt:solid windowtext .5pt;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr>
+  <td width=43 valign=top style='width:.45in;border:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Side<o:p></o:p></span></p>
+  </td>
+  <td width=66 valign=top style='width:49.5pt;border:solid windowtext .5pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Cycle
+  Count<o:p></o:p></span></p>
+  </td>
+  <td width=114 valign=top style='width:85.5pt;border:solid windowtext .5pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>First
+  Value<o:p></o:p></span></p>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border:solid windowtext .5pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Second
+  Value<o:p></o:p></span></p>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border:solid windowtext .5pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Third
+  Value<o:p></o:p></span></p>
+  </td>
+  <td width=127 valign=top style='width:95.4pt;border:solid windowtext .5pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Fourth
+  Value<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=43 valign=top style='width:.45in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>A<o:p></o:p></span></p>
+  </td>
+  <td width=66 valign=top style='width:49.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>00<o:p></o:p></span></p>
+  </td>
+  <td width=114 valign=top style='width:85.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Current
+  +X<o:p></o:p></span></p>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Current
+  +Z<o:p></o:p></span></p>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Current
+  +Y<o:p></o:p></span></p>
+  </td>
+  <td width=127 valign=top style='width:95.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Current
+  –X<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=43 valign=top style='width:.45in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>A<o:p></o:p></span></p>
+  </td>
+  <td width=66 valign=top style='width:49.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>01<o:p></o:p></span></p>
+  </td>
+  <td width=114 valign=top style='width:85.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Temp<span
+  style="mso-spacerun: yes">  </span>+Y<o:p></o:p></span></p>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Temp
+  Batt A<o:p></o:p></span></p>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Temp
+  XMIT A<o:p></o:p></span></p>
+  </td>
+  <td width=127 valign=top style='width:95.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Temp
+  +Z<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=43 valign=top style='width:.45in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>A<o:p></o:p></span></p>
+  </td>
+  <td width=66 valign=top style='width:49.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>10<o:p></o:p></span></p>
+  </td>
+  <td width=114 valign=top style='width:85.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Temp
+  +X<o:p></o:p></span></p>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Temp
+  Stack A<o:p></o:p></span></p>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Current
+  –Y<o:p></o:p></span></p>
+  </td>
+  <td width=127 valign=top style='width:95.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Current
+  Batt A<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=43 valign=top style='width:.45in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>A<o:p></o:p></span></p>
+  </td>
+  <td width=66 valign=top style='width:49.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>11<o:p></o:p></span></p>
+  </td>
+  <td width=114 valign=top style='width:85.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>A-Batt
+  A Volt<o:p></o:p></span></p>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>A-
+  Batt B Volt<o:p></o:p></span></p>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Power
+  out A<o:p></o:p></span></p>
+  </td>
+  <td width=127 valign=top style='width:95.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>8V
+  Reg A<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=43 valign=top style='width:.45in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><span
+  style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><o:p></o:p></span></p>
+  </td>
+  <td width=66 valign=top style='width:49.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><span
+  style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><o:p></o:p></span></p>
+  </td>
+  <td width=114 valign=top style='width:85.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><span
+  style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><o:p></o:p></span></p>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><span
+  style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><o:p></o:p></span></p>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><span
+  style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><o:p></o:p></span></p>
+  </td>
+  <td width=127 valign=top style='width:95.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><span
+  style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=43 valign=top style='width:.45in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>B<o:p></o:p></span></p>
+  </td>
+  <td width=66 valign=top style='width:49.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>00<o:p></o:p></span></p>
+  </td>
+  <td width=114 valign=top style='width:85.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Current
+  -X<o:p></o:p></span></p>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Current
+  -Z<o:p></o:p></span></p>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Current
+  –Y<o:p></o:p></span></p>
+  </td>
+  <td width=127 valign=top style='width:95.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Current
+  +X<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=43 valign=top style='width:.45in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>B<o:p></o:p></span></p>
+  </td>
+  <td width=66 valign=top style='width:49.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>01<o:p></o:p></span></p>
+  </td>
+  <td width=114 valign=top style='width:85.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Temp
+  -Y<o:p></o:p></span></p>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Temp
+  Batt B<o:p></o:p></span></p>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Temp
+  XMIT B<o:p></o:p></span></p>
+  </td>
+  <td width=127 valign=top style='width:95.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Temp
+  -Z<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=43 valign=top style='width:.45in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>B<o:p></o:p></span></p>
+  </td>
+  <td width=66 valign=top style='width:49.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>10<o:p></o:p></span></p>
+  </td>
+  <td width=114 valign=top style='width:85.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Temp
+  -X<o:p></o:p></span></p>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Temp
+  Stack B<o:p></o:p></span></p>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Current
+  +Y<o:p></o:p></span></p>
+  </td>
+  <td width=127 valign=top style='width:95.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Current
+  Batt B<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=43 valign=top style='width:.45in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>B<o:p></o:p></span></p>
+  </td>
+  <td width=66 valign=top style='width:49.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>11<o:p></o:p></span></p>
+  </td>
+  <td width=114 valign=top style='width:85.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>B-Batt
+  A Volt<o:p></o:p></span></p>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>B-Batt
+  B Volt<o:p></o:p></span></p>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Power
+  out B<o:p></o:p></span></p>
+  </td>
+  <td width=127 valign=top style='width:95.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>8V
+  Reg B<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>The
+following table gives the unit conversion equations for each of the
+telemetry<span style="mso-spacerun: yes">  </span>values as to the coefficients
+of a general CUBIC equation of the form Ax^3 + Bx^2 + Cx + D where X is the raw
+value in the packet.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:106.5pt'><span style='font-size:12.0pt;
+mso-bidi-font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<table border=0 cellspacing=0 cellpadding=0 width=484 style='width:363.0pt;
+ border-collapse:collapse;mso-padding-alt:0in 0in 0in 0in'>
+ <tr style='height:12.75pt'>
+  <td width=64 nowrap valign=bottom style='width:48.0pt;border:solid windowtext .5pt;
+  padding:.85pt .85pt 0in .85pt;height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>Side</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td width=64 nowrap valign=bottom style='width:48.0pt;border:solid windowtext .5pt;
+  border-left:none;padding:.85pt .85pt 0in .85pt;height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>Cycle</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td width=100 nowrap valign=bottom style='width:75.0pt;border:solid windowtext .5pt;
+  border-left:none;padding:.85pt .85pt 0in .85pt;height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>Channel</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td width=64 nowrap valign=bottom style='width:48.0pt;border:solid windowtext .5pt;
+  border-left:none;padding:.85pt .85pt 0in .85pt;height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>&nbsp;</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td width=64 nowrap valign=bottom style='width:48.0pt;border:solid windowtext .5pt;
+  border-left:none;padding:.85pt .85pt 0in .85pt;height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>&nbsp;</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td width=64 nowrap valign=bottom style='width:48.0pt;border:solid windowtext .5pt;
+  border-left:none;padding:.85pt .85pt 0in .85pt;height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>&nbsp;</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td width=64 nowrap valign=bottom style='width:48.0pt;border:solid windowtext .5pt;
+  border-left:none;padding:.85pt .85pt 0in .85pt;height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>&nbsp;</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='height:12.75pt'>
+  <td nowrap valign=bottom style='border:solid windowtext .5pt;border-top:none;
+  padding:.85pt .85pt 0in .85pt;height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>&nbsp;</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>Count</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>&nbsp;</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>A</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>B</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>C</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>D</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='height:12.75pt'>
+  <td nowrap valign=bottom style='border:solid windowtext .5pt;border-top:none;
+  padding:.85pt .85pt 0in .85pt;height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>A</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>00</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>Current +X</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0.0012</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0.646</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>-25.96</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='height:12.75pt'>
+  <td nowrap valign=bottom style='border:solid windowtext .5pt;border-top:none;
+  padding:.85pt .85pt 0in .85pt;height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>A</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>00</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>Current +Z</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0.0048</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0.75</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>-54.6</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='height:12.75pt'>
+  <td nowrap valign=bottom style='border:solid windowtext .5pt;border-top:none;
+  padding:.85pt .85pt 0in .85pt;height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>A</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>00</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>Current +Y</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0.0031</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0.241</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>-25.3</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='height:12.75pt'>
+  <td nowrap valign=bottom style='border:solid windowtext .5pt;border-top:none;
+  padding:.85pt .85pt 0in .85pt;height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>A</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>00</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>Current –X</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0.0024</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0.414</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>-25.3</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='height:12.75pt'>
+  <td nowrap valign=bottom style='border:solid windowtext .5pt;border-top:none;
+  padding:.85pt .85pt 0in .85pt;height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>A</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>01</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>Temp<span
+  style="mso-spacerun: yes">  </span>+Y</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0.3414</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>-19.71</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='height:12.75pt'>
+  <td nowrap valign=bottom style='border:solid windowtext .5pt;border-top:none;
+  padding:.85pt .85pt 0in .85pt;height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>A</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>01</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>Temp Batt A</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0.3414</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>-19.71</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='height:12.75pt'>
+  <td nowrap valign=bottom style='border:solid windowtext .5pt;border-top:none;
+  padding:.85pt .85pt 0in .85pt;height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>A</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>01</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>Temp XMIT A</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0.3414</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>-19.71</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='height:12.75pt'>
+  <td nowrap valign=bottom style='border:solid windowtext .5pt;border-top:none;
+  padding:.85pt .85pt 0in .85pt;height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>A</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>01</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>Temp +Z</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0.3414</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>-19.71</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='height:12.75pt'>
+  <td nowrap valign=bottom style='border:solid windowtext .5pt;border-top:none;
+  padding:.85pt .85pt 0in .85pt;height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>A</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>10</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>Temp +X</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0.3414</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>-19.71</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='height:12.75pt'>
+  <td nowrap valign=bottom style='border:solid windowtext .5pt;border-top:none;
+  padding:.85pt .85pt 0in .85pt;height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>A</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>10</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>Temp Stack A</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0.3414</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>-19.71</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='height:12.75pt'>
+  <td nowrap valign=bottom style='border:solid windowtext .5pt;border-top:none;
+  padding:.85pt .85pt 0in .85pt;height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>A</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>10</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>Current -Y</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0.0037</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0.0264</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>-18.5</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='height:12.75pt'>
+  <td nowrap valign=bottom style='border:solid windowtext .5pt;border-top:none;
+  padding:.85pt .85pt 0in .85pt;height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>A</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>10</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>Current Batt A</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>-0.00004</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0.0114</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>-2.56</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>252</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='height:12.75pt'>
+  <td nowrap valign=bottom style='border:solid windowtext .5pt;border-top:none;
+  padding:.85pt .85pt 0in .85pt;height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>A</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>11</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>A-Batt A Volt</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0.0984</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='height:12.75pt'>
+  <td nowrap valign=bottom style='border:solid windowtext .5pt;border-top:none;
+  padding:.85pt .85pt 0in .85pt;height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>A</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>11</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>A- Batt B Volt</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0.09826</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='height:12.75pt'>
+  <td nowrap valign=bottom style='border:solid windowtext .5pt;border-top:none;
+  padding:.85pt .85pt 0in .85pt;height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>A</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>11</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>Power out A</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0.0311</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='height:12.75pt'>
+  <td nowrap valign=bottom style='border:solid windowtext .5pt;border-top:none;
+  padding:.85pt .85pt 0in .85pt;height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>A</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>11</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>8V Reg A</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0.0356</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='height:12.75pt'>
+  <td nowrap valign=bottom style='border:solid windowtext .5pt;border-top:none;
+  padding:.85pt .85pt 0in .85pt;height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>B</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>00</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>Current -X</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0.0034</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0.2284</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>-26.6</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='height:12.75pt'>
+  <td nowrap valign=bottom style='border:solid windowtext .5pt;border-top:none;
+  padding:.85pt .85pt 0in .85pt;height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>B</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>00</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>Current -Z</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0.0096</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0.864</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>-53.8</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='height:12.75pt'>
+  <td nowrap valign=bottom style='border:solid windowtext .5pt;border-top:none;
+  padding:.85pt .85pt 0in .85pt;height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>B</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>00</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>Current -Y</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0.0023</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0.473</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>-23.2</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='height:12.75pt'>
+  <td nowrap valign=bottom style='border:solid windowtext .5pt;border-top:none;
+  padding:.85pt .85pt 0in .85pt;height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>B</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>00</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>Current +X</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0.003</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0.4</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>-26.6</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='height:12.75pt'>
+  <td nowrap valign=bottom style='border:solid windowtext .5pt;border-top:none;
+  padding:.85pt .85pt 0in .85pt;height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>B</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>01</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>Temp -Y</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0.3414</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>-19.71</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='height:12.75pt'>
+  <td nowrap valign=bottom style='border:solid windowtext .5pt;border-top:none;
+  padding:.85pt .85pt 0in .85pt;height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>B</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>01</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>Temp Batt B</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0.3414</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>-19.71</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='height:12.75pt'>
+  <td nowrap valign=bottom style='border:solid windowtext .5pt;border-top:none;
+  padding:.85pt .85pt 0in .85pt;height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>B</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>01</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>Temp XMIT B</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0.3414</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>-19.71</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='height:12.75pt'>
+  <td nowrap valign=bottom style='border:solid windowtext .5pt;border-top:none;
+  padding:.85pt .85pt 0in .85pt;height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>B</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>01</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>Temp -Z</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0.3414</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>-19.71</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='height:12.75pt'>
+  <td nowrap valign=bottom style='border:solid windowtext .5pt;border-top:none;
+  padding:.85pt .85pt 0in .85pt;height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>B</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>10</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>Temp -X</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0.3414</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>-19.71</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='height:12.75pt'>
+  <td nowrap valign=bottom style='border:solid windowtext .5pt;border-top:none;
+  padding:.85pt .85pt 0in .85pt;height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>B</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>10</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>Temp Stack B</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0.3414</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>-19.71</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='height:12.75pt'>
+  <td nowrap valign=bottom style='border:solid windowtext .5pt;border-top:none;
+  padding:.85pt .85pt 0in .85pt;height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>B</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>10</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>Current +Y</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0.0038</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0.0084</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>-19.8</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='height:12.75pt'>
+  <td nowrap valign=bottom style='border:solid windowtext .5pt;border-top:none;
+  padding:.85pt .85pt 0in .85pt;height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>B</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>10</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>Current Batt B</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>-0.00004</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0.0158</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>-3.32</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>259</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='height:12.75pt'>
+  <td nowrap valign=bottom style='border:solid windowtext .5pt;border-top:none;
+  padding:.85pt .85pt 0in .85pt;height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>B</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>11</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>B-Batt A Volt</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0.09774</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='height:12.75pt'>
+  <td nowrap valign=bottom style='border:solid windowtext .5pt;border-top:none;
+  padding:.85pt .85pt 0in .85pt;height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>B</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>11</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>B-Batt B Volt</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0.09457</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='height:12.75pt'>
+  <td nowrap valign=bottom style='border:solid windowtext .5pt;border-top:none;
+  padding:.85pt .85pt 0in .85pt;height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>B</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>11</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>Power out B</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0.0223</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='height:12.75pt'>
+  <td nowrap valign=bottom style='border:solid windowtext .5pt;border-top:none;
+  padding:.85pt .85pt 0in .85pt;height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>B</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>11</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal><span style='font-family:Arial'>8V Reg B</span><span
+  style='font-family:Arial;mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0.0351</span><span style='font-family:Arial;
+  mso-fareast-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  solid windowtext .5pt;border-right:solid windowtext .5pt;padding:.85pt .85pt 0in .85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span
+  style='font-family:Arial'>0</span><span style='font-family:Arial;mso-fareast-font-family:
+  "Arial Unicode MS"'><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+</div>
+
+</body>
+
+</html>

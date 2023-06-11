@@ -1,0 +1,302 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+   <TITLE>APRS FAQ</TITLE>
+   <META NAME="Author" CONTENT="Bob Bruninga">
+   <META NAME="Description" CONTENT="APRS FAQ">
+   <META NAME="Keywords" CONTENT="APRS, Space Shuttle, SAREX, ISS, International Space Station,
+               satellite, APRS, javAPRS, Bruninga">
+   <META NAME="Classification" CONTENT="Science">
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#87CEFA" LINK="#0000EE" VLINK="#551A8B" 
+ALINK="#FF0000">
+
+<H1 ALIGN=CENTER>
+<IMG SRC="logos/aprs.gif" HSPACE=5 HEIGHT=50 WIDTH=90 ALIGN=TEXTTOP>
+<B>ISS/APRS Satellite Frequently Asked Questions</B></H1>
+<H4 ALIGN=CENTER>Bob Bruninga, <B>WB4APR</B>,
+US Naval Academy Satellite Lab, Annapolis, MD</H4>
+
+<HR WIDTH="100%"><BR>
+<B><U>ARISS PACKET SYSTEM: </B></U> is part of the number of Networked APRS transponders operating in the Amateur Satellite Service that are, or will be, on Orbit in 2016  and all will appear on the live 
+<A HREF="http://pcsat.findu.com"><B>APRS satellite downlink page</B></A> and  <A HREF="http://ariss.net"><B>ISS downlink page</B></A>:
+
+<P ><A HREF="pcsat.html"><B>PCsat-1</B></A> in orbit since 2001 semi-operational
+<BR><A HREF="ariss.html"><B>ARISS</B></A> on the ISS since 2007
+<BR><A HREF="psat.html"><B>Psat</B></A> Operational May 2015
+<BR><A HREF="bricsat-1.html"><B>BRICSAT-1</B></A> launched with PSAT, but insufficient power budget
+
+<BR><A HREF="qikcom-1.html"><B>QIKcom-1</B></A> with terrestrial APRS alert beacon on ISS, but activation blocked by FCC SNAFU
+<BR><A HREF="qikcom-2.html"><B>QIKcom-2</B></A> with APRStt for launch Summer 2016
+<BR><A HREF="psat-2.html"><B>PSAT-2</B></A> To be Launched spring of 2017
+<BR><A HREF="bricsat-2.html"><B>BRICSAT-2</B></A> To be Launched spring of 2017
+<BR><A HREF="astars.html"><B>ASTARS missions:</B></A> Prior APRS missions on other spacecraft, ISS, Shuttle and MIR
+<P>
+
+<B> ISS packet operation </B> relies on the Ericcson radio
+and an extrnal TNC or on the Kenwood D700 installed in late December 2003.  This system
+lets schools and students access/or use the packet transponder on ISS without dependence on the
+very busy schedule of the astronauts.  In 2007 this ISS packet
+operation switched to the global APRS satellite channel on 145.825 to join the constellation of other AX.25 1200 baud packet digipeaters  listed above.
+<P>
+
+
+<P>
+The ISS tries to keep the ISS Packet station on 145.825 when it
+is available.  This lets the packet downlink from ISS operate with the other APRS
+satellites there and its downlink to be collected by the established
+global network of APRS Internet-Gateway stations feeding the data to the
+<A HREF="http://www.ariss.net"><B>ARISS-APRS web page</B></A>.
+<P>
+
+<P>
+<IMG SRC="pcsat/PC2-PC1%20long.GIF" align=right>
+<U><B> JOINT DIGIPEATER CONSTELLATIONS</U> </B>The first joint operations test 
+(11-23 Oct 2002) was successful during which the ISS packet station joined
+the PCsat frequency so 
+that both could operate as a joint constellation of two satellites, not only
+doubling the number of available pass times, but also allowing some dual-hop links.
+  <A HREF="pcsat.html"> See report </A> on PCsat web page.  Since then this experiment
+has been conducted several other times, most recently early Dec 2005 between PCSAT2 
+and PCSAT-1 both operating on 145.825, the Satellite Digipeater frequency.
+. The longest dual dual hop packet observed is shown at right:
+<P>
+
+<P>
+This page contains notes about AX.25 Packet radio operations via the ISS or other
+satellites.  Introduced to the manned
+space programs in 1990 on the Shuttle and MIR, packet radio first became operational 
+on the 
+present ISS on 22 Feb 2001, and operated well for over a year until it became
+intermittant and was replaced with the new Kenwood D700.  This new system, like PCsat, 
+consists of a TNC which can operate in two modes:<BR>
+<LI> UI/APRS Digipeater - Can be used by everyone at the same time (best multi-user mode)
+<LI> Personal Message System - Can only be used by one person at a time (not Recommended for space)
+</FONT>
+<P>
+<B>UI DIGIPEATER:</B> This WEB page addresses how to use the space based UI/APRS digipeaters
+for maximum enjoyment by everyone by using UI or APRS packets.  Typically 50 to 100
+stations per day use this system.   With well over 3500 
+stations captured and archived by Steve Dimse's worldwide APRS file server 
+at FINDU.COM. <A HREF="iss-aprs/isscalls.txt"> See LIST </A>. 
+<P>
+
+<P>
+
+<B>ISS PMS SYSTEM:</B> The PMS (Personal Message System) on ISS was functional and allowed users
+to send and receive message to the crew.   But since it is a single user system,
+it is extremely rare for average stations to be able to log on. 
+It would be nice if someone automated a process for capturing portions of the PMS 
+Message directory just by monitoring, and then post this data to maintain an up-to-date
+<A HREF="iss-aprs/iss-pms.txt"> MESSAGE LIST </A>.  Some stations can choose favorible times
+such as shown below, for accessing the PMS with little impact on others:
+<P>
+<P>
+<IMG SRC="iss-aprs/pms-map.jpg" align=right>
+
+The remainder of this page is dedicated to helping newcomers to understand how to use 
+APRS via the ISS digipeater. 
+
+<P> <FONT SIZE=+1><A HREF="index.html">WHAT IS APRS?</A> . </FONT>
+APRS was designed in the 1990 time frame as a digital equivalent to simple voice nets;
+anyone talks, everyone listens and takes notes.  APRS was intended for local tactical
+real-time HUMAN communications of digital information.
+
+<P> <FONT SIZE=+1>WHAT IS APRS NOW? . </FONT>
+APRS has evolved into a global digital simplex commmunications channel.  You can send
+almost anything, anytime, anywhere, to anyone.  Just  make it fit in one packet.  Think
+of it as HAM radio's RF INTERNET and the Kenwood D7 and D700 data radios as your HAM radio
+WEB/APRS/message capable Radio Display Unit:
+
+<P> <A HREF="satinfo.html">Click Here</A> to see 
+how the D7/D700 radios capture and display Satellite Tracking data (and any other local data)
+for the Traveler without the need for a laptop.
+
+<P> 
+
+<FONT SIZE=+1>HOW BIG IS APRS? . </FONT>
+Basically, APRS is global.  It certainly exists in all countries with HAM Radio 
+operators.  See the
+<A HREF="http://www.findu.com/cgi-bin/dmap.cgi?&amp;offsetx=20&amp;offsety=-90&amp;scale=1.3&amp;width=640&amp;height=&amp;height&amp;map=usa.mp&amp;last=24&amp;nocall=1"><B>USA live map</B></A> or
+<A HREF="http://www.findu.com/cgi-bin/dmap.cgi?&amp;offsetx=0&amp;offsety=120&amp;scale=2.5&amp;width=640&amp;map=europe.mp&amp;last=24&amp;nocall=-1"><B>Europe</B></A>. Anywhere in North America tune in 144.39 or in
+Europe tune in 144.8.
+
+
+
+<P> <FONT SIZE=+1>WHAT DOES THIS HAVE TO DO WITH ISS? . </FONT>
+Due to the APRS potential equivalence to a HAM radio "RF INTERNET" and today's kids 
+total familiarity with the power and fun of the internet, it was thought that letting 
+the ISS downlink its daily position and status directly to simple ground stations at schools
+to kids everywhere might spark an interest in HAM Radio.  Further, since each school or
+station can fully participate with only a single one-second packet, it was thought this
+would let more schools participate on each pass with success.
+
+<IMG SRC="D7xx/d700issF.jpg" align=right>
+
+<P> <FONT SIZE=+1>WHAT IF THE ISS IS NOT IN VIEW DURING MY CLASS? . </FONT>
+You can see the live downlink from ISS at any time on the worldwide LIVE
+ <A HREF="http://www.ariss.net"> LIVE ISS Downlink </A> Map.
+or the similar <A HREF="http://pcsat.aprs.org"> PCSAT/ANDE/GO32</A> site.
+
+<P> <FONT SIZE=+1>HOW DOES THIS LIVE GLOBAL MAP WORK? . </FONT>
+In APRS, any packet heard on RF anywhere is contributed to the global network via the
+IGate function built into almost all copies of APRS.  Anyone can be an IGate.
+Every TCPIP ICON you saw on the above site is feeding data into the network LIVE.
+Anyone running APRS and also on-line as an IGate can feed ISS packets automatically.
+With APRS activity in many countries already, we hope to see live feeds daily from
+the locations shown below:  <A HREF="iss-aprs/ISSigate.jpg">[See Permanent IGates]</A>.
+<P>
+
+
+
+<P> <FONT SIZE=+1>WHY MAPS? . </FONT>
+Since HAMS communicate without wires, phone numbers or addresses over distances of a few feet
+to thousands of miles, usually the first thing of interest is where the other guy is.  Thus
+one packet from each station usually contains a position report.
+
+<P> <FONT SIZE=+1>DO I NEED GPS? . </FONT>
+No...  Only if you are lost...
+
+<P> <FONT SIZE=+1>HOW DO I INPUT MY POSITION WITHOUT A GPS? . </FONT>
+Usually with your fingers.  On your APRS map, just move your cursor to where you are 
+and CLICK, or hit ENTER, etc... it knows the LAT/LONG of your cursor.
+
+
+
+<P> <FONT SIZE=+1>I DON'T HAVE APRS? . </FONT>
+You don't need it.  <A HREF="iss-aprs/issicons.html"> Here's how! </A>  Just enter your
+Grid Square, position, status or message in your packets.
+Any PACKET radio program can send UI packets.  Just set the path to CQ VIA ARISS and
+put the TNC in converse mode and then everything you type will be transmitted in UI mode.
+If you want APRSdos, you can 
+<A HREF="aprsdos/APRS876.ZIP">download</A> it or get other APRS clients for just about any platform or 
+operating system.
+
+<IMG SRC="iss-aprs/iss-igs.jpg" align=right>
+
+<P> <FONT SIZE=+1>APRS IS COMPLEX? . </FONT>
+There are only 4 types of packets.  All packets stand alone and are complete in themselves.
+Position, Status, Messages and Other.  By definition, everyone has only ONE position 
+and only ONE status at any one time.  They may send multiple individual messages but usually
+messages are only one line.  <A HREF="iss-aprs/issicons.html"> Here's how! </A>  
+
+<P> <FONT SIZE=+1>HOW OFTEN DO I TRANSMIT? . </FONT>
+Your objective should be to share the channel with as many other like souls as possible
+and indicate your participation with one successful packet.  
+<A HREF="iss-aprs/iss-tx.txt">See TIMING</A>  or the complete rules
+<A HREF="iss-aprs/utiquet.txt">of UtIquette via ISS</A> or peek at the
+<A HREF="iss-aprs/iss-2min.txt">Real Answer</A>.
+
+<P> <FONT SIZE=+1>CAN I SEND EMAIL? . </FONT>
+Yes!  Just use an APRS formatted message to "EMAIL" and the first word of your message as
+the EMAIL address, and the packet will be delivered via conventional Email (assuming it
+gets digipeated by ISS into the APRS infractstructure somewhere).
+<A HREF="astars/email.txt"> Here's how!</A>
+
+<P> <FONT SIZE=+1>WHAT PATH DO I USE? . </FONT>
+All APRS satellites and the ISS use any of the three generic paths of
+ARISS or APRSAT or WIDE.  Since all of these satellites supports the same
+generic paths (when properly configured), this means you can operate 
+either ISS or <A HREF="pcsat.html"> PCsat </A> or <A HREF="pcsat2.html"> PCSAT2 </A>
+without reconfiguring your TNC!  Just set your UNPROTO path to APRS VIA ARISS 
+and it should work with  both birds.
+
+<P> <FONT SIZE=+1>HAS IT BEEN USED IN SPACE BEFORE? . </FONT>
+Yes.  See <A HREF="astars.html">ASTARS</A> for all the details on APRS in Space.
+
+
+<P> 
+<IMG SRC="iss-aprs/issaprs.jpg"align=right>
+
+<FONT SIZE=+1>WHAT ELSE CAN WE DO WITH ISS/APRS? . </FONT>
+Since ISS Digipeater is NOT conjested over 70% of the earths surface, it makes an ideal
+HAM radio Space Communications Link for stations in remote areas or on the high seas.  The
+map below shows areas where a HAM with a simple 5W APRS HT can periodically report his
+position, and status and also send Email messages via ISS and the worldwide linked APRS
+system (as long as we have IGates in the areas shown.  Hawaii, Canary Islands, SOuth Africa,
+New Zealand, Australia, Brazil).
+
+
+<P> <FONT SIZE=+1>WHATS WRONG?  WHY CAN'T I GET IN? . </FONT>
+A station that works "OK" for your local BBS 5 miles away, may be operating 10 to 20 dB
+below its potential due to a variety of factors.  See <A HREF="iss-aprs/issdelta.html">
+ISS DIFFERENCES</A>.
+
+<P> <FONT SIZE=+1>
+The remainder of this page details one of the first APRS experiments via SAREX.</FONT>
+<P>
+
+
+
+APRS Position/Status reporting via SAREX has been authorized on the last several SAREX 
+missions.  Using the Shuttle as a digipeater allows schools and stations to communicate 
+amongst each other while seeing all other stations participating in the event.  
+
+<P>During June/July 1996, mission STS-78 offered 15 days of
+SAREX activity, on 75% of all passes with 20 voice, 25 packet and 11 school passes. APRS experiments were authorized and 18 stations successfully relayed their positions via SAREX as shown below. Two others relayed their STATUS but without their position.</FONT></P>
+
+<P>A total of 65 APRS packets were received here in Maryland. While 39 stations
+reported trying APRS, only 10 APRS stations reported making a serious effort,
+trying every pass. The conventional SAREX robot recorded over 1300 successful
+packet contacts for 561 different stations with 146 successful two-way
+contacts. We believe that APRS makes a good real-time display for schools
+involved in SAREX activity with the shuttle as shown below.</FONT><BR>
+
+<P>As noted above, APRS is available for most platforms and systems.  The original
+was APRSdos and it still runs on ANY old PC even without windows.  
+<A HREF="ftp://tapr.org/aprssig/dosstuff/APRSdos">download the latest APRSxxx.ZIP from TAPR</A>.
+ For best maps for your area also get the  Xmapxx.zip file for
+your area. Then be sure to use PKUNZIP -d when you unzip these files into
+your APRS directory.
+</UL>
+
+<HR WIDTH="100%"></P>
+
+
+<P>
+<B>What should we do next? </B>
+<BR> Here are my suggestions for an external ISS amateur radio kitchen sink payload 
+that will have muiltiple uplinks and multiple downlinks.  One assumes we will use the
+2m band as the primary 
+<A HREF="iss-aprs/ISSext2mDN.jpg"> DONWLINK band </A>(for maximum visibility by low-tech users)
+
+<!-- and the other assumes we will use 2m for the primary 
+<A HREF="iss-aprs/ISSext2mUP.jpg"> UPLINK band </A>(normal mode J but which
+is susceptible to lots of interloper interference in some countries).  NOTE, both of these
+assume that the current ARISS crew payload is normally OFF when the crew is not actually
+using it.  If the current ARISS hardware stays on, then you cannot use 2 meters for either
+uplink or downlink due to desence/interference and have to got to UHF and S Band which is
+not going to attract low tech users.  One advantage of turning ARISS off when not in use
+is that it allows us to use the same frequencies for spectral efficiency...
+//-->
+
+<P>
+<B> OLD IDEAS IN THE 2001/2002 time frame:</B>  These links are preserved here
+for historical purposes since they reflected the concepts we were promoting back
+then.  There is a lot more going on now with PCSAT2 now on ISS and future payloads
+also planned for ISS.  So read these with a grain-of-salt!
+<P>
+<LI><B>Proposal for use of Packet on ISS.</B> 
+      <A HREF="iss-aprs/ARISS-APRS.htm"> See Power Point presentation.</A>
+<LI><B>Proposal for future Extertnal COMM payload on ISS.</B> 
+      <A HREF="iss-aprs/ARISS-ExtComm.htm"> See Power Point presentation.</A>
+<LI><B> Possible External Payload power and command/control system:</B>
+<P>
+<B>Other ISS Proposals:</B>
+<BR>
+<LI><A HREF="iss-aprs/ARISSu-v.jpg"> Proposed Cross-band Voice repeater </A> operations from ISS.
+<LI><A HREF="iss-aprs/ARISSh-v.jpg"> Proposed PSK-31 Transponder</A> operations on ISS
+<LI><A HREF="iss-aprs/ARISS-fdux.jpg"> Proposed mode-B Planning</A> for operations from ISS
+<LI><A HREF="iss-aprs/bandplan.jpg"> Proposed ISS Mode-B downlinks </A>
+<LI><A HREF="iss-aprs/bandplan.txt"> Proposed BAND PLAN for ISS </A>
+
+
+<CENTER><P>Return to the <A HREF="aprs.html">APRS HOMEPAGE</A> 
+<HR WIDTH="100%"><FONT SIZE=-2>The Naval Academy is a registered user of
+APRS and WinAPRS. The purpose of this web page is to show several applications
+currently in use at this site and should not be considered as an advertisement
+or an endorsement of any commercial product.</FONT></P></CENTER>
+
+</BODY>
+</HTML>

@@ -1,0 +1,53 @@
+Using Google Earth to observe RF Paths                     28 March 09
+----------------------------------------------------------------------
+
+I was amazed at how easy this is.  First, just download Google Earth.
+Run it.  When the Earth appears, just zoom in to anywhere you want to
+see.  When you get zoomed in and want to see terrain, then at the
+bottom of the Layers side bar, click Terrain to ON.
+
+Now TILT the map horizontal by clicking on the UP pointing arrow in the
+upper right corner compass display.  Once you get the map towards
+horizontal, you can use the left and right arrows to turn the view
+clockwise or counter-clockwise.  Use the smaller arrow set to move
+around in latitude and longitude and use the SLIDER bar (or your mouse
+roller) to raise or lower your observation altitude.
+
+MARK YOUR POINTS:  Next mark your points of interest so they are easy 
+to find again.  Use the PUSH-PIN tool to do that.  Now add a LINE-OF-
+SIGHT link by clicking on the "ADD PATH" item on the tool bar.  It 
+looks like 3 little squares connected by two lines.  When the menu 
+comes up, just use your mouse to click on both ends of the link.  It
+appears that you can make more-and-more such points, but this is of
+no value for our point0to-point RF purpose.  Apparently this tool is
+used for setting a FLIGHT-PATH for later flying from point to point.
+
+Finish your path by editing a name.  And be sure to pick the ALTITUDE 
+tab to give your path 3D appearance.  SLide an altitude, then select
+ABSOLUTE height and EXTEND PATH TO GROUND.
+
+SAVE YOUR POINTS:  Use the FILE SAVE menu to save your points.  Then
+you can also use FILE SAVE IMAGE to save a favorite image.
+
+NOTES:  Unfortunately, this tool does not appear to let you enter any
+path other than level.  So I take the middle height between the two
+end points for the path altitude so that I can see how much it clears
+the GROUND in the middle of the path.  That is usually where your 
+path will have clearance problems.  If the clearance issue is closer
+to one end than the other, then interpolate the height.
+
+NOT RF PATH:  Of course, this is not a true RF path determination
+since it probably uses the normal 1/1 visible earth curvature model 
+instead of the usual 4/3rds earth curvature model used for RF.  Also
+it does not take into account Fresnel zones which can enhance or
+deminish the path depending on clearance to other objects.
+
+
+But its free, and easy to use from anywhere on any PC you have sitting
+near by, plus it gives fantastic views!
+
+I am a complete newbee to this of course, so anyone that can improve
+on these suggestions, please speak up.
+
+Bob, WB4APR
+

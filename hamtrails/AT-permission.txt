@@ -1,0 +1,81 @@
+APRS Email to the Appalachian Trail Conservancy            29 May 2009
+----------------------------------------------------------------------
+
+> Todd, Remaley
+> Chief Ranger
+> Appalachian National Scenic Trail
+> P.O. Box 50 (252 Mc Dowell Street)
+> Harpers Ferry,  WV 25425
+> (w)304/535-6171 (c)717/991-0126 (f)304/535-6270
+
+Dear Ranger Remaley,
+
+As a follow-up to our conversation on 28 May, 2008.
+
+I enjoyed talking to you about your concerns for our planned ham 
+radio activity which we call the Appalachian Golden Packet Event we 
+are scheduling for 26 July 2009.  If I can summarize your concerns 
+and our mitigating responses.  I hope you will find these conditions 
+would not require us to submit a formal "AT Event Application", since 
+the actual "AT" is not a significant part of our "event".
+
+DATE:  26 July 2009
+
+SCOPE:  15 locations from Georgia to Maine with only 7 being actually 
+on or near the AT.
+  - Springer Mountain  www.aprs.org/springer.html
+  - Clingmans dome     www.aprs.org/clingmans.html
+  - Cloudland Mountain www.aprs.org/roan.html
+  - Apple Orchard      www.aprs.org/AO.html
+  - Mount Greylock     www.aprs.org/greylock.html
+  - Mt Washington      www.aprs.org/mtwashington.html
+  - Katahdin           www.aprs.org/katahdin.html
+
+EVENT:  In Amateur Radio, we use the term "event" to refer to a 
+congregation of lots of individuals on a common frequency in the 
+radio spectrum and not at a physical "location".  You should not 
+be alarmed that this is an "event" involving a congregation of 
+lots of people at any one site on the AT.  It is not.  It is only 
+a few individuals at these sites, acting as relays for any other 
+individuals wherever they may be (including possibly some individual 
+hikers on the AT).
+
+IMPACT:  We now understand your concern of impact on others, and have 
+revised our plans so as to not encourage any more people at any one 
+site as would be needed.  The typical site only requires a single 
+car, with its existing mobile whip antenna, or a single backpack and 
+battery.  Of course we are hoping to have a BACKUP station at each 
+site for reliability.  So we will commit to limit our impact to no 
+more than 2 cars or 5% of available parking whichever is larger.
+
+We will also discourage any other "contesting" type of amateur radio 
+mobile stations from joining us because these stations are typically 
+much more un-attractive and complex often involving huge arrays of 
+truck mounted antennas.  We have purposefully chosen our date of 26 
+July to avoid any other known amateur radio VHF activities or 
+"events".
+
+WEB PAGE:  We have revised our main web page 
+www.aprs.org/at-golden-packet.html to address these issues:
+
+1) Eliminated the AT logo
+2) Minimize the term Appalachian Trail as an event 
+4) Use "Appalachian Golden Packet Event" instead
+3) Require all participants to sign-up in advance so we can manage 
+   the scope
+4) Discourage other amateur radio contesting operations at our sites
+5) Require site leaderd to obtain any needed permissions at his site
+
+We will keep you informed of any changes and will make any additional 
+changes you might recommend.  Otherwise, our web page will be the 
+best place for the most current information.  
+
+See: www.aprs.org/at-golden-packet.html
+
+Very Respectfully
+
+Bob Bruninga, WB4APR
+bruninga@usna.edu
+US Naval Academy Satellite Lab
+
+

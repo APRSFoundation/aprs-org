@@ -1,0 +1,96 @@
+Updated 15 July 2011:
+
+Martin, KI6WJP prepared this path data from South to North:
+
+His goal is to have at most -140dB path between two points, 
+and drive up access is preferred.   He has worked out a path 
+that gets into Washington, but ran out of time. Here is what 
+he has so far: (Sites with operators listed in BOLD)
+
+As a compromise, I picked the final station at the Peace Arch 
+park in Blaine WA (about 60 Miles west of the PCT).   With a 
+station at each end and 13 digipeaters in between, we should 
+be able to do the entire route with a HOP7-7,HOP7-7 path... 
+with one hop left over.
+
+I have updated the maps:
+http://test.vse.com/maps/pacific-crest-trail-map-2.JPG
+http://test.vse.com/maps/pacific-crest-trail-map-2-sm.JPG
+
+1. Tecate Peak, Mexican border: N32.57949 W116.6889, SOTA W6/CC-044
+       105 mile -120 dB path Tecateÿ to San Gorgonio
+       113 Mile -136 dB path Tecate to Keller
+       The path to Tecate on the Mexico border is -146dB 
+       which isn't all that good, but should be doable.  
+       I couldn't find a better peak along the Mexican border. 
+       The Palomar mountains get in the way.     
+
+2. San Gorgonio Mountainÿ N34.10060 W116.82859, SOTA W6/CT-001 
+       141 mile -122 dB path San Gorgonio to Mt Pinos. 5 Mile Hike in
+
+2. alternate: Keller Peak N 34.19590 W 117.04903
+       126 mile -145 dB path Keller to Mt. Pinos  Note: poor path.
+       Keller isn't as good as San Gorgonio, but about a hundred 
+       times easier to get to. Keller is also a SOTA peak W6/CT-013 
+       The path from Keller to Mt. Pinos is -145dB.   A better 
+       location north of Keller is Breckenridge Mountain 
+       (N 35.45110 W 118.58430 SOTA W6/SN-041  with -136dB path.
+
+3. Mt. Pinos N34.81169 W119.14730 ,SOTA W6/CC-002
+       99 mile -119 dB path Mt Pinos to Jordan Peak
+
+4. Jordan Peak N 36.18153 W 118.59810 2 mile hike
+       157 mile -126 dB path to Jordan Pk to Red Hill Rd north of pacheco pass
+
+5. Red Hill Road N 37.12512 W 121.19340
+       90 miles -132dB path Red Hill to Arnold
+
+6. Arnold Rocky Ridge N 38.24964 W 120.34887 AE6LA
+       150 mile -124dB path Arnold to St John Mt
+
+7. St. John Mt N 39.43619 W 122.69531
+       130 mile -121dB path St John Mt to Mt Eddy
+
+8. Mt Eddy N 41.32733 W 122.47559 SOTA W6/CC-001. 5 mile hike KI6WJP
+       111 mile -143dB path to Crater Lakeÿ note!! poor path.
+ 
+9. Crater Lake OR N42.91034 W122.14276 NR6J
+       49 mile -134dB path to Crater Lake Wolf Mountain
+
+10. Wolf Mountainÿ N43.61666 W122.23000
+       89 mile -118dB path Wolf Mountain to Mary's Peak
+
+11. Mary’s Peak N44.50434 W123.55156
+      132 Mile -135dB path Mary’s Peak to Signal Peak WA
+
+12. Signal Peak WA N46.2859 W122.5519
+       56 mile -114dB path Signal Peak to Rock Candy Mountain
+
+13. Rock Candy Mountain N47.00865 W123.11095
+       94 Mile -120dB path Rock Candy Mountain to Pilchuck Mountain
+
+14. Mount Pilchuck N48.05788 W121.79679 2 mile hike
+       78 Mile -136dB path Mt. Pilchuck to Peace Arch, Blaine,WA
+
+15. Peace Arch Blaine, WA: N49.00207 W122.756558  Canadian Border.
+
+Total radio path, Tecate to Blaine, 1481 Miles 
+
+A bit more searching and we should be all the way to Canada.
+You Washington ham's start looking at your maps.
+
+He is using "SPLAT" for the path analysis 
+(http://www.qsl.net/kd2bd/splat.html)
+Using the web interface here http://splat.wa7uhf.com/
+
+He is using the USGS topo maps available at mapper.acme.com
+This uses the google maps interface and covers the entire US.
+
+This is just a proposal, nothing is locked in.
+If you find a better site speak up.
+
+Martin 
+KI6WJP
+
+
+

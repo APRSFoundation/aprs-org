@@ -1,0 +1,49 @@
+APRS USER Operations Plan for ANDE and RAFT         19 Dec 2006
+---------------------------------------------------------------
+                                                         WB4APR
+Posted on AMSAT-BB:
+
+RAFT and ANDE are APRS satellites to be deployed on Thursday.
+
+We ask that ALL radio amateurs (except for command stations)
+refrain from any transmissions until after the spacecraft have
+been opened for general use.  There are many stations involved
+in the checkout, so wait until you see specific authorization
+for general use before using the digipeater.  If all goes well
+in a few days, we hope to open the satellites up for general use
+in accordance with the User Service Agreement.  See:
+http://www.ew.usna.edu/~bruninga/ande/ANDEcontract.txt
+
+The success of these digipeaters is protocol driven and depends
+on user adherence to published operating parameters.  Please
+check the User Service Agreement before operating and
+periodically throughout the short life of these satellites.
+Basically it says you are authorized for these initial beacon
+rates:
+
+Unattended, beacon one APRS packet per 5 minutes only
+Attended Base, beacon one Position packet per 2 minutes
+Mobile, beacon no higher than 2 minutes
+Attended 5W HT, is authorized to beacon at a 1 minute rate.
+
+To aid everyone in understanding the statistics of this channel,
+please include your Effective Radiated Power (ERP) and beacon
+rate in your packet.  Example: !DDMM.HHN/DDDMM.HHW-Bob,50W,2min
+mobile.
+
+Remember that ERP is your TX power plus your antenna system
+gain.
+
+Operating authorization will change as we learn the demands on
+the uplink and the load on the systems.  Keep up to date on WEB
+page that covers all three satellites (ANDE, RAFT and NMARS):
+
+http://www.ew.usna.edu/~bruninga/ande-raft-ops.html
+
+All of these new satellites have less than optimum antennas and
+so they will probably be harder to operate than PCSAT-1.  We do
+hope that PCSAT-1 will come out of hybernation the first week of
+January for some multi-satellite opportunities.  Stay tuned.
+
+Bob Bruninga, WB4APR
+USNA Satellite Lab

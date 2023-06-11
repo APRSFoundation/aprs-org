@@ -1,0 +1,18 @@
+Report from VA Mountains (White rock Cliffs)  27 July 09
+--------------------------------------------------------
+
+WHTRCK:   D700 TX on Medium Power packet.  VHF Only
+Antenna:  Hiking Portable Collinear J-Pole
+          Custom built the day before from design
+          from previous weeki in EZNEC.
+Schedule: Digi on air in wrong mode about 1:15pm
+          Loaded PM5 about an hour later
+          Stayed on air till 4 pm.
+Echolink: Did not participate
+
+RX NE to MD Mtns 8 or 9 bars packet
+RX NE to MD Mtns 8 or 9 bars simplex voice
+RX SW to AO no packet ever heard
+RX SW to AO Repeater 9 bars
+
+John Huggins, KX4O

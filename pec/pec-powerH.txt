@@ -1,0 +1,55 @@
+PCSAT2 COMM POWER BUEGET                                     WB4APR
+-------------------------------------------------------------------
+                                                        31 Jan 2003
+
+The simple Naval Academy telemetry and command system design has
+been flight proven on PCsat launched on 30 Sept 2001.  It provides
+the following capabilities on orbit with the minimum power 
+requirements suitable for this mission:
+
+1) Routine Telemetry of 5 analog parameters (0-5 volts) every minute
+2) Bi-directional serial telemetry periodically, or on command..
+3) Eight on/off command channels (maybe 10)
+4) AX.25 1200 baud compatibilitiy with all existing packet systems 
+   and the worldwide internet linked APRS gnd stations on 145.825.
+5) PCsat style USER communications worldwide at low duty cycle
+6) Reception by student stations with only a whip antenna.
+6) Average power requirement of about 5 watts
+
+The power budget has been derived from the assumptions that the 
+Satellite is in view of each command station on 4 passes a day.  
+There are about 6 full time commmand station areas, East USA, West USA,
+East Europe, West Europe, east Australia and Japan.  The satellite may 
+be used in other locations, but the duty cycle will be insignificant 
+to these six.
+
+Each such pass is assumed to last 10 minutes.  Thus the total access
+times average to about 5 hours a day for an estimated 20% user
+access dutycycle.  While in use, the half-duplex link is only in 
+transmit about 20% of the time.  All the rest of the time, only the 
+load of the TNC/Receiver and occasional 1 minute telemetry are involved.
+
+  Receivers    -  100ma @ 12 volts @ 100%        = 1.2 W
+  TNCs         -   60ma @ 12 volts @ 100%        =  .8 W
+  Other decode -   20ma @ 12 volts @ 100%        =  .3 W
+  XMTRs (pkt)  -  600ma @ 12 volts @  30% of 20% =  .4 W
+  XMTRS Comms  -  600ma @ 12 volts @  20%        = 1.5 W
+ 
+  Total AVERAGE Power               packet only = 2.8 W
+                                    and PSK-31  = 4.3 W
+                                    and Voice   = 5.8 W
+
+  Power Supply Requirements:  Critical Control and RX current 200 ma
+                              Inrush current for 500 uF
+
+                              EVA Inhibited TX power Peak current 1.8a
+                              Inrush current 0. 300uF when keyed.
+
+PSK-31 and Voice modes will only be activated when the power budget
+permits.
+
+Present expectations of the location of PECsat on ISS are above the
+aplha joint so that the solar panel is facing the sun whenever the ISS
+is in the sun. 
+
+de WB4APR, Bob Bruninga

@@ -1,0 +1,47 @@
+Comments form Peter, G3PLX the father of PSK31:                 18 Jan 2014
+---------------------------------------------------------------------------
+
+31.25Hz DETECTION:  I see that KA3WCA has picked-up on my suggestion of 
+monitoring the 31.25Hz component of the uplink envelope in order to detect 
+the presence of PSK31 activity in the uplink band. I did a lot of 
+simulation work on this at the time and this was one of the features I 
+thought would be very beneficial in a future transponder of this type. I am 
+guessing that there is enough DSP capability in the design to be able to do 
+this rather than build it in hardware. [WB4APR:  I hope to avoid DSP 
+complexity on this mission]  I would be very keen to contribute ideas to 
+this feature.
+
+[WB4APR: KA3WCA's test showed severe 31 Hz fading] Yes in theory you could 
+have two exactly equal-amplitude signals which have baudrates which differ 
+by 0.01 Hz, and the detector would pull-in and drop-out in a 100 second 
+cycle, but that's going to be a rare thing. Most of the time there will 
+be a lump of narrow-band noise centred on 31.25 Hz if the uplink is active 
+with PSK31 signals, and nothing otherwise. 
+
+As you suggest, you detect the activity by a simply incoherent sum of the 
+energy near 31.25Hz.  The 28MHz SSB receiver output will be AGC-controlled 
+so it's r.m.s. level is constant (remember that I have suggested we do this 
+to give the tx maximum mean deviation all the time) so this 31.25Hz detector
+ should be very stable. If you want to experiment with this, I can write you 
+a little program (or KA3WCA can) that will display the AM spectrum around 
+31.25Hz of an SSB receiver output. You can leave it running on the 3 kHz slot 
+where the PSK31 activity is on any HF band and see the effect, and compare it 
+with how it looks when there is either only band noise or if there is some 
+other signal present (e.g. a CB station or a fishing buoy). We could then add 
+the detection algorithm and tweek it until we are happy and then hand it over 
+to whoever will be writing the software for the on-board DSP chip.
+
+[WB4APR: again, hoping for a hardware solution]
+
+To shut the transmitter off out over an ocean where there is no activity,
+a time-constant of several minutes would do that perfectly well. I suggest 
+a detection bandwidth +/-0.25Hz would be enough. We can alert users to the 
+need to check their soundcard samplerate calibration. Most PSK31 packages 
+have an adjustment for this to take out the soundcard samplerate tolerance 
+error. This not only makes sure the tone frequency readout is correct but 
+sets the baudrate to exactly 31.25Hz.
+
+73
+Peter G3PLX
+
+

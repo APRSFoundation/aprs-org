@@ -1,0 +1,34 @@
+***************************************************************************
+*                  ATGP 2017 Report for Clingmans                        75
+***************************************************************************
+
+Had a great time assisting Larry Ford - K4AEC at Clingmans Dome. Last year 
+I was a Springer with Tom's support team.
+
+I trove a total of 382 miles round trip. I camped at Smokemont Campground 
+down US 441 from Clingmans. 
+
+I arrived around 9:45 to find Larry already setup and with traffic between 
+him and Springer and Roan. I quickly setup my gear, a N9TAX VHF/UHF Slim 
+Jim J-Pole Dual Band 2m 70cm Antenna, my TM-D710G powered by Valence 
+U1-12RT 12.8V 40Ah Lithium Ion Battery (type LiFeMgPO4). 
+
+Once up and operational CLNGMN-2 was switched over to my rig as Larry was 
+having issues with 9600 in his 700. After several unsuccessful BECON's with 
+not traffic, Tom-KG4VUB prompted me to recheck all my menu setting where 
+I realized I hadn't changed my call over to CLNGMN-2 as well as missing 
+the setting ALIAS=HOP once those were corrected we saw 9600 traffic up to 
+station 5 but nothing beyond. Once word came down to switch over to 1200 
+Baud and clearing out of the previous list as well as a BECON cycle, with 
+in a few BECON cycles traffic from all upstream stations began to up and 
+down the chain. It was a great success to all who work through the issues 
+to make this another successful ATGP. I'm thankful to Tom Olley - KG4VUB 
+and Frank Dean  -K4SJR for inviting me to last years event at SPringer 
+where we had a team of 6 and this year to Larry Ford K4AEC for letting me 
+assist and be apart of his team at Clingman's Dome. CD had very wet weather 
+with thunder all around at time but no lightening, TONS of pedestrian 
+traffic with a lot of them inquiring as to our strange pole and antennas 
+and radios. I'm looking forward to being apart of Larry's team next year 
+for the 2018 ATGP. Cheers !
+
+Greg Smith - KK4YLX

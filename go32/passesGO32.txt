@@ -1,0 +1,72 @@
+Mobile Satellite operation via GO-32                    1 Aug 2008
+------------------------------------------------------------------  
+
+The pass times of GO-32 repeat every 9 days.  Just cut the table 
+below for your time zone.  Tape it to your dashboard and you can 
+see pass times for your mobile every day for the next 3 months 
+within about 5 minutes.
+
+To use it on any day, just look for a column near your date.
+Then move left or right the number of days to your day.  The best
+morning and best evening passes are shown.  There is a lower pass 
+100 minutes earlier to the east and 100 minutes later to the west.
+
+EASTERN Daylight Time
+01Aug 11Aug 21Aug 31Aug 10Sep 20Sep 30Sep 10Oct 20Oct
+----- ----- ----- ----- ----- ----- ----- ----- -----
+0920  0855  0835  0810  0930  0905  0845  0820  0940
+            1015  0950              1025  1000
+
+2035  2015  1955  1930  2005  2025  2005  1940  1920
+            2135  2110                    2120  2100
+
+
+CENTRAL Daylight Time
+01Aug 11Aug 21Aug 31Aug 10Sep 20Sep 30Sep 10Oct 20Oct
+----- ----- ----- ----- ----- ----- ----- ----- -----
+0820  0935  0915  0850  0830  0945  0925  0900  0840
+1000              1030  0910                    1020
+
+1940  2055  2035  2015  1950  1930  2045  2020  2000
+2120                    2130  2105              2140
+
+
+MOUNTAIN Daylight Time
+01Aug 11Aug 21Aug 31Aug 10Sep 20Sep 30Sep 10Oct 20Oct
+----  ----- ----- ----- ----- ----- ----- ----- -----
+0900  0840  0955  0930  0910  0850  0825  0945  0920
+1040  1020                    1030  1005
+
+2020  1955  1935  2055  2030  2010  1945  1925  2040
+      2140  2115                    2125  2105
+
+
+PACIFIC Daylight Time
+01Aug 11Aug 21Aug 31Aug 10Sep 20Sep 30Sep 10Oct 20Oct
+----  ----- ----- ----- ----- ----- ----- ----- -----
+0940  0920  0855  0835  0810  0930  0805  0845  0820
+                  1015  0950                    1005
+
+1920  2040  2015  1955  1930  1910  2025  2005  1945
+2100                    2110  2050              2120
+
+
+Details:  Morning passes will be a few minutes earlier in the North 
+and a few minutes or so later in the South.  Evening passes will be
+the reverse.  On the days when there are two passes, they are both 
+low, and you won't be able to work the one before or after.  On the 
+days with a single pass shown it is a very high pass and there will 
+be one before and after (100 minutes).
+
+Taking these in mind, consider your location in your time zone.
+If you are on the eastern edge, then the earlier pass will be
+better and the unprinted earlier pass will also be good.  To the
+west of your timezone, the later passes are better.  As the months
+progress, you can also shift earlier by 3 minutes per month for
+best accuracy.
+
+The tables above were generated at the center of their time zones
+120, 109, 94, and 78 degrees west at about 40 degrees latitude and
+for passes above 25 degrees or so.
+
+Bob, WB4APR

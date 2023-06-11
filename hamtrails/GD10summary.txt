@@ -1,0 +1,78 @@
+Govnr' Dick Hill 2010 Summary                          26 July 10
+-----------------------------------------------------------------
+                                                           WB4APR
+
+Participants:  WB4APR Bob Bruninga
+               KC2UML Rory Shaffer
+
+Bob was late due to a 1 hour round trip to get a forgotten PC
+to D700 cable (not used).  Bob didn't get to parking lot till 
+about noon and didn't get to the top of the tower and the D700 
+on the air till maybe 12:30.  MD mountain and White Rock Cliffs
+were seen immediately. 
+
+The Climb up the mountain in 106 degree effective temperature and
+humidity was brutal.  But then dark clouds were seen to the 
+north and weather reports were giving warnings for thunderstorms
+with hail the size of golf balls.  We waited till lightening was
+under a mile away and then quickly climbed into the concrete tower
+to ride out the storm.  Disconnecting the antenna from the radio
+takes two hands and left a good jolt through the body!
+
+Poured down and 60 MPH winds for about 10 minutes, then drizzel
+for an hour.  We were back on the air in about 15 and back in
+comms with MDMTN-7 and WHTRCK-6.
+
+WHTRCK was not digipeating HOPn-N packets so we switched to their
+exact call WHTRCK-6 in the path and were able to send packets down
+into VA using the path HOP1-1,WHTRCK-6,AOMTN-5,MDMTN and hear them
+come back.
+
+We all made good use of text messaging.  DId not even bother with
+the laptop, since front panel operation was just fine.
+
+GDHILL:   D700 TX on Medium power packet and UHF:
+Antenna:  single dual band vertical (3 dBi and 4.5 dBi)
+
+CQSRVR:  Sent out occasional status reports on 144.39 via the
+CQSRVR, but never heard anything from other stations, though we
+kept forgetting to keep an APRS HT on 144.39.
+
+LOCAL REPEATER:  We also forgot to maintain a constant monitor on
+our published local repeater.
+
+Echolink: net not attempted
+
+Received SW to MD Mtns all 9 bars packet
+Received RX SW to MD Mtns all 9 bars on 445.925 voice
+Could hear weak signals from WHTRCK direct, but not decode
+or understand voice fully due to high level of intermod.
+
+BATTERIES:  We ran the D700 from a 20 AH gel cell.  TUrns out
+when we got home, and charged it at 2 amps, it was fully charged
+in under an hour!  So we used less than 2 AH.  But we had carried
+32 Amp Hours of backup batteries up the hill!  A lot of that was
+for the laptop that we never used... and WILL NOT USE EVER AGAIN
+when we see how light we can be by just powering the D700 only.
+
+All the HT's lasted the full event on their own batteries.
+
+COMMENTS:
+
+Echolink?  I think this is an area where we can all learn a lot.
+This is a great system for long distance coordination, but I
+admit, I have never used it from the mobile either, and so we
+have a lot to learn.  I was unable to find a guru to write up a
+good plan for us so most of us were working in the dark.  But
+getting those ECHOLINK and IRLP Beacons into every digipeater so
+we can SEE the OPEN ones while we are mobile, makes it as simple
+as 123456 to call  home, and #to finish the QSO.  What could be
+a greater asset to the mobile operator!
+
+This was a great second year.  We will definitely plan for this
+next year along with trying to get other long haul trails
+interested.  At Field Day, we don't get no respect, never have
+in 20 years.  Im tired of that.  Lets make this a great annual
+event for VHF and Packet!
+
+Bob, Wb4APR

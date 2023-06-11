@@ -1,0 +1,167 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+   <TITLE>APRStt marginal use of the China Radios </TITLE>
+   <META NAME="Author" CONTENT="Bob Bruninga, WB4APR">
+   <META NAME="Description" CONTENT="APRStt">
+   <META NAME="Keywords" CONTENT="Bruninga,Wouxun,Baofeng, wb4apr, aprstt, dtmf, radio, position, wb4apr, GPS, APRS">
+   <META NAME="Classification" CONTENT="Science">
+</HEAD>
+<BODY TEXT="#FF0000" BGCOLOR="#87CEFA" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000"> 
+
+<H1 ALIGN=CENTER>
+<IMG SRC="../logos/satellite.gif" HSPACE=30 HEIGHT=32 WIDTH=32 ALIGN=TEXTTOP>
+<B>APRStt marginal utility in the Chinese Radios</B>
+<IMG SRC="../logos/satellite.gif" HSPACE=30 HEIGHT=32 WIDTH=32 ALIGN=TEXTTOP>
+</H1>
+
+<!-- begin comments and the next line ends them
+//-->
+<FONT COLOR="#000000"><FONT SIZE=4>
+<P>
+<HR SIZE=5 WIDTH="100%"></P>
+</FONT>
+
+<IMG SRC="radio-Baofeng.jpg" align=right>
+<IMG SRC="radio-Wauxun.jpg" align=right>
+
+The Wouxun  and Baofeng radios have no DTMF memories and so are very very limited in what they
+can do in APRStt.  The only thing they have is an ANI memory where you can put a 5 digit
+DTMF code for automatic identification everytime you key the radio or release the PTT.
+
+We cannot even fit a shortest APRS tactical call in this memory <B> A123*#</B> since it is 6 keys and not 5.
+But if the user enters A123* and <B><i>remembers</i></B> to manually press the # key after the tone burst,
+then APRStt can see him as an object "123". (Maybe we need a still shorter ANI DTMF format in APRStt.)
+
+<P>
+<B>WOUXUN/Baofeng Operations Notes by Daniel KB3MUN:</B>
+
+<P>
+Given my perception of other similarities between the Wouxun and the Baofeng radios, 
+I'm going to assume that they are quite similar in their DTMF capabilities.  
+I am reporting this information from examining my Baofeng UV-5RE+ and from 
+conversation with a friend that has a UV-5R.
+<P>
+
+These radios have a limited DMTF string storage capability.  
+This takes the form of something called Automatic Number Identification (ANI) 
+and something called a Signal Code (15 of these are available).  
+Each of these can store no more then 5 DTMF digits, and while numeric digits are most common, 
+the programming software allows entry of 0..9, A..D, *, & #.  
+None of these can be programmed from the HT's keypad (i.e., required computer 
+with configuration software), but the control of them can be selected from the 
+HT's keypad driven menu.  My radio came pre-programmed with numeric only digits in all of these memories.
+
+<P>
+
+The ANI can be configured to be sent on PPT-down, PTT-release, both, or turned off.  
+I have not searched deep enough to determine when the Signal Code is transmitted,
+ but I suspect that it is at the same time as the ANI.  
+Both of these features seem primarily oriented to use of the HT in a 
+business/commercial application and are intended to either identify the individual radio 
+to the dispatcher and perhaps (in the case of signal codes as a type of 
+selective transmission squelch) to subdivide the radio pool into talk groups.
+<P>
+
+ANI:  exactly 5 characters, range 0..9.  (CHIRP allows the broader DTMF digit entry,
+but when sent to the radio, only the numeric digits up to the first non-numeric 
+show up on the Menu item that shows the ANI. 
+CHIRP also allows less than 5 characters, and this shorter string appears on the radio's ANI Menu item.)
+
+<P>
+Signal Code:  0 to 5 characters, range 0..9, A..D, *, #
+
+<P>
+It takes the following 26 keypresses to change the settings on when the ANI 
+and Signal Code are sent.  This is not something a  user will do on the fly.
+He will either have ANI always on, or ANI always off.  So, this function
+is only useful maybe at special events where people will put up with the tones.
+
+<BR>	* Turn radio on
+<BR>	* Press MENU
+<BR>	* Press UPARROW 19 times to get to PTT-ID item
+<BR>	* Press MENU
+<BR>	* Press UPARROW / DOWNARROW to cycle thru 4 choices
+<BR>	* Press MENU
+<BR>	* Press EXIT
+<P>
+
+Select Signal Code to send.  We are still not sure when these tones are sent.  Still waiting for an update.
+<BR>	* Turn radio on
+<BR>	* Press MENU
+<BR>	* Press UPARROW 17 times to get to S-CODE item
+<BR>	* Press MENU
+<BR>	* Press UPARROW / DOWNARROW to cycle thru 15 choices
+<BR>	* Press MENU
+<BR>	* Press EXIT
+
+<P>
+When setting radio to send ANI, I hear only the ANI tones, never any Signal Code tones.  
+Nor have I not found any explanation of the signal code feature other a brief statement 
+that it is only for "calling certain radios" and "not ham related".
+
+<P>
+
+The Wauxun and Baofeng radios have the ABCD DTMF keys, just not labeled.  
+They are horizontal across the top of the keypad instead of vertical down the right side.
+
+<P>
+Note, depending on the firmware release, the Baofeng will have the A..D keys 
+in different orders as you go across the row of keys.  
+See <A HREF="http://www.miklor.com/uv5r/UV5R-FAQ.php#tone"><B>question 54 of the UV-54 FAQ</B></A>
+
+<P>
+
+Please see <A HREF="http://www.miklor.com/uv5r/UV5R-Manuals.html"><B>The (Chinese) Radio Documentation Project</B></A>
+by Lidberg and Unroe and this 
+<A HREF="http://www.miklor.com/uv5r/pdf/uv-5r_v1.0-annotated_by_KC9HI.pdf"><B> PDF</B></A>.
+
+<P>
+In that guide, the one-page chapter 7 "DTMF" adequately covers the manual entry of DTMF tones for transmission.  
+ANI and Signal (Group) Codes are discussed in chapter 12 "Automatic Number Identification".
+
+<P>
+
+Here is some info on Land Mobile, LMR microphones.  
+One has some DTMF letter keys, but not enough.  Some have only the numeric & * & #, 
+but no evidence of the letter keys; although it suppose it is possible that they are 
+'available' as hidden keys like the Chinese radios.
+
+<P>
+Here are some <A HREF="http://www.ebay.com/itm/171103475059?ssPageName=STRK:MEWAX:IT&amp;_trksid=p3984.m1423.l2649"><B> eBay listings</B></A>.
+ 
+
+
+<A HREF="http://www.ebay.com/itm/130702260037?ssPageName=STRK:MEWAX:IT&amp;_trksid=p3984.m1423.l2649"><B> and another</B></A>,
+<A HREF="http://www.ebay.com/itm/271231081615?ssPageName=STRK:MEWNX:IT&amp;_trksid=p3984.m1497.l2649"><B> and another</B></A>.
+
+<P>
+Anyway, while this is evidence to support the proposition of limited LMR use of full DTMF, 
+it is neither an exhaustive study nor an evaluation of how wide-spread the lack of full 
+DTMF support is in the LMR world.
+<P>
+
+My LMR source (Milt Engle N3LTQ) further suggests: "DTMF is an option on most LMR equipment.  
+The ability to generate tones 'on the fly' is limited since most systems would restrict 
+the ability of the individual user to send tone sequences other than those pre-defined 
+by the system owner.  The use of telephone interconnect is limited in LMR and would only 
+require the use of the standard 12 key configuration.  Very few LMR applications would want 
+or need anything beyond the standard 12 key configuration."
+
+<P>
+
+
+73 de Daniel KB3MUN
+
+<P>
+
+
+
+<P>
+Good luck!
+Enjoy <A hREF="../aprstt.html"<B>APRStt</B></A>
+<P>
+Bob, 
+</BODY>
+</HTML>

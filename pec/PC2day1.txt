@@ -1,0 +1,99 @@
+PCSAT2 Day 1 Summary:                           4 August 2005
+-------------------------------------------------------------
+
+Day one for PCSAT2 deployment was an amazing exercise since
+our Naval Academy ground station and all web pages were down,
+dark and hot throughtout the on-orbit installation and 
+activation.  This was due to a LONG planned building power 
+outage to move the AC Power System onto the roof from its 
+16 foot below sea level location which was totally flooded 
+during Isabel 2 years ago.  We ran our radios and 7 laptops 
+and one lamp in a sweltering dark building (outside temps
+in the mid-90's) without HVAC for 4 days via a very long 
+extension cord from another building.  
+
+Not only our web pages were down, but we only had Email via a 
+wireless lan to a laptop.  Fortunately we had a special 
+telephone rigged and were able to stay on a round-the-world
+teleconference call with our other ground stations.
+
+After Deployment, PCSAT2 minimum operating commands were 
+established by USNA ground station on a lucky 2 deg last-pass
+of the day.  But the short access did not allow initializing 
+the FTSCE solar cell experiment.  Without another pass for 14
+hours, we spent the next 24 hours on a continuous telcon with
+our backup command stations making incremental progress in 
+activating the FTSCE experiment.
+
+FTSCE was activated  7 hours later by our NZ station but poor
+downlinks over 6 more passes yielded little meaningful FTSCE 
+data.  After 14 hours or so, on USNA's first pass of the new 
+day,we did get 44 of 54 data lines and subsequent passes 
+yielded similar results on the next 6 USNA passes.
+
+By mid-day, the automatic WEB page telemetry was beginning to 
+work and ALOGGER data collection was working very well from 
+SOuth Africa and the western USA.
+
+Battery voltage remained nominal at 14 volts and peak charge 
+as high as 1.5 amps out of a possible 1.8 amps were observed 
+even at this 25 or so degree beta angle.
+
+Once FTSCE data was flowing, we activated and tested the 
+PSK-31 transponder and voice repeater.  Both were nominal.  
+On the 1755z pass the PSK-31 transponder was left on for a 
+whole orbit and the fail-safe timer properly reduced the 
+duty cycle to 50%.  We successfully turned it off on the 
+last 1930z pass for the day.
+
+Final settings were also made to reduce telemetry from 10 
+sec to 20 sec in order to halve the TX power used over the 
+next 14 hours of no access.  Also telemetry was reduced to 
+only the 1200 baud set and not the 9600 baud courtesy copy.  
+The FTSCE beacon was left on.
+
+NASA Glen also was getting good data by the end of the day 
+and was satisfied with the quantity to allow analysis.  
+Overall, no system anomolies were observed.  All voltages 
+and currents were nominal.  Temperatures did decay from about
+10C initially down to about 4C over the 32 hour period.
+
+Most stations did observe better signals during the first 
+half of most passes probably due to ISS attitude and PCSAT2 
+blockage.
+
+Also the decision was made at JSC that PCSAT2 would not have 
+to be shut down on every EVA or arm operations, but only if 
+operations were  within 14 meters of our antennas.
+
+After more than 36 hours of continuous operation at USNA 
+operations on PCSAT2 were secured and efforts shifted to 
+ANDE final integration items that are due on Friday at NRL.
+
+Many thanks to our volunteers in CA, NZ, AUS, and the UK who 
+remained on-line with us for more than 24 hours until 
+initial operations were nominal.  Also thanks to the 
+Telemetry and APRS web-master volunteers, software authors 
+and amateur radio volunteer ground stations who made the 
+global data collection effort possible.
+
+Postscript.  A note about PCSAT2 was posted on a popular 
+news group called slashdot and
+
+"In terms of the numbers, there were about 40,000 extra 
+visits and over a million extra hits in the last 18 hours..."
+
+We have no data on our own USNA actual PCSAT2 web pages since 
+the entire building was down as well as our web pages, HVAC 
+and power.  The entire USNA PCSAT2 initial operations and
+checkouit was conducted on emergency power over 3 days on one 
+15 amp emergency circuit with one lamp, a few flashlights, 
+radios and 7 laptops.
+
+Many thanks to the USNA infrastructure technicians that made 
+sure we had the power circuit, telephone and a wireless LAN 
+into one laptop.
+
+Bob Bruninga
+USNA Satellite Lab
+

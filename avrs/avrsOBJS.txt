@@ -1,0 +1,43 @@
+AVRS NODE LIST FORMATS                                  8 Jan 2001 WB4APR
+----------------------
+
+When we get to the point of dumping multiple NODE status to the front panel
+of the Kenwood radios I suggest a format that distinguishes between active 
+and non-active nodes on the Kenwood summmary list.  It looks like this:
+
+  +---------------------------------+
+  |  1: AnaplsMD.   20:36  OBJECT   |
+  |  2: BaltoMD .   20:36  OBJECT   |
+  |  3: WashDC  .   20:36  OBJECT   |
+  |  4: BullRnVA=   20:36  OBJECT   |
+  |  5: SanFrnCA=   20:36  OBJECT   |
+  +--------------------------------+
+
+This display shows 5 out of the 40 list at a time and makes it easy to see
+the status of multiple nodes in a dump from the local IRLP node (on its
+own frequency). The 9th character of the object name indicates its status.
+
+"$" means down  
+"." means idle, 
+"=" means connected  And the link is identified in the OBJECT text field
+"?" means unknown, etc..
+
+An advantage of the OBJECT format also is that it DOES allow a full 9
+U/L case character NAME without the 6x2 LETTERxSSID requirement.  And also 
+then the OBJECT format can convey any other APRS format and all the
+varieties of information possilble for each nodes PAGE display.
+
+Next problem is how to restrict the data dump of hundreds (will be
+thousands before long) for the 40 you are interested in.
+
+Do you request alphabetically starting with X
+Do you request a LAT/LONG?
+Do you request the nearest to X
+Do you request only those in use?
+etc..
+
+I will add these thoughts to the AVRS ideas page tomorrow when I get a
+chance:  http://www.ew.usna.edu/~bruninga/avrs.html
+
+de WB4APR, Bob
+

@@ -1,0 +1,37 @@
+Appalachian Trail Golden Packet Plan for 2011!              23 July 2011
+------------------------------------------------------------1910 EDT----
+
+NETCON   APRS-IS(only)  321-768-1260 Lynn KJ4ERJ-12(144.39) central POC
+
+Lynn will be in the shack on 144.39, the APRS-IS, and phone for being a
+central point of contact for the "big picture".  Send messages on your
+144.39 radio to CQSRVR, CQ AT ... so we can all see it, or direct to 
+him only by sending to NETCON.
+
+KATHDN-15 VX8R,         Blackbry     Tim DApice, KA1YBS, to the top!
+SUGRLF-14 D-7           207-751-0819 John Tarbox WA1KLI relay on 445.925
+MTWASH-13 D710             -         AA1WI Brian, and KB1HNU
+NHRLY-12  ...              -         ... none.  No volunteers.
+GRYLCK-11 D72,D7        617-671-0848 Chris, N2YYZ, will need ext ant
+DENNIS    D72 backupsite860-309-4783 Pete KB1PCK, Dana KA1WPM + 5 more 
+SAMSPT-10 D72,VX7,FRS   973-830-7831 Roger NJ2R using Bob's D72 & ant
+HIGHPT   D135              -         GordonBeattie W2TTT SteveHolly WI2W
+CAMLBK-9 KPC3              -         Kevin KB3EJM organizing
+GDHILL-8 D710,PC,D7,FRS 410-570-9616 Bob, WB4APR
+MDMTNS-7 D710           301-293-1155 Dick, WN3R's tower 202-497-2840
+HWKSBL-6 D710,VX8DR,HF  703-927-2788 Huggins/Nystrom (KX4O/W4EON) etal
+FLATTP        backup       -         ml41782 [ml41782@yahoo.com]
+AOMTN-5  D710              -         Chuck & Dave (K4QS/N4WDC)
+COMERS-4 D700,FRS       540-553-6836 Mike Benonis K4KDJ &mbrs of VTARA
+ROAN-3   D700,D700,HF   828-467-4335 EricKZ5ED, KI4ZUI, N4AZR, AL0I
+CLNGMN-2 D700,D700/10   865-387-0017 William McKeehan, KI4HDU
+SPRNGR-1 D700              -         Seth, N6WPV will drive up from FL
+
+
+
+HF Frequencies for Voice coordination for those that want to try it are
+7.265+- ssb for SOTA around 1300 EDT and 14.3425+- around 1400 EDT.  
+
+Enjoy!
+
+Bob, WB4APR

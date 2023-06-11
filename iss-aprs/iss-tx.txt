@@ -1,0 +1,69 @@
+Date: Thu, 12 Apr 2001 
+
+From: Bob Bruninga, WB4APR
+
+To: TAPR APRS Special Interest Group <aprssig@lists.tapr.org>
+
+Subject: TX-Cycle Recommendation?
+
+
+
+> What is the recommended TX cycle (time between TX frames)?
+
+
+
+It depends!
+
+
+
+When we launched PCsat NO-44, the routine objective was for each
+
+traveler or station needing satellite connectivity to get at least ONE
+
+position/status packet via the bird per 12 hour period.  (On the NEXT pass
+
+if the urgency is higher than routine).  With the terrestrial linked
+
+global infrastructure this is completely sufficient for the mission.
+
+
+
+The ISS experiment is not dedicated to APRS, but shared with other UI 
+
+packet users worldwide.  For an automated position/status, (remote 
+traveler) I see no need for more than one success per pass.  In this case
+a 2 minute beacon will give youat least 4 chances at success on the 
+congested channel.
+
+For un-attended status/presence beacons, the goal should be one a day.  
+With 6 passes per day, then about 1 transmission per pass is about right.
+This translates to one packet every 5 minutes.
+
+
+
+
+
+On ISS, We hope that after the initial excitement, that things will settle
+
+down into a healty routine where everyone gets their small one second
+
+chance to be seen... and then lets someone else have  a go...  We want to
+
+see schools with kids watching to have a good chance at success on every
+
+pass. Define success as ONE PACKET and your chances go way up...
+
+
+
+By encouraging everyone of us to stay low key, then this helps assure each
+
+of us that there may be more bandiwidth available when WE do our own
+
+little school or public demo..  If you are doing a demo, please include it
+
+in your status so all can see.
+
+
+
+de WB4APR, Bob
+

@@ -1,0 +1,50 @@
+GD-Hill RF Test Report                                  20 June 2009
+--------------------------------------------------------------------
+
+My son WA4APR and I did an RF test from GD hill on 20 June to the
+Maryland mountain site and Camelback site.
+
+Summary:  
+
+1) CQSRVR did not seem to work reliably for me?  
+
+2) GD-Hill to Camelback link was 14 dB worse than prediction.
+
+3) GD-Hill to MD Mtns was 9 dB better than prediction.
+
+BASELINE:  All links on the AT web pages were computed with 2.1 dB 
+vertical Dipoles and 10 watts.  My years of measurements with 
+D7/D700's showed 100% success with "S5" on receipt.  So I used that 
+as my benchmark.
+
+Camelback to GD-Hill:
+
+Predicted Camelback to GD HILL: 10 dB margin.
+Measured with 50W and 9 el beam (+17dB added gains)
+Gave 13 dB margin over S5
+Conclusion: omni-to-omni would be - 4dB margin
+So prediction was optimistic by 14 dB.
+*** So either use a beam at camelback or run 50W at both ends
+
+MD Mountains to GD Hill:
+
+Predicted: + 17 dB margin
+Measured with 5W (-3 dB added gains)
+Gave solid packets with 23 dB margin.  *** rock solid!
+Conclusion: omni-to-omni would be 26 dB margin
+So prediction was pessimistic by 9 dB.
+
+Camelback comments: Roger NJ2R and Jeff W2UA used a 9 el beam to GD 
+Hill and had bad/wet weather.  Needed 35W on 445.925 to be S3 (very 
+useable signal).  3W not heard on UHF.  KB3EJM, Kevin showed up as a 
+local, and colunteered to do the event with ihs club which had already 
+planned to be at Camelback on 26 July.
+
+MD mountains:  Was WN3R's Winlink node on 145.77 which digipeated my 
+GD-Hill D7 100% with 23 dB attenuation in the line...  Excellent link.
+
+GD Hill is a great site. 66' observation tower is wonderful at the top 
+with plenty of operating room.  Ladder climb is tight, so better to 
+lift gear up each 7' vertical landing than backpacks.
+
+Bob, WB4APR

@@ -1,0 +1,65 @@
+KPC3+ Vers 8.3 to 9.1 Settings for Permanent AT use         2 Jun 2014
+----------------------------------------------------------------------
+
+updated  3 Jul 2014 to put INT TERM in sequence and fix typos in LT
+original 2 Jun 2014
+
+For permanent Golden Packet Sites we want the site to be visible, but
+not generate so many packets (15 digipeaters is quite a load) that we
+cut down on reliability.  The calls are the mountain name and then the
+sequence number along the chain.  With Georgia #1 and Maine #15.
+
+For Solar Powered stations, it is OK to have a photocell turning off
+the digipeater completely during darkness to save power.
+
+
+RESTORE the TNC to factory defaults using the RESTORE command
+
+MYCALL    XXXXXX-X  Where XXXXXX is your mountain name and X is number
+INTERFACE TERMINAL
+MYREMOTE  ATCMD-X   Where X is your station number
+MYNODE    ATNODE-X
+NUMNODES  2
+RTEXT     goldenpacket
+FLOW      OFF
+HEADERLN  OFF
+
+BT        not used
+BEACON    0
+UNPROTO   APN383
+ 
+HID OFF 
+CD SOFTWARE
+TXD 18
+XMITLVL xxx <== adjust to well below distortion point (DEFAULT = 100)
+
+LT  1 !DDMM.hhNHDDDMM.hhW#PHGphgd AT: callsign [p = 6 for 25W, 7 for 50W
+LT  2 !DDMM.hhNHDDDMM.hhW#PHGphgd AT: callsign [h = 7 for 1280' HAAT
+LT  3 !DDMM.hhNHDDDMM.hhW#PHGphgd AT: callsign [g = 6 for 6 dBi gain
+LT  4 !DDMM.hhNHDDDMM.hhW#PHGphgd AT: callsign [d = 0 for omni
+
+BLT 1    EVERY 00:30:00 START 00:00:00
+BLT 2    EVERY 00:30:00 START 00:10:00 
+BLT 3    EVERY 01:00:00 START 00:20:00
+BLT 4    EVERY 02:00:00 START 00:50:00
+
+LTP 1    APN383  
+LTP 2    APN383  
+LTP 3    APN383 via TEMP2-2
+LTP 4    APN383 via HOP7-7
+
+UIFLOOD HOP,30,ID 
+UITRACE TEMP,30        
+UIDUPE 30              <only in 9.1 ROMS>
+
+These settings assure a local (direct) beacon every 10 minutes and 
+then a traceable one via TEMP2-2 via the two adjacent digis every
+hour and then a long shot HOP7-7 attempt once every 2 hours.
+
+The BTEXT is not used, since it cannot be synchronized with the
+other 4 LTexts to get the timing right.
+
+TE 60 can be used if battery telemetry is desired once an hour.
+
+de WB4APR, bob
+

@@ -1,0 +1,99 @@
+Clingamn's Dome - 2013                                       22 July 2013
+-------------------------------------------------------------------------
+
+Well, just got in from Clingman's Dome, and we definitely had a "weather 
+event" at Clingman's Dome. Around 2:15PM (EDT), we got hit with thunder, 
+lightning, and a downpour that didn't show any signs of letting up.  
+I barely got the antenna on the push-up mast down before the downpour 
+started and got a good soaking anyway.
+
+Tried to operate after that with a vertical on the car roof and could 
+still work Roan Mtn. and Lookout Mtn. on voice, and Roan Mtn. on APRS.
+
+We never received any packets from Springer Mtn. (I understand that 
+operator diverted to Ft. Mountain due to heavy TS activity in the 
+Springer area), nor could we establish voice contact.
+ 
+An interesting experiment, nonetheless, and I can see some things 
+I'll do differently next year if I get a chance to participate.
+
+Larry J. Ford
+KG4GPJ
+
+JMG:
+
+I just posted the log file from the Clingman's Dome monitoring station 
+(TH-D7 with mag-mount).  It covers the period from 1200-1415.  We were 
+actually on the air by 1100.
+
+The main station was Larry's TM-D700 using a vertical omni on an 18' mast.  
+We had good voice contact with ROAN using 10W on the main station.  
+
+We were hearing packets from 3, 4, & 5 the entire time we were operational.
+
+Never heard Springer directly but received a packet from Springer via Lookout.
+
+Received a packet from Camelback near the end but I think the hop count was off.
+Received it from Roan with a path of HOP7-2 but was expecting to see HOP7-1.
+
+We never saw anything from 6, 7, or 8.
+
+
+Larry Ford:
+
+I'm sure the folks on the peaks with high RF environments need filters, but 
+that's not the case on Clingman's Dome, which is high enough (6600 feet MSL
++-) and isolated enough (in the middle of the Great Smoky Mountains 
++National Park), there's no other RF up there - no electricity either!
+
+We had good comms on UHF to Roan Mtn. (89 miles) and Lookout Mtn (80+ miles). 
+Both Roan and Lookout could copy our station on UHF on 10 watts (dropped 
+power down on UHF to conserve battery capacity).
+
+However, as reported before, we never heard a peep out of Springer (which 
+supposedly diverted to Fort Mountain, GA, due to TS in and around Springer) 
+on APRS or UHF.  However, the alternate station on Lookout Mtn. did report 
+at one time seeing a packet TX and may have had a brief UHF comm as well.  
+Lookout Mtn. reported that Springer/Fort Mountain was using a handheld.  
+Don't know what kind of antenna he was using, or what his actual power output 
+was, but for the leg between Springer and Clingman's Dome, I would suggest 
+that 5 watts won't do the job unless conditions are near perfect and a good 
+gain antenna is used.
+
+
+Larry J. Ford
+KG4GPJ
+Clingman-2
+  
+
+P.S. regarding ...
+----------------------
+
+Zach, Good job at Comer's Rock.  I was at Clingman's Dome and your station 
+was one of the 3 we were receiving early and continuously.
+
+With regard to logging, one bad thing about the D700 is that when you put 
+it into APRS mode you no longer receive the monitor packets that you do 
+when in packet mode.  You would have to operate in packet mode with an APRS 
+client on your laptop, or manually beacon from a terminal program.
+
+What I was thinking of doing next year was to use an external TNC on the 
+D700 mini-DIN.  I have a tracker2 with an SD logger mounted inside on the 
+TTL side of the RS232 converter.  That way I can take advantage of the main 
+station antenna and not have to install a second one.
+I can also use the D700 in APRS mode and will not need a computer.
+
+For logging this year I used an SD-logger and RS232 converter mounted to 
+the back of a AA battery pack connected to my D7 operating in packet mode.  
+The bad thing about the D7 is that it doen't have an internal clock so you 
+don't get timestamps on the packets.  I need to work on that for next year.
+
+Sparkfun Electronics sells a micro-SD logger and Seeedstudio sells a SD logger.  
+I have used both and they work well.  
+
+Mike George
+N3MUY
+
+
+
+

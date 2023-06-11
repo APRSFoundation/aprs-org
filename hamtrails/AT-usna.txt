@@ -1,0 +1,182 @@
+LOG FILE RECORDED AT ANNAPOLIS MD                      26 Jul 09
+----------------------------------------------------------------
+
+This was from Hyperterm on a D700 in packet mode on a beam 
+pointed from Annapolis Maryland to Maryland Mountains.  As you 
+can see, it recorded what appears to be evey packet originated
+at MD mountains...  THe beacons were at
+1403, 05, 25,        probably initial connect up?
+1431, 33, 34,        probably 1 minute rate test?
+1448, 58             now into desired 10 minute rate
+1500, 06, 10         not sure what is going on here
+1511, 21             back to 10 minute rate
+1523, 33, 43, 53, 03 good 10 minute rate
+1616, 17, 22, 24
+1631, 44
+
+The PROBLEM is, that this log shows NO packets digipeated by MD 
+Mountains at all.  They saw GD-Hill (which they could see direct) and
+they also saw Camelback (which they -might- rarely see direct) and
+they saw White Rock Cliffs, which they could see direct...  So 
+we have no proof that they were digipeating if all we use are the
+observed stations and this log.
+
+Here are the oservations from Patrick at MD Mountains:
+
+"I saw several packets from greylock around this time, 11:20 or 
+11:30 till sometime after 12pm. I did see a few more till 4pm, 
+but I think maybe only 2 or 3 packets.  SHut down at 4:05 or so"
+
+Bob comment:  Interesting that this log shows nothing until 2:03
+and then solid to 4 PM.  Nothing before that was heard?
+
+Next report from Patrick:
+"Hmm, I can't confirm it. But I do know it was digipeating, [because]
+each time it heard a packet come it, it would go onair and transmit.
+We also tested digipeating by using my mobile d700 to transmit 
+packets  and made sure they where digipeated.
+
+No idea why you station wouldn't show them, unless they got rejected  
+by a dup filter.
+
+The only other way I can confirm it was working was. When WV didn't  
+have the correct settings, you where not seeing their packets, but  
+once it was corrected, you could, cause I was then digipeating them."
+
+And a later report:
+"And your comment about the digipeating bug in the d700, I did 
+notice this too. Whenever my station sent it's position, it would 
+get digipeated, and it would digipeat itself again. I thought it odd 
+at the time, but since I didn't have a good log of info, didn't try 
+to figure out more. using the pmon isn't really good for figure that  
+stuff out."
+
+And:
+"Every packet I looked at had GD Hill-8 in it for digipeated, so 
+you where overpowering USNA if it was [colliding with USNA]."
+
+
+So the mystery remains... why does not this log file contain
+any packets from GD-hill or others...
+
+BEGIN LOG FILE TAKEN AT USNA
+----------------------------
+
+u
+UNPROTO  APRS VIA W3ADO-1   <== here I was testing the existing
+cmd:u aprs via WN3R-10      <== WN3R-10 WINLINK system on 145.77
+UNPROTO  was APRS VIA W3ADO-1
+cmd:k
+
+USNA>APRS,WN3R-10* [00:03:03]:
+
+cmd:c wn3r-10
+*** CONNECTED to WN3R-10
+WinLink, Frederick County, MD
+*** DISCONNECTED 
+
+cmd:PS 0                     <== Reset the D700
+PS 1
+ÿ
+
+
+TASCO Radio Modem
+AX.25 Level 2 Version 2.0
+Release 03/Dec/99 3Chip ver 1.08
+Checksum $04
+cmd:DA 090724254442
+?bad
+cmd:
+cmd:B
+k
+********* Now tuned to 144.34 for weekend
+MDMTN-7>SYSR2V,HOP7-7,HOP7-7 [14:03:30]:'i:l #/]ne3r / wn3r
+
+MDMTN-7>SYSR2V,MDMTN-7*,HOP7-5,HOP7-7 [14:03:33]:'i:l #/]ne3r / wn3r
+
+MDMTN-7>SYSR2V,HOP7-7,HOP7-7 [14:05:05]:'i:l #/]ne3r / wn3r
+
+MDMTN-7>SYSR2V,MDMTN-7*,HOP7-5,HOP7-7 [14:05:08]:'i:l #/]ne3r / wn3r
+
+MDMTN-7>PPPPPP,HOP7-7,HOP7-7 [14:25:20]:'vXl #/]
+
+MDMTN-7>PPPPPP,HOP7-7,HOP7-7 [14:31:19]:'vXl #/]
+
+MDMTN-7>PPPPPP,MDMTN-7*,HOP7-5,HOP7-7 [14:31:21]:'vXl #/]
+
+MDMTN-7>SYSR2V,HOP7-7,HOP7-7 [14:33:39]:'i:l #/]
+
+MDMTN-7>SYSR2V,MDMTN-7*,HOP7-5,HOP7-7 [14:33:42]:'i:l #/]
+
+MDMTN-7>SYSR2V,HOP7-7,HOP7-7 [14:35:39]:'i:l #/]
+
+MDMTN-7>SYSR2V,MDMTN-7*,HOP7-5,HOP7-7 [14:35:42]:'i:l #/]
+
+MDMTN-7>SYSR2V,HOP7-7,HOP7-7 [14:48:22]:'i:l #/]
+
+MDMTN-7>SYSR2V,MDMTN-7*,HOP7-5,HOP7-7 [14:48:25]:'i:l #/]
+
+MDMTN-7>SYSR2V,HOP7-7,HOP7-7 [14:58:24]:'i:l #/]
+
+MDMTN-7>SYSR2V,MDMTN-7*,HOP7-5,HOP7-7 [14:58:27]:'i:l #/]
+
+MDMTN-7>SYSR2V,HOP7-7,HOP7-7 [15:00:01]:'i:l #/]
+
+MDMTN-7>SYSR2V,MDMTN-7*,HOP7-5,HOP7-7 [15:00:04]:'i:l #/]
+
+MDMTN-7>SYSR2V,HOP7-7,HOP7-7 [15:06:41]:'i:l #/]
+
+MDMTN-7>SYSR2V,MDMTN-7*,HOP7-5,HOP7-7 [15:06:48]:'i:l #/]
+
+MDMTN-7>APK101,HOP7-7,HOP7-7 [15:10:55]::KB3ONM   :ack31
+
+MDMTN-7>APK101,MDMTN-7*,HOP7-5,HOP7-7 [15:10:58]::KB3ONM   :ack31
+
+MDMTN-7>SYSR2V,HOP7-7,HOP7-7 [15:11:00]:'i:l #/]
+
+MDMTN-7>SYSR2V,MDMTN-7*,HOP7-5,HOP7-7 [15:11:03]:'i:l #/]
+
+MDMTN-7>SYSR2V,HOP7-7,HOP7-7 [15:21:02]:'i:l #/]
+
+MDMTN-7>SYSR2V,MDMTN-7*,HOP7-5,HOP7-7 [15:21:05]:'i:l #/]
+
+MDMTN-7>SYSR2V,HOP7-7,HOP7-7 [15:23:34]:'i:l #/]
+
+MDMTN-7>SYSR2V,MDMTN-7*,HOP7-5,HOP7-7 [15:23:36]:'i:l #/]
+
+MDMTN-7>SYSR2V,HOP7-7,HOP7-7 [15:33:36]:'i:l #/]
+
+MDMTN-7>SYSR2V,MDMTN-7*,HOP7-5,HOP7-7 [15:33:38]:'i:l #/]
+
+MDMTN-7>SYSR2V,HOP7-7,HOP7-7 [15:43:38]:'i:l #/]
+
+MDMTN-7>SYSR2V,MDMTN-7*,HOP7-5,HOP7-7 [15:43:40]:'i:l #/]
+
+MDMTN-7>SYSR2V,HOP7-7,HOP7-7 [15:53:40]:'i:l #/]
+
+MDMTN-7>SYSR2V,MDMTN-7*,HOP7-5,HOP7-7 [15:53:42]:'i:l #/]
+
+MDMTN-7>SYSR2V,HOP7-7,HOP7-7 [16:03:43]:'i:l #/]
+
+MDMTN-7>SYSR2V,MDMTN-7*,HOP7-5,HOP7-7 [16:03:46]:'i:l #/]
+
+MDMTN-7>SYSR2V,HOP7-7,HOP7-7 [16:16:06]:'i:l #/]
+
+MDMTN-7>SYSR2V,MDMTN-7*,HOP7-5,HOP7-7 [16:16:09]:'i:l #/]
+
+MDMTN-7>SYSR2V,HOP7-7,HOP7-7 [16:17:49]:'i:l #/]
+
+MDMTN-7>SYSR2V,MDMTN-7*,HOP7-5,HOP7-7 [16:17:52]:'i:l #/]
+
+MDMTN-7>SYSR2V,HOP7-7,HOP7-7 [16:21:59]:'i:l #/]
+
+MDMTN-7>SYSR2V,MDMTN-7*,HOP7-5,HOP7-7 [16:22:02]:'i:l #/]
+
+MDMTN-7>SYSR2V,HOP7-7,HOP7-7 [16:23:58]:'i:l #/]
+
+MDMTN-7>SYSR2V,HOP7-7,HOP7-7 [16:31:28]:'i:l #/]
+
+MDMTN-7>SYSR2V,MDMTN-7*,HOP7-5,HOP7-7 [16:31:31]:'i:l #/]
+
+MDMTN-7>SYSR2V,MDMTN-7*,HOP7-5,HOP7-7 [18:44:35]:'i:l #/]
+

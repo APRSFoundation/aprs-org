@@ -1,0 +1,67 @@
+CLINGMAN's DOME 2011 REPORT                               26 July 2011
+----------------------------------------------------------------------      
+                              William [yahoo-mail@mckeehan.homeip.net]
+
+The event ran smoothly at Clingmans Dome.
+
+John, AJ4HV, and Karen, K4RTW, arrived around 9:30 AM and secured a
+parking spot for the truck and camper. (precise location - when you
+enter the parking area, it becomes a one-way road and forms a loop. 
+We circle around that loop and park near the exit of the parking 
+area.)
+
+I arrived around 9:50 and was able to make contact with both Roan 
+Mountain and Springer Mountain using my mobile radio on 445.925.
+
+By that time, John and Karen had the operating position inside of the 
+camper all setup and they were beginning to set up the mast for the 
+antennas.
+
+I delivered two four-element beam antennas that were provided by Hugh, 
+W4VAB. We put these on the mast and pushed them up....about 20 feet.
+
+The radio setup was a Kenwood TM-D710 (provided by AJ4HV) running 
+stand-alone, but connected to a PC for logging purposes. I used a 
+terminal program (PuTTY) connected to the TM-D170 to capture the log:
+
+http://mckeehan.homeip.net/amateurradio/APRS/2011_AT_GP/TMD710.log
+
+By 10:51, all of the setup was complete, and I sent my first message 
+to Roan Mountain. It was successful and ack'd.
+
+After things were up and running, we decided to setup a second station
+to capture the packets and display things on a map. Unwilling to 
+change the setup that we had with the D710, I brought out a netbook 
+running AGWPE, APRSIS32 and AGW Monitor and connected it to an HT 
+(IC-V8) using a sound-card interface. This worked well to show us 
+where things were without changing the digi setup or adding any 
+packets to the frequency. The log from AGW Monitor is also available:
+
+http://mckeehan.homeip.net/amateurradio/APRS/2011_AT_GP/agwpelog.txt
+
+The B side of the D710 was used for voice contact on 445.925. I would 
+also occasionally walk to my truck to send out updates from CLNGMN on 
+144.39 and would sometimes talk to the Roan/Springer from there 
+(which makes me wonder if the beam antennas were really necessary).
+
+I did not have good luck with the CQSRVR, although several attempts 
+were made.  Turns out I was using the wrong spelling of CQSRVR.
+
+I did not make note of the time, but around 1 I think, we also talked 
+with a group that went to Lookout Mountain. They were unable to get 
+any packets to transmit, but were able to copy us on both voice and 
+APRS.
+
+So all-in-all, it was an easy day for us; Murphy stayed well to our 
+north. We did have two or three rain showers pass - one of which was 
+heavy (around 3pm), but the camper provided great shelter and we 
+operated in comfort.
+
+Thanks to AJ4HV for providing all of the equipment and to W4VAB for 
+the antennas.
+
+This was the best year so far, I hope next year we can pull it all 
+together.
+
+William
+KI4HDU

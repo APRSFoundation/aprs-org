@@ -1,0 +1,68 @@
+EVENT DATA ENTRY FROM A TH-D7 HT                              10 Jan 07
+-----------------------------------------------------------------------
+                                                    Updated 10 Jan 2011
+
+Instead of just the D7 APRS radio we have used for the last decade,
+there are now 8 APRS radios:  D7, D72, D700, D710, VX8R, VX8DR, VX8GR, 
+and the FTM350.  Therefore I cannot give detailed instructinos for 
+each.  SO you must learn how to send and receive APRS messages on your
+own radio.  I will use the D7, however, as an example.
+
+This sheet shows the handheld or mobile operator how to enter an APRS 
+message for sending scoring data to headquarters (HEADQ).  The radios
+are dual band and will operate data on UHF 445.925 so they can operate
+independently and without QRM to the voice on VHF.
+
+SETUP:  Set the APRS band to 445.925 and the VHF voice band to __TBD_.
+In the Kenwoods use the B band for UHF APRS and A band for voice.
+
+BASICS:  You can use the left-joy-stick to ESC out of any mode or menu 
+at any time.  You can use the DUAL key to toggle on or off the unused 
+A or B side of the radio if desired to save power.  You can select A 
+or B band with the A/B button.
+
+POSITION REPORTING: If used, Manually enter the LAT/LONG of your station 
+using the POS key.  A list of station positions has been provided for 
+this event or a map with a LAT/LON grid that you interpolate to your
+position.  If used, set automatic position reporting once every 10 
+minutes via the APRS MENU, set DATA TX = AUTO.  Select TX INTERVAL 10.
+Update your position at any time by toggling the BCON button twice.
+
+MESSAGE BASICS:  The D7 keypad uses a multi-press key function to enter 
+characters. Pressing the ABC key three times generates the letter "C".
+Pressing it four times generates "2".  If two consecutive characters
+from the same KEY are needed, press the right-joystick-OK button to 
+move to the next byte position.  The "0" key is also the SPACE key.
+
+MESSAGE SENDING:  Preload a TEST message to HEADQ giving a score or 
+report in the anticipated format for the event.  In this scout scoring
+event, enter a message containing a troop number 999 and score 99. This 
+makes future reports easy by only modifying the digits of the previous 
+one.  Use these steps to modify an existing message to send a new one:
+
+1) Press MSG key.
+2) Select LIST with the OK button (joy stick)
+3) This brings up the last message.  
+4) Right digit, or * indicates number of retries, or ACK received.
+5) Press MSG key again to prepare a new msg to same receipient (HEADQ)
+6) Use up/dn joystick to modify each digit for the new message
+7) press OK button to move to next byte
+8) press OK at end of message and it will be sent.
+9) An ACK will be received eventuallly from HEADQ
+A) The ack will show as a (*) on the message list.
+
+CAPACITY:  The D7 can hold up to 16 messages.  You cannot delet them
+but each time you enter a new one, or receive a new one, the oldest
+one will be overwritten.  If you get 16 new messages without ever
+reading any, then the HT will reject any new messages.  But once you
+read at least ONE message, then all 16 are vulnerable to being over-
+written.  So each time you check messages, read all new traffic.
+
+POWER SAVING:  If the data channel is not too busy, you can use it
+to do voice chatting as well.  This way, you can save power, by
+turning off the band A channel and then HEADQ can always contact 
+you by calling on the data channel by voice.  Having the data
+channel on UHF avoids any interference to the normal event voice
+channel which is on 2m usually.
+
+WB4APR

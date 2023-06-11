@@ -1,0 +1,89 @@
+AT Golden Packet 2010 Quick Summary                    26 July 10
+-----------------------------------------------------------------
+                                                           WB4APR
+
+Here is my quick summary for everyone.  Looks like fewer stations
+were attempted this year, even though QST article on p99 of July
+2010 issue gave good exposure. Success from Springer Mountain in 
+GA up through TN and NC. Again, Comer's Rock in SW VA was not 
+manned. But from Roanoke (AO mountain) through White Rock Cliffs, 
+Maryland mountains, and GD Hill were all in contact.  Nothing 
+heard north of centeral PA however.
+
+
+Katahdin     - no station
+Maine Relay  - no station
+MtWashington - no station!
+NewHempshire - No station
+Greylock     - No station
+Sams-pointNY - no report seen yet
+Camelback PA - Nothing heard from them
+G.D. Hill    - OK Heard down to AO
+MD Mountains - OK Heard GD hill down to AO
+WV Mountains - OK Heard GD Hill down to AO but his HOPn-N digi NG
+AppleOrchard - OK Heard north to GD Hill
+Comers Rock  - no station
+Roan Mountn  - OK heard south to Springer
+Clingmans    - OK.Heard North Roan to SOuth SPringer
+Springer Mn  - OK Heard Heard North up to Roan
+Lookout Mtn  - no station
+Huntsville   - no station
+
+SPRINGER was heard to Roan.  No detail report yet.
+
+CLINGMANS was heard both ways to Springer and Roan.
+
+ROAN was blocked from Public Parking lots at top of mountain because
+the park was closed!  SO they had to choose one side of the mountain
+or the other.  They were on the COMERS ROCK side but since it was 
+unmanned, they were still able to link to Clingmans even though their
+line of sight was blocked.  THey operated till 3 PM or so
+
+AO Mountain was the normal 144.39 digi switched over to 144.34 the
+week before for the event.  It was heard well at the White-Rock 
+Cliffs site on the VA/WV border.
+
+WHITE ROCK CLIFFS was one of the main heafty man-climb stations
+again this year and could easily hear AO and MD Mountain plus the
+link to GD hill.  They were using a D700 configured 2 years ago
+by yours-truely, but for some reason it was not digipeating HOPn-N
+packets.  SO the only way through them was to use the actual
+callsign WHTRCK-6.  Then it was successful.
+
+GDHILL:   D700 TX on Medium power packet and UHF:
+Antenna:  single dual band vertical (3 dBi and 4.5 dBi)
+Schedule: DIGI on Air on battery about 12:30?  
+
+RX SW to MD Mtns all 9 bars packet
+RX SW to MD Mtns all 9 bars on 445.925 voice
+Nothing ever heard from Camelback team or beyond
+
+Echolink?  I did not attempt it this year.  It was added to the
+event to test our readiness, but we had enough other problems 
+than to add this to the mix...
+
+The stations that were manned this year seemed to be better 
+prepared and more efficiently operated.  We will definitely plan 
+for this next year along with trying to get other long haul trails
+interested.  At Field Day, we don't get no respect, never have
+in 20 years.  Im tired of that.  Lets make this a great annual
+event for VHF and Packet!
+
+I will make a more formal report, and Update ALL web pages with
+what you send me, but it will take a lot of time.  Also will get
+an article into QST.
+
+Everyone should join the at-golden-packet@yahoogroups.com for
+the appalachian trail and pct-golden-packet@yahoogroups.com for
+those on the west coast.
+
+My main lesson learned in climbing GD hill in 105 degree effective
+heat and humidity was to carry ONLY what was needed.  ONLY enough
+batteires for the 4 hour event, and ONLY enough water for the team
+for 4 hours, not 2 days.  The D700 ran from 1230 to 1600 on medium
+power and only used about 2 amp hours of energy.  We carried 52
+amp hours of energy up there!
+
+Also PLAN ON RAIN!  We are 2 for 2 so far at our site.
+
+Bob, Wb4APR

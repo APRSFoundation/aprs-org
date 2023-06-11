@@ -1,0 +1,79 @@
+JOINT ISS/PCSAT OPERATIONS TEST                           23 October 2002
+-------------------------------------------------------------------------
+                                                                   WB4APR
+
+The ARISS team has agreed to a limited test of the ISS packet system as a
+dual-hop constellation with PCsat.  This means that the ISS packet system
+will be temporarily QSY'ed to the 145.825 MHz simplex frequency of the
+PCsat digipeater so that the two satellites can operate together.  The
+objective is to see if the satellites can be used to relay packets from
+each other to extend the range via a dual-digipeat hop.  THe duration of
+the test  will be about a week or more depending on the needs of the ARISS
+radio.  If the crew wants to operate voice, they will QSY back to 145.800.
+
+The precise scheduling of this test is hard to predict but it could be any
+day now (8 Oct).  SO if ISS users do not hear ISS on 145.800 as usual,
+they should check to see if it is on 145.825.  If so, QSY and operate
+normally there.  That means, UI digipeating of very brief user packets is
+welcome.  But use your tracking program to also look for DUAL-HOP
+possibilities with PCsat.
+
+IF you are in range of ISS, and ISS can see PCsat, then set your unproto
+path to UNPROTO CQ VIA RS0ISS,W3ADO-1.
+
+IF you are in range of PCsat and PCsat can see ISS, then set your unproto
+path to UNPROTO CQ VIA W3ADO-1,RS0ISS
+
+IF (and only if) The USNA Command station has been able to command PCsat
+to activate its other aliases on YOUR pass, then PCsat (and ISS) will 
+both also respond to the path of ARISS,ARISS or WIDE,WIDE.  In this case, 
+either satellite will respond.  But this setting only lasts to the next
+eclipse.
+
+If you are not 100% knowledgible about how UNPROTO path works, please do
+not transmit, but just see if you can capture one of the successful
+packets from someone else.
+
+Please do not XMIT too much.  The probabilities of success are very very
+limited by QRM, so it would be best if each person only transmitted a few
+packets a minute and let others have a chance.  And if you live in a good
+REMOTE location, far from the USA and Europe, then your best contribution
+will be to LISTEN to see if you receive any dual-hop packets.  If too
+many people begin transmitting more often, then the test will fail.
+
+SUCCESSFUL packets will be received like this:
+
+>From ISS to PCSAT:   SENDER>CQ,RS0ISS,W3ADO-1*:....
+>From PCsat to ISS:   SENDER>CQ,W3ADO-1,RS0ISS*:....
+
+If anyone captures such a packet, then please report it.  You can also
+look for potential successful packets on the ISS and PCSAT web pages:
+
+  http://www.ariss.net
+  http://pcsat.aprs.org
+
+BUT REMEMBER, that PCsat has now entered eclipse season and ONLY works in
+full sunshine, so do not attempt any transmissions via PCsat in the DARK
+or even in the first sunshine.  Give it 10 minutes after entering the
+sun to charge up enough to be able to digipeat.  Originally this test was
+to have both ISS and PCsat using the generic APRS digipeater aliases of
+WIDE so  that users could use UNPROTO CQ VIA WIDE,WIDE.  But since PCsat
+cannot remember its settings orbit-by-orbit due to nearly dead batteries,
+it is best if you use the exact callsigns noted above.
+
+Successful dual hop packets were reported on both 12 and 22 October when
+both spacecraft were over the USA.  Except for a 6 day outtage on ISS,
+Both spacecraft have seen numerous opportunities every day..
+
+If ISS or PCsat passes over your location during any of these time frames,
+and PCsat is in the sun, there is a good possibility that you might be 
+able to do a dual-hop packet from one to the other spacecraft.
+
+Enjoy the test.  Limit your transmissions.   Concentrate on what you
+can capture...
+
+de WB4APR@amsat.org, Bob
+
+PCsat WEB  page     http://www.ew.usna.edu/~bruninga/pcsat.html
+ISS-APRS FAQ:       http://www.ew.usna.edu/~bruninga/iss-faq.html
+

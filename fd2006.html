@@ -1,0 +1,152 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+   <TITLE>APRS Field Day 2006</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.0Gold (X11; I; SunOS 5.5.1 sun4m) [Netscape]">
+   <META NAME="Author" CONTENT="Bob Bruninga">
+   <META NAME="Description" CONTENT="APRS Homepage">
+   <META NAME="Keywords" CONTENT="APRS, Field Day, Bruninga,radio, position, w3ado, wb4apr, GPS, APRS, Satellites, USNA">
+   <META NAME="Classification" CONTENT="Science">
+</HEAD>
+
+<BODY TEXT="#FF0000" BGCOLOR="#87CEFA" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000"> 
+
+<H1 ALIGN=CENTER><IMG SRC="http://www.aprs.org/satellite.gif" HSPACE=30 HEIGHT=32 WIDTH=32 ALIGN=TEXTTOP>
+<B>APRS Field Day 2006</B><IMG SRC="http://www.aprs.org/satellite.gif" HSPACE=30 HEIGHT=32 WIDTH=32 ALIGN=TEXTTOP></H1>
+<CENTER>
+<IMG SRC="http://www.aprs.org/aprs.gif" HEIGHT=112 WIDTH=200>
+</CENTER>
+<!-- begin comments and the next line ends them
+//-->
+<FONT COLOR="#000000"><FONT SIZE=3>
+<P>
+<HR SIZE=5 WIDTH="100%">
+<B>EXECUTIVE SUMMARY:</B> This plan will demo APRS like it should be!
+<P>
+<LI>The general PATH for Field Day 2006 is UNPROTO APRSFD VIA TEMP1-1,TEMP7-7.
+<LI>The Frequency for Field Day (if available in your area) is 145.01 the national packet frequency
+<BR>Please note that ALL D700 radios should be permanently configured to digipeat TEMPn-N
+not only for FD support, but for possible emergency use the other 365 days of the year also.
+<P>
+
+<B>APRS is a tactical-real-time-local digital communications network designed for rapid
+deployment in the field using come-as-you-are equipment for a LARGE number of
+simultaneous stations.  APRS is PERFECT for Field Day with HUMAN operators at all
+stations.  This is not at all what most APRS users are familiar with on a 24/7/365 basis.
+Let's show 'em!
+</B> 
+<P>
+To meet the spirit of Field Day, the APRS System on that Day must include one
+temporary and portable digi and be independent of the existing global APRS infrastructure on
+144.39.  Here are the 2006 ARRL rules governing Field Day:</B>
+<P>
+<IMG SRC="http://www.aprs.org/fdrules06.GIF">
+<P>
+<FONT COLOR="#FF0000"><U>
+<B>THE BIG PLAN:</B> 
+<FONT COLOR="#000000"></U>
+Ideally, all digis would support TEMPn-N and provide generic multi-hop
+paths.  Fortunately all of the thousands of Mobile D700 radios can do this as well as all
+KPC-3+ and some old KPC-3 version 8.2 or later.  Also, UIDIGI and DIGIx and other type
+TNC's can do this.  But not the old TNC's.  THey can only do TRACE1-1 digipeating but
+are still useable.  See details that follow the operating section.
+<P>
+<IMG SRC="AntennaMast/FD04shelter.JPG">
+<A HREF="Antenna-Ipipe.html"> See 70' push up 35lb mast</A>
+<P>
+<B><U>FD OPERATIONS:</B></U>
+<P>
+<B>Initially use <i>APRSFD VIA TEMP7-7.</B> If you see yourself digipeated, you are good
+to go for the event with TEMPn-N.</i>
+<P>
+<B>Next try <i>APRSFD VIA TEMP1-1,TEMP7-7.</B> This will get you out via ANY digi
+including old ones for the first hop and then 7 hops beyond.  This may be needed if
+the only digi you can hit is an old TNC digi.</i>
+
+<P>
+<B>Next try <i>APRSFD VIA TEMPa-A,TEMP1-1,TEMPb-B.</B> Look carefully at
+your map and at the beaons from all digis.  Look for old TNC digis that cannot do
+TEMPn-N and can only do TEMP1-1 which should show up in their beacons. To get through 
+and past a TEMP1-1 digi that is a few
+hops from your location, set a path of TEMPa-A,TEMP1-1,TEMPb-B.  This way, the old TEMP1-1
+digi will correctly digipeat the packet and then it will continue with B hops beyond that.
+Notice that the number of A hops has to match perfectly, to get to the TEMP1-1, or it will
+not work.  Notice also, that the only way you will know what digis are TEMP1-1 only are
+if they include TEMP1-1 in their BEACON.  This is very important.</i>
+<P>
+<B>USE TEMP1-1 instead of DIGIx:</B> Do not be tempted to use TEMPAa-A,DIGIx,TEMPb-B 
+to get through a DIGIx that is only TEMP1-1, because 
+it will arrive as DIGI1,DIGI2,DIGI3,DIGI4,DIGI5,DIGI6,TEMPB and there is no way for the
+recepient to know which one of all the digis is the TEMP1-1 one.  To get back to you,
+he has to use a path of TEMPb-B,TEMP1-1,TEMPa-A.
+
+<P>
+<FONT COLOR="#FF0000"><U>
+<B>SETTING UP YOUR FD DIGIPEATERS:</B> 
+<FONT COLOR="#000000"></U>
+<P>
+You will find it convenient to set up your home station and your mobile and all of your
+friends home stations to act as digipeaters for Field Day on 145.01 (if available in your
+area).  Here are the settings:
+
+<P>
+<B>USING OLD TNC'S AS TEMP1-1 DIGIS:</B> Even old TNC's that do not support any
+of the fancy TEMPn-N or UITRACE parameters can still be used for FD by setting 
+their MYALLIAS to TEMP1-1.  This way, they will at least support an initial 1
+hop from a FD station.  Or other more complex paths after discovery.
+<BR>
+<IMG SRC="http://www.aprs.org/fd-TAPR2.GIF">
+<P>
+<B>USING A D700 FOR A PORTABLE DIGI:</B> The D700 mobile makes an excellent TEMPn-N digi,
+but to activate the UITRACE parameter for FIELD DAY, you must use a PC via the 
+serial port and make the settings below.   The radio will remember these settings, even
+when in APRS mode and even when the APRS MENU for DIGI is set to OFF.  Thus, they are
+always available for instant use as needed.
+<BR>
+<IMG SRC="http://www.aprs.org/fd-D700.GIF">
+<P>
+<B>USING A KPC-3 FOR A PORTABLE OR HOME DIGI:</B> You can also use the KPC-3+ TNC's
+with version 8.2 or later as TEMPn-N digis as follows.  But again, after field day, please
+cut the beacon rate and bath back to once evey 30 minites direct.
+<BR>
+<IMG SRC="http://www.aprs.org/fd-KPC3.GIF">
+<P>
+<B>PLANNING and ALERTING All Operators:</B>
+<BR>To meet these objectives, the following steps are recommended in your area to alert all
+APRS operators to this event and the procedures and let us see what everyone is planning.  
+<P>
+<LI> Set an OBJECT on normal APRS now until Field Day showing your station using the SSID of -FD and "camping" symbol
+<LI> Also give it the comment text saying something like <i>"FD on 145.01 using TEMPn-N"</i>
+<LI> These OBEJCTS will help everyone else in their pre-FD planning.  See them on the map or on
+     <A HREF="http://www.findu.com/cgi-bin/symbol.cgi?icon=/;&amp;limit=200"><B>FINDU.COM</B></A>
+<P>
+Next as the big day approaches, someone in your area should put out some BULLETINS alerting
+all those APRS users that are not aware of this event.  These bulletins inform everyone of
+the special Field Day frequency of 145.01 and the use of TEMPn-N temporary digis.
+<P>
+<LI> . . BLN1: For FD setup temp/portable DIGI on 145.01 with UITRACE set to TEMP,20.
+<LI> . . BLN2: For simple TNC's just set MYALIAS to TEMP1-1
+<LI> . . BLN3: For APRS-FD: http://www.ew.usna.edu/~bruninga/aprs/fd2006.html
+<LI> . . BLN4: QSY ur home and mobile APRS FD to 145.01 and use TEMP1-1,TEMPn-N
+<P>
+<B>CQ SCOUTS STATIONS:</B> Don't forget that if you are a SCOUT station that many IGates in
+the vicinity of SCOUT camps or other scout activity will often wildcard messages to SCOUTS
+so that scout groups can make contact via the APRS system.  While such internet assisted
+contacts cannot be used for points, they are a great way for getting scouts on the air
+and in contact with each other.  Also, you can query the FINDU system for a LIVE list of
+all SCOUT stations on the air (that are using the SCOUT symbol) bu using 
+<A HREF="http://www.findu.com/cgi-bin/symbol.cgi?icon=/,&amp;limit=2000"><B>This SCOUT link</B></A>
+
+<P><FONT SIZE=+1>You are visitor number: <IMG SRC="http://www.aprs.org/cgi-bin/Bruninga/fd2006.cgi">
+<HR SIZE=5 WIDTH="100%">
+
+<P><FONT SIZE=-2>The Naval Academy is a registered user of APRS
+and WinAPRS. The purpose of this web page is to show several applications
+currently in use at this site and should not be considered as an advertisement
+or an endorsement of any commercial product.</FONT>
+
+</BODY>
+</HTML>

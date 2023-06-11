@@ -1,0 +1,125 @@
+APRS PRECISION AND DATUM OPTION                                18 APRIL 2004
+----------------------------------------------------------------------------
+                                                                      WB4APR
+
+Updated 7 May 2008 for clarity
+Updated 1 May 2006 to add some examples.
+
+This proposed enhancement to the APRS spec is to allow for greater precision
+to be transmitted between users.  But since precision without the accuracy
+of the datum is meaningless, this format also includes the identificaiton
+of the datum used to gain this precision.
+
+DATUM:  The default datum for GPS and for APRS is WGS84.  This is specified
+in the APRS spec that all on-air positions are assumed to be WGS84 unless
+otherwise indicated.  This "option" then documents two such methods for
+"otherwise indicating":
+
+BY COUNTRY: or Continental local agreement.  Two such agreements have been
+   declared:  WGS84 in North America and OSGB36 in the UK.  If others can 
+   be agreed, they will be listed.
+
+BY DATUM BYTE:   the DATUM byte in this "PRECISION and DATUM Option".
+
+
+FORMAT:  The format of this APRS Precision-and-Datum option is the presence
+of a 5 byte field !DAO! appearing anywhere in the position comment field.
+This option is backwards compatible beacause the basic DDMM.HH/DDDMM.HH 
+format is retained and will still be decoded by all existing applications.
+The !DAO! simply provides the additional precision down to a foot or so
+and also identifies the datum:
+
+   !DAO! - is fixed length anywhere in the position commment
+    D    - is the datum identifier (base-91)
+     A   - is the added LAtitude precision (base-91)
+      O  - is the added LOngitude precision (base-91)
+
+RECOMMENDATION:  Recommend placing this option on the END of all other
+position comment text.  This way it does not displace any human readable
+comment text that is otherwise desired to display on older systems.  This
+added option may extend beyond the existing "viewable" limit of 57 bytes
+currently in the spec since these added bytes are not used by legacy 
+systems anyway.
+
+PRECISION:  There are three degrees of precision offered by this option.
+
+    1) HUMAN READABLE, Thousandths of a minute.  This is good to the
+       nearest 6 feet or so and being human readable gives even users
+       of the D7 and D700 or any other existing application the ability
+       to human read position to 3 decimal digits of Minutes.  This 
+       format is identified if the Datum byte is in uppercase.
+
+    2) BASE-91.  This adds additional precision to the nearest 91/ten
+       thousandth of a minute, or about 4 decimal fractional digits of
+       a minute or about one foot.  This format is identified if the 
+       datum byte is in lowercase.
+
+    3) NULL.  If the A and O bytes are SPACE characers, then they
+       are only there to fulfill the !DAO! format and imply NO ADDED
+       precision.  This is used when one wants to send DATUM info
+       but without claming added precision.  This use of space characters
+       to imply lacking digits of precision is consistent with the
+       existing APRS ambiguity system.
+
+DATUMS:  There are several categories of datums that can be used.
+
+PRE-DEFINED: The Letters A-Z and a-z indicate one of 26 common datums.   
+         The case of these 26 letters indicates which precision is used.  
+         Capital letters indicate human readable decimal digits for A 
+         and O, and lower case indicates base 91 encoding for A and O.  
+         There are 26 pre-defined DATUMS.  A table will be prepared of
+         the 26 common datums.  Here are some examples:
+         W = WGS84
+         N = NAD27
+         O = OSGB36
+
+LOCAL CUSTOM:  For special and closed events, the DATUM can be one of
+         ten locally defined options.  These are indicated by the 
+         digits 0 through 9.  One creative use of this is for closed
+         events using fixed maps or venues.  These digits could define
+         the maps by number!
+
+BASE-91 ENCODING:  Base-91 is used frequently in APRS to improve the
+         resolution of a byte without using Binary and while still using
+         only the printable ASCII character subset.  Using only printable
+         ASCII has many benefits and advantages that have been discussed
+         ad nausium elsewhere.  Base 91 simply means the value of an
+         ASCII byte after subtracting decimal 33  Thus the character
+         "!" minus 33 is "0" on up to the character "}" minus 33 which
+         has the value "90"
+
+OTHER:   There remains 28 other possiblities of DATUM information in
+         the D digit that can be used if needed.
+
+Examples:
+
+!W23! means it is WGS84 and the upper case indicates it is the human
+readable 3rd digit format.  "2" is the third decimal digit of latitude
+minutes and is human readable.  "3" is the added digit of longitude 
+minutes and is also human readable.
+
+!wAb! means it is WGS84 but the lower case indicates this is the added
+precision to the nearest foot.  "A" is the base 91 code for two more 
+digits (65 minus 33 yields "32") and "b" is two more digits of longitude
+(98 -33 or "...65").
+
+!w:\! would also be WGS84 but with ":" and "\" decoding to two 
+additional digits of "27" to latitude and "59" to longitude to the 
+nearest foot or so.
+
+BASE-91 CONVERSION:  In the first !W23! example above, the actual digits
+are simply added to the existing LAT/LONG for example to add precision
+to DDMM.mmN/DDDMM.mmW to be come equivalent to DDMM.mm2N and DDDMM.mm3W.
+
+But in the next two examples !wAb! and !w:\! the added two digits 
+cannot simply be added to the ASCII position string, since they can only
+go from 00 to 90.  THus they need to be scaled so that they go from
+00 to 99.  Do this by multiplying the two digits by 1.10.  So for the
+!wAb! example with added latitude digits of 32, you multiply that by
+1.10 to arrive at an actual added digits of 35.2.  So the high precision
+latitude becomes DDMM.mm352N.
+
+Return to the APRS Errata web page:
+http://www.ew.usna.edu/~bruninga/aprs/errata.html
+
+de WB4APR, Bob

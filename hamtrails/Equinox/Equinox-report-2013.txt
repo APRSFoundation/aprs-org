@@ -1,0 +1,56 @@
+Equinox - 2013                                               22 July 2013
+-------------------------------------------------------------------------
+
+This was the first year for Equinox and it solved the  previous two year 
+New Hampshire gap by providing 100% successful transmission to MTWASH-13.
+
+In addition, EQINOX-12 copied MTWASH-13 solidly 100% of the time on the 
+445.925 MHz FM channel. Surprisingly, in spite of all kinds of antennas 
+on the summit of Mt. Equinox, I experienced no interference.
+
+MTWASH-13 on the other hand complained, from time to time, of having some 
+interference and did have some some trouble copying me. Generally however, 
+I would say we were successful in coordinating on the 445.925 MHz channel.
+
+I tried to record the signal strengths, but being a first-timer, I was 
+consumed with doing a lot of other things.
+
+Having said that, I believe the TM-D710A has 7 bars in its signal 
+strength meter and I recall seeing MTWASH-13 light up all of them (7of 7).  
+When I did hear GRYLC K-11, I recall seeing they were lighting up 2 of 7. 
+Unfortunately, I didn't notice a similar reading for SAMSPT-10.
+
+I'm hoping to do this next year when I'll be more familiar with what to 
+expect and I can be more focused on recording "signal strengths".
+
+73,
+Richard, N2SPI
+
+-------------
+
+
+I just uploaded my packet log for today (Golden Packet Day of course!). 
+Try this link:
+
+http://f1.grp.yahoofs.com/v1/bFbrUXDZr0cVzc-Sie984F06kOCWsktmRdUxXKh
+MWBfa0twjIn9jRmgeNJG5Tx1t4ywKz1ZjPEcf1U-LqO5ZzLhQpWo/EQINOX-12
+_GoldenPacketLog_07-20-13.txt
+
+If that didn't work, it's in the AT-GOLDEN-PACKET files section with the 
+title "2013 Golden Packet Log for EQINOX-12".
+
+I don't have much time to comment, but quickly:
+
+1) Careful examination of the log will show EQINOX-12 heard SAMSPT-10 
+direct..., a lot. However, for some reason (propagation? someone moved 
+an antenna? other??) I didn't hear them much later on. Perhaps this link 
+needs to be strengthened with, say, low noise preamps and/or yagi 
+antennas (just as we do with satellites).
+
+2) MTWASH-13 came in like gangbusters..., all day long. I never had a 
+suspicion that I had missed a packet transmission from MTWASH-13. I always 
+saw my beacon digipeated by MTWASH-13, never GRYLCK-11.
+
+73,
+Richard, N2SPI
+

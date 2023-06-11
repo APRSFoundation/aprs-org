@@ -1,0 +1,39 @@
+ALOHA NETWORKS DESCRIPTION                                     15 Jan 2003
+--------------------------------------------------------------------------
+                                                                    WB4APR
+Someone asked:   "BTW, what is ALOHA?"
+
+So I thought I'd answer...
+
+It is the classic definition of the type of network where each station
+randomly that has data to send, just does it.  All the text books refer to
+it that way, since it was pioneered in the late 60's at the university of
+Hawaii when they used VHF radios to link remote 110 baud ASCII teletypes
+on the various islands to the central campus computer.
+
+The techincal papers written about that system and how it shared the
+channel access was the beginning of such kinds of Time Divison Multiple
+Access schemes that we use today on AX.25, Ethernet, ARPAnet, the
+Internet, and some digital phone systems..  The channel throughput maxes
+at about 18% of channel capacity for connected mode ACKed systems.  Adding 
+more users or packets causes a drastic falloff of througput above that value...
+
+Next above ALOHA is where you use Carrier Sense Multiple Access (CSMA)
+where each station listens to the channel first before it sends the data.
+This doubles channel throughput to 36% of channel capacity.  But it
+assumes that EVERY station can hear EVERY OTHER station.  Although AX.25
+TNC's are CSMA, it is practically useless because of the 40 people in
+range of a digi, usually each person can only hear maybe 4 others direct.
+Thus the advantage of CSMA is only 10% of what it could have been.  Thus,
+I'd say that CSMA improves the 18% of pure ALOHA only up to about 20% or
+so...
+
+I know it drives people crazy to listen to an APRS channel and hear 6
+seconds of dead air between every packet (they think, "what a waste")...
+But that is when the DIGI is listening and when everyone hopefully has a
+significant opportunity to transmit without colliison with someone else.
+
+An APRS (ALOHA) system cannot perform well (for everyone) unless the
+channel is QUIET most of the time!
+
+de WB4APR, Bob

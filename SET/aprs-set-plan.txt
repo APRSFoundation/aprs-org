@@ -1,0 +1,54 @@
+APRS Simulated Emergency Test Procedures                    24 Aug 09
+---------------------------------------------------------------------
+
+The September 2009 QST mentions the October Simulated Emergency Test
+and an indepth article on how APRS can be the foundation for a
+Universal Amateur Radio Text Messaging System.
+
+We need a standardized plan on how to exercise APRS during the SET!  
+
+This is a first draft, since I do not consider myself an fully trained
+ARES/RACES/RED CROSS/FEMA person.  My thoughts are that it might 
+include these elements:
+
+EOC:  
+
+A) Sends an exercise Bulletin once every 10 minutes or so.
+B) Maintains a Frequency object with the local NET check-in freq.
+C) Solicits checkins via A and B
+D) Demonstrates APRS display at ALL EOC consoles
+E) Demonstrates large screen display of fll tactical situation 
+
+MOBILES:  
+
+1) Observe above on their Mobile APRS radios or display screens.  
+2) Be sure their GPS's are enabled and the EOC can track them
+3) Put their Frequency in their position text so they can be called
+4) Send a "CKIN" message to the EOC showing they have received A/B
+
+FIXED STATIONS:  The job of fixed stations is to be OBJECT INPUTTERS.
+They act as back-room facilitators that listen to all voice nets and
+place objects on the APRS map to represent everything in the situation.
+
+a) Confirm receipt of A and B
+b) Send CKIN message
+c) Monitor all Voice traffic and input OBJECTS to represent tactical
+   assets important to the present situation FOR ALL TO SEE.  
+d) This includes keeping track of the location of all other non-APRS 
+   mobiles.  Divide up this task among the operators so each can 
+   concentrate on subsets of the reqired objects.  This division of 
+   labor is important if UI-view is used, to spread out the channel 
+   load since UI-view has no mechanism for giving priority to new 
+   objects and less channel load to old objects.  
+
+CHALLENGE:  The goal of the APRS part of the exercise is to make sure 
+that the EOC personnel can communicate to all moving and active APRS 
+mobiles via above processes And can see the entire tactical situation 
+of everything involved.  Figure of merit is how many APRS mobiles 
+checkin and how many trackers the EOC is able to make contact with 
+and how well you can maintain the tactical picture.
+
+Is there anything else that would be a good part of this exercise?
+
+Bob, WB4APR
+

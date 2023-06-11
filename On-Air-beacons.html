@@ -1,0 +1,141 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<html> <title> APRS On-Line Beacons </title>
+<body bgcolor="#FFFFFF" text="#000000">
+
+<IMG SRC="logos/aprs.gif" height=50 width=90 align=left>
+
+<font size=+1>
+<P>
+<B>Awareness for your Shuttle Audio, RAIN Report, Newsline, or ARRL Audio News Broadcasts</B>
+</font>
+
+<P>
+You Volunteers work hard to bring these Amateur Radio Reports to your fellow hams.
+You advertise, announce, and encourage listeners.  But while your 
+program is being played on your repeaters, maybe only a few of the actual 
+mobile operators on the air at that time will hear it because only 
+a few of them remember the FREQUENCY and TIME that your report is being 
+played in your area.
+<P>
+
+<IMG SRC="D7xx/Rptr7-105x.JPG" height=80 width=150 align=right>
+
+You need a REAL-TIME bulletin that goes to all mobile operators independent of what 
+repeater they are currently monitoring.  The D7 HT APRS display shown to the right is
+showing the locally recommended frequency for travelers, the tone and
+range and weekly net times.  You need something like this for your program!
+<P>
+
+<P>
+<B><i>Providing REAL-TIME information to other operators is what APRS is all about! </i></B>
+See <A HREF="localinfo.html"><B>details</B></A>.
+<P>
+ 
+<B>Beacon on APRS:</B>  While your report is on the air, you need to be 
+beaconing a real-time APRS object showing the event on the front panel 
+of all APRS mobile radios in the area.  This object shows the frequency, 
+location, and time of the report.  You transmit it once a minute for the 
+duration of your program and then drop back to a 30 minute rate all the 
+rest of the time to help them remember the next week's report.  
+<P>
+
+<IMG SRC="info/InfoHuntsvilleX.JPG" height= 200 width = 300 align=right>
+<P>
+
+This way, a new mobile on the air is never more than 1 minute away from 
+being alerted in real time to your activity.  Similar to what you see in the
+image to the right, the radio can display the following attributes on the
+front panel:
+
+<LI> The Title of the program
+<LI> The Frequency
+<LI> The Weekly time
+<LI> Any other information about your local program
+
+<P>
+If the operator clicks on that item on his radio, then he will also see 
+your callsign as the originator, the date and time, the direction and 
+distance of your repeater from his location.
+<P>
+
+<B>FORMATTING YOUR BEACON:</B>   You can do this with no special software
+and nothting but an old TNC and radio.  Just dust off your old packet TNC
+and program the beacon using Hyperterm.  Connect the TNC to a low power 
+radio suitable for hitting the local APRS digipeater on 144.39 MHz(USA).  
+Then set the following settings:
+
+<br><code><pre>
+<BR>BTEXT ;NET-NAME-*111111zDDMM.--NXDDDMM.--WcFFF.FFFMHz DAY-TIME- other text...
+<BR>UNPRO APRS VIA WIDE1-1
+<BR>B E   180
+<P>
+<BR>Where the NET-NAME- must be 9 bytes
+<BR>Where the LAT/LONG must be as shown but with two spaces in place of "--"
+<BR>Where the X bytes between the LAT and LONG represents your type of program (A,N,R, etc?)
+<BR>Where the FFF.FFFMHz must be the first 10 bytes
+<BR>Where the DAY-TIME- must be 10 bytes including the initial SPACE
+<BR>Where all else is optional text.
+<BR>Where UNPROTO is the packet path for local APRS
+<BR>Where B E 180 means every 30 minutes in an old TAPR type TNC. 
+    ***   Change to "B E 6" for one-minute beacons during the program)
+<BR><B><i>    ***   YOU must return to the low 30 minute rate after the event!</B></i>
+
+<B>Here are several examples...</B>
+<P>
+<BR>BTEXT ;NEWSLINE *111111zDDMM.--NNDDDMM.--WcFFF.FFFMHz Tue 930PM other text...
+<BR>or    ;RAIN-REPT*111111zDDMM.--NRDDDMM.--WcFFF.FFFMHz Wed 7 PM  other text...
+<BR>or    ;ARRL-REPT*111111zDDMM.--NADDDMM.--WcFFF.FFFMHz Th 9:30PM other text...
+<BR>or    ;ISS-AUDIO*111111zDDMM.--NIDDDMM.--WcFFF.FFFMHz On theAIR other text...
+<BR>or    ;CLUB-NET *111111zDDMM.--NNDDDMM.--WcFFF.FFFMHz Sun 1030P other text...
+<P>
+</code></pre>
+
+The optional text field cannot be seen by some mobiles.  Operators with the
+TH-D7 APRS radio will not see any of the optional text.  Those with TM-D700's will see only the first
+8 bytes, but those with the new TM-D710 will see the next 22 bytes and
+those with full APRS client software running on a laptop will see a full
+line.
+<P>
+
+<IMG SRC="D7xx/AB9FXd710list1.JPG">
+<P>
+<B>TUNING IT IN:</B> . In New APRS radios (the D710 shown above) there is a TUNE Button
+to allow one button tuning to any of these objects that contain frequency in the 
+APRS standard format.  In the example above, the 5th station is selected, and pressing
+the TUNE button will take the radio to the 446.000 MHz frequency.  Notice that there
+are two formats for APRS frequency in objects.  The first 3 objects actually use the
+frequency as the name of the object.  These are used to represent the locally
+recommended voice repeater in any given APRS area.  But for your audio report,
+the name of the object should be Newsline, RAIN or
+ARRL report as necessary to catch the eye.  Then the frequency is included in the
+OBJECT text as in the examples #4 and #5 above.  Please see the APRS
+<A HREF="localinfo.html"><B>localinfo</B></A> initiative.
+<P>
+Note.  I used stock photos here for the examples since no one has sent in any
+photos yet of their Audio Report Objects to show to others.  Once yours is on
+the air, please confirm it is properly formatted by looking at it on the
+display of an APRS D7, D7XX or HAMHUD display.
+<P>
+<B>SHUTTLE RETRANSMISSIONS:</B>
+<P>
+You can automate this APRS object by simply connecting a TNC and radio on 144.39.
+and running the External Carrier Detect (XCD) input to the TNC over to the PTT
+line of the Shuttle Retransmission Transmiter PTT line.  Whenever that transmitter
+is keyed, it released the external hold off of the TNC beacons, and those
+one minute beacons begin to be transmitted (in the local area only) as long 
+as there is Shuttle Audio.  A great way to alert mobiles that your retransmission
+system is active.
+<P>
+
+<B>CONCLUSION: . <i>It Pays to Advertise.</i></B>  This serving of local real-time
+information of immediate use to the mobile operator in a local area is the original
+purpose of APRS.  If you are only thinking of APRS as a vehicle tracking system,
+then you have been mislead.  APRS is a two-way infromation distribution system.
+It was never intended as just a vehicle tracking system.  Please see:
+<P>
+The <A HREF="index.html"><B>Main APRS Page</B></A>
+<BR>All the <A HREF="APRS-tactical.html"><B>Misconceptions about APRS page</B></A>.
+
+Bob, WB4APR
+</html>

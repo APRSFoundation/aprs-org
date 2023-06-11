@@ -1,0 +1,79 @@
+QIKcom-2 USER SERVICE AGREEMENT                            10 Mar 2015
+----------------------------------------------------------------------
+                                                                WB4APR
+
+SERVICE:
+
+QIKcom-2 provides a worldwide position, status and messaging 
+service for mobile and handheld amateur radio satellite users.  
+Grade of service depends on user adherence to Power levels, 
+transmission Period, and Precedence criteria.  (Both are currently 
+not working to full design, so note changes below).
+
+POLICY STATEMENT:
+
+QIKcom-2 is an open system in accordance with the ITU regulations for 
+the Amateur Satellite Service.  To provide the best overall 
+throughput for the largest collection of users, the QIKcom-2 digi-
+peater is protocol driven and requires that all users adhere to 
+the fundamental protocol requirements.  Users that adhere to 
+these published protocol and operating standards are very welcome. 
+                                                                    
+AGREEMENTS:
+
+You may use QIKcom-2 if you adhere to the following agreements:
+
+1) QIKcom-2 is for ATTENDED LIVE UI digipeating only.  No CONNECTIONS 
+   either TO or THROUGH QIKcom-2 is authorized.  Unattended 
+   operations are not welcome (except for validated experiments, 
+   Antarctic WX stations and floating environmental buoys.
+
+2) Keep informed of the current protocol requirements via the PCsat
+   web page www.aprs.org/qikcom-2.html or via bulletins in the 
+   downlink.  The requested 
+   routine uplink rate is only 1 routine position/status packet 
+   per minute.  One-line messages may be somewhat more frequent 
+   in a dialog context. 
+
+3) Your objective is to get mobile/HT position or
+   status digipeated once or so per pass and to relay a few 
+   messages or Email as needed.  Share the resource.  Minimize 
+   your transmissions..
+
+4) The QIKcom-2 digi responds to ARISS, APRSAT and WIDEn-N.
+   With ISS on the same frequency and also suppoting these same
+   generic aliases, using ARISS,ARISS or WIDE2-2 is recommended.
+  
+   Like the terrestrial network, QIKcom-2 does callsign-substitution 
+   of its own MYCALL to indicate that it has digipeated the packet.
+   The ISS does not do callsign insertion on WIDEn-N so ARISS is
+   receommended if you want confirmation of digipeat via RS0ISS.
+
+6) Use only the authorized power levels, channel and periodicity for 
+   your station class and precedence as posted and published below.
+
+   STATION CLASS   PWR  BAUD  UPLINK   PERIOD   DIGIPATH  DOWNLINK
+   --------------  ---  ----  -------  -------  --------  ---------
+   Base Stn Packet 50W  1200  145.825  2 min    APRSAT    145.825
+   Base Stn DTMF   50W        145.TBD  1 min              145.825
+   Handi-Talkie     5W  1200  145.825  various  APRSAT    145.825
+   Handi-T  DTMF    5W        145.TBD  various            145.825
+
+   QIKcom-2 can hear  a 5 Watt station using a decent antenna when
+   no one else is colliding with the uplink.
+
+7) Use the shortest possible packets.  Mic-E protocol or APRS
+   compressed is preferred (typically 30 bytes or so).  ALso
+   Use a short TX Delay (TXD) of about 150 ms or less if possible.
+
+
+ACCEPTANCE:
+
+If you accept the conditions of operation for PCsat and Sapphire, please 
+sign this document and post it in your primary wallpaper location and enjoy!
+
+
+SIGNATURE:
+
+_______________________________________   Date:   _______________________
+

@@ -1,0 +1,61 @@
+PCSAT2 SOLAR EXPERIMENT DATA COLLECTION                     7 Jan 2003
+----------------------------------------------------------------------
+
+A complete data set consists of 49 lines of ASCII text data.  There
+are two methods to aquire this data on the ground:
+
+   Continuous beacon mode
+   Command dump
+
+BEACON MODE:  The SOLAR-EX will send over the RS-232 serial port lines 
+to the TNC for immediate transmission 7 ASCII lines of data once every 
+30 seconds or so and it takes 7 such transmissions to constitute a 
+complete data set.  These transmissions will occur continuously when 
+there is sufficient power and thermal conditions are within range.
+
+To receive this data, there will be at least two ground stations and
+as many others as may volunteer.  These two stations will track PCSAT2
+on all passes and feed the data live via telnet connection to the
+global APRS system.  Typically these reflectors carry that stream:
+
+   first.aprs.net
+   second.aprs.net
+   third.aprs.net
+
+NRL, NASA GLEN and USNA will run the program called ALOGGER which will
+remain loged on to the above sites and capture all packets originated
+by PCSAT2 when over any ground station.  Every such packet will be 
+saved to a daily file.   ALOGGER can be downloaded from the site:
+http://www.wa6oft.com/dnld.htm  The current version is ALOGGER15.zip.
+
+COMMAND MODE:  In addition, during passes over USNA, PCSAT2 can be 
+commanded during live operations, to dump a complete data set on the
+downlink.  Each dump will take about 10 seconds or less and the data
+will be captured to file for forwarding to NRL.  THis command dump
+can only be made using the secure command link.  
+
+IMPLEMENTATION DETAILS:
+
+To implement this system on PCSAT2, the following steps are involevd:
+
+1) PCSAT2 TNC's must be modified to have a "IGNORE SERIAL PORT"
+   command.  This is so that we can command the BEACON mode OFF,
+   and/or disable the SOLAREX if it locks up in a continuous send
+   mode.  Note, it is much easier if a "DONT-SEND" command was
+   implemented in the NASA/Glen SOLAREX CPU...
+
+2) SOLAREX must have a command parser to accept a serial port
+   command to initiate the command dump.
+
+3) USNA, and NASA/Glen need to download one of the APRS programs to do
+   the live feed of beacons to the TELNET feed.
+
+4) USNA, NASA/Glen, USNA need to download and run ALOGGER.  For
+   practice/verification, ALOGGER can be run now and be set for PCSAT
+   so that experience can be gained in capturing data files.
+
+
+Bob Bruninga
+USNA Satellite Lab
+410-293-6417
+

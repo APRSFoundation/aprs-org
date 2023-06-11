@@ -1,0 +1,127 @@
+APRStt CONNECTIONS FOR THE DTMF chip to the LPT1 PORT              20 May 2002
+------------------------------------------------------------------------------
+                                                                        WB4APR
+
+This is the current schematic for the APRStt interface to the LPT1 port to 
+both decode touchtones for APRStt off the air and to allow APRStt to speak back
+to the user.  It does not curently implement the ability to send back DTMF to
+some of the older DTSS HT radios which will be a future enhancement.
+
+This design below uses the 5 available Input pins on the Parallel port and does
+NOT attempt to use the port as a bi-directional port which will not work on
+all PC's...  I get 5 volts from the unused PS-2 keypboard socket on my laptop.
+The 8 output bits of the LPT1 port are used as a simple D/A converter to give
+APRStt its voice.
+
+Connections to the 8880 DTMF chip are:                               DB-25 
+                                                                     LPT1 Port
+                        +-------+
+                   *---*|       |*---------------------*---> +5V
+      0.1     100k |    |       |                  0.1 |
+Inpt --||--*--/\/\/\/--*|       |*--------------*--||--+
+           |  100k |    |       |       390k    |      |  +-----+
+           +--/\/\/\/--*|       |*-----/\/\/\/--*------|--| XXX |--- Pin 15
+                   |    |       |                      |  +-----+
+                   *---*|       |*----- D3-------------|------------ Pin 11
+                        |       |                      |
+           GND --------*|       |*----- D2-------------|------------ Pin 10
+                        |       |                      |
+                XTAL---*|       |*----- D1-------------|------------ Pin 12
+                        |       |                      |
+                XTAL---*|       |*----- D0-------------|------------ Pin 13
+                        |       |            3.3k      |
+      DTMF OUT --------*|       |*---------/\/\/\/-----+
+                        |       |                      |
+         +5 R/W -------*|       |*      clock         === 0.1
+                        |       |                      |
+        not CS     *---*|       |*---*  REG Sel        |
+                   |    +-------+    |                 |
+                  ===               ===               ===
+                   =                 =                 =
+
+I/O PORT CONSIDERATIONS
+
+LPT1   PORT ADDRESS = 888
+STATUS PORT ADDRESS = 889
+
+BIT 8880 VAL  DB25  color  NAME    OPEN out  GND out  note
+--- ---- ---  ----  -----  ------  --------  -------  -----------
+ D7  D3  128   11   yel    BUSY     +5   0      1     HW inverted
+ D6  D2   64   10   org    nACK      0   1      0     defined inverted
+ D5  D2   32   12   red    Pempty   +5   0      1    
+ D4  D0   16   13   brn    Select    0   0      0
+ D3  ESt   8   15   w      nError   +5   1            defined inverted
+ D2        4                         0   0
+ D2        2                         0   0
+ D0        1                         0   0
+
+In software, to get the 8880 chip 4 bit outputs to read properly,
+
+1) First XOR with 128 to reverse the Hardware inversion
+2) Then binary divide by 16 to right shift the data.
+3) Note that D3 is the state of the KEY press.  It is 0 if no key
+   and goes to 1 if there is a key pressed.  Get this bit with AND 8
+
+
+XXX CIRCUIT:  This circuit unloads the digit-detect output and isolates
+              it from the R/C time constant of the 390k and 0.1 uF cap.
+              Then it is inverted an used to feed the Pin 15 to tell the
+              APRStt that a new digit has been received.        
+
++5v-----------*----------------*
+              |e               |
+           b|/                 \ 10K
+>--/\/\/----|PNP               /
+   470K     |\                 \
+              |c               *------------> Pin 15
+              |                |c
+              |             b|/
+              *---/\/\/\/----|NPN
+                   100 K     |\
+                               |e
+                              ===
+                              GND
+
+
+APRStt VOICE D/A CONVERTER  USING THE LPT1 PORT
+-----------------------------------------------
+                           +---------+
+ PIN-1 --------------------+ PTT CKT +----> To Radio PTT
+ PIN-2 --<640K>--+         +---------+
+ PIN-3 --<320K>--+
+ PIN-4 --<160K>--+
+ PIN-5 --<80 K>--*---*---------||---------> To Radio Microphone input
+ PIN-6 --<40 K>--+   \        10uF
+ PIN-7 --<20 K>--+   /
+ PIN-8 --<10 K>--+   \ 33 Ohms
+ PIN-9 --< 5 K>--+   /
+ PIN-25--------------*
+
+
+PTT BUFFER CIRCUIT
+------------------
+
+This circuit converts the TTL level LPT1 Strobe bit to an open collector
+PTT output that should work with all radios...  The 220k and 100 uF 
+capacitor are a watchdog timer that will prevent the circuit from holding
+down PTT for longer than 22 seconds and the 10uF caps are to filter any
+noise from getting into the Mic circuit when PTT is combined with Mic
+audio on HT's.   To combine PTT with Mic Audio, simply run the PTT output 
+to the mic input through a 2.2k resistor.
+
+                      +---||---+
+                      |  10uF  |
+                      +--/\/\--*--------*--------------------> +5v
+                      |  220K  |        |
+                      |        |e      === 10 uF      
+                      |     b|/         |      
+ PIN-1  >--\/\/\--||--*------|PNP      ---   
+(strobe)    10K  100uF       |\        /// GND      
+                               |c               *------------> PTT to Radio
+                               |                |c
+                               |             b|/
+                               *---/\/\/\/----|NPN
+                                    2.2 K     |\
+                                                |e
+                                               ===
+                                               /// GND

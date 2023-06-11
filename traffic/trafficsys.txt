@@ -1,0 +1,99 @@
+APRS TRAFFIC MONITORING SYSTEM                                  27 May 2004
+---------------------------------------------------------------------------
+
+During routine operations and even during stress and emergencies, I can
+think of nothing of more value to the situational awareness of the local
+county and APRS communications operators than knowing the flow of traffic 
+and locations of bottlenecks.  Therefore, APRS needs to include provisions 
+for distributing to mobile users (radio front panels or heads-up displays)
+the speed of traffic at key locations.
+
+For this reason, even back in 1995, I included the SIGN-POST map symbol 
+that can display the speed of moving traffic past a point on the map.
+The problem has always been how to get speed data.  Now solutions are at
+hand, so we need to concentrate on how to best fully integrate this into
+a standardized APRS process with efficiency and so as not to overburden 
+an already busy network.  APRStfc.exe is a crude system for local use,
+but we need a much larger and more universal system compatible with 
+present and future internet sources of this data such as the data posted
+by the Maryland CHARTS system on: 
+
+               http://www.chart.state.md.us/travinfo/speedData.asp
+
+APRS TRAFFIC PLAN:
+
+So what we need is *local* SIGN-POSTING built into every internet-capable 
+APRS client just like such clients now serve messages to local users.
+These clients watch the local sources of SPEED data and as needed update
+the SPEED-POST in their immediate vicinity using either a DIRECT or the 
+minimum path needed to post the APRS SPEED-POST symbol in that area.
+
+Thus, updating a SPEED-POST does not QRM large areas and each such update 
+(say once every 10 minutes even under stress) uses up no more than 0.01 
+of local channel capacity and is only heard immediately in the vicinity 
+of the congestion and only where that bit of informaiton is of value.  
+The following are the salient characteristics of such a system:
+
+CLIENTS PERFORM THE FOLLOWING TASKS:
+1) check the local county or state internet traffic speed file every 5 mins
+2) check own-list of SPEED-POSTS this client SYSOP has volunteered to update
+3) If avg speed is as before, update SPEED-POST object once every 10 minutes
+4) If change in average speed is +/- 20%, then update SPEED-POST now.
+5) Then decay rate back down to 10 minutes after a few   minutes
+5) Send DIRECT, or at most, via one local digi in vicinity of SPEED-POST.
+
+METRO-CZAR:
+In each major METRO area, a Speed-Post-CZAR clinent automatically monitors 
+all local APRS speed-post objects and maintains a list of all active clients 
+and what speed posts they are reporting.  The purpose of this is to manage 
+dupes.  If two clients are updating the same SPEED-POST, the Czar sends an 
+APRS-IS message to one of the clients telling it to hold off reporting at 
+this time.
+
+CLIENT SOFTWARE REQUIREMENTS:
+
+Parsing:  The local client front-end parser will probably be unique for each state
+or county depending on the kind of traffic reporting system they use, so this
+part of the client code has to be flexible for easy changing of the parser.
+(I hope the governments are working to standardize the format of these
+files!)...
+
+APRS Speed-Post objects:  The format of the speed-post object must be 
+compatible with present systems such as the Kenwood TH-D7 and D700 mobile radios
+as well as the HAMhud.  To this end the following format is required:
+
+;nnnnnnnnn*DDHHMMzDDMM.hhN\DDDMM.hhWmDIR/SPD/{SP} MPH  Time HHMM by CCCCCC-SS
+
+Where:  nnnnnnnnn is the name of the location of the SPeed post
+        DDHHMMz   is the time of the data
+        DDMM.hhN  is the latitude of the report
+        DDDMM.hhW is the longitude of the report
+        DIR/SPD   is the direction and speed (knots) of traffic at that point
+        {SP}      is the speed in MPH
+        HHMM      is the hour and minute local time of the post
+        CCCCCC-SS is the source of the report
+
+This causes the data to flash on the Kenwood TH-D7 and TM-D700 front 
+panels as follows:
+
++--------------+
+| 1:nnnnnnnnn  |
+|   {SP} MPH   |
+|   time DDMM  |
++--------------+
+
+And on the TM-D700 station/object page as:  
++----------------------------------+
+| {SP} MPH  Time HHMM by CCCCCC-SS |
++----------------------------------+
+
+
+Adding this capabilty into APRS in a standard and consistent manner will
+benefit APRS users everywhere as they will automaticlly be provided in 
+the simplest hands-off method, the critical data that is most needed in
+their mobiles in their immediate vicinity.
+
+De WB4APR, Bob
+
+
+

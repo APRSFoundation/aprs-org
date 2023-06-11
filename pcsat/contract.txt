@@ -1,0 +1,136 @@
+PCsat USER SERVICE AGREEMENT                            10 Dec 2008
+-------------------------------------------------------------------
+                                                             WB4APR
+
+UPDATE 10 Dec 08: PCSAT is getting old.  It can only operate during
+the week long winter periods of full sun.  Even then, an overload
+will lose its parameters and the power budget will be lost until 
+the next year.  So do not overload PCSAT.
+
+Use of W3ADO-1 DIGIPEATER is not authorized during these restora-
+tion periods, because that is the crashed call, and indicates 
+PCSAT is in power-negative mode!  Use only the path of ARISS or
+WIDE2-2.
+
+SERVICE:
+
+PCsat, NO44 provides a worldwide position, status and messaging 
+service for mobile and handheld amateur radio satellite users.  
+Grade of service depends on user adherence to Power levels, 
+transmission Period, and Precedence criteria.  (Both are currently 
+not working to full design, so note changes below).
+
+POLICY STATEMENT:
+
+PCsat are open systems in accordance with the ITU regulations for 
+the Amateur Satellite Service.  To provide the best overall 
+throughput for the largest collection of users, the PCsat digi-
+peater is protocol driven and requires that all users adhere to 
+the fundamental protocol requirements.  Users that adhere to 
+these published protocol and operating standards are very welcome. 
+                                                                    
+AGREEMENTS:
+
+You may use PCsat if you adhere to the following agreements:
+
+1) PCsat is for ATTENDED LIVE UI digipeating only.  No CONNECTIONS 
+   either TO or THROUGH PCSAT is authorized.  Unattended 
+   operations are not welcome (except for validated experiments, 
+   Antarctic WX stations and floating environmental buoys.
+
+2) Keep informed of the current protocol requirements via the PCsat
+   web page www.aprs.org/pcsat.html or via bulletins in the 
+   downlink.  Since the 3 Oct 2001 activation, the requested 
+   routine uplink rate is only 1 routine position/status packet 
+   per minute.  One-line messages may be somewhat more frequent 
+   in a dialog context. 
+
+3) The PCSAT and your objective is to get mobile/HT position or
+   status digipeated once or so per pass and to relay a few 
+   messages or Email as needed.  Share the resource.  Minimize 
+   your transmissions..
+
+4) The PCSAT digi responds to PCSAT-1, ARISS, APRSAT and WIDEn-N.
+   With ISS on the same frequency and also suppoting these same
+   generic aliases, using ARISS,ARISS or WIDE2-2 is recommended.
+   The default W3ADO-1 callsign is a distress callsign and is
+   not authorized during potential operating periods (Nov - Mar).
+   When PCSAT has no hope of recovery (APR-OCT), that callsign
+   may be used since the satellite cannot be recoered anyway.
+
+   Like the terrestrial network, PCsat does callsign-substitution 
+   of its own MYCALL to indicate that it has digipeated the packet.
+   The ISS does not do callsign insertion on WIDEn-N so ARISS is
+   receommended if you want confirmation of digipeat via RS0ISS.
+
+6) Use only the authorized power levels, channel and periodicity for 
+   your station class and precedence as posted and published below.
+
+   STATION CLASS   PWR  BAUD  UPLINK   PERIOD   DIGIPATH  DOWNLINK
+   --------------  ---  ----  -------  -------  --------  ---------
+   Terminal Packet 50W  1200  145.825  2 min    APRSAT    145.825
+   APRS Base stn   50W  9600  435.250  2 min    APRSAT    145.825
+   Mobile          50W  9600  435.250  various  APRSAT    145.825
+   Handi-Talkie     5W  1200  145.827  various  APRSAT    145.825
+
+   The UHF receivers are kept off to conserve power, due to the 
+   failure of the -Z solar panel on launch.  Thus the only public 
+   uplink on PCsat is 145.825 MHz.  The un-published uplink for 
+   the 144.39 downlink system is available for anyone with special 
+   needs.
+
+   PCsat can hear well a 5 Watt station using a decent antenna when
+   no one else is colliding with the uplink.
+
+7) Routine operations after dark via PCsat are not welcome.  Do not
+   use PCsat in the dark unless you have a high priority requirement.
+
+8) Use the shortest possible packets.  Mic-E protocol or APRS
+   compressed is preferred (typically 30 bytes or so).  ALso
+   Use a short TX Delay (TXD) of about 150 ms or less if possible.
+
+9) Determine your own precedence based on your current communications 
+   requirements for each pass.  In general, all use is routine except 
+   for special circumstances.  Typical Special usage is for demonstra-
+   tions, and long term events.  Priority usage may be for VIP demos 
+   or special one-time events.  Use good judgment, being fair to all 
+   other usrs.  To alert other users to your precedence/priority, Set 
+   your period and position comment as follows:
+
+
+   STN CLASS    PRECEDENCE  PERIOD  ICON   POSITION COMMENT
+   -----------  ----------  ------  -----  ------------------------
+   Mobile/HT    Emergency  .2 min   any    EMERGENCY
+                Priority   .5 min   any    PRIORITY
+                Special     1 min   any    Special
+                Routine     2 min   any    Off-duty,Enroute,...,etc
+   Termnl Pkt*  ALL         X * 2   N/A    Short BText 
+   Base Stns    ALL         X * 2   House  Off-Duty
+   GPS Traker   ALL         X * 2   GPSxyz N/A
+
+   Notice that terminal packet stations, base stations, and NMEA Trackers 
+   are requested to minimize QRM by setting their packet rates
+   to the next longer period (twice as long) for any given precedence 
+   to account for their longer packets.
+
+CRASH MODE:  Whenever PCsat crashes to W3ADO-1, we ask that all user 
+transmissions other than Emergency and Priority traffic cease.  CRASH
+mode sets the W3ADO-1 call, turns on the two backup UHF receivers and
+cross connects the transmitters and sets the Telemetry nits to 11111111.
+*** During normal OPS periods.  DO NOT USE W3ADO-1 callsign!
+*** During the summer you may use W3ADO-1 since there is no chance of
+    recovery except during full sun periods in the late fall and winter.
+
+Remember, for now, no unattended operations are authorized.  Also night 
+time operations via PCsat will kill it.
+
+ACCEPTANCE:
+
+If you accept the conditions of operation for PCsat and Sapphire, please 
+sign this document and post it in your primary wallpaper location and enjoy!
+
+
+SIGNATURE:
+
+_______________________________________   Date:   _______________________
+

@@ -1,0 +1,115 @@
+'**************************************************************************|
+'*           PSAT2/QIKCOM-2 Total list of FLIGHT Messages       18 Nov 2015|
+'**************************************************************************|
+
+DTMF messages are sent in a 16 key string starting with the message type
+identifier (B or C) and ending in #  If the identifier is the B or C key 
+then the format of the resulting message is as follows:
+
+    BxxMMCCCCCCkkkk#  Where CCCCCCkkkk are your callsign keys and key code
+                      This is used when you want to send the same message
+                      easily such as the QSL message #40, 41 or 42.
+           or
+    CMMxxCCCCCCkkkk#  Where CCCCCCkkkk are your callsign keys and key code
+                      and MM is the message number below
+                      and xx is a modifier number spoken in place of __
+
+Note:  The wierd spellings below attempt to get the low quality synthesizer
+on QIKCOM-2 to sound better (QIKCOM2 was never launched due to a snafu with
+the FCC).
+
+'**************************************************************************|
+'*                        ARL Emergency Standard Messages       18 Nov 2015|
+'**************************************************************************|
+
+01 Everyone is safe, Do not worry.                
+02 I am Coming home as soon as posseble.  '
+03 In hospetal, Receiving care and recovering.
+04 Only slight property damage here, Do not worry.
+05 I am moving to a new location, Will make contact then. 
+06 Will contact you as soon as posseble.
+07 Please reply by Amatur Radio.
+08 Need additionel radio equipment for emergency use.
+09 Additionel _ radio operators needed.   
+10 Please standby for further information.
+11 Establish Amatur Radio contact on _ meeters.
+12 Ankchus to hear from you.
+13 Medicel emergency sit uation egsits here.
+14 Sit uation here is worsening and becoming criticel.
+15 Please adv eyeze your condition and what help is needed.
+16 Property damage is very significant.
+17 RE ACT communications are on channel _.
+18 Please contact me as soon as posseble.
+19 Request halth and welfare report.
+20 Temporarily stranded, Will need some assistance.
+21 Serch and Rascue assistance is needed.
+22 Need accurate information on conditions at your location.
+23 Report accessebility and best way to reach your location.
+24 Evacuation of razidents from here is urgently needed.
+25 Please adv eyeze weather conditions at your location.
+26 Need help and care for evacuation of sick and injured. 
+27 Hi, This was Dove in spaice, anni verse air E
+28 There are _ of us here.
+29 .
+30 Marytime Emergency Code number _.   '
+31 We are operating on emergency power.
+32 We are operating on sowlar power.
+33 This is a voice test.
+
+'**************************************************************************|
+'*                         ARL GENERAL Standard Messages        18 Nov 2015|
+'**************************************************************************|
+40 Q S L, your number _, my number is %. (% is the next number 'CQ msg
+41 Q S L, your C Q number _.                                   'CQ msg
+42 Q S L, your C Q number _ and thanks for the contact.        'CQ msg
+43 Go Navy, beet Army!.     '''
+44 Navy Beets Army by _.     ''
+45 I am _ years old.
+46 Greetings on your berthday. 'birthday to bertday
+47 Got your message number _.
+48 I am in school grade _.      ''
+49 Celebrating _ munths in spaice.
+50 Greetings by Amatur Radio. 'Amateur to Amatur
+51 Am having a wonderful time.
+52 Really enjoyed visiting with you.
+53 Received your package, Thank you.
+54 Many thanks for your good wishes.
+55 Very delighted to hear your good newze.  
+56 Congratulations on your worthy achievement.
+57 Wish we could be twog ether.    
+58 Have a wonderful time, Let us know when you return.
+59 Congratulations on the new arrivel, Hope all are well.
+60 Wishing you the best.
+61 Wishing you happy holidays and New Year.
+62 Greetings and best wishes for the holiday season.
+63 Our best wishes are with you, Hope you win.
+64 Arrived safely at _ hours.
+65 Please meet me on arrival at _ hours.
+66 D X Q S Ls are on hand at the Q S L Bureau.
+67 Your message _ is undelivereble.
+68 Best wishes for a speedy recovery.
+69 Welcome, We hope you will enjoy the fun and fellowship.
+'        thats the end of the numbered ARL radiograms
+70 Call me ON my cell at _ Oh clock.
+71 No cell phone service here.
+72 My Cell phone battery is dead.
+73 Greetings from AMSAT, Keeping ham radio in spaice fo _ years.
+74 My Cell phone charging opportunitees are limited.
+75 Call my cell phone on the hour.
+76 My Radio power charging capabilities are limited.
+77 My next contact time will be in _ minutes.
+78 My next contact time is tomorrow.
+79 Please send items number _.
+
+80 I am on schedule.
+81 I may be delayed by _ hours.
+82 I may be delayed by _ days.
+83 I may be earlyer by _ hours.
+84 I May be earlyer by _ days.
+85 I may quit earlyer by _ stops.
+86 I may go further by _ stops.
+87 We are camping and enjoying it greatly.
+88 Sending love and kisses!.
+89 Contact me on the _ meeter band.
+90 There are _ of us here.
+91 Celebrating _ weeks in spaice.

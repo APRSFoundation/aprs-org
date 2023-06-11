@@ -1,0 +1,46 @@
+Hawkbill report 2016
+--------------------
+
+W4EON, KX4O and Dylan H. (14 yo) brought gear to first the Byrd's Nest
+shelter and later the platform atop Hawksbill Mountain...
+
+  http://sota.hamradio.me/peak.php?reference=W4V/SH-001
+
+The gear was:
+• Kenwood D710 plus aftermarket GPS with the "iffy" stock mic featuring 
+the beyond-stupid RJ connectors used for a "stretching" mic cord,
+
+• 10 AH LiFePO battery (so light... so nice),
+
+• Diamond X50 dual band antenna (silly design, but very portable, somewhat 
+safe around humans and it functions) - on sale at HRO last week,
+
+• Speaker stand placing the antenna's <cough> radials </cough> 
+just above poke-eyes-out level for most humans.
+
+Procedure:
+• Hike 30 minutes,
+• Reach top and admire views (WX was good at first),
+• Unstow antenna pre-attached to the speaker stand top portion 
+and place on tripod bottom portion,
+• Unpack radio and battery,
+• Join battery and power and antenna cable,
+• Power-on and load PM5 config (same config used for years),
+• Done... wait.
+
+Key points:
+• 9600 bps - very very impressed.
+• Strong VHF RX signals north and south.
+• Strong UHF signal from the north.
+• 1 bar UHF signal from the south - only when we moved the gear 
+to the top platform (about 20 more feet height).
+• Mid power setting used always - didn't try anything else - 
+no one complained they couldn't hear #6.
+
+We kept it simple and it works.  We are taking a risk with no backup gear 
+other than W4EON's SOTA battery, but so far so good.
+
+Thanks for a great effort and as always big thanks to Tim for making the 
+big climb... your efforts drive us.
+
+John, kx4o

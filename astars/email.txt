@@ -1,0 +1,96 @@
+SENDING EMAIL via the APRS Capable Satellites              de WB4APR
+---------------------------------------------              ---------
+
+Any of the APRS capable Amateur Satellites are capable of forwarding 
+EMAIL messages from mobiles or remote traverlers.  While such service
+is not guaranteed, it does work some of the time.  It could work well
+all of the time if we had more people listening to the satellites!
+The format is simply sending an APRS formatted Message to the call-
+sign of EMAIL.  Then make the first word of the message be the e-mail 
+address of the recepient.  That is all there is to it.  Of course, 
+and APRS message is only one line long, but a few words can mean a lot.
+
+The PATH Taken:
+---------------
+
+If the message is succcessfully digipeated by the satellite, you will
+probably see (or hear) the digipeated copy and know that your uplink
+was successful.  If it was, then there is also a good chance that 
+one of the many APRS Satellite ground stations saw it and forwarded
+it into the worldwide APRS internet linked APRS distribution system.
+
+Monitoring that system (and every APRS packet in the world) is WU2Z's
+e-mail engine at Rutgers University looking for any APRS messages to
+EMAIL.  If it sees such a message, it takes it and puts a standard
+Email header on it and then injects it into the normal Internet.  His
+engine also sends back an ACK to let you know that it was processed.
+Sometimes, especially via the satellite path, this ack may not make
+it all the way back to the sender... but the Email will be delivered
+anyway.
+
+What Can Go Wrong?
+------------------
+
+The WU2Z Email engine may go down, but over the years, it is normally
+quite reliable.  The biggest unknown is whether there was a satellite
+I-Gate monitoring the satellite downlink to hear your packet.  These
+signals are weak and any one ground station does not hear all of them.
+But the design of the APRS internet linked ground station system assumed
+that there would be lots of such ground stations (simply an OMNI 
+antenna, a 2m Radio and a PC is all that is needed).  In my opinion,
+we need about a half dozen more stations in the USA.  Europe does 
+quite well with at least 4 permenant stations on line always.
+
+ANYONE can be an APRS Satellite ground station simply by using APRS 
+or other softare to listen on the downlinks and feed all packets heard 
+into the worldwide APRS internet linked system.  YOU CAN HELP.
+
+
+SATELLITES:
+-----------
+
+The following satellites can digipeat any standard AX.25 packet and thus
+can be used for APRS or Email.  The critical difference between them is
+how many ground stations are monitoring.
+
+PCSAT-A:	Easy uplink and downlink.  Excellent chance.  Lots of stations
+ 		monitoring the 145.825 downlink worldwide.
+
+PCSAT-B:	The dual redundant system on PCsat.  It downlinks on 144.39
+		and the downlink will always be heard somewhere.  The
+		uplink is unpublished so that we can provide "good" service
+		to special stations on special travels (apply in advance).
+
+ISS:		Easy uplink and downlink.  Good chance.  But ISS is often not
+ 		working, there may be fewer ground stations, and there is lots of
+ 		competition on the uplink.
+
+UO-22: 	Easy uplink, but downlink requires tracking gain antennnas.
+		Probably no one is listening (bummer, because it is so good!)
+
+Sapphire:	Easy uplink, but downlink requires tracking gain antennas and
+		no one is listening.
+
+OPAL:		Difficult uplink and downlink and no one is listening...
+
+
+SENGDING WITH NON APRS PACKET STATIONS:
+---------------------------------------
+
+If you are not running one of the APRS Mobiles or HT's from Kenwood or
+a copy of APRS software but still want to send an Email via any of the
+satellites with just a dumb-terminal mode and a TNC, then you need to
+do the following:
+
+cmd: UNPROTO APRS VIA DIGI    <== where digi is the call of the satellite
+cmd: CONV                     <== go to converse mode
+
+:EMAIL     :abcdefg@higjlmn.net Text begins here for one full line only.
+
+And that is all there is to it.  It all has to fit on one line.  Enjoy
+the system and think about putting one of your spare packet systems to
+work monitoring any of the above satellties to help out your fellow
+travelers.
+
+de WB4APR, Bob
+

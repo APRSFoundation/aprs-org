@@ -1,0 +1,65 @@
+------------------------------------------------------------------------
+Mammoth Cave APRS hardware list      Rev b                  25 Jan 2013
+------------------------------------------------------------------------
+                                                                  WB4APR
+Date:  2,3 March 2013 (saturday and sunday of Cave City Hamfest)
+       (Also Volunteer weekend at the Park)
+
+Should we all bring an FRS walkie-talkie?  Or I can provide.  These are as
+low as $24 a pair (462 MHz) and are useful for coordination and also as
+a benchmark test of UHF at the same time (short range voice). 
+
+Note, WB4APR has a dozen 9 AH gel cell batteries to support Boxed D700s.
+
+At this point, we have the possibility of 16 digis.  But 9 of them will
+have to be heavy and bulky D700/710 boxes.  But if we use them, we can
+also do a range test at 50W too.
+
+D72 digis:
+    3 WB4APR
+    1 W9RXR  also has D710 and VX8R.  4 Hrs away
+    1 KD4ANG Jon (natl guard duty)
+    1 KA0AZS and D7
+    1 KY4JME Josh with Arrow antenna, also has D710
+
+D700 digis. At 5W to be identical to D72 except for Vertical links.
+    6 D700 WB4APR  (two 710s and four 700s)
+    1 D710 W9RXR also has D72 and VX8R.  4 hrs away
+    1 D700 KA0AZS (also D72 and D7) from Ohio
+    1 D700 KI4RDT (Vert LInk tester w D7 and 817 combo)
+    1 D710 KY4JME with Arrow Ant and also has D72
+
+HF Combos
+    2 FT817/KPC3 - WB4APR
+    1 IC706/TNC  - KG4CSQ Clarksville, TN about 2 hrs away.
+    1 IC706      - KA0AZS also D72,D7, D700 from Ohio
+    1 FT817/KPC3 - KI4RDT (Vert LInk tester w D7 and D700) 1 Hr
+
+Igates: KG4LVA, John.  Tested Hotel WiFi and has permanent one in B.Green
+
+NetControl:  Need someone topside with VHF voice to area repeaters, monitoring 
+    also a simplex chat frequency and with APRS display and contact with NPS 
+    park personnel.
+
+WagonMan:  May need someone to remain topside for shuttling people or gear
+    or just to be available to coordinate and help.  Vehicle required.
+
+
+These people and hardware have not yet been matched to a particular
+position or hardware function.
+
+KC9LDH - D72, D7.  Kurt Savegnago from Canton Illinois (long way away)
+?????  - D72, Steve.  Drives by frequently.  Watching for dates...
+KC8SFQ - OT2 only.  Ron, kc8sfq@mei.net has relatives nearby 
+KO4FV  - HF only - Brian, Active Caver from Huntsville.
+AK4RP  - HF & soundcard, Peter 2 hours away (Vanderbilt).
+K4GAA  - VX8DR, Ray COle, works at NRL in DC
+       - Gary Gibula, Caver - Chicago volunteer for Mammoth that weekend
+NW5AR  - D72, etc... Mark Palmer, -9 Hrs away and can't come this time....
+NH7C   - Sid Caesar works at Dept of Interior.  Kibitzing from a distance.
+KD4SS  - Charles.  Member of local Mammoth area Ham Radio Club
+KJ4NES - Roger Hall?
+N3EV   - VHF/UHF/HF Gene. Leesburg, Va. Caver and rescue
+?????? - George D.  Active Caver
+W1IR   - LF, MF, HF Brian Pease, caver comms experience (lives in VT)
+KJ4ERJ - Lynn - Author of APRSIS32 software and kibitzer

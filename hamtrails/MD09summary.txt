@@ -1,0 +1,48 @@
+Maryland Mountains 2009 Summary                          28 July 09
+-------------------------------------------------------------------
+                                                             WB4APR
+Participants:  
+   WN3R Dick Hayman provided site, tower, antenna, coax, power
+   N3ER Joseph provided setup and D700 radio
+   K3PDK Patrick Domack manned it
+
+When K3PDK arrived, N3ER already had everything setup and operating.
+
+I saw several packets from greylock around this time, 11:30 till  
+sometime after 12pm. I did see a few more till 4pm, but I think 
+maybe only 2 or 3 packets. [Bob notes: Since GD hill was not 
+really on-site and digipeating untill maybe 12:30 or later, this
+means MD Mountains was hearing from Camelback direct! maybe...]
+
+We had no problems connecting with GD Hill or camelback. Could 
+even hear people at GD Hill using ht's as they walked from car to 
+site without much of a problem.
+
+Wasn't able to locate WV till around 3pm, lost your instructions 
+on setup, finally got it all sorted out and WV came up around 3:30.
+
+Pretty much it was just boring sitting there, didn't have any 
+issues on my end.  Took a few min to get setup on echolink 
+directly using a computer, and also was monitoring the thurmont 
+147.195 T179 repeater using an HT, so that we didn't have an issue 
+with packet digipeating.
+
+Also had my laptop connected on 144.39 for aprs traffic and aprs-is.
+
+My only hope for nextime is to use the d700 in packet mode, and let  
+the computer do the digipeating, only so that I can record the 
+traffic  at the same time from the radio.
+
+or maybe I don't need to? I haven't played around with seeing if 
+the radio would digipeat in packet mode instead of aprs mode, I 
+guess there is no reason why it shouldn't.
+
+Patrick, K3PDK
+
+[Bob comment:  Yes D700 will do UIFLOOD and UITRACE digipeating
+in packet mode as well as APRS mode.  The only difficulty when
+running a PC and some client software is making sure you know
+what the client software will do to all the D700 TNC settings.
+In some cases these software-induced TNC setting are hard to
+track down.  
+

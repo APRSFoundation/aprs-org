@@ -1,0 +1,55 @@
+FIGURING YOUR 50 USER ALOHA NETWORK                         WB4APR
+------------------------------------------------------------------
+
+At about one second per packet, this means that in a 30 minute period 
+maximum possible throughput on a 1200 baud channel is 1800 packets.
+But this ignores the fact that a collision anywhere in a packet
+destroys both packets usually, so the actual relaible figure is usually
+about 2/3rds of that.  But for the optomistic, we will use the 1800
+number..
+ 
+Now, how you use those local 1800 packets per 30 minutes is debatable,
+but, it is very easy to calculate based on who and what is on the air
+in the area.  The packet rates of most categories of stations is well
+known.  The following table suggests a typical local area usage:
+ 
+TYPE STATION         PKTS/30m ea  Total  PCT of LOAD
+-------------------  -----------  -----  -----------
+30 Home stations            2       60      19  %
+ 3 LOCAL digis (evy 10m)    3        9       3  %
+ 9 2nd-tier digis (evy 30m) 1        9       3  %
+ 5 area WX stations         6       30       7  %
+ 3 Mobiles evy 5m           6       18       6  %
+ 3 Mobiles evy 3m          10       30       9  %
+ 3 mobiles evy 2m          15       45      14  %
+ 3 mobiles evy 1m          30       90      28  %
+---
+59 TOTAL USER STATIONS
+TOTAL PACKETS IN THE 30 MINUTES =  321 
+
+But, every one of these packets is usually digipeated by usually
+every digipeater.  In the above example there are 3 digis in range
+of this example so the 321 packets is really more than 960 local
+copies.  AND this does not count any of the 2 hop or greater packets 
+coming in from the surrounding 9 digipeaters further out!  At this
+point, lets just assume that HALF the traffic comes from them.
+
+What should be painfully clear is that with just 2 hop packets
+this area is totally saturated with only about 60 users.
+You can trade these numbers anyway you want, but you cannot
+change the laws of physics that says the optimum reliable
+throughput for our 1200 baud ALOHA channel is about 60 or
+so average users.  In your local area, you can add several more fixed 
+stations for every 1 minute mobile you eliminate.  Or, you have to 
+eliminate a lot of home stations (or suffer much worse reliability)
+to accept the load of just one more high-rate mobile.  
+
+It should be very clear that the path to reliability is to cut the
+number of hops used and hopefully out of area packets will not be
+so burdensome on the local net.  APRSdos and hopefully other APRS
+programs displays this local reliable range of the nearest N 
+stations  based on what it hears so that the user is well informed
+of his effective communications range and will keep his packets
+within that area by keeping his path short.
+ 
+de WB4APR

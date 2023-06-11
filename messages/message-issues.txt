@@ -1,0 +1,58 @@
+APRS Messaging Issues and Requirements                 22 Oct 2008
+------------------------------------------------------------------
+                                                            WB4APR
+
+This file was prepared to summarize all of the important issues
+relative to sending APRS messages.  If anyone has any other ideas
+I welcome them.
+
+The sending application has a certain responsibility to the sender
+to give APRS the best chance of delivering the message.  In a nut
+shell, we think the following issues are important:
+
+1) The sender should be authenticated to be a valid radio amateur
+
+2) Messages should be transmitted using the original APRS decay 
+algorithm to improve delivery reliability.  I'd suggest something 
+like Now, then 15 sec later, then 30, then 1 min, then 2, then 4 
+then 8, then 16 and then stop.  Overall, this gives about 30
+minutes to deliver the message.  Beyond that, it is no longer 
+real-time within the default APRS 30 minute net cycle time.
+
+3) Message lines to the same addressee, must be sent one-at-a-time
+until acked.  This assures sequential delivery.
+
+4) Such a system should send messages with line numbers so that 
+the message lines can be acked.  The sending application should 
+account for these ACKs.
+
+5) Such a system should display to the sender when the message line
+is acked or when it has timed out.  It could also display the retry 
+counter and time-to-go, and time-to-die as an added bonus.
+
+6) Somewhere in the message packet, the source of the Message Engine 
+should be identified.  There are two places.  One is for anything 
+going into the APRS-IS could use some kind of ID syntax in the PATH 
+like the Igates do now.  The other is in the LINE-NUMBER.  I suggest 
+the last two bytes for a unique two-letter abreviation.  So the line 
+number could be like this: ...{xxxID where "ID" is the engine sending 
+the message.
+
+7) Some radios only display the last two bytes of the line number so 
+that is a great place to show how the message was originated.  
+Of course, this obviates the use of REPLY ACKS, but that is a small 
+price to pay for the identification we gain.  Since REPLY-ACKS have
+no value unless there is LIVE 2-way messaging going on, the default
+could be OFF (so the {...ID can be sent).  But if a dialog is 
+detected then the sending client can SWITCH to reply-acks for
+subsequent lines.
+
+8) In herent in the above, is that this message client also has to
+receive and display to the "sender" any incoming messages too.  
+Therefore, if it can be authenticated that this SENDER is reeceiving
+and reading APRS messages, then this client applicaiton should also
+send back ACKS (including REPLY-ACKS) for optimum speed and efficiency.
+
+Hope that covers it.
+
+Bob, WB4APR

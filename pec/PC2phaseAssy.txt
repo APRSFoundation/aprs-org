@@ -1,0 +1,60 @@
+PCSAT2 ANTENNA PHASING HYBRID ASSEMBLY INSTRUCTIONS             7 May 2003
+--------------------------------------------------------------------------
+
+The Phasing Hybrid has two separate/independent circuits, one for VHF and 
+one for UHF.  The UHF is actually a square with legs 4.5" long and the VHF 
+is all folded around over itself and has legs that are 13.3" long.
+
+NOTE:  None of the LANDS on the PCB are of any significance except the 
+SHIELD connection points and the CENTER conductor pads.  These HYBRIDs are 
+totally implemented within the coax pieces and are not dependent on the 
+copper foil paths.  All the rest of the copper lands are only "artwork" to 
+show where the coax cables are routed. The board only supports the cables.
+
+The UHF HYBRID is easy to see as a square around the edge of the board and
+consists of two single lengths of 50 ohm cable on the top and bottom and 
+then two parallel pairs of 75 ohm RG-179 on the two sides.  The antennas 
+and transmitter coax cables attach at the four corners.
+
+The VHF hybrid had to be folded over and around itself to fit.  It
+also consists of two runs of 50 ohm cable and two parallel pairs of
+75 ohm RG-179 cable.  All VHF runs are 13.3 inches long from the 
+points of attachment of the center conductor of the coax.
+
+NOTE:  ALthough L2 and L3 are shown on the bottom of the board, that
+was only to make it easy to lay out the board using the 3 colors of
+the PCB drawing software.  It was intended that all coax in the 
+HYBRID would be on the top except for the one 50 ohm UHF section
+that needs to be on the bottom to allow room for connections of the
+pigtails to the center connection points.
+
+Also, IGNORE all the lengths shown for L1 through L6.  These were the
+actual measurments of the length of the artwork as drawn.  They 
+simply proved that there is enough room for the actual 13.3" lengths.
+
+ASSEMBLY:  Any rigid/tinned coax can be used.  Or Flexible 50 ohm cable 
+can be used.  Whatever the Technicial feels is easiest to work with.  
+We only had the bare copper rigid line and only the RG-179 for the 
+75 ohm sections.  But the VELOCITY FACTOR of any coax used must be 66%.
+
+Begin with the 6 straight UHF pieces (one goes on the bottom of the
+board and is slightly bent to clear other attachment points.  Next
+add L4 and L5.  Then L2 and L3.  Finally add L1 and L6.  This
+completes the HYBRIDS.  We won't attach the coax pigtails until the 
+final mounting location has been determined and all of the lengths 
+have been determined.  Although the VHF RXB and VHF-ANTB are shown
+on the bottom of the board, they may be attached on the top.
+
+STAKING:  Any of the square pads around the board may be used to
+attach jumper wires to hold the coax lines flat and in line.
+
+NOTE:  The objective (and it is possible) is to arrange the lines
+as shown so that in all cases, the heights of the crossover points
+are only one-high.  The crossover points are staggered so that
+there is no place where they should bunch up.  If so, force them
+around to fit.  The layouts for L1 through L6 are not exact but 
+do attempt to show where the crossovers work best.
+Any Questions, call me.
+
+Bob Bruninga
+410-293-6417

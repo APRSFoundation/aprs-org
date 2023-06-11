@@ -1,0 +1,113 @@
+PCsat2 ISS External Communications Payload Geneology           21 Nov 2002
+--------------------------------------------------------------------------
+                                                                    WB4APR
+
+To help clarify how this PCsat2 project envolved to arrive at where it
+seems to be today, I offer the following chronolgy of events.  It began
+as an idea for an  ARISS-EXCOMM project and was presented to the ARISS
+team in April 2002.  And in August it began its slow progression from
+the very bottom of the multi-year DOD process to get on the list for
+a possible project in the 2006/2007 and out year process...  That full 
+EXCOMM proposal is still wending its way through that long process.  But 
+in about late September, early October, a fully funded Launch Opportunity 
+began to evolve independently of the long formal process for the ARISS
+EXCOMM preoposal.  This spin-off idea is what has now become the fast-
+track PCsat2 proposal.
+
+1998 to  2002:  The planned External Comms Pallet that had long been part
+                of the ARISS long range experiment planning was getting
+                no where.  The project with Brazil to develop the 
+                external pallet had not materialized.  The project was at
+                a stand still.
+
+21 March 2002:  Prepared "External ISS Communications Experiment" brief
+                as a result of an Email idea from Carolynn Conley about 
+                looking for other ways to get an external experiment
+                and possibly partnering with DOD for funding of a mutual 
+                project.
+
+6 April 2002:   Presented this EX-COMM idea to the ARISS International
+                meeting in Montreal (via Teleconference) where, after
+                some heated discussion, there was a consensus of the
+                committee that the Naval Academy should continue to
+                investigate this possiblity of a joint DOD/NASA/ARISS
+                partnership to get an external COMMS payload on ISS.
+
+17 April 2002:  Meeting at Naval Academy with Frank Bauer, Carolynn Conley 
+                and Ron Parise to further discuss this concept.
+
+                No activty for months.  But then realized the annual process
+                for presenting new projects for DOD consideration was
+                approaching and in late August, re-did the presentation
+                into the 4-slide format for presentation to the Navy
+                Space Experiments Review Board (the entry gate in a once a
+                year process for getting to present at the DOD board)...
+
+27 Aug 2002:    Presented ARISS-EXCOMM presentation to the Navy Space
+                Experiments Review Board.  The Project Title was 
+                changed to S.C.I.E.N.C.E which stands for Space
+                Communications International Educational Network -
+                Classroom Experience to emphasize the Educational
+                and classroom outreach mission of ARISS to the Navy.
+
+9 Sept 2002:    The S.C.I.E.N.C.E presentation materials were accepted by 
+                the Navy as a proposal that could go forward and be 
+                presented to the full DOD board in November.
+
+3 Sept 2002:    Other presenters at the Navy SERB aware of other
+                projects had seen our SCIENCE presentation and informed 
+                us later that they were sending up a PASSIVE experiment 
+                box for external attachment to the ISS and that there 
+                could be room inside for an Amateur Satellite Experiment.  
+                But this was an unofficial informal conversation...
+
+13 Sept 2002:   This MISSE-5/PEC team began to discuss the addition of
+                a PCsat like transponder to their passive mission.
+                                 
+20 Sept 2002:   Submitted S.C.I.E.N.C.E Presentation to Barry - VA3BJD 
+                the secretary for the ARISS Project Selection and Use 
+                committee for placement on the Agenda for the December
+                ARISS meeting at NASA Goddard
+
+ 2 Oct 2002:    USNA invited to participate in a TELCON with PEC-MISSE-5
+                team to discuss possibility of flying PCsat2 payload
+                on MISSE-5.
+
+ 8 Oct 2002:    Results from the TELCON appeared favorable and so I emailed
+                a full discription of the PEC-MISSE-5/PCsat2 concept to
+                the USA ARISS delegation and initiated a PCsat2 WEB page
+                to disclose all concept details as they began to develop.
+
+18 Oct 2002:    Navy Research Labs PEC-MISSE5 project team visits Naval
+                Academy to determine if we are committed to the project.
+
+23 Oct 2002:    Prelimnary PEC-MISSE-5 TELCON with JSC Safety folks 
+                regarding hurdles due to changing PEC/MISSE-5 from 
+                passive to active experiment.
+
+25 Oct 2002:    Frank Bauer responds with ARISS questions about the project.
+
+31 Oct 2002:    PEC-MISSE5 has teleconference Technical Interchange Meeting
+                with JSC NASA Safety Review Panel on the concepts to be
+                used for EVA safety during the deployment of the PEC
+                experiment hardware.
+
+ 6 Nov 2002:    SCIENCE Project is presented to the DOD Space Experiments
+                Review Board for consideration for project funding in the
+                outyears 2006/2007 time frame..  This project is now
+                independent and separate from PE-MISSE5 and on such a long
+                term path as to be out of our present field of view.
+                As of 22 Nov, no results from this presentation have been
+                published.
+
+ 8 Nov 2002:    IARU Frequency Coordination Request for PCsat2 is submitted 
+                to IARU through the AMSAT-NA point of contact and 
+                simultaneously to the USA ARISS Delegation.
+
+22 Nov 2002:    Today's date-----------------------------------------------
+
+26 Nov 2002:    PCsat2/PEC-MISSE5 Preliminary Design Review Meeting is
+                scheduled at Naval Research Labs for 10 AM.
+
+Early DEC:      Next planned Meeting of the ARISS Project Selection and Use 
+                Committee to meet at NASA Goddard, date and time TBD...

@@ -1,0 +1,46 @@
+WB4APR's FUTURE DIGI WISH LIST                                1 Dec 2004
+------------------------------------------------------------------------
+                                                      revised 6 May 2005
+This is my wish list for future digis:
+
+
+1) Include Tracing on the UIFLOOD parameter as well as UITRACE.
+
+2) Allow a SYSOP limit on N's for each UIFLOOD and UITRACE
+
+4) Do dupe-comparisons on all digipeats, not just UIFLOOD ones.
+
+When the digi hears a WIDEn-N where "n minus N" is greater or equal to 
+the N-limit, then the packet is digipeated, but the WIDEn-N position in
+the digi list is replaced with two fields:    MYDIGI,QRTn-N.  This shows
+which digi stopped the packet and what the origional n-N was. Hopefully
+this can be used as feedback to the sender to fix his path.
+
+This violates my usual preference to never "filter or ignore" a user's 
+chosen path, but in this case, this digi is saying "OK, Ill take it, but 
+I will not further propagate it and add to the problems further along".
+
+6) And my last request would be for an OUTPUT bit out of the TNC that
+can be used to SWITCH transmitters (or Xtals) based on what the digi 
+wants to do with the packet.
+   a) If it is a packet to be ignored, it could still "digipeat" it, 
+      but turn this bit ON so that an alternate channel (say local UHF) 
+      transmitter can be triggerd so that these long-haul or unwelcome 
+      packets can be alternately routed around this city, or can be 
+      monitored remotely to see what packets are being "ignored".
+
+   b) This could be extended with an "ALT-PATH" parameter such that an 
+      incoming packet with the "alt-path" in the digi field would always 
+      trigger this alt-path
+
+   c) For example, this digi could alt-route ALL WIDEn-N packets to get 
+      them around this city, but let them further propogate on an 
+      alternate WIDEn-N backbone.
+
+   d) Remote sysop could momentarily also turn on this bit to route 
+      EVERYTHING the digi is hearing down on an alt channel for analysis
+
+Anyway, just some thoughts on where we need to be going in the 
+future...
+
+de WB4APR, Bob

@@ -1,0 +1,41 @@
+***************************************************************************
+*             ATGP 2019 Report for MT Carleton by Gerald Lemay VA2GLU     75
+***************************************************************************
+
+ 
+Team Members: Gerald Lemay VA2GLU and his wife Sylvie Roberge (both members 
+of the Club Radio Amateur Drummondville Inc, CRADI, Quebec Province Canada)
+ 
+Mont Carleton in New Brunswick Province, CA, is the highest peak in the 
+Maritime Provinces. The landmark of this summit is a securely cabled fire 
+lookout shack.  As in 2018, we set up our APRS Golden Packet station on the 
+balcony attached to the lookout shack. 
+ 
+Station equipment: Kenwood TM-D710G radio, Diamond X-50A antenna and a 
+URB1270 LiFePO4 7.5 Ah battery.
+ 
+Logistic: 
+Departure from Drummondville, QC, on Wednesday 10PM, July 17 by ViaRail 
+train for Campbellton, NB. 
+
+Bench test with the MTBLAN-2 team at the Matane Amateur Radio Club's 
+clubhouse on Thursday 2PM July 18.
+
+Departed from Campbellton, NB, at 4:30AM to arrive at the Carleton Park 
+entrance for 7AM on Saturday, 20 July.
+
+Arrived at the trailhead by 8AM, climbed Mount Carleton, set up the station 
+by 11AM and had our first UHF phone contact with the MTBLAN-2.
+
+Digipeated until 3PM and then descended the mountain.
+
+Departure from Campbellton, NB, just before midnight on Sunday, July 21 
+and arrived in Drummondville, QC, on Monday, July 22 at 9AM..
+ 
+Contacts:
+UHF phone with MTBLAN-2 and KATHDN-15
+Confirmed sent and received packets with MTBLAN2, KATHDN-15 and MTWASH-13.
+Confirmed packet received by MTSTJO-14
+ 
+ 
+ 

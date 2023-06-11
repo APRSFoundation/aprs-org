@@ -1,0 +1,69 @@
+***************************************************************************
+*                  ATGP 2017 Leo's Newbee report for Katahdyn            75
+***************************************************************************
+
+
+
+Hi All,
+
+First, I have to share a little beginner's joy -- this was my first Golden 
+Packet event.  It was really awesome.  Something I've been looking for for 
+years!  I'm here now so it's all good.  Thanks a million to Tim (KA1YBS) 
+for welcoming me into the Katahdin team!  Also big thanks to Dan (VA2KEY) 
+and Bram (VA2XE) on Mt. St. Joe in Canada and John (WA1KLI) on Mt. 
+Washington, and Lynn (KJ4ERJ)!  All my interactions with each of you was 
+helpful and fun.  Thanks again.
+
+Again, this was my first GP, however I had some thoughts that I thought 
+I'd share with the group in case they are helpful.
+
+1) It seems that it would be helpful to break the path setup into a few 
+phases.  Phase 1 - placement and alignment.  Phase 2 -- Voice comms. 
+Phase 3 - 1200 baud. Phase 4 - 9600 baud phase 5 - ?
+
+Have the 1200 baud phase before a higher speed phase would make trouble-
+shooting more accessible with advanced software and inexpensive radios. 
+ Once all stations are seen and the path established and traversed both 
+South to North and North to South THEN make the jump to 9600 baud.  
+At that point the logical configuration and physical setup and alignment 
+is tested good.
+
+Examples of the value of 1200 baud: Just listening on 144.340 would be 
+helpful to identify the quality of the signal and frequency of beaconing.  
+Also, a lightweight tablet with APRSDroid can be used with a common 
+VHF/UHF handheld for more advanced control.  More advanced and 
+standardized logging and configurations could be managed with a Raspberry 
+Pi and Direwolf.
+
+It boils down to: at 9600 baud ONLY special equipment can be used to 
+send-receive-monitor the packets.  At 1200 baud any old device works.  
+That makes troubleshooting easier and accessible to folks like me with 
+a BaoFeng budget ;).  It seems essential to make the process of 
+establishing a 2000+ mile 13 hop path as simple as possible.
+
+2) Our spreadsheet is REALLY handy and so well laid out with useful info 
+it was super helpful.  It seems the only thing I could imagine changing 
+about it is possibly adding distance and bearing to the next hop -- the 
+row below any given row.  That might be a good way to help pick where 
+we stand, which side of obstructions or newly grown trees we setup on, 
+or how we manage a change of venue.  I know many peaks have internet 
+access and laptops handy to compute and re-compute those things.  Maybe 
+it is just Katahdin where we can't pack too much gear because we have to 
+carry everything up pretty agressive terrian to the summit at 5,267'.  
+Maybe it would benefit some other stations too?
+
+3) Is there any broader interest in a set of local tests to prepare for 
+the event?  We could work with our neighboring peaks to establish a 
+scheudle to do mini-golden packet events over a small region with our GP 
+neighbors?  It could be a time to test alternative peaks and test gear 
+and settings.  Maybe in late spring to warm up for the event or later 
+in the fall, before the snow flies up here?  I'm open to it.
+
+4) Wow, my legs hurt the next day after the up/down Katahdin.  I need to 
+do a little more pre-event intense hiking!
+
+Thanks again to everyone for making this possible and all the insightful 
+reports.  I learned a lot!  I can't wait to do this again next year!
+
+Leo Edmiston-Cyr
+

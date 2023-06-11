@@ -1,0 +1,212 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+   <TITLE>APRS Cave Radio Test - Crystal Grottoes</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (Win95; I) [Netscape]">
+   <META NAME="Author" CONTENT="Bob Bruninga">
+   <META NAME="Description" CONTENT="ParkinsonSat APRS Satellite Project">
+   <META NAME="Keywords" CONTENT="Cave radio, NSS, buoy, ocean,environmental sensors, APRS, APRsat, buoys, oceanography, Satellite, Cubesat,  Tracking, Bruninga, LEO, GPS">
+   <META NAME="Classification" CONTENT="Science">
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#48D1CC" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000">
+
+<CENTER><B><U><FONT SIZE=+2>
+<IMG SRC="logos/aprs.gif" HEIGHT=60 WIDTH=100>
+ Crystal Grottoes APRS Radio Link Test 
+<IMG SRC="logos/aprs.gif" HEIGHT=60 WIDTH=100>
+</FONT></U></B>
+<P>US Naval Academy Satellite Lab, <FONT SIZE=-2>
+<BR>Bob Bruninga, WB4APR
+<BR>bruninga@usna.edu
+</FONT><BR></CENTER>
+<P>
+
+This is a preliminary test in support of the overall <A HREF="cave-link.html"><B>APRS Cave Link Radio System Concept</B></a> 
+
+<P>
+<IMG SRC="D7xx/D72.JPG" align=right>
+
+<B>Link Test 8 Dec 2012: </B> To get an initial assessment of packet radio capability in caves, WB4APR and KD3SU (Greg) took 3 cave
+link digipeaters into Crystal Grottoes Caverns near Boonsboro
+Maryland.  The test consisted of three Kenwood TH-D72 APRS Handi-Talkies(HT) (shown at right) which have a built-in RELAY capability, and two older D7 radios for the cavers which were
+used for text messaging.
+<P>
+
+<IMG SRC="caves/CrystalGrottoes-map-aprs.gif" height=800 width=800>
+<BR><A HREF="caves/CrystalGrottoes-map-aprs.gif"><B>Click 4 full size</B></A>.
+
+<P>
+The map above shows the layout of the test in this small cave.  This cave was chosen for its small passages while still having easy access for walking.  
+
+It is a small "900 foot" cave but full of the most beautiful and continuous
+formations I have ever seen. Greg has an 
+<A HREF="http://kd3su.us/photos/piwigo/index.php?/category/5">
+<B>Album of photos</B></A> and also his 
+<A HREF="http://kd3su.us/APRS/cave.html"><B>report on the same test</B></A>.
+
+<P>
+
+<P>
+<IMG SRC="caves/digis-3.jpg">
+<IMG SRC="caves/digi-shelf.jpg" height=240 width=150 align=right>
+
+<P>
+
+<B>Digipeater Placement:</B> 
+We parked our two cars very near the entrance, one beaconing on UHF
+and the other on VHF every 12 seconds. Then we paid entrance fee and
+went inside. The UHF was lost within the first tens of feet and so we turned it off. The VHF
+was strong more than 150' through 3 very acute bends (think "Z"'s)
+and two level changes. The passageway was between 2 to 4 feet wide,
+and 6 to 10' tall all that distance. Then we began to notice weak
+signals and found a ledge about 7 feet overhead where we could set our first TH-D72 digi (CAVE-1) and
+made another 120 degree acute turn. Down this long but straight
+passageway again from 2 o 4' wide but as high as 20' or more, we were
+shocked to lose the signal if we even made a 6 or 10 foot excursion
+off the straight path*. So, since we were again going to make another
+acute 120 degree turn toward the lake room, we dropped our second CAVE-2 digi near the juncture.  This was less than 100' away from DIGI-1 but necessary to make the turn.
+<P>
+
+The rest of the cave passages were all within about 100' of this
+location and so we had solid coverage. Greg went back out of the cave
+and came around to the exit and we had VHF good voice contact through
+about 150' of again, acute switch-back passageways maybe 3 to 5' wide
+and 6 or 7' tall as shown with the blue dots on the map.
+<P>
+
+<IMG SRC="caves/Bob-texting.jpg" height=400 width=250 align=right>
+
+<B>Lessons learned:</B>
+
+<P><LI> This test shows that a single link can make it about 100' or so
+through very constrained and convoluted small passages. This will be
+useful in Mammoth where sometimes such small byways connect larger
+through tunnels..
+
+<P><LI> We hope that the very large and more or less straight Mammoth cave
+passages 20-30' wide and 10' to 30' highby hundreds of feet long will
+provide great distances per link, and these can be linked by any
+trouble areas with 100' or so links.
+
+<P><LI> We were operating on borrowed time from the tour guide and so we
+had <i> <B>no time</B></i> to do any keyboarding (photo right) or to set our positions, or to
+change paths or really do anything but keep moving (and pausing evry
+12 seconds to confirm we were still hearing the 5W beacons from my
+car.
+
+<P><LI> Unfortunately, Since we do not have PREEMPTIVE digipeating, then
+the only way a packet could make it through the cave and be gated into the
+APRS-IS was only if the up-to 6 hop path matched exactly our position
+in the network. And since we were using HOP3-3 inside the cave, and
+had my car set with an alias of LOT in the parking lot, we were using
+the path HOPn-N,LOT,WIDE2-2 inorder to have a chance of getting into
+the APRS world.
+
+<P><LI> But, if n-N did not match to -0 at the LOT digi, then the packet went nowhere.
+And even if it did get digipeated by the LOT digi, (also running 5
+watts to match our handhelds so that we could assume our paths were
+bidirectional based on what we could hear). Then this 5W parking lot
+digi had to be heard by a mountain top digi (that could also hear
+Baltimiore/Washington DC) hearing one of the highest density APRS
+regions in the country. And then be successful twice to get to an
+IGate. None did.
+
+<P><LI> The HT I was carrying was set to HOP2-2,LOT,WIDE2-2 and I never did set to HOP1-1 and so the only time any of my packets could have made it past the LOT
+digi was after we got the CAVE-2 digi in place towards the end.
+
+<P><LI> SO, although every packet made it to the entrance, linking into the
+APRS-IS cannot be pracitcal until we have a pre-emptive digi at that
+location. We cannot expect the underground team to beable to predict
+exactly how many hops to nail the gateway dig with everything else
+going on.
+
+<P>
+<IMG SRC="caves/Crystal-Greg_1267xx.jpg" align=right>
+
+<B>Frustrations and Risks:</B>
+<P>
+
+<img src="http://www.aprs.org/caves/digis-3inch.jpg" align=right>
+
+0) This was a narrow cave.  See Greg in the photo at right. Clearly VHF (2 meters) won't do well 
+in this narrow of a waveguide.
+<P>
+
+1) Trying to program 3 THD72 digis, 3 D7's and two D710's in a parking
+lot in 40 degree weather from their keyboards for this test was dumb (top photo on car roof).
+Chances are high that not all radios got set right. This is why
+we need lots of people who know their radios well and can each be
+responsible for their own settings.
+Every radio had to have ALL of these settings changed from normal:
+<P>
+
+<LI>MYCALL, PATH TYPE, PATH SETTINGS*OTHER*HOP3-3,LOT,WIDE2-2
+<LI>Turn off DECAY and PROPORTIONAL PATHING.
+<LI>Turn on UITRACE to HOP and change UITIME to 10 seconds from 30
+<LI>Change SYMBOL and BText.
+<LI>Set manual LAT/LONG, select MANUAL,
+<LI>TURN OFF GPS
+<P>
+
+
+2) Turning on the radios to test at the entrance was like a chain
+reaction. There was so much beeping we could not tell at all what was
+happening. Oh, also don't forget to enable the TNC! The plan was to
+just turn on one radio/digi at a time until signals were weak, place
+the radio as a digi, set its path and settings and then continue. But
+since the tour guide was responsible for us, and was on a limited
+schedule, this plan cannot work.
+<P>
+
+Photos including ones of the digis and a map of the cave will
+eventually get tot he web page. TO hold the HT digi's upright, I used
+a 4" to 3" PVC pipe adapter and a 3" pipe cap. The full size HT
+antenna poked up through a hole in the pipe cap, and the bottom oft he
+4" adapter had a 3/4" thinck base. Inside was a ring of foam to hold
+the radio from banging around. A 19" counterpoise wire was screwed
+under the belt-clip screw and dangled out the bottom.
+<P>
+To make the digi's smaller and lighter, a second version was made
+out of only 3" pipe with a 1/2" wide collar (made from slicing a
+coupling) at the  bottom to give it some additional base stabilty
+as shown here to the right.
+<P>
+
+In Greg's photos, the cave entrance is simply a 10' set of stairs from
+just inside the door of the building. You can also see the digi's,
+though we did not bother putting the top's on any of them since we had
+to have access to the digi keypad for fixing set-up errors. The big
+photo near the bottom is their 
+<A HREF="http://www.aprs.org/caves/blanket-room.jpg"><B>biggest room</B></A>, about 15-20' wide and
+maybe 12' high. The door at the bottom of Greg's page is the exit.
+<P>
+
+One of the digis, with its full size2m whip and 19" counterpoise would
+not hear packets that a standard D7 with rubber duck was hearing fine.
+It could have been a null, but I want to test ALL radios on Monday
+with a sig gen to make sure all were up to snuff.
+
+
+<P>
+<B>Future Procedure:</B> The ideal procedure for placing digis while 
+proceeding into a cave is to man the previous digi until the next digi is placed.  
+When signals to the new digi begin to get margingal, then the man at 
+the first digi will hold down the PTT solid for 10 seconds at a time 
+while the advance party uses their HT's and ears to find the hottest 
+signal point.  Reflections and nulls can vary by as much as 20 dB 
+within only a foot or so, so it is important to not place a digi in a null area.  
+Unfortunately, this method does not work in escorted or public tours where the digi team is unable to work independently.
+
+ 
+
+
+<P>
+<HR SIZE=5 WIDTH="100%">
+<P>
+
+Return To:
+<FONT SIZE=+1><A HREF="cave-link.html">the APRS Cave-Link home page</A></FONT>
+
+</BODY>
+</HTML>

@@ -1,0 +1,87 @@
+IRLP WORLDWIDE 5 DIGIT NUMBERING PLAN                WB4APR, 28 March 2002
+--------------------------------------------------------------------------
+
+
+Back in FEB I proposed a 4 digit worldwide numbering scheme for IRLP nodes
+but even that won't be enough in the long run in dense areas.  So here is
+my new proposed 5  digit numbering scheme:
+ 
+It is modeled after the phone company approach.  
+Since the world is already separated into 10 regions of reasonably equal
+population density according to the first digit of their Country Telephone
+Phone codes, it makes sense to use these for IRLP nodes as well.  Thus we
+approach our future IRLP needs with this 5 digit numbering plan:
+ 
+"CRSXX"  
+ 
+    "C" is the country code (see table below which comes from the ITU)
+    "R" is a regional digit (In USA, Canada, Russia it is callsign region)
+        In other continents, it is the second digit of the Country code.
+    "S" is a state or other sub division within the region
+    "X" are final assignment digits
+ 
+COUNTRY CODES:
+        0 - Canada
+        1 - USA
+        2 - Africa
+        3 - Southern Europe
+        4 - Northern Europe, UK
+        5 - Central and South America, Mexico
+        6 - Pacific, Australia, Singapore, Thailand, Indonesia, etc
+        7 - Russia
+        8 - East Asia, China, Japan, Taiwan, Korea, etc
+        9 - Middle East, India, etc
+ 
+REGIONAL DIGIT is assigned to a major region with each country digit.
+Here is a suggested assignment of the REGION digit within each of the
+country codes above.  For example, In the USA(1) the next digit of "3"
+means the FCC third callsign district.  This works well for the USA,
+CANADA and RUSSIA.  For all other countries, simply use the second digit
+of the telepone Country code.  For example, in Southern Europe(3) the
+regional digit of "9" means Italy(39) in any phone book, "4" is Spain(34)
+and so forth.
+ 
+For Country 0 - Canada    use Callsign district
+For Country 1 - USA       use Callsign district
+For Country 2 - Africa    use Second digit of telephone country code
+For Country 3 - S.Europe  use Second digit of telephone country code
+For Country 4 - N.Europe  use Second digit of telephone country code
+For Country 5 - S.America use Second digit of telephone country code
+For Country 6 - Pacific   use Second digit of telephone country code
+For Country 7 - Russia    use Callsign district
+For Country 8 - E.Asia    use Second digit of telephone country code
+For Country 9 - Mideast   use Second digit of telephone country code
+ 
+Assigments for further dubdivisions should be done at the local level,
+although I would prefer to see a common approach.  Such an approach might
+be to assign subregions in a clockwise fashion starting at the top.  This
+way people can much more easily visualize the area they are talking to.
+Here is a proposal for the "S" digit for the 3rd call area
+ 
+For "13XXX"   (Maryland, Deleware and Pennsylvania 3rd call district)
+ 
+     30XX Delaware
+     31XX E. Maryland
+     32XX S. Maryland
+     33XX C. Maryland
+     34XX W. Maryland
+     35XX W. PA
+     36XX N. PA
+     37XX E. PA
+     38XX S. PA
+     39XX Washington DC
+ 
+Anyone else want to propose such a circular (clockwise) approach for the
+other areas?  Starting in their upper right corner and moving clockwise?
+ 
+FURTHER, I feel that trailing digits must be allowed and delivered end-to-
+end for a variety of purposes.  First all, it allows for selective calling
+and or additional signallling or control for all manner of neat ideas.  So
+this system defines worldwide unique 5 digit IRLP numbers, but allows for
+a number of additional OPTIONAL trailing digits for whatever we think up
+next.  (probably PL).  For example, 13101107 would dial the 13101 IRLP in 
+Eastern Maryland and cause the controller there to send out a PL of 107 to 
+which MY HT will allow me to hear the call.  I  would label this capability
+as the 5+PL IRLP signalling system...
+
+de WB4APR, Bob

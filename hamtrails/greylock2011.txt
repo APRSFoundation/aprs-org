@@ -1,0 +1,55 @@
+MOUNT GREYLOCK, MA 2011 REPORT                            26 July 2011
+----------------------------------------------------------------------      
+                                                           Chris N2YYZ
+
+After a late start - sorry all! - arrived at the summit parking lot a 
+little before 12:30. 
+
+Meanwhile I had missed a call from Roger NJ2R while driving up a 
+winding mountain road - but by the time I got to the top, I had no 
+cell service. 
+
+Picked a location by the summit that looked like it had good lines of 
+sight in both directions, and set up the VX8GR with a rubber duck on 
+144.39 first. Then bolted the Diamond X50 to the top of a camera 
+monopod, and bungie-corded the monopod to my camp chair. Did one last 
+check that I had Bob's settings for D72 digipeating correct, and then 
+GRYLCK-11 was on the air, right around 13:00. (Sorry again for being 
+late.)
+
+Right away I heard Sam's Point, NJ2R on voice talking to W2TTT at the 
+alternate site High Point, NJ (who I could not hear); he barely heard 
+my call between the bad intermod at his location. (There were sporadic 
+blasts of intermod on Greylock, but they were weak and the frequency 
+was still usable.)
+
+Saw packets from SAMSPT-10 right away with no problems. Didn't hear 
+MTWASH-13 until I realized I had the lines of sight wrong and moved 
+position by about 50ft; after that there was no problem - I heard 
+MTWASH and I think I was heard there (but confirmation would be 
+appreciated). (I never did manage to raise Mt Washington on voice...)
+
+Also got packets from Mount DENNIS alternate site KA1WPM and had a 
+nice chat on the voice  frequency.  But I never did hear packets from
+the High Point NJ test site.
+
+At 14:59 I heard a packet from CMRRCK-4 (when GD-HILL was finally 
+digipeating packets.  Soon after, at 15:05, was a packet from 
+HWKSBL-6. Never heard anything else from the south, not even 
+additional packets from those stations.
+
+Stations copied today were -13, -10, -6, and -4. I had a great time 
+on Greylock and definitely want to do this again next year (or even 
+sooner - a weekend in September perhaps? ;-)
+
+I also got plenty of questions about what I was doing and introduced 
+several people to amateur radio, and introduced a couple of hams (one 
+who saw me and asked, without preface, "2 meter DX?") to APRS & the 
+Golden Packet event.
+
+Many, many thanks to everyone who went out and set up stations, and 
+especially to Bob for organizing the event and to Lynn for providing 
+excellent comms support.
+
+vy 73!
+Chris N2YYZ

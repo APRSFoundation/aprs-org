@@ -1,0 +1,41 @@
+PRI-COMMS on PCsat                                        de WB4APR
+------------------                                        ---------
+
+On 24 Jan we initiated a new phase of experimentation by turning on 
+the special store-and-forward Priority Communications feature of the 
+PCsat mission.  This experiment can capture Emergency and Priority 
+messages from the THD7 and D700 anywhere on the planet and hold them 
+for retransmission over the USA on 144.39.  Remote travelers desiring 
+access to this experiment may apply for access...
+
+This feature is based on some slight modifications to the HEARD log 
+built into the PCsat KPC-9612 TNC.  Instead of capturing all calls
+heard, the PRI-COMMS feature uses a new AHEARD list of only those
+calls that have indicated Emergency or Priority status.  And not just
+their calls, but their entire packet is captured.
+
+Thus the AHEARD log can capture emeregency or priority packets from
+anyone anywhere even in the remotest corner of the earth.  To downlink
+these packets, PCsat's KPC-9612 TNC' have a new command called ABEACON.
+The ABEACON command determines how often and how many of the stations
+in the log are to be transmitted in the down link.
+
+ALthough this was a quick and dirty method to extend PCsats communi-
+cations ability to remote corners of the Earth where no other HAM
+ground station is in range, it is not very efficient.  Just turning
+on the ABEACON for say the last 2 packets once every 5 minutes, 
+results in over 500 packets being transmitted arond the world for the
+next 24 hours or longer.
+
+Thus The PRI-COMM feature of PCsat normally is disabled except when
+someone needs it.  In that case, we ask that all remote travelers
+register their travel plans with the PCsat command station well in
+advance of travel showing what dates they want PRI-COMM access.  ALso
+due to a last minute addition of this feature to the PCsat flight
+ROMS, it was only added to the B side.  SO users will also need
+access to the unpublished B side uplink..
+
+PCsat is designed for the speific purpose of remote travelers.  We
+hope they will use it when they get an opportunity.
+
+de WB4APR, Bob

@@ -1,0 +1,48 @@
+PCSAT2 INTERFACE BOARD ASSEMBLY PLAN                            13 May 2003
+---------------------------------------------------------------------------
+
+
+The board began burn-in testing at 1800 on 30 April 2003 and completed
+254 hours at 1500 on 12 May.  The board is ready for conformal coating.
+There are only 3 trim resistors that will be adjusted after final assembly
+and test.  These are R61, R62 and R63 in the middle of the board which
+set the final transmitter frequencies.
+
+MOUNT DTMF DECODERS:
+
+Mount the two DTMF decoders in semi-permanent manner.  Notice, they have
+an edge connector and if they need last minute re-programming, they
+have to be removed and re-programmed.
+
+MASKING PLAN:
+
+1) Mask all DB connectors 
+2) Mask the four corner mounting holes 
+3) Mask the area around the 3 resistors R61, R62, R63
+4) Mask the three 3-pin configuration jumper headers.
+5) Stake any tall components, and chips in sockets.
+
+CONFORMAL COAT
+
+ASSEMBLE
+
+1) Plug TNC-A into the edge connectors on the Intereface board.  THis is a 
+stressful process and once done, these two boards may be treated as a unit.
+
+2) Mount TNC-B onto TNC-A, plug in its three connectors, and solidify the
+stack with the two stand-off's.  Now these 3 boards are typically treated
+as a unit.
+
+3) Assemble in TNC box to check the fit. NOTICE:  The screws attaching the
+DB-25 edge connector to the TNC-BOX sidewall must impart no stresses on the
+Interface board PCB.  ANd the mechanical clamping of the TNC's in the  box
+should also impart no aditional stresses on the PCB or its connectors.
+
+FINAL-TEST/TRIM:
+
+The Transmitters inside the TX BOX, the receivers inside the RX box and
+the TNC box are needed together to establish the final values of the 3
+resistors.  The TNC box will be disassembled to solder in those final
+values and then reassembled for flight.
+
+

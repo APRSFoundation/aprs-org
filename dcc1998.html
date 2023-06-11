@@ -1,0 +1,282 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+   <TITLE>APRS in 1999 Text</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (Win95; I) [Netscape]">
+   <META NAME="Author" CONTENT="Bob Bruninga">
+   <META NAME="Description" CONTENT="Live SSTV = Remote WEB-CAM">
+   <META NAME="Keywords" CONTENT="SSTV, APRN, APRS, Bruninga, Annapolis, amateur, radio, TH-D7, Kenwood">
+   <META NAME="Classification" CONTENT="Science">
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#48D1CC" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000">
+
+<CENTER><FONT SIZE=+2><B>DCC 1998
+<P>
+Whats new for APRS in 1999<P>
+</B></FONT>Bob Bruninga, WB4APR@amsat.org
+</CENTER><P>
+     Since APRS was first introduced at the 1992 TAPR/ARRL Digital Communications Conference it has evolved to fulfill a growing need for tactical real-time digital communications.  Trying to describe its usefulness is similar to describing amateur radio itself.  The scope is so broad and the applications so widespread, that no single listing can be complete.  Major milestones in that evolution were the transition from hand entered maps to the USGS CD ROMS, in 1994, the development of MacAPRS in 1994 by Keith and Mark Sproul followed by the official WinAPRS versions in 1995.  In 1997 Brent Hildebrand developed a special application called APRS+SA to take advantage of the very popular Delorme Street Atlas CD ROM maps.  This improvement in maps to the street level was completed recently with the full integration of Precision Maping system into the WinAPRS product in 1998.  Along the way, Steve Dimse's javAPRS began the great migration of APRS onto the information super highway in 1996 by making APRS tracking available to anyone with a WEB browser, culminating in his debut of APRServe at the 1997 DCC in Baltimore Maryland which provides a worldwide INTERNET backbone for all APRS packets.
+<P><B>
+APRS NATIONWIDE FREQUENCIES:</B>
+<P>
+    During 1998, APRS accomplished a phenominal natiowide QSY of thousands of users, over 400 digipeaters, and dozens of gateways to a new ARRL and AMSAT sanctioned national frequency.  Although there are still some minor areas working on the change, the consistent nationwide channel gives mobile users the freedom to travel without concern for loss of connectivity.  Since its introduction, APRS has mainly been used on only two bands, 2 meters VHF and 30 meters HF and mostly on only ONE frequency per band!  The fact that thousands of users are all getting so much fun out of just one HF frequency of 10,149.2 KHz and 144.39 MHz is a tribute to the channel efficiency of APRS.  In addition, APRS is now beginning to grow onto 6 meters in a system called PROPNET as an easy propogation display tool.  Also, APRS sees many applications in Space.  APRS has been tested experimentally on several SAREX missions since 1995, the SPRE mission in 1996 and even via Mir in March 1998.  The untapped capability on some of the existing Amateur Satellites for efficient APRS communications will also be addressed in this paper.
+<P>
+    Today, in 1998, I can say that APRS is becoming a worldwide real time communications system which is revolutionary in Amateur Radio that will again place amateur radio emergency response capability ahead of the leading edge oftechnology available to the consumer.  This paper will describe some brand new developments for 1999 in Internet gateways, digipeating, satellite links and handheld personal APRS comunications devices in addition to what I think is the future direction for APRS into the next century.
+<P><B>
+
+INTERNET GATEWAYS:</B>
+<P>
+    Steve Dimse's APRServe software has not only revolutionized the long haul distribution of APRS packets, but tied in with Mac/Win/APRS+SA user software, it has turned APRS into a worldwide 2-way messaging system!  Any two APRS users worldwide may exchange messages in real time if they are both within a few digipeaters range of an APRS internet Gateway.  That is easier than you think.  ANY station that is running Mac/Win/APRS+SA automatically serves as a two-way messaging IGATE while he is logged on to the internet.  Many people with full time ISP access leave their IGATES running 24 hours a day just to link their RF LAN into the worldwide APRS system.  Right now, I just checked and I saw 42 IGATES on line all across the USA.  These IGATES linked with over 500 APRS digipeaters provides a worldwide APRS communications system with extroridinary reach.
+<P>
+    I keep saying worldwide because we frequently have seen stations logged on from Japan, England and the Neteherlands.  It is very impressive to be driving along with your laptop, and communicating across the continent.  AND without any routing effort on your part!  APRS is the internet of amateur radio.  Most APRS stations are not even aware that this worldwide capability exists, because they will not see any IGATEd traffic unless it is addressed to them.  Similarly, you cannot send a cross country message unless you know the call of someone to send it to.  During Field Day this year, we experimented with allowing CQFD messages to traverse the sytem with excellent results.  At least 44 stations made nationwide APRS contacts from their FD sites.  
+<P>
+    Of course, many people will say, but you need a LAPTOP to send and receive messages and this is cumbersome and usually only worthwhile on long trips where it is worth lugging along the Laptop, TNC, radio and antenna. 
+<P>
+But what if all this was combined into a single HT?  READ ON!!!
+<P><B>
+APRS DIGIPEATING:</B>
+<P>
+   One of the key aspects to APRS that makes it so easy to use is the use of generic digipeating.  Thus new users and mobile users may transmit their information into the APRS system without any prior knowledge of the newtwork, paths or routes.  Generic digipeating was initially possible with off-the-shelf TNC's but from the beginning I proposed more intelligent routing to avoid duplication and reduce packet overhead.  The first new algorithm in this trend was pioneered by PacComm in 1995 which used callsign substitution to help eliminate duplications and to make reverse tracing of paths possible.  As a footnote to history, PacComm developed this capability for tracking the location of almost 300 stations in the Bosnian conflict.
+<P>
+Quickly APRS digipeaters across the country began to upgrade to the PacComm 4.0 ROMS and everyone began to see a notable improvement in channel throughput because not only could multiple duplications be eliminated, but also longer generic paths could be used without duplication.  Then in 1998, Kantronics finally implemented the long proposed APRS WIDEn-N algorithm.  This algorithm provides the same multi-hop long distance routing without duplication, but also eliminates the lengthy explicit digi path that is included in every packet.  With WIDEn-N, a single WIDE5-5 digipeater specification replaces WIDE,WIDE,WIDE,WIDE,WIDE in every packet.  For each explicit hop eliminated, there is a 7 byte savings per packet.  APRS builders in the state of Washington leapfrogged all other networks and became the first state to implement a statewide WIDEn-N digipeating system.  Any station in the state may communicate with any other station within 70,000 square miles using only WIDE5-5 as the path and these packets are 28 bytes shorter than before for an approximately 28% improvement and probably a doubling of channel capacity by eliminating dupes!
+<P><B>
+
+DIGIPEATING IN 1999:</B>  One of my original APRS digipeating ideas is yet to be implemented.  This is the -N routing by SSID only.  This routing is the same as the WIDEn-N except it dispenses with even the 7 bytes used with WIDEn-N!.  Since the "WIDE" in WIDEn-N is itself generic, it can be eliminated compeletely as long as we have some way to indicate the -N number of hops desired.  -N routing uses the TOCALL SSID as the routing indicator.  Any TOCALL-N will indicate to the network that the packet is to be digipeated N times.  Thus we have not only eliminated another 7 Bytes per packet, but opened up even further possibilites.  The SSID routing system has been built into all APRS Mic-Encoders in anticipation of the implementation of SSID routing.  This algorithm was necessary to keep the Mic-E Bleep as short as possible so that it would be tolerated on voice repeaters.  Since hops beyond 7 show a deminishing probability of success, the SSID's of 8 through 15 were reserved for DIRECTIONAL ROUTING according to the following table:
+<P>
+<LI>   -8   North      -12 North DX
+<LI>   -9   South      -13 South DX
+<LI>   -10  East       -14 East DX
+<LI>   -11  West       -15 West DX
+ </LI><P>
+Directional routing is implemented by the sysop for each digipeater who knows the best route for packets from his digipeater to take in each of the general directions.  Thus, each digipeater has 4 additional UNPROTO memories, one for each of the cardinal directions.  If a packet is received with a -8, for example, the digipeater would substitute the Northern route into the packet before forwarding.  The packet would travel this route to the end.
+<P>
+If however, a -12 were used, then the packet would be transmitted by the digi with only the next northern digipeater as one hop, but at that digipeater, again, the -12 would indicate a further NORTH routing.  This would be theoretically infinite with the packet always being forwarded NORTH by each digipeater in turn.  Eventually collisions will take their toll and the packet would die.  But it would have traveled a considerable distance north!  This algorithm assumes the same dupe comparator at each hop as is used in the WIDEn-N algorithm so that loops are canceled.
+<P><B>
+APRS MOBILE SATELLITE NETWORK:</B>
+<P>
+   APRS has been demonstrated several times via the Space Shuttle and SPRE experiments as a very efficient way for many stations to share a single space-based digipeater.  In 1998, a nationwide school test was conducted using APRS via the Space Station MIR [1].  With the short duration of APRS packets and the fact that each station only needs to successfully get one packet through to convey his position and status, APRS is ideal for allowing the maximum number of stations to participate per satellite pass. 
+<P>
+     Fortunately, there are already a few 1200 baud AX.25 2 meter FM satellites in orbit!  We currently have authorization to trasmit APRS packets via AO-16 and possibly others once we demosntrate the usefulness of these satellites to serve the mobile amateur radio operator.  All it takes is any 2m FM mobile rig, your normal TNC (with a $3 mod) and your normal mobile antenna.   With 25 watts you can hit the bird a few times a day while you are on long distance travels [2].
+<P>
+    Unfortunately it is not quite as easy to hear the satellite.  But ONLY a few downlink stations are necessary to feed the downlinked packets intothe worldwide internet linked distribution system to have your packets arrive at their intended destination.  Currenlty there are several stations working on automating the downlink and Steve Bible is working on making the $3 XOR gate mod readily available for experimenters...  For further information, see my TRAKNET papers in the AMSAT PROCEEDINGS [3]
+<P><B>
+GREATER APRS CHANNEL CAPACITY FOR 1999: </B>
+<P>
+    Since APRS was first introduced, we have been striving to improve channel efficiency where ever possible.  Currently, an evening's monitoring in the Baltimore area will capture about 200 stations within about a 200 mile radius.   This is possible because of the great strides that have been made with digipeaters that has almost tripled channel capacity by reducing the number of bytes in each packet and by eliminating all the redundant duplication of each packet.  However, there is still plenty of excess verbage in most packets.
+<P>
+    The Mic-E lead the way in 1997 with the shortest possible position report of only 8 bytes.  Since then we have been wanting to introduce a compressed algorithm that would not only shorten the usual 26 byte position to a much shorter packet, but also allow for additional precision to meet the potential of DGPS systems.  In 1999, you will begin to see these packets.  For example the following packet can be compressed to only 13 bytes:
+<P>
+Normal:        WB4APR>APRS,WIDE*:=3859.11N/07629.11Wv123/045...
+<P>
+Compressed:    WB4APR>APRS,WIDE*:=/YYYYXXXXvcsT...
+<P>
+Where the YYYYXXXX contains the LAT/LONG to the nearest foot worldwide and the csT contains both the course and speed.  The T is a TYPE byte that indicates what format was used in the csT bytes.  Notice that the 7 bytes after the position report in an APRS packet is a field that is used for several mutually exclusive purposes.  These are all encoded in the csT bytes.
+<P>
+     CSE/SPD    This is for moving stations
+     PHGxxxx    This is for stationary stations
+     DIR/SPD    This is for Weather stations
+     ccccccc    Additional coment field if needed
+     /A=123456  For GGA packets the altitude can also be compressed
+<P>
+Thus the compression algorithm saves us another 13 bytes as high as 37%.
+Or looking at it another way, this allows 37% more users on the channel.
+
+All versions of APRSdos since 820 are compatible with this protocol.  Unfortunately all versions prior to 820 had an earlier draft compressed protocol that was subsequently modified.  Thus we cannot begin to transmit the new protocol until ALL APRS stations upgrade to 820 or later.  The compressed format will be an option since it does compromise in one area.  It rounds COURSE to +/- 2 degrees and speed to +/- 2% or so.
+<P><B>
+ON-THE-FLY DIGIPEATER COMPRESSION: </B>
+<P>    At first it may appear that the advantages of compression are small since they will only apply to stations running APRS PC software.  But this is not the case.  Almost ALL stations may use the compressed algorithm as follows:
+<P>
+    DIGPEATERS:      The compressed format is entered into the BText
+<P>    DOS/Mac/Win/+SA:  A selectible option for any position or object
+<P>
+    KPC-3 TRACKERS:   Kantronics has agreed to generate the compressed
+                      algorithm directly for a 300% shortening of NMEA!
+<P>
+    OTHER TRACKERS:   The NMEA is converted at the digipeater!  This will
+                      also be built into KPC-3+ digipeaters!
+<P>
+Notice that some of the longest packets on the air are the raw NMEA strings from GPS trackers.  These packets may be compressed 300% or so using the
+compression algorithm.  But not only will this occur for new KPC-3+ trackers, but also any KPC-3+ that is used as a digipeater can compress any RAW NMEA that it hears into the compressed format before forwarding!
+<P>
+For backward compatibility, or if you do not want your packets compressed by the network, simply continue to use the default TOCALL of GPS and these packets will not be compressed.  But trackers that use the new GPSxyz format for indicating their xyz ICON will be automatically compressed at the digipeater.  If a station does not want to be compressed, he should use the equivalent SYMxyz or any other valid APRS TOCALL.
+<P><B>
+KENWOOD APRS HANDHELD COMMUNICATOR:</B>
+<P>
+   And now, what you have all been waiting for!  Kenwood is just now announcing at DCC as you read this, the production of their Personal Data Communicator that has APRS FULLY INTEGRATED INSIDE!  Here are the features:
+<P>
+<LI>   Dual Band 5 watt HT
+<LI>    Built in TNC
+<LI>    Built in GPS modes (with external GPS)
+<LI>    Built in APRS displays
+<LI>    Built in APRS messaging
+<LI>    Built in APRS Mic-Encoder
+<LI>    Built in DX cluster Spotting
+</LI><P>
+Need I say more?
+<P><IMG SRC="http://www.aprs.org/THD7pix.jpg" ALT="HT Photo">
+<!-- HSPACE=5 BORDER=1 HEIGHT=280 WIDTH=230>
+//-->
+<P>
+Here is how you may use your Kenwood TH-D7A:
+<P>
+<LI>    1) Plug in your laptop and operate normal packet.
+<LI>    2) Use your laptop and the HT for fully portable APRS.
+<LI>    3) Plug in a GPS and operate as a stand alone tracker.
+<LI>    4) Plug in a GPS and operate voice with your POSIT and comment
+           going out in a Mic-E burst on the end of your transmissions.
+<LI>    5) Operate simultaneous voice and APRS.  Voice on either band, while
+           your APRS packets go out on 144.39
+<LI>    6) Unplug everything and just use the built-in APRS displays!  The
+           radio will capture positions, status, bulletins, WX warnings
+           DX cluster spots and personal messages!
+<LI>    7) Unfortunately, the TH-D7A cannot digipeat.
+</LI><P><B>
+APRS MESSAGES:</B>  The fact that the TH-D7A can both send and receive APRS messages opens up APRS to become a worldwide amateur 2-way personal messaging system!  Althought the primary design goal of the TH-D7A was the GPS interface for position reporting, it was only during BETA testing that we noticed that we were using the messaging system ALL THE TIME to coordinate our testing.  What we soon realized was that although the GPS interface is the pre-emminant feature of the TH-D7A, most of the time, however, a HAM is not going to bother with integrating the GPS for casual routine operations.  BUT he WILL use the messaging capability since it requires no attachments!
+
+You may think that messaging is no big deal, since you can simply talk into the radio, but that is what is so amazing about the APRS message capability.  To talk to someone on voice, all of the following conditions must be met:
+<P>
+
+<LI>    You both must have an agreed freqency or repeater
+<LI>    you both must be on the radio at the same time
+<LI>    The frequency or repeater must not be in use by others
+<LI>    You are limited to a communication range of about 20 miles
+       (the range of one repeater.  Or further on some linked systems)
+<LI>    You have to continuously monitor the speaker to hear a call
+</LI><P>
+Now compare this with APRS messaging in the a handheld TH-D7A.  All  you do is enter the message!  The only conditions that must be met are:
+<P>
+
+    You are both within range of an APRS digi/igate ANYWHERE IN THE WORLD
+    Your radios are on.
+<P>    
+Notice that no prior knowldege is necessary to communicate.  Just enter the call and the message.  IF the other station is on APRS, he will get it.
+Have you ever arrived in a new town and have no idea how to contact other area HAMS because you didnt agree on a time, a frequency and a plan?  With APRS, just eneter the message, and it will get through! (most of the time...)
+<P><B>
+APRS WORLDWIDE E-MAIL: </B> The use of the TH-D7A for messaging is limited only by the imagination of the APRS developers.  The year 1999 will see the introduction of APRS E-Mail engines that can convert APRS messages to and from Email from any user in the country. 
+<P><B>
+APRS TH-D7A DISPLAYS: </B> Obviously the display on the TH-D7A is quite small, so it cannot display as much as a full APRS LAPTOP.  But KENWOOD engineer Shin Aota JL1IBD has done an excellent job of capturing the most essential information.  Here are some of the displays.  The display here is limited to a TEXT display in HTML web page format, but you can imagine each of these examples on the 3 line HT display:
+<P>
+ STATION LIST:  Maintains a list of the last 40 stations heard
+<LI>     11:WB4APR-15 
+<LI>     12:WU2Z
+<LI>     13:K4HG-4
+</LI>
+<P> 
+ POSITION COMMENT:      Displays 20 characters
+<LI>11:WB4APR-15
+<LI>__/comment..
+<LI>__text 20 ch
+<P>
+ POSITION GRAPHICS:     Shows ICON, Grid SQ, Distance and direction
+<LI>12:WB4APR-15
+<LI> __FM19QD
+<LI> __10.6mi
+<P>
+ POSITION: GPS coordinates
+<LI> 13:WB4APR-15
+<LI> __N   39 09.48
+<LI> __W  076 33.23
+<P>
+ COURSE/SPEED:  Course and speed if moving
+<LI> 14:WB4APR-15  
+<LI> __cse123 sp055
+<P>
+ POWER HEIGHT GAIN: OR PHG if entered by a fixed station
+<LI> 19:WB4APR-15 
+<LI> __pwr50w h 80'
+<LI> __ant3db omni
+<P>
+ WEATHER: Or weather if available
+<LI>19:WB4APR-15
+<LI> __dir123 s007m
+<LI> __t 89 f r000"
+</LI><P>
+Notice how the memory location of WB4APR-15 began here as location 11 but slowly got bumped down in the list as time progresses.  New stations always appear in location 1, and all others move downward.  When WB4APR transmits again, he will go back to the top of the list.  Thus you get a good idea of the age of the packet...  All of the above screens are extensions to the POSITION/STATUS memory list.
+<P>
+There is a separate MESSAGE list that captures all Bulletins, NWS warnings, and Messages.  Up two 16 messages are retained and each message has a two screen display.  The first 24 characters of the message are shown on screen one and the remaining 20 are on screen two.  Memory is limited to only 45 characters per message.  This is in contrast to the normal APRS message protocol that can contain 67 bytes.  But this is easily handled as noted below:
+<P>
+ BULLETINS:  Bulletin A from WB4APR-15 up to 45 chars max
+<LI> A-WB4APR-15
+<LI> __This is page
+<LI> __1 of two pag  
+<P>
+<LI> A-WB4APR-15 
+<LI> __es that can
+<LI> __be used.
+<P>
+ MESSAGES:   Incoming message to WB4APR
+<LI> M>WB4APR-1 1
+<LI> __Notice there 
+<LI> __are 24 chars  
+<P> 
+<LI> M>WB4APR-15 
+<LI> __on 1st page& 
+<LI> __20 on 2.
+</LI><P>
+
+Although the message display is somehwhat disjoint, the other APRS authors areintegrating these limitations into their software.  In APRSdos, for example, you will notice two faint Gray lines in the SEND MESSAGE BOX that mark the locations of the PAGE break and maximum line length for a TH-D7A message.  Thus users can easily see how their message will appear on receipt and know when to stop typing at 45 characters.  Similar gray lines will show users the limits on the INPUT-MY-STATUS and INPUT-MY-POSITION comment prompts.
+
+ <P>   
+Whenever a new packet comes in that has not been heard before, a NEW PACKET display pops up to show the latest packet.  The letter "S" shows it was a STATUS:
+<P>
+<LI> WB4APR-15     <LI> __Text of new
+<LI> S _packet..   <P>
+If a packet comes in that is a dupe of a previously held packet it displays only a single line and indicator of the type of packet in the lower left corner.  The following is an example of the main Frequency display.  The "D" shows which is the DATA band.  The > shows which band is the PTT band.
+The "dP" shows the latest packet was a duplicate Position report.
+<P>
+<LI> _144.390   D  
+<LI> >445.925      
+<LI>  dP WB4APR      
+</LI><P><B>
+POSITION LIMIT: </B> Early on, it was a primary consideration how to limit the number of stations captured, since the memory could only hold 40 stations.  This was easily accomplished using the range function that is displayed with every packet.  The user can set a POS LIMIT in miles.  Thus, any position packet beyond this distance limit will be ignored.  The duplicate data display will show >P WB4APR for any station that is so ignored.  This is a very powerful capability and allows the user to limit his memory and displays to only his area of interest.  Thus, stations may work a public service event and not have their screens cluttered by other stations on frequency that are out of area!
+<P><B>
+ALTNETS: </B> In addition to the POS LIMIT, the TH-D7A fully implements the APRS ALTNET and TOCALL filters.  All stations at special events should set their TOCALL to SPCL.  With SPCL, they will only capture and display other stations using the call of SPCL.  But all other monitoring stations will still see them.  The ALTNET concept allows special subgroups of operators to select unique ALTNET calls and then only they will see each other.  This is useful when a small group of stations are conducting experiments on the main APRS frequency and do not want to clutter everyone else's displays with their traffic.
+
+<P><B>
+ICONS: </B> Although the ROM could only support 15 ICONS, these were carefully chosen to handle the majority of cases.  Any of the 350 or more APRS ICONS may be transmitted and received, but only these 15 will show as actual graphics ICONS.  The rest will display only the two character equivalents.
+Those marked with an * can display an overlay character.
+<P>
+ <LI>      Kenwood_ SSTV_____ Triangle*
+ <LI>      Jogger___Airplane*__ Jeep
+ <LI>      House___ Boat*______ RV
+ <LI>      Portable__ Car*______Pickup Truck*
+ <LI>      Sailboat__ Bicycle____ Van
+ <LI>      Digi*____ Gate*_____ WX*
+</LI><P><B>
+DISCLAIMER:</B>  Since the TH-D7A is still in beta test at the time of this writing, nothing in this paper should be construed to describe the final product.  Hopefully the TH-D7A will be in production by XMAS.  Get your letter to Santa in early!
+<P>
+
+Be assured, that the built-in GPS tracking and handheld two-way messaging capability of the TH-D7A combined with the worldwide APRS infrastructure will make 
+<P>
+<B><FONT SIZE=+2>
+1999, the YEAR OF APRS!</B></FONT>
+<P><B>
+References:</B>
+<P>
+1]  An APRS/Mir Test, Bob Bruninga, The AMSAT Journal, May/June 1998.
+<P>
+2]  Proposal: An AMSAT Mobile TRAKNET, Bob Bruninga, The AMSAT Journal, May/June 1997.
+<P>
+3]  TRAKNET, An AMSAT Mobile Satellite System, Proceedings of the AMSAT-NA conference, 16-18 Oct 1998 Vicksburg, MS. 
+<P>
+<B> de WB4APR, Bob</B>
+<HR WIDTH="100%"></P></CENTER>
+
+<CENTER><TABLE BORDER=2 CELLPADDING=2 >
+<TR>
+<TD>
+<CENTER><P><FONT SIZE=+1><A HREF="aprn.html">APRN Annapolis</A></FONT></P></CENTER>
+</TD>
+
+<TD>
+<CENTER><P><FONT SIZE=+1><A HREF="aprs.html">APRS</A></FONT></P></CENTER>
+</TD>
+</TR>
+</TABLE></CENTER>
+</UL>
+<P> <FONT SIZE=-1><B>NOTE! </B> These pages are NOT yet automatic.  The purpose of this APRN web page is top show what we COULD do with SSTV.
+
+</BODY>
+</HTML>

@@ -1,0 +1,23 @@
+AVRS QUERIES:                                          8 Jan 2001 WB4APR
+-------------
+
+Someone write an AVRS info engine that will respond to Queries anywhere
+in the world with the NODE number of the nearest node to callsign X and
+the distance.
+
+Query APRS message:    TO: W3XYZ  MSG: ?AVRS
+AVRS Engine response:  TO: mycall MSG: #nnnn xx mi
+                                       #nnnn xx mi
+
+Notice the 12x12 character formatting of the response message to fit on
+the 12x12x12x12 display lines of the D7.  AND the use of 4 digit node
+names (we better start planning for it now!)
+
+Notice, that since this is a message to individual W3XYZ, that individual
+may also receive the Query as a message as well.  Thus he konws that
+someone is looking for him as a freebee.
+
+I will add these thoughts to the AVRS ideas page tomorrow when I get a
+chance:  http://www.ew.usna.edu/~bruninga/avrs.html
+
+de WB4APR, Bob

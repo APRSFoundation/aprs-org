@@ -1,0 +1,74 @@
+New-N Statistics...  The New-N Paradigm Works!             9 Feb 2007
+----------------------------------------------------------------------
+
+These statistics under the New-N Paradigm were gathered in Annapolis 
+Maryland at an altitude of 80 feet HAAT (ground is near sealevel) 
+using an omni antenna at 39N/76.5W at 80' HAAT:
+
+This area is one of the highest density APRS areas in the world.  It
+is mostly flat where the people live, with hills less than several
+hundred feet.  About 70 miles away are some 1000' "mountains" that do
+have some of the big digis, but these are not heard in the metro areas.
+
+* 241 total Heard RF-only at least once in last 24 hrs
+*      66 fixed (1 +SA, 3 DOS, 8 WIN, 54 UI)
+*      45 Digis (1 Trace, 3 Paccom, 4-L, 5-N, 32-S)
+*      20 WX stations
+*     104 Mobiles
+*         85 D700
+*          7 D7's
+*          6 Mic-E trackers
+*          3 trackers (other)
+*          2 NMEA
+*          1 Uiview mobile
+
+Yet with 80' HAAT antenna, 144.39 is quiet typically 70 % of the
+time (at 10 AM after rush hour).  Compared to before the New-N
+Paradigm which was wall-to-wall packets.  With this much
+quiet,reliability is up for local users.  The biggest load are 2
+trackers that seem to be hitting near 90 packets per hour (using
+smart beaconing, I think).
+
+My RF-only range area appears to be about 120 miles but my ALOHA
+circle is about 60 miles average, but shrinks to about 45 miles
+during morning rush hour with many of the mobiles active.  In
+that 45 mile ALOHA area (1030 AM), there were 115 total ACTIVE
+stations, only 11 active mobiles, 11 digis, and 4 wx stations.
+
+PATHS look pretty good too (New-N does work)!
+
+1%  still trying to use RELAY (most won't get to me)
+8%  still trying to use WIDE  (ditto)
+13% using W3-3
+71% using W2-2
+22% using W1-1
+
+These days, I mostly only monitor APRS while mobile with my
+D700.  I see over 90% of the mobiles in this area are also able
+to -see- APRS around them too with APRS displays.  That is why I
+think it is so important to get those recommended travelers
+voice repeater objects on the air, to serve those mobile
+travelers.
+
+See how: www.aprs.org/localinfo.html
+
+APRS is to serve mobiles and provide relevant local info to
+travelers as well as provide comms.  During this same 24 hours I
+saw only 3 user messages, some WX bulletins and some DX queries
+and responses, but not much human interaction.  Maybe more
+people need the D700 external Keyboard interface by W2FS to make
+typing easier in the mobile (while stopped).  Voice-alert is
+also a great hands-free means of communicating between mobiles.
+
+For details on these subjects see:
+
+Voice Alert: www.aprs.org/VoiceAlert.htm
+
+D700 keyboard kit:  http://www.coastalchip.com/Kenkey.htm
+
+New-N Paradigm to FIX APRS IN YOUR AREA: www.aprs.org/fix14439.html
+
+
+Bob, WB4APR
+
+

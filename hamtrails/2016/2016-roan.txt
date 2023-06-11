@@ -1,0 +1,70 @@
+ROAN Mountain Report, N4AZR 2016
+--------------------------------
+
+Roan Mountain was covered this year by me (N4AZR) and my friend Gino (KI4YXO) 
+and his son Nathan.
+
+We arrived on-site at about 11am and I had my D700 digi deployed soon after 
+in the Cloudland  Hotel parking lot area.
+
+We quickly established voice contact with Comers Rock via UHF. The link from 
+Roan to Comers is very good. I was able to turn the power on the UHF side 
+down to low and still reach them with no issues. I could have probably turned 
+the power down on the VHF side too, but didn't bother since I had plenty of 
+battery. Interesting enough...I kept hearing a repeater ID on 445.925.  
+As far as I know, all repeaters in the SERA management area use the low side 
+of the split for the repeater output, so whatever I was hearing was probably 
+pretty far away. I didn't think to copy down the morse code ID. Oh well.
+
+Soon after establishing contact we heard from Comers that Clingmans Dome was 
+having issues. Hearing that, we added all of our remaining mast sections to my 
+antenna pole and got it up close to 30 ft. I was hoping that we could reach 
+Springer direct by some miracle, but that didn't happen. We also heard that 
+Comers was having digipeater issues which essentially left us cut off from the event.
+
+At about that same time, we heard from KG4AKV who was operating a special event 
+station for NPOTA at Craggy Gardens on the Blue Ridge Parkway. He was able to 
+reach us on the UHF site to site frequency after hearing about the event from 
+Bob WB4APR a few days earlier. Since we were pretty much isolated for the event, 
+I had him punch the path settings into his Kenwood D72. We were able to 
+exchange packets fine. I had him try to call Springer via UHF, again hoping for 
+a miracle, but no luck.
+
+As the day progressed, I started to notice strange things happening with my 
+digipeater too. The first thing I noticed was that KG4AKV's packets were being 
+decoded with no issues (was showing his call on the main screen as packets 
+were decoded in real time), but he was not being added to my station list. 
+It took several tries of him sending beacons and me cycling through the 
+station list menu before he finally appeared. The next thing I noticed was that his 
+beacons, beacons from Comers, as well as test beacons from my own D72 on-site 
+were not being digipeated by me. All of this traffic should have appeared at 
+Todd AL0I's iGate in Boone thanks to my digipeater, but it did not. I verified 
+all of my settings were correct but did not spend too much time troubleshooting 
+on-site as we knew that Comers digipeater was not repairable anyway.
+
+While passing the time on top of the mountain, Gino's son Nathan (soon to be 
+licensed) was playing with his scanner listening to 146.52. He heard some 
+traffic including another station on Roan Mountain. After the GP event was over 
+we met up with KD2GSW who is spending the summer in TN on an internship and 
+just happened to be visiting the area. We also ran into some hams with the N4ARR 
+Dixie Radio Pirates group who were working the VHF contest on top of 
+Roan. We all stopped to chat for a bit before heading home at about 4 pm.
+
+A few interested hikers stopped to ask what we were doing with the giant antenna 
+mast. Once we explained they were very interested.
+
+After arriving home, I set up my GP gear again and verified that indeed my D700
+was not digipeating. I double checked all of the settings including the serial 
+port settings and they all seemed correct. I could not determine the root cause 
+so I reset the D700 and programmed it from scratch a 2nd time. This time around 
+it worked fine. It was working fine before I packed up on Friday. Can't explain 
+that one...Murphy's Law, bugs in the D700, who knows. Maybe it is time to retire 
+the D700 in favor of a new D710 :)
+
+Anyway, a fun time was had by all. We will try to be back to try again next year! 
+Thanks to all who made the trip out on Saturday for a fun event that I look 
+forward to every year!
+
+73,
+
+Glenn N4AZR

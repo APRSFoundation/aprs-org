@@ -1,0 +1,352 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+   <TITLE>Cubesat RAFT</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (Win95; I) [Netscape]">
+   <META NAME="Author" CONTENT="Bob Bruninga">
+   <META NAME="Description" CONTENT="CUBESAT RAFT Project">
+   <META NAME="Keywords" CONTENT="PCsat, APRS, APRsat, Satellite, Cubesat,  Tracking, Bruninga, LEO, GPS">
+   <META NAME="Classification" CONTENT="Science">
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#58F1FC" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000">
+<CENTER><IMG SRC="iss-aprs/usnalogo.gif" HSPACE=5 HEIGHT=90 WIDTH=90 ALIGN=TEXTTOP>
+<B><U><FONT SIZE=+2>RAFT Amateur Radio Satellite Project</FONT></U></B>
+<IMG SRC="pcsat/pcsatlogo2.jpg" HSPACE=5 HEIGHT=90 WIDTH=90 ALIGN=TEXTTOP>
+
+<BR>US Naval Academy Satellite Lab, <FONT SIZE=-2>Bob Bruninga, WB4APR</FONT><BR>
+<BR> Midshpimen: Robeson and Paquette (06); 
+<BR> Orloff, Kinzbrunner, and Rose(05)
+<BR> Baker, Tuttle, Colvin (04)
+<BR> Machinist:  Mike Supersczynski
+
+<SCRIPT language=Javascript>
+var rndNum = Math.floor(Math.random() * 10000);
+eval("var EDTDate" + rndNum + " = 'Dec 20, 2006 10:58:00 PM CDT';");
+document.writeln("<form name='EDTform" + rndNum + "' action='Javascript:void(0);'>");
+document.writeln('<font size=4 color=darkblue>STS-116 Launched 9 Dec. Countdown to Deployment</font><br>');
+document.writeln("<input type=text value='' size=20 name='WrittenByJamesMVenglarikII'>");
+document.writeln("</form>");
+if (theFunction) theFunction += "var d = new Date();";
+else var theFunction = "var d = new Date();";
+theFunction += "var c = new Date('" + eval("EDTDate" + rndNum) + "');";
+theFunction += "var diff = (c - d)/1000;";
+theFunction += "var days = Math.floor(diff / 86400);";
+theFunction += "var rem = diff - (days * 86400);";
+theFunction += "var hours = Math.floor(rem / 3600);";
+theFunction += "rem = rem - (hours * 3600);";
+theFunction += "var minutes = Math.floor(rem / 60);";
+theFunction += "rem = rem - (minutes * 60);";
+theFunction += "var seconds = Math.floor(rem);";
+theFunction += "if ((days < 0) | (hours < 0) | (minutes < 0) | (seconds < 0)) ";
+theFunction += "var out = 'Liftoff of STS-116!';";
+theFunction += "else ";
+theFunction += "var out = ' ' + days + ' days ' + hours + 'hr ' + minutes + ':' + seconds + '';";
+theFunction += "document.forms.EDTform" + rndNum + ".elements.WrittenByJamesMVenglarikII.value = out;";
+setInterval(theFunction, 1000);</SCRIPT>
+
+<IMG SRC="craft/GroupRnM042x.JPG" height=210 width=320>  
+<IMG SRC="psat/Psat-0GF4longSepx.JPG" height=210 width=320>
+<P>
+</CENTER>
+<BR><B>See the <A HREF="ande-raft-ops.html">ANDE/RAFT-Operations Page</B></A>
+<BR><B>See the <A HREF="http://www.aprs.org/raft-docs.html">RAFT-Design and Documentation Page</B></A>.
+<P>
+<B>RAFT MISSION IS COMPLETE:</B> RAFT de-orbited on 30 May 2007 after 5 months in space.
+The mission for RAFT was successful and in the last week, we finally got the Radar Fence
+Transponder Data we had been hoping to get.  Please see the
+<A HREF="craft/save-raft.html">SAVE RAFT WEB PAGE!</B></A>. . 
+<P>
+
+<B>PRE-LAUNCH INTEGRATION:</B>  Launched 10 December 2006 on Shuttle STS-116 and deployed in the first 2 hours of 21 Dec 2006.  
+Delivered 25 Jan 2006 to JSC Houston for vibration testing. Then
+17 July 2006 to Kennedy Space Center for Integration with the Shuttle.  
+Photo above was delivery from USNA and testing the separation system
+in a Zero-G flight with NASA.  The pre-launch debate was the deployment altitude 
+to safely avoid re-contact with ISS.  The plot below shows how our original altitude ot 180
+has been reduced to 175, and by launch time 165 nautical miles was being considered 
+which would shorten the life to only 2 months or less:
+
+<P>
+<IMG SRC="craft/Lifetime-Est.GIF">
+<P>
+The top-inside view of RAFT is shown 
+below along with a photo of a visit by the then, NASA Administrator Admiral Steidle
+who is now filling a professor chair at the Academy in the Aerospace Department.
+Over 1 Kg of lead was added to RAFT to try to improve its orbital life.  Layers can
+be seen in the diagonal sandwich and on top of battery B2:
+<BR>
+<IMG SRC="craft/Top-inside31xx.JPG" height=240 width=320> 
+<IMG SRC="craft/RAFTsteidl2.jpg" height=240 width=320>
+<P>
+<B>RAFT</B> was a US Naval Academy Aerospace student amateur satellite project designed to give 
+students real hands on experience in satellite engineering, design and communications.  
+The USNA RAFT will accomplish these objectives:
+<LI> The self training of Midhshipmen in radio communications and the small satellite art 
+<A HREF="http://web.ew.usna.edu/~raft/index.htm"><B>See their RAFT WEB page</B></A>.
+<LI> Development of our ability to design/construct CUBESAT/Picosat type amateur spacecraft
+<LI> Provide a 217 MHz receiver to determine the ability of the Navy Space Surveillance System (NSSS) to track small amateur satellites.
+<LI> Provide <A HREF="craft/raft1.gif"> <B>TDMA packet</B></A>, and
+     <A HREF="psk31uplink.html"><B>FDMA Multiuser PSK-31</B></A> transponders
+     for experiments in the Amateur Satellite Service.
+<LI> Provide <A HREF="http://www.aprs.org/marscom.html"><B>voice/data experiments </B></A> to demonstrate amateur radio text-messaging-to-voice methods.
+ 
+
+
+   
+<P>
+<IMG SRC="craft/craftpix.jpg" height=150 width = 200 align="left">
+<P>
+<B>CUBESATS:</B>  Cubesats are a Stanford University program initiated by Dr.
+Bob Twiggs to provide low cost satellite launches for student 
+experiments.  Those cubesats are all 4" in size and are launched 3 at a time
+from simple standard launchers called P-PODS.  As many as a dozen or more may
+be launched on a single launch vehicle.
+<A HREF="http://ssdl.stanford.edu/cubesat/"> Link to Stanford CUBESATS </A> or see DOD's
+<A HREF="http://www.skyrocket.de/space/doc_sdat/mepsi.htm"><B> MEPSI</B></A>, and 
+<A HREF="http://www.darpa.mil/mto/mems/summaries/Projects/Aerospace_1.html"> Others</A>.
+
+<P>
+<B>DOD Interest:</B> The DOD interest in this RAFT project is its requirement to 
+TRACK all space
+objects and the difficulty it will have in tracking these 4" cubesat clusters due to
+their large numbers and small size which is below the NSSS routine tracking ability.
+RAFT was approved by the DOD Space Experiments Review Board in the fall of 2002.
+Since DOD cannot pay for our project to fly on the typical Cubesat Russian 
+(low cost) launcher, DOD developed their own 5" cubesat launcher.
+<P>
+<IMG SRC="craft/RAFT-NMARS.JPG" align="left" >
+
+<P>
+<B> RAFT OBJECTIVES: </B>
+The RAFT Mission is to provide a cubesat in the cubesat cluster 
+which has an
+on-board receiver capable of identifying itself via the NSS satellite Radar 
+Tracking system to help locate the Cubesats.  Without this receiver, the Cubesats
+are too small to be detected by normal non-queued tracking systems, and so there is no 
+easy way to find these individual cubesats once they have begun to spread from the 
+original launch tracking elements.  
+
+<P>
+<B> TWO RAFT's:</B>  The requirement for two cubesats to mark the initial front and 
+back of the spreading constellation, also gives us two opportunities for experimental 
+communications payloads.  We looked at several 
+<A HREF="cubesat.html"> low power communications experiment possibilities </A> and
+arrived at two designs.  One is called <B>RAFT</B> and the other is called <B>MARScom</B>.
+<i>This</i> page describes common characteristics and RAFT itself.  For unique detail info on each one, see
+their respective pages:
+<P>
+<LI><A HREF="http://www.aprs.org/raft-docs.html"><B>RAFT DOCS</B></A> detail design web page and Communications descriptions.
+<LI><A HREF="http://www.aprs.org/marscom.html"><B>MARScom</B></A> detail design web page and Communications descriptions.
+</align>
+<P>
+<HR SIZE=5 WIDTH="100%">
+</ALIGN>
+<P>
+<IMG SRC="craft/217xpndr3.gif">
+<P>
+<B>PACKET RELAY SECONDARY MISSION:</B> The secondary mission of RAFT and MARScom
+are to provide packet digital communications relay for mobile amateur radio users to transmit
+their GPS coordinates and messages via the satellites.  This is a continuation of
+the PCsat, PCSAT2 and ARISS missions.  The downlink is received by a global system of
+volunteer ground stations that feed a 
+<A HREF="http://www.ariss.net"><B>live web page</B></A>.
+
+<P>
+<B>PACKET ==> VOICE COMMS RELAY SECONDARY MISSION:</B>  The primary limitation
+on single channel LEO satellite communications is the congestion on the uplink.
+The RAFT Packet ==> Voice transponder solves this problem by compressing the
+uplink into a single 1 second burst per station, and then expanding it to voice
+for the FM downlink.  This way, students with nothing but a scanner receiver can
+hear all of the downlink communications (voice) yet the uplinking stations have
+a very low probabilty of collision due to the short duration of the uplink.  A
+voice synthesizer converts the packet to voice.
+
+<B><U>RAFT PSK-31 MULTI-USER DIGITAL TRANSPONDER</B></U>
+<P>
+This transponder solves the primary problem of many amateur satellites and that is
+the contention on the single channel uplink.  By using PSK-31, as many as 30 simultaneous
+users can be supported in keyboard-to-keyboard communications as shown below.  Each
+channel is only about 60 Hz wide.  This image shows the interference potential 
+however, whenever the RAFT telemetry packet is transmitted.  Users should therefore
+attempt to use the upper and lower ends of the spectrum.
+<P>
+<IMG SRC="craft/ax25psk.gif">
+<P>
+
+<P>
+<B>PRIMARY SPACE TRACKING MISSION:</B>
+One RAFT will have a receiver for the NAVSPASUR radar system
+as shown in the block diagram above. 
+<A HREF="craft/XP217board.JPG"><B>(see photo)</B></A>.   When it flies through the fence,
+it's direct-conversion double sideband receiver will mix the Doppler to baseband audio
+which will be added to the RAFT1's downlink audio for detection on the ground. 
+ A team
+consisting of Boston area AMSAT members (Tony Monterio, AA2TX, Dave
+Goncalves, W1EUJ, and Joe Fitzgerald, KM1P) are working on this NSSS
+part of the project.
+  <a href="http://www1.coe.neu.edu/~dpg/rx217.html"><b>See Their WEB
+page</b></a>. 
+For telemetry, command and control, the
+RAFT's communications payload has an FM downlink suitable for this purpose.
+Independently,  the 217 MHz receiver local oscillator is strong 
+enough so that it can then also be heard
+by the NSSS radar receiver on the ground as a separate means of verification.
+<P>
+The following links have information on the NSSS RADAR FENCE (it used to be called NAVSPASUR)
+ that spans all of 
+the southern states in the USA.  But this information has been gathered by non-DOD
+tech-ies and neither the DOD nor the naval Academy is responsible for its content.
+<LI><A HREF="http://web.archive.org/web/20040808032843/http:/www.zilker.net/~crossley/NAVSPASUR/index.html"><B>P.A. Crossley's</B></A> archived page 
+<LI><A HREF="http://www.k4gfg.us/navspasur/index.html"><B>Tom Kneisel's</B></A> page.
+<LI><A HREF="http://www.fas.org/spp/military/program/track/spasur_at.htm"><B>Good info site</B></A>.
+<LI><A HREF="http://www.roswellastronomyclub.com/radio_meteors.htm"><B>Rosswell Astronomy club</B></A>
+<LI><A HREF="http://www.mediacen.navy.mil/pubs/allhands/jun01/pg14.htm"><B>Navy PR site</B></A>
+<P>
+<IMG SRC="http://www.aprs.org/photos/spasurmap.jpg">
+<BR>Use any satellite tracking program to predict when an object will pass through the fence.
+Just enter the coordinates of the main Kickapoo Transmitter (33.558N  98.737W) and watch
+for the instant your object crosses the azimuths of 91.4 and 271.4 degrees from Kickapoo.
+<P>
+Because of the extremely high power of this VHF radar (over 700kW), it can be received 
+by just about
+anyone with a handheld scanner receiver and an antenna pointed to the area in space
+where any spacecraft passes through the "fence".  The radar is a pure carrier
+radiating upward 24 hours a day in a very narrow FAN beam as shown in the MAP above.
+Whenever a large spacecraft flies through that beam,  you should be able to hear
+a "ping" on your SSB scanner at that frequency.
+<A HREF="http://science.nasa.gov/newhome/headlines/ast22dec98_1.htm">
+<B>Hear some example pings</B></A>.
+<P>
+<IMG SRC="http://www.aprs.org/photos/spasur.gif">
+<P>
+The above plot is the output from my SPASUR.EXE program for ISS intercepts viewed from
+Atlanta.  It shows the elevation angle of the ISS when it passes through the
+fence and the elevation angle from NAVSPASUR.  The yellow line shows the relative
+signal strength relative to the best possible path geometry and location near
+the transmitter site (Someone that lives 250 miles from the Texas transmitter site).  You may
+<A HREF="http://www.aprs.org/spasur.zip"><B>download</B></A>
+a copy of my SPASUR program.
+<P>
+<LI>See a <A HREF="craft/NSSSant.jpg"><B>picture </B></A> of our homemade NSSS receive antenna 
+(dipole with screen reflector).
+<P>
+<B> Preliminary NSSS Verification Test:</B> To give the students some familiarity
+with the operation of the Radar Fence, on 21 April 2004, we set up a dipole with
+reflector and detected the NSSS reflections from the Moon.  The moon passes 
+through the fence twice a day for about 2 weeks of every month.  The pass lasts
+about a minute per pass.  We recorded the event with DIGIPAN.  See the
+<A HREF="craft/moon1234AOS.gif"><B> 2 minutes of AOS</B></A> and the
+<A HREF="craft/moon1235LOS.gif"><B> 2 minutes of LOS</B></A>.
+<P>
+<HR SIZE=5 WIDTH="100%">
+
+<P>
+<B>ANTENNA DEPLOYMENT DESIGN:</B>
+<P>
+Each of the two RAFT satellites have three antennas, one for HF, VHF and UHF.  
+The VHF and UHF antennas are spring loaded and collapse
+within the other satellite to the 5" available, but extend to the required length 
+on separation.  Both antennas on each spacecraft are 10.75" long to provide
+equal spring separation pressure, but are individually tuned with an LC network
+designed by Tony.  All of these
+antennas make no contact with the PLA-2 Launcher, but are mutually held in place by
+each other.  On separation, their inertia will unpool their individual 4 foot long
+HF wire antennas, lightly held together by a tiny tip magnet.
+
+<IMG SRC="craft/antplan3.gif">
+<P>
+<IMG SRC="craft/RAFTantsprings3.gif">
+<P>
+The next two photos show the launcher used on the 4" cubesat MEPSI mission and a deployment
+photo.  A higher resolution photo link is in the next paragraph.
+<P>
+<IMG SRC="craft/MEPSI-1.gif"> ... <IMG SRC="craft/MEPSI-2.gif">
+<P>
+<LI>See a photo of the <A HREF="craft/MEPSIsep.jpg"><B>MEPSI deployment</B></A> from the Shuttle
+<LI>See the full movie of this launch (8 Mbytes)<A HREF="http://www.aprs.org/craft/MEPSIlaunch.ppt"><B>click here</B></A>
+<LI>See the <A HREF="craft/SpringProb.gif"><B>Physics Problem</B></A> involved in solving for the spring constants.
+<LI>See the UHF whip Antenna <A HREF="craft/RAFTantASSY.gif"><B>spring assemblies</B></A>.
+<LI>See the <A HREF="craft/RAFTscrews.gif"><B>Mechanical and Fasteners Design</B></A>
+<P>
+<B>LIFETIME:</B> Unfortunately, the RAFT satellites will be deployed after the Space Shuttle
+leaves the Space station on its way back to Earth.  Because the primary mission of STS-116
+is to deliver massive cargo to ISS, the ISS will be brought down to 205 miles for rendesvous
+with the Shuttle.  Then, after departing the station, the current deployment altitude for
+RAFT is expected to be only 185 miles which is quite low.  Mission life for RAFT1 is
+estimated as 6.5 months
+<A HREF="http://www.aprs.org/craft/RAFTlife.gif"><B>See plot</B></A> and for MARScom as 5 Months
+<A HREF="http://www.aprs.org/craft/MARSlife.gif"><B>See plot</B></A>.
+<P>
+<B>Power System:</B>
+<P>
+One problem with pico sized satellites is the requirement to have enough series connected
+solar cells on each panel to add up to a useable bus voltage.  On RAFT this problem is 
+solved by using our innexpensive 8 volt panels to parallel charge two sets of batteries
+during normal receive operations and then stacking the batteries in series when the 
+transmitter is keyed.
+<LI><A HREF="craft/RAFTchargeSafety.txt"><B> Charge Safety Analysis </B></A>
+<LI><A HREF="craft/RAFTsolarBgt.xls"><B>Solar Power Budget</B></A>.
+<LI><A HREF="craft/RAFT8-12vPS.gif"><B>8/12 Volt Power System</B></A>
+
+<P>
+<B>Attitude Control:</B>
+<P>
+RAFT1 will use a permanent magnet to align itself with the earths magnetic field.
+This allows its attitude to be predictible.  The plot below shows the alignment
+of the RAFT1 antennas during West passes over the Naval Academy.
+<P>
+<IMG SRC="craft/MAG40w.gif">
+<P>
+To the north the antennas always appear vertical.  Low on the horizon to the south
+they are nearly horizontal with the null pointed towards us.  We did this for
+several directions and for different latitudes
+<A HREF="attitudes.html"><B> (see Plots)</B></A>
+<P>
+An early idea was to hve a long HF wire antenna with a tip mass to provide
+a gravity gradient stabilization as shown below.  But this was 
+rejected because it would present a large cross section and increased drag to 
+significantly shorten the mission life time.  
+<P>
+<IMG SRC="craft/MAG50eGR.gif">
+
+<P>
+<HR SIZE=5 WIDTH="100%">
+
+<B>Obsolete ideas and Links:</B>
+<P>
+
+See docs-page for details. <B>CDR</B> was 23 Feb 2005 at USNA. PhaseII Shuttle Safety 
+review was 10 Feb 2005 at JSC. Phase0/I was 16 Dec 04 at JSC and PDR was complete 
+on 19 Nov 2004.
+<A HREF="craft/RAFT-PDRnotes.txt">(PDR action items)</A>.  The battery working 
+group meet on 13 Dec 2004.  
+<LI><A HREF="craft/RAFTantBRD.gif"><B> Original diagonal Antenna PCB assemblies </B></A>
+<LI><A HREF="craft/antdeploy2.gif"> Original Antenna Deploy plan</A>
+<LI><A HREF="craft/RAFTantsprings3.gif">Original Antenna Design</A>
+<LI><A HREF="craft/antdeploy.gif">First Antenna deploy idea</A>
+<LI><A HREF="psk31uplink.html"> <B> Narrowband PSK transponder</B></A>
+
+<P><FONT SIZE=+1>You are visitor: 
+<IMG SRC=http://www.aprs.org/cgi-bin/Bruninga/craft.cgi> since 21 Aug 2002.
+</FONT>
+ <BR>
+<HR SIZE=5 WIDTH="100%">
+<TABLE BORDER=2 CELLPADDING=2 >
+<TR>
+Return To:
+<TD>
+<CENTER><P><FONT SIZE=+1><A HREF="satstation.html">USNA
+Satellite Ground Station</A></FONT>
+</TD>
+
+<TD>
+<CENTER><P><FONT SIZE=+1><A HREF="sitemap.html"> Site Map </A></FONT></P></CENTER>
+</TD>
+</TR>
+</TABLE></CENTER>
+</UL>
+
+</BODY>
+</HTML>

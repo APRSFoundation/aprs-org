@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+   <TITLE>APRS in 2002</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.0Gold (X11; I; SunOS 5.5.1 sun4m) [Netscape]">
+   <META NAME="Author" CONTENT="Bob Bruninga">
+   <META NAME="Description" CONTENT="APRS Homepage">
+   <META NAME="Keywords" CONTENT="Digis,Bruninga,radio, position, w3ado, wb4apr, GPS, APRS, Satellites, USNA">
+   <META NAME="Classification" CONTENT="Science">
+</HEAD>
+<!--<BASE HREF="http://www.ew.usna.edu/~bruninga/">-->
+<BODY TEXT="#FF0000" BGCOLOR="#87CEFA" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000"> 
+
+<H1 ALIGN=CENTER><B>APRS DIGIpeaters in 2002</B></H1>
+
+<H2 ALIGN=CENTER><IMG SRC="http://www.ew.usna.edu/~bruninga/satellite.gif" HSPACE=30 HEIGHT=32 WIDTH=32 ALIGN=TEXTTOP><B>Automatic
+Position Reporting System</B><IMG SRC="http://www.ew.usna.edu/~bruninga/satellite.gif" HSPACE=30 HEIGHT=32 WIDTH=32 ALIGN=TEXTTOP></H2>
+<CENTER>
+<IMG SRC="http://www.ew.usna.edu/~bruninga/aprs.gif" HEIGHT=112 WIDTH=200>
+</CENTER>
+<!-- begin comments and the next line ends them
+//-->
+<FONT COLOR="#000000">
+<B>APRS Before the <A HREF="http://www.ew.usna.edu/~bruninga/aprs/fix14439.html">New-N Paradigm</B></A>:
+
+<P>
+<B> The USA APRS Network in 2002:</B> This web page reflects the state of the APRS 
+network in the USA as of 2002 when APRS was 10 years old.  The network was inefficient 
+due to continued
+support for legacy RELAY and WIDE paths which caused significant packet duplications.
+ .  It was time to fine 
+tune the network for the benefit
+of its users and travelers.  Below was a 6 hour capture of almost 900 digipeaters taken
+from the APRS Internet feed on about 12 June 2002.
+<P> 
+  To highlight the different types of digis, the ICONS have been temporarily
+changed to some other existin symbol so that the colors can better distinguish 
+the different digi types at a glance.
+You can zoom to your area to better see the detail. 
+The temporary symbol table is listed below to show the translation used to display the 
+different types of digis on the map.
+</FONT>
+<P>
+
+<CENTER>
+<APPLET codebase = "javaprs/" CODE ="javAPRS.class" WIDTH = 500 HEIGHT = 350 ARCHIVE=japrs.jar>
+<PARAM name = "backgroundColor" value = "black">
+<PARAM name = "dosMap" value = "usa.mp">
+<PARAM name = "dataFile1" value = "digis-o.hst">
+<PARAM name = "autoScale" value = "true">
+<PARAM name = "showAllMapLabels" value = "false">
+<PARAM name = "displayVectors" value = "true">
+<PARAM name = "stationList" value = "true">
+<PARAM name = "showNewStations" value = "true">
+<PARAM name = "autoDisplayID" value = "150"
+<PARAM name = "mapListFile" value ="hflist.txt"></APPLET><BR>
+
+<P> To Navigate map, use ARROW keys and Page-UP/Down.
+</CENTER>
+<P>
+<CENTER><TABLE BORDER="2" CELLPADDING="2" CELLSPACING="1">
+<CAPTION><B><BIG>TEMPORARY Colors used to distinguish digipeater types above</BIG></B></CAPTION>
+<B><TR><TD>OVERLAY</TD> <TD>Color</TD>	<TD>DESCRIPTION</TD></TR></B>
+<TR><TD>R</TD> <TD>Red dot</TD>	<TD>if RELAY only</TD></TR>
+<TR><TD>W</TD> <TD>Green Star</TD>	<TD>if RELAY and WIDE</TD></TR>
+<TR><TD>T</TD> <TD>Windows</TD>	<TD>if RELAY,WIDE and TRACE</TD></TR>
+<TR><TD>N</TD> <TD>White Star</TD>	<TD>if WIDEn-N (and relay,wide and trace) and NOID is set</TD>
+<TR><TD>I</TD> <TD>Apple Icon</TD>	<TD>if WIDEn-N (and relay,wide and trace) but ID is set to ON</TD></TR>
+<TR><TD>J</TD> <TD>Jeep</TD>	<TD>if Just WIDEn-N and no others supported</TD></TR>
+<TR><TD>U</TD> <TD>Blue Phone</TD>	<TD>if UI-DIGI firmware</TD></TR>
+<TR><TD>?</TD> <TD>Red Cross</TD>	<TD>if no overlay character given</TD></TR>
+</TABLE></CENTER>
+<FONT COLOR="#000000">
+<P>  As you can see in 2002, of the 900 digis, 240 were not identified by
+an overlay character to show users what kind of digi it is.  Of those, 160 were
+in the USA and are shown with the red cross above.  . We really do need to
+have all digi's properly identified by their capabilities and visible to users
+by their overlay character.
+<P>
+<B>RECOMMENDED OVERLAY CHARACTERS:</B>  Next is the table of OVERLAY characters that
+should be used to identify the capabilities of each digipeater.
+.  The overlay character is the byte between the LAT/LONG.  The "/" is
+the default and conveys no information to the users.  Replace it with the proper overlay
+character from the list below. 
+
+<CENTER><TABLE BORDER="2" CELLPADDING="2" CELLSPACING="1">
+<CAPTION><B><BIG>DIGIpeater Overlays</BIG></B></CAPTION>
+<TR><TD><center>A</center></TD>	<TD> An Alt-Freq input digii (typically on 144.99 MHz</TD></TR>
+<TR><TD><center>R</center></TD>	<TD> RELAY only (obsolete in 2005)</TD></TR>
+<TR><TD><center>W</center></TD>	<TD> RELAY and WIDE (obsolete in 2005)</TD></TR>
+<TR><TD><center>T</center></TD>	<TD> PacComm RELAY,WIDE and TRACE (obsolete in 2005)</TD></TR>
+<TR><TD><center>N</center></TD>	<TD> WIDEn-N (and relay,wide and trace) and NOID is set</TD>
+<TR><TD><center>I</center></TD>	<TD> digipeater is also an IGate</TD></TR>
+<TR><TD><center>L</center></TD>	<TD> A LIMITED New n-N Paradigm digi (obsolete)</TD></TR>
+<TR><TD><center><B>S</B></center></TD>     <TD> <B>The New n-N Paradigm digi with State SSn-N support (and ID is on)</B></TD></TR>
+<TR><TD><center>P</center></TD>	<TD> PacComm digi supporting New n-N Paradigm</TD></TR>
+<TR><TD><center>U</center></TD>	<TD> UI-DIGI firmware (should now be upgraded to S)</TD></TR>
+<TR><TD><center>D</center></TD>	<TD> DIGI_NED (should now be upgraded to S)</TD></TR>
+</TR>
+</TABLE></CENTER>
+<P>
+Notice that the <A HREF="http://www.ew.usna.edu/~bruninga/aprs/fix14439.html">New-N Paradigm</B></A> 
+can be implemented on either the Kantronics, DIGI_NED
+or UIDIG ROMS, so if implemented the "S" overlay should superscede the identification 
+of the ROM since we can still tell the type by the TOCALL version field.  
+The U and D overlays were only needed
+back when we needed to distinguish their additional capabilities.  
+. Now with the new all-North 
+America <A HREF="http://www.ew.usna.edu/~bruninga/fix14439.html">New-N Paradigm</B></A>,
+ the "S" is the more important overlay for those digis
+that imlement it.  
+<P>
+Bottom line.  If it is not an "S" or "P" or "1" overlay digi in North America, then
+it is probbly an old digi running on obsolete parameters.  . Please see if you can inspire
+someone to fix it.
+
+<P>
+Thanks
+<BR> Bob Bruninga, WB4APR
+
+<P>
+Other APRS stuff.  See <A HREF="http://www.ew.usna.edu/~bruninga/sitemap.html">SITEMAP</A>
+
+ 
+<HR SIZE=5 WIDTH="100%"></P>
+<P><FONT SIZE=-2>The Naval Academy is a registered user of APRS
+and WinAPRS. The purpose of this web page is to show several applications
+currently in use at this site and should not be considered as an advertisement
+or an endorsement of any commercial product.</FONT>
+
+</BODY>
+</HTML>

@@ -1,0 +1,195 @@
+OMNI-DFING with APRSdos                                              1994
+===========================================================================
+
+APRS incorporates a whole new aspect to direction finding by permitting
+the plotting of signal strength contours.  THIS PERMITS STATIONS WITH ONLY
+OMNI ANTENNAS TO PARTICIPATE AND PROVIDE VALUABLE INFO!  This is possible
+since APRS has a line-of-sight Power-Height-Gain (PHG) reporting and
+display format which it can use to draw range circles around each station 
+showing his relative communication range.  
+
+APRS plots a map of range contours around all stations which represents the
+possible range of that station based on his antenna gain and height over
+average terrain.  It also includes up to 10 dB of directivity to account
+for any favored or blocked direction.  Where two coverage areas intersect 
+or overlap, direct communications are generally possible.  Knowledge of 
+local topography is important in making this assessment.  This PHG plot is 
+an ideal tool for visualizing ANY radio network WHETHER OR NOT APRS or 
+PACKET is being used!
+
+DFING WITH OMNI SIGNAL STRENGTH REPORTS:  By modifying these PHG equations
+for plotting received signal strengths, a weak signal is drawn as a larger
+area of probability than a very strong smaller area.   The signal reports
+are made on an S0 to S9 scale for relative signal strength indication.  
+These signal strengths will be plotted as circles from a dark gray up to 
+a bright red, with the radius of the circle decreasing with stronger s
+ignals.  A signal strength of 0 represents NOTHING HEARD and is plotted 
+last as dark gray on top of everything else.  This way they clearly show 
+where the transmitting station is NOT.
+
+Since the PC can only overlap circles, the user should visualize only the
+perimeter of the overlapping colors and ignore the centers of the circles.
+The probable location of the transmiter will be in the area of the most 
+concentrated perimeters of brighter circles.  The location of the DF signal
+will never be at the center of a circle.  THE LOCATION OF THE SIGNAL
+IS ALWAYS NEAR THE EDGES.  If it was near the center, then that station
+would have reported a stronger signal, and the circle would be brighter
+and smaller!  Load the DF-OMNI.BK file to see our first omni-df attempt
+and see the section below about what you will see in that file.
+
+PHG CIRCLE OF SIGNAL OR JAMMER:  Also do not be fooled if the signal or
+jammer has a high position or power.  Then you must not think of him
+as a point on the map, but a PHG circle that covers his range area!
+In this case, you are looking for where his imaginary PHG circle 
+intersects the perimeter of all the DF SIgnal Report contours on 
+the map.  See the example on the web page of Omni-DFing a signal over
+100 miles away at 2800'.   The Omni Signal Plot made no sense until
+we realized we had to look at the signal-sources own PHG circle too.
+
+
+OMNI-DF COMMAND SUMMARY:  The following list sumarizes all of the commands
+used in APRSdos for performing direction finding with the OMNI technique.
+Please note that stations with BEAMS should NOT input OMNI signal strength 
+readings, since their gain will upset the consistency of the OMNI plots.  
+Beam stations should always enter their BEAM HEADINGS.
+
+
+INPUT-DF - Enter either a beam heading or a signal report.  Enter "0" for
+      an OMNI signal strength report.   (360 means North, not 0.)
+
+INPUT-ADDobj - Add voice DF reports to the map.  Select the DF station 
+      symbol and you will be prompted for the BeamHeading or "0" for OMNI.
+
+INPUT-PwrHtGain - For your station to properly know its DFing listening
+      range, it needs to know your PHG data.
+
+MAPS-PLOT-DF-OMNI - This command is used to plot the OMNI-DF profiles.
+
+MAPS-PLOT-HEARD - Plots Signal strength circles from only stations that 
+                  have HEARD the fox. (for monochrome displays)
+
+MAPS-PLOT-NOTheard - Plots only signal strength circles from stations that 
+                     have NOT HEARD the fox. (for monichrome screens)
+
+MAPS-PLOT-PHG - Plots Power-Height-Gain range rings around all stations.
+
+MAPS-PLOT-RngRngs - Plots range/Bearing to the cursor.
+
+
+OMNI-DF EXAMPLE:  The image on the WEB page shows the result of my first 
+attempt on a Sunday afternoon foxhunt.  I simply called around on various
+2m repeaters in the area and asked stations to listen for the fox.  It
+turns out that all but one other report were from mobiles (showing you the
+value of this come-as-you-are technique).  I added these stations to the 
+map using the cursor and INPUT-ADD command.
+
+First, notice that APRS blacks out the areas where the fox is NOT
+based on the null reports.  You will always get far more NULL reports
+than HEARD reports.  These are very VALUABLE!!!  because there are more
+of them and they instantly eliminate most of the surrounding area!  With
+these first 6 null reports, I knew instantly that the fox was not to the
+west, south, or east of Baltimore.  It took the mobile fox-hunters 
+another 45 minutes to figure this out!
+  
+Second, notice the offset circle of KA3DZZ.  This is because he reported 
+that he was west of a ridge and didn't hear as well to the east.   Thus,
+his PHG DF circle is offset to the west.  The most interesting report 
+was from W3PWF who said it was a very strong signal and he was much 
+further than either of the nearby mobiles that reported weak signals.  
+ALthough he was in his driveway, he had almost 200 feet of height above 
+average terrain, but could not quantify it at the time.  This points out 
+how tricky it will be to use the OMNI-DF plots.  Do NOT rely on any one 
+report but the aggregate.  You must visually take it all in.  His report is
+correct, and although he has a large horizon, APRS draws his pink circle
+smaller to show that the FOX could be closer to him.  Remember to look at 
+the edge of his circle, not the center.
+
+APRS draws the NOT-HEARD or Black "0" plots last since they are
+POSITIVE report that the FOX is NOT within their range. 
+
+YOU MUST REMEMBER TO LOOK AT THE EDGES OF ALL CIRCLES, NOT THE CENTERS!
+THE FOX SHOULD BE NEAR THE LOCATION WHERE THE EDGES OF MOST CIRCLES
+INTERSECT OR OVERLAP.
+
+This was just my first test, and unplanned.  Notice that with all of
+the stations that we rounded up, only 4 of 13 even heard the FOX at all.
+For serious work, each station reporting should have a very good idea of
+his Height above average terrain and general geographic horizon.  If each
+of those stations was also watching the APRS plots unfold, they could have
+modified their reports to be more meaningful!
+
+
+RECOMMENDED OMNI-DF PROCEDURE:  When the APRS net is alerted to a FOX
+or hidden transmitter, each APRS station should listen on the reported
+frequency and enter his signal strength.  Next each APRS operator
+should go onto the local voice repeaters and ask for OMNI-SIGNAL strengths
+from any other fixed or mobile stations.  The APRS operators use the INPUT-
+ADD command to add these stations to the map.  NEGATIVE reports are VERY
+valuable too!  By having one APRS operator listening on EACH local voice
+repeater, and soliciting reports, the maximum number of reports can be
+gathered with a minimum amount of chatter.  Be sure to get the station's
+reported signal strength, location, Antenna height-ABOVE-AVERAGE-
+TERRAIN (not sea level or above ground) and any offset in his horizon.  It
+is amazing how many people do NOT understand ANTENNA HEIGHT.  Be  conser-
+vative.  Use the following scale:
+
+   0   No signal detected what-so-ever (be sure to be on right freq!)
+   1   Detectible signal (Maybe)
+   2   Detectible signal (certain but not copyable)
+   3   Weak signal marginally readable
+   4   Noisy but readable
+   5   Some noise but easy to copy
+   6   Good signal with detectible noise
+   7   Near Full-quieting signal
+   8   Dead Full-quieting signal no noise detectible
+   9   Extremely strong signal "pins the meter"
+
+Remember, stations DO NOT NEED TO BE APRS stations to participate!
+Any voice report can be entered on the map by any other APRS station using
+the INPUT-ADD command and selecting the DF symbol type.  For more
+information on the Power-Height-Gain formats, see the DIGIs.txt and
+PROTOCOL.txt files.
+
+PLOTTING DETAILS FOR OMNI-DF CIRCELS;  I used the radio horizon forumla
+for the radius of the circles, modified by the signal strength value. 
+Due to fading and multipath, mobiles have HALF the range of Fixed stations.  
+So new in APRS852, all PHG circles are shown at HALF their original value
+to better represent the effective range of the APRS network to mobile users.
+For purely PHG circles between fixed stations, then the original PHG circles
+can be optionally called up.
+
+Here is the equation for the four DFSshgd or PHGphgd characters.
+
+   P = 10 / s        For Power plots, P = p;  For DFS, P is INVERSLY
+                     proportional to signal strength s.
+   H = 10 * 2 ^ h    Convert character to power in Watts
+   G = 10 ^ (g / 10) Convert from dB
+   D = 45 * VAL(d)   Convert to degrees.  If D is not zero, then the circle
+                     is offset in the indicated direction by 1/3rd radius
+  
+   R = SQR(2 * H * SQR((P / 10) * (G / 2)))  
+                     The modifier of SQR(P/10 *G/2)is unity at 10 watts and 3 dB
+    
+   R = R * .85  Present fudge factor
+
+NOTE!   It is very important to understand that this is just a technique.
+The operator MUST have experience in DFing and must thoroughly appreciate
+the vagaries of propogation and antenna height-gain.  Just blindly looking
+at circles does NOT find the FOX!  Give me a violin and it will NOT make 
+music!  Garbage in implies garbage out! ETC.  What I am saying, is to make 
+sure that you understand that APRS is only a tool to help YOU visualize
+the reports you get.  They dont help improve the quality of them.  And 
+you must take many reports with a grain of salt.  Does the person have a
+clue about height gain?  Does he know really where he is.  Does he
+really know which way is north (if he reports a directional offset) is
+he really hearing the fox or something else,  is his radio stone-deaf,
+etc?
+
+FADE CIRCLE TECHNIQUE:
+
+Once you know the area, now you can use the other APRS omni technique in
+your mobile and just drive right/left/past/and back to localize the signal
+even down to the driveway.  See the Fade-Circle Technique in README\DF.TXT
+
+
+de WB4APR, Bob

@@ -1,0 +1,112 @@
+PacComm Settings for New n-N Compatibility                    01 Feb 2012
+-------------------------------------------------------------------------
+
+01 Feb 2012: Updates to use the second beacon for local FREQ object.
+
+02 Apr 2005: This is the FINAL revision.  Sorry for the changes, but this 
+better tunes  the settings for your particular area and needs.
+
+The many old PacComm Tiny-2 Trace-only digis held back WIDEn-N routing in 
+some of the early APRS areas because these old 1996 to 1998 digis still 
+exist.  Few were installed after that because WIDEn-N came out in 1998 
+and they cannot do WIDEn-N.  This file shows how they can still be used
+somewhat as a 1-hop digi.
+
+Now with the New n-N Paradigm, we do have a way to accomodate them and 
+abandon the multiple-dupe generating old RELAY and WIDE type paths.  Of 
+course the ideal solution is to put new UIDIGI-ROMS into these old TNC's, 
+or upgrade the TNC's to KPC-3+'s.  But in the mean time here is how to 
+make these TNC's locally compatible with the New n-N Paradigm.  Basically 
+you have 4 aliases.  These used to be RELAY, WIDE, TRACE and SS for 
+your state.  Since all of these are obsolete, now you simply choose the 
+four combinations of WIDEn-N that need to be supported:
+
+   Set your four aliases for WIDE1-1,WIDE2-2,WIDE2-1,WIDE3-3
+
+Remember, that this digi will not do WIDEN-N processing.  It does not
+digi and then subtract the N.  It simply digipeats once if it sees one
+of the above fields, and then it substitutes its own call in place of 
+the path element (one of the aliases above).  In otherwords, this digi
+will only digipeat a packet the first time it is heard.  But, since it
+also supports WIDE2-1, if any other digi does digipeat at 2-2 packet
+then this digi will see the resulting WIDE2-1 and digipeat the second
+hop.  SO in this manner it does reasnoably well.  Notice it ignores 
+all other paths.  This is a good way of ignoring larger N's and their
+results from out of area.
+
+NOTE:  These digis will not support SSn-N digipeating.  
+
+USERS IN THE AREA OF A PACCOMM DIGI:  All fixed stations in range of 
+this digi need to set their outgoing path of WIDE1-1,WIDEn-N where N is 
+the common value in the region minus one.  If this is a 3-3 area, then 
+use WIDE1-1,WIDE2-2.  If it is a 2 hop area, then use WIDE1-1,WIDE2-1.
+
+Notice that if someone uses the similar path of WIDE2-2, that that
+packet will only be digipeated ONCE by this digi, and then it will go
+no farther by any other digi, because the WIDE2-2 is substituted with
+this digi's own call.  The packet stops here.
+
+SETUP:
+
+FIRST:  RESET the TNC to factory defaults to get rid of any hacks 
+that you may have developed over the years.  And install your MYCALL.
+
+SECOND: Set HID OFF    - These packets are of no value to APRS, just QRM
+
+THIRD:  Set up the four Aliases for the New n-N Paradigm noted above.
+
+FOURTH:  Set up the Digipeater's Beacon PATH and Transmission rate. 
+
+BEACON EVERY 60    <== a local  beacon every 10 minutes (10 sec incs)
+UNPROTO APNPxx     <== via direct (no "via" entries)
+                (The APNPxx means it is a PacComm TNC with version xx)
+
+FIFTH:  Setting your POSITION TEXT:  Your Position packet should tell
+users what they need to know about this digipeater.  It goes into the 
+BText.  The "11,22,21 only." is important to show users the limits of
+this digi. After that, you may add what you want.  Notice, this digi
+will support a one-hoip WIDE3-3, but no reason to advertise that.
+
+BT !DDMM.hhNPDDDMM.hhW#PHGphgd/11,22,21 only.  Kalamazoo, etc
+
+
+a) After the LAT/LONG# Always include the PHGXXXX  (See DIGIS.TXT)
+b) next, a list of the aliases, such as "11,22,21 only." etc
+c) The overlay character between the LAT/LONG should now be a "P"
+d) There is no need for altitude /A=001377 since this is all included
+   in a proper PHG statement.  If you insist, then put it at the end
+   so it doesnt take up space on the front panel of the kenwoods.
+
+SIXTH:  Set up the FREQuency Object for the locally recommended voice
+Frequency in accordance with http://aprs.org/localinfo.html
+ 
+ LTEXT LT ;FFF.FFxyz*111111zDDMM.hhN/DDDMM.hhWrTnnn Rxxm Netxxxxxx Mtgxxxxx
+   or
+ LTEXT LT ;FFF.FFxyz*111111zDDMM.hhN/DDDMM.hhWrTnnn oXXX Netxxxxxx Mtgxxxxx
+ LOC E 60          <== a one-hop beacon every 31 minutes
+ LPATH APNPxx      <== via direct (no "via" entries)
+
+The "xyz" padds the object name to a total of 9 bytes and are used to
+make this FREQuency object unique in the world.  FOr 5 KHz digis, you
+only get FFF.FFFyz to play with.
+
+- Notice that Tnnn is the tone (no tenths)
+- oXXX is offset -XXX or +XXX in 10's of KHz 
+- Rxxm is range in miles (xx) (if oXXX is absent cuz of standard offset)
+- Netxxxxxx is weekly net times such as Net Tu730 or Net W 8PM
+- Mtgxxxxx is monthly meeting times such as Mtg3rdTu
+See the localinfo web page for details.
+The format is very precisely made to fit on all mobile displays.
+
+SEVENTH:  Set the TXD to 15 or so to shorten the TX delay by 50% from the 
+300ms default, and by all means adjust your Transmit audio level well
+below the maximum where distortion messes up your signal.
+
+
+CONCLUSION:
+
+That's all there is to it.  Please don't diddle with any other 
+parameters.  The defaults for those are the correct settings.  If you
+dink with them you can only make performance worse.
+
+de WB4APR, bob

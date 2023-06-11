@@ -1,0 +1,232 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+   <TITLE>APRS SPEC 1.1</TITLE>
+      <META NAME="Author" CONTENT="Bob Bruninga">
+   <META NAME="Description" CONTENT="APRS Homepage">
+   <META NAME="Keywords" CONTENT="APRS SPEC, APRS1.1 erratta,Bruninga,radio, position, w3ado, wb4apr, GPS, APRS, Satellites, USNA">
+   <META NAME="Classification" CONTENT="Science">
+</HEAD>
+<BODY TEXT="#FF0000" BGCOLOR="#87CEFA" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000"> 
+
+<H1 ALIGN=CENTER><IMG SRC="logos/satellite.gif" HSPACE=30 HEIGHT=32 WIDTH=32 ALIGN=TEXTTOP>
+<B>APRS SPEC Addendum 1.1</B><IMG SRC="logos/satellite.gif" HSPACE=30 HEIGHT=32 WIDTH=32 ALIGN=TEXTTOP></H1>
+<CENTER>
+<IMG SRC="logos/aprs.gif" HEIGHT=112 WIDTH=200>
+<BR> Bob Bruninga, WB4APR lastname@usna.edu
+</CENTER>
+<!-- begin comments and the next line ends them
+//-->
+<FONT COLOR="#000000"><FONT SIZE=3>
+<P>
+<B>This page is always current with any changes to the APRS Spec:</B>  Although the APRS spec was nailed down in 2004, this page captures any details that were not in the original spec document.  This page must be considered part of the spec.  For Example, the SYMBOLS and TOCALLS are constantly being updated (almost montly) as applications and usage grows.
+<P>
+
+<B>Updated 3 Nov 2011</B> to add the overlooked requierment for AutoAnswer messages to begin 
+with <B>AA:</B> and to auto-cancel when the operator returns.
+<HR SIZE=5 WIDTH="100%"></P>
+<P>
+This copy of the APRS SPEC Addendum 1.1 was approved by the APRS-<A HREF="aprs11/aprswg.txt"><B>WG</B></A> . 
+(Vote was called 30 July 2004).
+<BR> This APRS1.1 page is always maintianed current such as the SYMBOLS and TOCALLS links below. 
+<BR> All new updates and additions to APRS since 2004 are found on the
+<A HREF="aprs12.html"><B> APRS 1.2 </B></A> proposed draft addendum.
+<BR>For a comparison of what has been implemented in what clients, please see the
+<A HREF="http://wetnet.net/~we7u/aprs_capabilities.html">Capabilities Chart</B></A>
+<P>
+
+<B>APRS SPEC FINALIZED as of July 2004:</B>  This APRS Specification version 1.1 represents
+additions, corrections, and deletions since the original APRS1.0 spec of 21 June 2000.
+This edition represents the state of
+the APRS protocol and its usage through July 2004.  As of this date, the 
+<A HREF="aprs11/aprsstats.txt"> <B>state 
+of the APRS users</B></A> showed almost 27,000 stations worldwide of which:
+
+<LI>33% are fixed or home stations (includes WX stations)
+<LI>36% are infrastructure (30% digis and 6% IGates)
+<LI>31% are mobiles
+
+<P>
+<B>APRS Mobiles:</B> Of these mobiles, it is interesting to note that almost 60% are transmitting
+APRS using the Kenwood D7 or D700 APRS radios but more significantly nearly 85% 
+of all mobile APRS users, who view APRS data in their vehicles, use these radios 
+as their only source of APRS data while mobile.  Thus,
+to the extent that APRS is intended for tactical-real-time local display of
+data to end users, compatibility with these mobile users is a significant driver
+in the consideration of changes to the APRS Specification.   Another
+interesting observation is that about 55% of all APRS stations are firmware
+devices (digis, TNC's and trackers and WX stations) that are not easily upgraded.  This
+is a testiment to the stability of the APRS protocol and our desire to maintain
+compatibility with existing users where possible.
+<P> 
+<B>APRS is NOT Ham Radio's <I>MOBILE COMPUTING:</I></B>  
+The 1200 baud national APRS user
+channel cannot and was never intended to be Ham Radio's solution to <i>Mobile
+Computing </i>.  The thousand-fold greater bandwidths required for typical
+Mobile Computing applications are enormous and there is no attempt to clutter
+the APRS channel with all possible data that might be of use to a user with 
+a laptop in his car.  APRS is for brief, short data types of immediate Ham Radio interest to
+all tactical users on the local RF channel.
+<P>
+<B>APRS1.1:</B> With the above as background, the following items represent the 
+uncontested changes, additions, deletions
+or amplifying information included in APRS Specification Addendum 1.1.  There is
+no intent to re-publish the spec.  The original document will remain as is, and
+these APRS 1.1 revisions will refer back to appropriate pages where noted:
+<P>
+<B>CORRECTIONS:</B>
+<UL>
+<LI>  Page 18 X1J exception.  Abandoned/depricated in 2012. Now the ! DTI is only at the beginning.
+<LI>  Page 55 Mic-E Altitude.  Optional altitude should be <i>first</i> 
+      after the Mic-E <B>type</B> byte. (<i>type</i> byte was
+      extended in addendum 1.2)
+<LI>  Page 25  refers to a 'WPT' NMEA sentence type.  Curt, WE7U assumes  that should be 'WPL'?
+<LI> The Antenna Gain in the PHG format on page 28 is in dBi.
+<LI>Page 34 DF NRQ is not defined in spec.  See original <A HREF="APRS-docs/DF.TXT">DF.TXT </A> and
+    <A HREF="APRS-docs/PROTOCOL.TXT">PROTOCOL.TXT </A>
+<LI> Page 45, We now avoid the term "Mic-E Messages" and use the term "Mic-E Position Comment" for these bits.
+
+<LI> Page 48, 100-109 goes to "u" instead of DEL and 110-179 is 38-107 going to "k" instead of DEL.
+<LI> <B>AX-25 Table: </B> The AX-25 UI-Frame TABLE lists Flags at the end of a packet
+        being 2 bytes. 
+     <BR>. . The correct number is 1, and it may be shared with the next packet. 
+             (From VK2TDS).
+<LI> <B>Default Paths of WIDE2-2, not RELAY or RELAY,WIDE.</B> (page 11) (updated June 2006)
+<LI> Normally, <A HREF="aprs11/HID.txt"><B> HID should be OFF </B></A> in all APRS TNC's (page 91).
+<LI> <A HREF="aprs11/SSIDs.txt"><B>SSID Conventions</B></A> in user calls (page 95)
+<LI> <B>DATUM:</B> Standard is WGS-84, but Continental options such as OSG for the UK are OK.(page 21) See !DAO! concept in APRS1.2
+<LI> <A HREF="aprs11/RangeScale.txt"><B> Range Scale:</B></A> 
+     The standard <i>view size</i> descriptor for APRS displays.
+     (<A HREF="aprs11/APRSrangeX.gif"><B> map example</B></A>). (page 11)
+<LI> <A HREF="aprs11/timestamps.txt"><B>Time Stamps on receipt</B></A> (page 23).
+</UL>
+
+<P>
+<B>SYMBOL UPDATES:</B>
+<UL>
+<LI> <A HREF="symbols.html"><B>See all about Symbols!</B></A> 
+<LI> <A HREF="aprs11/SSIDs.txt"><B>SSID Conventions</B></A> for quick visual identification
+<LI> <A HREF="symbols/symbolsX.txt"><B>Updated SYMBOL tables</B></A>. . 
+     But see also all the APRS1.2 proposals
+     <A HREF="symbols/symbols-new.txt"><B>for new Symbol Extensions</B></A>
+<LI> <A HREF="symbols/Overlayed-symbols.gif"><B>Overlayable Symbols</B> subset.</A> . These were always defined as overlays in the original APRS.
+<LI><A HREF="symbols/symbols-background.txt"><B>Upgrading your symbol set</B></A> gives background on fixing up your symbol set.
+<LI> <B>JUST MOBILE PRIMARY SYMBOLS:</B>  <i>!'<=>()*0CFOPRSUXY[\^abefgjkpsuv</i> . . . <== [added !F\ ]
+<LI> <B>JUST MOBILE ALTERNATE SYMBOLS:</B> <i>>KOS^ksuv</i>. . . . . . . . . . .  . . . . . . . . . . . <==[removed /0An]
+<LI> <B>JUST WEATHER PRIMARY SYMBOLS:</B> <i>_ and W</i> 
+<LI> <B>JUST WEATHER ALTERNATE SYMBOLS:</B> <i>([*:<@BDEFGHIJTUW_efgptwy{</i>
+<LI> <B>Timeout Old Stations (fade-to-gray)</B>.  Now 80 mins
+     instead of 2 hrs to account for stations via satellites (page 10).
+<LI> <A HREF="symbols.html"><B>Symbol Attributes</B></A> for map displays. (page 92) And Position Ambiguity (p-24)
+<LI> <A HREF="symbols-win.html">Original WinAPRS symbols</A>
+<LI> <A HREF="symbols/symbol-W.gif">New <B>Overlay Symbols for ARRL and CD symbols</B></A>. <B>[WinLink]</B>
+<LI> <A HREF="digi-overlays.html"><B>DIGI Overlay Characters</B></A> (new for page 11)
+<LI> <A HREF="symbols/PHGmobile.txt"><B>Halve PHG Range Circles</B></A> to account for
+     real-world PHG range due to multipath & fading. (page 29)
+     <A HREF="phg.html"><B>See all about PHG</B></A>
+<LI> <B>New WAYPOINT symbol:</B>  Red dot (with overlay) marks a mobile's destination.  
+     Drawn with a line
+<BR> . . between the mobile and its waypoint destination.
+</UL>
+<P>
+
+<B>OBJECT (and NAME) CLARIFICATIONS:</B>
+<UL>
+<LI> <A HREF="aprs11/aprs-names-and-spaces.txt"><B>Name/Call equality and SPACES-in-names Manefesto</B></A>
+<LI> <A HREF="aprs11/Objects.txt"><B>OBJECTS:</B></A> Amplifying comments on ownership, killing and equality with stations. (page58) 
+<LI> <B> OBJECT names should not have any punctuation</B> that cannot be converted to valid Wapoints on most GPS's.
+<LI> <A HREF="aprs11/areaobjects.txt"><B>AREA Objects</B></A> are poorly described in the spec. (page 60)
+<LI> <A HREF="http://www.wxsvr.net/APRS_Multiline_Protocol.html"><B>Polygon and Line OBJECTS</B></A>
+        (new for page 31)
+<LI> <B>Compressed Objects: </B> not recommended for use on RF 
+        due to incompatibilities (page 58)
+     <BR>. . For 1 foot precision, use $GPGGA, or 3rd party compressed posits, or the proposed !DAO! format.
+<LI> <B>ITEM Format</B> is not recommended on RF due to incompatibilities (page 37)
+</UL>
+<P>
+
+<B>UPDATED TABLES and INFO:</B>
+<UL>
+<LI> <A HREF="aprs11/C-bits-SSID.txt"><B>WB2OSZ description of SSID - C bits</B></A>
+<LI> <A HREF="aprs11/tocalls.txt"><B>TO-CALLS and Version ID's</B></A> updated (page 14)
+<LI> <A HREF="aprs11/expfmts.txt"><B>Experimental Formats</B></A> (page 89)
+</UL>
+<P>
+<B>WEATHER RELATED ISSUES:</B>
+<UL>
+<LI> <B>Raw Weather Formats</B> not recommended.  
+     uProcessors should convert to <i>complete</i> format on RF (pg 62)
+<LI> <A HREF="aprs11/spec-wx.txt"><B> Weather Details</B></A>.  Amplifying comments on the original spec 1.0. (page 64)
+<LI> <A HREF="http://wxsvr.net/protocol.html"><B>The WXSVR Protocols</B></A> managed by Dale Hugley.
+<A HREF="aprs11/symbolWP.jpg"><B>See example</B></A>.  See description:
+<A HREF="APRS-docs/MOBILE.TXT"><B>MOBILE.TXT</B></A>.
+</UL>
+ 
+<P>
+<B>APRS-IS (Internet System):</B>
+<UL>
+<LI><B>NOGATE and RFONLY</B> in the RF DIGI field should not be forwarded into the APRS-IS by IGates.
+<LI><B>!x!</B> means <b>no archive</B>.  Any packet containing this string should not
+be archived by any of thes APRS-IS data bases.  Positions, status or messages. 
+<LI><A HREF="http://core.aprs.net/"><B>APRS-IS Core </B></A>
+    and <A HREF="http://www.aprs2.net/"><B> Tier-2</B></A> servers web pages
+    and <A HREF="http://www.aprs-is.net"><B> how they work</B></A>.
+<LI> <A HREF="http://www.aprs-is.net/q.htm"><B>The Qxx Construct:</B></A> 
+Marks the source of entry of all packets into the APRS-IS.
+<LI><B>IGATE Status Report Format:</B> Left_bracket then <i> "IGate, MSG_CNT=N, LOC_CNT=N" </i> 
+</UL>
+<P>
+<B>APRS 1.1 SPEC Operating Conventions for the Good of the APRS Network:</B>
+<UL>
+<LI> <A HREF="fix14439.html"><B>The New-N  Paradigm</B></A> obsoleted old RELAY and WIDE and TRACE for 300-500% network improvement
+<LI> <A HREF="VoiceAlert3.html"><B>APRS Voice-Alert</B></A> for instant voice contact with any APRS mobile
+<LI> <A HREF="aprs11/replyacks.txt"><B> Reply-ACKS Algorithm: </B></A> 
+     Really makes message QSO's FLY! (page 73)
+
+<LI> <A HREF="aprs11/hacks.txt"><B>Recommended DIGI paths</B></A> and striving for 
+<i> network protection</i> ahead of too much user flexibility.
+<LI> <A HREF="digis/digi-rates.txt"><B>Digipeater ID rates </B></A> for optimum APRS networks
+<LI> Under New-N, All APRS KPC-3+ compatible digis should use UIFLOOD set to ID instead of NOID.
+<LI> <A HREF="D7xx/d700digi.txt"><B>D-700 Digipeater Settings</B></A> are <i>different</i> 
+from KPC-3+ settings (do not use UIFLOOD WIDE,28,NOID).
+<LI> <A HREF="aprs11/hf-freqs.txt"><B> HF freqs and TNC offsets</B></A> to help you tune up.
+<LI> <B>Auto-Answer messages</B> are SPAM to the network in most cases.  To limit their impact, 
+all original APRS clients adhered to these rules for auto-answer messages:
+<BR> 1) Any such AA message text should begin with AA:
+<BR> 2) Any such AA message should not have a Line number (so it does not cause acks)
+<BR> 3) Any such AA message is only sent once on each incoming message packet (no forced retries)
+<BR> 4) Any such AA message should default to OFF on power up.
+<BR> 5) Any such AA message should be canceled when the client detects the return presence of the operator
+<BR> 6) Any such AA message can be ended with a }yy REPLY-ACK if the software supports it
+</UL>
+
+<P>
+<B> The above is the complete APRS 1.1 Spec Addendum.</B>  It was a compilation of all
+the accumulated feedback from users and authors about errata, errors, typos and any
+omissions in the spec that had been accumulated from the time of the original
+spec to June 2004.  This APRS erratta page had been running continuously for years
+and was updated whenever these items were discovered and each of these items were
+widely published and discussed on the APRSSIG and the APRSSPEC working group for
+public discussion.  But it was decided best to finally Freeze the accumulation in 
+June 2004 as APRS1.1 and then after public posting approve it.  
+<P>
+
+Then to begin working on any new issues as APRS1.2.
+<BR>See the <A HREF="aprs12.html"><B>proposals for APRS1.2</B></A>
+<P>
+Bob Bruninga, Technical Chariman, APRS Working Group
+<p>
+<HR SIZE=5 WIDTH="100%">
+<TABLE BORDER=2 CELLSPACING=5 CELLPADDING=3 >
+<TR>
+<TD><BR>
+<A HREF="sitemap.html">Back To the APRS site-map</A></TD>
+</TR>
+</TABLE>
+
+<HR SIZE=5 WIDTH="100%">
+
+
+</BODY>
+</HTML>

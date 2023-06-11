@@ -1,0 +1,167 @@
+Proposed APRS OPS Modes for the ECHO Satellite             18 Oct 2003
+----------------------------------------------------------------------
+                                                                WB4APR
+
+ECHO will launch this year and carry a tremendous capability and
+flexibility for communications experiments in the Amateur Satellite
+Service.  With multiple user receivers and 3 downlink transmitters 
+almost any communications mode can be supported.  The problem is, how 
+to share the numerous modes and configuration possibilities so that 
+most of the thousands of potential users are generally satisfied.  
+Having too many conflicting modes, and complex operating schedules 
+actually detracts from the optimum satisfaction by the general cross-
+section of users.
+
+This paper has no official basis with AMSAT nor the ECHO design team 
+and is offered only as a draft-strawman to serve as a target for 
+discussion by the AMSAT community as to how it will operate AMSAT ECHO.  
+There are three primary recommendations:
+
+1) AMSAT should designate an ECHO Operations Committee who will manage 
+the day-to-day operation of the spacecraft to best serve users.
+
+2) AMSAT should publish a clear USER SERVICE AGREEMENT that specifically 
+defines the rules, limitations, recommendations and requirements for 
+users to use the spacecraft.
+
+3) The default operating mode should generally be optimized to satisfy 
+the largest cross-section of users while balancing simplicity with 
+complexity and easy use with experimental modes.
+
+These points will be addressed in reverse order.
+
+DEFAULT OPERATIONS MODE:
+-------------------------------
+To minimize frequent mode changes and to provide the most users with
+something they can use most of the time, this paper proposes a nominal
+initial operating configuration.  Other experiments may be conducted
+periodically and other modes developed as software matures, but we 
+need to start somewhere.  The basis for this approach is the consideration 
+that for maximum utility in education, student and new operator outreach, 
+common modes must be available on a routine basis most of the time.  
+Therefore the following default operating mode is proposed for the 4 uplink 
+receivers.  I called this configure "WAVE" for its primary modes:
+
+MODE RX   DESCRIPTION               UPLINK      DOWNLINK
+---- --- -------------------------- ----------  -----------
+ W   RX1 WISP Multiuser File System 145.xxx     4W 435.xxx
+ A   RX2 WISP and APRS shared       145.yyy     (shared with above)
+ V   RX3 Voice FM (PL enabled)      145.zzz     8W 435.zzz
+ E   RX4 Experimental
+ -       (HF) Multiuser             29.400      S-Band WFM
+         (LV) Lband Voice           12xx.xxx    S-Band WFM
+         (LB) Lband Bent Pipe       12xx.xxx    S-Band WFM
+         (LD) Lband digital         12xx.xxx    S-Band Digital
+
+Key factors involved in this arrangement are:
+
+WISP:  A continuation of the very successful file store and forward system 
+use by all of the previous PACSATS.  With two uplinks (RX1 and RX2), 
+user contention is shared for improved uplink throughput.  Distribution of 
+files, news and bulletins will be via this system.  The default baudrate is 
+9600 baud.  This system will best serve mobile portable and remote travelers 
+by giving them remote communications access via SATgates back to the 
+internet.  I'd rather see 9600 baud used to give solid reliability to simple 
+users with OMNI antennas most of the time, rather than giving higher speed 
+but then requiring tracking.
+
+APRS:  APRS mode simply represents the enabling of UI digipeating of UI
+packets to be merged into the 9600 baud digital downlink.  Enabling of UI 
+digipeating as a shared mode with the PACSATS has a legacy that includes 
+AO-16, UO-22 and IO-26.  UI digipeating users are constrained to only uplink 
+on Receiver RX2 to minimize contention with the WISP system.  UI digipeating 
+is fully compatible with the Kenwood TM-D700 and TH-D7 Mobile and Handheld 
+APRS radios with only whip antennas.  APRS I-gates feed all UI packets heard 
+on the downlink into the worldwide APRS internet system.
+
+VOICE:  FM Voice relay (EZ-Sat) continues the legacy of UO-14, AO-27, 
+SUNSAT, SO-50 and others to support the most popular AMSAT mode which can be 
+received by any user with an FM HT.  Voice and SSTV may share this mode when 
+suitable nets are scheduled to support special events.
+
+EXPERIMENTAL: Because of the very high doppler and short duration passes, 
+the S-Band downlink will use Wideband FM compatible with any FM broadcast 
+band receiver as the nominal mode for this transmitter.  Using 75 KHz 
+deviation, Only minor Doppler adjustment twice or so per pass is required. 
+Nominal AO-40 S-Band receive systems feeding any FM system set to Wideband 
+FM should work well for the downlink.  Several experimental uplinks 
+are proposed:
+
+(HF) HF (CW,SSTV,PSK-31) - The preferred default for the experimental 
+RX4 receiver should be a 10m HF uplink which can contain dozens of
+simultaneous users including CW, SSTV and PSK-31.  By tuning the HF
+receiver to 29.400, an entire 3 KHz of HF spectrum can be relayed full
+duplex in the wideband FM downlink.  This is Identical to the HF
+transponder on PCSAT2. In this 3 KHz of audio, the lower 800 Hz can be
+multiple narrowband CW users, 800 to 2000 Hz is available for SSTV, and      
+2000 to 3000 Hz is dedicated to PSK-31 users.  This downlink can be
+received, demodulated and displayed by anyone with an S-Band
+downconverter, a broadcast band WFM receiver and soundcard DSP software.
+
+(LV) L-BAND VOICE:  The RX4 can be tuned to any L-Band uplink 
+(preferably set to Wideband FM) for experiments.  Using Wideband FM on 
+the uplink and S-Band downlink solves the severe Doppler problem, though 
+amateurs will have to build their own WFM exciters.
+
+(LB) L-BAND BENT-PIPE DIGITAL:  Using WFM digital modulation fed to the
+the wideband FM S-band downlink, data rates up to 38.4 KHz or higher can 
+be accomodated in a bent-pipe mode.
+
+(LD) L-BAND DIGITAL:  Unfortunately, The S-Band transmitter shares the
+same data modulator as the UHF transmitters, so any use of S-Band for 
+high on-board-originated data rates precludes any other digital modes or 
+data rates on UHF at the same time.
+
+USER SERVICE AGREEMENT   
+----------------------
+
+The concept of a User Service Agreement worked well for PCsat.  After 
+some initial consternation, most users in the Amateur Satellite Service 
+soon realized that having a well known and published set of guidelines,
+recommendatoins, and rules for standard operation were in their own best 
+interest.  Having operating parameters, protocols and clearly defined 
+operating objectives published and available in real time via a WEB page 
+and via the live downlink bulletins gave users clear guidance how to 
+optimize operating modes for everyone.
+
+For example the WISP channel clearly only works well if all users are
+using the WISP protocol which enforces unbiased sharing.  Similarly, the 
+APRS channel works best if users adhere to the standard APRS duty-cycle 
+recommendations and power levels.
+
+These same guidelines should also apply to the Voice transponder.  That
+is, there will be times when free-for-all QSO's are invited, but in
+general it has clearly been established that maximum effectiveness of a    
+operating as a directed net.    The details of recommended VOICE operating 
+nets via LEO birds is beyond the scope of this text, but is included on 
+http://www.ew.usna.edu/~bruninga/tbd.html
+
+ECHO OPERATIONS COMMITTEE
+-------------------------
+
+AMSAT-NA president Robin Haughton and Director Rick Hambly have already
+begun the groundwork for establishing the Echo Operations Committee.  I
+look forward to the operations of this body and the potential for good
+leadership and efficient operations planning for this new satellite.  
+The first item should be the declaration of a mission statement which 
+will serve as the guiding principles for operations.  A possible 
+strawman draft might be:
+
+SUGGESTED ECHO MISSION STATEMENT:
+
+The mission of ECHO will be to serve the communications needs of users
+worldwide in the Amateur Satellite Service in accordance with the rules  
+and objectives of the ITU and IARU.  Such usage will balance the needs 
+for reliable routine digital and voice communications as well as 
+experimental modes.  Included in this service is the recognition of the 
+educational and out-reach potential of this simple-to-use, but highly 
+flexible spacecraft as well as its potential use for mobile and portable 
+operation in remote areas and support of emergency or special event 
+comunications needs.
+
+
+Respectuflly Submitted
+
+
+Bob Bruninga, WB4APR
+                            

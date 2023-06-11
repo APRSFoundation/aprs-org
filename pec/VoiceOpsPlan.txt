@@ -1,0 +1,50 @@
+AMSAT FM Voice Satellites for Disaster Comms             1 Sept 2005
+--------------------------------------------------------------------
+Updated 26 Sept 2005
+
+Since most cell phones, and 2way repeaters and most other infra-
+structure in the disaster area are the first to go out or be over-
+loaded, it is probably appropriate for the AMSATS that can be used 
+for mobile FM communications, be declared for emergency and priority 
+traffic only for a few days after a disaster.
+
+Simply have a few well endowed stations to start operating as a 
+net-control and take organized traffic from stations with emergency 
+or priority traffic in the affected areas.
+
+If the first net control does not fully cover the area, then he can 
+ask for "an alternate net control in the direction of the satellite 
+travel" to hand it over too.
+
+TRACKING:
+Here are some tips on guessing when SO50 and SO51 ECHO will be in 
+view while mobile near 30N latitude:
+
+ECHO:  
+  - Pass windows are always between 830 to 1330 local
+    and  8PM to just after midnight daily.  
+  - If you have a good pass early in the window, you will get one
+    or two more 100 minutes later each.   
+  - If you get one in the morning, you will get one 11 hours and
+    10 minutes later that evening.  
+  - For any given pass today, you will probably get one tomorrow 
+    45 minutes earlier or 1 hour later.
+
+SO50:
+  - the window periods moves earlier 21 minutes a day.
+  - Pass to pass time is 100 minutes,
+  - window to window is 10hrs 20m or 14hrs 10 min depending
+    on which one is first
+  - Day to day, a pass will be either 47 minutes later 
+    or 65 minutes earlier.
+
+These may sound tedious, but with a pencil and some scribbles in 
+the log while mobile, you can easily guess when to QSY to make a 
+mobile satellite pass...
+
+When I travel on long trips in the summer and will be playing radio, 
+I find this easier to manage than trying to dig out a laptop in the 
+car and try to get precise times.
+
+de WB4APR, Bob
+

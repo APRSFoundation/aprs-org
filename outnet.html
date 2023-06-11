@@ -1,0 +1,301 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+   <TITLE>APRS OUTNET Concept</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (Win95; I) [Netscape]">
+   <META NAME="Author" CONTENT="Bob Bruninga">
+   <META NAME="Description" CONTENT="ParkinsonSat APRS Satellite Project">
+   <META NAME="Keywords" CONTENT="Psat, outernet, ax.25, packet satellite, PCsat, buoy, ocean,environmental sensors, APRS, APRsat, buoys, oceanography, Satellite, Cubesat,  Tracking, Bruninga, LEO, GPS">
+   <META NAME="Classification" CONTENT="Science">
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#48D1CC" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000">
+
+
+
+
+<P><B><U><FONT SIZE=+2>
+OUTNET, a Global APRS Ham Radio Emergency Comms Satellite Net
+
+</FONT></U></B>
+
+<P>
+<P>US Naval Academy Satellite Lab, <FONT SIZE=-2>
+<BR>Bob Bruninga, WB4APR
+lastname@usna.edu
+<P>
+<IMG SRC="OUTNET/OUTNET-conops-Ku.png"> . 
+<IMG SRC="OUTNET/USA-coverage-map.png">
+
+</FONT><BR>
+
+<P>
+<B>Links:</B>
+<LI><A HREF="http://outernet.is"><B>Outernet</B></A> overall web page
+<LI><A Href="https://outernet.is/products/"><B>Outernet's Ground Station kits</B></A>
+<LI><A HREF="https://www.amazon.com/s?marketplaceID=ATVPDKIKX0DER&amp;me=AZEU7QH77KH2J&amp;merchant=AZEU7QH77KH2J&amp;redirect=true"><B> Some Outernet parts</B></A>
+
+<LI><A HREF="outnet-whip-ant.html"><B>Some DIY vertical omni antenna ideas</B></A> for omni mobile operation
+<LI><A HREF="OUTNET/antennas/Colinear-100ohmsX.png"><B>My best Homebrew Mobile Omni Antenna idea?</B></A> so far... though it has not been tested...
+<LI><A HREF="OUTNET/Scotts-description1.txt"><B>
+K4KDR's Summary of building a System:</B></A>
+<LI><A HREF="outnet-hotspot.html"><B>Using the Outernet as an event hotspot</B></A> 
+This application gets me excited for using it at public service events.
+<LI><A HREF="outnet-ariss.html"><B>Plotting ARISS School contacts.</B></A> An idea for visualizing the Outernet ARISS news feed.
+<LI><A HREF="aprs-wspr.html"><B>Some ideas on using WSPR </B></A> for the APRS Outernet return path
+<LI><A HREF="https://www.clyde.space/our-missions/10-outernet"><B>A future Outernet
+cubesat</B> is also in the works (though non-amateur)
+<P>
+
+<P>
+<IMG SRC="OUTNET/Inmarsat-links.png" height=230 width=400 align=right>
+
+<A HREF="http://outernet.is"><B> OUTERNET</B></A> is a low data rate worldwide satellite downlink carried (currently) on a GEO ku band
+satellite with coverage over the USA 
+to provide web content (downlink files only) to  remote areas anywhere .... 
+And the operators of this network have agreed to the idea of considering some APRS Ham radio content.
+<P>
+<B>Receiver Kit:</B>  
+They provide a nice <A Href="https://othernet.is/products/dreamcatcher-v3-05%3E%3CB%3E%20receiver%20kit%3C/B%3E%3C/A%3Efor%20$59%20that%20includes%20the%20feedhorn%20antenna%20that%20can%20receive%20the%20signal%20without%20a%20dish%20in%20most%20places.%3CP%3E%3CP%3E%3CB%3ENote%20to%20Non-HAMS,%20LICENSE%20REQUIRED:%20%20While%20there%20is%20no%20license%20requred%20to%20receive%20the%20Othernet%20downlink,the%20return%202-way%20link%20via%20APRS%20satellites%20addressed%20here%20is%20ONLY%20for%20Licensed%20Amateur%20Radio%20Operators%20%20and%20only%20for%20legal%20Ham%20Radio%20content.%20%20If%20you%20are%20new%20to%20Amateur%20Radio,%20or%20want%20to%20get%20a%20license,%20see%20THE%20RULES%20(im%20still%20looking%20for%20a%20good%20link).%3C/B%3E%3CP%3E%3CB%3E%20THE%20REMAINDER%20OF%20THIS%20PAGE%20HAS%20NOT%20YET%20BEEN%20UPDATED%20TO%20THE%20kU%20SYSTEM%20AND%20NEW%20RECEIVER!%3C/b%3E%3CBR%3E%20Be%20the%20first%20to%20try%20it%20and%20tell%20us%20your%20results!%3CP%3E%3CB%3EOuternet%20Downlink%20and%20Receivers:%3C/B%3E%20Outernet%20is%20open%20source%20and%20anyone%20can%20build%20or%20buy%20a%20receiver%20as%20shown%20below%20right%20and%20simply%20connect%20it%20to%20a%20patch%20antenna%20to%20begin%20receiving%20free%20content.%20%20Actually,%20the%20receiver%20is%20simply%20a%20small%20digital%20TV%20tuner%20USB%20dongle%20and%20then%20a%20%3CA%20HREF="https://outernet.is/rpi"><B>Rasberry Pi and Outernet software</B></A> processor to capture the content. Here is their web page on 
+<A HREF="http://store.outernet.is/collections/l-band-collection/products/diy-outernet-receiver-with-battery-and-or-chip"><B>receivers</B></A> or their 
+<A HREF="https://outernet.is/products"><B> ready made</B></A> products. Here is a page
+<A HREF="http://www.rtl-sdr.com/rtl-sdr-tutorial-receiving-and-decoding-data-from-the-outernet/"><B>giving step-by-step help</B></A> on configuring an Outernet Receiving system.
+<P>
+
+<A HREF="OUTNET/Scotts-description1.txt"><B>
+A HAM Summary of building a System:</B></A> I was overwhelemd with the various ways
+to go on building a system, so Scott, K4KDR summarized it in the linked 
+<A HREF="OUTNET/Scotts-description1.txt"><B>one page document here.</B></A>
+
+<P>
+<IMG SRC="OUTNET/outernet-globe-grids.png" height=300 width=400 align=right>
+
+<B>Outernet Content:</B> The Outernet downlink feed is just a continuous stream of files that are captured by the Rasberry Pi software and are then made available via a Raspberry PI WiFi hot spot to any WiFi device in range.  They have an 
+<A HREF="https://librarian.outernet.is/en/files/"><B>online example of this content</B></A>.  Fortunately they have added an Amateur Radio Folder into which we hope to stream important relevant real-time content.  Several Examples:
+<LI>APRS LIve Content from our APRS Satellites
+<LI>APRS Live content from the ARISS relay on ISS
+<LI>APRS Live traffic originated by stations with the OUTNET tag
+<LI>AMSAT Content such as the weekly Satellite Bulletins
+<LI>AMSAT weekly ARISS Astronaut School Contact Schedule
+<A HREF="outnet-ariss.html"><B> and plots of schools</B></A> such as shown here ==>
+<LI>Any other content or files posted by the local SYSOP 
+(an <A HREF="outnet-hotspot.html"><B> ideal Hotspot</B></A> at any Ham Radio gathering or Venue
+
+<LI>
+<B>APRS Emergency Response Traffic!</B>
+<P>
+We think we can use this distribution channel in our mission of Amateur Radio Emergency and Disaster response...   Remember, with our own HF and amateur satellite links, we are the only ones that can use this outward bound channel combined with a return path to make it 2-way remote operation... that is by using our HF and Satellite APRS links to get content back to the APRS-IS and then up and back into the Outernet feed.
+
+<P>
+<B>The Existing APRS Network and Satellites:</B>  What we are working on is for the Outernet to simply include a very low data rate stream of APRS traffic for Ham radio operators in remote areas.  Currently the APRS data stream from over 40,000 APRS users worldwide is about 20? KBPS but if we take a look at the data packets from  APRS Satelilte users on the <A HREF="http://ariss.net"><B>ISS downlink</B></A> and the <A HREF="http://pcsat.findu.com"><B> other APRS LEO</B></A> satellites we see that the hourly total data file can be under about 5K per hour.  These packets are all global packets routed via the <B><i>ARISS</i></B> or <B><i>APRSAT</B></i> paths. 
+
+<P>
+<IMG SRC= "OUTNET/outernet-receivers-L.png" align=right>
+
+<B>APRS OUTNET Concept PHASE-1:</B> Initially, we want to simply stream all of the existing APRS Satellite content via these hourly files.  This gives remote users something to see until we add unique OUTNET capabilities.
+<P>
+
+<B>APRS OUTNET Concept PHASE-2:</B> But if we defined a new path <B><i>OUTNET</B></i> on APRS then we could differentiate these special packets from the global APRS feed and route only the OUTNET addressed packets to the Outernet.  Even if this somehow attracted say a 100 fold increase in interest compared to to the current APRS satellite users, this would still be a small APRS file and a modest load on the <A HREF="http://status.outernet.is/"><B> Outernets 2 kb bandwidth</B></A>.  This should be quite practical for Amateur Radio communication in globally remote locations.  Of course the primary benefit to such a channel would be in the normal cause of Amateur Radio Emergency response communications.  Hams in remote areas could get traffic in and out when other communications systems are down.
+
+<P>
+<B>The APRS OUTNET DOWNlink:</B> Currently the Outernet system is a geostarionary downlink only.  It streams files freely to all users anywhere in the world.  It has no user uplinks.  The data stream (files) can only be uplinked from the single central Outernet 14 GHz command station.  
+
+<P>
+
+<IMG SRC="OUTNET/L-band-antennaDIYx.png" align=right>
+
+<B>The APRS OUTNET Return Path:</B> But APRS is a global two way system.  Any APRS operator anywhere on the planet can transmit APRS messages or data back into the global APRS-IS stream using existing HF or APRS Satellite channels.  Once in the APRS-IS stream, a central APRS hub, such as FINDU.COM can aggregate this return path data and send that over to the Outernet central ground station for insertion into the outbound Outernet stream back to all remote areas.  The APRS-IS inbound path already exists in the inherent capabilities of all our worldwide APRS-Igates. Here are many of the APRS-IS I-Gate entry points:
+
+<P>
+
+<LI>Thousands of home internet APRS clients listening on the local National APRS VHF channels
+<LI>Hundreds of home interenet APRS satgates listening on the 145.825 APRS and ISS satellite data channel
+<LI>Hundreds of home internet HF PACKET APRS I-Gates listening on the global 10.1476 APRS HF channel
+<LI>A new initiative to use WSPR technology for the return OUTNET path.  See
+<A HREF="aprs-wspr.html"><B> APRS-WSPR </B></A> web page.
+
+<P>
+<B>APRS HF Packet Return Channel:</B>  The worldwide distribution of multiple HF Igates forms a huge Multiple Diversity HF Reception system. Although HF is noisy and not very reliable minute by minute, when we combine hundreds of HF receivers all over the globe all listening on the same 10.1473 MHz channel, the result is one of the largest space-diversity receiving networks in the world.  With dozens of HF receivers always listening and only one correct decode is required, then the actual reliability of this HF system can be very reliable.  When we first began using APRS in this manner on HF, we noticed a 24 hour success rate of at least one packet per 4 hour watch period, but, ignoring the overnight period, then the success rate was much closer to once an hour or better.
+
+<IMG SRC="OUTNET/WSPR-TX-W5OLF.png" height=120 width=300 align=right>
+<P>
+<B>APRS HF WSPR Return Channel:</B> This new initiative takes advantage of the tremendous processing gain of the WSPR protocol
+to provide another return path from remote users.  
+Please see the <A HREF="aprs-wspr.html"><B> APRS-WSPR web page</B></A> dedicated to this
+exciting concept.  As shown here, a simple 1W transmiiter can provide a pretty reliable link for very low data rate back
+to the APRS-OUTNET system.  Of course, we will need to find a special channel for these APRS WSPR experiments and find a CADRE
+of interested WSPR individuals.ee the web page on how we can encode thousands of return messages in the WSPR protocol.
+
+<P>
+
+<IMG SRC="OUTNET/OUTNET-conops-aprs.png" align=right>
+<B>The APRS Satellite Return Channel:</B>
+
+If you look carefully at the CONOPS diagram (top of page) but that has been zoomed-in to the remote wilderness Outernet users shown here at right, you can see how the APRS return channel works.  The Ham radio operator in the remote area, with nothing more than an APRS walkie Talkie can send his position, objects and text messages via any APRS satelilte that comes into view.  Shown in red is his uplink to the APRS satellite, then the downlink to any ground station IGate, then into the APRS-IS cloud where FINDU.COM aggregates the OUTNET APRS traffic and sends it to OUTERNET where it is uplinked via the Inmarsats back to worldwide distribution including back to the remote area.
+<P>
+
+There are many APRS Networked Amateur Satellites that are, or will be on Orbit in 2016 and all will appear on the live <A HREF="http://ariss.net"><B>APRS downlink page</B></A> and which will all feed remote user uplink packets into the global APRS-IS system.
+
+<P ><A HREF="pcsat.html"><B>PCsat-1</B></A> in orbit since 2001
+<BR><A HREF="ariss.html"><B>ARISS</B></A> on the ISS since 2007
+<BR><A HREF="psat.html"><B>Psat</B></A> Now on Orbit! May 2015
+<BR><A HREF="qikcom-1.html"><B>QIKcom-1</B></A> Now on ISS awaiting FCC release
+<BR><A HREF="qikcom-2.html"><B>QIKcom-2</B></A>with APRStt (DTMF) for launch Dec 2016
+<BR><A HREF="psat-2.html"><B>PSAT-2</B></A> a continuation of PSAT-1 and QIKCOM-2
+<BR><A HREF="hfsat.html"><B>HFSAT</B></A> An HF linear transponder but with APRS relay too
+
+<P>
+
+<IMG SRC="OUTNET/outernet-globe-stations.png" height=300 width=400 align=right>
+
+<B>APRS  OUTNET EXPERIMENTATION:</B> Since hams are already begining to experiment with this new APRS-OUTNET capapbility, we ask any such experimenters to consider uniquely identifying their content as being part of APRS-OUTNET traffic as follows:
+<LI> The word <B><i>OUTNET</B></i> must appear somewhere in the packet (for now)
+<LI> Please add an <B><i>"O"</i></B> overlay to your symbol
+<LI> Please use the TOCALL (ALTNET) of <B><i>APOUT</B></i>
+<P>
+
+
+
+<B>APRS Ground Station Network:</B> The map above at right shows the best ground stations in the APRS Satellite Network.  Although there are hundreds of volunteer Igates at any one time, many only receive the stronger signals from the ISS.  You can see their calls in the raw packets at the bottom of the 
+live <A HREF="http://ariss.net"><B>ARISS.NET</B></A> page.  But the ones here are the only ones that have IGated PSAT packets to the APRS-IS (internet system).  Since the ISS signal is as much as 14 dB stronger (10W versus 0.35W for PSAT), only IGates with good weak signal performace (and usually tracking antennas) are successful with PSAT.  As you can see, we need additional IGates in Hawaii, India, China and the Southern Hemisphere.
+
+<P>
+<img src="psat/omni-antenna-vertical-a.png" align=right>
+
+<B>Best Satellite IGATE Antenna:</B>  The best IGate antenna is an OMNI (so it does not wear out or require rotators) and it has high gain above about 30 degrees and less gain on the horizon (where it cannot hear
+a 350 mW satellite anyway). 
+See (<A HREF="aprs-satellite-igate-antennas.html"><B>SatGate Antennas</B></A>) Not only is the gain higher at these elevations, but the satellite is also
+ 6dB closer, thus giving a combined gain of nearly 13 dBi similar to an OSCAR class beam.
+ Another reason for minimizing gain on the horizon is the Donut-Hole NULL effect where any IGate that hears a
+user station <i><b> direct</B></i> will send that into the APRS-IS first and that will cause the 
+subsequent space digipeated packet to be a DUPE and will be ignored by all IGates.  So a mobile or
+terrestrial omni is the worst omni (maximizes gain on horizon and usually has a null around 20 or 30
+degrees which is where the satellite is best located!  
+<P>
+
+The best Satellite OMNI Igate antenna is
+a non-gain 1/4 wave vertical (19.5" over a large ground plane).  Even better (+2 dB) is a 3/4 wave vertical
+(58" high) over a large ground plane shown here.  It has nearly 7 dBi gain above 30 degrees, plus the +6 dBi closer range gain and not much at all on the horizon.  It is best placed low in the yard to further minimize horizon gain as shown here.
+
+<P>
+
+<IMG SRC="OUTNET/psat-bench.png" align=right height=300 width=600>
+
+<B>APRS SATELLITE OVERVIEW:</B> PSAT (NO-84) is the latest Naval Academy student satellite project that joins PCSAT and ISS on orbit in 2015 and the three others in the pipeline awaiting launch and two more in work.  These small student built satellites
+contain an APRS packet radio communications transponder for relaying remote telemetry, 
+sensor and user data 
+from remote users and amateur radio experiments or other data sources back to 
+Amateur Radio experimenters via a global network
+of internet linked volunteer ground stations.  The data transponder also includes all 
+telemetry, command and control for a complete cubesat. Secondary transponders on some of them support multi-user PSK31 text messaging users via a Brno University transponder. 
+
+<P>
+<B>See the 
+
+<A HREF="psat/AMSAT-2010c.doc">Psat paper</B></A> at the 2010 AMSAT symposium
+
+<P>
+
+<B>Operations in the Amateur Satellite Service:</B>
+All of these VHF APRS transponders operate in the Amateur Satellite Service to encourage 
+amateur radio students, 
+educators and experimenters 
+around the world to contribute additional satellities to this constellation on 145.825 MHz or
+to build interesting self motivated remote sensors suitable for the uplink channel.
+ See our
+<A HREF="buoy.html"><B>ocean or bay oceanographic data buoys</B></A> for examples.
+  
+This kind of Amateur Radio experimentation fits well in the ITU rules
+<A HREF="psat/IARU-rules-psat.txt"><B>(see Psat justification)</B></A> 
+for operating in this service
+and well serve our educational and outreach goals for student projects encouraging young people to
+be interested in Science, Technology, Engineering and Math.
+
+<P>
+
+<B>APRS Packet Transponder:</B> The APRS packet transponder 
+is an AX.25 Packet Radio Relay similar to what is flying on 
+<A HREF="pcsat.html"><B>PCsat</B></A> and the
+<A HREF="http://www.aprs.org/ariss.net"><B>ISS</B></A>.  This ongoing mission in space on the original PCsat 
+is now over 12 years old and pioneered
+this very popular operating mode via the ISS since 2006.  Both of these 
+missions deliver packets to users worldwide via the global network of
+volunteer ground stations feeding the two downlink capture pages:
+<A HREF="http://pcsat.aprs.org"><B>psat.aprs.org</B></A> and
+<A HREF="http://ariss.net"><B>ariss.net</B></A>.  These pages display live maps such as the one
+above, of the most
+recent user position data and capture all message traffic between users. 
+See the <A HREF="psat/APRS%20Link%20Budgets%20for%20Psat-a.doc"><B>APRS link budgets</B></A>. In addition there
+is also a PSK31 transponder as noted below.
+<P>
+
+<P>
+<IMG SRC="psat/aprs-world-map.jpg">
+<P>
+
+
+
+
+  
+<P>
+<IMG SRC="psat/range-gain.gif" align=right>
+
+<B>APRS Satellite Low-Earth Orbits:</B>
+
+<P>
+The downlink OUTERNET satellites are all in Geostationary orbits over 36,000 km above earth and so they appear at a fixed location high in the sky.  You just point your antenna at it and receive the very weak signal with a dish antenna.  In contrast, the orbits for these APRS satellites are only about 400 km high providing passes only about ten minutes long and going from horizon to horizon as shown here.  But being 100 times closer, the signal required to uplink to them is much much less, on the order of 5 watts.  The typical user beacons his 1 second position and status data about once every 2 minutes.  This guarantees that one of the many APRS satellites will hear the data, repeat it down to a nearby ground station which interjects it into the APRS-IS which distributes it to the 
+<A HREF="http://outernet.is"> Outernet</A> uplink station, to the Outernet GEO sateliltes for dowlink into all remote areas of the world.
+<P>
+<IMG SRC="psat/PSAT-continents.png" align=right height=300 width=500>
+
+
+<B>PSAT Position Reporting:</B>  PSAT like every other APRS Station has the capability to send its live position once every minute so that its location appears on the front panel of all APRS user radios so they can know which way to point
+their antennas.  But rather than flying a very expensive space rated GPS, we simply use the fact that the
+orbit is fixed and so PSAT can run a 95.16 minute Mean Anomoly clock synced to the orbit period and
+then use a table of LAT/LONG values to downlink its position based on the minuute in the 95.16 minute orbit.
+Then every orbit the clock tics over, the longitude is shifted by the oribtal longitude increment and the next
+orbit of position reporting begins.
+
+<P>
+<B> Continetnal Bulletins:</B> Since the above scheme allows PSAT to know where it is, then it can use that
+information to customize its bulletins to match the continent that it is over at the time.  We have programmed
+PSAT to send unique bulletins over the LAT/LONG continental boxes shown here.  There are three possible beacons for each continent. They are alternated every minute.
+
+<P>
+<IMG SRC="psat/TinyTrack4-pix1x.JPG" height=220 width=270 align=right>
+
+<B>Global Experimental Data Channel:</B>  These APRS Satellites are the space segment of this
+initiative to encourage both new satellite construction in support of this experimental
+data channel and lower cost buoy and
+sensor experimentation at other schools.  
+Today, these APRS satellites are about the only Amateur Satellites that are available for Amateur Radio and student experimenters. But now with Outernet, this opens up an whole new element of two-way global communications.  It is the perfect marriage.
+  Outernet providing the global continuous full time downlink everywhere on earth and APRS providing the uplink via a variety of input methods that can also extend anywhere on earth.
+To this end we hope other schools and Amateur Radio volunteers will either build additional 145.825 MHz relay satellites 
+and/or build more HF Igates and/or SATgates.  For the User terminals or even a small satellite releay itself, the complete APRS packet comms system including data
+transponder fits on one 3.4 inch square card <B><i>shown here</B></i>.
+  We hope that these APRS satellites 
+<A HREF="psat.html"><B>(PSAT for example)</B></A> will be the Egg in this 
+chicken-egg conundrum and Outernet will partner to provide a seamless system.
+
+<P>
+Bob Bruninga, WB4APR
+<BR>lastname at usna dot edu
+
+<HR SIZE=5 WIDTH="100%">
+
+
+
+<P>
+<HR SIZE=5 WIDTH="100%">
+<TABLE BORDER=2 CELLPADDING=2 >
+<TR>
+
+<TD>
+<P><FONT SIZE=+1><A HREF="sitemap.html"> WB4APR's overall Site Map </A></FONT></P>
+</TD>
+</TR>
+</TABLE>
+</UL>
+
+</BODY>
+</HTML>

@@ -1,0 +1,59 @@
+RAFT PDR 19 Nov 2004 Attendance and Action Items:
+
+Pre-meeting and other USNA:  Prof's Boden, Smith, & CDR Myre
+USNA Team Attendance: Orloff, Rose, Kinzbrunner, Bruninga
+STP Attendance:  Ballard, Taylor, Ritterhouse, Shaffer
+
+For STP:
+ 1) Provide a copy of sample NiCd Acceptance Test Plan
+     (USNA will have to do Qual tests on Batttery Lot)
+2) Send USNA a sample Fracture Control Plan
+3) Analyse wire and fuse requirements based on 1.1 amp
+    PTC fuses, #24 wire and 135% of fuse rating for nominal
+    550 mA operating currents.
+
+
+For USNA:
+1) Prepare Phase 01 Safety Presentation by 3 Dec for about 1 Hr
+2) Complete stress analysis of mechanical structure in Ideas using
+    the 3 body diagram provided by STP
+3) Re-issue Battery Cold Test results with added Test Time-Line profile
+4) Identify Molex Connector part numbers for STP to analyze at 550 mA
+5) If no action on 1499 by CDR, inform STP for action
+6) Look at connector design to mitigate cold problems with connectors
+7) Send copy of AMSAT paper to STP
+8) Address use of GSE port for powering, chargning and safety in our
+    Charge Safety document
+9) Based on Mechanical analysis, re-look at stiffining options for corners
+10) check that wire is 22759/11 silver teflon
+11) Provide Materials list for Safety Review
+12) Document coatings:
+       Anodizing is MIL-A 8625 Type 2 Class 1
+       Aladining is MIL-C 5541 class 3 (same as iriditing?)
+
+For Midshipmen:
+Produce follow-up PDR presentation with revisions.  Some of these
+will require Bob to fix the originals, then you rebuild the presentation.
+
+1) Add to Time line slides delivery of Flight unit for Testing in May
+2)  Update RAFT1 and MARScom slide (for new freq, & solar. Bob will fix original)
+3)  Also update Constellation slide for V/V instead of V/U
+4) Change title of Audio Spectragram slide to be
+    PSK-31 Audio Spectragram of Satellite Doppler
+5) Internal Diagram and corner detail.  (Bob re-do original to clean up corner)
+6) Raft1 Schematic.  (Bob fix)
+7) Raft Ant Springs (Bob fix)
+8) Unique Side Panel for Antenna crank and GSE (bob fix)
+9) Assembly Fasteners, add 6 per side
+10) Solar power budget Revise all numbers, not just bottom ones.
+11) Make a Battery Test Time-line plot.  I'll show you an example
+12) Make a Mars Schematic
+13) Make a Mars Panels and Connectors
+14) 212 MHz Receiver title should be 217 MHz NSSS Receiver
+15) Dont need UHF plot's anymore.
+16) Battery Safety Requirements slide:
+      - remove "upright requirement", 
+      - Change 120 deg line to read Battery Storage Temps limits are -22 to +122 F
+        but convert to degrees C.  Hot case may be as high as 165
+
+Bob      

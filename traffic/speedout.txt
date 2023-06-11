@@ -1,0 +1,93 @@
+PARSER TO GET THE RAW DATA FROM THE WEB PAGE:
+--------------------------------------------------------------------------
+OPEN "spddata.txt" FOR INPUT AS #1:OPEN "speedout.txt" FOR OUTPUT AS #2
+DO UNTIL EOF(1)
+   LINE INPUT #1, a$
+   IF INSTR(a$, "eeeeee") OR INSTR(a$, "ffffff") THEN
+      td = 1
+      DO UNTIL td = 0
+         td = INSTR(td, a$, "<TD>")
+         IF td THEN
+            IF INSTR("<&", MID$(a$, td + 4, 1)) THEN
+            ELSEIF INSTR(MID$(a$, td, 12), "MPH") THEN PRINT #2, MID$(a$, td + 4, 7)
+            ELSEIF INSTR(MID$(a$, td, 12), "Over") THEN PRINT #2, MID$(a$, td + 4, 13)
+            ELSE PRINT #2, "LOC: "; MID$(a$, td + 4, 24); "  Speed is:";
+            END IF: td = td + 1
+         END IF
+      LOOP
+   END IF
+LOOP
+CLOSE
+END
+---------------------------------------------------------------------------
+Here is the result of the above parser applied to the source of
+the WEB page for maryland: http://chart/state.md.us/travinfo/speedData.asp
+
+LOC: I-270 @ Comus Rd North    Speed is: 63 MPH
+LOC: I-270 @ I-370 North       Speed is: 64 MPH
+LOC: I-270 @ MD 109 North      Speed is: 62 MPH
+LOC: I-270 @ MD 109 South      Speed is: 57 MPH
+LOC: I-270 @ MD 80 North       Speed is: Over 65  MPH
+LOC: I-270 @ MD 80 South       Speed is: 61 MPH
+LOC: I-270 @ MD 85 South       Speed is: Over 65  MPH
+LOC: I-270 @ MD 85 North       Speed is: 52 MPH
+LOC: I-270 @ Weigh Station No  Speed is: Over 65  MPH
+LOC: I-270 btn Park Mills Rd   Speed is: 53 MPH
+LOC: I-270 btn Park Mills Rd   Speed is: Over 65  MPH
+LOC: I-270 NB @ MD 121 North   Speed is: 36 MPH
+LOC: I-495 @ Greentree Road I  Speed is: 6 MPH<
+LOC: I-495 @ Greentree Road O  Speed is: 13 MPH
+LOC: I-495 @ I-95 Outer loop   Speed is: Over 65  MPH
+LOC: I-495 @ I-95 Inner loop   Speed is: 62 MPH
+LOC: I-495 @ MD 190 Inner loo  Speed is: 21 MPH
+LOC: I-495 @ MD 190 Outer loo  Speed is: 16 MPH
+LOC: I-495 @ Seminary Rd Oute  Speed is: Over 65  MPH
+LOC: I-695 @ I-70 Inner loop   Speed is: 25 MPH
+LOC: I-695 @ Joppa Rd Inner l  Speed is: Over 65  MPH
+LOC: I-695 @ Joppa Rd Outer l  Speed is: Over 65  MPH
+LOC: I-695 @ Stevenson Rd Inn  Speed is: 64 MPH
+LOC: I-695 @ Stevenson Rd Out  Speed is: Over 65  MPH
+LOC: I-695 btwn Stevenson Rd   Speed is: 40 MPH
+LOC: I-695 btwn Stevenson Rd   Speed is: 56 MPH
+LOC: I-695 NE @ I-95 exit 33   Speed is: 52 MPH
+LOC: I-695 NE @ I-95 exit 33   Speed is: Over 65  MPH
+LOC: I-695 West approaching U  Speed is: 56 MPH
+LOC: I-70 West of Bethany Lan  Speed is: Over 65  MPH
+LOC: I-70 West of MD 180 East  Speed is: 57 MPH
+LOC: I-795 @ Church Road Sout  Speed is: 65 MPH
+LOC: I-795 @ Cockeys Mill Roa  Speed is: 58 MPH
+LOC: I-795 @ Cockeys Mill Roa  Speed is: 54 MPH
+LOC: I-83 @ MD 137 (Mt Carmel  Speed is: 48 MPH
+LOC: I-83 @ MD 137 (Mt Carmel  Speed is: 55 MPH
+LOC: I-83 @ Padonia Rd North   Speed is: Over 65  MPH
+LOC: I-83 @ Padonia Rd South   Speed is: 50 MPH
+LOC: I-83 @ Shawan Road North  Speed is: 20 MPH
+LOC: I-83 @ Shawan Road South  Speed is: 55 MPH
+LOC: I-95 @ Brooklyn Bridge R  Speed is: 36 MPH
+LOC: I-95 @ Brooklyn Bridge R  Speed is: 61 MPH
+LOC: I-95 @ MD 32 South        Speed is: 52 MPH
+LOC: I-95 @ MD 32 North        Speed is: 60 MPH
+LOC: I-95 @ MD Welcome Center  Speed is: 64 MPH
+LOC: I-95 @ MD Welcome Center  Speed is: 65 MPH
+LOC: I-95 @ Montgomery Road N  Speed is: Over 65  MPH
+LOC: I-95 @ Montgomery Road S  Speed is: Over 65  MPH
+LOC: I-95 between Cherry Hill  Speed is: 47 MPH
+LOC: I-95 between Cherry Hill  Speed is: Over 65  MPH
+LOC: I-95 south of MD 175 Sou  Speed is: 64 MPH
+LOC: I-95 south of MD 175 Nor  Speed is: 56 MPH
+LOC: I-97 @ Welham Ave South   Speed is: Over 65  MPH
+LOC: I-97 @ Welham Ave North   Speed is: Over 65  MPH
+LOC: MD 140 N. of I-795 East   Speed is: 64 MPH
+LOC: MD 140 N. of I-795 West   Speed is: 40 MPH
+LOC: MD 32 @ US 1 East         Speed is: Over 65  MPH
+LOC: US 50 @ Church Rd East    Speed is: 62 MPH
+LOC: US 50 @ Church Rd West    Speed is: 61 MPH
+LOC: US 50 @ I-97 East         Speed is: 63 MPH
+LOC: US 50 @ I-97 West         Speed is: 65 MPH
+LOC: US 50 @ MD 424 East       Speed is: Over 65  MPH
+LOC: US 50 @ MD 424 West       Speed is: 46 MPH
+LOC: US 50 @ US 301/MD3 West   Speed is: Over 65  MPH
+LOC: US 50 @ US 301/MD3 East   Speed is: 63 MPH
+LOC: US-50 @ MD-70 (Rowe Blvd  Speed is: Over 65  MPH
+LOC: US-50 @ MD-70 (Rowe Blvd  Speed is: Over 65  MPH
+

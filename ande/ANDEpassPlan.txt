@@ -1,0 +1,148 @@
+ANDE MAA OPERATIONS AND PASS PLAN                        05 Feb 2006
+--------------------------------------------------------------------
+
+To conserve primary battery power, the ANDE MAA comm system operates
+predominantly in sleep mode, only waking one second out of every 16,
+to check for a ground station or users.  Even when it passes over the
+USA or Europe this low sampling rate may be missed and no wake-up
+occurs.  THus no telemetry over ground stations.
+
+TO get good telemetry from ANDE-MAA, the ground station needs to
+transmit packets once per second for up to 16 seconds to wake ANDE 
+and then logon to both the A and B sides and change the default 
+telemetry rate from once every minute to once every 10 seconds.  THis
+high rate data is necessary to get good sampling of attitude using
+the onboard solar detectors.
+
+OPERATIONS PASS PLAN:  The following procedures are suggested:
+
+RADIO SETUP:  On the radio, press the left of the two volum control
+knobs in the lower right corner to select the LEFT side of the radio.
+On the left of the screen, press the MR key to select memory channels.  
+Use the tuning knob to tune in memory channel 6 which will display as
+145.825 and will also display a little combined +/- symbol showing
+this is set for SPLIT operation.  Momentarily key the microphone and
+observe that the TX frequency changes to 144.47 MHz.  This is the 
+proper operation for ANDE side B.   Usually we like to use side B 
+first.   Confirm the volume knob is set to about half volume.
+
+LAPTOP SETUP:  The data from the radio modem goes to ALOGGER and also
+to the Laptop.  On the laptop, use the alt-S-USAGE-ANDE command to 
+select ANDE and then it should be on the ANDE telemetry screen.  The 
+SPACE bar can refresh this screen.    The LAPTOP can be in two modes, 
+the TELEMETRY GRAPHICS SCREEN, or the KEYBOARD TERMINAL screen. TO
+go from the TELEMETRY screen to the TERMINAL screen, use the "K" 
+or "C<ENTER>" commands as shown below.  Use ESC to return to the 
+TELEMETRY screen.
+
+  TELEMETRY
+   SCREEN                       KEYBOARD SCREEN
++-----------+        +------------------------------------------+
+|           |        |                           +-----------+  |
+|           |<-----------------------------------|ESC        |  |      
+|           |        |                           |           |  |
+|          K|----------------------------------->|           |  |
+|           |        | +----------------+        | CONVERSE  |  |
+|           |        | | COMMAND MODE   |        |   MODE    |  |
+|           |        | | cmd:...        |        |           |  |
+|           |        | |                |        |           |  |
+|   C<ENTER>|--------->|               K|------->|           |  |
+|           |        | |                |        |           |  |
+|           |<---------|ESC             |<-------|^C         |  |
+|           |        | |                |        |           |  |
+|           |        | +-------------^--+        | - - - - - |  |
+|           |        |   | C XXXXXX  |           |           |  |
+|           |        |   |           |           |           |  |
+|           |        |   V           |           | CONNECTED |  |
+|           |        | +-------------|------+    | CONVERSE  |  |
+|           |        | | CONNECTED   |      ====>|           |  |
+|           |        | | TO XXXXXX   |      |    |           |  |
+|           |        | |             |      |<---|           |  |
+|           |        | | ^C  cmd: D -+      |    |           |  |
++-----------+        | +--------------------+    +-----------+  |
+                     +------------------------------------------+
+
+The KEYBOARD screen is either BLACK or BLUE depending on whether
+the ground station TNC is "CONNECTED" or "UNCONNECTED".
+
+WHile on the KEYBOARD screen, the ground station TNC can be in one
+of two modes.  COMMAND mode and CONVERSE mode.  In COMMAND mode, 
+there is a "cmd:" prompt which allows you to enter commands into the
+local TNC.  This is a dangeous mode, and you should not type any
+ocommands in this mode unless directed.  There are over 100 commmands
+and just about any keystrokes can be wrongly interpreted as commands.
+
+To go from COMMAND mode to CONVERSE mode, press the K key.
+To go from CONVERSE mode to COMMAND mode, press ^C.
+
+In CONVERSE MODE, anything you type will be transmitted over the
+radio just as typed.  THe TNC can be in either  CONNECTED MODE or
+UNCONNECTED MODE.  Usually when you are in command mode, you are 
+unconnected until you logon to ANDE.  Then the screen will go blue 
+and you will enter CONNECTED mode.  In CONNECTED MODE, your data
+is point-to-point with ACKS line-by-line to assure devliery.  In
+UNCONNECTED mode, your data is transmitted once in the blind in
+broadcast mode to anyone listening.
+
+INSTANTTRACK TRACKING PROGRAM:
+
+If the MAP is not showing, QUIT back to the main menu.  If you go 
+too far, re-execute ther program at the DOS prompt as "IT".  From
+the main menu, select option 2, REAL-TIME-TRACK and select ANDE as
+satellite number 17.  If you are already on the MAP, use the left
+and right arrow keys to select ANDE number 17.
+
+Hit W to see the time to the next pass.
+Hit F to toggle on and off FAST or REAL-TIME mode
+Hit SPACE to freeze time.
+
+
+OPERATIONS;
+
+Observe the AZ/EL to the satellite.  Point the Antenna to the correct
+AZimuth.  When ANDE comes above the horizon, keep the antenna within
+about 15 degrees of the satellite and begin hitting the "P" key on
+the laptop about once a second while listening for any response from
+ANDE.  You will be transmitting on radio memory channel 6 which TX's
+on 144.47 and listens on 145.825.  Ping for up to 20 seconds until
+you hear responses.  When you are hearing clean responses, then you
+should be able to logon.
+
+LOGON SIDE B:  Logon to side B with the "L B" command.  The radio will 
+then automatically attempt 10 CONNECT attempts.  If a CONNECTION is
+successful the spacecraft will send a 6 number challenge.  The laptop
+will automatically calculate a matching password and send it.  If this
+process is successful, then the screen will automatically shift to the
+BLUE KEYBOARD screen with you  in CONVERSE mode ready to talk to the
+satellite's command "prompt:".
+
+THe only command for side B is "TE 1", then hit ENTER.  When you see
+"TELEMETRY WAS 5" you were successful, so now disconnect by hitting
+^C and then at your TNC "cmd:" prompt, enter "D" <ENTER> to disconnect.
+YOu may hit D <ENTER> a second time to save time.
+
+LOGON SIDE A:  Once side B is awake, usually side A also wakes up.
+TUNE THE RADIO to memory channel 3 which is TX and RX on 145.825.
+
+Hit ESC to be sure you are back on the TELEMETRY screen and hit "P"
+key to PING side A.  When you hear responses, LOGON to side A with 
+the "L A" command and as above, you should get to the BLUE screen
+again.  As on side B, also enter "TE 1" and when it is successful,
+disconnect as above with the ^C to "cmd:" and then enter the "D"
+command twice.
+
+HIT ESC TO GET BACK TO TELEMETRY SCREEN.
+
+QUICKLY CHANGE THE RADIO BACK TO SIDE B (MEMORY 6) and now press the
+"P" PING key to ping on side B for the remainder of the pass.  YOu 
+should get into a rythm, so that you first hear a side A telemetry,
+then a side B telemetry once every 10 seconds, and then hit the PING.
+
+This will keep ANDE awake through the end of the pass.
+
+After LOS and less than one minute of no activity, side B will go to
+sleep and then side A will follow.  During this entire evolution, all
+of the packets heard from ANDE will hopefully appear on ALOGGER.
+
+Bob Bruninga, WB4APR
+USNA Satellite Lab

@@ -1,0 +1,182 @@
+SETTING UP A SATGATE USING ALOGGER                     11 JUL 2006
+------------------------------------------------------------------
+
+UPDATE: This was originally written for PCSAT2.  It is now being
+revised for GO-32 and Bill is also writing a new version just for
+GO-32 to simplify the setup.  But until that is released, here is 
+the old info aobut using the full-up ALOGGER...
+
+You can set up a turn-key satgate using the ALOGGER program which
+is independent of the usual APRS intensive IGATE approach.  
+
+ALOGGER was written by Bill Diaz as a simple monitoring program to
+make it easy to view and monitor the global APRS LIVE Internet 
+System (APRS-IS)and to make it easy to filter for and extract any 
+packets you might be interested in from anywhere.   So it was not 
+intended as an IGate, but only a tool to watch the APRS-IS and
+capture packets.
+
+But when PCSAT2 was launched, Bill did add a serial port interface
+so that if your TNC was connected to the serial port, your station
+could then inject packets into the APRS just like any other APRS
+IGate software.  Thus, a simple SATGATE was born, ALOGGER 2.0.3.
+
+LOGGING ON TO THE APRS-IS:  Although anyone can logon to the 
+APRS-IS to monitor packets using an unverified logon, only stations 
+that have a validation number to match their Ham Radio callsign are 
+allowed to inject packets.  So first thing you will need is a 
+validation number.  More about that later.  Initially just use
+an unverified logon to see what all you can monitor.
+
+WHAT YOU WILL SEE:  When you install ALOGGER,  you used to simply 
+see a real-time scrolling screen of all packets on the APRS-IS.  
+It is like monitoring every APRS tnc in the world at the same time.  
+This is usually 10 to 20 packets per second.  Due to this large volume
+of data, most APRS servers no longer provide the full feed, but
+only give you what you ask for.  Thus you won't see anything until 
+you specifiy a selection criteria or "filter".  The easiest one
+is a filter around your station.  For example, "filter f/39/-77/100"
+which will pass all packets with a position report within  100 km
+of 39N amd 77W (washington DC).  This filter is sent to the APRS-IS
+server when you "connect".
+
+So here is the step-by-step way to set up a PCSAT2 SATGATE:
+
+1) Get ALOGGER 2.0.3 from:  http://www.billdiaz.dynip.com/ 
+2) Install it,  Run ALOGGER.
+3) Go to the LOG-TEXT tab and enter
+   - your call under the LOG TEXT TAB
+   - enter a -1 for your validation number
+   - click "unverified logon"
+   - click "send additional text"
+   - enter "filter r/0/0/99999"  This is saying send me the whole world!
+           "filter r/LAT/LON/rang" or this one for just your local area.
+4) Go to the SERVER TAB and initiate a CONNECTION to
+   - satgate.aprsca.net:10150 from the pull down Server list
+   - Click on the CONNECT button
+
+5) Now click on the Display Data box and you should start to 
+   see packets based on the filter setting you provided at logon
+
+At this point, you have a working ALOGGER and are ready to start 
+mining data on the APRS-IS.  For this you go back to the LOG-TEXT 
+PAGE to set up your logging criteria.  This is different from the 
+FILTER settings we already discussed.  The filter is sent to the 
+APRS-IS server to tell it the bulk types of packets you want to see.  
+But ALOGGER will not log any of these to a file until you set up 
+your own LOG TEXT strings.
+
+6) Go back to the LOG-TEXT TAB and enter a selection criteria
+such as the callsign of your local APRS DIGIpeater.  This will
+cause you to capture a daily file of EVERY PACKET transmitted
+from and or VIA your digi.  You could enter "red monkeys" and
+you would capture every packet having "red monkeys" in it. ETC.
+
+7) Actual LOGGING of the packets begins when you click the
+"Log Packets Containing" box.
+
+8) Now go back to the SERVER tab and click "Display Logged
+packets only".  Now the flood of packets you were seeing will
+be throttled to a trickle and you will only "see" packets that
+are being captured.  Just setting LOG TEXT strings and mining
+the APRS data stream is a whole hobby in itself!
+
+NOW SETTING UP A SATGATE:
+
+To this point, you are not a SATGATE, just a voyer on the APRS-IS 
+data stream.  Now you want to inject data from your satellite TNC. 
+
+a) First go to the SERIAL tab and click on the "A LOG PACKETS
+CONTAINING" and the "B LOG PACKETS CONTAINING" boxes that Bill
+added to this page just for PCSAT2.  YOu will notice each has
+a pull down list of all the callsigns that the A side and B 
+side of PCSAT2 can use.  The serial port will only therefore
+inject packets from these callsigns only.  If you are setting up
+for a satellite other than PCSAT2, enter its DIGIPEAT callsign
+here.
+
+b) Now click the 3 boxes for "log serial data", "log serial 
+telemetry" and "Gate...to APRS-IS".
+
+c) You may click on the left buttons to set up your serial port and 
+to set up your TNC if you want to send it some text to get it in the 
+right mood.
+
+d) Now go back to the SERVER tab and click on the "Display Serial 
+Data" box and not only will  you begin to see any PCSAT2 data that 
+might come into your station, but this also automatically tells 
+ALOGGER to start logging all satellite data to TWO files:  xxxxALIST 
+and xxxxBLIST.  These files match the callsigns on their SERIAL port 
+page which gives all the callsigns that the two PCSAT2 TNC's might u
+se.  THis is so that all the A side telemetry and B side telemetry 
+go into the proper file independent of exactly which callsign
+PCSAT2 may be using at any particular time.
+
+ 
+HOW TO LOOK AT YOUR LOGFILES:
+
+Bill has added a tremendous capability for viewing these captured 
+files even while operating.  Just go to FILE and select VIEW LOGGED 
+DATA and select a file.  Every file has the DATE in the file name 
+followed by the matching LOG-TEXT string that you used to force data 
+into that file.  If you put your own local digi in as a sample LOG-
+TEXT string, as noted in step 6.  If you didnt, go pack and just put
+something there so that you can start getting some data flowing into 
+a file.
+
+1) Once you have a file name, click it and then VIEW FILE.
+You will get a text list of the file.
+
+2) But now the fun begins.  You can select any sub-list of packets 
+based on any SELECT or REJECT criteria you list.  Then you can SAVE 
+such a subset under a file name of your choice. 
+
+SATGATE HARDWARE:
+
+Now you are almost done.  You have the ALOGGER software that can not 
+only look at the APRS-IS but you can also inject packets you receive 
+from any of the APRS satellites digipeaters such as:  ARISS, PCsat, 
+PCSAT2, and future ANDE, RAFT, MARScom  and any other satellites that 
+will use AX.25 packets.
+
+Just hook up a Receiver and TNC and put it on one of the downlink 
+frequencies and feed that to your serial port.  You may operate with 
+just an OMNI antenna or a full auto tracking satellite station.   
+That is your choice.  But I have lots of tips near the bottom of my 
+ASTARS web page:
+
+http://www.ew.usna.edu/~bruninga/astars.html
+
+VALIDATION NUMBER:
+
+Oh yes, you will also need to get a validation number to match your 
+callsign if you do not already have one for APRS.  You can get that
+from Bill Diaz, the author of ALOGGER.
+
+FILTERS:
+
+Remember, that if you also want to capture and see packet data from 
+satellites, that you must put in the FILTER settings for the SERVER 
+that you will use to tell it what kinds of packets to send your way. 
+Normally, for APRS, this will be a RANGE around a LAT/LONG.  But this
+does not work for satellites who can be anywhere (or may not send any
+positions).  Thus you have to list each satellite callsign separately. 
+Use the "p" filter.  So the minimum filter setting to get all 
+possible packets from PCSAT2 are:  
+
+"filter p/PCSAT2/PC2PSK/PC2RPT/PC2TLM/ISSTLM/PC2ISS
+
+and to see any packets digipeated by these calls, you also must add:  
+"... d/PCSAT2/PC2PSK/PC2RPT/PC2TLM/ISSTLM/PC2ISS
+
+and lastly, unless you want the link to shut down due to no activity,
+you have to make sure that at least some packet come down the pipe,
+so you should also make a range filter around your station for
+example to guarantee that you at least get one packet every 10 seconds
+or so.  Here is the filter I use, and it all goes in the one 
+entry location on the "send additional text at logon" box:
+
+  filter p/PCSAT2/PC2PSK/PC2RPT/PC2TLM/ISSTLM/PC2ISS d/PCSAT2/PC2PSK/
+         PC2RPT/PC2TLM/ISSTLM/PC2ISS r/39/-77/100
+
+de Wb4APR, Bob.

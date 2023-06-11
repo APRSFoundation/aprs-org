@@ -1,0 +1,152 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+   <TITLE>PCsat</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (Win95; I) [Netscape]">
+   <META NAME="Author" CONTENT="Bob Bruninga">
+   <META NAME="Description" CONTENT="PCsat APRS Satellite Project">
+   <META NAME="Keywords" CONTENT="PCsat, APRS, APRsat, Satellite, Cubesat,  Tracking, Bruninga, LEO, GPS">
+   <META NAME="Classification" CONTENT="Science">
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#48D1CC" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000">
+
+<CENTER><P><B><U><FONT SIZE=+2>PCsat Telemetry</FONT></U></B>
+<P>US Naval Academy Satellite Lab, <FONT SIZE=-2>Bob Bruninga, WB4APR</FONT><BR></CENTER>
+<P>
+
+<P>
+<B> The Worldwide Internet APRS Data Collection System:</B> 
+The graphic Telemetry links below give the complete telemetry as captured by the worldwide APRS 
+Internet system and archived on Steve Dimse's FINDU.COM database.  This system demonstrates 
+the power of using internet linked amateur satellite ground stations around the world to 
+capture live telemetry data for use anywhere. This first image is of the overall PCsat
+Telemetry System so that you can see how the data is organized into Voltages, Currents,
+Temperatures and Switch status.
+<P>
+<IMG SRC="pc-lowv.jpg">
+ 
+<P>
+<B>Telemetry Description:</B>
+The data shown in the graphics links below is 100 days worth from 1 December 2001 to 10 March 2002.  The data
+is presented in its raw form with each telemetry value showing as a color dot in the
+upper portion of each graphic.  The middle green/red color bars show the ON/OFF status
+of the 13 telemetry bits.  Red means ON or "0".  The large lower section shows the
+count of the 001-to-999 telemetry frame counter.  It gives a good view of the continuity
+of the data over ground stations and the occurrence of any random resets that would
+reset the couter to 001.
+<P>
+<B>NOTE: </B> These plots cover exactly 100 days of data, but the data is presented as 
+contiguous data points, not linearly with time.  So the Side A telemetry appears longer
+because more data points are captured on the larger number of IGate stations monitoring
+the 145.825 downlink than on the USA-only monitoring stations on 144.390.  Also, any
+data that may be missing will simply concatenate the data rather than showing a gap.
+Thus the TIME axis only has two known points, The start on 1 Dec and the end on 9 March.
+Further there may be lots of data missing from the A side plots because you can see
+the time that the GPS was turned ON is significantly different between the A side and
+the B side, though they both read the same telemetry value.  So be careful of significant
+distortions in the horizontal TIME axis.
+<P>
+<B>Data Analysis</B>
+During this period, there are three general situations of interest.  First is the 
+declining power budget in early December due to the combination of a maximum 35% eclipse
+period, during the Winter Solstice
+and our failed -Z solar panel which points generally up in the southern Hemisphere.
+Next is the period of full Sun from about 7 to 23 January, followed by another
+period of maximum 35% eclipse in February leading to a minimum eclipse cycle of 15%
+on March 7th at the end of the data.
+<P>
+<B>BINARY BITS:</B> In all of the plots below, you can see the status of the 8 command
+bits.  The first two we try to keep always RED meaning the UHF receivers are both commanded OFF.
+The 3rd bit is the GPS which was used during full sun between 7 to 21 January and the 6th
+bit toggles the GPS data between MITEL and NMEA format. Any toggles
+in the other bits are insignificant.
+<P>
+<B>PCsat side A Telemetry</B> - Primary user transponder on 145.827
+<LI> <A HREF="http://www.aprs.org/pcsat/FINDUdata/pctel_pnga00_files/pctel.png"><B>Frame 00 Currents</B></A>
+Notice the drift upward during full sun of the "0" current values due to higher temps.
+<LI> RED	+XA Array Current 
+<LI> BLUE	+Z  Array Current <== some apparent loss of current for our Space Qualified Cells
+<LI> GREEN	+YA Array Current <== apparently same degradation of our plastic covered cells
+<LI> BLACK	-XA Array Current
+<P>
+<LI> <A HREF="http://www.aprs.org/pcsat/FINDUdata/pctel_pnga01_files/pctel.png"><B>Frame 01 Temperatures</B></A>
+Cyclic Temps are probably due to data aliasing since it is 64 cycles in 100 days.
+<LI> RED	+Y  Array Termperature
+<LI> BLUE	Battery A Temperature
+<LI> GREEN	XMTR A Temperature
+<LI> BLACK	+Z  Array Temperature <== Note change in symmetry due to change in Southern Hemisphere sun 
+<P>
+<LI> <A HREF="http://www.aprs.org/pcsat/FINDUdata/pctel_pnga10_files/pctel.png"><B>Frame 10 Temps/Currents</B></A>
+<LI> RED	+X  Array Temperature
+<LI> BLUE	Stack A Temperature <== Note the Temp rise on A stack while GPS is on
+<LI> GREEN	-YA Current
+<LI> BLACK	Battery A Charge Current <== Note constant values are nominal discharge in no sun
+<P>
+<LI> <A HREF="http://www.aprs.org/pcsat/FINDUdata/pctel_pnga11_files/pctel.png"><B>Frame 11 Voltages</B></A>
+<LI> RED	A Battery Voltage <== Note slight degradation of A battery relative to B
+<LI> BLUE	B Battery Voltage <== And lack of full charge ever in last month
+<LI> GREEN	A XMTR Power Output
+<LI> BLACK	+8 Bus Voltage
+<LI> GRAY   +5 Bus Voltage (213)
+
+<P>
+<B> Data Analysis:</B>
+ALthough we have not thoroughly digested the trends in the data, there are a few observations
+we find interesting and worth of further analysis:
+<LI> Lack of symmetry around the full sun period even though the geometry of eclipse periods is symetric.
+<LI> Lack of symmetry could simply be missing data causing an apparent compression of the time axis
+<LI> Some apparent degradation of our plastic covered terrestrial solar cells
+<LI> Similar apparent degradation of our Space rated Glass covered +Z cells... 
+<LI> Wider fluctuation in temps over time, possibly due to slower spin rate?
+<LI> Battery run-down during full sun due to GPS being on all most of the time.
+<LI> Apparent 1.5 day cyclic pattern probably due to aliasing of ground stations access times?
+<P>
+<B>PCsat side B Telemetry</B> - North American downlink on 144.39 (only special travelers)
+<LI> <A HREF="http://www.aprs.org/pcsat/FINDUdata/pctel_png00_files/pctel.png"><B>Frame 00 Currents</B></A>
+Notice the drift upward during full sun of the "0" current values due to higher temps.
+<LI> RED	-Xb Array Current 
+<LI> BLUE	-Z  Array Current <== Definately Zero output from -Z array
+<LI> GREEN	-YB Array Current 
+<LI> BLACK	+XB Array Current
+<P>
+<LI> <A HREF="http://www.aprs.org/pcsat/FINDUdata/pctel_png01_files/pctel.png"><B>Frame 01 Temperatures</B></A>
+Cyclic Temps are probably due to data aliasing since it is 64 cycles in 100 days.
+<LI> RED	-Y  Array Termperature <== lack of symetry means that something has changed
+<LI> BLUE	Battery B Temperature <== since full sun.  Maybe emissivity of Teflon coating?
+<LI> GREEN	XMTR B Temperature
+<LI> BLACK	-Z  Array Temperature <== Note change in symmetry due to change in Southern Hemisphere sun 
+<P>
+<LI> <A HREF="http://www.aprs.org/pcsat/FINDUdata/pctel_png10_files/pctel.png"><B>Frame 10 Temps/Currents</B></A>
+<LI> RED	-X  Array Temperature
+<LI> BLUE	Stack B Temperature 
+<LI> GREEN	+YB Current
+<LI> BLACK	Battery B Charge Current <== Note constant values are nominal discharge in no sun
+<P>
+<LI> <A HREF="http://www.aprs.org/pcsat/FINDUdata/pctel_png11_files/pctel.png"><B>Frame 11 Voltages</B></A>
+<LI> RED	A Battery Voltage <== Note slight degradation of A battery relative to B
+<LI> BLUE	B Battery Voltage <== And lack of full charge ever in last month
+<LI> GREEN	B XMTR Power Output
+<LI> BLACK	+8 Bus Voltage
+<LI> GRAY   +5 Bus Voltage (213)
+<P>
+
+ <BR>
+<HR SIZE=5 WIDTH="100%">
+<TABLE BORDER=2 CELLPADDING=2 >
+<TR>
+Return To:
+<TD>
+<CENTER><P><FONT SIZE=+1><A HREF="../pcsat.html">PCsat Main Page</A></FONT>
+</TD>
+
+<TD>
+<CENTER><P><FONT SIZE=+1><A HREF="../sitemap.html"> Site Map </A></FONT></P></CENTER>
+</TD>
+</TR>
+</TABLE></CENTER>
+</UL>
+
+</BODY>
+</HTML>

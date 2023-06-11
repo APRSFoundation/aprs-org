@@ -1,0 +1,62 @@
+Adding APRS to any wireless APP                            12 Nov 08
+--------------------------------------------------------------------
+
+As part of the Universal Amateur Radio text Messaging Initiative, 
+our goal is to have applications running on all wireless devices in 
+use by hams so that they can communiate with any other ham radio 
+operator anytime anywhere by callsign alone.
+
+Please see www.aprs.org/aprs-messaging.html
+
+Since any ham with packet or any of the new APRS integrated radios
+can send and receive text messages and email anywhere to anyone 
+with a callsign, we want to extend this capability to all devices 
+that may be in the hands of a ham at any time.  This is the 
+ultimate in terms of emergency response.
+
+It is so simple to add APRS to any device.
+
+1) The device formulates a position packet to show where it is
+2) It sends that in periodically into the global APRS-Internet
+3) It can send any text-message into the same APRS-Internet port
+
+The APRS-Internet system already knows how to deliver any such text
+message to the end user only knowing its callsign alone.  The 
+above 3 items are trivial to program and fully integrate that
+station into APRS and make the station capable of sending text
+messages to any other ham by callsign.
+
+Since any APRS station can send Email text-messages too, then the 
+cellphone or other wireless APP is assumed to get his reply messages
+via conventional email.
+
+However, it is just as trivial to receive APRS text messages and also
+to plot the locations of surrounding users with some simple additional
+processes:
+
+4) Monitor the same APRS-IS port for any messages to your CALLSIGN
+5) Monitor all APRS traffic within a range of your location and
+   either list this, or plot it on a crude map.
+
+Done.
+
+The format for the outgoing (optional) position report is:
+
+   CALLSIGN>APxxxx:!DDMM.mmN/DDDMM.mmW$comment_text...
+
+The format for an outgoing message to W3XYZ would be
+
+   CALLSIGN>APxxxx::W3XYZ....:message_text.....{##
+
+Where the APxxxx identifies the specific APP just for info.
+Where the {## is a line number so that lines arrive sequentially
+
+The APRS-Internet port can be any of the multiply-redundant and
+cross connected "first.aprs.net" or "second.aprs.net" or "third..."
+etc.  Or they can be any of the Tier-2 servers located all over the
+world. 
+
+If you want to write a "Universal Amateur Radio Text Messaging app,
+please let me help you with any finer details.
+
+Bob, Wb4APR

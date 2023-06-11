@@ -1,0 +1,137 @@
+POSSIBLE APPALACHIAN TRAIL SITES                        14 Nov 02
+-----------------------------------------------------------------
+
+This list is just a "draft" of all locations along the trail that
+intersect access roads.  I need your help (since I am relatively 
+new to the trail) to help me with two things:  
+
+1) I just jotted these down from a map, and they probably are NOT 
+the best names or nomenclature that are used for these locations 
+by the official AT trail folks.  Tell me the official names for
+these locations...
+
+2) If you have personal knowledge of these locations and where
+manned shelter, and power might probably be available, let me 
+know.  If you know that such facilities are NOT near these locations,
+also let me know so I can remove them from the list.
+
+Since I will also use this list to encode starting and destination
+points for each hiker, I need to get this list under 90 (it is 105
+now).  Then I can encode them in a single byte in APRS...  
+
+Here is the draft list starting in Maine and going down to Georgia.
+The APRS column indicates whether there is a possible location for
+power and a shelter for a PC station.  The distance shows the 
+distance from the trail itself (though some areas every hiker may
+in fact leave the trail because the goodies are so tempting anyway).
+I marked those that appear to be in towns or other places where we 
+might find a place to put the PC indoors and sheltered with a ?.  
+When we get feedback from someone that has visited the site and
+confirms that it is a good location for an APRS PC, we mark it with
+either "!" for excellent or "*" for most likely....  A single dot
+"." indicates that there is nothing there and zero potential.
+
+APRS DIST Trail Access point
+---- ---- ---------------------
+ ?        Katahdin
+ ?        Monson
+ ?        Caratunk
+          Route 27
+          Route 4
+          Route 17
+ ?        GraftonNotch SP 26
+          Berlin 26
+          Route 16
+ ?        MtWashington
+ ?        CrawfordNtch SP 302
+ ?        FranconiaNtch I-93
+ ?        Glencliff 10/25
+ ?        Hanover I-91
+          I-89
+          Route 12
+ ?        GilfordWoods SP 4
+ ?        Killington
+          Route 103
+          Route 11
+          Route 9
+ ?        NorthAdams 2
+ ?        Cheshire 8
+ ?        Dalton 9
+          I-90
+ ?        Tyringham
+          Route 23
+          Route 7
+ ?        Mt Everett
+          Salisbury 44
+ ?        Falls Villiage
+ ?        Cornwall BR
+ ?        Pawling
+          I-84
+          Taconic Pkwy
+          Route 9
+ ?        Anthons Nose (hudson)
+          I-87
+          Route 1
+          Unionville 284
+          High Point St Pk 23
+          Culvers Gap 15
+          Mt Tannany I-80
+ ?        Stroudsburg I-80
+ ?        Wind Gap 33
+          Lehigh Gap PA TPK
+          Route 309
+ ?        Port Clinton 61
+          Route 183
+          Swatana Gap I-81
+          Route 225
+ ?        Duncannon (harrisburg )
+          I-81
+          I-76
+ ?        Boiling Sprs 94/34
+ ?        Pine Gv Furnace SP 30
+          Route 1b
+          I-70                  - Homeowner adjacent to trail is happy to provide
+          Wash Mon SP alt-40    - An excellent location in the Picnic Shelter
+          Gainland SP
+ *  0.1   Harpers Fy
+          Snickers Gap 7
+          Ashby Gap 50
+ ?        Sky Meadows SP
+          I-66 (KQ4KK reports seeing a HAM house within eyesite of the trail)
+          Linden
+          Route 522
+          US 211 (Lauray)
+ *        Skyland
+ *        Big Meadows
+          US 33
+ !  0.1   Rockfish Gap I-64
+          Reeds Gap
+          Route 60
+ .        Peaks of Otter
+          Black Horse Gap
+ ?        Daleville (Roanoke)
+ ?        Pearisburg 460
+ ?        Crandon
+          I-77
+ ?        Burks Garden
+ ?        Groseclose I-81
+ ?        Grayton Highroads SP
+ ?        Damascus
+          Route 421
+          Route 321
+          Laurel Forge Gorge
+          Route 19E
+          Spivery Gap 19W
+          Route 23
+          Routes 70/208
+          Hot Sprs NC 25/70
+          Davenport Gap I-40
+          Newfound Gap
+          Fontana Lake?
+ ?        Wesser
+          g4
+          Dick Ck Gap 76
+          Routes 17/75
+ !   0.0  Neels Gap 19/129
+ *   "7"  Amicalola Falls SP
+

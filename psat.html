@@ -1,0 +1,444 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+   <TITLE>ParkinsonSat (PSAT) Page</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (Win95; I) [Netscape]">
+   <META NAME="Author" CONTENT="Bob Bruninga">
+   <META NAME="Description" CONTENT="ParkinsonSat APRS Satellite Project">
+   <META NAME="Keywords" CONTENT="ParkinsonSat, Parkinson, satellite, PCsat, buoy, ocean,environmental sensors, APRS, APRsat, buoys, oceanography, Satellite, Cubesat,  Tracking, Bruninga, LEO, GPS">
+   <META NAME="Classification" CONTENT="Science">
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#48D1CC" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000">
+
+<IMG SRC="psat/Psat-Antennas-Constrained-ax.gif" align=right height=450 width=330>
+
+<CENTER><P><B><U><FONT SIZE=+2>
+PSAT - 2015-to-2021 APRS/PSK31 Cubesat Mission
+
+</FONT></U></B>
+
+<P>
+<P><FONT SIZE=-1>
+Bob Bruninga, WB4APR, Instructor US Naval Academy (last name at usna dot edu)
+<BR>Midshipmen students: Odowd, Colby, Elward, Bell(2014)
+<BR>Carlos, Gutierrez, Toombs(2013)
+<BR>Crawford, Lumsden, Guilfoyle, Randall, Ridge, Pollock, Schlottmann (2009)
+<BR>Icard, Edirisinghe, Mayer, Papso, Phillips (2008)
+<BR>Campbell, Dendinger, Lewis, Lindsay, Londono, Mayer, Okun (2007)
+<BR>Paquette, Robeson, Koeppel, Piggrem, Lovick & Vandegriff (2006)
+<BR>Edwards, Oceanography (2005) and Humberd, EE (2004)
+</FONT><BR></CENTER>
+
+<P>
+
+
+<B> PSAT was Launched 20 May 2015 and designated as NO-84</B> on the AFSPC-5 launch and deployed from the 
+<A HREF="http://www.nro.gov/news/press/2015/02-15.pdf">ULTRAsat deployer</A> along with 10 other cubesats.
+As a small Cubesat, it provided over 6 years of service to the Amateur Radio Community.
+The Orbit decayed with the last dowlink of the PSK31 transponmder recorded on 22 Dec 2021 at 14:40 UTC.
+
+<BR>See also its <A HREF="psat2.html"><B>followon PSAT2 </B></A> NO-104 launched in June 2019.
+<P>
+
+<A HREF="psat/last-packets.txt"><B>See last packets summary</B></A> and 
+<A HREF="psat/last-temps.png"><B>See last temps</B></A> show no rise above 34C max daily temps since Oct
+<P>
+<IMG SRC="psat/psat-SPIN-RPM.png" height=200 width =350 align=right>
+
+<B>PSAT Solar Radiation Spin:</B> On 14 Jan 2017, PSAT enterd a 4 day full sun period on 10 Jan and we happened to collect some spin data.   
+<A HREF="psat/DK3WN-spin-data.png"><B> DK3WN captured spin data on 8 Jan</B></A> 
+while eclipses were at 26 minutes showing about 9.4 RPM, but by 14 Jan it was noted by KO6TZ to have spun up to 11.7 RPM
+ and got as high as 15 RPM in full sun.
+
+The spin is a result of the radiometric torque from the differential color on each of its XY sides as shown at right.  
+We did not need this much spin, just enough to keep the sides thermally balanced.  We over did it apparently.  
+1 RPM would have been a nice round number (like PCSAT which stabilized at 0.6 RPM)...
+<P>
+ Thomas observed itw final spin rate before deorbit in Jan 2022 as about 6.8 RPM.
+
+
+
+<P>
+
+<LI><B>Packet Up/Downlink</B> . . 145.825 1200 bd APRS (shared w ISS, PCSAT, UO11 & more!) <B> Use aliases: ARISS or APRSAT</B>
+<LI><B>PSK31 Downlink</B> . . . . . 435.350 MHz +/- 5 kHz FM (300 mw)
+<LI><B>PSK31 Uplink</B> . . . . . . . . 28.120 MHz +2 kHz PSK31 SSB (75 watts into omni vertical authorized)
+<LI><B>Latest TLE's</B> . . . . . . . . .  
+<A HREF="http://www.amsat.org/amsat/ftp/keps/current/nasabare.txt"><B>from AMSAT.org</B></A>
+<LI><B>A Great Presentation</B> . . 
+<A HREF="http://dk3wn.info/files/psat_talk_dk3wn_Amsatuk_colloq_2015.pdf"><B>PSAT Talk by DK3WN</B></A> describes the mission and evolution of PSAT from PCSAT and other APRS satellites
+
+<P>
+<IMG SRC="PSAT2/PSAT2-PSAT-double-hop.png" align=right>
+
+<B>PSAT Mission:</B> To continue the APRS packet radio satellite network that can digipeat user packets just like the original 
+<A HREF="pcsat.html"><B>PCSAT</B></A> (NO44)
+and the packet system on the ISS using the same generic digipeating alias of ARISS and APRSAT so that users do not have to change any parameters when using any of these three APRS transponders. Note, however, that APRS digipeating is only a secondary mission and the transmitter is only 300 mW, almost 9 dB weaker than PCSAT and easily 16 dB below ISS!.  Also, a bug prevents PSAT from digipeating via its own callsign!.  Use ARISS or APRSAT instead.</B></i>
+<P>
+
+<B>Double-Hop Packets:</B> Since the APRS Satellites PSAT and PSAT2 and ARISS all support the generic 
+alias of ARISS, then if one is lucky, it is possible to get a double hop off of a second APRS 
+satellite as shown at right.  Users would use the path of ARISS,ARISS, but in this case, the telemetry
+from PSAT2 only needs to use the path of AIRSS to digipeate off of a neighbor APRS satellite.
+
+<P>
+<B>LIVE TELEMETRY:</B>
+<P>
+<LI><A HREF="http://pcsat.findu.com"><B>User Digipeated Packets only</B></A>.  For less clutter, satellite telemetry now has individual satellite 
+     <A HREF="sats.html"><B>links</B></A>.
+
+<LI><A HREF="http://www.findu.com/cgi-bin/raw.cgi?call=psat,psat-1&amp;time=1"><B>PSAT's Live telemetry packets (raw)</B></A>
+<LI><A HREF="http://www.findu.com/cgi-bin/tele1.cgi?call=psat,psat-1&amp;last=24&amp;param=1&amp;b=.00976&amp;label=Battery%20Volts&amp;units=Volts%20%5Bnew%200.00976%20Factor%5D&amp;autorange=1">
+    <B>Bus Volts</B></A>, and <A HREF="http://www.aprs.org/PSAT/Voltage-thresholds-b.png"> Voltage-thresholds</A>
+
+<LI><A HREF="http://www.findu.com/cgi-bin/tele1.cgi?call=psat,psat-1&amp;last=24&amp;param=3&amp;a=-.000338&amp;b=.3884&amp;c=-77.3&amp;label=Zplus%20Temperature&amp;units=DegC&amp;autorange=1">
+    <B>Z+temps</B></A>, 
+    <A HREF="http://www.findu.com/cgi-bin/tele1.cgi?call=psat,psat-1&amp;last=24&amp;param=3&amp;a=-.000338&amp;b=.3884&amp;c=-77.3&amp;label=Zminus%20Temperature&amp;units=DegC&amp;autorange=1">
+    <B>Z-temps</B></A>, 
+    <A HREF="http://www.findu.com/cgi-bin/tele1.cgi?call=psat,psat-1&amp;last=24&amp;param=2.05&amp;b=2&amp;label=Battery%20Current&amp;units=Milliamps&amp;autorange=1">
+    <B>Batt Current</B></A>, and 
+    <A HREF="PSAT2/Current-analysis.png"> How to read current</B></A>.
+<LI><A HREF="http://www.findu.com/cgi-bin/tele1.cgi?call=psat,psat-1&amp;last=240&amp;param=0&amp;b=1&amp;label=Minute%20Counter&amp;units=Minutes%20(16hrs)&amp;autorange=1">
+    <B>Telemetry Counter</B></A> (minutes since last reset or rollover).
+
+
+
+
+<P>
+<IMG SRC="psat/PSK31-capabilities-table.png" height=120 width=300 align=right>
+
+<B>PSK31 Primary Payload:</B> But the real excitement is the Brno Universtiy PSK-31 transponder that is also on PSAT.  
+<A HREF="http://www.urel.feec.vutbr.cz/esl/"><B> (See Brno PSK31 details) </B></A>.
+It is the Primary mission and has priority when power is available for user uplinks and is working well.
+A modest antenna can copy the FM waterfall downlink horizon to horizon and permits dozens of simultaneous PSK31 users to operate full duplex and maintain a continuous group dialogue throughout the pass.  But operating full duplex on PSK-31 is new and it will take a while for users to figure out how to do this.  KO6TD has prepared the table at right of capabiites of typical PSK31 user software.  Only WinPSK can operate full duplex but a special PSAT PSK31 uplink has been written so you can use any other program too. 
+
+<P>
+<B>You cannot use normal Doppler Radio Tuning on PSK31:</B> Any attempt to correct for Doppler by tuning the radio (as is standard practice for other satellites) will not work with PSK31.  When the radio steps in frequency, no matter how small, a phase discontinuity results and that corrupts PSK31.  So make no attempt to correct the uplink SSB signal with radio tuning.  It is OK to let the software adjust the FM UHF downlink the usual 5 KHz steps since it is only 4 times during the pass.  But not the SSB uplink.
+<P>
+
+<B>Operating PSAT PSK31 Properly - And full Duplex:</B> Andy, K0SM wrote a PSK31   
+<A HREF="http://www.frontiernet.net/~aflowers/dopplerpsk/dopplerpsk.html">
+<B>TX-only program</B></A> that not only corrects for Doppler only at the Audio level, but it also lets your run full duplex with your existing PSK31 downlink.  It pre-corrects the audio for Doppler on the uplink as shown below so that your signal remains constant in the downlink!  You can see his uplink coming down as a straight track while others are showing Doppler.  Most PSK31 clients can compensate for up to 1 Hz/sec of Doppler, but Andy's program makes your signal constant.  Other users without compensation, can drift from 1 to 6 Hz per second depending on where they are relative to the track of the satellite.
+<P>
+
+<B>Auto-Tuning Warning!</B> PSK31 needs phase coherence down to a few Hz to properly decode.
+You cannot use automatic rig-control/tracking-tuning because everytime you step the radio frequency, 
+there will be a Phase shift and any PSK31 decoding will loose sync until it can rephrase.  If you are updating the radio at say every
+10 Hz, you will most likely not decode anything!  
+The solution is to set your software to only step the radio once every 2.5 KHz to minimize these glitches 
+and loss of characters while still keeping the FM signal in the passband.
+<P>
+<IMG SRC="PSK31/PSK31-compensation.png">
+<P>
+<IMG SRC="psat/2014/PSAT-photo-Y-408xr.jpg" align=right>
+
+
+<P>
+<B>APRS Digipeater is ON:</B> But the 350 mW transmitter is pretty weak by digipeater standards.  When the DIGI is on, the satellite callsign is PSAT.  When it is off (SAFE mode), the callsign is PSAT-1.  The digipeat ALIASes are the usual, ARISS, APRSAT (and WIDEn-N if you forget).  PSAT does NOT digi via its own callsign (bug).  PSAT also has the ability to report its own APRS position in standard
+APRS format so users can see where it is on the front panel of their APRS radios.
+[This takes supstantial SYSOP effort and so is not being used...]
+<P>
+
+<B>LIVE Telemetry Downlink:</B> is now captured on Steve Dimse's, K4HG original
+<A HREF="http://pcsat.aprs.org"><B>pcsat.aprs.org</B></A> web page.  APRS packet is a secondary mission so the digipeater may be turned off if power is low.  But beacons, telemetry and Bulletins will always remain.  The five Telemetry Equations (after the serial number) in standard APRS telemetry format are:
+<P> <B>Format:</B> . . . . . T#SSS, VVV, I I I, XXX, YYY, ZZZ, 00011X00
+<P > VVV. . . = Bus Volts in hundredths
+<BR> I I I . . . . = Bus Current in mA
+<BR> XXX. . . = Temp +Z where T = -1.26E-6*X^3 +0.0028*X^2 -2.215*X + 625
+<BR> YYY. . . = Temp - Z where T = -1.26E-6*X^3 +0.0028*X^2 -2.215*X + 625
+<BR> ZZZ . . . = TempBat where T = -2.57E-6*X^3 +0.0061*X^2 -5.149*X +1475
+<BR> In the 00011X00 field, only the X has meaning. 0 = DIGI ON, and 1 = Digi off
+
+<P>
+
+<B>Launch was at 1504z on 20 May 2015</B> from the Cape with 
+separation over Texas an orbit later and then the delayed 50 minute timer activated the power bus
+over New Zealand.  First packets heard on next orbit over USA.
+All systems go except 1) a code error means we have lost 1-of-3 backup on-orbit
+reset capabilities 2)another bug does not allow smart power management via reduction of routine packets in the dark and 3) It does not respond to its own MYCALL.  But so far, these are not critical.  We seem to have plenty of power except for some sun angles.. 
+ Sister cubesats from same P-Pods were BRICsat on  437.975 MHz and USS Langley on 437.475 MHz both 9600 baud AX.25 packet telemetry.
+Please IGate APRS data live into the global APRS-IS so it shows on <A HREF="http://pcsat.aprs.org"><B>pcsat.aprs.org</B></A>.  Report any unusual events to Bob Bruninga, WB4APR, lastname at usna.edu. 
+<P>
+
+<IMG SRC="psat/2014/First-spin-data-x.jpg">
+<P>
+<B>First SPIN data:</B> Initially, PSAT appeared to be spinning about the Z axis as designed.  On the 3rd day  (first spin data) the spin about the Z axis was about 3.0 RPM with little wobble and the +Z axis pointed about 45 degrees off the Sun.  This gives max power as all three axes are always illuminated. You can see how we manually decode
+the <B>S#OOOMM...</B> status packet alphabet soup to plot the 1 minute spin samples in the photo above.  Or you can see how Ken Ernandes later <A HREF="psat/2014/First-spin-data-xX.jpg"><B>plotted it</B></A>.  By the end
+of the sun side of the orbit, the +Z panel is reaching +60C (140F).  By the 10th day, though, the spin was down to 0.62 RPM.  And was down around 0.2 RPM for almost 25 days, then at the time it enetered a 10 day period of full Sun, it has been up between 3 and 6 RPM ever since (actually as high as 15 RPM).
+<P>
+<B>Unique Battery Design Required Spin:</B> Each side panel only charges 2 of the 6 NiCd cells and so spin was essential for even charging.  This design let us use large solar cells summing to only 2.8 volts per side panel.  The minimum required spin would be 0.02 RPM to assure that each solar panel saw the sun at least ONCE in every 60 minute sun period.  The differential white/black coloring we used gave us 500 times more than that!
+
+
+<P>
+
+
+ <B>This is one of five APRS Networked Amateur Satellites that will be on Orbit in 2015 and all will appear on the live <A HREF="http://ariss.net"><B>APRS downlink page</B></A>.</B>
+<P >
+<A HREF="outnet.html"><B>OUTNET</B></A> a global APRS channel on 3 GEO satellites!
+<BR><A HREF="pcsat.html"><B>PCsat-1</B></A> in orbit since 2001 semi-operational
+<BR><A HREF="ariss.html"><B>ARISS</B></A> on the ISS since 2007
+<BR><A HREF="psat.html"><B>Psat</B></A> Now on Orbit! May 2015
+<BR><A HREF="psat-2.html"><B>Psat-2</B></A> Now delayed till Dec 2017
+<BR><A HREF="qikcom-1.html"><B>QIKCOM-1</B></A> Sitting on ISS since Dec 2016 awaiting FCC SNAFU to be turned on.
+<BR><A HREF="qikcom-2.html"><B>QIKCOM-2</B></A>with APRStt (DTMF) for launch Dec 2017
+
+<P>
+
+<IMG SRC="buoy/constellation.GIF">
+<P>
+
+
+<IMG SRC="psat/Tracking-world-map-FINDU-gnd-stns-b.png">
+<P>
+
+The map above shows the ground stations that have IGated PSAT packets to the APRS-IS (internet system).
+Although these are the same stations listening to 145.825 as the ISS, the ISS station is 14 dB stronger (10W versus 0.35W for PSAT).  So only IGates with good weak signal performace are successful with PSAT.  As you can see, we need IGates in Hawaii, India, China and the Southern Hemisphere.
+
+<P>
+<img src="psat/omni-antenna-vertical-a.png" align=right>
+
+<B>Satellite IGATE Antennas:</B>  The least maintenance IGate antenna is an OMNI (so it does not wear out or require rotators) and it has decent gain above about 30 degrees and less gain on the horizon (where it cannot hear
+a 350 mW satellite anyway). 
+See (<A HREF="aprs-satellite-igate-antennas.html"><B>SatGate Antennas</B></A>) Not only is the gain higher at these elevations, but the satellite is also
+ 6dB closer, thus giving a combined gain of nearly 13 dBi similar to an OSCAR class beam.  (Note, an omni will probably not hear PSAT at all but is OK for the ISS and other 2W APRS satellites).
+ Another reason for minimizing gain on the horizon is the Donut-Hole NULL effect where any IGate that hears a
+user station <i><b> direct</B></i> will send that into the APRS-IS first and that will cause the 
+subsequent space digipeated packet to be a DUPE and will be ignored by all IGates.  So a mobile or
+terrestrial omni is the worst omni (maximizes gain on horizon and usually has a null around 20 or 30
+degrees which is where the satellite is best located!  
+<P>
+
+A good Satellite OMNI Igate antenna is
+a non-gain 1/4 wave vertical (19.5" over a large ground plane).  Even better (+2 dB) is a 3/4 wave vertical
+(58" high) over a large ground plane shown here.  It has nearly 7 dBi gain above 30 degrees, plus the +6 dBi closer range gain and not much at all on the horizon.  It is best placed low in the yard to further minimize horizon gain as shown here.
+
+<P>
+
+<IMG SRC="psat/2014/DITL-equipment0002x.jpg" align=right>
+
+<B>OVERVIEW:</B> . PSAT was built by a group of students at the Naval Academy and named
+ in honor of one of our graduates,
+<A HREF="http://en.wikipedia.org/wiki/Bradford_Parkinson">Dr Parkinson</A> of GPS fame, 
+ and funded from a gift to the Academy in his honor.  PSAT contains an APRS packet radio communications transponder for relaying remote telemetry, 
+sensor and user data 
+from remote users and amateur radio environmental experiments or other data sources back to 
+Amateur Radio experimenters via a global network
+of internet linked volunteer ground stations.  The data transponder also includes all 
+telemetry, command and control for a complete cubesat.  A secondary transponder supports multi-user PSK31 text messaging users via a Brno University transponder. 
+
+<P>
+<B>See the 
+
+<A HREF="psat/AMSAT-2010c.doc">Psat paper</B></A> at the 2010 AMSAT symposium
+
+<P>
+
+<B>Operations in the Amateur Satellite Service:</B>
+Both of the transponders on PSAT are operated in the Amateur Satellite Service to encourage 
+amateur radio students, 
+educators and experimenters 
+around the world to contribute additional satellities to this constellation on 145.825 MHz or
+to build interesting self motivated remote sensors suitable for the uplink channel.
+ See our
+<A HREF="buoy.html"><B>ocean or bay oceanographic data buoys</B></A> for examples.
+  
+This kind of Amateur Radio experimentation fits well in the ITU rules
+<A HREF="psat/IARU-rules-psat.txt"><B>(see Psat justification)</B></A> 
+for operating in this service
+and well serve our educational and outreach goals for student projects encouraging young people to
+be interested in Science, Technology, Engineering and Math.  The satellite is operated under the license of our control operator, WB1HAI, Todd Bruner in Annapolis.
+
+<P>
+
+<B>APRS Packet Transponder:</B> The APRS packet transponder 
+is an AX.25 Packet Radio Relay similar to what is flying on 
+<A HREF="pcsat.html"><B>PCsat</B></A> and the
+<A HREF="http://www.aprs.org/ariss.net"><B>ISS</B></A>.  This ongoing mission in space on the original PCsat 
+is now over 12 years old and pioneered
+this very popular operating mode via the ISS since 2006.  Both of these 
+missions deliver packets to users worldwide via the global network of
+volunteer ground stations feeding the two downlink capture pages:
+<A HREF="http://pcsat.aprs.org"><B>psat.aprs.org</B></A> and
+<A HREF="http://ariss.net"><B>ariss.net</B></A>.  These pages display live maps such as the one
+above, of the most
+recent user position data and capture all message traffic between users. 
+See the <A HREF="psat/APRS%20Link%20Budgets%20for%20Psat-a.doc"><B>APRS link budgets</B></A>. In addition there
+is also a PSK31 transponder as noted below.
+<P>
+
+<P>
+<IMG SRC="psat/aprs-world-map.jpg">
+<P>
+
+<IMG SRC="psat/PSK31-uplink-antenna-plot.gif" align=right>
+<IMG SRC="psat/PSK31slide2.jpg">
+<P>
+
+<IMG SRC="psat/range-gain.gif" align=right>
+
+<B>PSK31 Transponder:</B>  The Brno University 
+<A HREF="http://www.urel.feec.vutbr.cz/esl/"><B> PSK31 Multi-user FDMA transponder experiment</B></A> is
+similar to what we flew on 
+<A HREF="craft/save-raft.html"><B>RAFT</B></A> and
+<A HREF="pcsat2.html"><B>PCSAT2</B></A> missions. 
+<A HREF="psk31uplink2.html"><B>See the full PSK31 design concept here</B></A>.
+This text messaging transponder allows messaging between up to 30 modest ground stations simultaneously.
+In the example waterfall display above, 10 users are clearly visible. 
+Each user transmits a 31 Hz wide narroband transmission within the 3 kHz wide transponder, and all
+can be seen simultaneously via the UHF FM downlink.  Uplink stations do not need gain antennas on the
+HF uplink but can use a vertical monopole antenna and 75 Watt SSB transmitter to give the transmit antenna profile
+as shown above.  
+To calculate the <A HREF="PSK31/PSK31%20Link%20Budgets%20for%20Psat-b.doc"><B>PSK31 link budgets</B></A>
+we combined the user TX antenna gain profile with the variation in range gain from the horizon to 
+over 60 degree elevation as shown here at right.   The combination gives an uplink power variation
+per user of less than +/- 4 dB over 90% of the duration of the pass. 
+
+
+
+  
+<P>
+<IMG SRC="psat/PSAT-orbit-2.png" align=right>
+
+<B>CUBESAT MODEL:</B> Back in 2008, we re-designed the 
+ <A HREF="psat/P-Sat-ideas-modelX.GIF"><B>original 1 cubic foot </B></A> ParkinsonSAT to fit inside the a 1.5 unit cubesat so that two Psats could be launched from the same P-Pod launcher.  That
+design used four deployable solar arrays in a sunflower configuration and pointed towards the sun with a 3 axis ADCS. 
+Half of the 1.5 unit Psat was available for auxilliary payloads or experiments such
+as the Brno University PSK31 experiment.
+  The current 2014 design remains a 1.5U cubesat but with higher efficiency
+solar cells, we no longer need the deployable side petal panels and can operate
+with fixed side panels as shown at the top of the page.
+<P>
+
+<B>Unique Power System:</B>  This model with the 4 large and efficient solar cells per
+side is designed around a 
+<A HREF="psat/2014/inhibits-three.gif"><B> unique power system</B></A>.  Since the total solar voltage per side
+is only 3.2 volts (0.8 volts per multijunction cell) we cannot charge the complete
+9.6v battery string, but can charge two NiCd cells per solar panel.  These 4 side-panel/NiCd-pairs
+are operated in series for the 9.6v bus, but are charged in parallel.
+This parallel charging of no more than two NiCd's in series per solar panel
+reduces one of the primary problems with spacecraft battery charging systems and that is
+the uneven charge balance that accumulated when entire strings are charged in series.
+
+<P>
+
+
+<B>Attitude Control:</B> The primary attitude control requirement is to evenly expose the four 
+side panels to the sun so that the NiCd cells are equally charged and to even-out the
+thermal load on the panels.  A very slight spin about the Z axis is maintained by 
+the unbalanced solar radiation pressure on each side.  A highly reflective strip on the clckwise edge
+ receives greaterr radiation pressure than the momentum transfer to the mostly black solar panels.
+This should create a fractional RPM spin (the Spin on PCsat now, 12 years in orbit is maintained
+between about 0.6 and 0.8 RPM by this method).  Secondly, an active Z-Align algorithm using
+a single Z coil activated at appropriate locations in the Earths Magnetic Field will be used
+to keep the Z axis aligned approximately with the Earths poles so that the side panels are
+always within +/- 23 degrees or so of the Sun.  
+This can maintain more than 90% power budget through the seasons.
+<P>
+<IMG SRC="psat/PSAT-continents.png" align=right height=300 width=500>
+
+
+<B>PSAT Position Reporting:</B>  PSAT like every other APRS Station sends its live position once every minute
+so that its location appears on the front panel of all APRS user radios so they can know which way to point
+their antennas.  But rather than flying a very expensive space rated GPS, we simply use the fact that the
+orbit is fixed and so PSAT can run a 95.16 minute Mean Anomoly clock synced to the orbit period and
+then use a table of LAT/LONG values to downlink its position based on the minuute in the 95.16 minute orbit.
+Then every orbit the clock tics over, the longitude is shifted by the oribtal longitude increment as shown here.
+
+<P>
+<B> Continetnal Bulletins:</B> Since the above scheme allows PSAT to know where it is, then it can use that
+information to customize its bulletins to match the continent that it is over at the time.  We have programmed
+PSAT to send unique bulletins over the LAT/LONG continental boxes shown here.  There are three possible beacons for each continent. They are alternated every minute.
+
+<P>
+<IMG SRC="psat/TinyTrack4-pix1x.JPG" height=220 width=270 align=right>
+
+<B>Global Experimental Data Channel:</B>  PSAT is the space segment of this
+initiative to encourage both new satellite construction in support of this experimental
+data channel and lower cost buoy and
+sensor experimentation at other schools as shown below.  
+Today, the only amateur satellites that are available for 
+students and schools to support such experiments are the PCSATS built by students at the Naval Academy and on the ISS.  But with 
+ParkinsonSAT we hope to commence an ongoing full time presence in
+space to continue this support of the 145.825 data uplink channel for future experiments.  
+To this end we hope other schools to either build additional 145.825 MHz relay satellites 
+and/or to build experimental sensors.  The complete comms system including data
+transponder fits on one 3.4 inch square card <B><i>shown here</B></i>.
+  We hope that ParkinsonSAT will be the Egg in this 
+chicken-egg conundrum.
+<P>
+
+<B>The 2014 Final Design:</B> When the 2014 launch opportunity becamse available, and since all the original design students were long gone and the design had not been thoroughly vetted, the system was redesigned and simplilfied.  Here are the final docs
+for the PSAT delivered in January 2015 and launched on 20 May.
+<P>
+<IMG SRC="PSAT2/SWR-testing-0160x.jpg" align=right height=330 width=450>
+<LI><B>Tuning the Antennas on a Cubesat</B> requires the SWR analyzer to be inside the cubesat as shown here ==>
+<LI><A HREF="psat/2014/BatteryBoard-image.gif"><B> Two Battery Boards</B></A> 4 NiCd's on one, and 2 on the other
+<LI><A HREF="psat/2014/board-stack+wires-L.gif"><B> Board Stack cross-section</B></A> surrounded by batteries and ballast
+<LI><A HREF="psat/2014/board-stack-wires-bottom-view-b.gif"><B> Stack Wiring </B></A>
+<LI><A HREF="psat/2014/Burn-corner416x.jpg"><B> Burn Resistor</B></A> constraining 4 antennas and the 3rd inhibit switch via nylon line
+<LI><A HREF="psat/2014/ground%20track.jpg"><B> Ground Track</B></A>
+<LI><A HREF="psat/2014/GSE-schematic-ex.gif"><B> Ground Support Equipment</B></A> schematic
+<LI><A HREF="psat/2014/internal-structures-labeled-x.jpg"><B> Skeletal View</B></A> showing equator ballast to maintain Z axis inertia
+<LI><A HREF="psat/2014/inhibits-three.gif"><B> Three Inhibits</B></A> showing 3 inhibits and unique solar panel wiring
+<LI><A HREF="psat/2014/MTT4-flight-harness-d.gif"><B> Microtrack harness</B></A> and GSE connector
+<LI><A HREF="psat/2014/Orbital-decay.gif"><B> Orbital Decay</B></A> and
+     <A HREF="psat/2014/orbit-life.gif"><B> Orbit Life</B></A> prediction
+<LI><A HREF="psat/2014/PowerControl-circuit-Yz-public.gif"><B>Power Control </B></A>
+<LI><A HREF="psat/2014/PSAT-countries.gif"><B> APRS Countries </B></A> used to estimate activity and power budget
+<LI><A HREF="psat/2014/PSK-switch425x.jpg"><B> 3rd inhibit switch</B></A> showing nylon constraint line
+<LI><A HREF="psat/2014/Release-mechanism-x.gif"><B> Release Resistor </B></A>design showing tied nylon line on Nitinol antenna wires
+<LI><A HREF="psat/2014/Y+side97x.jpg"><B> Antenna Detail</B></A> shows how 2 UHF, one VHF and 1 72" HF antennas were constrained
+<LI><A HREF="psat/APRS%20Link%20Budgets%20for%20Psat-a.doc"><B>APRS Antennas and Link Budgets</B></A>
+<LI><A HREF="psat/PSK31%20Link%20Budgets%20for%20Psat-a.doc"><B>PSK31 Antennas and Link Budgets</B></A>
+<P>
+
+<HR SIZE=5 WIDTH="100%">
+
+
+
+<P>
+
+<B>BACKGROUND:</B> Previous student project satellites built at the Naval Academy are
+<A HREF="pcsat.html"><B> PCsat </B></A>, 
+<A HREF="pcsat2.html"><B> PCSAT2 </B></A>, 
+<A HREF="ande-raft-ops.html"><B>ANDE and RAFT</B></A> 
+  satellites launched in 2001, 2005 and 2006
+provided links back to the APRS internet system from simple student projects
+anywhere in the world.
+These satellites can relay position/status and telemetry about 2 to 4 times a day 
+back to shoreside observers as a small part of the overall 
+<A HREF="aprs.html"><B>APRS</B></A> system used by 10's of thousands of terrestrial  
+users and vehicles.
+<P>
+<IMG SRC="buoy/constellation.GIF">
+<P>
+<B>2008 and 2010 DESIGN DOCUMENTATION:</B> . As a Student Design project by Aerospace students at the
+US Naval Academy, the design evolved significantly over the 7 years as different students passed through the project and while waiting for a  launch.  Initiated
+in 2006 with gift funding from Aerospace Corp in honor of the retirement of Dr. Parkinson of GPS fame,
+the original 1 cu Ft model evolved into a cubesat in 2008 and a significant attitude control system in 2010.  PS, It was launched and became operational in May 2015.
+<P>
+
+All of the details of those earlier designs have been moved to a separate
+<A HREF="psat-old.html"><B> page</B></A>.
+
+<P>
+
+
+
+
+
+<P>
+<HR SIZE=5 WIDTH="100%">
+<TABLE BORDER=2 CELLPADDING=2 >
+<TR>
+
+<TD>
+<P><FONT SIZE=+1><A HREF="sitemap.html"> WB4APR's overall Site Map </A></FONT></P>
+</TD>
+</TR>
+</TABLE>
+</UL>
+
+</BODY>
+</HTML>

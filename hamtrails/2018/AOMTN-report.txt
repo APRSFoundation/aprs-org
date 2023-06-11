@@ -1,0 +1,34 @@
+***************************************************************************
+*               ATGP 2018 Report for Apple Orchard Mountain              75
+***************************************************************************
+
+1144:  Wow just got a blast of air traffic control on my receiver. I turned 
+on VHF AIP, menu setting 103 to help.
+
+Oh for a cavity.
+
+John
+------------------------
+
+I guess it is obvious by now I could not decode Hawksbill packets reliably 
+despite very successful, after some cell phone coaching by Eric (TU), 
+attempts at moving the AOMTN antenna to bring its signal from about 3 bars 
+to well over 8+.
+
+I never had a problem decoding anything else. Hawksbill never had a problem 
+decoding anyone else including AOMTN. I just could not decode Hawksbill.
+
+Signal strength was not an issue. When I listened to the audio I could hear 
+some distortion. I recorded it for later analysis. Perhaps multipath?
+
+9600?
+By the way, before AOMTN and Hawksbill signed off near 3 pm, we both 
+switched to 9600 to see what would happen. Perfect decode both ways.
+This isn't the first time Kenwoods have proven they do 9600 better than 
+1200, so this is another data point confirming that fact. Jeff Thomas 
+(wa4zko) has preached about this before.
+
+The ATGP never fails to entertain and we get to breath fresh air as well.
+
+73
+John, kx4o

@@ -1,0 +1,145 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+   <TITLE>OUTNET ARISS Grid Idea</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (Win95; I) [Netscape]">
+   <META NAME="Author" CONTENT="Bob Bruninga">
+   <META NAME="Description" CONTENT="ParkinsonSat APRS Satellite Project">
+   <META NAME="Keywords" CONTENT="Psat, outernet, ax.25, packet satellite, PCsat, buoy, ocean,environmental sensors, APRS, APRsat, buoys, oceanography, Satellite, Cubesat,  Tracking, Bruninga, LEO, GPS">
+   <META NAME="Classification" CONTENT="Science">
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#48D1CC" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000">
+
+
+<IMG SRC="OUTNET/Patch08x.jpg" align=right>
+
+<P><B><U><FONT SIZE=+2>
+A Grid Plotting Routine for ARISS School Contacts
+
+</FONT></U></B>
+
+<P>
+<P>US Naval Academy Satellite Lab, <FONT SIZE=-2>
+<BR>Bob Bruninga, WB4APR
+lastname@usna.edu
+</FONT><BR>
+
+<P>
+<B>Shown at right is a typical Outernet Ground Station.  </B> It is completely self contained.  Needing only 5v, 2A power, it receives Outernet files via
+the three Geostationary satellites and builds an Outernet cache of files
+and then makes them available to any WiFi device in range via any browser.
+
+<P>
+<B>See my full <A HREF="outnet.html"> OUTNET web page</B></A> to see the full concept.
+
+<P>
+<B>One such data file is the Weekly AMSAT Astronaut School Contact Schedule files.</B>  This page wonders if we can tie that into the Outernet globe
+graphics plots to show the locations of the school contacts for others that
+might want to tune in.  And then to use the Outernet SDR receiver to actually
+tune in the astronaut ham radio downlink on 145.800 MHz.
+<p>
+
+<IMG SRC="OUTNET/ARISS-school-grids.png" height=300 width=400> . . . 
+<IMG SRC="OUTNET/outernet-globe-grids.png" height=300 width=400>
+
+
+
+<P>
+<IMG SRC="OUTNET/LNA-2mWhip07xxr.jpg" align=right>
+
+<B>Plotting ARISS Scheduled Astronaut School Contacts:</B>
+ Wouldn't it be neat if a small script could be written for the Outernet
+Receiver that could look into the weekly ARISS School Schedule news file
+and parse out the LAT/LONG of the upcoming school contacts from the listed Grid Square indicated as GRD:XY in the file above.  These
+contacts are with schools all over the world, and during a school contact
+anyone with a reveiver tuned to the 145.800 MHz downlink can hear the
+astronauts directlly!  As you can see in the above news file, we have added
+the two-character grid square to each school entry.  This is sufficient to
+locate the school's surrounding 600 by 1000 mile footprint.  All stations within
+that footprint should be able to hear the School contact event directly.
+
+<P>
+<IMG SRC="OUTNET/parse-code-b.png" height=250 width = 300 align=right>
+
+The image on the right plots the area of that two letter grid on the Outernet Globe application as shown here.  That interactive globe graphics is already
+built-in to the Outernet file system.
+
+<P>
+<B>Using the Outernet Receiver to Tune it in!</B>
+ 
+And wouldn't it be neat if the Outernet Software defined radio then would
+simply tune to that frequency directly during the event so that the 
+Outernet receiveer itself coult be used to hear the Astronauts?
+This is entirely within the tuning capability of the SDR receiver.
+<P>
+
+
+<LI>All we need is to write the parser to find the Grids in the schedule.  See the code summary here  ==>
+<LI>All we need is to TUne the SDR radio to 145.800
+<LI>All we need is to add a 19 inch whip antenna for 145 MHz to the SDR receiver
+<LI>All we need is a way to switch the antennas
+<P>
+
+<P>
+<B>My attempts to modify my setup:</B>
+Of the above tasks, about the only thing I can do is antennas.  So here are some photos of
+my attempts to rig something up.  First, I added a series tuned resonant
+circuit to couple the 2 meter whip to the coax connector on the output of
+the LNA.  The idea was that the SDR can  hear the VHF signal there.   The photo on the far right then shows the assembled L-band LNA with the added 2m whip antenna.
+<P>
+
+<IMG SRC="OUTNET/LNA-mod02x.jpg">
+
+<P>
+ The next photo then shows the oudoor Outernet Patch antenna and LNA with the modified
+2m whip.  The green electronics board has nothing to do with this project.  It 
+is just something already inside this plastic radome cover.
+<P>
+
+<B>This DID NOT WORK.</B>  ALthough I provided good isolation with the series circuit to the 2m antenna, I did not provide any reject filtering of the 1.5 GHz output of the LNA.  SO clearly, with over 30 dB gain going right into the based of the 2m
+whip, there was huge potential for front-end 1.5 GHz feedback generating
+huge massive front end overload.  After the mod, the Outernet receiver could not
+find any satellite signals.
+
+<P>
+
+<IMG SRC="OUTNET/Patch10x.jpg">
+<P>
+<B>Next Steps?</B> Before trying a real diplexer approach, I need someone with the SDR receiver code
+to simply tune the SDR to the 2m 145.800 MHz signal and make sure that there
+is enough SDR sensitivity to even hear the ISS in the first place.  If that works,
+then it make sense to persue this.  But if the diplexer will also need a 2m
+LNA, then this project is getting beyond my hopes of a trivial easy-to-do
+application.
+
+<P>
+Bob, WB4APR
+
+
+
+
+
+
+<P>
+Bob Bruninga, WB4APR
+<BR>lastname at usna dot edu
+
+<HR SIZE=5 WIDTH="100%">
+
+
+
+<P>
+<HR SIZE=5 WIDTH="100%">
+<TABLE BORDER=2 CELLPADDING=2 >
+<TR>
+
+<TD>
+<P><FONT SIZE=+1><A HREF="sitemap.html"> WB4APR's overall Site Map </A></FONT></P>
+</TD>
+</TR>
+</TABLE>
+</UL>
+
+</BODY>
+</HTML>

@@ -1,0 +1,86 @@
+ANDE POWER SYSTEM ENERGY BUDGET                       1 Apr 2004
+----------------------------------------------------------------
+Updated 17 May 05                                   Bob Bruninga
+Updated 27 May 05 added actual flight build currents.
+Updated 29 May 06 Noted 0.05 mA leakage current in each current
+        sensor.  Total is 0.2 mA for the spacecraft.  Compared
+        to an average 50 mA when operational, this is about 1 
+        day mission lost for each 250 days connected.
+
+The original prototype currents were higher than expected.  The 
+original (Oct 2001) baseline was 30 mA average current for the life 
+of the  mission.  Now we estimate 50 mA total for both sides.
+
+Original TNC/RX drew 78 mA.  Removing audio amp chip saves 12 mA 
+down to 66 mA instead of the designed 45 mA.  TNC was drawing 32 mA 
+instead of 15mA as designed.  Timer circuits were drawing 10 mA
+instead of 1mA.  Final flight currents are 5.5 mA in standby
+per side just about as desired.  
+
+BATTERY SYSTEM:        Lithium-primary
+Battery Mass:          11.2 Kg                        
+Battery Construction:  112 Cells Tadiran TL-5930      
+                       Each cell is 93 g and 33 x 62 mm
+Battery volume:        7562 cu cm
+Battery configuration: 28 4-cell strings in parallel
+Battery volts:         12 volts (14.4v no load)
+Battery safety:        Every 4-cell string fuzed individually
+Battery capacity:      532 AHrs (7448 WHrs at 14 volts) 
+
+ANDE Telemetry/Command system:
+
+        nominal  dutycycle        10% ontime  result  Average   Percent
+System  current  standby          with-users  USAGE   CURRENT
+------  -------  ---------------  ----------  ------  --------  -------
+Rcvr A   35 mA    10% [1.5s ON ]     10%        20%     7   mA    14%
+TNC  A   30 mA    10% [15s  off]     10%        20%     6   mA    12%
+XMTR A  600 mA                       20%         2%    12   mA    25%
+LASERS  350 mA     3% over Maui      10%       0.3%     1   mA     2%
+Timers    3 mA   100%               100%       100%     3   mA     6%
+Volt TLM  0.2    100% ea (2)        100%       100%     0.4 mA     1%
+Temp TLM  0.7     10% ea (6)        100%        20%     0.4 mA     1%
+5v ref    0.9     10%               100%        10%     0.1 mA     0%
+Counter   1.2    100%               100%       100%     1.2 mA     2%
+                                                       32   mA
+Note STANDBY current design is 5.1 mA
+Actual flight value on Side A is 5.2 mA (17 May 05)
+
+Rcvr B   35 mA     3% [1.5s ON ]      7% cmding 10%     4   mA     8%
+TNC  B   30 mA     3% [45s  off]      7%        10%     3   mA     6%
+XMTR B  600 mA     3% backup only     7%         1%     6   mA    12%
+Timers    3 mA   100%               100%       100%     3   mA     6%
+Volt TLM  0.2    100% ea (2)        100%       100%     0.4 mA     1%
+Temp TLM  0.7      3% ea (6)        100%         3%     0.1 mA     1%
+5v ref    0.9      3%               100%         3%     0.03 mA    1%
+Counter   1.2    100%               100%       100%     1.2 mA     2%
+---------------------------------------------------------------   ----
+Total                                                  50 mA   
+Growth compared to original proposal   67%
+
+NOTE:  30% of the prototype power was in the on-always timers, counter 
+and TLM.  As of 20 March 2004 we made the following design changes:
+
+1) Note the Speaker Amp and RS-232 go away in flight configuration
+2) Doubled Voltage divider resistors (saved .4 mA always)
+3) Quadruple the Counter D/A resistors (Saved 1.8 mA always)
+4) Double Temp Sensor impedance to 10k for R2 (saved 0.6 mA)
+5) Install CMOS 555 timers (saves 6 mA) Actually, the originals
+   measured a whopping 6 and 8 mA each (spec says 15 mA so
+   clearly a CMOS version was necessry.  (less than 1 mA resulted)
+
+Battery life: 532 AHrs/50 mA = 10,000 hours = About 420 days.
+
+The total life is drastically dependent on the usage duty cycle.  
+The above figures assumed a general scenario.  Actual usage could be
+greater or less.  Typical and target values could allow for more than 
+1 year life and still support nominal communications via the PCsat-
+style operations...
+
+The side B is dormant except for its 1.5 second wakeup every 45 seconds.  
+Unless the A side fails, the B side is not going to be used for any user
+load.  But for good telemetry from both sides of the spacecraft, we will
+usually turn it on on every command pass.  THus we increased its duty
+cycle significantly from the original estimates.
+
+Bob Bruninga
+USNA Satellite Lab

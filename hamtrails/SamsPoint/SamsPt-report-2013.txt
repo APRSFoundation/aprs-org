@@ -1,0 +1,32 @@
+Sams Point - 2013                                            22 July 2013
+-------------------------------------------------------------------------
+
+
+Ok good. We tried to bring you up on 445.925 as well to no avail. 
+We could hear MTWASH12 and GRYLCK11 but only had voice to GRYLCK with a 
+beam on 5watts.
+
+On Jul 20, 2013, at 3:24 PM, KC2ASA-Peter Head <kc2asa.peter@gmail.com> 
+wrote:  I just got a packet to SAMSPT-12 from Camelback that was an ID
+
+Then got the D710 packet
+
+Is the path correct?
+
+KC2ASA:   I'm leading the group for SAMSPT-10  We have 4 of us:
+
+- KC2ASA
+- W2LGB
+- N2FMC
+- WA2TKR
+
+We'll have multiple rigs. The D710 as SAMSPT-10 on 144.34 and voice 
+445.925  I'll have my D72 which I'll set ID to SAMSPT for ANSRVR info on 
+144.39 and for the camelback UHF linked repeater on  442.50  W2LGB will 
+have a D72 as a backup to the D710  we'll also have other rigs available 
+to monitor the northern repeaters as one of them requested.
+
+I'll be traveling to the site as SAMSPT-10 on 144.39 and switch to 144.34 
+once we setup. We hope to arrive by 10:30 and be setup by 11.
+73's,
+-Peter

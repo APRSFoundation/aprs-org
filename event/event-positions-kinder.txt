@@ -1,0 +1,44 @@
+KLONDIKE - KENDER PARK - STATION POSITIONS                24 Jan 2008
+---------------------------------------------------------------------
+                                                               WB4APR
+
+Here are the LAT/LONG coordinates for the Klondike Derby at Kinder 
+Farm park.  If your APRS radio does not have a GPS, just manually
+enter these positions.
+
+Notice that almost all of them are N39 06.yy and W76 35.xx in decimal
+minutes.  As you move around all you need to change are the four 
+xx/yy digits.  Easy to do with the dial and a few clicks. 
+
+BS-1  N39 06.07 W76 34.89
+BS-2  N39 06.14 W76 34.90
+BS-3  N39 06.19 W76 34.98
+BS-4  N39 06.27 W76 35.07
+BS-5  N39 06.26 W76 35.15
+BS-6  N39 06.24 W76 35.27
+BS-7  N39 06.13 W76 35.24
+BS-8  N39 06.14 W76 35.05
+
+WS-1  N39 05.98 W76 35.13
+WS-2  N39 05.96 W76 35.23
+WS-3  N39 05.99 W76 35.32
+WS-4  N39 06.09 W76 35.27
+WS-5  N39 06.10 W76 35.23
+WS-6  N39 06.13 W76 35.23
+WS-7  N39 06.17 W76 35.13
+WS-8  N39 06.16 W76 35.07
+
+HQ    N39 06.10 W76 35.00
+PARK  N39 05.98 W76 34.83
+
+On the D7, to enter your position, push the POS button.  There 
+are 3 positions you can prestore.  Select the one with the 
+(*), (since it is the one that is being used).  Then use the 
+OK joy stick to select the digit to change, and then up/dn or 
+use the knob to dial in the new position.  Keep hitting OK to 
+the end.  Then your new posit is finished.
+
+Toggle the BCON key off/then/on to force a new transmission.
+Your Automatic Position rate should be set to about 10 minutes.
+
+Bob, WB4APR

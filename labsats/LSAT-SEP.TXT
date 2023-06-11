@@ -1,0 +1,74 @@
+CLS
+PRINT "LSAT-SEP.EXE             LABsat Packet Separation Parser"
+PRINT
+PRINT "This program will strip out all the telemetry from a LABsat telemetry"
+PRINT "file and place the results into up to seven separate text files, one for"
+PRINT "each satellite.  The file name will the the same as the original, but"
+PRINT "the extension will be TXn where "; n; " is the SSID of the satellites found."
+PRINT "Plus an additional file (ending with .OTR) with all"
+PRINT "OTHER packets.  These files will be saved into the same directory as"
+PRINT "the input file specified."
+PRINT
+PRINT "This program looks for LABSAT packets who's callsigns begin with "; L; ""
+PRINT "and have a single digit SSID between 1 and 9."
+PRINT
+PRINT "The resulting files can be 'OPENED' in EXCEL by selecting the file type as"
+PRINT "as 'delimited' and then clicking on all delimiters plus adding the 'other'"
+PRINT "delimiter of the # sign.  Then mark the resulting first two fields and"
+PRINT "the last column to be skipped."
+PRINT
+PRINT "The result has the first column as the telemetry packet serial number "
+PRINT "and the next 5 columns contain the raw telemetry counts.  Use an XY plot"
+PRINT "to show the values over time."
+PRINT
+PRINT
+
+INPUT "Enter file name for input"; FI$
+d = INSTR(FI$, ".")
+IF d = 0 THEN d = LEN(FI$) + 1: FI$ = FI$ + ".TXT":
+FO$ = LEFT$(FI$, d - 1)
+OPEN FI$ FOR INPUT AS #10
+OPEN FO$ + ".TX1" FOR OUTPUT AS #1
+OPEN FO$ + ".TX2" FOR OUTPUT AS #2
+OPEN FO$ + ".TX3" FOR OUTPUT AS #3
+OPEN FO$ + ".TX4" FOR OUTPUT AS #4
+OPEN FO$ + ".TX5" FOR OUTPUT AS #5
+OPEN FO$ + ".TX6" FOR OUTPUT AS #6
+OPEN FO$ + ".TX7" FOR OUTPUT AS #7
+OPEN FO$ + ".TX8" FOR OUTPUT AS #8
+OPEN FO$ + ".TX9" FOR OUTPUT AS #9
+OPEN FO$ + ".TXO" FOR OUTPUT AS #11
+
+DO UNTIL EOF(10)
+   LINE INPUT #10, a$
+   IF INSTR(a$, "T#") THEN
+      SSID = INSTR(a$, "-")
+      IF SSID AND LEFT$(a$, 1) = "L" THEN
+         SS$ = MID$(a$, SSID + 1, 1)
+         IF SS$ = "1" THEN n1 = n1 + 1: PRINT #1, a$
+         IF SS$ = "2" THEN n2 = n2 + 1: PRINT #2, a$
+         IF SS$ = "3" THEN n3 = n3 + 1: PRINT #3, a$
+         IF SS$ = "4" THEN n4 = n4 + 1: PRINT #4, a$
+         IF SS$ = "5" THEN n5 = n5 + 1: PRINT #5, a$
+         IF SS$ = "6" THEN n6 = n6 + 1: PRINT #6, a$
+         IF SS$ = "7" THEN n7 = n7 + 1: PRINT #7, a$
+         IF SS$ = "8" THEN n8 = n8 + 1: PRINT #8, a$
+         IF SS$ = "9" THEN n9 = n9 + 1: PRINT #9, a$
+      END IF
+   ELSE nother = nother + 1: PRINT #11, a$
+   END IF
+LOOP
+CLOSE
+PRINT n1; " Frames in "; FO$ + ".TX1"
+PRINT n2; " Frames in "; FO$ + ".TX2"
+PRINT n3; " Frames in "; FO$ + ".TX3"
+PRINT n4; " Frames in "; FO$ + ".TX4"
+PRINT n5; " Frames in "; FO$ + ".TX5"
+PRINT n6; " Frames in "; FO$ + ".TX6"
+PRINT n7; " Frames in "; FO$ + ".TX7"
+PRINT n8; " Frames in "; FO$ + ".TX8"
+PRINT n9; " Frames in "; FO$ + ".TX9"
+PRINT nother; " Frames in "; FO$ + ".otr"
+END
+STOP
+

@@ -1,0 +1,76 @@
+MSG # STAT  DATE     TIME  TO     FROM   @BBS   SUBJECT
+----- ----- -------- ----- ------ ------ ------ ------------------------------
+  120 BR    02/03/07 05:29 ALL    SQ7EQH        OM                              
+  119 P     02/03/07 05:04 RS0ISS LW6DC         CONGRATULATION !!!              
+  118 P     02/03/07 01:51 ALL    LW2DIE        hello to everybody              
+  116 BR    02/03/06 22:07 ALL    N6CO          2 Line ISS Keps 3-6             
+  114 P     02/03/06 12:40 VE1AMA VE1BF         hello                           
+  113 P     02/03/06 11:59 RS0ISS VK1UN         Greetings from Melb             
+  112 BR    02/03/06 10:52 ALL    XE2ARF        Hi ex MIR FANS CLUB !           
+  111 P     02/03/06 08:08 RS0ISS ON4CHP        Groeten                         
+  110 P     02/03/06 08:02 RS0ISS EB7FME        Saludos a todos                 
+  109 P     02/03/06 07:59 RK3DZB G3BGM         privet zvezdnoe gorodok         
+  100 P     02/03/05 15:51 RS0ISS ZS6FB         Good luck                       
+   99 P     02/03/05 15:09 W7LGK  N7GCW  ISS    To Lonny                        
+   98 P     02/03/05 13:50 RS0ISS F1AHH         bonj0ur de la france            
+   97 P     02/03/05 12:13 RK3DZB G3BGM         servicing rotary spaceships     
+   96 P     02/03/05 11:53 CREW   XE2ARF        Hello Crew 4 (Yuri Carl Dan)    
+   95 P     02/03/05 07:24 RS0ISS EB7FME        SALUDOS DESDE GRANADA SPAIN     
+   94 P     02/03/05 06:00 RW3DIA RK3DJW        hello                           
+   93 P     02/03/05 05:56 RS0ISS RK3DZB        Privet iz Zvezdnogo Gorodka!    
+   92 B     02/03/05 05:51 RS0ISS F4BSX         Hello all                       
+   91 BR    02/03/05 05:24 ALL    LW6DC         SALUDOS A TODOS                 
+   84 BR    02/03/04 14:29 ALL    N6CO          2 Line ISS Keps 3-4
+   83 P     02/03/04 12:55 F6CDZ  XE2ARF        Hello Daniel !
+   82 P     02/03/04 11:42 ALLB   F6CDZ         Hello
+   81 B     02/03/04 11:40 ALL    PE5YES        hi ISS
+   80 PR    02/03/04 09:50 ALL    KP4JRS        73 ARISS
+   77 B     02/03/03 20:42 ALL    OA4CK         Greeting from Lima/Peru
+   76 P     02/03/03 14:15 F3RI   F5SRH         TEST
+   75 B     02/03/03 12:46 RS0ISS EA5CPQ        HOLA A TODOS
+   74 P     02/03/03 12:22 CREW   XE2ARF        Hello Yuri, Dan and Carl !
+   73 B     02/03/03 07:28 TODOS  CA3SOC        SALUDOS DESDE CHILE
+   72 PR    02/03/03 01:01 ALL    LW2HBT        hello from monte maiz cba
+   71 B     02/03/02 19:49 KEPS   N7GCW  ISS    sts keps
+   70 TR    02/03/02 18:20 RS0ISS W3JUZ         L
+   69 P     02/03/02 16:43 CREW   W3JUZ         GREETNGS
+   68 PR    02/03/02 13:40 N6CO   G3BGM         Hello
+   66 PR    02/03/02 08:53 ALL    EB7FME        SALUDOS DESDE ESPA%A
+   65 BR    02/03/01 22:47 ALL    LU3HYB        Greeting from Argentina
+   62 B     02/03/01 17:46 RS0ISS N2ONU         Greetings from Long Island, NY
+   61 B     02/03/01 14:42 RS0ISS G3BGM         rotating spacestaion2
+   60 BR    02/03/01 14:23 ALL    N6CO          2 lINE ISS Keps 3-1
+   59 P     02/03/01 13:08 RS0ISS DN3JB         Greetings to Crew #4 on ISS
+   58 P     02/03/01 12:32 XE1ZVO XE1YJS        HOLA
+   57 P     02/03/01 11:19 ALL    F8IZT         hi ! In French
+   55 PR    02/03/01 08:08 I6JZH  I6CGE         SP I6JZH
+   54 P     02/03/01 08:03 RS0ISS EB7FME        EB7FME IM87QT
+   53 P     02/03/01 06:30 RS0ISS EB7FME        saludos desde Espa¤a
+   52 P     02/03/01 05:11 UA0AET UA0SNV        test
+   39 PR    02/02/27 17:57 N3JZE  W3JUZ         GET ON PACKET AND HELP US ALONG 
+   38 BR    02/02/27 17:45 ALL    N6CO          2 Line ISS Keps 2-27            
+   37 B     02/02/27 12:57 ALL    XE2ARF        Hello ex MIR FANS !!            
+   36 P     02/02/27 12:56 CREW   XE2ARF        Greetings from Mexico !         
+   35 P     02/02/27 10:10 DM2FDO DG5YM         !! Vollbracht !!                
+   34 P     02/02/27 08:35 RS0ISS DG5YM         sp rs0iss                       
+   33 P     02/02/27 01:38 RS0ISS LW3DRH RS0ISS Frank,Vlad,Mikha                
+   31 P     02/02/27 00:03 RS0ISS LW3DRH RS0ISS SP RS0ISS@RS0ISS                
+   30 P     02/02/26 21:59 ISS    W6BME         s                               
+   28 B     02/02/26 14:17 RS0ISS G3BGM         rotating spaceships             
+   27 P     02/02/26 12:47 DB7MH  DO2DP         Hallo                           
+   25 T     02/02/26 11:13 RS0ISS I6JKW         to all                          
+   24 P     02/02/26 09:33 RS0ISS DM2FDO        Greetings to ISS-Crew           
+   23 PR    02/02/26 07:31 RS0ISS LW3DRH RS0ISS For ISS Crew                    
+   22 BR    02/02/26 00:47 ALL    XE2ARF        Greetings !!                    
+   21 P     02/02/25 19:52 CREW   N7GCW  ISS    Thanks!!                        
+   18 PR    02/02/25 15:21 WB4APR I6JKW         73 de i6jkw                     
+   17 P     02/02/25 15:18 RS0ISS PE1NHD        greetings                       
+   16 P     02/02/25 13:43 ALL    F6CDZ         Hello from METZ                 
+   13 P     02/02/25 09:01 CREW   I6JKW         73 de i6jkw                     
+   12 P     02/02/24 19:21 RS0ISS WF1F          hi from miles                   
+   11 BR    02/02/24 19:15 SOLAR  N7GCW  WW     Solar powered packet..          
+    8 P     02/02/23 17:22 RS0ISS F6EGD         F6EGD OP GILBERT S73.           
+    7 P     02/02/23 15:22 K5HV   WD5EEV        hello                           
+    6 BR    02/02/23 09:24 RS0ISS S57NML        to ALL                          
+    5 B     02/02/23 09:24 RS0ISS S57NML        to crew                         
+    4 BR    02/02/22 19:40 ALL    N7GCW  WW     Greetings t all!!               

@@ -1,0 +1,20 @@
+Interface Board Prototye Board 1 Changes Required            14 Jan 2004
+------------------------------------------------------------------------
+                                                                  WB4APR
+
+The initial board was ordered on X November and population began.  This
+document records all errors and changes found on that board:
+
+
+1) Location of DB-9 was too close to DB-25 by abou t1/16th inch.
+
+2) RELAY pin locations were wrong footprint
+
+3) Locations of AN0, AN1 and AN2 on the TNC were changed.
+   AN0 already connected to pin 18 if J8  in place
+   AN1 already connected to pin 11 if J10 in place
+   AN2 - Move to where AN1 was
+
+4) There was a green short under RY2.  Replace with jumper
+
+5) Short between A1 diode and Green trace.  Trim.

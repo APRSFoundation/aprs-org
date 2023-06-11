@@ -1,0 +1,152 @@
+The ALOHA Circle (or local reliable APRS network size)     7 Nov 2011
+---------------------------------------------------------------------
+                                                               WB4APR
+
+Original 13 Jan 2003
+
+There are three things that are very important to the network and
+user education and which some software does does *not*  show to the
+user to help him be a good steward of the shared channel.  These are
+the proper display of PHG circles, the ALOHA range and number of
+hops between users.  Software should insure that users are aware of 
+the RF network they are in.  See these crude APRSdos examples of what 
+every user needs to know about his network:
+
+Simple PHG:    http://aprs.org/aloha/mapPHGs.gif 
+Aloha Circle:  http://aprs.org/aloha/alohamap.gif 
+Digi Hops:     http://aprs.org/digis/digihopsX.gif 
+
+Users that are not aware of the network limitations and the number
+of hops it takes to hit their local area are killing the network, 
+because they have no PHG displays and no way of knowing what paths 
+to use, nor how busy the channel is, nor anything about the local RF 
+network.
+
+1) Software should display the PHG circles from all digis to make 
+users aware of their relative magnitude of converage.
+
+2) All digis should be displayed in green and their PHG circles for 
+DIGIS also in GREEN to distinguish the circles from the hundreds of 
+user and other station circles. 
+
+3) The ALOHA circle showing the limitations of the local network
+around own station should be displayed on all maps by default.
+
+
+THE ALOHA CIRCLE:
+-----------------
+
+Many users these days have no appreciation of the limits of the 144.39 
+or other national APRS network even though it is trivial to calculate 
+and display since it is just the definition of a 100% full channel 
+based on the TX rates of surrounding stations.  The ALOHA circle is 
+that circle that contains the number of users that equals a 100% full 
+channel. 
+
+I have called on all software to permanently display the calculated 
+ALOHA circle for *own-station* and always display it on the users map 
+so that the user is always aware of his effective range and SHOULD NOT 
+send his packets beyond that 100% saturated channel range...
+
+Here is the spec for the ALOHA circle:
+---------------------------------------------------------------------
+
+Fundamental APRS channel capacity:
+
+There is a limit to APRS throughput on 144.39 or any frequency.
+That limit has been said to be about N stations.  (We used to say
+that N was about 60.  Now we want all software to compute it live
+based on the immediate live activity and mixture of stations)  No 
+matter where you live or how dense or sparse the activity, the 1200
+baud channel can only handle a certain maximum number of
+packets before reliability to others falls off drastically.
+
+Draw a circle around your nearest N (was 60) stations, and if you 
+are sending packets beyond that range, you are being inconsiderate
+and adding QRM to others.  In LA, the range of that circle may
+only be 15 miles.  In Wyoming, it might be 150 miles.
+
+This is *independent* of topology.  The size is only limited by
+the number of stations and their statistical transmit rates.
+
+We MUST educate users to this fundamental 1200 baud limitation.  
+To that end, I am asking ALL authors to draw this ALOHA circle on 
+all maps so that no user can claim ignorance of his realistic APRS 
+communications range.  Being good stewards of the channel must be 
+the responsibilily of the software to SHOW the user his limits.
+
+Here is the algorithm to exactly determine the ALOHA circle range 
+for own-station.  Do this once  every 30 minutes or so.  (You have
+to wait at least 30 minutes from power up to make the first
+computation anyway or use old data)...
+
+* Start with the "digi-copies" vairable C equal to 1.
+* 1200 baud can handle about 60 packets per minute or 1800/30mins
+* Sort all stations heard on RF by range
+* Starting with closest, add these number of packets per 30 mins
+  for each station.
+  - Mobile in motion = 15 per 30 mins
+  - Other Mobile     =  7 per 30 mins
+  - WX station       =  6 per 30 mins
+  - DIGIs            =  3 per 30 mins
+  - Home stations    =  2 per 30 mins
+* Multiply each of these by the number of digi-copies (C) when you
+  add it to the accumulating total...
+* C begins as 1, but as you encounter each digi, add 1 to C
+* When the total accumulated gets to 1800, STOP
+* The range of the last stations is the limit of the local
+  network of 100% channel saturation.  That is the ALOHA 
+  circle and should be plotted on the map (every time the
+  map is rendered).
+
+Users should be encouraged to NOT routinely send any packets beyond 
+their ALOHA circle because doing so is JAMMING other users with 
+un-invited QRM. 
+
+Thats the facts folks.  We can argue and fine tune the assumptions
+above, but once we nail down that algorithm, I want to see it in all 
+APRS programs.  We have GOT to get users to understand how limiting 
+the 1200 baud channel is and to CUT BACK their expectations, and use 
+APRS locally, or via the Internet.  But sending packets routinely 
+outside the ALOHA circle is  inconsiderate and everyone suffers.
+
+I have implemented this in APRSdos (the MAX version) and it works 
+beautifully.  Interstingly enough, it does work out to be about 50 
+to 60 stations as we had estimated before.  But now it is dynamic to 
+match actual conditions and the mixture of mobiles or non-mobiles
+on the air at any one time..  I was shocked when I ran it the first
+time...
+
+My QTH is half way between Baltimore and Washingon DC.  My ALOHA 
+circle is 50 miles and it contains 43 stations of which 13 are digis, 
+12 are mobiles, and 6 are WX stations.!  It was shocking to me to see 
+the number of digis.  Oh, and I can hit EVERYONE of those digis with 
+a 2 hop path.  Fortunately 3 of those digis are RELAY only ones and 
+another one is the 144.99 INPUT digi, so it is not quite as bad as it
+looked..
+
+But seriiously folks.  Lets get this ALOHA circle on all MAPS so that 
+people know what they are dealing with.  Its real, it can be calculated, 
+and it IS the limit of a fully saturated channel.  We must get people 
+to live within it. 
+
+USING FINDU TO FIGURE YOUR ALOHA CIRCLE:
+-----------------------------------------
+
+Use FINDU to "measure" your network saturation limit and to help you
+DESIGN the optimum DIGI coverage for YOUR area anywhere from Maine to
+LA!
+
+Simply do the CLICK FOR NEARBY STATIONS, and lets say the reliable 
+ALOHA channel capacity for APRS for one digi is on the order of 40 home
+stations and 10 mobiles and 5 digis and 5 WX stations.  That adds up to 
+about 60 stations.  Since FINDU displays the nearest 50 stations and 
+this information is SORTED by distance, just go down to the bottom of 
+the list, and that is the reliable ALOHA network coverage for your area!  
+
+From now on, think in terms of your ALOHA circle.  If your LOCAL digi
+covers lots more than your local ALOHA circle, then your channel is 
+beyond saturation and reliability suffers... and your local digi is NOT 
+a local digi!
+
+de WB4APR, Bob

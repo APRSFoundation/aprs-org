@@ -1,0 +1,45 @@
+***************************************************************************
+*                  ATGP 2019 Report for MT Washington-13                 75
+***************************************************************************
+
+Things went reasonably well again this year which I attribute in large part 
+to the fact that I have a backpack with all the gear in it that I put on 
+the shelf after the event and take down again when another year rolls 
+around. Having a TM-D710 A where I do not change the settings and which is 
+dedicated to this task makes things so much easier as I am not worrying 
+about if I have the settings correct etc.
+
+A unique situation with Mt. Washington is that we are no longer having 
+someone on Sugarloaf mountain in Maine, where I used to operate. This means 
+that Tim on Katadin needs to communicate directly with Mt. Washington as 
+the intermediate station on Sugarloaf is no longer available. This has 
+never been an issue in the past, but this year while we had solid digital 
+(APRS) communication with Tim on Katadin, we were unable to maintain voice 
+communication for most of the day.
+
+Another issue we experienced this year as we had to shift locations in the 
+parking lot during the event to maintain communications with Equinox. There 
+were far more people on the mountain this year than in past years and when 
+a vehicle pulls in right beside you it can impact operations. After movine, 
+we had reliable voice and data communications with Equinox as well as 
+digital with Katadin. Both 1200 and 9600 baud worked flaulessly.
+
+Just curious, did you have a different configuration on Equinox this year?
+
+The only cellphone provider on Mt. Washington is AT&T and neither Jeff, 
+K1OK or I had an AT&T cellphone so no cellphone communications this year. 
+We did have good communicationd with Russ, KA1FKC, back in Maine who 
+relayed messages to and from Lynn for us. Thank you Russ!
+
+Thinking about future plans, I for one would be intwerested in setting up 
+a semi-perminate link between Maine and GA using stations near the AT but 
+not necessarly on the mountains we are currently using. For example we 
+could most likely locate a note on a Ridge in northern Franklin county, 
+Maine which could relay traffic from Quebec and the maritimes down into 
+NH. It would also be easily accessed from much (perhaps most) of the 
+Applician Trail here in Maine.
+
+Thoughts?
+
+John Tarbox
+

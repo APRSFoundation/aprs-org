@@ -1,0 +1,124 @@
+DRAFT! PCSAT2 USER SERVICE AGREEMENT                       23 May 2003
+----------------------------------------------------------------------
+                                                             de WB4APR
+Updated 26 Aug 2005   (Launch)
+Updated 23 Oct 2005   (Added remote environmental and data sensors)
+Updated  4 Dec 2005   (Added caution re: interferring with crew voice)
+                      (and emphasis on mobile communications)
+SERVICE:
+
+PCSAT2 may be operated in a number of modes to serve the Amateur
+Satellite Community.  Particularly, its goal is to facilitate contacts
+with mobile stations.  Grade of service depends on user adherence 
+to power levels, transmission period, modulation modes and 
+precedence criteria and authorized modes only.
+
+POLICY STATEMENT:
+
+PCSAT2 is an open system in accordance with the ITU regulations for
+the Amateur Satellite Service.  To provide the best overall through-
+put for the largest collection of users, PCSAT2 transponders are 
+protocol driven and require that all users adhere to the fundamental 
+protocol requirements.  Users that adhere to these published protocol 
+and operating standards are very welcome to use the transponders in 
+accordance with the ITU rules.  Operations outside of these conditions 
+are not authorized and will need to be approved on a case basis.
+                                                                    
+AGREEMENTS:
+
+You may use PCSAT2 for your own communications and experimentation
+if you adhere to the following agreements:
+
+0) IF PCSAT2 is operating with a 145.825 downlink, it has the potential
+   to occassionally block the crew from hearing uplinks if they are
+   trying to make voice contacts.  For this reason, IF PCSAT2 is on
+   145.825 downlink, then users are REQUIRED to verify that there is 
+   no crew voice operations on 145.800 before using PCSAT2 digipeater.
+
+1) PCSAT2 is for users and data applications.  It is NOT for UNATTENDED 
+   beaconing of fixed text from fixed stations.  Unattended beacons 
+   from fixed stations except for remote data or environmental sensors 
+   at low rates are not authorized.
+
+1b However, since the PCSAT series of satellites were designed for
+   the purpose of promoting an Amateur Radio Satellite capability
+   for mobiles, the unatteneded beaconing from a vehicle at a 5
+   minute rate for the purpose of assessing success statistics is
+   authorized. (new as of 4 Dec 2005)
+
+2) The PCSAT2 packet transponder is for UI digipeating only.  No 
+   CONNECTIONS either TO or THROUGH the packet system are normally
+   authorized.  All transmissions are expected to have extremely low
+   duty-cycles.
+
+3) The PCSAT2 PSK-31 analog Transponder is for PSK-31 operations only
+   but CW or other narrowband modes may be authorized when loading is 
+   light.  SSB voice or other broadband signals are NOT authorized.
+   When you hear the downlink on 435.275, you are welcome to use it!
+   (This transponder is inop).
+
+4) The use of the PCSAT2 crossband FM repeater is a backup for the
+   Kenwood ARISS radio already on board.  Activation is not anticipated
+   unless explicitly set up by ARISS for specific school purposes.
+
+5) Keep informed of the current operating requirements via the PCSAT2
+   and ARISS web pages and/or via bulletins in the downlink.  For
+   Packet mode, the requested routine uplink rate is only 1 routine 
+   position/status packet per 2 minutes (attended).  5 minutes if
+   unattended mobile.  One-line messages may be somewhat more frequent 
+   in a dialog context.  The BText from PCSAT2 will announce the 
+   authorized routine rate for mobiles using  the syntax:  
+           "OPS-Normal 2m rate...." etc.
+
+6) Understand that the PCSAT2 PACKET mission and your objective is 
+   to get your position, message, status or other data or sensor 
+   telemetry digipeated once or so per pass footprint. Share the 
+   resource.  Minimize your transmissions..
+
+7) The PCSAT2's digipeater uses the same aliases as ARISS: VIA ARISS
+   Like the terrestrial network, PCSAT2 does callsign-substitution 
+   of its own MYCALL to indicate that it has digipeated the packet. 
+   Other aliases are WIDE and APRSAT as well as WIDE2-2.
+
+8) Use only the authorized power levels, channel and periodicity for 
+   your station class and precedence as posted and published below.
+   These are the routine default packet transmission rates:
+
+   STATION CLASS     PWR  BAUD  UPLINK   PERIOD   DIGIPATH  DOWNLINK*
+   ----------------  ---  ----  -------  -------  --------  ---------
+   Mobile (attended) 50W  1200  145.825  2 mins   APRSAT    435.275
+   Mobile (parked)   50W  1200  145.825  5 mins   APRSAT    435.275
+   Handi-Talkie       5W  1200  145.825  1 min    APRSAT    435.275
+
+   * Sometimes the dowlink may be on 145.825 in which case, unattended
+   operation is not authorized unless effort is made to assure the
+   crew is not using 145.800 for voice.
+
+9) Use the shortest possible packets.  Mic-E protocol, Grid Square or
+   APRS compressed are preferred (typically 30 bytes or so).  ALso
+   Use a short TX Delay (TXD) of about 150ms  or less if possible.
+
+10) Determine your own precedence based on your current communications 
+   requirements for each pass.  In general, all use is routine except 
+   for special circumstances.  SPECIAL usage is for students, schools, 
+   demonstrations, and long term events.  PRIORITY usage may 
+   be for VIP demos or special one-time events.  Use good judgment, 
+   being fair to all other usrs.  To alert other users of any SPECIAL
+   or PRIORITY operations, be sure to include a note in your packets.
+
+SAFE MODE:  Whenever PCSAT2 RESETS to "safe mode" all transmissions will
+cease.  Do not continue to transmit until you again hear activity on the
+downlink.
+
+ACCEPTANCE:
+
+If you accept the conditions of operation via PCSAT2, please sign this 
+document and post it in your Amateur Satellite Operating station.
+Enjoy PCSAT2!  It will only last a year before the equipment is returned
+to earth.
+
+
+SIGNATURE:
+
+_______________________________________   Date:   _______________________
+

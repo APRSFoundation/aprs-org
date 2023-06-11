@@ -1,0 +1,153 @@
+ANDE COMM/LASER Functional Test Procedures:                22 July 2005
+------------------------------------------------------------------------
+
+This revision includes updates from 22 July pre-vib functional test and
+is specific to testing the lasers with the COMM system using the box-
+level test apparatus and test harness and connectors.  
+
+EQUIPMENT: 
+   ANDE Comm Test Set with cross connect cable assembly
+   Bench Power supply for 14.4 volts at 1.2 amp
+   Sensor Simulator Plug assembly
+   GSE Laptop connected to test set
+   GSE RF briefcase with laptop and transceiver.
+
+SETUP PROCEDURE:
+----------------
+
+0) Boot both PC's, cancel any windows logon window.
+1) Run USNA002.exe on PC's.  Use password "lmur" ENTER, hit ENTER.
+2) Configure for ANDE with alt-S-USAGE-ANDE to see ANDE screen.
+3) Plug the test set Power-A plug into left side connector on module
+   COMM-01 and Power-B into the left side connector on COMM-02.
+4) Plug the test set DB-9 Serial port into the GSE Laptop.
+5) Plug TELM A & B test cables into right side connectors of COMM1 & 2
+6) Set power supply to 14.4 volts, set current limit knobs to about 1.5
+   amps (which is about the 12:00 oclock position)
+7) Turn all switches on the Test Set to off (down).  
+8) Plug the Red and  Black leads into the power supply.
+9) Optional, on RF station, turn radio on and set to 145.825,(MR 0).
+10) Turn on RF power meter to switch position factor "1".
+11) Turn on small radio shack speaker volume control.
+12) Connect RF wattmeter or dummy load to COMM-01 module RF connector.
+13) Connect dummy load (2 attenuators) to RF connector on COMM-02.
+
+LASER CONNECTION PROCEDURE:
+---------------------------
+
+THe side B TELM connector contains two pigtails, one for each laser
+system.  The  ground wire is stripped gray.  The power lead is stripped
+yellow.  On each laser system, connect the ground wire to the pin at 
+the 4 o'clock position.  Connect the yellow wire to the pin at the 2 
+o'clock position. 
+
+Double check polarity and position.
+
+SOFTWARE AND MODES BACKGROUND:  (Same as COMM test procedures)
+--------------------------------------------------------------
+
+Review the mode switching procedures from the COMM Test plan.  Here
+is a summary:
+
+SOFTWARE can be in two modes:  TELEMETRY screen and KEYBOARD screen.
+
+  C C ENTER will transition from TELEMETRY to the KEYBOARD screen 
+            *AND* will also send a ^C to place any TNC into cmd: mode.
+
+  K         will transition from TELEMETRY to KEYBOARD screen directly
+            without going to cmd: mode.  Any typing in this mode will
+            pass transparently through the TNC and be transmitted.
+            Hitting a ^C here can get you from converse to cmd: mode.
+  ESC       ESC will transition from the KEYBOARD screen to TELEMETRY.
+
+A TNC (terminal Node controller) can be in two modes, cmd: and CONVERSE.
+
+  Use "K ENTER"   as a command to go from cmd: to CONVERSE.   
+  Use ^C from CONVERSE mode to cmd:  mode.
+  
+You will frequently transition between all these modes.  So these detail
+transition entries are not listed in each step in these procedures but
+are assumed to be an operator skill.
+
+DELAYS:  There are delays in the handshaking RF command modes becuase of 
+the line-by-line protocol overhead.  Several seconds may be required.  
+Further due to shared resources on the ANDE systems, there can be as 
+much as a 10 second delay in response to some commands via the GSE port.
+
+PREPARATION AND INITIAL POWER UP PROCEDURES:
+--------------------------------------------
+
+While watching the current load on the Power Supply perform these steps:
+
+Turn on Battery 1 switch.             Verify =< 0.01 A on power supply.
+Turn on Sep-Switch.                   Verify =< 0.01 Amp .
+Turn on the RX-A wake switch.         Verify about 0.07 Amp or less
+Wait 15 secs.              Verify 1st Bulletin current >= 0.50 Amps
+Turn on Battery 3 switch (B1).
+Turn on the Receiver B switch.        Verify .12 Amps
+If all OK to this point, it is safe to proceed with the test.
+
+PANIC-SHUT-DOWN procedures:  Simply unplug red lead from Power Supply.
+
+
+LASER TEST PROCEDURES:
+----------------------
+
+Flip all battery switches, and the SEP switch up.  This will be the 
+post-separation deployed configuration.
+
+For this LASER test configuration, all telemetry and comnmanding will
+be done from side B.  Set the RX-A wake switch off and RX-B switch on.
+
+Flip the PC switch to B side (up) and hit the ESC key to assure you 
+are in the telemetry screen.  Then hit C C ENTER to cmd: mode.
+Send these commands: TE 1, MXM ON and MON ON each followed by ENTER.
+If successful (no EH?'s after 10 seconds) hit ESC back to telemetry.
+After 40 seconds you should see side B on the RF systems screen:
+
+              A      B                  A1     A2     B1     B2
+   VOLTS    13.5   13.3    Currents A:  35     38     30     30  mA
+   X-SOL     .01    .01    Currents B:  35     38     30     30  mA
+   Y-SOL     .01    .01    Volts:       .2 V  
+   Z-SOL     .01    .01    Use counter:       _____   
+   5-volts   5.02          Temperatures:  all ambient
+
+The B side telemetry is of interest.  The A side may or may not show
+depending on its wakefullness.
+
+WARNING:  Laser ON times should not exceed 5 minutes without at least
+a five minute cool down period.  This limitation is in the COMM power
+system, not the laser system.
+
+To control the LASERS, first select the B2 battery system:
+
+Send CTR ON     Notice that CTR ON turns on both A and B together.
+                The only verificatin will be after 40 seconds of
+                telemetry, you will see the available laser voltage
+                in the upper right area of the telemetry screen
+                under the B2 column in the VOLTS row.
+
+Send LEDS ON    This activates the lasers.  There is a 5+ second 
+                delay before they begin firing.
+
+Send LEDS OFF   You may send L ON or L OFF as needed to test the
+                lasers.  Maximum ON dutycycling should not exceed 5m.
+
+END TEST:  On GSE Labtop, hit ESC and then send these commands:
+   C C ENTER   To get to ANDE side B cmd: prompt.
+   LEDS OFF    To turn off LASER POWER
+   CTR OFF     To turn off battery selections.
+
+SHUT DOWN PROCEDURES:
+---------------------
+- Turn off all test set switches starting right to left.  
+- Unplug red wire from power supply, turn Power supply off.
+- Turn off the small battery powered Speaker box
+- Turn the RF wattmeter switch to OFF.
+- Exit USNA002.EXE with the FILE-QUIT-YES command.
+- Disconnect connections if needed.
+
+Bob Bruninga
+USNA Satellite Lab
+410-293-6417
+

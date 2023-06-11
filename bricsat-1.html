@@ -1,0 +1,205 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+   <TITLE>BRICSAT</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (Win95; I) [Netscape]">
+   <META NAME="Author" CONTENT="Bob Bruninga">
+   <META NAME="Description" CONTENT="ParkinsonSat APRS Satellite Project">
+   <META NAME="Keywords" CONTENT="ParkinsonSat, Parkinson, satellite, PCsat, buoy, ocean,environmental sensors, APRS, APRsat, buoys, oceanography, Satellite, Cubesat,  Tracking, Bruninga, LEO, GPS">
+   <META NAME="Classification" CONTENT="Science">
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#48D1CC" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000">
+
+<IMG SRC="bricsat/B1-on-vibe.jpg" align=right>
+
+<CENTER><P><B><U><FONT SIZE=+2>
+BRICSAT - The first attempted APRS Satellite with Thrusters
+
+</FONT></U></B>
+
+<P>
+<P>US Naval Academy Satellite Lab, <FONT SIZE=-2>
+<BR>Bob Bruninga, WB4APR
+<BR>Midns teater,(16)
+
+</FONT><BR></CENTER>
+
+
+<P>
+ <B>BRICSAT shown inside the P-POD separation device (above)</B> was launched along with PSAT in May of 2015.  This is just one of many APRS Networked Amateur Satellites that will be on Orbit in 2016 and all will appear on the live 
+<A HREF="http://pcsat.findu.com"><B>APRS satellite downlink page</B></A> and  <A HREF="http://ariss.net"><B>ISS downlink page</B></A>:
+
+<P ><A HREF="pcsat.html"><B>PCsat-1</B></A> in orbit since 2001 semi-operational
+<BR><A HREF="ariss.html"><B>ARISS</B></A> on the ISS since 2007
+<BR><A HREF="psat.html"><B>Psat</B></A> Operational May 2015
+
+<BR><A HREF="qikcom-1.html"><B>QIKcom-1</B></A> with terrestrial APRS alert beacon on ISS, but activation blocked by FCC SNAFU
+<BR><A HREF="qikcom-2.html"><B>QIKcom-2</B></A> with APRStt for launch Summer 2016
+<BR><A HREF="psat-2.html"><B>PSAT-2</B></A> To be Launched spring of 2017
+<BR><A HREF="bricsat-2.html"><B>BRICSAT-2</B></A> To be Launched spring of 2017
+<BR><A HREF="astars.html"><B>ASTARS missions:</B></A> Prior APRS missions on other spacecraft, ISS, Shuttle and MIR
+
+<P>
+
+<B>The unique features of BRICSAT </B> are the APRS transponder, its PSK-31 transponder and its electric prolusion thruster experiment which are being modularized into
+standard Cubesat bus modules and integrated all into one 1.5U cubesat.
+ 
+<P>
+<IMG SRC="bricsat/bricsat-1-conops.png"> . . 
+
+
+<P>
+
+<B>OVERVIEW:</B> . BRICSAT was a Naval Academy student satellite launched with PSAT but it had a negative power budget and has been unable to support all of its primary missions.
+
+<P>
+BRICSAT was to 
+continue the <A HREF="pcsat.html"><B>PCsat</B></A>(2001) and <A HREF="psat.html"><B>PSAT</B></A>(2015) missions noted above containing
+an APRS packet radio communications transponder for relaying remote telemetry, 
+sensor and user data 
+from remote users and amateur radio environmental experiments or other data sources back to 
+Amateur Radio experimenters via a global network
+of internet linked volunteer ground stations.  The APRS transponder also includes  
+telemetry, and some command and control for the user modes.  
+<P>
+
+<B>Operations under ITU Rules:</B> BRICSAT was designed to operate under the ITU rules of the Amateur Satellite Service.  See the
+<A HREF="bricsat/USNA%20P1%2013%20March%202016.doc"><B>IARU coordination letter</B></A>
+and how BRICSAT design and operation fit entirely within the ITU International Amateur Radio 
+<A HREF="bricsat/BRICsat-ITU-rules.txt"><B> RULES</B></A>.  The FCC does not issue
+licesnses for Amateur Radio Spacecraft
+<A HREF="PSAT2/FCC%20Public%20Notice-clarified-a.doc">(see public notice)</A> because they are operated under the
+license of the individual amateur radio operator who is responsable to assure
+that both the design and operation are within the rules of the ITU as interpreted by the IARU.
+
+<P>
+
+<P>
+<B>Packet Uplink</B> . . . . . 145.825 1200 baud APRS (shared with ISS, PCSAT, UO11 and others!)
+<BR><B>Packet Downlink</B>. . . 437.975 MHz
+<BR><B>PSK31 Downlink</B> . . 435.350 MHz +/- 5 kHz FM (300 mw)
+<BR><B>PSK31 Uplink</B>. . . . . . 28.120 MHz +2 kHz PSK31 SSB (75 watts into omni vertical authorized)
+
+<P>
+<B>BRICSAT was to be another APRS satellite that can digipeat user packets just like the original 
+<A HREF="pcsat.html"><B>PCSAT</B></A> (NO44)
+and the packet system on the ISS and its sister PSAT.</B>   
+
+<P>
+<IMG SRC="psat/PSK31-capabilities-table.png" height=120 width=300 align=right>
+
+<B>Also exciting is the PSK-31 transponder that was also on BRICSAT:</B>  This transponder, built by students at Brno university was to permit dozens of simultaneous PSK31 users to operate full duplex and maintain a continuous group dialogue throughout the pass.  But operating full duplex on PSK-31 is new and it will take a while for users to figure out how to do this.  KO6TD prepared the table at right of capabiites of typical PSK31 user software.  Only WinPSK can operate full duplex but others can run two instances of the same software, one for transmit and one for receive. 
+
+<P>
+
+<B>Run Full-Duplex:</B> But what really works for  users is to run Andy, K0SM's  
+<A HREF="http://www.frontiernet.net/~aflowers/dopplerpsk/dopplerpsk.html">
+<B>TX-only program</B></A> that not only lets your run full duplex with your existing PSK31 downlink, but it also pre-compensates your uplink for Doppler as shown below!  You can see his uplink coming down as a straigt track while others are showing Doppler.  Most PSK31 clients can compensate for up to 1 Hz/sec of Doppler, but Andy's program makes your signal constant.  Other users without compensation, can drift from 1 to 6 Hz per second depending on where they are relative to the track of the satellite.
+<P>
+
+<IMG SRC="PSK31/PSK31-compensation.png">
+<P>
+
+
+<A HREF="http://www.urel.feec.vutbr.cz/esl/"><B> See Brno University PSK31 transponder details</B></A>.
+
+<P>
+<img src="psat/omni-antenna-vertical-a.png" align=right>
+
+
+<B>Operations in the Amateur Satellite Service:</B>
+The packet and PSK31 transponders on BRICSAT are operated in the Amateur Satellite Service to encourage 
+amateur radio students, 
+educators and experimenters 
+around the world to contribute additional satellities to this constellation on 145.825 MHz or
+to build interesting self motivated remote sensors suitable for the uplink channel.
+ See our
+<A HREF="buoy.html"><B>ocean or bay oceanographic data buoys</B></A> for examples.
+  
+This kind of Amateur Radio experimentation fits well in the ITU rules
+<A HREF="bricsat/BRICsat-ITU-rules.txt"><B>(see BRICSAT-2 justification)</B></A> 
+for operating in this service
+and well serve our educational and outreach goals for student projects encouraging young people to
+be interested in Science, Technology, Engineering and Math.
+
+<P>
+
+<B>APRS Packet Transponder:</B> The APRS packet transponder 
+is an AX.25 Packet Radio Relay similar to what is flying on 
+<A HREF="pcsat.html"><B>PCsat</B></A> and the
+<A HREF="http://www.aprs.org/ariss.net"><B>ISS</B></A>.  This ongoing mission in space on the original PCsat 
+is now over 12 years old and pioneered
+this very popular operating mode via the ISS since 2006.  Both of these 
+missions deliver packets to users worldwide via the global network of
+volunteer ground stations feeding the two downlink capture pages:
+<A HREF="http://pcsat.aprs.org"><B>psat.aprs.org</B></A> and
+<A HREF="http://ariss.net"><B>ariss.net</B></A>.  These pages display live maps such as the one
+above, of the most
+recent user position data and capture all message traffic between users. 
+See the <A HREF="psat/APRS%20Link%20Budgets%20for%20Psat-a.doc"><B>APRS link budgets</B></A>. In addition there
+is also a PSK31 transponder as noted below.
+<P>
+
+<P>
+
+<IMG SRC="psat/PSK31slide2.jpg">
+<P>
+
+<IMG SRC="psat/range-gain.gif" align=right>
+
+<B>PSK31 Transponder:</B>  The Brno University 
+<A HREF="http://www.urel.feec.vutbr.cz/esl/"><B> PSK31 Multi-user FDMA transponder experiment</B></A> is
+similar to what we flew on 
+<A HREF="craft/save-raft.html"><B>RAFT</B></A> and
+<A HREF="pcsat2.html"><B>PCSAT2</B></A> missions. 
+<A HREF="psk31uplink2.html"><B>See the full PSK31 design concept here</B></A>.
+This text messaging transponder allows messaging between up to 30 modest ground stations simultaneously.
+In the example waterfall display above, 10 users are clearly visible. 
+Each user transmits a 31 Hz wide narroband transmission within the 3 kHz wide transponder, and all
+can be seen simultaneously via the UHF FM downlink.  Uplink stations do not need gain antennas on the
+HF uplink but can use a vertical monopole antenna and 75 Watt SSB transmitter to give the transmit antenna profile
+as shown above.  
+To calculate the <A HREF="PSK31/PSK31%20Link%20Budgets%20for%20Psat-b.doc"><B>PSK31 link budgets</B></A>
+we combined the user TX antenna gain profile with the variation in range gain from the horizon to 
+over 60 degree elevation as shown here at right.   The combination gives an uplink power variation
+per user of less than +/- 4 dB over 90% of the duration of the pass. 
+
+
+
+  
+<P>
+
+<IMG SRC="psat/SATT4-003xxx.jpg" align=right>
+
+<B>Global Experimental Data Channel:</B>  BRICSAT's packet transponder was intended to contribute to the space segment of this APRS
+initiative to encourage both new satellite construction in support of this experimental
+data channel and lower cost buoy and
+sensor experimentation at other schools as shown below.  
+Today, the only Amateur satellites that are available for 
+no cost to schools with such experiments are the student project spacecraft built at the Naval Academy.  But with QIKCOM-1 and others we hope to commence an ongoing full time presence in
+space to continue this support of the 145.825 data uplink channel for future experiments.  
+To this end we hope other schools to either build additional 145.825 MHz relay satellites 
+and/or to build experimental sensors.  The complete comms system including data
+transponder fits on one 3.4 inch square card <B><i>shown here</B></i>.
+  We hope that QIKCOM-1 will be just one more Egg in this 
+chicken-egg conundrum.
+<P>
+
+
+
+
+<P>
+<HR SIZE=5 WIDTH="100%">
+<TABLE BORDER=2 CELLPADDING=2 >
+<TR>
+
+<TD>
+<P><FONT SIZE=+1><A HREF="sitemap.html"> WB4APR's overall Site Map </A></FONT></P>
+</TD>
+</TR>
+</TABLE>
+</UL>
+
+</BODY>
+</HTML>

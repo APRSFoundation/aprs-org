@@ -1,0 +1,305 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+   <TITLE>ANDE</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (Win95; I) [Netscape]">
+   <META NAME="Author" CONTENT="Bob Bruninga">
+   <META NAME="Description" CONTENT="ANDE Telemetry/Communications Payload">
+   <META NAME="Keywords" CONTENT="APRS, ANDE, Amateur, APRsat, Satellite, Cubesat, Starshine, USNA, 
+   Tracking, Bruninga, LEO, GPS,PCsat">
+   <META NAME="Classification" CONTENT="Science">
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#48D1CC" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000">
+
+<CENTER><P><B><U><FONT SIZE=+2>
+<IMG SRC="iss-aprs/usnalogo.gif" HSPACE=5 HEIGHT=90 WIDTH=90 ALIGN=TEXTTOP>
+ANDE (MAA) - Amateur Radio Transponder</U></FONT>
+<IMG SRC="ande/photos/ANDEdoneXxx.JPG" HSPACE=5 HEIGHT=90 WIDTH=90 ALIGN=TEXTTOP>
+
+<BR>US Naval Academy Satellite Lab
+<BR>Bob Bruninga, WB4APR</B>
+<BR>Present Team: Midn's Aaron(04), Villalbi(04), and Weisenberg(04)
+<BR>Midn's Kelley(03), Keller(03), Harris(03), Patterson(02), & Ensign Sillman(02)</B><BR>
+Antenna Designers/Modelers: Bob WB4APR, Phil KF8JW, Bobby WB8FEW, Bob KC8QPM & Rick K8CAV
+<P>
+Deliverd to KSC 12 July 2006. Launched in December...
+
+
+
+ </CENTER>
+<P>
+<BR> See the <A HREF="ande-ops.html"><B>ANDE-Operations Page</B></A>
+ for operations to begin the first week of Dec 2006
+<BR> See the <A HREF="ande-docs.html"><B>Documentation Page</B></A>
+for details on the spacecraft design.
+<P>
+<IMG SRC="ande/ANDEsideA.JPG" height=300 width=400>
+<P>
+<B>VOLUNTEER GROUND STATIONS:</B>  Since ANDE has no onboard computer for whole-orbit
+telemetry capture we are dependent on volunteer ham radio ground stations 
+<A HREF="pec/aa6rr.jpe">(see typical photo - AA6RR)</A> and
+<A HREF="http://es.geocities.com/eb8auu/aprs/index.htm">(EA8BQD in the Canaries)</A>
+ for telemetry feeds to the APRS Internet system
+for live distribution.  Requirements are simple:
+<LI><B> 1200 baud AX.25 TNC</B> connected to radio tuned to 145.825
+<LI><B> Omni VHF Antenna </B> (typically a 19" vertical whip) or optional tracking beam
+<LI><B> APRS or ALOGGER software</B> serving as an IGate connected to Phil's satgate.aprsca.net port 20150
+<P>
+
+<B>SETTING UP A SATGATE:</B></A> You can use any APRS program to feed satellite 
+data to the APRS-Internet system (APRS-IS) in the normal manner like any IGate.  
+But if you dont
+want to mess with all the APRS system, you can build a simple SatGate using only
+the ALOGGER program.  See <A HREF="ande/ANDEsatgate.txt"><B>building an ALOGGER Satgate</B></A>.
+See the <A HREF="http://satgate.aprsca.net:14701/"><B> status of other SATgates</B></A>.
+Click to (<A HREF="http://www.billdiaz.dynip.com/"><B>
+download</B></A>) Alogger
+<P>
+<P>
+<B>STATUS:</B> The Flight unit is at KSC awaiting launch on STS-116 planned for the
+first week of Dec 2006.  It was delivered to the Cape the week of 11 July for 
+integration starting on the 17th.
+The USNA comm systems for ANDE were complete and integrated in the spacecraft
+and tested as of 15 August 2005.  
+<P> This is after a significant set-back 27 May 05, when the finished Comms 
+modules as pictured above were burned to a crisp the night before delivery
+by a failed 60C heat-chamber thermostat. 
+<A HREF="ande/ANDEhot.JPG">See photo</A>.  On 29 May we began ordering parts and
+completely re-built it and delivered the second complete system by 13 July 05.  
+As shown below, the final tuning
+of the spacecraft as an antenna occured on 15 Aug 05 and got an amazingly good 1.2:1 SWR!
+<P>
+<IMG SRC="ande/photos/ANDEstackHx.JPG" HEIGHT=260 WIDTH=240 >
+<IMG SRC="ande/photos/ANDEfinalTweak.JPG" HEIGHT=260 WIDTH=320 >
+<BR><A HREF="ande/photos/ANDEantMatch.JPG"> Antenna Matching PI Circuit</A>
+<BR><A HREF="ande/photos/ANDEswrTest.JPG"> SWR Testing</A>
+
+<P>
+
+<B>ANDE</B> stands for Atmospheric Neutral Drag Experiment and 
+is a 19" passive sphere with optical corner reflectors and 6 Lasers for precise orbit
+determination.  The Naval Academy has been given the opportunity to construct a
+digital communications transponder for use in the Amateur Satellite Service to fit 
+inside the ANDE sphere similar to what it is flying on the
+<A HREF="pcsat.html"><B>PCsat</B></A>
+and <A HREF="pcsat2.html"><B>PCSAT2</B></A> missions.  The PCsat-like follow-on packet communications 
+mission will continue the interest of students worldwide by letting them 
+communicate via the satellite transponder and to watch its subsequent decay in the space environment due to drag.   See the paper on <A HREF="ande/ande-itu.txt"><B> Licensing of ANDE
+for operations in the Amateur Satellite Service</B></A>
+<P>
+
+<B> COMMUNICATIONS DESIGN DETAILS:</B> This web page addresses only the communications portion
+of the design which is our responsibility.  We maintain this web page daily as the design
+and development proceeds.  The communications, telemetry, command
+and control is all based on the off-the-shelf Kantronics KPC-3 TNC as shown below.  What
+makes this design unique is the absence of any external antennas as required by the 
+minimum drag needs of the science experiment.  We solved this by cutting the sphere in
+half so that we can use it as a dipole antenna across the two halves.
+<P>
+<IMG SRC="ande/ANDEblock.gif">
+<P>
+<B>Lithium Primary Battery Power System: </B>  Another unique requirement of the comm
+system was to operate for up to 1.5 years on primary batteries without any solar cells
+or external charging.  Thus, ANDE runs on 112 "D" cell Lithium thionylchloride cells
+arranged in 4 packs of 7 strings of 4 cells in series.  To meet the man safety requirements
+for launch on the shuttle, extensive testing has been conducted.
+<P>
+<IMG SRC="ande/ANDEbatbox-fitS.jpg">
+<IMG SRC="ande/ANDEbatbox-on-diskS.jpg">
+<LI> See <A HREF="ande/ANDEbatbox-fit.JPG"><B> Higher resolution of Batteries in box</B></A>
+<LI> And <A HREF="ande/ANDEbatbox-on-disk.JPG"><B>Higher resolution Battery Box on disk</B></A>
+<P>
+<LI> Battery Box: 
+     <A HREF="ande/ANDEnewpack.jpg"><B> Cell Arrangement</B></A>,
+     <A HREF="ande/ANDEpower.gif"> <B> Schematic</B></A>.
+<LI><A HREF="ande/ANDEbat-mgt3.gif"><B>Battery Life Management </B></A> 
+    uses 3 battery packs separately to exhaustion for lasers to yield measurable life data.
+<LI>Present design yields 1.5 year <A HREF="ande/pwrplan.txt"><B> Power Budget</B></A> using the
+    <A HREF="http://www.tadiranbat.com/specs6/tl_5930.htm"><B> Tadrian TL-5930 Cell</B></A>.
+    
+<P>
+<B>COMMUNICATIONS SYSTEM:</B>
+<P>
+<IMG SRC="ande/ANDEarch.gif">
+<P>
+The communications system consists of a Kantronics KPC-3+ TNC, a Hamtronics
+transmitter and receiver and a custom interface board to hook it all together.
+These are all mounted in a 1" tall box on top of the battery boxes.
+<P>
+
+<LI>Communications Tray <A HREF="ande/ANDEcomBrds.gif"><B> Layout</B></A>,
+    <A HREF="ande/ANDEpcb.gif"><B>Interface Board PCB Design</B></A>, and
+    <A HREF="ande/ANDEibrdsilk.bmp"><B>Parts Locations</B></A>.
+<LI>Comm system <A HREF="ande/ANDEtxrx.gif"><B>Schematic</B></A>
+<LI>Using the KPC-3+ for Teemetry <A HREF="ande/ANDEtlmMODS.gif"><B>TNC Mods</B></A>.
+<LI>Telemetry<A HREF="ande/ANDEsensors.gif"><B>Sensors</B></A>,
+    <A HREF="ande/ANDEtlm.gif"><B>Schematic</B></A>, and
+    <A HREF="ande/ANDEeqns.gif"><B>Conditioning Circuits</B></A>.
+
+<LI><A HREF="sats/merry_xmas_ande.mp3"><B>Example Speech</B></A>, 
+     <A HREF="ande/ANDEspeak.gif"><B>Text-to-Speech Schematic</B></A>....
+    with the supporting<A HREF="ande/ANDEspeech.txt"><B>Text description</B></A> 
+    and a 
+<!--<A HREF="http://www.usna.edu/cgi-bin/good-bye.pl?url=http://www.digac.com/oemtts.htm">-->
+<A HREF="http://www.usna.edu/cgi-bin/good-bye.pl?url=http://www.textspeak.com/oemtts.htm">
+
+ link </B></A> to the MFR's documentation.
+    
+<LI><A HREF="ande/ANDEantbrd.gif"><B>Antenna Matching Circuit</B></A>.
+
+<LI><A HREF="ande/Problems.txt"><B>Debugging problems</B></A>     
+<LI><A HREF="ande/ANDEfirmware.txt"> <B>TNC ROM defaults</B></A>.
+<P>
+<IMG SRC="ande/ANDEsection.gif">
+<P>
+<B><U>Background notes and supporting justification used in the design:</B></U>
+    
+<LI><A HREF="ande/KPC3TNC.jpg">Terminal Node Controller (photo)</A>
+<LI><A HREF="ande/VHFXMTR.jpg">VHF 3 Watt Transmitter (photo)</A>
+<LI><A HREF="ande/VHFRCVR.jpg">VHF receiver (photo)</A> (pots are removed for flight model).
+<LI><A HREF="ande/freqs.txt">ANDE Frequency Selection (2m downlink)</A> and the actual
+    <A HREF="ande/ANDE-IARU.doc">IARU Frequency Request</A>
+<LI><A HREF="ande/ANDEcontract.txt">ANDE User Expectations</A> 
+<LI><A HREF="ande/ANDElinks.txt">Link Budget</A>
+<LI><A HREF="ande/ANDE-i-2o.pcb"><B>Click here to download EXPRESSPCB.pcb file</B></A>.  
+    Use the free ExpressPCB software to view it.
+
+<LI><A HREF="ande/ANDEchnls.gif"><B>Telemetry Multiplexer </B></A>,
+    <A HREF="ande/runtime.jpg"><B> RunTime Counter</B></A>, and
+    <A HREF="ande/IntBRDmods.txt"><B> Interface Board changes required </B></A>.
+<LI><A HREF="ande/ande-tlm.txt">Telemetry format and equations </A>.
+    
+
+<P>
+<B> Other Documents and drawings:</B>
+<LI><A HREF="ande/ANDEantPCB.jpg"> <B> Prelimiinary Antenna testing connections</B></A>.
+<LI><A HREF="ande/ANDElift2.jpg"><B>Two man lift</B></A> system.
+<LI><A HREF="ande/ANDEgse.txt"><B> GSE</B> Test Equipment and Test Plan</A>.
+
+<P>
+<B>MULTI-PACK BATTTERY DESIGN:</B> Since the 
+<A HREF="ande/andebatled.jpg"> lithium discharge profile</A>
+is totally flat to 97% of battery life, the only energy usage data will be obtained
+by using each of the 4 battery packs to exhaustion.  This will give 4 
+energy benchmarks during the mission. The battery packs are all in parallel, but 1, 2 and 3 series droping diodes (0.7v) are placed in series with each additional pack beyond the first. This way, the first pack is used to ehaustion before significant current begins drawing from the next, and so on.
+
+<P>
+
+<P>
+The photo below is NOT ANDE, but
+it does give a representative view of a 19" spherical Spacecraft. 
+<P>
+<IMG SRC="ande/sshine-ande.jpg">   
+<IMG SRC="ande/antenna.jpg" height=320 width=400 >
+<P>
+In the spring semester 2002, Midn Patterson (EE Dept) in conjunction with the 
+USNA Small Satellite program under the guidance of LTCL Billy Smith 
+and Satellite Lab Engineer, Bob Bruninga, WB4APR did initial investigations into conformal
+antennas for such low-drag spherical spacecraft.  These showed that the natural resonance 
+of the 17" sphere was near to the amateur satellite band on 146 MHz and if this frequency
+was used, that the sphere could be used as the antenna itself with no external protrusions.
+The FIRST SEMESTER objectives below were accomplished in the Spring of 2002.
+<P>
+<IMG SRC="ande/PlazaSWR.jpg">
+<IMG SRC="ande/objectives.jpg">
+<P>
+<A HREF="ande/gap-swr.jpg">Click here</A> to see the SWR resonance achieved at 145 MHz.
+<P>
+The ANDE<A HREF="ande/ANDEcomms.txt"> Communications</A> 
+mission, can provide basic Telemetry Command and Control for ANDE in addition
+to supporting general communications in the Amateur Satellite Service.  This includes:
+<BR>
+<LI> Battery and Suns sensor voltages (attitude)
+<LI> Battery currents
+<LI> Module Temperatures
+<LI> ON/OFF command switches
+<LI> 1200 or 9600 baud RS-232 serial data telemetry channel for other Amateur Payloads
+<LI> <A HREF="ande/satpln2.txt">Digital Communications Relay support</A> 
+     of the PCsat/APRS mission.
+<LI> A text-to-speech experiment for downlink communications to mobile and
+     handheld users without digital packet capability.
+<P>
+The digital communications relay will operate
+within the ITU regulations for operations in the Amateur Satellite Service,
+to provide digital communications for amateur satellite operators, educators
+and possible remote student amateur radio environmental sensors
+worldwide.  This mission will augment the communications 
+mission of <A HREF="pcsat.html">PCsat</A> by adding a second and third satellite to the
+ constellation for comms support of remote travelers, cross country travelers, 
+expeditions, or any other travelers far from any existing 
+<A HREF="http://www.aprs.org/digis.html">APRS terrestrial communications infrastructure.</A>  
+The PCsat and ANDE downlink from such users is fed into the existing 
+worldwide internet linked APRS system by a few permanent volunteer ground stations.  ANDE would
+ join ISS, MIR, PCsat and several other on-orbit amateur radio packet experiments
+<A HREF="astars.html"> (ASTARS)</A>
+that have been conducted over the years leading up to this exciting capability. 
+<P>
+
+<IMG SRC="ande/TNC.jpg" HEIGHT=320 WIDTH=450><BR>
+The TNC COMM SYSTEM (this is the KPC-9612.  The KPC-3 is slightly smaller).
+<P>
+Here are several additional PHOTOS, DRAWINGS and Documents reorganized by topic:
+<LI><A HREF="ande/satCART.jpg">The Prototype</A> 
+<LI><A HREF="ande/guts.jpg">Preliminary Internal Structure Sketch</A> 
+<LI><A HREF="ande/tncmods.jpg">TNC mods for telemetry</A>  
+<P>
+ The Space segment of the ANDE communications mission has been demonstrated a 
+number of times in space via <A HREF="pcsat.html">PCsat</A>, 
+<A HREF="mirex.html">MIR School tests</A>, the <A HREF="sarex.html"> Shuttle SAREX</A>, 
+and the <A HREF="http://www.aprs.org/spre.html">SPRE mission. </A>.  It is also a spin off of a previous
+launch opportunity that we had in 1998 called <A HREF="http://www.aprs.org/natsat.html"> NATSweb</A> that
+almost got launched on SEA-LAUNCH..
+The ANDE Communications mission is a  project to produce a viable payload
+ in a very short time frame using off
+the shelf components where possible.  Here are the background topics of design:
+<P>
+<LI><A HREF="ande/satpln.txt">The Mission and ANDE Team</A>
+
+<P> APRS is the Automatic Packet Reporting System that amateur radio operators use for 
+communictions and position tracking using the 
+<A HREF="http://web.usna.navy.mil/~bruninga/aprs.html">APRS
+Automatic Packet Reporting System</A> .  The ANDE Communications transponder would be 
+operated under the rules of the Amateur Satellite Service and the rules of the FCC.  
+
+<P><FONT SIZE=+1>You are visitor: 
+<IMG SRC=http://www.aprs.org/cgi-bin/Bruninga/ande.cgi> since 1 October 2002.  
+[try using Netscape if the counter does not show]
+<P>
+Send comments, suggestions, feedback to bruninga@usna.edu
+<P>
+<B>Obsolete ideas:</B>
+<LI><A HREF="ande/strshn5.txt"> The original COMM plan</A>
+<LI><A HREF="ande/satpln.txt">Original Comms proposal</A> 
+<LI><A HREF="ande/ande-cw.jpg">Suggested Morse Code sequence for Lasers.</A>
+<LI>Original <A HREF="ande/ande-wire-bat.jpg"> A/B Battery/Shell Harness</A>
+     and<A HREF="ande/ande-Xcnct.jpg"> A/B Cross Connect harness</A>.
+<LI><A HREF="ande/andesep.jpg"><B> Temprorary Sketch of possible sep system</B></A>
+<LI>Look at this idea for mounting the Laser Driver <A HREF="ande/ANDEshellaser.jpg"><B> on the shell</B></A>.
+<LI><A HREF="ande/ANDE-sep.jpg"><B>Sep Switch locations</B></A>
+<LI>Space Test Program <A HREF="ande/ande-stp.txt"> Payload Requirements Document</A>
+<LI>A commercial <A HREF="http://www.ntt-at.com/products_e/spherical/#spec"> 
+wideband spherical antenna design</A>.  Probably not applicable to our needs.
+<LI><A HREF="http://www.aprs.org/photos/drawing.gif">Drawing template</A>
+
+ </FONT>.<BR>
+<HR SIZE=5 WIDTH="100%">
+
+<CENTER><TABLE BORDER=2 CELLPADDING=2 >
+<TR>
+<TD>
+<CENTER><P><FONT SIZE=+1><A HREF="satstation.html">USNA
+Satellite Ground Station</A></FONT></P></CENTER>
+</TD>
+
+<TD>
+<CENTER><P><FONT SIZE=+1><A HREF="http://www.aprs.org/w3ado.html">Midshipmen Amateur Radio
+Club</A></FONT></P></CENTER>
+</TD>
+</TR>
+</TABLE></CENTER>
+</UL>
+
+</BODY>
+</HTML>

@@ -1,0 +1,24 @@
+EXAMPLE FILE OF UI-PACKETS IN GO-32 DOWNLINK
+----------------------------------------------------------------------------------
+
+4XTECH-11>PBLIST:PB: Empty.              <== no one is logged on to the BBS
+4XTECH-12>STATUS:>B:43547673             <== total bytes onboard the BBS
+4XTECH-12>BEACON:BBS(V9.87 beta) 2Users/8BCasts. <== BBS beacon
+4XTECH-12>BEACON:Upl:145.89,145.93,1269.8,1269.9 <== BBS beacon
+4XTECH-12>BEACON::BLN1 GO32:Test APRS!!Use pth via 4XTECH  <== APRS bulletin
+4XTECH-12>BEACON:                                <== unused beacon
+4XTECH-12>BBSTAT:Open:AB1C23:            <== available BBS ports
+4XTECH-12>BEACON:>Tue Oct 02 13:05:34 2007 :UTC| Gurwin Techsat1B (V9.87)   
+4XTECH-12>BEACON::BLN2 GO32:APRS msgs and clients use 145.85 Upl <== APRS bulletin
+4XTECH-12>BEACON::BLN3 GO32:D7&D700 posits use 145.93            <== APRS bulletin
+4XTECH-11>PBLIST:PB: WA3SWJ              <== User logged onto BBS
+WB4APR-3>APRX76,4XTECH*::BLN5     :class of 2008 says 234 days to graduation{15}
+WB4APR-3>APRX76,4XTECH*::BLN6     :GO NAVY! BEAT ARMY!{16}
+WB4APR-6>3Y0Y0P,4XTECH*:'h@l >/]435.230MHzGO32 test. 50watts 19" whip 1 m=
+WB4APR-3>APRX76,4XTECH*:=3859.10n/07629.13W/PHG5230 Bob at work
+
+The last four are user digipeated packets.  All of these except for the
+STATUS and PBLIST packets will show up on the D7 or D700 front panel.
+
+
+Bob, WB4APR

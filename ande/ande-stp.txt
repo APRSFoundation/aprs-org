@@ -1,0 +1,202 @@
+ADDITIONS TO STP PAYLOAD REQUIREMENTS DOCUMENT FOR PCSAT-FOLLOW-ON
+------------------------------------------------------------------
+                                             Bruninga 16 July 2002
+
+The following items are the suggested additions to the STP Payload 
+Requirements Document for ANDE to support the addition of the 
+active PCsat telemetry/comm system.  These listed additions only 
+represent first order additions and not necessarily second order 
+effects that might impact existing wording...
+
+2.1   MISSION OBJECTIVES
+
+2.1.2 Key Mission Objectives
+ 
+      * Secondary objective to extend the PCsat educational
+        communications and telemetry mission...
+
+2.2.1 Major Component Descriptions
+
+      MOCK ANDE ACTIVE SPHERE:
+      10 kg of primary batteries  (2 kg absolute minimum)
+      1 kg telemetry/comm module
+
+2.2.4 Electrical Interfaces
+
+      The telemetry/comm system activation mechanism will consist
+      of dual-dual redundant magnetic proximity switches to
+      activate the active payload on separation.
+
+2.3.1 Hardware Subsystems
+
+      2.3.1.1  The telemetry/Comm module is a 6"x6"x2" module
+               with three external electrical connectors:
+               * Antenna coax connector
+               * DB-9 Nine pin Battery power connector
+               * DB-15 Fifteen pin telemetry connector
+
+      2.3.1.2  Antenna interface circuit board 2"x1"x1" which
+               serves as the matching circuit to couple the
+               XMTR/RCVR to the split-shell of the sphere.
+
+      2.3.1.3  Battery box of size 6"x6"x6" full of primary
+               batteries of type (TBD).
+
+      2.3.1.4  Telemetry sensors and wiring.  There will be
+               six sun sensors and six thermisters attached
+               to the spaceframe sphere and connected to the
+               telemetry module with small wiring.
+
+
+2.3.2 Software Subsystems.  The telemetry/commmand/control
+      and communications subsystem consists of a 68HC11
+      commercial grade processor operating from ROM.  On
+      every power-up, the processor cold boots and executes 
+      from factory defaults.  Any SEU or other anomolies
+      that cause abnormal operations will be reset on the
+      next 3 minute hardware power cycle.
+
+
+2.4.1 Operations description
+               
+      2.4.1  The Telemetry/Command/comm system's primary function is
+             to provide a once every 3 minute worldwide telemetry
+             and to also support command and communications while
+             over a command or user ground station.
+
+      2.4.2  Operations Modes.  The Telemetry/Command/Comm system
+             will operate in three modes for telemetry, command and
+             control, and user communications support (if available).
+            
+             2.4.2.1  TELMETRY: Telemetry will consist of a one second
+             telemetry burst once every 3 minutes worldwide.  This
+             0.5% duty cycle is what minimizes primary power drain.
+             All the rest of the time, all electronics including the
+             command receiver will be off except for a master 
+             hardware timer which only draws microwatts.
+
+             2.4.2.2  COMMAND/CONTROL:  There is a 1 second receive 
+             window after each telemety packet, when a command station 
+             may send a  wake up command to activate the system and 
+             keep it active for 30 seconds after the last command.
+             During this time any commanding or high rate telemetry may 
+             be enabled.
+
+             2.4.2.3  COMM SUPPORT:  Also during this COMMAND/COMM window,
+             the PCsat style active transponder may be enabled to allow
+             PCsat style packet relay in support of users and other
+             educational or experimental comm needs.
+
+      2.4.3  Mission Profile/Timeline
+             
+             Activation:  The master hardware timer will be activated by
+             dual-dual redundant magnetic proximity switches on the 
+             spacecraft held normally OPEN by magnets embedded in the
+             CAPE foam system.
+
+             Normal Operations:  Normal telemetry will continue throughout
+             the life of the battery system.  Commanding will be performed
+             as needed from the primary (USNA) and alternate command sites.
+             User Communications may be enabled over the USA, Europe,
+             Australia, Japan and possible other countries as power budget
+             permits.
+
+      2.4.5  Minimum Mission Success Criteria
+
+             The success criteria for the followon PCsat Telemetry system
+             is the receipt of nominal temperature and spin rate data for 
+             ANDE for a minimum of one day after separation.
+
+
+3.2  Power Requirements
+
+     3.2.1   Standby power 0.0 watts
+     3.2.1   Normal operations.  
+             
+             MODE                  POWER   SOURCE  PEAK   DUTYCYCLE
+             --------------------- ------  ------- ------ ---------
+             Hardware Master Timer .005W   9 Volt  .005W   100% 
+             Telemetry             .025W   9 volt  5W      0.5%
+             Commanding 5/week     .005W   9 volt  5W      0.1%
+             MaxUser Load          .100W   9 volt  5W      2%
+             Total Average         .135W   9 volt  5W      2.7%
+
+     3.4.3   Command Requirements
+             Other than those necessary to deploy and sepparate ANDE
+             there are no shuttle/ISS services required by the payload
+             for commanding.  But since the Amateur Radio Packet system
+             on the ISS (ARISS)is compatible with the PCsat telemetry
+             command and control system on ANDE, it may be used to 
+             monitor the telemetry and or give commands after activation..
+
+             3.4.3.1 Command Interface is RF only at 145.825 MHz.
+             Protocol is 1200 baud AX.25 AFSK tones on a 3 KHz deviation
+             FM carrier.
+
+             3.4.3.2 Command data rate is 1200 baud
+
+             3.4.3.3 The commmand system can support a serial data stream
+             and 3 or more optional ON/OFF switch closures.  Applications
+             of these switches are TBD.
+
+      3.4.4  Telemetry Requirements use the same RF channel and protocol
+             as the command system.  Telemetry is transmitted once every
+             3 minutes in a one-second data burst.  This telemetry is
+             receivable with any omni antenna ground station within the
+             footprint.
+
+
+3.6  Orientation and Stabilization
+   
+     Note that the PCsat Command/Control system could be capable of doing
+     some minimum torquing if torquing coils are added to the system.
+
+
+4.4  Electrmagentic Compatibility
+
+     4.4.1 Sensitivity to Radiated emissions.  The PCsat follow-on system
+     should not be exposed to RF levels greater than 5 volts per meter
+     in the 140 to 150 MHz band or 20 volts per meter elsewhere.
+
+     4.4.2 Sensitivity to Conducted Emissions.  Th ePCsat follow-on system
+     should not be exposed to conducted currents between the lower and
+     upper hemispheres of greater than 10 amps average or 100 amps peak.
+
+     4.4.3 Sensitivity to magnetic fields.  PCsat follow-on system has 
+     no restrictions on magnetc fields.
+
+
+4.9  Radio Frequency Emissions
+
+     4.9.1 The PCsat follow-on telemetry/command/control system operates
+     on only one internationally allocated frequency (used by PCsat)
+     of 145.825 MHz.  This frequency is pre-approved by the ITU for
+     amateur satellite operations.  
+
+     4.9.2 Transmit power is 5 watts with a field strength of 32 volts 
+     per meter.
+
+     4.9.3 Operations are dual-dual inhibited while PCsat is captive
+     within the CAPE system.  The first one second transmission will
+     occur within 5 seconds of separation.
+
+
+7.   GROUND OPERATIONS SUPPORT
+
+     7.3  Experiment Ground Support Equipment.  During all test and
+     integration phases, the PCsat follow-on telemetry/command and
+     communications system may be supported by a single suitcase
+     portable command system and laptop PC.
+
+     7.5  Ground Support Facilities.  The US Naval Academy Satellite 
+     Ground station will be the primary command and telemetry station.  
+     Additional telemetry ground station receivers are currently
+     active in several countries providing live downlink data via
+     the internet.  As a follow-on PCsat style teleletry system, these
+     stations are in place and will remain active and continue to 
+     provide worldwide telemetry data.
+
+     Additionally, Amateur Satellite Users worldwide will be able to use the
+     bent-pipe AX.25 transponder when power budget permits.  Such users
+     and ground support equipment are in place.
+

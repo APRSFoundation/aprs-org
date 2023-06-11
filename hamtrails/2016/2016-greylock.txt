@@ -1,0 +1,69 @@
+MOUNT GREYLOCK-11 REPORT - 2016
+-----------------------------
+AB1PH, Don Rolph
+
+We were parked where we have been for every year,  at the junction where the summit 
+road splits form the road to Williamstown. We were at:  42.6333723N, -73.170740W.
+
+
+There is a parking area just off from the split.  We had 30 foot poles for the 
+antennas.  They were colinear 8 dB gain.  We used a D710GA at 50 watts.
+
+This site has worked for the last four years.
+
+If you look carefully grylck-11 is West South West of the summit of Mt Greylock. 
+Therefore the route to Equinox is approximately due north and skirts the west 
+edge of Mt Greylock.
+
+Indeed if Mt Greylock was between us and Equinox, then the UHF voice communications 
+would not work either.  so the argument that the summit is between us and EQINOX-12 
+is presumably in error.
+
+What we do have is difficulty in utilizing legal parking spaces on Mt Greylock with 
+usable views to Sams Point and to Equinox.
+
+The location we have used for the last four years seems based on our reconnaissance 
+to be perhaps the best compromise given the conditions.
+
+We back this up with:
+
+- D710GA systems which appear to be among the more resilient packet systems
+- running at 50 watts
+- with 8 db gain collinear antennas
+- on top of painter poles to give us reasonable height
+
+and doing so as a truly  car mountable system.
+
+Noting that:
+
+- UHF voice communication appears to be reliable between:
+o  grylck-11 and eqinox-12
+o  grylck-11 and samspt-10
+o  grylck-11 and slide1/10
+
+- from this years test, packet movement (both 1200 baud and 9600 baud) is reliable 
+between:
+o grylck-11 and samspt-10
+o grylck-11 and slide-1/10
+
+- from the last three years testing including the successful full length golden 
+packet effort of 2014, reliable packets
+o grylck-11 and eqinox-12
+
+If someone has a better proposed locaton on Greylock, we would be happy to consider 
+it.  But we do not have the full summit of Mt. Greylock between us and Mt Equinox.
+
+We also hear eqinox-12 packets (both 1200 baud and 9600 baud) quite reliably.
+ 
+Packets are moving from equinox-12 to grylck-11.
+
+Is it possible perhaps that the receiving strength of eqinox-12 needs to be improved?  
+What would be the impact for example of higher gain antennas at eqinox-12?
+
+Before we jump to conclusions, we really need to understand the actual situation on 
+the ground.  Suggesting that the summit of Greylock is between grylck-11 and 
+eqinox-12 is clearly incorrect.
+
+73,
+AB1PH
+Don Rolph

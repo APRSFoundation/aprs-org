@@ -1,0 +1,11 @@
+SUMMARY REQUIREMENTS (for the AX.25 links):
+------------------------------------------------------------------
+ 
+- Recommended DUAL-Redundant design (see photo)  <pec/pecflatsat.jpg>
+- TX power 2 Watts peak transmitting short few second data bursts 
+- TX whole orbit packet duty cycle less than 10% 
+- Peak solar power needed on single flat array = 20W 
+- Solar array sample Telemetry < 2,000 bytes per pass (2% duty cycle/Pass) 
+- Amateur Satellite UI digipeater mission (20% dutycyle over USA) 
+- Data would use 9600 baud for Telemetry and 1200 baud for Transponder 
+- Eclipse Battery would be 12 volts and under 4 Watt-Hours 

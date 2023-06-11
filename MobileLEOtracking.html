@@ -1,0 +1,229 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+   <TITLE>Mobile LEO Tracking</TITLE>
+      <META NAME="Author" CONTENT="Bob Bruninga">
+   <META NAME="Description" CONTENT="Easy Mobile LEO Satellite Tracking">
+   <META NAME="Keywords" CONTENT=" GO32, GO-32, satellite, tracking APRS, PCSAT2, PCsat, ANDE, RAFT, MarsComm, Amateur Satellites, packet radio">
+   <META NAME="Classification" CONTENT="Science">
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#B8A19C" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000">
+<CENTER><P><B><U><FONT SIZE=+4>
+Easy Mobile Satellite Tracking
+</FONT><FONT SIZE=+2>
+
+<IMG SRC="go32/go32-image.JPG" HSPACE=5 HEIGHT=70 WIDTH=70 ALIGN=LEFT>
+<IMG SRC="logos/usnalogo.gif" HSPACE=5 HEIGHT=70 WIDTH=70 ALIGN=RIGHT>
+<P></U></FONT>
+US Naval Academy Satellite Lab
+<BR>Bob Bruninga, WB4APR
+</B></CENTER>
+<P>
+<B> Note:
+<FONT COLOR ="#FF000000">
+These timings are for the Northern Hemisphere near about 40N latitude.
+<FONT COLOR="#00000000">
+<P>
+There are many FM Amateur satellites that you can work mobile, but the reason you don't
+often hear many mobile satellite operations is because of the perceived need 
+for satellite tracking 
+predictions for every pass. . But long before we had computers, Amateurs had plenty of
+manual and paper methods for satellite predictions that did not require a computer.
+<P>
+<B>Simply stated, <I> you don't need no stinkin' computer</I>, and you don't even need
+a PC while mobile.  All satellites have very predictable pass times that are very
+ repeatable.</B>
+<P>
+
+<IMG SRC="tracking/PSAT2-orbit.png">
+<P>
+PSAT2 for example is close to Time synchronous because each pass is only 5 minutes later each day.  
+But then every other day, a new orbit appears that is 90 minutes earlier.  So for almost a week of mobile
+operation, you can pretty much know when passes will occur.
+<P>
+
+<IMG SRC="tracking/PSAT-pass-timing3.png">
+<P>
+The timings above are easy to remember for PSAT.  Every pass is 15 minutes earlier every day and for any given day, 
+the next pass is 1 hour and 40 minutes later.
+
+<P>
+<IMG SRC="go32/LEO-go32.GIF">
+<P>
+
+<B>GO-32 (now inop):</B> Was an ideal example,  and was ideal
+for Mobile APRS position, status and message communications. . (now currently in-op) 
+<A HREF="GO32-ops.html"><B>(see operations details)</B></A>.
+. For easy Mobile tracking, GO-32 repeats its ground track schedule every 9 days
+as shown in the image above.
+This allows tracking every pass for months with a simple table as shown below 
+for your time zone and latitude.  
+<P>
+<IMG SRC="go32/PassTable.GIF">
+<BR>Please see <A HREF="go32/passesGO32.txt"><B> other time zones tables in the USA</B></A>.
+
+<P>
+For example, on 4 August you count 3 columns to the right of 1 August, and see that there
+is not a good overhead pass that morning, but two lower passes.  The first to the east
+is at 0810 EDT and the second one, 100 minutes later is 0950 EDT to the west. 
+. If one pass is shown, then it is nearly overhead and there is a lower pass 100
+minutes earlier and later. . If two are shown, then they are both lower and the
+ones that are 100 minutes before and after them will not be in range for a mobile.
+
+<P>
+<B>Your Time Zone Location:</B> .
+It is important to visualize where you are located relative to the center of your
+time zone.  If you are in the eastern edge, then the earlier pass shown or the
+prior 100 minute pass will be better for you.  If you are to the west of your time
+zone, then the later pass will be better for you. 
+. If you are to the North of your time zone, then the morning pass will be a few minutes
+earlier and the evening pass will be a few minutes later.
+. If you are to the South, then it will be the opposite.
+<P>
+
+Most other satellites also have repeating ground tracks or repeating consistent schedules.
+
+<P>
+<IMG SRC="go32/LEO-Falconsat.png">
+<P>
+<B>Falconsat</B> is a PACSAT BBS satelite but also very easy to work as an APRS digipeater
+that can be worked from the mobile.
+. As shown above, it also has a repeating ground track which is every 3 days minus about ten minutes.  
+When the ground track for a satellite repeats every 5 days as did AO-51 Echo, a table like the one above
+for GO32 wouild look like this and should be good if updated once every few months.
+<P>
+<P>
+<IMG SRC="go32/PassTable51.GIF">
+<BR>
+<A HREF="go32/passesAO51.txt"><B>See other time zones</B></A>
+
+<P>
+<B>International Space Station:</B> . There are other patterns for satellites that are
+not sun synchronous as those above.  . For example, the Space Station has a pass over your
+location 23 minutes later each day as shown below.  But there is an overall drift earlier
+over the long term. 
+<P>
+<IMG SRC="go32/LEO-ISS.GIF">
+<P>
+The ground track for the ISS will repeat every other day but because of the 
+orbit drift, the repeating grond track will be about 51 minutes earlier.
+. The two plots below show the two most common ground track patterns for any
+given location. . On some days there is an overhead pass with earlier and later
+low level passes.  On the next day, there are two medium elevation passes but the
+earlier and later passes are very low on the horizon.
+
+<P>
+<IMG SRC="astars/passes-iss.GIF">
+<P>
+<B>MANUAL TRACKING:</B> . The point is, all you need is one pass time, and then you can
+predict all future and past passes.  This is very helpful when you are in the middle
+of nowhere without a PC.  As long as you know the approximate
+time of day for your satellite, all you have to do is monitor the satellite 
+downlink for an hour and a half and
+you are guaranteed to hear a pass.  Then for the rest of your trip, you can predict the
+future passes based on your general knowledge of the pass geometry and the number of
+minutes earlier or later per day.
+<P>
+<IMG SRC="sats/xw1-passes.GIF">
+<P>
+<IMG SRC="go32/LEO-ao27.GIF">
+<P>
+<IMG SRC="go32/LEO-ao50.GIF">
+<P>
+<IMG SRC="go32/LEO-pcsat.GIF">
+<P>
+
+<P>
+<B>MOBILE UPLINKS:</B> . It is easy to get into any of these satelites with your 50W
+mobile rig and mobile omni antenna.  . Two meters for an uplink has a 9 dB advantage 
+over the typical UHF downlink. . This can actually be a problem for LIDs that talk
+without being able to hear their own downlink.  DONT DO IT. Others are using the bird
+and you are just showing your ignorance by transmitting on top of them without being
+able to hear first. . But when you do hear the bird well, you can know that you
+should be able to get in.
+<P>
+
+<B>RECEIVING THE DOWNLINK:</B> . This is where the challenge is. . The UHF downlink suffers
+a 9 dB disadvantage compared to VHF and the satellite is only transmitting .5 watts compared
+to your 50 watts.  . The combination of these adds up to almost 30 dB of difference
+or 1000 times stronger uplinks than downlinks. . Fortunately, if you use a 19" vertical 
+whip in the middle of the roof of your car, it will act like a 3/4 wave antenna on UHF. 
+.. This gives almost 7 dB gain above 25 degrees where the satellite is also between
+6 to 10 dB closer. . So for those middle 3 or 4 minutes of a high elevation pass, the
+mobile can be used for satellite contacts. 
+. The plot below shows how well my vertical 19" whip hears GO32 during the center 1/3rd
+of a high elevation pass.  Passes below 25 degrees won't decode anything usually.
+
+<P>
+<IMG SRC="go32/GO32passHits.GIF">
+<P>
+As shown above, My first test with my D700 and 19" magmount whip on the roof of my car captured about 150
+packets over the center 6 minutes of a high elevation pass.  
+. Of the three passes in the morning and evening, only the center one will be above 30 degrees.
+. But, one day out of every 4, there will be two 30 degree passes instead.
+. I was tuning for Doppler. 
+. Without Doppler tuning
+my reception window would be about half that shown for the high elevation pass..
+<P>
+<B>Vertical 19" whip OMNI Satellite Antenna</B>: .
+A 19.5" two-meter whip antenna over a ground plane not only works perfectly as
+an UPLINK antenna, it is also ideal for the UHF downlink.  . On the downlink, it
+ will provide almost 8 dBi of
+gain above 30 degrees where the signal is strongest anyway.   See the plot below
+comparing the gain of a 1/4 wave whip with a 3/4 wave whip.  This is live data
+obtained from a 1/4 wave and 3/4 wave whip (scaled to GPS size and using the
+GPS constellation over 12 hours to provide all-sky signals):
+<P>
+<IMG SRC="astars/g34-14.jpg" >
+<P>
+These plots are the same 19" whip over the center of a ground plane. . The VHF
+gain is shown in RED and is the typical gain of a 1/4 wave monopole. . But the
+green trace is the gain of the same antenna at UHF where it exhibits about 3 dB
+gain for a total of almost 8 dBi for hearing the weak UHF downlinks.
+<P>
+
+Much experimentation in this area is needed.  Here is a plot of the theoretical
+EZ-NEC produced gains of three whip antennas including the path loss due to range.
+. This shows the 3/4 wave antenna to not begin working until above 30 deg, but
+I routinely capture some data above 20....  Better than shown here.
+<P>
+<IMG SRC="astars/gainplot.gif">
+<P>
+Bottom line, whats the best antenna?  Depends on how many people are collecting
+data from which directions....  There are enough of you and 
+enough different stations for us to find out!
+<P>
+<B>MOBILE SATELITE OPERATIONS:</B> Now that you konw when the satellites are passing
+overhead, it makes it east to do some mobile Satellite operations while you are 
+stuck there in the traffic jams or out on the open road on a trip.
+<P>
+
+<B>AZIMUTH-only Tracking with TV rotators:</B>
+
+All present day sateliltes (LEO's) do not need elevation tracking 98% of the time.  So foreget the 2% and use a simple $70 TV rotator instead of a $600 AZ/EL tracker which can do 98% as good a job.
+
+ <A HREF="LEO-tracking.html"><B> See how</B></A>!
+<P>
+
+ </FONT>.<BR>
+<HR SIZE=5 WIDTH="100%">
+
+<CENTER><TABLE BORDER=2 CELLPADDING=2 >
+<TR>
+<TD>
+<CENTER><P><FONT SIZE=+1><A HREF="index.html">APRS main page</A>
+</FONT></P></CENTER>
+</TD>
+
+<TD>
+<CENTER><P><FONT SIZE=+1><A HREF="pcsat.html">original PCsat</A></FONT></P></CENTER>
+</TD>
+
+
+</TR>
+</TABLE></CENTER>
+</UL>
+
+</BODY>
+</HTML>

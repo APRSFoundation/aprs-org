@@ -1,0 +1,732 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+   <TITLE>PSAT2 Page</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (Win95; I) [Netscape]">
+   <META NAME="Author" CONTENT="Bob Bruninga">
+   <META NAME="Description" CONTENT="ParkinsonSat APRS Satellite Project">
+   <META NAME="Keywords" CONTENT="ParkinsonSat, Parkinson, satellite, PCsat, buoy, ocean,environmental sensors, APRS, APRsat, buoys, oceanography, Satellite, Cubesat,  Tracking, Bruninga, LEO, GPS">
+   <META NAME="Classification" CONTENT="Science">
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#48D1CC" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000">
+
+<CENTER><P><B><U><FONT SIZE=+2>
+PSAT2 - Amateur Radio Communications Transponders
+<BR> USNA Student Satellite Project 2014-2019!
+</FONT></U></B>
+
+<P>
+<BR>See also its <A HREF="psat2.html"><B>followon PSAT2 </B></A> NO-104 launched in June 2019.
+
+
+<P><FONT SIZE=-1>
+<BR>Bob Bruninga, WB4APR, Instructor, US Naval Academy (last name at usna dot edu)
+<BR>2014 Students: Clay, Bell, Colby, Odowd 
+<BR>2015 Students: Hannah, Teater, Driskell, Hanks 
+<BR>2016 Students: Randell, Giornelli, Walker, Misch, Cho, Scheiner, Evans
+<BR>2017 Students: Johnson, Meier, Chen
+
+</FONT><BR></CENTER>
+<FONT size=4>
+
+
+
+<IMG SRC="PSAT2/Stack-X-Y29cameraX-PR.png" height=450 width=450> . . . 
+
+<IMG SRC="PSAT2/earth-gerst-psat2dx-antsX25.jpg" height=450 width=680> 
+
+<P>  
+
+<IMG SRC="PSAT2/status-bits.png" align=right>
+<IMG SRC="PSAT2/users-2018-2021.png" align=right>
+
+<B>Launch Successful!</B> at 0630z on 25 Jun 2019, a
+See: <A HREF="https://spaceflightnow.com/2019/06/23/falcon-heavy-to-flex-muscles-on-demanding-demo-launch-for-u-s-air-force/">
+<B>SpaceX Rocket </B></A> carried PSAT2, one of the most capable APRS satellites, into space to join the
+constellation of other APRS satellites on the well established APRS space frequency of 145.825.
+The box at right shows the total number of unique new callsigns that used the APRS satellites in the year shown.
+
+<BR>See also its predecessor <A HREF="psat.html"><B> PSAT (NO-84) </B></A> launched in May 2015.
+
+<P>
+<B>PSAT2 Awakes!</B>  Mysteriously, the PSAT2 VHF transceiver came came back to life on 26 April 2021 after 
+20 months of being dead.  It had disappeared in August 2019 just two months after launch. The HF-to-UHF
+transponder remained operational, but the VHF transceiver is very important as it allows for command, 
+control, telemetry, APRS and the new DTMF and Voice modes.
+<P>
+
+<B> OPERATING MODE:</B> UHF PSK31 and SSTV is always on.  Currently the VHF operating mode is set for APRS and APRS-to-Voice.
+You can confirm this mode by looking 
+the Telemetry Status bits table to the right.
+For example 01000110 would be APRS mode with A2V enabled and 11010000 would be DTMF grids
+and messages.  The x1xxxxxx is usually left on for internal use by the SATT4-to-xcvr
+serial interface.
+<P>
+<IMG SRC="PSAT2/PSAT2-PSAT-double-hop.png" align=right>
+
+<B>Double-Hop Packets:</B> Since the APRS Satellites PSAT and PSAT2 and ARISS all support the generic 
+alias of ARISS, then if one is lucky, it is possible to get a double hop off of a second APRS 
+satellite as shown at right.  Users would use the path of ARISS,ARISS, but in this case, the telemetry
+from PSAT2 only needs to use the path of AIRSS to digipeate off of a neighbor APRS satellite.
+<P>
+
+<B>Orbit Predictions:</B> PSAT2 should enter favorable elevations for mid latitudes between about
+<B> 10 to 22 June.</B>
+The appogee of its eliptical orbit moves rapidly to give good USA coverage for about 2 weeks and then
+bad coverage for about 2 weeks with an overal elevation angle change of 20 degrees or so. 
+ So if you cannot work PSAT2 now due to low elevation angles, just wait
+for the next good period.  Southern hemisphere operators will see the opposite.  Good coverage now and
+then worst coverage over the above time frame.
+<BR><A HREF="http://www.aprsat.com/predict-psat2"><B> Click here for predictions for your station.</B></A>
+ It uses your IP address to estimate  your LAT/LONG.
+<P>
+
+<B>APRS-to-Voice (A2V) Enabled:</B>  As of 27 May 2021, the APRS-to-Voice feature has been added to DTMF mode.  Now, not only
+can DTMF users initiate the voice synthesizer, but now APRS users can as well. You can tell if the APRS-to-Voice
+mode is enabled by the 1 bit in the 7th posiiton of the telemetry string (XXXX0010). Usually this will only
+be enabled when the satellite is in DTMF mode so the typical status will show as 11010010. The format to initiate
+a voice message response is to use any APRS radio
+to send an APRS message to the callsign of PSAT2-SAY and then the first 10 characters of the message must be
+your 6 letter callsign (right padded with spaces if needed) followed by "sez" and then the text to be spoken.
+The packet will look like this:
+<P>
+<center><B><i>
+WB4APR>APRS,ARISS::PSAT2-SAY:WB4APR sez speak this text for all to hear
+</center></B></i>
+<P>
+The satellite will respond with a packet ACK and then the spoken text.  Remember that this APRS-to-Voice
+message capabiliity is added to the DTMF mode and so the uplink channel remains the DTMF uplink on 145.980
+and downink remains 145.825.  The probabilities of success even with a perfect link is not 100% because
+the simple BasicStamp processor on PSAT2 now must scan looking for DTMF and then check for packet and
+the chance that it misses one is maybe 10%.
+
+<P>
+
+<B>DTMF/Voice Mode:</B> In this mode (showing status bits 1101xxxx) PSAT2 will respond to
+DTMF Gridsquare uplinks on 145.980 with a voice and packet response on 145.825.
+It will assign a QSO number that can be used so make a 2-way contact with other
+users.  You must pre-load your grid and callsign into DTMF memory to make it
+easy to transmit from DTMF memory with one key press.  See OPS manual.
+Here are the relevant links for DTMF uplink, VOICE downlink
+operations (More description of DTMF function is about 50% down this page):
+<P>
+<LI><A HREF="PSAT2/USER-Operations-Manual-k.doc"><B>PSAT2 Users Operations Manual</B></A> (download rev k)
+<LI><A HREF="http://aprs.org/PSAT2Translator.html"><B>Callsign/GRID DTMF translator to enter into your DTMF memory</B></A>
+ - (your Radio must be in Narrowband modulation to work).
+<LI><A HREF="http://www.spacecommunicator.club/dtmf/"><B> DTMF Bulletins from PSAT2</B></A> - Lists last 9 Grid calls. 
+  See log of <A HREF="http://packets.aprsat.com/bln-dtmf-users/"><B> all DTMF calls </B></A> accumulated to date, June 2021.
+<LI><A HREF="http://www.aprsat.com/dtmf"><B>User DTMF Grid/MSGS</B></A> Converted to APRS downlink.
+<LI><A HREF="http://n3crt.net/sat_recordings/2021-05-06_2126_PSAT2_NO-104_APRSTT_KN2K%2086_N3CRT_87_QSL.mp3">
+<B>typical Voice downlink and 1st 2-way recorded by N3CRT with KN2K</B></A>
+<P>
+
+
+<P>
+<B>APRS Telemetry and Live Downlinks:</B> Since launch, the PSAT2 (NO-104) HF/UHF PSK31 and SSTV uplink/downlink 
+remains fully operational. The APRS and DTMF uplink and Voice downlink were lost 2 months later in September 2019
+but mysteriously re-appeared on 26 April 2021 as noted above. The following APRS telemetry links
+have resumed capturing  data on FINDU.COM from the global network of APRS ground stations.
+
+
+<LI><A HREF="http://pcsat.findu.com"><B>User Digipeated Packets only</B></A>.  For less clutter, satellite telemetry now has individual satellite 
+     <A HREF="sats.html"><B>links</B></A>.
+
+<LI><A HREF="http://www.findu.com/cgi-bin/raw.cgi?call=psat2,psat2-1&amp;time=1"><B>PSAT2's Live telemetry packets (raw)</B></A>
+<LI><A HREF="http://www.findu.com/cgi-bin/tele1.cgi?call=psat2,psat2-1&amp;last=24&amp;param=1&amp;b=.00976&amp;label=Battery%20Volts&amp;units=Volts%20%5Bnew%200.00976%20Factor%5D&amp;autorange=1">
+    <B>Bus Volts</B></A>, and <A HREF="PSAT2/Voltage-thresholds-b.png"> Voltage-thresholds</A>
+
+<LI><A HREF="http://www.findu.com/cgi-bin/tele1.cgi?call=psat2,psat2-1&amp;last=24&amp;param=3&amp;a=-.000338&amp;b=.3884&amp;c=-77.3&amp;label=Zplus%20Temperature&amp;units=DegC&amp;autorange=1">
+    <B>Z+temps</B></A>, 
+    <A HREF="http://www.findu.com/cgi-bin/tele1.cgi?call=psat2,psat2-1&amp;last=24&amp;param=3&amp;a=-.000338&amp;b=.3884&amp;c=-77.3&amp;label=Zminus%20Temperature&amp;units=DegC&amp;autorange=1">
+    <B>Z-temps</B></A>, 
+    <A HREF="http://www.findu.com/cgi-bin/tele1.cgi?call=psat2,psat2-1&amp;last=24&amp;param=2.05&amp;b=2&amp;label=Battery%20Current&amp;units=Milliamps&amp;autorange=1">
+    <B>Batt Current</B></A>, and 
+    <A HREF="PSAT2/Current-analysis.png"> How to read current</B></A>.
+<LI><A HREF="http://www.findu.com/cgi-bin/tele1.cgi?call=psat2,psat2-1&amp;last=240&amp;param=0&amp;b=1&amp;label=Minute%20Counter&amp;units=Minutes%20(16hrs)&amp;autorange=1">
+    <B>Telemetry Counter</B></A> (minutes since last reset or rollover).
+
+
+<LI>[Remember, data points are only when received over ground stations, and are not a complete picture]
+<P>
+
+<IMG SRC="PSAT2/PY5LF-SSTV-dtmfMap.png" align=right>
+
+<B>PSK31, SSTV and Voice Transponder:</B> With the modest activity on the PSK31 HF/UHF trasnsponder, we now
+encourage two-way SSTV (or voice) contacts by transmitting SSTV or voice on the 10 meter uplink.  The downlink SSTV
+seems almost perfect as reflected in PY5LF's received example at right.
+  Simply transmit using SSB on the 29.4815 uplink WHILE someone else is transmitting PSK31.  
+And there's the rub.  The transponder has to see a PSK31 modulation somewhere in the passband 
+(not used by SSTV) in order to key up the transponder.  AND the uplink station has to do the 
+Doppler correction.  But unlike PSK31, SSTV is not phase coherent and so RIG control using 
+any satellite software can do fine.  Also, if you can run two instances of SSTV, you could see your own 
+downlink on 435.350 MHz for Quality control!
+<P>
+<B>Simple Fix for EZ Operations:</B> Maybe we can enlist the authors of SSTV software to not only generate the SSTV tones, 
+but also a simple PSK31 tone carrier down below 400 Hz.  This "psk31" tone only needs 
+to have 31.25 Hz AM modulation on the tone carrier, no real PSK31 data..
+<P>
+
+<P>
+<B>Handheld SSTV Operations:</B>
+KO4AQF reports that handheld portable SSTV operations is easy using <B><i>CQ SSTV</B></i> on iPhone
+or MMSTV on Windows a laptop. Worst case, he has recorded it, clean up the audio in Audacity and 
+played it back with one of those apps listening.  Similarly, KO4MA used <B><i>SSTV by Black Cat Systems</B></i>
+on his Iphone in the shack. He just put the phone in a headphone cup on the desk and away it went.
+And K3RLD reports <B><i>Robot36 app</B></i> for Android.
+
+<P>
+<B>Downlinks:</B>  435.350 MHz PSK31 and SSTV - 145.825 MHz for telemetry, APRS and DTMF/voice
+<BR><B>Uplinks:</B> 29.4815 MHz SSB PSK31, SSTV - 145.825 MHz for APRS and DTMF Grids/msgs
+<BR><B>USNAP1:</B>. 145.825 (1200 baud) and 437.605 MHz 9600 bd TLM once every 30 secs (sister cubesat)
+<A HREF="bricsat2.html"<B>BRICSAT2</B></A> 
+<P>
+
+<IMG SRC="PSAT2/Z-temps-day-2-not-tumble.png" >
+<IMG SRC="PSAT2/telemetry/Sun-xyz-8min-plotx.png" >
+<P>
+<B> VHF Loss (Aug-Apr):</B> PSAT2 Telemetry, APRS, and DTMF were lost in August 2020 2 months aftger launch,
+but re-appeared 8 months later on 26 April 2021 and is fully operational.  
+Operations remained nominal on HF and UHF 
+(PSK31 and SSTV).  After an initial few weeks in APRS-to-Voice mode after launch, it was switched to 
+its new special DTMF-to-APRS mode for reporting Grid Squares (with voice response). 
+The initial 1.2 RPM tumble assures good volts and
+even heating and charging.  PSK31, and SSTV are enabled for users at all times. 
+VHF operations can switch between APRS and DTMF/Voice.
+<P>
+
+<BR><B>User Station Software Configuration:</B>
+<LI>Radios <B><i>must be in Narrowband</i></b> and track to 1 KHz Doppler on the uplink.
+<LI>APRS radio or client software of any kind
+<LI>PSK31 of any kind on UHF downlink
+<LI>PSK31 <A HREF="http://www.frontiernet.net/~aflowers/dopplerpsk/dopplerpsk.html">
+<B>TX-uplink program</B></A> that compensates for Doppler and allows full Duplex entire pass
+<LI>SSTV of any kind on UHF downlink
+
+<P>
+
+<B>Tracking TLEs:</B> can be found on any tracking page.  PSAT2 44354 and USNAP1 is 44355.
+<P>
+
+ <B>PSAT2 and FCC:</B> Getting our student project's Amateur Radio API Notice through the FCC 
+took 3 years due to the their 
+interpretation that federal students cannot built Amateur Radio Satellites without going through
+Federal (NTIA) channels as well. The DoD spectrum agents are very busy with billion dollar Satellites
+and this was very difficult relative to our student's payload's $5k value.
+Our next payload, <A HREF="qikcom-2.html"><B>QIKCOM2</B></A> initiated in 2014 was then held up by the
+FCC and we could not get the needed NTIA paperwork in time
+ and the payload was removed from the rocket in 2018 just prior to launch.
+
+<P>
+<IMG SRC="tracking/PSAT2-orbit.png"> 
+<IMG SRC="tracking/Apogee-footprint.jpg">
+
+<P>
+<B>28 degree Eliptical Orbit:</B> With this 28 degree 860/300 km apogee/perigee, there is a  
+large difference in footprint between Apogee and Perigee as shown above.  At perigee in the northern 
+hemisphere, PSAT2 will be hard to reach from most of Europe.  Fortunately, the Apogee dynamic reverses every 2 weeks or so
+and elevation angles improve and wane by 20 degrees or more on a 34 day cycle.  Also, PSAT2's
+orbit is almost time-synchronus as shown above.  For a mid latitude, the passes are only about 5 minutes
+later each day, but then there is a new pass 90 minutes earlier every other day.  This makes tracking
+for mobile APRS travelers easy without having to have a PC or pass prediction.  The pass-times cycle repeats 
+every 48 days or about every month and a half you will be in similar time-of-day pass times.  
+ 
+<P>
+<IMG SRC="PSAT2/Ground-stations-28deg-latency-e.png"> 
+
+
+<P>
+
+<B>Ground Station SATgates:</B> The above sketch shows the importance of Southern Hemisphere and equitorial stations
+for capturing telemetry from PSAT2 around the world.  There are three oribts that are not near a ground station
+for over 70 minutes and one orbit near 60 minutes.  It would be nice to add a ground station in Central America.
+<P>
+
+<B>Control Operator:</B> Following the IARU recommendations for Amateur Satellites, 
+our control operator is a licensed third party Ham with a non-pecuniary affilliation to the Academy 
+(retired senior division head) along with other designated volunter amateur ground stations around 
+the world who have controlled our previous amateur satellites, PCSAT, RAFT, PSAT, etc.  
+The Licensed control operator fully understands Amateur radio as well as the Academy and serves the
+ responsibility to assure that PSAT2 meets all the rules of the Amateur Satellite Service 
+while at the same time, he can also push back to the Academy should there be even the 
+slightest conflict of interest.
+
+<P>
+<IMG SRC="PSAT2/SSTV/Earth-view-30-jun19-PY5LF.png" align = right>
+
+<A HREF="PSAT2/USER-Operations-Manual-h.doc"><B>PSAT2 Users Operations Manual</B></A> (download rev g)
+
+<P>
+<B>Operating Modes:</B>  PSAT2 consists of a number of exciting and unique Amateur Communications transponders as listed here:
+
+<LI> A newer PSK31 29 MHz uplink/UHF FM downlink from Brno University following 
+the original on <A HREF="psat.html"><B>PSAT</B></A>
+<LI> A Brno SSTV camera downlink in same UHF FM audio as PSK31 users 
+(<A HREF="http://www.urel.feec.vutbr.cz/esl/psat2/sstv/"><B>See gallery of first ten images</B></A>)
+
+<LI> An APRS touchtone DTMF Grid Square uplink and Voice/APRS downlink for Grid reporting 
+<LI> A DTMF Text messaging <A HREF="aprstt.html"><B>(APRStt)</B></A> 
+     system to-voice and APRS.  (any of the 99 defined messages).  
+<LI> An APRS text message up and Voice down as
+     <A HREF="sats/merry_xmas_ande.mp3"><B>pioneered on ANDE</B></A> in 2007.
+     <A HREF="ande-ops.html"<B>ANDE</B></A>.
+<LI> A conventional APRS digipeater that joins a number of sister APRS Amateur Satellite transponders.
+<LI> Longer Life - Almost HALF the cubesat mass is a huge lead ballast to nearly double the orbit life and 
+ham radio access.
+<P>
+<B> SSTV notes:</B> The first ten SSTV images were taken automatically when the cubesat was released and are in the above gallery.
+THe best one received by PY5LF is shown above.  Eventuallly we may turn on the camera
+for live images or on-demand.  Farther in the future, we may authorize users to send live SSTV via the transponder.
+Becasue the audio spectrum is shared, PSK31 users should remain between 550 and 950 Hz to avoid interference to the 
+<A HREF="PSAT2/SSTV/PSK31-SSTV-spectrum-cr.png"><B>SSTV passband</B></A>.
+
+<P>
+
+<B>Sister APRS Satellites:</B> Other APRS transponder satellites on orbit or in work all share a common uplink,
+a generic digipeter alias (APRSAT and ARISS) and a common downlink (145.825 MHz) so all user traffic appears on the live 
+<A HREF="http://pcsat.findu.com"><B>APRS satellite downlink page</B></A> and  <A HREF="http://ariss.net"><B>ISS downlink page</B></A>.  The graphic below shows how the commonality of all this operaation integrates together with worldwide users and the internet linked ground stations. 
+<P>
+<IMG SRC="psat/APRS-satcom-arch.png" height=285 width=550 align=right>
+
+<P >
+<A HREF="https://othernet.is/"><B>OTHERNET</B></A> a global open satellite network on GEO satellites (was
+<A HREF="outnet.html"><B>OUTNET</B></A> back in 2018)
+<BR><A HREF="pcsat.html"><B>PCSAT</B></A> (callsign W3ADO-1) in orbit since 2001 semi-operational
+<BR><A HREF="ariss.html"><B>ARISS</B></A> on the ISS since 2007
+<BR><A HREF="http://amsatindia.org/"><B>AISAT-1</B></A>, India's first APRS satellite (Apr 2019).
+<BR><A HREF="psat.html"><B>PSAT</B></A> Operational since May 2015
+<BR><A HREF="bricsat-1.html"><B>BRICSAT-1</B></A> launched with PSAT, but insufficient power budget
+
+<BR><A HREF="qikcom-1.html"><B>QIKCOM-1</B></A> Held for a year on ISS, awaiting FCC ok.  When finally released, it was never powered up
+<BR><A HREF="qikcom-2.html"><B>QIKCOM-2</B></A> Removed at last minute from highbay before launch because FCC insisted on NTIA License
+<BR><A HREF="bricsat-2.html"><B>BRICSAT-2</B></A> APRS digi and thruster experiment in a sister 1.5U cubesat with PSAT2
+<BR><A HREF="astars.html"><B>ASTARS missions:</B></A> Early 2 decades of APRS missions on other spacecraft, ISS, Shuttle and MIR
+
+<P>
+
+<P>
+
+<B>The unique features of PSAT2 </B> shown in the CONOPS image diagram at right, are the PSK31, and
+APRS transponder (both of which flew on <A HREF="psat.html"><B>PSAT-1</B></A>
+ and the new APRStt (TouchTone) DTMF/Voice transponder (which was prototyped on
+<A HREF="qikcom-2.html"><B>QIKCOM-2</B></A> which lets everyone do APRS using any radio with DTMF keypad, 
+not just those with APRS radios.  There have been several iterations of the APRStt system in APRS over 
+the years since 2001, but this application will be new in space and will help introduce everyone 
+to this unique alternate APRS capability for use with ANY radio.
+
+<P>
+
+Read more about
+<A HREF="aprstt.html"><B> APRStt</B></A>. To use the spacecraft with your DTMF mobile or handheld 
+all you have to do is store your callsign in DTMF memory using this
+<A HREF="PSAT2Translator.html"><B>DTMF Callsign Encoder</B></A>.  Then to send your grid, 
+you just send a DTMF memory.  You can also send QSL's to other CQ,s and can
+send any of the other 99 messages from other memories.  Here are some examples of the Voice Response 
+to some of these DTMF uplinks:
+
+<LI><A HREF="PSAT2/voice/Grid.wma"><B>Grid FM19 from WB4APR</B></A>
+<LI><A HREF="PSAT2/voice/QSL.wma"><B>WB4APR says QSL your #12, my number is 5</B></A> and you can hear the manualy entry of "B12" followed by the memory
+<LI><A HREF="PSAT2/voice/msg73-amsat.wma"><B>Greetings from AMSAT, keeping ham radio in space for 15 years</B></A>
+<LI><A HREF="PSAT2/voice/msg43-gonavy.wma"><B>Message 43, Go Navy...</B></A>
+<P>
+You will notice the voice synthesizer on PSAT2 is much better than the one on QIKCOM-2.
+
+<P>
+
+<B>Low Cost Comms Board:</B>  Another feature of these cubesats is our development of a standardized cubesat communications card 
+(shown below right) based on the popular 
+<A HREF="http://byonics.com/mtt4b"><B>Byonics MTT4B</B></A> all-in-one APRS Tiny-Track4 module.  
+We standardized the MTT4B onto a standard cubesat-104 board (and adding a 9600 baud UHF downlink if needed) 
+to allow other schools to rapidly develop their own amateur radio cubesat projects.  We call this board the SATT4.
+<P>
+<B>Download</B> a copy of our <A HREF="psat/satt4.docx"><B> draft SATT4 Documentation</B></A>. 
+<P>
+<IMG SRC="PSAT2/CON-ops-b.png"> . .
+<IMG SRC="psat/SATT4-003xxx.jpg">
+
+
+<P>
+
+<B>OVERVIEW:</B> . PSAT2 is a student senior engineering project built by a group of students at the Naval Academy 
+for self training in smallsat technology.  It was launched 25 June 2019 on the STP-2 mission of SpaceX-Heavy.
+It should have a life span of several years.  
+It  continues the <A HREF="pcsat.html"><B>PCsat</B></A>(2001) and <A HREF="psat.html"><B>PSAT-1</B></A>(2015) missions noted above containing
+an APRS packet radio communications transponder for relaying remote telemetry, 
+sensor and user data 
+from remote users and amateur radio environmental experiments or other data sources back to 
+Amateur Radio experimenters via a global network
+of internet linked volunteer ground stations.  The APRS transponder also includes  
+telemetry, and some command and control for the user modes. PSAT2 also adds a unique experimental DTMF
+uplink on 145.98 MHz for users in the field who might not have access to an APRS radio.
+<P>
+
+<IMG SRC="PSAT2/P2-Frequency-Planning.png" align=right>
+
+<B>Operations under ITU Rules:</B> PSAT2 operates under the ITU rules of the Amateur Satellite Service.  
+See how PSAT2 design and operation fit entirely within the ITU International Amateur Radio 
+<A HREF="PSAT2/PSAT2-BRICSAT2-ITU-rules.txt"><B> RULES</B></A>.  The FCC does not issue
+licenses for Amateur Radio Spacecraft
+<A HREF="PSAT2/FCC%20Public%20Notice-clarified-a.doc">(see public notice)</A> because they are operated under the
+license of the individual amateur radio operator who is responsible to assure
+that both the design and operation are within the rules of the ITU as interpreted by the IARU.  Our licensed control operator is Todd Bruner, WB1HAI in Annapolis.
+
+<P>
+
+<P>
+<B>APRS Up/Downlink</B> . 145.825 1200 baud APRS (shared with ISS, PCSAT, PSAT, AISAT-1 and others!)
+<BR><B>DTMF Uplink</B> . . . . . . 145.980 MHz (Voice confirmation down on 145.825 MHz)
+<P>
+<B>PSK31 Downlink</B>. . . . 435.350 MHz +/- 5 kHz FM (300 mw)
+<BR><B>PSK31 Uplink</B> . . . . . . . 29.4815 MHz PSK31 SSB (25 watts into omni vertical authorized)
+
+<P>
+. . .
+<P>
+
+<B>PSAT2 Digipeater Aliases:</B> To join the existing APRS satellites on orbit and operate as a seamless constellation, 
+PSAT2 supports the same <B>APRSAT</B> and <B>ARISS</B> generic aliases as the original 
+<A HREF="pcsat.html"><B>PCSAT</B></A> (NO44)
+<A HREF="psat.html"><B>PSAT</B></A> and the
+<A HREF="ariss.html"><B>packet system on the ISS</B></A> so that users do not have to change any parameters 
+when using any of these three APRS transponders.  
+
+<P>
+
+<B>APRStt GRID MAP Encoding:</B> The map table below encodes the 99 grids that have 99.99% of the 
+worlds ham population into only 4 DTMF digits by converting
+the first two <i><B>letters </i></B> into two digits from the 00-99 table.  
+You can see that our Maryland <B>FM19</B> grid becomes <B>1819</B> in DTMF.
+A table is also shown below that simpilfies finding your grid.  Notice that three grids for Indonisa
+OI, OJ, and PI 
+appear in the Canada, USA and Central America blocks.  Our appologies for those grids
+that did not make the cut into the top 99.  We can try to accomodate special grids on request.  
+For example, we have assigned Hawaii's BL as "HI" and BK as "HH".  Then by translating on the
+ground on the
+<A HREF="http://www.aprsat.com/dtmf"><B>User DTMF page</B></A>, we can translate back.
+
+
+<P>
+
+
+<IMG SRC="aprstt/grid-square-map-box.png">
+. . . <IMG SRC="PSAT2/DTMF-table-xx.png">
+<P>
+<IMG SRC="QIKcom/DTMF-code.png" align=left>
+<IMG SRC="QIKcom/DTMF-keypad.png" align=right>
+
+<B>DTMF Callsign Encoding:</B> PSAT2 (like QIKCOM-2) also cleverly compresses a 6 character call into only 10 digits 
+following the 4 digit grid noted above.  The first six digits of the call are the matching single keys for the 
+callsign letters, EG: 924227. The next 4 digits encode the 2 bit location of each of the 6 call letters on each 
+of the 6 keys used.  For example, the 6 letters of WB4APR on the 6 keys are key locations 120112. 
+Since each location is between 0 and 3, they can be encoded in 2 bits each (powers of 4) and assembled left to right 
+into a 12 bit binary number.  To convert to decimal, take the first 2 bits times 1024, the next 2 bits times 256, 
+the next 2 bits times 64, the next times 16, the next times 4 and the last 2 bits times 1.  Then add them up and 
+get the 4 digit decimal "key code" (1558 in this example).  This 4 digit decimal number we call your callsign key code. 
+For those that are 12-bit-challenged, Bob Wood WA7MXZ has written an
+<A HREF="PSAT2Translator.html"><B>DTMF Callsign Encoder</B></A> to do this 4 digit number for you. For shorter calls, 
+right-pad to 6 with spaces.  A space is encoded as the "0" key with the key location code of 1. 
+ The entire Grid and call report adds a "*" at the beginning and a "#" at the end for the full 16 DTMF key report.
+<P>
+Other than your gridsquare, you only need to memorize the last four digit special code because your call is simply
+spelled out with the letters on the keys.
+<P>
+
+
+<B>DTMF Robustness: </B> The combined 16 key combination is then stored in the DTMF memory of the users radio 
+so that it can be transmitted in a single 3 second burst.  Since the entire code is self contained, is always 16 keys, 
+is sent at a standard speed, always begins and ends with known keys and all keys inbetween are decimal only, 
+then any other combinations will be ignored.  Also the usual failure mode of
+DTMF is duplication of digits or omission of digits which will be ignored by the mentioned constraints.  
+A successful uplink will be ACK-ed by voice since the DTMF user cannot see the APRS downlink.
+<P>
+<B>Hint:</B> Since the hardest thing for a DTMF decoder to reconize is two of the same digits in a row, check
+your own code.  If there are no dupicate digits in a row, then you <b><i>might</i></b> be able to select
+fast DTMF on your radio.  But otherwise, we have found that slower DTMF works best (100 ms).
+<P>
+
+<B>DTMF MESSAGES:</B> The DTMF decoder will also accept an encoded standardized 2 digit message number (00 to 99) 
+to select any of the 99 preloaded messages on the spacecraft.  These messages are the standard ARL radiograms 
+plus some other special ones (such as 40 for a QSO) for this satellite.  To send one of these messages 
+in the same 16 key DTMF memory use the following format.
+  This is a 16 key DTMF string that begins with the <B><i>"C"</i></B> key to indicate a message, 
+and then a 2 digit message number and then a 2 digit modifier xx, followed by the above encoded CALLSIGN.  
+If the message is an actual ARL <B>Emergency message</B>, then the modifier should be 99 and the speech 
+will include the word "EMERGENCY".  If the modifer is anything over 90, then it will not say Emergency but will say TEST.  
+If the modifier is less than 90, then the modifier will only be used if the template for that message 
+has a blank in it for insertion of the modifier.
+<P>
+<center>
+<B>DTMF ARL Radiogram Message Format:</B> . . . . . . <B><i>CMMxxCCCCCCXXXX#</i></B>
+<BR><B>DTMF special reversed QSL Message Format:</B> . . . <B><i>Bxx40CCCCCCXXXX#</i></B>
+</center>
+<P>
+The <B><i>"C"</B></i> DTMF key indicates a message.  
+The <b><i>"MM"</B></i> digits indicate the two digit message number, the <i><B>"xx"</B></i> digits are a numeric modifier that will replace any <i><B>"_"</B></i> blank in the messge text.
+Then the remaining <b><i>CCCCCCxxxx</b></i> finish off the transmission with the full encoded callsign as in the grid format.. See the
+<A HREF="QIKcom/Q2-DTMF-messages.txt"><B>Actual Flight list of messages</B></A> and for background the standard
+<A HREF="http://nts.ema.arrl.org/node/30"><B>ARL radiograms</B></A> and a copy of the
+<A HREF="https://www.cospas-sarsat.int/en/emergency-codes-maritime-and-non-maritime"><B> Maritime Emergency Codes</B></A> that are also included.
+<P>
+
+<B>Making a Contact:</B> When  you send  your grid and call by DTMF the spacecraft will say <B><i>"GRID FM19 from WB4APR, QSO number xx"</B></i>.  The QSO number increments with each new station up to 99 and rolls over.  To complete a contact with such a grid, send message number 40 (see above) with the QSO number xx.  The spacecraft will say <B><i>W3XYZ says message number 40 QSL your QSO number xx, my number is yy"</B></i> to complete the contact.  Of course, an APRS copy of each of these messages will also come down on the downlink for those with APRS radios.  Since the QSO number will change with each contact, you can manually enter just <B><i>Bxx</B></i> and then hit another DTMF memory that has the remaining portion of the message and your call <B><i>40CCCCCCXXXX#</B></i> to complete the QSO for a new QSO number.  With practice you can do this rather quickly. Notice that this special <B>"B"</B> message format is slightly different from the <B>"C"</B> format in that the order of the MM message number and xx modifier are reversed so that you only have to manually enter the three keys <B>"Bxx"</B> to send this special QSL message.
+
+
+<HR SIZE=2 WIDTH="100%">
+<P>
+
+
+<IMG SRC="psat/PSK31-capabilities-table.png" height=150 width=420 align=right>
+
+<B>PSK-31 Transponder:</B> Also exciting is the 3rd flight of the PSK-31 transponder (Brno University) 
+that was pioneered on PCSAT-2, and PSAT-1.  It permits dozens of simultaneous PSK31 users to operate 
+full duplex and maintain a continuous group texting session throughout the pass.  
+Operating full duplex on PSK-31 is new and it will take a while for users to learn how to do this well.  
+As a guide, KO6TD has prepared the table at right of capabiites of typical PSK31 user software.  
+Only WinPSK can operate full duplex but others can run two instances of the same software, one for transmit and one for receive. 
+
+<P>
+
+<B>Auto-Track/Tuning Warning!</B> PSK31 needs phase coherence to properly decode.
+Every step in automatic rig-control/tracking-tuning will loose sync and garble or lose data.  
+The solution is to set your software to only step the radio once every 2.5 KHz to minimize these glitches 
+and loss of characters while still keeping the FM signal in the passband.
+<P>
+. . . 
+<P>
+
+<IMG SRC="PSK31/PSK31-compensation.png" align=right>
+
+<B>PSK31 Doppler Compensation:</B> Fortunately, Andy, K0SM has written a
+<A HREF="http://www.frontiernet.net/~aflowers/dopplerpsk/dopplerpsk.html">
+<B>TX-only program</B></A> that not only lets your run full-duplex with your existing PSK31 downlink, 
+but it also pre-compensates your uplink for Doppler as shown below!  
+You can see his uplink coming down as a straight track while others are showing Doppler.  
+Most PSK31 clients can compensate for up to 1 Hz/sec of Doppler on the downlink, 
+but Andy's program makes your signal constant.  Other users without compensation, 
+can drift from 1 to 6 Hz per second depending on where they are relative to the track of the satellite.
+<P>
+
+<P>
+<B> PSK31 Transponder on PSAT (NO84):</B>  The on-orbit Brno Universtiy PSK31
+transponder on the existing PSAT (NO84) is fully operational on every orbit, since
+it is the primary mission of PSAT.  A medium gain UHF beam can easily copy the waterfall downlink horizon to horizon.  
+Since uplink is on HF and downlink is on
+UHF, everyone can operate full duplex and transmit to ALL while reading text
+from everyone on the channel.  You can also copy your own signal! in the downlink at the same time. 
+The table above shows which PSK31
+software can operate full duplex or can run 2 instances at the same time.
+<P>
+
+<A HREF="http://www.urel.feec.vutbr.cz/esl/"><B> See Brno University PSK31 transponder details</B></A>.
+<P>
+<B>APRS Digipeater:</B> When the DIGI is on, the satellite TOCALL is APDIGI.  When it is doing DTMF (APRStt) mode, the TOCALL will be APDTMF.  The ALIASes are the usual, ARISS, APRSAT (and WIDEn-N if you forget).  PSAT2 will also have the ability to report its own APRS position in standard
+APRS format so users can see where it is on the front panel of their APRS radios.
+<P>
+
+<B>LIVE Telemetry Downlink:</B> will also be captured on Steve Dimse's, K4HG original
+<A HREF="http://pcsat.findu.com"><B>pcsat.findu.com</B></A> web page.  APRS packet is a secondary mission compared to DTMF and PSK31, so the digipeater may be turned off if power is low.  But beacons, telemetry and Bulletins will always remain.  The five Telemetry Equations (after the serial number) in standard APRS telemetry format are:
+<P> <B>Format:</B> . . . . . T#SSS, VVV, I I I, XXX, YYY, ZZZ, 00011X00
+<P > VVV. . .  Bus Volts in hundredths
+<BR> I I I . . . .  Bus Current in mA
+<BR> XXX. . .  Temp +Z where T = -1.26E-6*X^3 +0.0028*X^2 -2.215*X + 625
+<BR> YYY. . .  Temp - Z where T = -1.26E-6*X^3 +0.0028*X^2 -2.215*X + 625
+<BR> ZZZ . . .  TempBat where T = -2.57E-6*X^3 +0.0061*X^2 -5.149*X +1475
+<BR> In the 00011X00 field, only the X has meaning. 0 = DIGI ON, and 1 = Digi off
+
+
+<P>
+<IMG SRC="psat/PSK31-uplink-antenna-plot.gif" align=right>
+<img src="psat/omni-antenna-vertical-a.png" align=right>
+<IMG SRC="psat/range-gain.gif">
+<P>
+
+<B>Best Satellite IGATE Antenna:</B>  The most practical IGate antenna is an OMNI 
+(so it does not wear out or require rotators) and it has high gain above about 30 degrees 
+and less gain on the horizon (where it cannot hear a 350 mW satellite anyway). 
+See (<A HREF="aprs-satellite-igate-antennas.html"><B>SatGate Antennas</B></A>) 
+Not only is the gain higher at the higher elevations, but the satellite is also
+ 6dB closer, thus giving a combined gain of nearly 13 dBi similar to an OSCAR class beam.
+ Another reason for minimizing gain on the horizon is the Donut-Hole NULL effect where any IGate that hears a
+user station <i><b> direct</B></i> will send that into the APRS-IS first and that will cause the 
+subsequent space digipeated packet to be a DUPE and will be ignored by all IGates.  So a mobile or
+terrestrial omni is the worst omni (maximizes gain on horizon and usually has a null around 20 or 30
+degrees which is where the satellite is best located!  
+<P>
+
+The best Satellite OMNI Igate antenna (in my opinion) is
+a non-gain 1/4 wave vertical (19.5" over a large ground plane).  Even better (+2 dB) is a 3/4 wave vertical
+(58" high) over a large ground plane shown here.  It has nearly 7 dBi gain above 30 degrees, 
+plus the +6 dBi closer range gain and not much at all on the horizon.  
+It does not need to be as high as other antennas because it cannot receive satellites on the horizon anyway.
+Being a bit lower makes it less vulnerable to other QRM.
+
+<P>
+
+<IMG SRC="psat/PSAT-GSE.png" align=right>
+
+<B>BACKGROUND:</B> . PSAT2 follows on to several previous student project satellites
+which contain an APRS packet radio communications transponder for relaying remote telemetry, 
+sensor and user data 
+from remote users and amateur radio environmental experiments or other data sources back to 
+Amateur Radio experimenters via a global network
+of internet linked volunteer ground stations.  The data transponder also includes all 
+telemetry, command and control for a complete cubesat.  A secondary transponder supports multi-user PSK31 text messaging users via a Brno University transponder. 
+
+<P>
+<B>See the 
+
+<A HREF="psat/AMSAT-2010c.doc">Psat paper</B></A> at the 2010 AMSAT symposium
+<BR><B>The image at right</B> is the test equipment used during integration testing of PSAT-1.
+
+<P>
+
+<B>Operations in the Amateur Satellite Service:</B>
+All of the transponders on PSAT are operated in the Amateur Satellite Service to encourage 
+amateur radio students, 
+educators and experimenters 
+around the world to contribute additional satellities to this constellation on 145.825 MHz or
+to build interesting self motivated remote sensors suitable for the uplink channel.
+ See our ideas for 
+<A HREF="buoy.html"><B>amateur ocean or bay oceanographic data buoys</B></A> for examples.
+  
+This kind of Amateur Radio experimentation fits well in the ITU rules
+<A HREF="http://www.aprs.org/PSAT2/IARU-rules-PSAT2.txt"><B>(see PSAT2 justification)</B></A> 
+for operating in this service
+and well serve our educational and outreach goals for student projects encouraging young people to
+be interested in Science, Technology, Engineering and Math.
+
+<P>
+
+<B>APRS Packet Transponder:</B> The APRS packet transponder 
+is an AX.25 Packet Radio Relay similar to what is flying on 
+<A HREF="pcsat.html"><B>PCsat</B></A> and the
+<A HREF="http://www.aprs.org/ariss.net"><B>ISS</B></A>.  This ongoing mission in space on the original PCsat 
+is now over 12 years old and pioneered
+this very popular operating mode via the ISS since 2006.  Both of these 
+missions deliver packets to users worldwide via the global network of
+volunteer ground stations feeding the two downlink capture pages:
+<A HREF="http://pcsat.aprs.org"><B>psat.aprs.org</B></A> and
+<A HREF="http://ariss.net"><B>ariss.net</B></A>.  These pages display live maps such as the one
+below, of the most
+recent user position data and capture all message traffic between users. 
+See the <A HREF="psat/APRS%20Link%20Budgets%20for%20Psat-a.doc"><B>APRS link budgets</B></A>. In addition there
+is also a PSK31 transponder as noted below.
+<P>
+
+<P>
+
+<IMG SRC="psat/ariss-map.png">
+
+<P>
+
+<IMG SRC="PSAT2/Electrical-Safety-Circuit.gif" align=right>
+
+<B>PSK31 Transponder:</B>  The Brno University 
+<A HREF="http://www.urel.feec.vutbr.cz/esl/"><B> PSK31 Multi-user FDMA transponder experiment</B></A> is
+similar to what we flew on 
+<A HREF="psat.html"><B>PSAT-1</B></A> and
+<A HREF="pcsat2.html"><B>PCSAT2</B></A> missions. 
+<A HREF="psk31uplink2.html"><B>See the full PSK31 design concept here</B></A>.
+This text messaging transponder allows messaging between up to 30 modest ground stations simultaneously.
+In the example waterfall display above, 10 users are clearly visible. 
+Each user transmits a 31 Hz wide narroband transmission within the 3 kHz wide transponder, and all
+can be seen simultaneously via the UHF FM downlink.  Uplink stations do not need gain antennas on the
+HF uplink but can use a vertical monopole antenna and 75 Watt SSB transmitter to give the transmit antenna profile
+as shown above.  
+To calculate the <A HREF="PSK31/PSK31%20Link%20Budgets%20for%20Psat-b.doc"><B>PSK31 link budgets</B></A>
+we combined the user TX antenna gain profile with the variation in range gain from the horizon to 
+over 60 degree elevation as shown here at right.   The combination gives an uplink power variation
+per user of less than +/- 4 dB over 90% of the duration of the pass. 
+
+
+
+  
+<P>
+
+
+<B>Unique Power System:</B>  Unlike the standard Silicon cells on PSAT-1, PSAT2 uses the very expensive UTJ multi-junction cells that cost 100 times more.  But for the cost, these will deliver twice the power.  With three UTJ cells per side, the peak solar voltage is 7.2 volts which is a perfect match to our 5 cell NiCd battery.  Since only 2 cells fit on the top and bottom, those panels use a DC/DC boost regulator to get to the 7.2 volts.  The power per panel is about 3.5 Watts, but with the rectaqngular spacecraft averages about 4 Watts in the sun.  Reducing for eclipses provides about 2 Watts orbit average power.
+<P>
+
+
+<B>Attitude Dynamics and Control System (ADCS):</B> Unlike the single axis torque coil on PSAT-1, 
+PSAT2 has a 3 axis torque coil system as well as sun sensors and a magnetometer.  
+The torque coils are printed on the top and bottom of every solar panel PCB for a total of 4 coils 
+in series in each plane at about 70 Ohms.  This is a perfect match to the CPU's I/O bits that 
+can drive the coils directly and still be within the 35 mA limit per pin. The ADCS system is for 
+studnet experimentation and is not mission critical.  To maintain a very slight spin about the Z axis 
+the solar cells are offset with a reflective strip on one edge to produce 
+an unbalanced solar radiation pressure on each side. This should create a fractional RPM spin 
+(the Spin on PCsat now, 12 years in orbit is maintained between about 0.6 and 0.8 RPM by this method).  
+And PSAT-1 typically spins between 1 and 5 RPM with this method.  The spin is needed to maintain 
+thermal balance and not let one side get too hot facing the Sun.
+<P>
+
+
+<B>Global Experimental Data Channel:</B>  PSAT2 is the space segment of this
+initiative to encourage both new satellite construction in support of this experimental
+data channel and lower cost buoy and
+sensor experimentation at other schools as shown below.  
+Today, the only AMSAT that is available for 
+no cost to schools with such experiments are the Naval Academy's PCSATs and the transponder on the ISS.  But with 
+PSAT2 we hope to continue this ongoing full time presence in
+space to continue this support of the 145.825 data uplink channel for future experiments.  
+To this end we hope other schools to either build additional 145.825 MHz relay satellites 
+and/or to build experimental sensors.  The complete comms system including data
+transponder fits on one 3.4 inch square card <B><i>shown here</B></i>.
+  We hope that PSAT2 will be the Egg in this 
+chicken-egg conundrum.
+<P>
+<IMG SRC="PSAT2/SWR-testing-0160x.jpg" align=right height=280 width=350>
+
+<B>The 2016 Initial Design:</B> Below will be the more descriptive images and links to the details of PSAT2 design.  But until we finish the new cubesat-standard-bus design for PSAT2, we are retaining some of the olderlinks to the portions of the original PSAT-1 design that are similar.
+<P>
+
+<B>Comprehensive list of Amateur Satellites and Frequencies:</B> is on 
+<A HREF="http://www.ne.jp/asahi/hamradio/je9pel/satslist.htm"><B>JE9PEL's List</B></A>.
+<P>
+
+<LI><B>Tuning the Antennas on a Cubesat</B> requires the SWR analyzer to be inside a cubesat model as shown here ==>
+<LI><A HREF="psat/2014/Burn-corner416x.jpg"><B> Burn Resistor</B></A> constraining 4 antennas and the 3rd inhibit switch via nylon line
+<LI><A HREF="psat/2014/ground%20track.jpg"><B> Ground Track</B></A>
+<LI><A HREF="psat/2014/internal-structures-labeled-x.jpg"><B> Skeletal View</B></A> showing equator ballast to maintain Z axis inertia
+<LI><A HREF="psat/2014/inhibits-three.gif"><B> Three Inhibits</B></A> showing 3 inhibits and unique solar panel wiring
+<LI><A HREF="psat/2014/MTT4-flight-harness-d.gif"><B> Microtrack harness</B></A> and GSE connector
+<LI><A HREF="psat/2014/Orbital-decay.gif"><B> Orbital Decay</B></A> and
+     <A HREF="psat/2014/orbit-life.gif"><B> Orbit Life</B></A> prediction
+<LI><A HREF="psat/2014/PowerControl-circuit-Yz-public.gif"><B>Power Control </B></A>
+
+<LI><A HREF="psat/2014/Release-mechanism-x.gif"><B> Release Resistor </B></A>design showing tied nylon line on Nitinol antenna wires
+<LI><A HREF="psat/2014/Y+side97x.jpg"><B> Antenna Detail</B></A> shows how 2 UHF, one VHF and 1 72" HF antennas were constrained
+<LI><A HREF="psat/APRS%20Link%20Budgets%20for%20Psat-a.doc"><B>APRS Antennas and Link Budgets</B></A>
+<LI><A HREF="psat/PSK31%20Link%20Budgets%20for%20Psat-a.doc"><B>PSK31 Antennas and Link Budgets</B></A>
+<P>
+
+<HR SIZE=5 WIDTH="100%">
+
+
+
+<P>
+
+
+<A HREF="psat-old.html"><B>Earlier 2008 and 2010 DESIGN Documentation</B></A> 
+
+<P>
+
+
+
+
+
+<P>
+<HR SIZE=5 WIDTH="100%">
+<TABLE BORDER=2 CELLPADDING=2 >
+<TR>
+
+<TD>
+<P><FONT SIZE=+1><A HREF="sitemap.html"> WB4APR's overall Site Map </A></FONT></P>
+</TD>
+</TR>
+</TABLE>
+</UL>
+
+</BODY>
+</HTML>

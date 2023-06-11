@@ -1,0 +1,508 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<html>
+<!-- I love simple web pages! -->
+
+<P>
+
+<A NAME="TOP"></A>
+<IMG SRC="Energy/THINK/PR-photoXxx.jpg" align=right>
+
+<h3>My THINK Web-Page:</h3>
+<P>
+
+<P>
+
+Bob Bruninga, WB4APR   lastname @ usna.edu
+<P>
+This page evolved as they usually do, so now I am adding some indexes so you can jump
+right to the section that interests you"
+<P>
+<BR><A HREF="Energy/THINK/owners.txt"><B>OTHER OWNERS</B></A> list.  A voluntary list of people on the Yahoo group
+<BR><A HREF="#LIFT"><B>JACKING THE BATTERY</B></A> with a motorcycle lift.
+<BR><A HREF="#INNERTUBE"><B>DROPPING THE BATTERY</B></A> with a truck innertube.
+<BR><A HREF="#CABLES"><B>THE HV BATTERY CABLE</B></A> connections.
+<BR><A HREF="#RAMPS"><B>HORIZONTAL RAMPS</B></A> for moving the car over the battery.
+<BR><A HREF="#BRICK"><B>BAD MLEC BOARD</B></A> in my THINK BRICK.
+<BR><A HREF="#MLEC"><B>BAD MLEC</B></A> in my THINK PITT.
+<BR><A HREF="#KIT"><B>THE TRAVELING DIAGNOSTICS KIT</B></A>
+<BR><A HREF="#BUTTON"><B>Adding a REGEN or FAST button</B> to the shifter</A>.
+
+<BR><A HREF="#CUPHOLDER"><B>Adding cupholders</A>.
+<BR><A HREF="#DOME"><B>Adding an LED dome light</A>.
+<BR><A HREF="#FUSE"><B>Adding a protective fuse in the L1 EVSE</A>.
+<BR><A HREF="#VISOR"><B>Adding a side visor</A>.
+<BR><A HREF="#BATTERY"><B>Adding an easy-access 12v battery</A>.
+<BR><A HREF="#TIMER"><B>Adding a coffee-pot Timer</B></A>.
+<BR><A HREF="my-EVs.html"><B>See my other non-think EV projects</B></A>.
+
+<P>
+
+<face="courier">
+<A NAME="BUTTON"></A>
+<pre>
+
+<IMG SRC="Energy/THINK/Shifter/New-regen-button.png" align=right>
+
+<B>REGEN BUTTON:</B>  This is my first hack to the car to add a REGEN button.  It lets you
+Drive in <B>D</B> and to slow down with maximum Re-Gen in <B>E</B> by pressing a button on
+the back of the shifter.  Looking at the table for all the conditions of the microswitches 
+on the shift lever,  one can see that both the A and C switches have to change state in
+going from D to E.  But this can be accomplished with a single SPDT switch as shown.
+The new "Regen Button" is shown in its rest state.  In this condition, it maintains
+the normal ground connection on the bottom of switch A for normal operation.  It is
+also then Open to the top of the C switch.  Thus, the switch is transparent to normal
+operation.  But when the Shift Lever is in D, and this Button is pressed, it 
+simultaneously opens the A circuit and closes to common the C circuit.
+
+So, I mounted a microswitch from an old mouse on the front of the Shift column with
+black tape so that I can simply press it when I want max regen.  An analysis of what
+happens if I accidentally push it in any of the other gears reveals that in both
+Reverse and Neutral, the switch states will appear to be the same as the normal Park,
+except that the D switch is in an invalid state (and hopefully ignored).
+
+Similarly, in the DRIVE position, the button has the desired effect and when in the
+ECO position, the switch has no effect since the switches are alredy in that state.
+
+In the PARK position pressing the button should give an invalid code and someone has claimed
+that this will throw a fault and rquire you to re-start the car.  But I have not seen this.
+(and I cannot be sure I actually tested this state, since this car ony ran a month before it
+had MLEC and RLEC problems plus NO-GO terminal problem.  Caveat Emptor.
+
+So this is a nice HACK for easy driving in D and dropping to E with the press of this
+convenient button for slowing down.
+
+<IMG SRC="Energy/THINK/Shifter/New-Fast-button.png" align=right>
+
+<B>UPDATE 2016. CHANGED TO A FAST BUTTON:</B>  Now with my second THINK, I have decided to
+reverse the connections to the added microswitch so that the button is no longer a
+REGEN Enhancer while in DRIVE, but now it is a DRIVE Enhancer while in ECO mode. 
+I like this much better since you never know when you might need to brake suddenly, 
+so I prefer to always drive in ECO mode to make sure that I always get MAX REGEN 
+at any time to minimize brake wear.  With the button now wired for FAST, now I can 
+drive in ECO all the time, but when I need a quick boost (as in DRIVE), all I have
+to do is push the (now lableled) FAST button.  Notice the wire cuts and taps now
+move to the other switch in the shifter so you have to take it all apart again to
+make this change.
+
+Notice the switch positions and logic table are very confusing.  There is lots of 
+reversed and double reverse logic.  IE, a 1 is a ground, and the definitions of 
+PUSHED or RELEASED only translate to a TRUE or NOT TRUE depending on which switch 
+contact (NC or NO) is actually wired.  So look carefully at the truth table where 
+I added the NC and NO on each switch to show how it is wired.
+
+
+<IMG SRC="Energy/THINK/Shifter/Finished0019xx.jpg" align=right>
+Shifter Switch Photos:
+
+	<A HREF="Energy/THINK/Shifter/Mouse0003x.jpg">Mouse switch</A>,
+	<A HREF="Energy/THINK/Shifter/Switch-wires0002x.jpg">Switch Prep</A>,
+	<A HREF="Energy/THINK/Shifter/placement0007x.jpg">Placement</A>,
+	<A HREF="Energy/THINK/Shifter/finger-view0011x.jpg">Switch view</A>,
+	<A HREF="Energy/THINK/Shifter/first-screw0018x.jpg">First Screw</A>,
+	<A HREF="Energy/THINK/Shifter/switches0013x.jpg">ABC switches</A>,
+	<A HREF="Energy/THINK/Shifter/Wiring0015x.jpg">Wiring</A>,
+
+
+	
+I had considered to wire up the added REGEN button to <A HREF="Energy/THINK/Shifter/New-regen-relay.png"><B> a relay connected to the brakelights</B></A> 
+to save me the trouble of pushing a button during panic stops.  But I don't like having to 
+move my foot to feather the brake pedal to get the extra REGEN when i touch of the finger 
+is easier to do.  Plus, all that added wiring (most of it snaking wires all over the car), 
+makes that job a whole lot more time-cousuming... which means I probably will never find a 
+round-<IMG SRC="round-tuit.png">.
+
+<B>MANUAL METHOD: </B> Instead of doing all the above, someone on the THINK yahoo group suggested 
+using one's hand on the emergency brake and then using the thumb to slip the shifter easily from E 
+back to drive.  This works very well.  But I fear it adds a lot of wear and tear on the shifter
+microswitches and since them becoming loose is a known difficulty with the car, I prefer my added 
+button so I only shift once when I leave and then back to Park when I stop.
+
+Bob, WB4APR
+
+
+<A NAME="BRICK">
+</pre>
+<HR SIZE=3 WIDTH="100%">
+<P>
+<IMG SRC="Energy/THINK/Think-Brick10x.jpg" align=right>
+<h3>THINK #1, now named THINK-BRICK: </h3>
+
+<P>
+<P>
+<face="courier">
+<pre>
+
+This think was bought at GSA auction for $3700 and not working in Jan 2014.  The other four
+at the same auction drove across the auction line and went for over $7000.  I gambled because
+the THINK had clearly been driven to the auction by GSA but probably someone during "open viewing" 
+cycled the key the wrong way, and it died.  (or maybe it was towed there?)
+
+<A NAME="MLEC">
+
+<B>BLOWN MLEC BOARD:</B>
+
+The incorrect cycling of the key switch can BRICK any THINK if the heater was
+left on on the previous key cycle.  This causes the full heater load through 
+the Pre-Charge resistor and it has to dissipate 3400 Watts instead of 5 Watts
+with resuluts as shown here.  This is a common failure of the THINK which was
+supposed to have been corrected via a software upgrade to make sure the Heater
+was off even if the dashboard switch was left on.  But even with this software
+protection, the failure can still occur due to the small time delay between when
+the control is removed from the HV heater circuitry and when it actually drops out.
+
+SO, if the key is rapidly turned from ON to OFF and back to ON again, positions 0 and II
+and if the heater was on, then despite the software protection, the HV heater is still 
+connected during the many milliseconds that it takes to cook the resistor.  Notice
+this vulnerable period is simply going to ON (II) when all the contactors are doing their
+thing and not actually going to START (III) as was previously thought.
+<P>
+
+<IMG SRC="Energy/THINK/As-found0006xxx.jpg">
+
+<P>
+After a little cleaning with alcohol and flipping the board around the other way,
+it appears that the conformal coating protected almost all of the chips though, 
+some of their contacts may have been contacted by the 400v plazma. Which one would 
+assume would blow every component connected to those exposed leads.
+
+<IMG SRC="Energy/THINK/After-cleaning0004xx.jpg">
+
+Also notice crinkled paint, bare metal and evidence of violent activity on the metal plate 
+off the edge of the board.  I cannot conclude that there was an arc-over-to- ground, but similarly, 
+I cannot rule it out.
+
+The OEM resistor is labeled: HVR APC U 2115A470K 101.V.  It is a surge rated 47 ohm resistor, 
+rated at 3.5W and 700J surge.  Here is the Manufacturer's <A HREF="http://www.hvrapc.com/useries.asp"><B>link</B></A>.
+They cost about $6, but Minimum order is $50.
+
+
+UPDATE:  Bad news probably... Despite the total apparent destruction of the resistor I just measured it 
+and it is 53 ohms... pretty darn close to the original 47 ohms.  This means the arc did not quench here.  
+Also the PCB traces are good to the white connector (2 pins closest to the resistor) and the resistance 
+from either of these pins to ground is greater than 50 meghoms. 
+
+So MLEC board and resistor may be good..  something elsewhere may be my problem?
+New Resistor on order ($50 minimum, so I bought a few spares).
+
+<IMG SRC="Energy/THINK/Repaired-MLECx.jpg" align=right>
+REPAIR:  I put the new resistor on the board and 
+as a precaution, covered the area surrounding the 
+resistor with a few layers of high-temperature 
+Kapton tape (used extensively in Aerospace) as 
+shown in the image here.  This way if there was 
+another resistor burnout and 400v Flash arc, it 
+would not reach the delicate electronic components.
+
+BAD NEWS:  With excitement I crawled under the car 
+and reconnected the repaired MLEC board to the 
+Battery very carefully reconecting all the 
+connectors (and checking the two hidden blade fuses 
+in the wiring harness along the lower edge.  
+Crawled back out and tepidly turned the car to start
+.... Nothing...:-( but I did get a new indication... 
+the Yellow Fuel Pump looking light lit.
+
+GOOD NEWS:  Duh, I had forgotten to reconnect the 
+battery pack!  Crawled back under the car and 
+plugged in the battery interface cable and large 
+orange battery connector.  As a precaution, I 
+unplugged the orange HV heater plug from the PCU 
+under the hood and the three pin black connector  
+near it to make sure the heater could not cause any 
+problems.  Crawled back out and tried again...
+
+BAD NEWS:  Still nothing.  Gave up.  Coverd the BRICK 
+with a tarp and left the car for several days. 
+
+GOOD NEWS:  9 April 2015, on a nice clean fresh sunny day, had a thought. What if the HV heater
+connection is somehow interlocked and the PCU simply does not like being left exposed 
+with an empty connector..  Plugged in the orange plug, jumped inside and for the first
+time, heard the PCU startup on "start" and going to D (drive) and the jacked-up wheels
+started turning!  I got a new EV!  Happy end of story.
+
+BAD NEWS!  Bought decals all over the car promoting EV's.  Registered it, drove it about a month 
+but it went from about one shut-down fault per week, to one a day, to one per trip to one before
+even leaving the neighborhood.  Then it would not charge, so it was abandoned again as yard Art
+for a year...
+
+<A NAME="LIFT"></A>
+<IMG SRC="Energy/THINK/lift-jack.png" align=right>
+<B>JACKING HTE BATTERY WITH A MOTORCYCLE LIFT:</B>
+
+Oh, lessons learned on getting the MLEC board out.  First, you have to be able to 
+get the car up at least a foot higher than the lowest point that you can lower the
+battery.  I used the 1500 lb motorcycle jack from Harbor Freight shown here for the
+battery and a regular hydraulic jack around-&around&around the car for the frame.   
+
+This lift purports to be a parallel lift, but most of the lifting is on the rear arms
+with about a 1 inch droop at the front under load at low levels, so I centered the
+lift a bit forward of the battery center and used crossed lumber to spread out the
+load (losing more clearance). View below is from the front looking back with battery 
+down about 6 inches.
+
+<IMG SRC="Energy/THINK/Under-front08x.jpg">
+
+That combined with 4 jack stands, 4 cinderblocks, several scraps of 2x10 and 4x4 
+posts and 2x4's and multiple-multiple jackings and re-configuring finally got to 
+where I got the battery down about a foot and the car WAY up there so I could remove 
+the MLEC board in place.  You can see the panel on the right side of the front of
+the battery where the MLEC panel is removed and the ribbon cable hanging out.
+
+The panel (with MLEC attached on its backside) was not trivial to get out since it has 
+edge connectors on both top and bottom edges of the board, neither of which will fit 
+through the hole in the side of the battery box at the same time.  SO you have to very 
+carefully try to remove the bottom edge connectors with your fat fingers in a tiny space 
+(while pressing the release button on each).
+
+Be careful removing the board and connectors as there could still possibly be 400 VDC on
+the white connector if one of the HV contactors had failed and there was another ground
+fault somewhere.  Take care not to touch a pin or rub through the wire with all the 
+josstling on the edge of the metal frame.
+
+<IMG SRC="Energy/THINK/Pax-side-lift06x.jpg">
+<P>
+The image above shows how the lips of the battery are resting on the four cinder
+blocks to remove the load from the lift while the THINK brick awates its fate.
+
+That's it for tonight.  Friday 13 Mar 2015.  Now to find a replacement part!
+
+
+------------------- and that was it for about 6 months... --------------------------------------
+
+<A NAME="INNERTUBE"></A>
+
+<B>GOOD NEWS (or not) JULY 2015:</B>  I bought another THINK for parts.  I named this one the
+<B>THINK-PIT</B> since it came from Pittsburg.  Talk about doubling down on a dumb investment.  But 
+from the time I looked at it in May to when I bought it in July, to when it was finally 
+delivered in December, even the THINK dealer in Indiana has now liguidated so there is zero 
+support anywhere.
+
+<B>INNER TUBE JACKING:</B>  So this time I decided I would try an easier method of getting at the
+battery by jacking it down with a truck innertube.  Turns out the tubes are only about $16 new
+from any tire place (though special order, unless it is a truck tire place).  The only one
+he had in stock was not the most common tube, but it turns out it was perfect.  It is about
+36" in diameter deflated.  See here how I used a tire inflator to raise the car about 2" to 
+off-weight the battery:
+
+<IMG SRC="Energy/THINK/jacking/Innertube19x.jpg">
+
+I first removed every other battery bolt and all of the ones on the front and back.  Then got to
+only 4 (each supporting 200 lbs), one bolt in from each corner.  Then ran the pump until the car 
+and battery were raised about 2" where the tube was supporting 100% of the battery weight.  Then 
+I removed the final four bolts.
+
+<IMG SRC="Energy/THINK/jacking/Air-release21x.jpg">
+
+<B>PLAN AHEAD!</B>  Of course, I had given no thought as to how I was going to lower the pressure in the
+tube and had to take apart the compressor so I could poke a stick into the valve of the compressor
+to let the air out!  This worked well, actually, but seems kludgy.  So I simply let the air out
+and the battery began to descend.  There was a mad scramble at the end when I realized the 700 lb
+battey would crush the tube's air valve and inflator clamp when all the air was gone.  SO I slipped
+four blocks of 2x4 scrap under the corners of the battery to keep it a final 1.5" off the deck.
+
+For my next use, I bought a small brass "T" and inserted it in the compressor hose.  When I want to lower
+the car, I just remove the plug in the side of the "T".
+
+<A NAME="CABLES"></A>
+
+<IMG SRC="Energy/THINK/jacking/BatteryConnections20x.jpg">
+
+Once the battery is on the ground, then I had to begin jacking up the front end of the car so I
+could get under it and disconnect the battery cables.  Turns out, I had to raise the front end
+over 7 inches in order for the car to clear the battery.  I did this with raised wood ramps so
+that I could actually move the car backwards to reveal the battery before doing any work on it.
+This is not necessary to get to the MLEC board, but I figured I'd do it anyway.  So the 7" ramps
+were level going back at least 6 feet so I could push the car on "level" surface.  The final
+picture below shows the battery revealed.  What a monster.  
+
+The ramps shown here are not the improved ones I eventualy used for my third battery drop as 
+detailed further below.
+
+<IMG SRC="Energy/THINK/jacking/Battery25x.jpg">
+
+
+<A NAME="RAMPS"></A>
+<B>My FINAL RAMPS for Moving the Car over the Battery:</B>
+
+To move the car back and forth over the battery for repairs, and re-testing (my third time), I made 
+a set of level ramps to keep the front wheels 7 inches off the ground.  The seven inches is necessary 
+to clear the battery but only if the rear is also up by 1.5 inches.  You could go higher on the front 
+and eliminate the back 1.5 inches but then it was too high for my hand jack to lift in one swoop.
+
+<IMG SRC="Energy/THINK/jacking/ramps-alone504.jpg">
+
+You need two sets of these, one set for each side.  Plus you need the added 2' one that I never photographed.
+
+<IMG SRC="Energy/THINK/jacking/ramps498x.jpg">
+
+Again, at the time of this battery repair, I had not built the 2' initial front ramps and just jerryrigged
+from lumber laying around.  That is when I noted that making a 2' section for the initial jacking of the front
+allowed you to get to the battery along the sides for unbolting, before starting to use the 4' sections to 
+back up the car and reveal the battery for opening and repair.
+
+<IMG SRC="Energy/THINK/jacking/ramps497x.jpg">
+
+The above photo shows the lifted car moved back on the ramps to clear the battery for repair.  But, come to 
+think about it, the shorter 2' sections would not be needed if the initial jacking placed the front wheels
+on the back end of a pair of 4' sections.  Then you could end-over-end the 4' sections to do the same thing.  
+The down side of this is having to lie on the ground between the two 4' sections sticking out the front while
+you do all your initial jacking.  I think I would still build the two 2' sections to avoid those gyrations.
+
+
+<A NAME="MLEC"></A>
+<B>AND IT IS ANOTHER BAD MLEC:</B>
+
+And of course, when the MLEC board was removed, not only was the pre-charge resistor smoked, but
+you can also see the arc got into the Ribbon cable rubber.  This does not look good.
+
+<IMG SRC="Energy/THINK/jacking/MLEC-fried22x.jpg">
+
+
+At this point, I have not jacked the battery back up with the compressor, or reinstalled the battery,
+but I do not anticipate any significant problems other than getting the car, on ramps, aligned so
+I can then jack the car back down over the battery, and then when all is aligned, jacking up the
+battery and bolting in place.
+
+<B>JULY 2016:</B> That was 6 months ago. I finally repaired the MLEC board.  Reconnected everything and 
+the car works!  But it took a long time to get the title and bill of sale) and so now a year later 
+(July 2016) it is finally on the road (though the local garage has still not given me my final 
+safety inspection document to make it fully legal.  He says the side yellow light is a clearance 
+light and is not working.  He would not accept the picture in the manual that says it is a turn signal
+(that works).  The inspector was an arrogant gasket head and after 2 weeks of arguing he finally signed
+the safety inspection and said "dont ever bring me any EV's again" to which I responded, "I certainly
+won't!".  He had, over the years also inspected three of my salvage Prius restores, a Honda Civic 
+conversion and two THINKS. Now I will go across the street to the cheap gas station and save 10 cents
+a gallon too!.
+
+<A NAME="KIT">
+
+<B>THE TRAVELING THINK DIAGNOSTICS KIT:</B>  In later July, I received John Mayer's "traveling THINK
+diagnostics kit.  For $150 a week, it is a great service to be able to finally see what was wrong 
+with the THINK BRICK.  Frank Smith, who also has a workign THINK in my neighborhood worked with me
+to plug in the kit's THINK PC interface and read diagnostic codes.  We found that an RLEC was not 
+reporting any data.  John shipped us a new RLEC pre-programmed with the ID code of the bad RLEC and
+when we installed it, the battery worked!  SO now for the first time in a year, the THINK BRICK was
+not giving any codes on the CAN bus and not giving any error lights on the dash board.  
+
+The relay's did their dance, the PCU starts up and hums... But putting it in gear, and the motor just
+will not run.  Nothing.  John and all of us are out of ideas (other than replacing the PCU for $3000.
+So now the THINK BRICK has re-earned its name and is again a nice colored yard ornament.  But at least
+its battery is now installed and attached so I can move it around the driveway instead of being 
+permanelty ensconced over the battery on the ground.
+
+While it was down, I just updated the firmware using John Meyer's portable laptop and now I 
+have that EV acceleration grin again!
+
+<A NAME="CUPHOLDER">
+
+<IMG SRC="Energy/THINK/cupholder-0518x.jpg">
+
+<B>CUPHOLDERS</B>
+
+I got so fed up with trying to get a drink into and out of the THINK cup holders as it would fold up on me.  
+So today, I realized the simple fix.  Take a large plastic drink cup that fills the cup holder, rinse and then
+insert it all the way down into the holder.  Mark a circle on the cup around the top of the cup holder.  
+Remove the cup and cut about 1/4" below the line all the way around.  Then insert this "short cup" FROM BELOW 
+so that it is held from going up by the top part of the cup holder and from going down by the base of the cup 
+holder.  You now have a solid cup holder into which you can insert and take out paper and plastic cups without 
+it collapsing on you.  My cup was a see-through clear one from 7/11 so it is not obnoxiously visible when not in use.
+
+Also note the black 3/4" angle bracket inserted under the plastic seat slide cover that keeps the breakfast
+cereal cup in place.  Just slip the bracket under the plastic on both sides, and now my breakfest cereal cup 
+does not go flying when I have a panic stop in the morning.
+
+<A NAME="DOME">
+
+<IMG SRC="Energy/THINK/dome-LED-0522x.jpg">
+
+<B>MY LED DOME LIGHT</B>
+
+I got tired of runing the battery down when I left the dome light on.  So I replaced the bulb with
+a homemade LED lamp.  Although you can buy these LED lignts now stock from any auto parts store,
+I had all the LED's so I made one.  In the photo it is crooked because I made it too long by about 1/16"
+and I have only made one so far (need another roundtoit).
+
+I used three series strings of 4 LED's in parallel.  Then the entire set was then series-ed with a small
+Xmas tree lightbulb.  The lighbulb acts as a constant current source with a little voltage drop to keep 
+the current from being too high when the battery is at 13.8v.  It would have been a better match to the
+Xmas tree bulb if I  had used four strings of 4 LED's in parallel.  But they would not fit on the board
+I had pre-cut, so I replaced the 4th string with a resistor to better limit the current to the other three
+strings to the desired 15 mA per string.
+
+<A NAME="FUSE">
+
+<IMG SRC="Energy/THINK/fuse-all-x.jpg">
+
+<B>PROTECTIVE 15A FUSES IN THE EVSE</B>
+
+A lot has been said about the 9 hour labor involved in removing the PCU just to replace a blown 20
+amp internal fuse and put it back in again.  For those of us that use the same L1 EVSE at home or
+take it with us to charge, a nice place to put an external 15 amp fuse is inside the original EVSE
+where it even has traces for a fuse on both sides of the line.  Just carefully remove the #12 wire
+jumper and somehow solder your fuse in place.  I heated one end of the #12 wire (so it could move 
+to relieve stress) and then cut it in half with dikes.  Then while heating each end, bent the #12 
+ends up so then I could solder the fuse to the wires as shown.  Easier to replace these 15A fuses
+in the EVSE than the 20A inside the PCU that takes a day of labor.
+
+<A NAME="VISOR">
+
+<IMG SRC="Energy/THINK/visor0517x.jpg">
+
+<B>SIDE VISOR:</B>
+
+With the high window glass compared to other cars, I find the morning and evening sun beams in the driver's window 
+into my eyes.  Yet the visor in the THINK is not long enough to swing over and block the sun.  So I made this
+simple shade out of a piece of cardboard and just slide it up into the crack in the door whenever needed.  It just 
+slides in easily (though it will fall out when you open the door).
+
+<A NAME="BATTERY">
+
+<IMG SRC="Energy/THINK/Battery-12v/battery-12v0519x.jpg"> <IMG SRC="Energy/THINK/Battery-12v/solar-panel0520x.jpg">
+
+<B>EASY-ACCESS 12V BATTERY</B>
+
+After taking out a bad 12 volt battery, there was no way I was going to put another one back in.
+What a nighmare of contortions for such an important thing as the 12v battery.  As a Ham, I run
+all kinds of things on 12 volts and so need separate access for both use and charging.  So here,
+I put a small 7 AH gel cell in the glove tray and connected it to the fuses there.  A small block
+of wood screwed from the bottom to the plastic fuse cover holds the battey from sliding.  To
+wire it up, I soldered a wire from the + terminal to the top end of one of the 30A fuses as shown
+in this <A HREF="Energy/THINK/Battery-12v/pigtailx.jpg">Fuse mod-pigtail</A> photo (but make it longer than shown there!).
+
+Of course, this battery will run down in 2 days due to the 30 mA of idle current drawn even when the 
+THINK is turned off.  So I backup the battery with a small solar panel on the roof with its own small
+13.8v charge regulator.  It is easy to drill from the outside, install the solar panel and then run 
+the wires over to the corner pilar and down to the battery.  The pilar cover should pop off, but mine 
+did not, and tore off both snap on connectors.  Duct tape restored it.
+
+I had taken some pictures of my original "just-get-er-going" approach.  But that was before I cleaned
+it up as shown above.	<A HREF="Energy/THINK/Battery-12v/Overall-viewx.jpg">first battery</A>, <A HREF="Energy/THINK/Battery-12v/Batteryx.jpg">closer view</A>.
+
+<A NAME="TIMER">
+
+
+<B>COFFEE MAKER TIMER:</B>
+
+<IMG SRC="Energy/THINK/Timer-EVSE-0525x.jpg" align=left>
+
+My commute only uses about 30 to 40% of battery range and can be replenished from about midnight until
+I leave in the morning.  Not wanting to have to remember to go out and plug in every night at bed time,
+I found this old Mr. Coffee control panel.  You can set the time to any start time you want and the
+charge will begin at that time.  The timer contains a 12 amp relay for the coffeepot, but I figured
+that was not designed for many hours of continuous service so I mounted a heavier duty relay in a box
+on the back of the garage door.  Then on the front of the door is the timer at a nice easy height for
+setting the time, and the outlet down at a plugging-in level.  The coffeepot ON/AUTO/OFF switch also
+controls the relay for any other selection I want too.
+<IMG SRC="Energy/THINK/timer.png" align=right>
+It is not weather proof, so normally the timer is coverd 
+with a clear plastic cutout from a plastic bottle to keep 
+it dry of falling rain.
+
+
+
+Bob, WB4APR
+
+<A HREF="#TOP"><B>Back to Top</B></A>
+</html>
+

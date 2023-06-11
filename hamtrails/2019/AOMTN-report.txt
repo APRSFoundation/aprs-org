@@ -1,0 +1,132 @@
+***************************************************************************
+*               ATGP 2019 Report for Apple Orchard Mountain              75
+***************************************************************************
+
+This full reprot AND photos are on this link:
+https://eric.christensenplace.us/apple-orchard-mountain-for-aprs-golden-
+packet-and-sota.html
+
+       Apple Orchard Mountain for APRS Golden Packet and SOTA
+          Sat 20 July 2019          Amateur Radio
+APRS Summits on the Air (SOTA) APRS Golden Packet Apple Orchard W4V/RA-001 
+
+I must be a glutton for punishment. This is my third time visiting Apple 
+Orchard Mountain (AO) and its steep climb to the top with way too much 
+stuff. But I’m always rewarded in the end with awesome views, excellent 
+VHF and UHF range, and interesting phenomena. This trip was no different.
+
+Stats
+When: 2019-07-19 and 2019-07-20
+Where: Apple Orchard Mountain - W4V/RA-001
+Who: Eric WG3K, Amanda KI4IWS, Harlan, and Elise
+Ascent: 280ft in .58mi (3928ft to 4208ft)
+Antenna: SOTABEAM Bandspringer Midi antenna
+Equipment:  Elecraft KX3, Kenwood D700A, Opek HVU-500
+
+APRS Coverage: Excellent with nearby I-Gate. Use path WIDE2-1 on your HT 
+when up here to reduce interference and unneeded repeats.
+The mission
+Each year, several amateur radio operators make the hike (or drive if you’re 
+lucky) to a pre-determined mountain summit along the Appalachian Trail (AT) 
+to create an ad-hoc packet network based on the APRS protocol. This "event" 
+is titled, simply, the APRS Golden Packet Event. From Springer Mountain in 
+Georgia to Mount Katahdin in Maine, (and now we’re including some summits 
+in Canada as well!) we create a digital network comprised of fourteen 
+digipeaters that can be used to pass along positions and messages along the 
+AT. AO Mountain is station five in the network and links Comers Rock with 
+Hawksbill Mountain, each just more than 100 miles (161 kilometers) in 
+distance.
+The team
+In years past, I’ve been accompanied by some experienced operators that made 
+such a trip enjoyable and easy. In 2016 I was joined by Steve N3IPN and Dave 
+KB3RAN on what ended up being a big learning experience of what not to do 
+when climbing AO Mountain. Too much heavy stuff ended up on that trip which 
+led to a re-evaluation of what we really needed to bring on these trips. In 
+2017 we added Ed KC3EN to the group and lightened our load a bit. Many feet 
+make light work, especially when you decide not to bring so much junk with 
+you.
+
+This year was a bit different. The people I asked were on travel or were 
+otherwise engaged. I was planning on doing this trip solo when, at the last 
+minute, my family decided to join me. Elise hadn’t really been camping 
+before and Harlan hadn’t been truly camping outside of a campground so I 
+figured it was about time to get them out into nature.
+Staying there
+ 
+This year we made camp at the summit. Besides the industrial complex that 
+has been constructed at the top, much of the summit area is natural, green, 
+and pretty. The paved road makes it easy, well easier, to get up to the 
+summit with lots of stuff. Camping at the top is awesome with clear, starlit 
+skies, and a nice breeze blowing around.
+APRS Golden Packet
+Since we camped at the summit there was no rush to set up the digipeater 
+and make sure everything would be up and running prior to the event. In 
+fact, I was able to get the system up and running, by myself, in just a 
+few minutes.
+
+This year I used a different antenna setup that yielded excellent results. 
+Instead of a base station antenna, as I’ve tried in the past, I used an 
+Opek HVU-500 mobile antenna for 6m, 2m, and 70cm. Coupled with an MFJ-1401 
+antenna ground plane kit, used for converting mobile antennas into base 
+antennas, along with three fiberglass mast pipes each measuring 1.13m in 
+length, the Opek did a fantastic job and was much easier to haul around 
+and was still lightweight. This setup will definitely go into my portable 
+setup.
+
+I’m continuing to use my LiFePO4 battery. This year I added a 18-watt solar 
+panel to help extend my battery’s capacity. The solar charger, unfortunately, 
+failed at some point in middle of operations and I didn’t realized it until 
+I had been operating HF off of the battery for a while. Fortunately, the 
+charger started working later in the mission but only generated enough to 
+keep the voltage up when the sun came out from behind the clouds.
+Signals and operations
+Signals between AO Mountain and Hawksbill Mountain have traditionally been 
+the weak link in the Golden Packet network. I figured out my first year 
+that antenna placement is very important on the summit. If this were my 
+land I think I’d put in a survey marker at the spot to make sure I can come 
+back to the exact same spot each time.
+
+Signals, compared to years past, were great going both north and south. 
+I never heard Hawksbill on UHF voice but I copied their packets on VHF with 
+no problem. Comer’s Rock has never been a problem and I chatted regularly 
+with KJ4OAP throughout the day.
+
+One thing that seemed annoying to me was when we were trying to complete 
+Golden Packet exchange, I was losing power, and all the digipeaters in 
+between were sending their position reports. Each report that went through 
+my station drained my battery a little bit more. So instead of being there 
+for the Golden Packets, I was being killed by extra traffic. And that 
+damned cloud wouldn’t move out of the way to help charge my battery! But, 
+in the end, the cloud moved, the station stabilized, and we moved on to 
+complete the pass.
+
+After passing the Golden Packet each way at 1200 baud, we switched to 9600 
+baud and completed the same Golden Packet in just a few minutes. 9600 baud 
+apparently doubles the ALOHA channel capacity and also seems to do better 
+along some of our weaker paths. I saw no problems at AO Mountain.
+Summits on the Air (SOTA)
+
+As usual, I brought my Elecraft KX3 along with my SOTABEAMS Bandspringer 
+Midi antenna and 4.1m fiberglass pole. The antenna continues to perform well 
+and is the easiest and fastest antenna I’ve found to erect for HF.
+
+I started at 60m and went to 20m putting stations in the log on every band 
+I stopped in. There is really awful noise up at the top of the summit that 
+has rendered my Elecraft K1 useless in previous trips. This noise was back 
+and got worse the higher in frequency I went. I really wanted to do more CW 
+but my filters just weren’t taking out the noise and it was difficult to 
+pick out the stations. I, unfortunately, ended up with only one CW contact, 
+which was a disappointment. With my power budget very low, I ended HF 
+operations early to keep power for the primary mission.
+
+I did manage fourteen contacts on five bands during the operational period 
+and thank AB4PP, KG3W, W2SE, NE4TN, K2JB, KB1RJD, KI4TN, AA4IT, K1LIZ, 
+W5GAI, KJ4OAP, and W5ODS for answering my calls.
+
+Summary
+Overall, the operation was a success both personally and for the Golden 
+Packet team. I need to do more testing to figure out what happened with 
+my solar charger but I feel that everything else went well. We’ll see what 
+next year holds.
+
+Eric WG3K

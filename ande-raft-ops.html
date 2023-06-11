@@ -1,0 +1,638 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+   <TITLE>ANDE/RAFT/NMARS/FCAL Operations</TITLE>
+   <META NAME="Author" CONTENT="Bob Bruninga">
+   <META NAME="Description" CONTENT="PCSAT2 Telemetry/Communications Payload">
+   <META NAME="Keywords" CONTENT=" RAFT, APRS, PCSAT2, PCsat, ANDE, MarsComm, Amateur Satellites, packet radio">
+   <META NAME="Classification" CONTENT="Science">
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#B8A19C" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000">
+<CENTER><P><B><U><FONT SIZE=+3>
+ANDE, RAFT, NMARS, & FCAL Operations</FONT><FONT SIZE=+2>
+<BR>
+<IMG SRC="ande/photos/ANDEdoneXxx.JPG" HSPACE=5 HEIGHT=200 WIDTH=180 >
+<IMG SRC="craft/RAFTclear.JPG" HSPACE=10 HEIGHT=160 WIDTH=100 >
+<IMG SRC="craft/MARScomClear.JPG" HSPACE=10 HEIGHT=160 WIDTH=100 >
+<IMG SRC="fcal/Fcal-logo.JPG" HSPACE=10 HEIGHT=150 WIDTH=135 >
+
+<BR></U></FONT>
+US Naval Academy Satellite Lab<BR>
+Bob Bruninga, WB4APR</B>
+
+<!--
+<SCRIPT language=Javascript>
+var rndNum = Math.floor(Math.random() * 10000);
+eval("var EDTDate" + rndNum + " = 'Dec 20, 2006 10:58:00 PM CDT';");
+document.writeln("<form name='EDTform" + rndNum + "' action='Javascript:void(0);'>");
+document.writeln('<font size=4 color=darkblue>STS-116 Launched 9 Dec. Countdown to RAFT Deployment</font><br>');
+document.writeln("<input type=text value='' size=20 name='WrittenByJamesMVenglarikII'>");
+document.writeln("</form>");
+if (theFunction) theFunction += "var d = new Date();";
+else var theFunction = "var d = new Date();";
+theFunction += "var c = new Date('" + eval("EDTDate" + rndNum) + "');";
+theFunction += "var diff = (c - d)/1000;";
+theFunction += "var days = Math.floor(diff / 86400);";
+theFunction += "var rem = diff - (days * 86400);";
+theFunction += "var hours = Math.floor(rem / 3600);";
+theFunction += "rem = rem - (hours * 3600);";
+theFunction += "var minutes = Math.floor(rem / 60);";
+theFunction += "rem = rem - (minutes * 60);";
+theFunction += "var seconds = Math.floor(rem);";
+theFunction += "if ((days < 0) | (hours < 0) | (minutes < 0) | (seconds < 0)) ";
+theFunction += "var out = 'Satellites Deployed!';";
+theFunction += "else ";
+theFunction += "var out = ' ' + days + ' days ' + hours + 'hr ' + minutes + ':' + seconds + '';";
+theFunction += "document.forms.EDTform" + rndNum + ".elements.WrittenByJamesMVenglarikII.value = out;";
+setInterval(theFunction, 1000);</SCRIPT>
+//-->
+</CENTER>
+<P>
+<B>ALL ANDE Operations have moved to the 
+<A HREF="ande-ops.html">ANDE Ops web page</B></A>.  This was the combined 2007
+USNA satellite operations page when we had both ANDE and RAFT spacecraft 
+in orbit at the same time.
+This page is retained for historical purposes. .
+Similarly, the last few days of RAFT operations were all summarized on the
+<A HREF="craft/save-raft.html">SAVE RAFT WEB PAGE!</B></A>. .
+<P>
+<HR SIZE=5 WIDTH="100%">
+<P>
+<B>ANDE Field-Day Operations:</B> ANDE and PCSAT (W3ADO-1) are available for Field Day operations,
+both operate as standard APRS digipeaters on 145.825 MHz up and down, 1200 baud. 
+. W3ADO-1 may work for a few lucky contacts since it is semi-operational. . But ANDE should be
+fully operational, though it needs a small beam probably.  
+. The PATH for ANDE is via ARISS just like for the ISS. . For PCSAT the
+path is VIA W3ADO-1.
+<P>
+
+<B>RAFT has Re-entered:</B>  Deorbit was on 30 May 2007, and thanks to a big effort, 
+the Radar Fence Transponder was demonstrated! . See  
+<A HREF="craft/save-raft.html">the SAVE RAFT WEB PAGE!</B></A>. . 
+<P>
+<P>
+<B>ANDE and RAFT STATUS:</B> .  On 6 April 07, PA3GUO restored RAFT from an upset 
+and activated the packet-to-voice synthesizer. . See links below for operations. 
+. RAFT was half way through its
+mission and would de-orbit in August. . It's uplink was best in the dark. 
+.  After 6 April began
+a period of evening operations for the next few weeks. .  Command stations were needed
+in the Southern USA states from Arizona to Georgia under the Space Radar Fence to help us
+experiment with RAFT's radar transponder.
+<P>
+<B>ANDE and RAFT Speak. 10 Feb 07:</B> . Anyone can activate the RAFT voice module 
+with a CONNECT RAFT, and then anyone else can send APRS messages to TALK to be spoken, but
+both downlinks are weak. . Although ANDE also has the same voice circuits, they can only be activated
+on each orbit by command station, and then, only after ANDE is awakened by user activity on the
+channel. . Once activated, it speaks anyone's message to TALK.  Good luck! . Hear the 
+<A HREF="ande/ande_11022007_2238.mp3"><B>PE1ITR and DK3WN</B></A> contact.
+<A HREF="http://home.vianetworks.nl/users/hamoen/pa3guo/voice.html"><B> and others</B></A> in a voice contest.
+<P>
+<B>Packet-to-Voice Synthesizer Rules:</B>
+<LI> On RAFT, someone must CONNECT RAFT to enable the Voice Synthesizer. (Presently, works best in the dark.)
+<LI> On ANDE, a command station must enable the voice on each local pass.
+<LI> Once enabled, RAFT or ANDE will speak any APRS formatted message to the callsign of TALK.
+<LI> The synthesizer speaks the packet header as <B><i>XXXXXX says</i>...</B>
+<LI> All message text is spoken in English with normal spelling.
+<LI> CAPS are spelled best if the second byte is a <B>!</B> as in <B><i>W!B4APR</i></B>.
+<LI> On ANDE, there can be a 10 second delay after yout TALK message is digipeated before it is spoken
+<LI> See <A HREF="ande/ANDEcontract.txt"> User Service Agreement</A> for user activation details .
+
+<P>
+
+<B>STATUS 6 FEB 07:</B> For the last week RAFT has been enabled for PSK-31 ops.  
+No joy has been
+reported.  Also, several stations across the southern USA have been listening for the RADAR Fence
+transponder.  PE1ITR succeeded in an even greater challenge, listening for the 4 milliwatt
+local oscillator of the XP217 Radar Transponder.
+<A HREF="craft/XP-217-detection-PE1ITR4feb07.JPG"><B> (see detection) </B></A>.  As of 6 Feb,
+RAFT was placed back into packet-to-voice transponder mode (though RADAR testing can still continue
+simultaneously).
+<A HREF="craft/hello_europe.mp3"><B>Hear a sample over Europe</B></A> from DK3WN.
+<P>
+<A HREF="pcsat.html"><B>PCSAT-1:</B></A> was restored to full operations in constellation with 
+ANDE and RAFT on 1 Jan07 but experienced a reset on 18 Jan due to re-entering eclipse season.  
+PCSAT-1 will not be available again until next October.
+
+<P>
+<A HREF="ande.html"><B>ANDE </B></A> and 
+<A HREF="raft.html"><B>RAFT </B></A> and 
+<A HREF="http://www.aprs.org/marscom.html"><B> MARScom</B></A> 
+all involve US Naval Academy Student Projects.  RAFT and MARScom are
+complete student spacecraft and the ANDE comm system was a student project. 
+The 4th satelliite, 
+<A HREF="http://www.aprs.org/fcal.html"><B>FCAL</B></A>, was built at NRL (like the ANDE shell)
+but FCAL also contains an amateur radio cubesat for comms and telemetry.
+These four satellites, operating in the Amateur Satellite Service were deployed from
+Space Shuttle mission STS-116 on 21 December 2006.  
+These missions are short due to their low altitude. Our AMSAT expert, N2WWD
+predicts ANDE life of 15 months and RAFT only 5 months to May.  He was using
+<A HREF="http://www.braxtontech.com">Astro-Dynamics Environment (ADE) software</A>.
+See a <A HREF="http://wjz.com/local/local_story_347192330.html"><B>TV News Video</B></A>
+as the students describe their work.
+
+<P>
+<B>THE 145.825 EDUCATIONAL SATELLITE NETWORK:</B> All APRS packet relay satellites are 
+encouraged to join us on this common satellite frequency (after coordination with the IARU)
+to help maintain this common space borne relay frequency for the convenience of students
+and users
+around the world.  ANDE and RAFT join 
+<A hREF="pcsat.html"><B>PCSAT-1</B></A> as a 3 satllite constellation of
+relay satellites on this frequency.  On 10 January, 
+<A HREF="http://www.amsat.org.ar/?f=6"><B>Pehunesat</B></A> of Argentina joined
+the constellation with both voice and packet.  UO-11 is still often heard as well.
+See our <A HREF="buoy.html"><B>Ocean Buoy</B></A> student project as an example application
+on this channel.  See the <A HREF="http://pcsat.aprs.org"><B> LIVE packets </B></A>
+on this channel, collected by automated ground stations around the world.
+<P>
+Here are the salient links for our 4 satellites:
+<P>
+
+<LI> <B>Frequencies: </B>  All on <B>145.825</B> except for NMARS on 27.9652 LSB and FCAL on 437.385. 
+<LI> <A HREF="ande/ANDEcontract.txt"><B> User Service Agreement</B></A> for user guidance
+<LI> <A HREF="http://pcsat.aprs.org"><B> User Data Displays</B></A> shows users per pass and their messages and positions
+<LI> <A HREF="http://www.g4dpz.me.uk/ANDE/home.do"><B> ANDE telemetry page </B></A>
+      by G4DPZ.
+      <A HREF="http://www.aprs.org/andeTLM1.html"><B>Side A Telemetry</B></A> and
+      <A HREF="http://www.aprs.org/andeTLM2.html"><B>Side B Telemetry</B></A>, 
+      <A HREF="http://www.aprs.org/andeTemps.html"><B>Trends since launch</B></A>.  
+<LI> <A HREF="http://www.findu.com/cgi-bin/tele2.cgi?call=RAFT&amp;last=240">
+     <B>RAFT Telemetry</B></A>.  See individual values:
+     <A HREF="http://www.findu.com/cgi-bin/tele1.cgi?call=RAFT&amp;last=240&amp;param=1%20%20%20%20%20&amp;b=0.1&amp;label=Bus%20Voltage&amp;units=volts&amp;range=6%209"><B>Volts</B></A>, 
+     <A HREF="http://www.findu.com/cgi-bin/tele1.cgi?call=RAFT&amp;last=240&amp;param=2%20%20%20%20%20&amp;b=2&amp;label=Solar%25Current&amp;units=mA&amp;range=0%20500"><B>Solar Current</B></A>, 
+     <A HREF="http://www.findu.com/cgi-bin/tele1.cgi?call=RAFT&amp;last=240&amp;param=4%20%20%20%20%20&amp;b=2&amp;label=Battery%20Current&amp;units=mA&amp;range=0%20500"><B>Battery Current</B></A>, 
+     <A HREF="http://www.findu.com/cgi-bin/tele1.cgi?call=RAFT&amp;last=240&amp;param=3%20%20%20%20%20&amp;b=2&amp;label=Load%20Current&amp;units=mA&amp;range=0%20500"><B>Load Current</B></A>, 
+     <A HREF="http://www.findu.com/cgi-bin/tele1.cgi?call=RAFT&amp;last=240&amp;param=5%20%20%20%20%20&amp;a=-.0009&amp;b=0.5485&amp;c=-29.8&amp;label=Temperature&amp;units=deg-C&amp;range=-20%2060"><B>Temperature</B></A>. 
+<P>
+<IMG SRC="craft/RAFTsep009X.JPG" height =300 width = 400>
+<P>
+<B>RAFT and MARScom Deployed:</B> RAFT and NMARS were deployed
+<A HREF="craft/Deploy-RAFT0156z.JPG"><B>(see map)</B></A>
+ at 0156z on 21 Dec 06 from STS-116.
+<A HREF="http://www.aprs.org/craft/operations/RAFT%20DeployZ.wmv"><B>See 600k video</B></A>,
+<A HREF="http://www.aprs.org/craft/operations/RAFT%20Deploy.wmv"> (or 5M original)</A>.
+There appear to be significant torques
+applied to the picosats.  KG4QWC at NRL has
+counted an initial 83 RPM for NMARS and 39 RPM for RAFT.  At this high
+spin rate, the configuration of the 4' HF long wire antennas is of interest.
+See a stitched <A HREF="craft/photos/frame%20all.JPG"><B>Freeze Frame</B></A> of the deploy
+or full size frames <A HREF="craft/STS116-RAFT-321-009x.JPG"><B>009</B></A> and
+<A HREF="craft/STS116-RAFT-door321-010x.JPG"><B>010</B></A>.  
+. The initial spin rate quickly decayed as shown below:
+<P>
+<IMG SRC="craft/operations/SpinRateDecay.GIF">
+
+<P>
+
+<B>FCAL DEPLOYED, ANDE-MAA STUCK IN CAN:</B>  17 hours after launch,
+at 1823z just east of 
+New Zealand, the CAPE-ICU deployed 
+<A HREF="ande/Deploy-ANDE1822z.JPG"><B>(see map)</B></A>
+and 40 seconds later the ICU was supposed to separate into
+5 pieces (3 parts and 2 satellites).  In the photo below you can see that
+FCAL floated out of its half as planned, but ANDE-MAA 
+appears to be stuck in its half of the can (the lower right).  The separation ring
+is in the middle just a foot or so from the ANDE cannister.
+<BR><IMG SRC="ande/separationS.JPG">
+<BR><A HREF="http://www.aprs.org/ande/ANDE_Deploy_Short.mov"><B>See Movie</B></A>.  
+<BR><A HREF="ande/ANDE-RAFT-CAPE-ICU.JPG"><B> See the Design</B></A>.
+<BR><A HREF="ande/Spin-initial.JPG"><B>See initial Spin</B></A> Analysis
+
+<BR><A HREF="ande/DETERMINING%20THE%20ATTITUDE%20OF%20ANDE%5B2%5D.doc"><B>5 month Spin Report (.doc)</B></A>
+
+<P>
+<B>UPDATE: . ANDE Lives, and RAFT Responds!</B> on the 21 Dec, 2200z pass, RAFT responded to 
+commands and SPOKE, and with all the noise on the channel, ANDE woke up and sent
+out one packet with temperatures showing a balmy 25 to 28 deg C.  ANDE-MAA had apparently
+drifted out of the can about 31 minutes after deploy and is fully operational  
+<A HREF="ande/OPSreport1.txt"><B> (See report)</B></A>..  By 9 Jan, it appears that ANDE has no spin
+<A HREF="ande/Sun-All.GIF"><B>(see plot)</B></A>, and
+<A HREF="ande/CoreTemps.GIF"><B>(temps)</B></A>. 
+<P>
+
+Subsequent passes of both spacecraft improved and we gained command of both
+ANDE and RAFT.  Signals are weaker than PCSAT-1 and by mid-day and most systems checked out, 
+we authorized user access on a limited basis.  
+ANDE cooled to -10C on the outside the first full day.  But later stabalized to an internal 
+temperarure of about 15 deg C with peaks on the shell of 40 C at the end of a sun-side pass.  
+See the <A HREF="ande/ande-report2.txt"><B> report-2</B></A>.
+<P>
+
+<B>RAFT SPIN ANALYSIS:</B> It is easy to hear the high spin rate on RAFT when the downlink 
+transmitter is on.  We can turn it on for the XP-217 radar fence transponder or for the PSK-31 
+downlink or for voice.
+In all cases, you can hear the spin modulation.  Initially the spin was 39 RPM as observed by KG4QWC.
+Observations on 14 Jan by PA3GUO show it is down to 25 RPM as recorded in this image below
+and his <A HREF="craft/RAFTspin14jan-pa3guo.mp3"><B>MP3 file</B></A>.
+<P>
+<IMG SRC="craft/RAFTspin14jan-pa3guo_25rpm.jpg" height= 450 width=600>
+<P>
+<B>LIMITED USE AUTHORIZED:</B> . Users may use these spcecraft in accordance with the current 
+<A HREF="ande/ANDEcontract.txt"><B> User Service Agreement</B></A>.  Supported modes are:
+<LI>ANDE and RAFT as digipeaters of all packets using the paths of ARISS, APRSAT, RELAY, WIDE or WIDEn-N.
+<LI>ANDE packet-to-Voice when enabled by command station
+<LI>RAFT packet-to-voice (or PSK-31) when enabled by someone CONNECTING to RAFT
+<P>
+<B>RAFT Speaks!:</B> Hear samples from
+<A HREF="craft/pa3guo-voice.mp3"><B> PA3GUO</B></A>, 
+<A HREF="http://www.ne.jp/asahi/hamradio/je9pel/70107raf.wav"><B>JE9PEL of JF1AJE</B></A>, 
+<A HREF="craft/raft_test1.mp3"><B>DK3WN-1</B></A>, and 
+<A HREF="craft/raft_test1.mp3"><B>DK3WN-2</B></A>, and
+<A HREF="http://www.pe1itr.com/raft%20hello2.mp3"><B>PE1ITR</B></A>.
+
+ .  Users are cautioned that unattended uplinks are not generally authorized and uses must not
+overlaod the uplink so that command stations cannot get in.
+
+<P>
+<B>DO NOT TRANSMIT a voice packet to RAFT or ANDE if you cannot hear packets from the spacecraft!</B>
+The downlink is very weak and we cannot afford anyone transmitting in the blind and blocking
+command access.  With an OSCAR array, even command stations cannot hear RAFT below 10 degrees.
+Omni stations may only hear it 2% of total pass times during the center minute or so of
+a rare overhead pass. Transmitting speech packet is ONLY authorized in accordance with 
+the <i>current</i> <A HREF="ande/ANDEcontract.txt"><B> User Service Agreement</B></A>.
+<P>
+<P>
+<B>INITIAL ORBIT RAFT Telemetry from W7KKE, USNA, and VE4NSA:</B>  Volts were 8.4 in the sun, 
+dropped to 7.3 volts by middle of eclipse on first pass over East Coast USA.  
+We were seeing shut downs (at 6.6V) on each eclipse for the first 10
+hours, but now JN1GKZ captured a packet over Japan that shows we are now charged
+up enough to make it through eclipse and had been running for 529 minutes.  Now
+ZL1AOX in New Zealand has captured our first Sun data and we have over 250 mA
+of solar current and volts up to 8.7.    
+Here is screen shot of first TLM over USNA:
+<BR>
+<IMG SRC="craft/RAFT-1TLM.GIF">
+<P>
+<A HREF="http://www.findu.com/cgi-bin/tele2.cgi?call=RAFT&amp;last=240">
+    <B>RAFT Telemetry History</B></A>.  Individual values: 
+<A HREF="http://www.findu.com/cgi-bin/tele1.cgi?call=RAFT&amp;last=240&amp;param=1&amp;b=0.1&amp;label=Bus%20Voltage&amp;units=volts&amp;autorange=1"><B>Volts</B></A>, 
+<A HREF="http://www.findu.com/cgi-bin/tele1.cgi?call=RAFT&amp;last=240&amp;param=2&amp;b=2&amp;c=-25.5&amp;label=Solar%25Current&amp;units=mA&amp;autorange=1"><B>Solar Current</B></A>, 
+<A HREF="http://www.findu.com/cgi-bin/tele1.cgi?call=RAFT&amp;last=240&amp;param=3&amp;b=2&amp;c=-25.5&amp;label=Battery%20Current&amp;units=mA&amp;autorange=1"><B>Battery Current</B></A>, 
+<A HREF="http://www.findu.com/cgi-bin/tele1.cgi?call=RAFT&amp;last=240&amp;param=4&amp;b=2&amp;c=0&amp;label=Load%20Current&amp;units=mA&amp;autorange=1"><B>Load Current</B></A>, 
+<A HREF="http://www.findu.com/cgi-bin/tele1.cgi?call=RAFT&amp;last=240&amp;param=5&amp;a=-.0009&amp;b=0.5485&amp;c=-29.8&amp;label=Temperature&amp;units=deg-C&amp;autorange=1"><B>Temperature</B></A>. 
+<P>
+
+
+The photo below shows the launchers on orbit ready to spring into action...:
+<P>
+<IMG SRC="ande/ANDElauncher05233x.JPG">
+
+<BR><A HREF="ande/ANDE-RAFT-CAPE-ISS.JPG"><B> Photo inside the Payload Bay</B></A>,  
+    <A HREF="ande/ANDElauncher05206x.JPG"><B> On orbit</B></A>,  
+    <A HREF="ande/ANDE-RAFT-CAPE.JPG"><B> Detail view</B></A>.
+<BR><A HREF="ande/ANDE-RAFT-CAPE-ICU.JPG"><B> Photo of ANDE and FCAL inside the CAPE and ICU</B></A>
+<BR><A HREF="ande/ANDE-RAFT-NMARS.JPG"><B> Photo of RAFT and MARScom</B></A>    
+<BR><A HREF="ande/ANDE-RAFT-SSPL.JPG"><B> Photo of the RAFT launcher</B></A>
+    
+<P>
+
+<B>ANDE/RAFT CONJUNCTIONS:</B> The spacecraft separated from the Space Shuttle STS116 
+on 21 December and were in range of each other for about 15 days and
+then rejoined to within a few km on 10 Feb about 1400z (in range of each other for 6 days).
+As RAFT speeds up as it decays faster, the next joint ops will only last only 3 days 
+about 7 March, then again on 26 March, 11 April, 25 April and 5 May.
+When they are in view of each other, exciting dual hop packet relays are 
+possible as shown in the following graphic:
+<P>
+<IMG SRC="pec/PC2-PC1%20long.GIF" >
+<P>
+
+
+<P>
+<B>ANDE and RAFT Science Missions:</B>  The NRL science mission of ANDE is to measure the
+density of the upper atmosphere by precise tracking of the orbit decay by the Maui 
+Laser Ranging Tracking Station.  The Comm system provides important telemetry on the
+attitude and temperature of the spacecraft.  RAFT carries a 216.98 MHz
+receiver/transmitter to demonstrate self-location techniques when it flies
+through the Space Surveillance Network radar fence across the southern USA.  When this
+experiment is activated, users will hear a 1 second ping when it flies through the fence.
+
+<P>
+<B>ANDE and RAFT Communications:</B>  ANDE and RAFT carry packet radio communications
+systems operating in the Amateur Satellite Service and join with other USNA APRS digipeating 
+satellites such as PCSAT-1 and PCSAT2.  ANDE and RAFT will respond to the path alias of 
+APRSAT and ARISS an other common APRS aliases.  This is so that users do not have
+to reconfigure their path between satellites or between their ISS groundstation.  The
+following frequencies are used by these two spacecraft:
+<BR>
+<LI>ANDE Side A: 145.825 Digipeater up/downlink 1200 baud packet
+<LI>ANDE Side B: 145.825 downlink (backup to side A only)
+<LI>RAFT System: 145.825 Digipeater up/downlink 1200 baud packet
+<LI>RAFT PSK-31: 28.120 HF PSK-31 uplink -downlink on 145.825
+<LI>NMARS packet: 27.9625 USB downlink and 148.975 uplink
+<P>
+
+<B>ANDE Operations: </B> When ANDE is awake, it has four operating capabilities, telemetry, 
+Digipeating, a Packet-to-Voice Synthesizer and Lasers.  It sleeps 90% of the time
+and only wakes up for 2 seconds out of every 16 seconds to see if it hears
+any packets.  If none, then it goes back to sleep to save power. (it has no solar power
+system, only primary batteries).  Once it awakens, it is useable as a digipeater until 
+1 minute after the last packet heard.  The batteries should last a year.
+
+<P>
+<B>ANDE Lasers:</B>  The lasers are in the near infrared and outside of normal vision, 
+though we could see some "red" though only about like a standard red LED in brightness..
+(Thought the lasers are 1 Watt and blinding in the infrared!).  They are probably not
+visible to the eye, but should show up in a CCD camera.  The Lasers require a SYSOP 
+to activate and since their main function is to be tracked by the Maui Laser Ranging 
+station, the lasers will probably only be 
+turned on by our volunteer Hawaii command stations.  
+The lasers are nearly omni directional, so the 1 Watt power is dispersed over a large area
+and weak in any one direction.  Visibly, not any brighter than a single standard LED.  
+I doubt any amateur astronomer would be able to see it unless they have a CCD camera.  
+See <A HREF="ande/lasers.txt"><B>laser info</B></A> for details.
+
+<P>
+<B>ANDE Packet-to-Voice Synthesizer:</B>  This experiment is carried on both RAFT and ANDE,
+but on ANDE, this circuit can only be activated by a SYSOP command station and only on
+a single-pass-at-a-time basis since it goes back to sleep and resets everything after the
+pass is over.  This circuit on ANDE may only get used if the RAFT  one is inoperative.
+
+
+<P>
+<B>RAFT OPERATIONS:</B> RAFT has four operational modes.  Its primary science mission
+is to demonstrate the self-location of a tiny satellite in orbit by detecting its own
+passage through the 216.98 MHz radar fence across the southern USA.   The secondary
+missions are communication experiments in the Amateur Satellite Service and are available
+to radio amateurs worldwide:
+<LI> APRS Packet Digipeater:  relays users APRS packets
+<LI> Voice Synthesizer:  speaks packets sent to it (when enabled)
+<LI> PSK-31 Transponder:  relays PSK-31 signals from 28.120 MHz +/- 3 KHz (when enabled)
+<P>
+
+<B> RAFT APRS Digipeater: </B>  This simple AX.25 digital repeater is just like the ones
+flown on PCSAT-1, PCSAT2 and ANDE and also as ARISS on the ISS.  It defaults to off, but
+will be left ON as long as battery state permits.  It responds to the common digipeater
+aliases of "APRSAT" and "ARISS" so that users do not have to frequently change their
+transmitter settings.
+
+<P>
+<B> RAFT Voice Synthesizer: </B>  RAFT also has the text-to-speech synthesizer so that it 
+can speak packets sent to it.  The format for such a packet is standard APRS message
+format.  Simply address your message to the speech synthesizer callsign of TALK.  
+If the voice syhtnesizer is
+activated, it will speak the packet.  It ignores the AX.25 packet header and also the
+APRS overlaying protocol and converts all of that overhead to simply "XXXXX says:" 
+and then continues with the original packet text converted to voice.
+<P>
+To save power, the voice synthesizer is normally off.  But if it has been enabled by
+the RAFT team, then it is available for activation by anyone.  To activate the voice
+synthesizer for the duration of a pass, any user may initiate a normal 1200 baud packet
+connection to the RAFT callsign.  The "connection" turns on the CONNECTED LED on the
+spacecraft TNC and this in turn activates the voice synthesizer as long as that person
+remains connected.  Notice that this station cannot then send  unconnected APRS
+voice packets unless he has two packet systems or fakes a disconnect and then begins
+working in UI mode.
+<P>
+
+<B>RAFT PSK-31 Transponder:</B>  The PSK-31 transponder is a 10 meter SSB receiver on 
+28.120 to 28.1235 MHz.  Any PSK-31 signals in that band will be demodulated to audio on
+the RAFT spacecraft and transmitted to the gound on the RAFT VHF FM transmitter.  This
+way everyone in the footprint will see the same uplink passband as everyone else.
+This eliminates any difference in Doppler among all the stations on the uplink.  If
+signals are clean, then as many as 30 simultaneous users my use the transponder.
+
+<P>
+The PSK-31 transponder is activated just like the voice experiment.  
+If the SYSOP has enabled the transponder, then any connect request from any user
+to the callsign of RAFT will activate the transponder as long as that station
+maintains the connection.  At the end of the pass, it will time out and turn
+off agiain.  Packet has no function in this case except that the connection is what keeps
+the PSK-31 transponder ON.
+
+<P>
+Note:  We do not expect great performance in this transponder mostly due to inadequate
+RFI shielding inside the small 5" cubeasat.  To make everything fit, we could not have
+any metal shielding between all the various modules, and so the sensitive HF uplink
+receiver is only 1/2" away from the very noisy CPU of the TNC.  This creates over
+20 dB of digital hash noise floor.  So it may take a strong signal to hear anything
+on the HF uplink.  Keep expectations low...
+
+<P>
+
+<P>
+<B>JOINT OPERATIONS:</B> Since RAFT caries an identical packet digipeater as PCSAT-1 and
+ANDE, users should look for opportunities when one satellite can be used to relay packets
+through the other.  Of course, if too many people try this, then no one will be
+successful because the users are using 50 watts and the satellites would hve to 
+hear the weak 2 watt signal of the other satellite.  But it is possible, especially when
+the geometry is favorable where one spacecraft is over the ocean and the other one
+is just barely in view of users.  The image below shows a PCSAT-2 to PCSAT-1
+double hop.
+<P>
+<IMG SRC="pec/PC2-PC1%20long.GIF">
+<P>
+<B>January 2007 JOINT-OPS:</B> PCSAT-1 is basically inoprative except when in full sun at 
+mid-day in the northern hemisphere due to a negative power budget.  But during 2 weeks
+in January, Sun angles improve and PCSAT-1 will come back to full operation.  That will
+be an exciting time.  There will be another such period in mid April.
+See <A HREF="pcsat.html"><B>PCSAT-1</B></A>.
+
+<P>
+
+<B>RAFT Mailbox Experiment:</B>  RAFT also has an internal PBBS that could be used for
+special events or experiments, though it may not have the power budget to keep it on.
+If anyone has any ideas here, let us know.
+<P>
+<IMG SRC="http://www.aprs.org/aprs/passes-iss.GIF">
+<P>
+<B>SCHEDULING CONSTRAINTS:</B> RAFT operations are constrained by power budget.  It has
+solar panels on all sides and so it should have the same average sun throughout its
+short mission life.  So hopefully it will either work or not.  But some modes demand
+more power than others.  Here are the priority of operations:
+
+<LI> STANDBY Mode:  Conserving power.  Only available to SYSOP.  A beacon and 1 minute telemetry may be heard.
+<LI> RAFT Radar Fence Experiments.  Hight TX current for 1 minute when in use.  Will be rare.
+<LI> DIGIPEATER ON:  This increaseas the TX load.  It will be on whenever possible.
+<LI> VOICE SYNTHESIZER:  Adds 40 mA but only when in use.  Voice TX uses a lot of TX power.
+<LI> PSK-31 TRANSPONDER:  Adds full TX power for 8 minutes at a time.  Very power hungry.  WIll only be on for special events or experiments.
+
+<P>
+<B>VOLUNTEER GROUND STATIONS:</B>  Since RAFT has no onboard computer for whole-orbit
+telemetry capture we are dependent on volunteer ham radio ground stations 
+<A HREF="http://www.aprs.org/aa6rr.jpe">(see typical photo - AA6RR)</A> and
+<A HREF="http://es.geocities.com/eb8auu/aprs/index.htm">(EA8BQD in the Canaries)</A>
+ for telemetry feeds to the APRS Internet system
+for live distribution. Any APRS station can be a satgate just like they are normally for
+operation of an IGate.  There is no difference.
+<LI><B> 1200 baud SatGates: . .</B> Feed RAFT telemetry and all other packets to the APRS-Internet System
+
+<P>
+<B>SETTING UP A SATGATE:</B></A> You can use any APRS program to feed satellite 
+data to the APRS-Internet system (APRS-IS) in the normal manner like any IGate.  
+But if you dont
+want to mess with all the APRS system, you can build a simple SatGate using only
+the ALOGGER program.  See <A HREF="ande/ANDEsatgate.txt"><B>building an ALOGGER Satgate</B></A>.
+See the <A HREF="http://satgate.aprsca.net:14701/"><B> status of other SATgates</B></A>.
+Click to (<A HREF="http://www.billdiaz.dynip.com/ASatLogger.htm"><B>
+download</B></A>) Alogger. .
+You can also set up a satgate using any APRS client software.  See 
+<A HREF="http://www.ne.jp/asahi/hamradio/je9pel/uiview32.htm"><B>JE9PEL's page</B></A> on how to set
+up UIview as a satgate.
+<P>
+
+<B>SIMPLE SATGATE ANYONE CAN DO:</B> Although it appears to take an OSCAR array to bring 
+in ANDE and RAFT packets, we do not expect most satgates to have one.  We take advantage
+of the global distribution of the APRS SATgate system to combine the outputs of
+dozens of stations so all we need is each station to hear one or two packets, and then
+we can all see all of them on the APRS internet system.  The best antenna for this
+is on the gound in your backyard.  Just make a 57" vertical over a large chicken 
+wire ground plane.  This becomes a 3/4 wave (50 ohm) vertical with almost 7 dB of 
+gain above 30 degrees.
+<P>
+No, you won't hear most packets, but you WILL hear a few, a few times a day, and that is
+what we need.  The figure below shows the gain pattern of such an antenna.  Combined
+with the fact that the satellite is 10 dB closer to you when overhead than on 
+the horizon, gives you a total of 17 dB gain advantage to those few packets.  Those
+few packets combined with those few from everyone else should give us good continuous 
+data.  Since it is on the ground, it is not that bad of a winter project!  No moving
+parts, no tuning for doppler, and antomatic IGate, and you are done.  The GREEN plot is
+the 3/4 wave compared to the RED which is a 1/4 wave.  Make the ground plane screen
+ as big as you can.  Maybe 6 feet or more?
+<P>
+<IMG SRC="http://www.aprs.org/g34-14.jpg">
+
+<P>
+<B>RAFT:</B>  See a <A HREF="raft.html"><B> complete description of RAFT</B></A>.  
+This  is just one of many <A HREF="satstation.html"><B> Naval Academy compatible spacecraft</B></A>
+and several  <A HREF="astars.html"><B>other compatible satellite projects</B></A>
+operating in the Amateur Satellite Service.  The following
+map shows the stations that have volunteered to support the special telemetry downlinks from
+PCSAT2:  
+<P>
+<IMG SRC="pec/GndStns.gif">
+<P>
+
+<B>User Service Agreement:</B>  RAFT cannot live up to its full potential unless all users
+use it as designed.  Therefore like other Naval Academy Satellites, we ask that all users
+subscribe to the <A HREF="craft/RAFT-itu.txt"> RAFT User Service Agreement</A>.  If you agree
+to use RAFT in accordance with the guidelines posted there, then you may use the
+spacecraft. 
+<P>
+
+<B>RAFT TELEMETRY:</B>  RAFT generates routine housekeeping telemetry once a minute.
+There are only 5 telemetry values.
+<LI> Battery Volts
+<LI> Solar Power Current
+<LI> Battery Current
+<LI> Load Current
+<LI> Spacecraft Temperature.
+<P>
+Since only 5 channels are available, we used a trick with the termperature sensors to
+see other data.  If the PSK-31 transponder is on, then the thermister that is
+transmitted is the Transmitter.  If it is normal mode, then the thermister is
+on the spaceframe.
+<P>
+
+When decoded, <A HREF="craft/RAFTeqns.gif"><B>(See Telemetry Equations and format) </B></A> ,
+here is a screen snapshot of the typical telemetry data.  Notice that both RAFT 
+and MARScom show on the same screen.
+<P>
+<IMG SRC="craft/RAFT-tlmSCRN.GIF">
+<P>
+The following screen capture shows what ANDE telemetry looks like.  Notice that there are
+two columns for the A and B side (ANDE-1 and ANDE-2).  Side B reports on the bottom half
+of ANDE and side A reports the top half.   The head of the column shows
+which packet (00,01,10,11) contains that telemetry.  In this capture, ANDE was
+in the dark because you can see that the graphics to the lower 
+right does not show any solar sensors illuminated.  The other graphics shows temperatures,
+in this case, as a cool blue.   Otherwise most of these values are gyberish
+and not real.  The currents in the upper right are HIGH and are shown in RED.  NOrmally
+we expect to see values in the tens of mA.  You will see 400 mA if a TX is captured.
+See more info on <A HREF="ande/ANDEeqns.txt"><B>ANDE telemetry </B></A> 
+<P>
+<BR><IMG SRC="ande/ANDE-scrn.GIF">
+
+<P>
+<B>EXAMPLE NETWORK DIAGRAM:</B>
+<P>
+<IMG SRC="pec/AMSAT-IS.gif">
+<P>
+Ground Stations can be simple or complex.  A simple 19" whip over a ground plane 
+works very well and can see the satellite above about 15 degrees.
+  A full tracking station down to the horizon may get more data, but may not be worth
+the expense.  However, it should be noted that RAFT does not have cross polarized antennas,
+so there will be nulls in the pattern.  But there is a tiny magnet on board that should
+orient those antnnas along the Earths Magnetic field.  The plot below suggests the
+orientation that a mid-latitude station will see if looking west (or east).  The satellite
+will be mostly horizontal to the south, and tend towards vertical to the North.  Since
+RAFT is deployed from the Shuttle (coming back from the ISS), it will be in an orbit
+similar to the ISS (just lower and faster)...
+<P>
+<IMG SRC="craft/MAG40w.gif">
+<P>
+<B>FIXED OR AUTOMATED STATIONS AND ANTENNAS:</B> If there are enough ground stations, 
+then trackign stations are not required, since when one station loses it on the
+low horizon, it should be over another ground station somewhere else.
+  See the plot below
+comparing the gain of a 1/4 wave whip with a 3/4 wave whip.  This is live data
+obtained from a 1/4 wave and 3/4 wave whip (scaled to GPS size and using the
+GPS constellation over 12 hours to provide all-sky signals):
+<P>
+<IMG SRC="http://www.aprs.org/g34-14.jpg" >
+<P>
+<P>
+Much experimentation in this area is needed.  Here is a plot of the theoretical
+EZ-NEC produced gains of three whip antennas including the path loss due to range.
+THis shows the 3/4 wave antenna to not begin working until above 30 deg, but
+I routinely capture some data above 20....  Better than shown here.
+<P>
+<IMG SRC="http://www.aprs.org/gainplot.gif">
+<P>
+Bottom line, whats the best antenna?  Depends on how many people are collecting
+data from which directinos....  There are enough of you and 
+enough different stations for us to find out!
+<P>
+The <B>RAFT</B> comm system operates in the ITU 
+Amateur Satellite Service as described in the<A HREF="craft/RAFT-itu.txt"> 
+Paper on RAFT's operation in the Amateur Satellite
+Service </A> 
+<P>
+<B> DESIGN DETAILS relative to OPERATIONS:</B>
+<P>
+<LI><A HREF="ande/ANDEpassPlan.txt"><B>ANDE Operations plan</B></A>.
+<LI><A HREF="craft/RAFT8-12vPS.gif"><B>Unique 8V and 12V power system</B></A>.
+<LI><A HREF="craft/RAFT1schematic4.GIF"><B>Communications System Schematics</B></A>.
+<LI><A HREF="ande/ANDEbat-mgt4.GIF"><B>ANDE Battery System Design</B></A>.
+<LI><A HREF="ande/ANDEpwrplan2.txt"><B>ANDE Power Budget</B></A>.
+<LI><A HREF="ande/ANDEtxrx2.gif"><B>ANDE Comms Schematic</B></A>
+<LI><A HREF="ande/ANDEspeak.gif"><B>ANDE Speech Circuit</B></A>
+<LI><A HREF="ande/ANDEeqns.txt"><B>ANDE Telemetry Equations</B></A>
+<LI><A HREF="ande/KPC3-telemetry.txt"><B>KPC-3 Telemetry, Command-Control system</B></A>
+<LI><A HREF="ande/ANDEtlmMODS.gif"><B>ANDE TNC mods for Telemetry</B></A>
+<LI> <A HREF="ande/A-R-N-telemetryPlan.txt"><B>Telemetry Capture Plan</B></A>, and
+     <A HREF="ande/A-R-N-operationsPlan.txt"><B>Initial Operations Plan</B></A>.
+
+<P>
+<A HREF="http://spaceflight.nasa.gov/realdata/tracking/"><B>NASA Shuttle Tracking Site</B></A>
+<P>
+<P>
+<P><FONT SIZE=+1>You are visitor: 
+<IMG SRC=http://www.aprs.org/cgi-bin/Bruninga/pc2ops.cgi> <== not visible on IE, but NetScape sees it 
+(was 19,500 at 1600z on 20 Dec 2006)
+
+
+ </FONT>.<BR>
+<HR SIZE=5 WIDTH="100%">
+
+<CENTER><TABLE BORDER=2 CELLPADDING=2 >
+<TR>
+<TD>
+<CENTER><P><FONT SIZE=+1><A HREF="satstation.html">USNA
+Satellite Ground Station</A></FONT></P></CENTER>
+</TD>
+
+<TD>
+<CENTER><P><FONT SIZE=+1><A HREF="pcsat2.html">PCSAT2</A></FONT></P></CENTER>
+</TD>
+
+<TD>
+<CENTER><P><FONT SIZE=+1><A HREF="pcsat.html">original PCsat</A></FONT></P></CENTER>
+</TD>
+</TR>
+</TABLE></CENTER>
+</UL>
+
+</BODY>
+</HTML>

@@ -1,0 +1,73 @@
+Thermal Analysis of Inadvertant Activation of ANDE                20 Jan 2006
+-----------------------------------------------------------------------------
+                                                                 Bob Bruninga
+
+
+QUESTION: Investigate the thermal effects of inadvertent activation of one of
+the spheres due to rotation.
+
+ANSWER: This situation has no significant impact other than early activation
+of the spacecraft receiver system and minor shortening of mission life
+due to the run time that would accrue prior to actual deployment.
+
+
+ANALYSIS:   If ANDE MAA is activated within the CAPE here are the effects:
+
+1) Receiver sleep/wake timer system begins and command receiver awakens
+for 2 seconds out of every 16 seconds.  Sleep current is 0.005 amps per
+side and wake current for both sides is 0.120 amps, total.  
+
+2) At this fully activated sleep/wake dutycycle, the average current draw
+is only 0.019 amps at 14 volts for a total dissipated power of 0.27 watts.  
+This miniscule dissipation power would be undetectable in the 50kg thermal 
+mass of the spacecraft and additional mass of the CAPE.
+
+3) Transmitters do not come on unless command station sends commands.
+Even then, transmitters only transmit 1 second data bursts in response
+to commands and user accesses.  Even if ANDE MAA was activated and was
+commanded and did see a full users load, while still in the CAPE, the
+average dissipated power still only averages about 0.5W.  
+
+4) Peak short term power could be as high as 6 Watts but this only
+occurs at the 1 second brief transmissions and is protected from any
+longer durations by multiple fail-safe circuits:
+
+   a) Software only generates 1 second bursts at a time
+
+   b) Highest possible TX duty cycle (of multiple 1 second bursts)
+      is only about 40% since the channel is  half duplex and cannot
+      have any data to transmit while the receiver is blocked.
+
+   c) A Hardware watch-dog circuit prevents any transmission longer than
+      20 seconds total.
+
+   d) If both transmitters come on for longer than a minute or so, the
+      total spacecraft current will exceed the long term trip point of 
+      the PTC fuses and the fuses will open.
+
+5)  The only additional potential for power dissipation is if the
+lasers come on.  This would require 4 independent faults and is also
+an insignificant heat rise.  Here are the protections against laser
+turn on:
+  
+    a) Separation switch must be actvated
+    b) Command ground station must be currently logged onto the 
+       password protected operating system in the spacecraft.  This state 
+       defaults back to off in there is inactivity for more than 
+       45 seconds by hardware timer and more than 15 minutes by firmware.
+
+    c) The command station must activate a battery switch to select an
+       operating battery for the lasers.  Select A or B.  It used to be
+       to select A2 or B1 or B2, but now is only an A or B selection 
+       since B1 and B2 are connected in parallel.
+
+    d) The laser command switch has to be activated.
+
+If all four of these inhibits fail and turn on the lasers permanently,
+the average power consumed is only 0.350 amps or about 4 Watts total
+dissipated power.  Again, this dissipation is insignificant to the 
+thermal mass of the ANDE sphere and CAPE system.
+
+Bob Bruninga
+US Naval Academy Satellite Lab
+410-293-6417

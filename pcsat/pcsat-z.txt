@@ -1,0 +1,48 @@
+22 March 2002
+From: WB4APR
+To:   AMSAT/APRS
+
+Subject:   PCsat: it ain't over!
+
+I have been so buried in the round-the-clock keep-alive effort and seeing 
+no improvement, and seeing only a worsening eclipse ratio, it seemed like 
+the end was at hand.  So having thrown in the towel, I relaxed today and 
+had some time to look for some other second order effects...
+
+DUH!  The other biggest factor is that even though Eclipses get worse over
+the next week, I realized the solar angle on the +Z face is improving
+every day due to precession.  And since +Z is our best face, this could
+make a difference.  After an hour in a dark room with a light bulb shining
+at a globe and going through dozens of predictions with Instantrack and
+gyrations with a dice with -Z pointed at the earths magnetic vector, the
+answer is YES!
+
+With 3.2 degrees west precession per day, this means that in 28 days we go
+from worst case to best case on the +Z!  Looking at the magnetic vector
+relative to the sun my best guestimate is that we will get Maximum +Z on 7
+April and working backwards means we had 0 contribution from the +Z panel
+on 10 March.... Exactly the day when this problem began!
+
+Thus, as of today we are exactly 40% up the cosine curve towards best
++Z angle.  And +Z contributes 1.5 times as much as any other panel.  So
+our peak charging current will be up 2.5 times more on 7 April than it was
+on 7 March.  This is a BIG factor!
+
+In fact, it is much bigger than the small worsening of eclipse we will see
+before it begins to get better too... So, I'm now betting that +Z is going
+to bring us out of this real soon now... and we will be back in the saddle
+again! (unless I goofed somewhere)...
+
+So, if I can put the horses back in the barn for this weekend, we might
+just make it through this...  The Fat lady ain't sung yet...
+
+Bob, WB4APR
+
+yes, I konw that there are all kinds of programs and models that could
+have predicted this, but we don't have anyone working on PCsat but me, and
+I havent had the time...  (if someone has the time and the inclination,
+such a model of our magnetic stabilization with max contribution from the
++Z panel and 0 from the -Z should be very easy to predict).  In fact, I
+fear that someone did send it to me 5 months ago, but in 4000+ emails we
+lost it...
+

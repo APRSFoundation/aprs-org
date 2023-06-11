@@ -1,0 +1,174 @@
+> --------------------------SPECIFICATION--------------------------------
+> Naval Academy KPC-3+ FIRMWARE SPEC for ANDE           dated 19 Nov 2002
+> -----------------------------------------------------------------------
+> Document: USNA-ANDE-CC23                           REV-1 of  4 Feb 2003
+>                                                    Rev-2 of  5 Apr 2004
+>                                                    Rev-3 of 12 Apr 2004
+> OVERALL OBJECTIVE:                                 
+>
+> ANDE is a small satellite using only a pair of Kantronics KPC-3+ TNCs as
+> the only processor on board..  The KPC-3+ will not only serve the primary
+> mission of APRS digipeating but also will perform all Telemetry, Command
+> and Control functions.  But the system runs entirely on primary batteries
+> with no solar power input for about one year.  Thus the TNC is only
+> powered up every 20 seconds for 1 second to listen for DCD.  An external
+> circuit will keep the TNC on if the DCD detects any packet. Thus, the TNC
+> is cold-booted for every pass.
+>
+> PURCHASE ORDER DESCRIPTION:
+>
+> 1)  CUSTOM EPROMS as detailed below to burn in our defaults
+>     (cold boot at all HARDWARE resets.  The RAM Battey will be removed))
+>
+> 3)  Delivery as follows:
+>     * Delivery of two preliminary EPROMs in 30 days
+>     * Delivery of two revised EPROMS in 90 days or later
+>     * Delivery of final flight EPROMS in 120 days or later
+>
+> BACKGROUND:
+>
+> Our objective is to minimize code changes to minimize software risk.
+> For each delivery of TWO EPROMS, there will be an "A" and a "B" set for
+> the two different KPC-3+'s in the design.  Where the defaults are
+> different, they will be indicated below.
+>
+> ---------------------------------------------------------------------
+> BURNED-IN DEFAULTS (This listing is ONLY those that are different from
+> normal factory defaults.  All other parameters are assumed to be standard
+> Factory Defaults)
+>
+> PARAMETER   TNC (A)                          TNC (B)
+> ----------- -------------------------------  --------------------------
+>
+> MYCALL:     ANDE-1                           ANDE-2
+> MYPBBS:     AMAIL-1                          AMAIL-2     <== rev 2
+> MYREMOTE:   DISC1                            DISC2       <== rev 2
+> UNPROTO:    APRS VIA APRSAT
+> UIDIGI:     ON APRSAT, RELAY, WIDE, ARISS
+> UIFLOOD:    SAT,27, NOID                                 <== rev 2
+> UITRACE:    WIDE, 27                                     <== rev 2
+> DIGI:       ON
+>
+>             >----------==========********          <== TH-D7 HT Windows
+> BText (A):  >Satellite_145.825___US_Naval_Academy        <== REV-2
+> BText (B):  >ANDE alt._channel.__US_Naval_Academy        <== REV-2
+>             Note, Underscores are used for BLANK characetrs here in
+>             this spec to clearly indicate the exact number of spaces
+>             The spacing is such to fit well on the Kenwood D7 display
+>
+> BEACON E:   EVERY 3 [NOT INITIAL]
+> TELEMETRY:  6       [NOT INITIAL]            6 [NOT INITIAL] <== REV-2
+> LEDS:       OFF
+>
+> CD:           SOFTWARE
+> ABAUD:        9600						<*** rev 3 *****
+> INTFACE:      TERMINAL
+> PMODE:        CONVERSE
+> HEADERLINE    OFF
+> MONITOR       SPEAK                                  <== rev-2
+> MCOM          OFF
+> LFSUPPRESS    ON
+> MXMIT         OFF
+> XMITLVL       100
+> ECHO          OFF
+> FLOW          OFF
+> BLT 1 e 00:06:00 START 00:00:15                      <== rev-3 and LT's
+> BLT 2 e 00:06:00 START 00:01:45                      <== rev-3 below
+> BLT 3 e 00:06:00 START 00:04:15                      <== REV-3 also
+> BLT 4 e 00:10:00 START 00:10:30                      <== REV-3
+> LTP 1 APRS1
+> LTP 2 APRS2
+> LTP 3 APRS3
+> LTP 4 APRS4
+>        1234567890------------============------------=========(D7)
+> LT  1 :BLN1ANDE :ANDE-1 only wakes up 1  of evry 15s for users. Pse conserve.
+> LT  2 :BLN2ANDE :ANDE stays  awake for 30 secs after last pkt heard.
+> LT  3 :BLN3ANDE :Aliases are RELAY, WIDE,APRSAT,ARISS & WIDEnN
+> LT  4 :BLN4ANDE :I've been on over 10m & need to save power.  Thanks.
+> CONOK OFF
+> CMSG DISC
+>           >----------==========********           <== TH-D7 HT Windows
+> CTEXT     >Mission is only UI  digi. No connections pse..
+> PBBS      100                                     <BBS RAM for SEU test>
+> PBHEADERS OFF
+> PTEXT     >BBS RAM for SEU test only              <== rev-3
+> RTEXT     tbd
+>
+> CUSTOM FIRMWARE MODIFICATIONS:
+>
+> 1) FASTER BOOT.  You said you could half the time for the boot process
+>           by adding some 26 bytes of custom code...
+>
+> 2) RADIATION DETECTOR:  We will not be using the BBS, since the TNC
+>           cold boots with no RAM backup.  But we do want it
+>           initialized ON so that it's memeory is allocated.
+>           We ask for a  special "SEU" (single event upset) command
+>           that will cause the CPU to scan all of the "unused" BBS
+>           ram for any bit errors.  The result is a single Beacon Packet
+>           something like "SEU test shows N errors in <time> minutes"
+>
+> 3) CLOCK: Notice  that in order to time stamp the SEU command since
+>           the last BOOT, we want the clock to start running
+>           on each power up at 00:00:00 (if it doesn't already)
+>
+> 4) VOICE INTERFACE:  The KPC-3+'s serial port is only connected to one
+>           device on the spacecraft.  It is a TEXT-to-SPEECH
+>           module that will SPEAK APRS UI message packets sent
+>           to it.  It needs the following parameters:
+>
+>    MYAPRS:    A callsign for receiving APRS messages (-3 default)
+>    MON MSGS:  Turns MON off and only APRS msgs pass to serial port
+>    MON SPEAK: Same as MSGS but prepares special syntax to serial prt
+>    APRSACK:   If MON MSGS, then will ACK MYAPRS if exact SSID match
+>
+>    MON MSGS SPECIAL RULES:  An APRS message must be addressed to
+>    the MYAPRS callsign (any SSID) to pass out the serial port.  But
+>    if there is an exact match (including SSID), and if APRSACK is ON
+>    then the TNC will send back an APRS ack also.  The format of an
+>    APRS message is:
+>               FROMCALL>APxxxx,digilist::TOCALL-SS:msg_text{nnnnn
+>
+>    Where:     FROMCALL is the sending station
+>               APxxxx   is the typical APRS tocall (ignored)
+>               :TOCALL-SS: is a 9 byte long APRS user ID enclosed in
+>               colons.  The colons are unique to this format and
+>               shorter calls are padded with spaces.
+>               {nnnnn   is an optional (and up to 5) line number
+>
+>    An ACK is: MYCALL>APRS::FROMCALL_:ack{nnnnn
+>
+>    The monitored msg packet is passed to the serial port unafffected.
+>    The only criteria are that there must be a : in the 1st and 11th
+>    byte positions in the AX.25 data field
+>
+>    MON SPEAK SPECIAL RULES:  If the packet is to be spoken, there are
+>    additional processing required:
+>    1) The AX.25 header is dropped and replaced with "F!ROMCALL says "
+>    2) The first letter of the FROMCALL is separated from the others
+>       with a "!" which forces the speech module to SPELL the callsign
+>    3) The :TOCALL-SS: field is dropped entirely
+>    4) The {nnnnn is dropped (if present).
+>
+>    The spoken result is "FROMCALL says msg_text"
+>
+> NOTE:  The exact spacing of the Bulletins and BTexts are aligned to the
+> multi-line text displays on the front of the Kenwood TH-D7 display.
+> The BText is displayed on a single two-line-by-10 character display.
+> The Bulletins are shown on two pages of two-12-character lines (though
+> the last line on page 2 is only 9 characters long (total 45)..
+>
+> Above, I added a fixed-space-font legend on the line before each of
+> these lines in the spec so that it will be easy to see these alignments
+> using COURIER-NEW font (fixed) to see this specification in fixed font)
+>
+> These parameters are negotiable to minimize RISK.  Before hacking
+> complex code, please tell us of easier possibilities...
+>
+> Bob Bruninga
+> USNA Satellite Lab
+> 590 Holloway Road
+> Annapolis, MD 21402
+
+
+
+

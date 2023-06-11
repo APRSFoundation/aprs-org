@@ -1,0 +1,38 @@
+Maryland Mountains                                           22 July 2013
+-------------------------------------------------------------------------
+
+I can't remember, was this a bug in the d710 that didn't trace?
+
+2013-07-20 17:07:34.752 K3PDK-2   R  
+CAMLBK-9>EB0R6T,MDMTN-7*,HOP7-5,HOP7-7:'g0kl  ;/]ATTENDED=
+2013-07-20 17:07:45.578 K3PDK-2   R  
+CLNGMN-2>3U3S3W,STNYMN-6*,HOP7-3,HOP7-7:'o9bl  #/]KG4GPJ heard3 4 5
+2013-07-20 17:07:47.317 K3PDK-2   R  
+CLNGMN-2>3U3S3W,MDMTN-7*,HOP7-2,HOP7-7:'o9bl  #/]KG4GPJ heard3 4 5
+
+
+Quoting Carl Davis <kb1ejh@yahoo.com>:
+
+> Washington has hear 9-15
+> No one has heard from Springer as of yet?
+> -9 is having an apparent Rx issue as it can be heard but Kevin has not 
+> heard anything on his radio.
+> -15 is in bad weather and probably head off the mountain as it is only 
+> going to get worse in the Northeast
+>  
+> Thought's
+> Carl
+>
+> ________________________________
+>  From: Patrick Domack <patrickdk@patrickdk.com>
+> To: at-golden-packet@yahoogroups.com
+> Sent: Saturday, July 20, 2013 12:54 PM
+> Subject: [at-golden-packet] mdmnts status
+>
+>
+>
+> mdmtn-7 is hearing from 2 to 9 now.
+> Thought I haven't seen a status update from 3 yet, but hearing 2.
+>
+> ------------------------------------
+>

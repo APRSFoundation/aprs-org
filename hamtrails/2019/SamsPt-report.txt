@@ -1,0 +1,27 @@
+***************************************************************************
+*                  ATGP 2019 Report for SamsPoint-10 by Dwight, N2FMC    75
+***************************************************************************
+
+-Not more than 10 min into the event my only p/s smoked.  
+Sometimes Astrons do that.  The takeaway is to bring a spare or 3.
+
+
+-The other lesson learned is to check the radio a month or so before the 
+event to ensure all parameters are still in memory.
+
+I had one setting that should have had my SAMSPT-10 call set, but it did 
+not.  Thanks Camelback for the help getting that squared away!
+
+-I wasn’t thinking about it and I grabbed a length of RG-8u coax that had 
+about 100’ on the reel which was 50’ more than I needed.  That might have 
+caused a slight increase in insertion loss.
+
+I was packed up and on my way home by 1600.
+
+Now to update my list of things to bring for next year.
+
+73 till the next time
+Dwight
+N2FMC
+
+See his 2018 photo: http://aprs.org/hamtrails/2018/Sams-pt-panorama.png

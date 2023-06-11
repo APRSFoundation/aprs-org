@@ -1,0 +1,174 @@
+KODIAK STAR LAUNCH MONITORING TEAM PLAN           (Draft  19 Sep 2001)
+---------------------------------------           (B.Bruninga, WB4APR)
+http://www.ew.usna.edu/pcsat.html
+
+
+Although Launch is from Kodiak, Alaska, most post launch data will be
+derived from dozens of amateur satellite monitoring stations around 
+the world who will provide initial telemetry and monitoring data to 
+the launch team.  PCsat has no whole orbit telemetry storage on board.
+It is dependent on ground based internet linked capture and 
+distribution of live telemetry to the command station in Annapolis 
+not only during the initial phases, but throughout its life.
+
+For the initial post launch spacecraft on-orbit checkout, the Launch
+Monitoring Stations will fall into three categories:
+
+  Packets detected by ear and noted as to exact times of receipt
+  Packets copied to file and Emailed
+  Packets injected live into the worldwide APRS internet system
+  
+  
+REPORTING:  Telemetry data is shared among the launch team via live
+connection to the worldwide APRS Servers, or via Email.  Stations 
+connected to the servers can also communicate via Keyboard directly
+via APRS messages to the USNA W3ADO command station.  The APRS servers 
+are, in order of availability listed as follows:
+
+  AHUBEAST.NET    port 2023   <Use any of the AHUB's or SECOND.APRS.NET
+  AHUBCENTRAL.NET port 2023   <since these echo packets back to the 
+  AHUBWEST.NET    port 2023   <users that are logged onto the same 
+  SECOND.APRS.NET port 23     <server.  Others do not.
+  THIRD.APRS.NET  port 23
+  FIRST.APRS.NET  port 23
+
+WEB PAGE:   In addition to sending and receiving all packet data there, 
+the web page below will also capture packets and make them available
+to viewers (although the SYSOP is enroute to DCC and so the page will
+NOT be activated until the week after launch)...
+     
+            http://pcsat.aprs.org should also capture all packets
+
+EMAIL:  Send REPLY mail to the email list already being used or send 
+specific email to at least these addresses:
+
+     bruninga@usna.edu           PCsat
+     mas@me.wustl.edu            Sapphire
+     gilmoore12@aol.com          Starshine
+
+Packet Telemetry listings are preferred to be embedded within the body 
+of the email instead of attachments which require multiple additional
+processing steps on receipt. 
+
+TELEMETRY:  There are three Amateur Satellites on Kodiak Star.  None 
+have any continuous signal, but only occasional packet bursts of
+telemetry on the order of once a minute or less.  This makes tuning
+and finding these birds somewhat of a challenge.  See tracking section 
+later.  Here are the expected packets on the first several orbits:
+
+   Starshine: one 0.3 sec TLM @ 9600 on 145.825 every 2 mins           
+
+   Sapphire:  one sec CW dit-dit Beacon on 437.1  evy 1 min  
+
+   PCsat:     TLM-A   @ 1200 on 145.825* every 1 min       
+              TLM-A   @ 9600 on 145.825* every 3 min
+              BTEXT-A @ 1200 on 145.825* every 4 min
+              TLM-B   @ 1200 on 144.39*  every 3 min
+              TLM-B   @ 9600 on 144.39*  every 1 min
+              BTEXT-B @ 1200 on 145.39*  every 4 min
+
+Since PCsat's telemetry is multiplexed, it takes a series of
+four telemetry packets from each system (A/B) to form a complete
+spacecraft telemetry snapshot.  The sequence of each of these four
+packets can be derived from either the serial number (sss) or the
+two (NN) bits in each packet.  The TNC-A packets use the call of
+W3ADO-1,-2 and those from TNC-B use PCSAT-11,-12.  Telemetry 
+packets are of the form:
+
+  W3ADO-1>APRTLM,SGATE:T#sss,111,222,333,444,555,11111111,00NN,0
+  PCSAT-11>APRTLM,SGATE:T#sss,111,222,333,444,555,11111111,00NN,0
+              
+Presumably all of the packet timers on PCsat will initialize at the
+same time, so the activity should be bunched around the minutes.  Also
+the SAFE mode for PCsat has both transmitters cross connected so that
+every packet from either TNC will appear on both frequenceis.  Thus
+only a single receiver is needed on either 145.825 or 144.39 to
+capture all telemetry.
+
+LISTENING to 9600 BAUD:  A 1/2 sec 9600 baud packet is indistinguishible
+by ear from open squelch FM noise.  The only way to detect it is by 
+having your squelch set above threshold to quiet the speaker.  Then any
+9600 baud packet will sound like a brief open squelch.  Please time the
+period and relative occurance of these relative to other packets.
+Due to the scheduling, most 9600 baud packets from PCsat will occur
+immediately adjacent to a 1200 baud packet and so may just sound like 
+either a leading or trailing noise burst on the 1200 baud packet.
+
+The STARSHINE 9600 baud burst should be independent of these and
+should also occur 5 minutes or more in advance of PCsat on the second
+orbit.  This is because Starshine is the last to separate after a  
+significant second orbit altitude maneuver to lower it 300 km below 
+the other satellites.  Due to this lower altitude, Starshine will be 
+going faster by about 5 minutes on the second orbit.  Palmer Station
+and then South Africa will be the first to hear these packets and 
+must be prepared to differentiate between the single 9600 baud 
+Starshine packets and the grouped PCsat packets.
+
+SAPPHIRE:  Sapphire has an initial Beacon mode using a simple CW
+dit-dit once a minute.  The presence of these two bursts once a minute 
+on 437.100 (+/- Doppler) will constitute proper separation.
+
+TIMING:  Please initialize all TNC clocks to UTC.  The Kenwoods built-in
+TNC's do not have clocks, so please keep a written log of time of
+receipt on the first orbit or so if possible.  If your packets are 
+injected LIVE into the internet stream no time stamp is required.
+
+
+STATION SETUP:
+
+MINIMUM STATION:  The minimum station simply monitors all packets on 
+145.825 at 1200 baud.  If all systems on PCsat are operational, all 
+telemetry can be captured there.  But it will take 12 minutes to get 
+a complete set of system-B telemetry.  
+
+TWO SYSTEMS: If two receivers and TNC's are available, the best setup
+will be to have one at 1200 baud and the other at 9600.  Not only does
+this capture data from PCsat faster, it also is ready to capture data
+from Starshine on the second orbit.  Since the two spacecraft and
+3 TNC's share the same frequency, they will not overlap, so the RS-232
+outputs of the two TNC's may be able to be dioded-ORed together into 
+the same ASCII capture file.
+
+THREE SYSTEMS:  If a third UHF receiver (no TNC) is available, a
+constant monitor on the Sapphire 437.100 downlink by ear should reveal
+the beacon dits from that spacecraft.
+
+
+ANTENNAS:
+
+None of these satellites have attitude control on these initial orbits,
+so the polarization will be random.  PCsat does have cross polarized
+antennas for all uplinks and downlinks, but the other spacecraft 
+downlinks are all linear.  Power from all three are within 3 dB of each
+other and should have a few dB link margin.  For comparison purposes,
+the packets from these birds should be on the order of 3 dB less than
+the existing downlink from the ISS on 145.800 (when it is on)...
+
+Use the ISS as a good means to test your station (and also serve the
+worldwide community by serving the downlink into the worldwide APRS
+system where it can be seen on http://www.ariss.net.
+
+An omni 2m antenna with minimal cable loss should be sufficient to
+capture most of the telemetry when the satellite is in view when the
+polarizations match.  But due to the lack of polarization control, a
+beam will improve performance.  For Sapphire on UHF, a short beam and/or
+preamp may be required to overcome cable loss.  ALso, expect a -7 dB
+performance difference on 9600 baud.
+
+
+LONG TERM:
+
+As noted above, both PCsat, and Starshine represent a new breed of 
+amateur satellite that presume a worldwide internet linked ground
+station network for capturing whole orbit data on 145.825.  Many
+of the dozens of student CUBESATS scheduled for launch in May 2002
+and the next two Starshines 4 and 5 tentativley scheduled for Nov 
+2002 will also use this technique.  We hope that members of the
+Kodiak Star Launch Monitoring Team will consider assembling a permanent
+amateur satelltie monitoring station to serve this growing network
+of amateur satellites.
+
+de WB4APR
+Bob Bruninga
+
+PCSAT WEB PAGE:  http://www.ew.usna.edu/pcsat

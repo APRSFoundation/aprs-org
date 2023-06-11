@@ -1,0 +1,92 @@
+***************************************************************************
+*        ATGP 2019 Report for Katahdin by Tim, KA1YBS and Leo, KC1FOD    75
+***************************************************************************
+
+Tim (KA1YBS) and I (KC1FOD) have been swamped since the event. Tim sent a 
+concise and nearly complete report from the summit which I have forwarded 
+below.
+
+I'll add that while running 1200 baud we had received a beacon from every 
+station both south of us to Springer and north to Mt. Carlton in Canada by 
+approximately 2:30 pm.  At that time, the switch to 9600 baud came and we 
+began hiking down the mountain.  The decent takes another 4 - 5 hours.
+Since we did not have a way to log packets, I don't believe we can confirm 
+nor deny what we digipeated or received at 9600.  I think the only way to 
+know our effectiveness at 9600 is to see who else received our packets.
+We operated very light with Tim's Kenwood handheld (TH-D72???) as our APRS 
+digipeater.  We used a very compact camera tripod and duct tape to hold 
+the Kenwood digipeater a few feed above the ground while it did its job.  
+That freed us to talk with VA2KEY on Mt. St Joe and K1OK on Mt. Washington 
+with our handhelds dedicated to voice.  
+
+Tim had a Yaesu dual band (Model?) and I had a Baofeng UV-5R5.  Tim's 
+Yaesu also would send and receive APRS but not digipeat.  He frequently 
+used it to verify our digipeating with the antenna removed.
+
+When you have to carry everything on your back and you must leave at 
+7:00am to reach the summit at 5,267 feet by noon it really changes what 
+you consider bringing.  I've attached a couple pics that might do the 
+experience a little justice.
+
+Next year I aim to bring a netbook running linux, direwolf, and xastir 
+with a 9600 baud capable radio for logging and as a possible backup to 
+the kenwood.  It would also allow for better messaging.
+
+Tim, please add your thoughts or correct any omissions/errors.
+It was great working with you all again this year for a super exciting event!
+Extra thanks Mt. St. Joe and Mt. Washington teams for your support!
+
+One thing I think Tim and I both have admitted is that while we love climbing 
+Katahdin, the climb puts undue pressure on actually working the GP event 
+itself.  I'm looking at a possible alternative peak with a less demanding 
+hike that has equal access to both Mt. Washington and Mt. St. Joe.  Given 
+the design of Baxter state park which encloses the tallest peaks in the area 
+there is nothing close to a drive up in the immediate area.
+
+For Canadian Stations: VA2KEY, VA2GLU, VA2JPI, VA2RBC, and others 
+supporting the canadian Golden packet effort!
+
+I'm looking to see if we have a spot here in Maine that permits more time to 
+work the event and less time hiking than Katahdin requires of us.  Of 
+course, I want to take on the investigation with an eye to preserving our 
+connection into Canada.  Here are my questions:
+•  Of the three Canadian stations (MTCARL-1,MTBLAN-2, MTSTJO-14) 
+   I believe the only one we were directly communicating with was MTSTJO-14?  
+
+•  The other side of that question is: Do MTCARL-1 and MTBLAN-2 have a 
+   connection with MTSTJO-14 either directly or through a single hop?
+•  Was Katahdin the only reliable connection from Canada to the US?
+•  Finally, would you be able to provide/confirm your Latitude and 
+   Longitude coordinates of your operating locations?  I came up with:
+   o	Carlton: 47.383,-71.303
+   o	St. Joe: 45.448,-71.120
+   o	Mt. Blanc: ?,?
+Mt. Washington: K10K and WA1KLI, I have my eye out to improve or maintain 
+our connection with you as well.  I just don't have any of these questions 
+about your location.
+
+Leo
+KC1FOD
+
+
+-------- Forwarded Message -------- 
+From: 	Tim KA1YBS
+ 
+Started at 710 
+Summit at 1210
+
+Stations seen/digipeated so far: 
+
+Roan 3
+Hawksbill 6
+MD mtns 7
+GD hill 8
+Camelback 9
+Sam's point 10
+Greylock 11
+Equinox 12
+Mt Washington 13
+St. Joe 14
+Katahdin 15
+Mt carlton 1
+Mont Blanc 2

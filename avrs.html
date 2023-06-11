@@ -1,0 +1,705 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+   <TITLE>AVRS</TITLE>
+   <META NAME="Author" CONTENT="Bob Bruninga">
+   <META NAME="Description" CONTENT="APRS Aplications for IRLP, ILINK and ECHOlink systems">
+   <META NAME="Keywords" CONTENT="ECHOlink, IRLP,AVRS,IPRS,AVRS,AVRS, ILINK, SSTV, APRN, APRS, Bruninga, Annapolis, amateur, football, navy,army,radio">
+   <META NAME="Classification" CONTENT="Science">
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#48D1CC" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000">
+
+<P><B><U><FONT SIZE=+4>AVRS 
+<IMG SRC="logos/aprs.gif" HEIGHT=60 WIDTH=100><BR>
+Automatic Voice Relay System
+</FONT></U></B>
+
+<P>
+<B> Bob Bruninga, WB4APR</B> 
+<P>
+
+<B>Universal Connectivity-by-callsign Workshop:</B>  This workshop was held 18 Sept 2011
+ at the ARRL/TAPR <A HREF="http://tapr.org/dcc.html"><B>Digital Communications Conference</B></A>
+and <B><i>WOW!</B></i> was it an exciting event. AVRS, however, 
+is just part of the overall Ham Radio Initiative for
+<A HREF="universal-contact.html"><B> Universal Contact by-callsign</B></A>  Follow other links
+there.
+
+<P>
+<IMG SRC="avrs/AVRS-functions.GIF" align=right>
+
+<LI> <B>Universal Connectivity by callsign:</B> WB4APR, Bob introduced the concept of Universal Connectivity by callsign.  (Both Text and Voice)
+His two talks were <A HREF="avrs/DCC/AVRS-slidesDCC2011.ppt"><B>Why AVRS? </B></A> and the
+other showing all the <A HREF="avrs/DCC/DCC-universal-contact.ppt">
+<B>Universal Connectivity support</B></A> available in APRS.
+
+<P>
+<LI> <B>D-Star Considerations:</B> WA4KFZ, Mark Braunstein followed through from his D-Star introduction talk the previous
+day about all the potential for D-Star to evolve in support of greater connectivity and user
+friendliness.
+
+<P>
+<LI> <B>ALE and HFlink.com</B> WB4AKK, Ken Heitner explained how ALE for HF provides another 
+     <B><i>contact-by-callsign</i></B> system that couild join this concept.  In particular
+     the global status of the ALE HFNET is also available on line.  See
+     <A HREF="http://hfink.COM"><B>HFlink.COM</B></A>.
+
+<P>
+<LI> <B>AVRS Works!</B> AB0OO, John Gorkos from Atlanta then blew us all away by demonstrating his
+working version of <B>AVRS!</B>... the very subject of this Web page!  Just query AVRS
+or send it a callsign, and it will check all the VOIP networks for the nearest node to
+you and the called party.  Then it will send that info and a  QSO request message to the
+called party, and if his radio ACKS the message, then AVRS sends you a message that
+he has been called and for you to QSY on y our end and make the call!
+
+<P>
+
+<LI> <B>D-Star VOIP CrossConnects:</B> Other information was presented showing how D-Star 
+callsign-to-callsign connectivity can be used for making these Voice contact, not only
+within D-Star, but also across gateways and joint-nodes so that D-Star can talk to
+Echolinks and IRLP's and ALE and jsut about any other voice network.  This web page
+shows how 
+<A HREF="http://www.youtube.com/watch?v=oWkFp7S2pXY"><B>VK5ZEA and VK3VA</B></A>
+built a node stack that interoperates between D-Star, IRLP and AllStar networks.
+
+<P>
+<LI> <B>AllStar Network Support:</B> WB6NIL, Jim Dixon, <B>WB6NIL</B> has jumped
+on board with an <A HREF="aprstt.html"><B>APRStt</B></A> decoder in his <B>AllStar</B>
+code that will identify his voice users to APRS and the Univeral Contact scheme when they
+send their DTMF callsign.  He is now in the testing phase.  Zoom in on his activities in
+California and see his DTMF tests near his local AllStar nodes.
+<P>
+
+<B>The rest of this now has to be updated.  We have been pushing the AVRS and APRStt
+concepts for over a decade, and now it seems that we are starting to see some momentum.
+So, give me time to update all below...  The stuff below was the state-of-the-hopes 
+<B>before</B> DCC 2011, and now it needs to be updated to where we <b> really</B> are.</B>
+
+<HR SIZE=5 WIDTH="100%">
+<P>
+<img src="avrs/A-star-block-diagramXxx.GIF" align=right>
+
+<B>AVRS</B> is the ham radio <B>Universal Voice Contact System </B> equivalent to the
+<A HREF="aprs-messaging.html"><B>Universal Ham Radio Text Messaging </B></A>
+initiative.  Both of these initiatives attempt to cross connect all ham radio
+systems so that only a callsign is needed to establish TEXT or VOICE contact.
+For Voice, we are trying to cross connect all of the VoIP ham radio link Programs 
+(IRLP, ECHOlink, WIRES, D-STAR, Asterix, etc)!</B> . 
+
+Think of <B>AVRS</B> as Ham Radio's Cellular-by-Callsign
+system where you use your radio to make a call to a callsign instead of a
+ phone number. . 
+<P>
+
+APRS is the
+backbone signalling system locating the end CALLSIGN users and the Links needed
+to set up the call. This is just like D-star, except it works for any analog system
+such as EchoLink, IRLP, AllStar or Wires.  D-star already has end-to-end callsign
+connectivity, so does HF ALE.  Echolink, and IRLP also have it, but they only 
+respond to DTMF requests.   APRS can bring this to the HT and mobile APRS operator
+in a more user friendly form and make it available on a local analog channel!  
+Here are the
+steps we proposed for making a call (anywhere on the planet) for example  using
+an A-Star (APRS) gatweway on the D-Star system:
+<P>
+
+<IMG SRC="avrs/Astar-call.GIF">  <IMG SRC="avrs/Astar-call-rx.GIF">
+<P>
+The above boxes show how an A*Star call is made from both the sender and receiver
+perspective.  The A*star QSO can be between any other A*star user or any other
+D*star user seamlessly.  Future versions of the D710, D72 and FTM350 and others
+can automatically QSY the radio if the Menu option has been selected.
+
+<P>
+<B> Original AVRS Goals:</B> 
+In the year 2000 or so, we introduced this AVRS concept of marrying APRS 
+and Echolink/IRLP ham radio systems so that end-to-end mobile-to-mobile voice is possible
+with automatic set-up based only on callsign. . 
+There were many long term objectives to reach this goal.
+<LI> Make local recommended voice repeaters show up on APRS travelers radios. . . . . . . <B>Done... 2004</B>
+<LI> Make Echolink, IRLP, Wires, D-star Freq-objects show on radio front panels . . . . . . <B>Done... 2004</B>
+<LI> Make these objects show their operating freq, tones and node numbers. . . . . . . . . . . . <B>Done... 2005</B>
+<LI> Have D-star users show up in the APRS system. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . <B>Done... 2006</B>
+<LI> Have mobile radios that can ONE-BUTTON QSY to these frequencies . . . . . . . . . . . <B>Done... 2007</B>
+<LI> Introduce the Item-in-msg format so objects can be pushed through IGates. . . . . . . . . (waiting for MFR's
+<LI> Develop the AVRS engine on the APRS-IS to be the <i>AVRS connection system</i>. . . . . . <B> DONE!.. 2011</B>
+<LI> Deliver the first 
+<A HREF="qikcom-2.html">APRStt DTMF Amateur Satellite</A> to introduce the world to APRStt . <B>Delivered 13 Nov 2015 to launch integrator for launch in early 2016</B>
+<P>
+<IMG SRC="avrs/IRLPx.JPG" align=right height=80 width=150>  
+<IMG SRC="avrs/EL-123456x.JPG"  align=right height=80 width=150> 
+<IMG SRC="avrs/EL-posit.JPG"  align=right  height=80 width=150>
+<P>
+<P>
+<B> NODE OBJECTS: </B> . As of 2007, we have made substantial progress on the first 5 items above.  
+. Many Echolink, IRLP, D-STAR and WIRES nodes now appear on the air and most 
+importantly on the front panel displays of mobiles and HT's as shown to the right on the D7 HT.
+These photos need to be taken again, since they are not showing the Frequency
+of the node which is also very important. 
+The proper formatting of these objects is shown in the
+<A HREF="info/echo-irlp-win.txt"><B>Echo-IRLP-Win.txt</B></A> file.
+<P>
+
+<IMG SRC="avrs/Kwd-TuneButton.JPG" align=right height=200 width=450>
+<P>
+<B> QSY Transceivers: </B> . Also since 2007, we now have many APRS radios
+(D710, D72, and FTM350) that can TUNE/QSY to a frequency listed on APRS with 
+the push of a single button as shown to the right.  
+
+Not only  can the radio tune to IRLP/Echolink Frequency objects, they
+can also tune to any other Repeater or operator that has frequency in its position packet.
+Please see the
+<A HREF="localinfo.html"><B>Local Frequency Object concept</B></A> that we have been
+pushing for a few years now. . A few examples are shown on the radio to the right.
+<P>
+
+<B>AVRS is BORN!!!</B> The Ham Radio Outlet Grand Opening in Atlanta in Dec 2010
+was the turning point in this Universal Connectivity initiative.  Both APRS and D-Star
+hams were all in attendance at the store, but I notice that all the D-Star people
+clusterd on one side of the store, and all the APRS folks clustereed on the 
+other side of the store, as if they had nothing in common!  At that point
+I ran in to some D-Star folks AA4RC, Robin Cutshaw who had designed
+the DV dongle, making it possible to work on D-Star connectivity outside of a 
+D-Star box and AB0OO, John Gorkos who not onlyu knew APRS, but just about
+everything else!  He jumped at the idea of writing AVRS and I announced it
+at the time... THen basically heard nothing until now, (Sept 2011) and he
+has revealed his efforts at DCC.  This is the core of the
+ AVRS Ham Radio Cellular-by-call system.  <B><i>Stay Tuned!</i></B>
+<P>
+<IMG SRC="avrs/A-star-drawing.GIF" align=right >
+<P>
+<B>A-STAR REPEATERS:</B> A possible short-cut to more rapidly reach the AVRS goal of universal
+voice connectivity is to simply
+build what I call A-STAR gateway nodes.  These analog nodes or link stations appear to the
+APRS user as just an analog repeater that happens to listen for APRS identification of its users.
+But then it is also connected as a D-star Gateway device on the D-star network as shown on the top
+of the page and to the right.
+Since D-star users already have callsign-routing and repeater-routing the only thing needed for
+an A-star analog repeater is the callsign signalling, and APRS provides that.
+See the <A HREF="avrs/A-star-spec.txt"><B>A-star spec</B></A>
+<P>
+
+<IMG SRC="avrs/A-star-signalling.GIF" align=right>
+<P>
+<B>D-star to A-star call:</B> First, the APRS users on the A-star repeater are all 
+fully known because of their APRS beacons.
+the A-star repeaters know where all 40,000 APRS users are already.  Thus, as shown in the lower
+right corner of this diagram, a mobile A-star user can receive a D-star call from anyone anywhere
+because the A-star gateway appears on the D-star network with that knowledge.  The D-star
+system provides the end-to-end connectivity and the A-star gateway does the D-to-A conversion
+back to voice.
+This knowledge can be extended for incoming calls even if the
+APRS user is currently elsewhere on another frequency.  An APRS message is simply sent to the
+APRS user signalling him or his radio to QSY to the A-star repeater to answer the call!
+(all new APRS radios (D710, FTM-350 and D72) can do this now with one button push.  In the future,
+it can be automatic!).
+
+<P>
+<B>A-star to D-star call:</B> This is as simple as making a D-star call on a D-star radio,
+except that the A-star user enters the target callsign into an APRS message beginning with 
+<B>"A*"</B>.  The A-star
+repeater gateway converts that to the streaming D-star callsign and the D-star network
+handles the rest.  If the callee happens to be another APRS user, then an advantage 
+of this APRS signalling is that he does not even need to be on the A-star frequency but
+can receive the APRS message and he or his radio can instantly QSY to receive the call.
+Of course, once the A-star repeater makes the 
+A-star user appear identical to a D-star user, then everyone can talk to anyone in the
+same manner.  Everyone appears on the D-star network as a D-star user.
+
+<P>
+<B>APRS-PTT-Mode:</B>  The key to this process is the APRS user operating in PTT mode when he
+is on the A-star repeater channel.  THis
+was the original APRS concept so that background APRS signalling could be done transparently
+on the input channel of any Voice repeater.  The APRS information is transmitted in a 0.3 second
+burst at the end of a voice transmission when the PTT is dropped.  The A-star repeater has a
+TNC on its input listening for this data.  That is how the A-STAR repeater knows that the local
+mobile is currently there.  The D-star callsigns are transmitted as a normal APRS
+packet back to the APRS radio for display on the front panel.
+<P>
+The remainder of this page continues with the original AVRS concept.
+
+<HR WIDTH = "100%">
+<P>
+<IMG SRC="avrs/FTM350-QSY.jpg" align=right height=200 width=450>
+
+<i><B>AVRS</B> will allow any APRS mobile to establish a voice link to any other
+APRS station anywhere on the planet by simply sending an APRS message 
+with the other station's 
+callsign.  This is accomplished by a single AVRS engine via 
+internet links between the global APRS, IRLP,
+Echolink, D-Star and WIRES systems.
+This engine will operate stand-alone similar to how the WU2Z Email engine 
+now handles APRS Email.  But instead of Emails, the AVRS engine handles 
+the logistics look-up and messaging needed to initiate a Voice call between
+two APRS voice operators with no other
+knowledge than the callsign of the CALLEE.</i>  
+<P>
+<B>Global Autopatch:</B> Of course it is easy to extend this using VOIP interfaces to
+a global APRS <B><i> Autopatch</i></B> system.  Instead of listing a callsign in the
+AVRS message, the sender enters a PHONE NUMBER.  The AVRS engine looks at its list
+of local auto-patch nodes that have the matching phone number area code and sets up
+the call.
+
+<P>
+<B>The AVRS Engine:</B>
+<P>
+As seen below, the AVRS engine
+interacts with the APRS-Internet system and monitors the status of all IRLP,
+ECHOlink, D-STAR and WIRES nodes.  Being fully aware of everything needed for end users to
+find each other, calls, locations, frequencies, PL's and status, the AVRS
+engine's job is to pass the needed information and messages to the end users to
+help establish the call:
+<P>
+<IMG SRC="avrs/avrs-dwg.gif">
+<P>
+<FONT COLOR="#FF0000"><FONT SIZE=4>
+<B><U> SCENARIO FROM MOBILE TO ANOTHER MOBILE or EchoLink or IRLP NODE:</U></B>
+<FONT COLOR="#000000"><FONT SIZE=3>
+
+<P>
+<B>MOBILE PLACING A CALL:</B>  To place a call, a mobile simply sends a message 
+to <B><i> AVRS </i></B> and the first word of the message is the callsign of the
+desired contact (the CALLEE).  He needs no other knowldege.  
+AVRS will ack his message via the nearest IGate and will respond with an object 
+showing him his nearest ECHOlink, IRLP, D-STAR or WIRES node(as appropriate), 
+its frequency and PL.  
+And then a message giving the QSY frequency or other status of the call.
+
+<P>
+<B>RECEIVING A CALL:</B> If the CALLEE is an APRS station on the air 
+(has been heard recently on APRS), 
+The CALLEE will receive the message from AVRS saying <B>QSY FFF.FFF Tnnn E123456
+for CALLER using #1234</B>.  In this case, CALLER is the caller's callsign, 
+Tnnn is the CTCSS tone, E123456 is the Echolink or IRLP node and #1234 is the
+DTMF access code.  If the CALLEE is on D-STAR, he will simply hear the voice
+call on his local D-STAR channel.
+
+All of this information was determined by the AVRS engine looking up the position 
+of the CALLEE station and the nearest not-busy IRLP or ECHOlink node.  
+. If the CALLEE is an EchoLink or IRLP station
+then it could be automatically connected to the CALLER's 
+nearby EchoLink, IRLP, D-STAR orWIRES repeater if IDLE.
+<P>
+If the CALLEE is an APRS station but has not been heard recently, AVRS still sends him an
+APRS message saying  "Call from XXXXX on E123456 at 1237z.
+This is so that if he doesnt get this message until a while later
+the <i>callee</i> can initiate the ECHOlink or IRLP call back to node #nnnnn.
+<P>
+
+<IMG SRC="D7xx/kenwoods.jpg" align=right>
+<B>User Terminals:</B> .
+All messaging for the AVRS system can be initiated and received by any APRS system, but
+most importantly, they can be accomplished from the keypad and display of the variety
+of APRS radios (D7, D72, D710, FTM-350, VX8R,-8DR, -8GR).  
+Thus giving true global voice capability to dynamic in-the-field users:
+<BR>
+
+
+<P>
+<B>FUNCTIONS OF THE AVRS ENGINE:</B>  The AVRS engine can be anywhere and is simply 
+software running on a reliable internet system.  It monitors not only all traffic on 
+the APRS-IS, but has access to active node status of both the IRLP and ECHOlink systems
+as well as the list of currently available D-Star users.
+
+As such, it is all knowing and all seeing.  The following is a description of this process.  
+For simplicity the term "AVRS node" will be used interchangeably to refer to "IRLP, 
+ECHOlink, D-Star, WIRES or other AVRS nodes".  Here are the functions of the AVRS-Engine.
+<P>
+<LI>Monitors the APRS-IS and accepts APRS CALLER messages from mobiles
+<LI>Compares location of CALLER to nearest AVRS node
+<LI>Generates OBJECT(in-message) to CALLER's Igate showing nearest AVRS node, 
+its Freq and Status using the normal APRS decaying algorithm
+<LI>If nearest is BUSY, then also sends back additional next-closest 
+<i>available</i> AVRS node using decaying algorithm
+<LI>Compares location of CALLEE to nearest AVRS node
+<LI>If CALLEE is an IRLP, ECHOlink, D-Star or WIRES node itself, 
+then AVRS could have the hooks to set up the link automatically via the appropriate system.
+<LI>If CALLEE is an APRS station, AVRS Generates an OBJECT(in-message) to CALLEE IGate 
+showing his nearest AVRS node and frequency
+<LI>If nearest is BUSY, then AVRS also sends additional next-closest available AVRS node object
+<LI>Checks availability of CALLEE  stations. Chooses best SSID (Mobile, else portable, else home.
+<P>
+<B>IF CALLEE IS APRS BUT NOT ACTIVE, THEN:</B>
+<LI>Sends message to CALLER saying "CALLEE heard XX hours ago near AVRS node #xxxxx"
+<LI>Sends message to CALLEE saying "CALLER called from AVRS node #xxxx
+at time TTTT.
+<P>
+<B>IF CALLEE IS APRS AND ACTIVE, THEN:</B>
+<LI>Sends message to CALLEE saying "QSO CALLER on FREQUENCY ffffff, PL ppp calling from #nnnnnn"
+<LI>Sends message to CALLER saying "Call CALLEE on AVRS node #xxxxx PL ppp"
+<P>
+<LI><i>"Nearest node"</i> is determined by a combination of node distance (D) 
+and PHG range (R).  
+The node with the highest ratio of R/D will be chosen.  Also, the AVRS engine has to decide on
+the correct AVRS type system based on the users preference and 
+what is available at both ends (including distances
+at both ends).  For example D-Star users would clearly send and receive calls on D-Star.
+
+<P>
+<B>IMPLEMENTING AVRS:</B>
+<P>
+AVRS can be implemented by a single software engineer willing to invest the time 
+in the project.  
+Small changes to the IRLP, ECHOlink, D-Star and WIRES systems might facilitate operations, 
+but most everything
+ needed for this global AVRS ham radio QSO system is in place.  
+Here are several things that can speed the implementation:
+
+<LI>Implement a consistent format for the real-time status of IRLP, Echolink, D-Star and WIRES
+ nodes in their APRS position packets
+<LI>Design AVRS object's status to show up well on the 20 text bytes of the APRS Radio Screens
+<LI>Design AVRS messages to show up well on the various APRS Radio Screens
+(45 characters (12+12+12+9) max).
+<LI>Have all IGates automatically PASS-THRU to RF any traffic originated from their OWN
+callsign and/or have all clients begin to recognize 
+<A HREF="http://www.aprs.org/aprs12/item-in-message.html"><B>ITEM-IN-MESSAGE</B></A> Objects.
+<P>
+<B>INITIATING A CALL:</B>
+<P>
+Caller simply sends a message to AVRS using one of these formats:
+<LI><B>C CALLEE </B>  - Initiates the full call process
+<LI><B>? CALLEE </B>  - Generates all messages & objects except messages to CALLEE (this is for info and test)
+<LI><B>? . . . . . . . . </B>  - Returns nearest local AVRS nodes
+<P>
+<B>MESSAGES to CALLEE:</B> the following messages are delivered to the Callee, depending on whether
+he has been heard recently or not.  They are shown in the format that would be flashed on the 
+APRS Radio's front panel for direct viewing by the driver:
+<P>
+<IMG SRC="avrs/AVRScalleeMSG.gif">
+<IMG SRC="avrs/AVRScallerMSG.gif">
+<P>
+<HR WIDTH = "100%">
+<FONT COLOR="#FF0000"><FONT SIZE=4>
+<B><U>SCENARIO #2, ANY ECHOLINK USER ON LINE TO ANY APRS MOBILE:</U></B>
+<FONT COLOR="#000000"><FONT SIZE=3>
+<P>
+This would take compatible code between the EchoLink, IRLP and AVRS systems...
+In this scenario, the CALLER is an on-line EchoLink user and he attempts to connect
+to a callsign using his EchoLink client.  If the CALLEE is another EchoLink station
+the connection is made (but an APRS message is generated via APRS to the CALLEE saying
+"Station XYZ is calling you on EchoLink"...)  This is in case the actual CALLEE is
+mobile with APRS but has an RF link from his car to his Home EchoLink station.  This
+is just a reminbder for him to QSY and talk voice via that system.
+<P>
+If the CALLEE is only on APRS, then the CALLEE side of SCENARIO #1 is followed on 
+his side of the call.  That is, he gets an object and a message informing him of
+where the nearest IRLP or EchoLink node is, what its frequency and PL are and
+who is calling him...  He can QSY and take the call or not... etc...
+<P>
+<FONT COLOR="#FF0000"><FONT SIZE=4>
+
+<B>APRS-ON-LINE-USER CALLING AN APRS MOBILE:</B>
+<FONT COLOR="#000000"><FONT SIZE=3>
+<P>
+In this scenario the on-line
+APRS operator is running both an APRS client and can see the EchoLink and IRLP
+node status on-line so that he can see where the CALLEE mobile is located and since 
+all IRLP and EchoLink nodes are now injecting their STATUS objects into the APRS-IS,
+<A HREF="http://www.findu.com/cgi-bin/symbol.cgi?icon=I0&amp;limit=200"><B>(click for IRLP)</B></A> 
+<A HREF="http://www.findu.com/cgi-bin/symbol.cgi?icon=E0&amp;limit=200"><B>(click for ECHO)</B></A> 
+the on-line user can zoom in on the mobile and can see what type of AVRS node is
+nearby.   Displaying the PHG circle can confirm the reliability of the link.
+ TO call the mobile, the operator sends an APRS message to the mobile
+operator saying <i>"I am calling you on XXXX AVRS node on FFF.FFF MHz with
+PL of PPP. Pse QSY, tnx"</i>.  If the mobile gets the message and QSY's, then the
+call is a success.
+<P>
+
+Bottom line is that we have RF local connectivity via APRS, IRLP, EchoLink, D-Star, and WIRES
+and we have Global connectivity via all these systems (and more).  All AVRS is
+doing is focusing our efforts to develop a simple global connectivity between
+end users using HAM radio while knowning only callsigns.  Its only a little software....
+<p>
+de WB4APR, Bob
+
+
+<HR WIDTH = "100%">
+
+<P>
+<B> The remainder of this page are the older ideas on AVRS that have been around since DCC in 2000
+</B>
+<HR WIDTH = "100%">
+<P>
+
+<P>
+<B>HISTORY:</B> The AVRS concept of a Voice interface for APRS was first publshed at the DCC
+2000 in Orlando, <A HREF="avrs2000.htm"> (see old paper). </A>  It went through some name
+changes to <A HREF="iprs.html">"IPRS"</A>, and then VIPRS, but now we are back to <B>AVRS</B> 
+as the generic term for using APRS to augment the end-user display of data about the voice systems 
+and to facilitate end-to-end user voice connections using the knowledge of APRS about where everyone is!
+You can see my <A HREF="avrs/iprs.txt"> old IPRS ideas around the July 2002 time frame</A>.  
+<P>
+Eventually, with AVRS, we should be able to make a call to any HAM radio operator on the planet by
+simply entering his call.  But to get to that point, we need to evolve through three
+areas:
+<LI>Display of the NODE status in the mobile . . . . . . . . . . . . . . . . . . . . <== this is now being done in most areas>
+<LI>Node NAMING that does not require memorizing node numbers . . <== never took off...>
+<LI>Radios that facilitate these features . . . . . . . . . . . . . . . . . . . . . . . . .<== future..>
+<P>
+<B>MOBILE DATA DISPLAY:</B>
+<P>
+The following two images suggest how IRLP or ECHOlink node status should appear from
+their APRS object reports on 144.39 (USA) everytime the NODE changes state.  This packet
+alerts APRS mobiles in the area on the front panel of their radios the status of the node.  
+These examples used my original concept that all Echolink and
+IRLP nodes should have an 8 character geographical name to fit nicely in APRS:
+<P>
+<BR><IMG SRC="avrs/screens.bmp">
+<BR><IMG SRC="avrs/screen2.bmp">
+<P>
+Simply clicking on the node on the radio display will yield additional information
+about the link, without even having to QSY to tune it in!  That is just Phase 1.
+The additional things we can do with APRS for these voice systems are:
+<P>
+Here is the old original <A HREF="avrs/AVRSspec.txt"><B> AVRS Specification</B></A>.  I need
+to update it to the new centralized AVRS concept.
+
+<P>
+<B><U>INTERIM PLAN:</B></U> The above screens assume that we can convince the entire
+IRLP and ECHOlink community to define 8 character ALPHABETIC names to all nodes.  This
+will take a long time.  In the interim, we just want to see the existing nodes on our
+APRS displays while mobile.  In this case, we will use the node NUMBERS as shown below:
+<P>
+<IMG SRC="avrs/D7screens.gif">
+
+<P> 
+<B>Future AVRS Concepts:</B>
+The remainder of this page continues with the original concepts about where we should be going
+with AVRS in the future..  The new plan (above) of the single AVRS engine to coordinate the
+connectivity for users falls under the category I called "ASSISTED" mode below.  We can do
+STATUS and MANUAL modes now.  ASSISTED can be done easily, and FULL-AUTO can be implemented
+by someone smart enough to write a PIC processor to implement it in their mobile or by
+Kenwood with a new radio.
+<P>
+<LI><B> STATUS: </B> All nodes send out their STATUS on APRS when they change state
+<LI><B> MANUAL: </B> Send an APRS message to the other fellow saying CQ and your IRLP node#.  He calls you!
+<LI><B> ASSISTED: </B> IPRS locates nearest nodes to both and sends APRS message to both end users.
+<LI><B> FULL AUTO: </B> PIC processor on radio sees QSY message and automatically tunes 
+radio to IRLP node at both ends!
+
+<P>  
+AVRS is attempting to define how we can use our HAM radio mobiles and HT's like CELL-Phones.
+Sinec 10,000 or so of us have the Kenwoods, the Human/Data Interface of the D7 HT and D700 Mobile 
+APRS rigs and their (Tiny-Web-Pages) are a good target design objective.  Even in 2002, we were 
+predicting growth rates of over hundreds of Voice nodes per month to exceed 999 in the IRLP system 
+alone by Feb 2003 
+<A HREF="avrs/irlp-growth.gif"> (See PLOT!). </A>  
+Or see the <A HREF="http://status.irlp.net"> Active-Node-List. </A>
+<P>
+AVRS is only a human interface adjunct to existing Voice-Link systems and
+does not obsolete existing users or control systems.
+<A HREF="avrs/AVRS.doc"> (See the plan back in DEC 2001) </A>  
+In the context of "AVRS", of course,  it would be nice to have a non-conflicting numbering system to work across
+all systems.  To date we could use these as the APRS distinction:
+<P>
+<LI> I#####  (for IRLP)
+<LI> L#####  (for I-Link)
+<LI> E#####  (for Echo-Link)
+<LI> Q#####  (for eQSO)
+<LI> W#####  (for WIRES)
+
+<P>
+<IMG SRC="D7xx/kenwoods.jpg">
+<P>
+For additional closeups of the front panel showing the types of data that can be displayed on 
+these "tiny-web-pages" go to my 
+<A HREF="satinfo.html"> TINY-WEB-PAGE </A> satellite tracking page
+that shows how they are used to dessiminate satellite tracking info LIVE to mobile users.
+Now imagine that these lists can also contain IRLP data, and the built-in end-to-end 
+APRS data exchange can be used to automatically establish end-to-end voice links. 
+<P>
+<B>AVRS SIGNALLING ADVANTAGE:</B>  Without AVRS, mobiles will find it impossible to fathom all the
+potential across the multiple VOIP systems and their unique numbering systems.
+Fixed or internet-available NODE-LISTS will simply not work.  Such lists are instantly 
+obsolete the minute they are downloaded.  The only way to make this work is to have 
+them self-identify on APRS to all mobiles in view.   This is the new AVRS concept.
+<P>
+<LI><B>MORE and SHORTER RANGEs:</B> As popularity continues to grow these VOIP nodes will NOT be on big 
+repeaters but will gravitate to smaller and smaller nodes with limited local coverage.  
+Individuals will put them up to cover their local commute only...  This is just like cellular.  
+Growth simply means smaller cells.  This makes more frequencies available. 
+<P>
+<LI><B>ACTIVITY STATUS:</B> We want these AVRS nodes to idenfity their status
+LIVE on the APRS-IS.  This is the only way to have cross-platform consistency so that
+AVRS routing processes have a single point of access to the instantaneous status of
+each node no matter what its affiliation.  To see the status of the "AVRS" system,
+just look (for now) on APRS-IS... These two links use FINDU's SYMBOL.CGI to find them by their symbol:
+<BR><A HREF="http://www.findu.com/cgi-bin/symbol.cgi?icon=I0&amp;limit=200">
+    <B> Click to see IRLP APRS status</B></A> 
+<BR><A HREF="http://www.findu.com/cgi-bin/symbol.cgi?icon=E0&amp;limit=200"><B> Click to see ECHOlink APRS status</B></A> (not as many)
+
+<P>
+Using this LIVE IRLP and ECHOlink node status into APRS then the AVRS engine's FUNCTION is
+to be the central clearing house for finding the status and location of the other end of 
+a desired AVRS QSO.  In otherwords, we are not trying to get into the other systems
+and muck with their designs. but AVRS will offer a single clearing house for finding 
+the nearest available system for making cross-system calls.. between end users.
+
+<P>
+No hardware is needed to add this tremendous capability to any VOICE-IP system, since they
+can simply feed their APRS objects into the APRS internet system.  Then the local IGate
+puts the local IRLP and ECHOlink nodes into its <i>pass-to-RF</i> list.
+<P>
+<B> Note:</B> Back in 2002 I was pushing IRLP and ECHOlink authors to assign 8-character 
+geographic node names to all nodes that support more than one end user (Repeaters).  This was
+to make this data fit the existing callsign fields in all APRS data applications.
+So I went ahead and edited up a list.  <A HREF="avrs/irlpnames.txt"> (Download here) </A>
+Also, for more details, see the OLD original <A HREF="avrs/AVRS.doc"> DRAFT AVRS PAPER HERE </A>.
+And I was sure that sooner or later they were going to need a new numbering plan:
+<LI><B>PERSONAL STATIONS:</B>  All stations serving only one user by callsign should chose a
+ node number which is simply the Touch-Tone hash equivalent of his CALL.
+<LI><B>REPEATERS:</B>  Similarly the Repeater stations should adhere to a geogrpaphically logical
+<A HREF="avrs/numbers.txt"> 5 Digit Numbering Plan </A> that includes Country Codes.
+<B> That idea didn't catch on.</B>  The next best idea was to use the T-Tone hash code equivalent
+for the geographical node name. See the original<A HREF="avrs/AVRSspec.txt"><B> AVRS SPEC </B></A>noted above.
+<P>  
+
+<P>
+Besides the signalling defined in the paper above, here were some other concepts that
+should be applied to the use of these systems in your area to the end user mobile:
+<P>
+<LI> AVRS end users can exchange APRS messages prior to, during or after a QSO.
+<LI> STATION list can show up to 40 users on line in the normal format.
+<LI> STATION list can show current ACTIVE NODE STATUS web page for most recently used nodes
+<LI> STATION LIST can also include bearing and range to each Voice node. <A HREF="avrs/avrsOBJS.txt"> (see FORMAT)</A>
+<LI> APRS messages can help establish the VOICE link between any 2 users worldwide via the AVRS engine
+<LI> APRS Messages can Query worldwide for Station X's currently nearest node <A HREF="avrs/avrsQury.txt"> (see FORMAT)</A>
+<LI> Single press PM button can configure D700 totally for AVRS operations
+<LI> Front panel command can eventually set-up AVRS link directly from station list using the AVRS engine
+<P>
+This javAPRS page below displays the 2002 APRS-OVERLAY file of IRLP nodes provided by
+James Ewen.  Ignore the red lines, they connect repeaters with identical frequencies(LABELS)
+and are an artifact of APRS vehicle tracking trying to "track moving objects"...
+But no reason why (with a little software) they couldnt show LIVE which repeaters are
+linked...
+
+<P><APPLET codebase = "javaprs/" CODE ="javAPRS.class" WIDTH = 500 HEIGHT = 350><PARAM name = "backgroundColor" value = "black">
+<PARAM name = "dosMap" value = "usa.mp">
+<PARAM name = "dataFile1" value = "irlp-all.tnc">
+<PARAM name = "autoScale" value = "true">
+
+<PARAM name = "sleep" value = "3">
+<PARAM name = "showAllMapLabels" value = "false">
+<PARAM name = "displayVectors" value = "true">
+<PARAM name = "stationList" value = "true">
+<PARAM name = "showNewStations" value = "true">
+<PARAM name = "showStatusRaw" value="true"></P>
+
+</APPLET><BR>
+<TABLE BORDER="2" CELLPADDING="2" CELLSPACING="1">
+<CAPTION><B><BIG>javAPRS Commands (Case Insensitive)</BIG></B></CAPTION>
+<TR>
+<TD><center>U or D</center></TD>	<TD>zooms up/down (you may also use PGup/dn)</TD>
+</TR>
+<TR>
+<TD><center>L, S, or M</center></TD>	<TD>List stations, Show Status or Messages to Java console</TD>
+</TR>
+<TR>
+<TD><center>CTRL or ALT-click</center></TD>	<TD>Centers or Zooms map on clicked location</TD>
+</TR>
+<TR>
+<TD><center>Arrow keys</center></TD>	<TD>scrolls map</TD>
+</TR>
+</TABLE>
+<P>
+Click for <A HREF="ilpworld.html"> 2002 World Map </A>
+<P>
+Click here to <A HREF="avrs/irlp.pos.txt"> download the 2002 IRLP.POS</A> file
+<P>
+Here are some initial ideas that can be implemented by APRS users  to begin recognizing 
+IPRS nodes and concepts.
+These can be implemented now on APRS independent of progress on the IPRS side...
+
+<LI> All IRLP/I-LINK/ECHOlink users should put "IPRS" or "ECHO" in their MESSAGE GROUPS
+<LI> All IGates or IPRS gates should put "IPRS" or "ECHO" in their pass-to-rf-always list
+<LI> The APRS Icon for IPRS nodes is "I0" and for ECHOlink is "E0" (thats a zero)
+<LI> The APRS TOCALL for any special AVRS software is "APVxxx" for "Voice"
+<LI> Mobiles use "Innnnn" or "Ennnnn" in their status to show their current node.
+<LI> The above IRLP data base should be added to all APRSdata servers for Queries
+<LI> The term "AVRS" will distinguish this generic concept from specific IRLP or ECHOlink implementations
+<P>
+<B> HOW TO PUT YOUR IRLP or ECHOlink NODE ON THE APRS MAP:</B>
+<P>
+Simply put your IRLP node as an APRS OBJECT into one of the LText buffers of your local APRS
+digipeater and set its LTPath to direct and set its rate to 10 minutes.  Bingo, every
+mobile in the area will see it on the front panel of his radio!  Here are the formats of
+the TNC commands for use at the DIGI site:
+
+<LI>LT  2 ;IRLP#####*111111z!DDMM.hhNIDDDMM.hhW0CCCCCC 44X.XXX PL YYY
+<LI>LTP 2 APRS
+<LI>BLT 2 E 00:10:00
+<P>
+In the above the IRLP##### will be the name of the object and the
+ LAT/LONG must be the exact number of digits, but you can replace
+the hundredths of minutes with TWO spaces which will give a position ambiguity of
+one mile if you want to protect the exact location of the repeater.  The CCCCCC is the
+callsign of the repeater, ##### is the IRLP node number, and then the frequency and
+tone of the repeater
+<P>
+<B> IPRS SHARED VOICE/DATA CONCEPTS! </B>
+<P>
+The following concept was the original concept for having each VOIP site send
+its own data via its own TNC and radio.  This was probably impractical becauwse
+it required more hardware at the site.  But under that situation, it would be
+ possible to send both
+voice and DATA on the same channel so that all of AVRS can be done entirely on
+BAND A of the Kenwood D7 and D700 leaving the other band free for all other
+mobile ham radio applications.  Also, with a combined voice/data channel/ single
+channel radios can be used by other experimenters to build compatible systems.
+Here is how you could setup your Kenwood:
+<P> 
+<LI> Kenwood radio sets Band A to the IRLP VOICE channel.  He configures his
+interntal TNC to BAND-A and sets CTCSS decode ON.  THis way, Band A can
+serve as BOTH an IRLP data exchange channel with the radio front panel and
+also as the VOICE channel!  The speaker is muted for all data, and only
+opens when the IRLP node sends CTCSS and voice.
+<P>
+<LI> The user can now fully use BAND-B for any other purpose and Band A handles
+both IRLP voice operations and APRS data exchange with the node..
+<P> 
+<LI> At the IRLP node site, the TNC listening and sending acts like an APRS
+"IGATE" in all other respects.  Thus the APRS user is injected into the
+world wide system for tracking and messaging just as if he was on 144.39.
+He is tracked on all web pages and he can send/receive APRS messages
+worldwide.
+<P>
+<LI> The above user, however, cannot see other local APRS activity.  Thus
+the IGate must be smart enough to listen for other "local" activiy on the
+APRS internet system and forward any packets originating in the vicinity of 
+the IPRS user,  back out on the common IRLP channel othe IPRS user.
+This is actually GOOD news in the sense, that the "smarts" in this
+IPRS_IGate code can "filter" as the locals decide so that they only have
+to watch what they want to watch...
+<P> 
+WOW.  We can really do some neat things here!
+<P>
+Remember, we are not trying to re-invent APRS, and
+we are not trying to muckup existing IRLP or ECHOlink operating procedures.  We are
+simply exploring ways to overlay ideas to allow a marriage of
+mobile data exchange capabilities built into the Kenwoods, HAMHUDS. MIM's
+(and anything else someone wants to cobble up) to facilite long distance
+voice/data communications between end users via the internet...
+<P>
+de WB4APR@amsat.org, Bob
+
+<HR WIDTH = "100%">
+<P>
+<P><FONT SIZE=+1>You are visitor: 
+<IMG SRC=http://www.aprs.org/cgi-bin/Bruninga/ilp.cgi> since 4 Dec 2001.  
+It was 1330 on 30 July 2002 when I changed the name to IPRS.
+
+</FONT>.<BR>
+<HR SIZE=5 WIDTH="100%">
+
+</BODY>
+</HTML>
+
+ In the mean time, if you see someone with their node
+number in their beacon, give them a call.  You can even call make contact via the global APRS
+Announcement system <A HREF="cqsrvr.html"><B>ANSRVR</B></A>.  Each time you go mobile, send a CQ CQ 
+message to the ANSRVR with your monitoring frequency and node:
+<P>
+<B>CQ CQ Bob on 147.075 EL#236562</B>
+<P>
+And all other stations with similar CQ's will see it and can give you a call.

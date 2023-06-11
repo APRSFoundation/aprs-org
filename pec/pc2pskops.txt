@@ -1,0 +1,58 @@
+PCSAT2 PSK-31 TRANSPONDER OPERATIONS PLAN              7 AUG 2005
+-----------------------------------------------------------------
+
+FREQUENCY:  Downlink on 435.275+/-9 KHz Doppler FM
+            Uplink 29.401 to 29.403 MHz PSK-31
+
+The power budget of PCSAT2 cannot support continuous operations
+of an FM downlink.  Thus the transponder has to be commanded on
+and off on a foot-print-by-footprint basis to conserve power.
+
+ARISS COMPATIBILITY:  Although PSK-31 operations will not 
+interfere with ARISS operations, the on/off activation commands 
+on a pass-by-pass basis do have the potential to interfere with 
+ARISS voice operations on 2 meters.  Thus activation will be 
+under the control of specificly authorized PC2PSK control stations 
+with these resposibilities:
+
+1) Be knowledgible and current on ARISS school contact schedules
+2) Monitor 145.800 throughout pass
+3) Do no commanding of PSK31 mode if voice ops are in progress.
+
+PSK-31 OPERATIONS VIA PCSAT2:
+
+Users will all operate full duplex transmitting throughtout the
+pass on the HF uplink and monitoring all signals on the downlink.  
+Move your signal so it is not on top of someone else and operate.  
+There are two Doppler shifts you must account for:
+
+1) Tuning your FM downlink from a starting 435.285 down to 
+   435.265 in 5 KHz increments to keep the FM in your receiver
+
+2) Setting your uplink so that the total +600 to -600 Hz uplink
+   Doppler shift will not carry you out of the passband.
+
+Notice that although the total doppler from AOS to LOS is about
+the same, that the rate of change is variable depending on how
+high your pass is to directly overhead.  A low horizon pass will
+have a medium but almost constant rate of change.  A direct over-
+head pass will have +600 Hz but very low rate for most of the 
+first half the pass and then a very rapid change to a nearly
+constant -600 Hz or so for most of the end of the pass.  
+
+Many existing PSK-31 decoding programs may not be able to keep
+up with these doppler rates, but should be able to use their
+AFC for the beginning and ends of a directly overhead pass.  We 
+have much to learn and develop here.  Notice that Doppler always
+moves downward.
+
+Dedicated, Trusted PSK-PASS control stations are needed.  If you
+think you will be a frequent user of this mode and can fulfill
+the responsibilities of a PSK-PASS control op, then contact
+XXXXX who will manage these operators.  We also need a volunteer 
+XXXXX to coordinate these control ops.
+
+de WB4APR
+Bob Bruninga
+USNA Satellite Lab
+

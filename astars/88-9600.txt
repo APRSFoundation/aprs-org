@@ -1,0 +1,59 @@
+USING THE ALINCO DJ-S41 $88 Handi Talkie as a 9600 Baud UHF Receiver:
+Bob Bruninga, WB4APR
+
+
+Good news:  The Disc output is easy to get to, and looks linear.
+            Its easy to mount a SIP header pair through the side
+            of the case for easy interfacing.
+
+Good news:  The sensitivity is *as* good at 436 for satellites as 446 MHz
+
+Bad news:   After adding an external Antenna connection, I measured the
+            receive sensitivity at -116 dBm.  That's 6 dB worse than my
+            Kenwood THD7 (with built in 9600 baud TNC) but still usable
+            *with* a preamp.
+
+Just news:  Of course, there is no provision for automatically tuning the
+            radio by PC, so this simple mod will be best used for manned ops.
+            for tuning the 5 Khz steps needed to track doppler.
+
+The Kenwood can get good data with a whip overhead or a 3 element handheld beam.
+The Alinco will need a preamp.  But for home stations with anything more than
+a 10 foot cable run, a preamp will be needed anyway for best performance.
+
+The 5 Khz steps seemed adequate to keep the pattern on a scope  clean.
+
+I am not configured for PACSAT Protocol and was only viewing packets on
+a dumb terminal screen.  So I do not know how many packets I got.  Saw lots,
+but doubt it was 100%... So overall QUALITY of this system is un-tested...
+
+DISC OUTPUT:  THe DISC output is easy to find.  Open up the back and right
+in the center, just above the VCO metal box is printed "SQ" and "RT3".
+The chip capacitor to the left of the "RT3" is a blocking capacitor
+between the discriminator output and the Squlech POT just above it.  The
+end closest to the "RT3" is the DISC side.   I broke off two pins of a SIP
+header socket and melted it slightly into the lower case just above the
+VCO can.
+
+The lower pin goes to the DISC, and the upper is soldered to the VCO can
+as ground.  This also provides solid mounting for the plastic header.
+Then I cut out a matching slot in the back cover so that it fits back on.
+
+The result is a flush mounted barely noticible 2 pin SIP socket into which
+you can plug your 9600 baud TNC.
+
+I visually observed DISC noise components no shorter than  80 us which
+sure enough equates to 12.5 KHz.  So this is a narrow receiver... and
+others may be able to draw conclusions as to the overall viability of this
+radio for 9600 baud use.   This narrow IF will probably loose some data
+between the 5 Khz shifts, but we dont know yet.
+
+For an external antenna, there is a SIP header on the board with 2 pins
+just for this purpose.  I soldered a short 3 foot pigtail with a BNC on
+the end to this point, just long enough to reach a handheld antenna.
+Sorry, I dont have any more time for further testing, but it appears as a
+low cost entry into the 9600 baud downlinks.. (How many are there now? 5?)
+
+I'll bring it to the AMSAT COnference
+
+de Bob, WB4APR

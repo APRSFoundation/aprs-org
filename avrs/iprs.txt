@@ -1,0 +1,175 @@
+IPRS  -   Internet Phone Radio System                   26 July 2002
+--------------------------------------------------------------------
+                                                              WB4APR
+
+IPRS is an acronym to describe the potential of a marriage between
+the global APRS digital network and the global Internet Radio
+linking project.  Combining the first and last letters of IRLP
+with the final three letters of APRS yields IPRS!
+
+As APRS grew to global proportions in the late 90's through the
+internet connectivity pioneered by Steve Dimse (K4HG), I began
+looking for ways to add internet voice connectivity to APRS and
+called it AVRS.  Over the same period, Dave Cameron's (VE7LTD)
+Internet Radio Linking Project has risen to prominance world wide
+by providing that same kind of global conectivity as APRS but with
+voice.
+
+Taking advantage of the voice connectivity of IRLP, recently we have
+defined many ideas and APRS formats to be able to use APRS as an
+adjunct data link to facilitate the end-to-end signalling between
+end users of IRLP using APRS.  Further the mobile APRS data
+displays make an excellent function for displaying IRLP network
+data to the mobile user.  One of the ultimate objectives of the
+APRS adjunct to IRLP is the ability of an APRS mobile user to
+establish an end-to-end voice connection to any other amateur on the
+planet with no other knowledge than his callsign.
+
+Thus, the IRLP system and the APRS-IS (Internet System) could work
+together to make the end-to end voice connection using the nearest
+available IRLP nodes.  At the Radio Amateurs of Canada (RAC) National
+convention in Vernon, BC on 26 July, I discussed this concept with Dave
+Cameron and suggested we might define this marriage as "IPRS".  This
+IPRS term will facilitate further discussions about this revolutionary
+potential!  THe following is 3 phased approach could be used to
+arrive at that ultimate objective.  The first is MANUAL, the second is
+ASSISTED and the third is called AUTO-QSY.
+
+MANUAL   - APRS user-to-user Call-back message. (Works now today!)
+
+ASSISTED - Central IPRS server watches global IRLP and APRS-IS system
+           and when seeing IPRS-CQ, sends APRS-QSY msg to BOTH users
+           informing them both of the nearest not-in-use IRLP node
+           numbers and freqs.  Users manually QSY and the caller
+           establishes the IRLP link.
+
+AUTO-QSY - End user's radio, on receipt of the APRS-QSY message, will
+           AUTOMATICALLY QSY, and central IPRS server will automatically
+           establish the IRLP node links!
+
+The following paragraphs elaborate on the above phases and add
+additional details to this concept.  
+
+IPRS-NUMBERING SYSTEMS:  Also, we do need to account for the
+large number of IRLP spin-offs exploding onto the landscape by using
+a consistent numbering system across all applications.  The following 
+APRS messages for now, could suffice for the users to send a call-back
+message:
+
+   IRLP:      CQ I####
+   I-Link:    CQ L####
+   EchoLink:  CQ E#####
+   eQSO:      CQ Q#####
+
+IPRS AHUBS:  And having IPRS work across a variety of voice systems also 
+suggests that instead of IPRS trying to get inside of the internal link
+status system of each type system, it might be better to ask all Voice
+systems desiring to support APRS end users, to put out their IPRS status
+into a COMMON APRS formatted internet IPRS clearing house channel...
+An AHUB if you will..
+
+In other words, we put up an APRS-INTERNET-HUB where all IPRS applications
+simply send their current status in APRS formatted style packets.  This is
+an OPEN AHUB, just like all the APRS hubs are and all IPRS applications 
+can monitor this channel for end user node status for finding active and 
+available nodes for IPRS requests.
+
+
+DETAIL DESCRIPTIONS OF IPRS PHASES:
+
+MANUAL -  APRS user sends simple message to another APRS user indicating
+his call-back IRLP number.  APRS recepient initiates IRLP call back.
+This works, NOW, TODAY!  The format of the APRS message is simply:
+
+          From: WB4APR      To: VE7LTD      Msg: CQI #1234
+
+The meaning is that WB4APR is asking VE7LTD to call him back on his
+current IRLP node #1234.  The APRS message reaches VE7LTD no matter
+where he is on the planet via the APRS-IS assuming he is on the
+air.  On receipt, and if VE7LTD is available, he will establish the
+call-back link.
+
+ASSISTED -  A distributed IPRS server system monitors both the IRLP 
+active node status and also the global APRS-IS stream looking for IPRS-CQ
+messages.  On detection, it compares the positions of the users and the
+nodes and identifies the nearest non-busy IRLP node numbers to each one.
+If one of the nearest nodes is connected to a CONFERENCE node, then both
+users are invited to join the conference in session. This reply message
+to both end users is tailored to fit on each one's APRS message screen.
+
+   APRS user:      67 character free field line
+   TH-D7 HT user:  45 char line arranged as 12,12,12,9
+   TMD700 user:    64 char line arranged as 22,22,21    <i need to ck this
+
+EXAMPLES of the IPRS Messages sent to each user on the TH-D7 HT display:
+
+   WB4APR sends APRS msg to VE7LTD saying "CQI" requesting an IRLP
+   voice link.  IPRS distributed server responds with messages to
+   to both users informing them of nearest nodes to each of them.
+
+   Message to WB4APR (originator)
+   +--------------+  +--------------+   Message confirms to sender that
+   | CQ to VE7LTD |  | Use   I#1212 |   the IPRS processor has seen the
+   | on IRLP 2323 |  |  146.995^PL  |   IPRS-CQ message and tells sender
+   +--------------+  +--------------+   of his nearest IRLP node.
+
+   Message to VE7LTD (called station)
+   +--------------+  +--------------+   Message to recepient asks him
+   | Call WB4APR  |  | Use   I#2323 |   to call the sender on his IRLP
+   | on IRLP 1212 |  |  446.375^PL  |   number and suggests the closest
+   +--------------+  +--------------+   node that he can use...
+
+If either of the nearest nodes to either of the users is currently
+connected to a conference node, then both users are informed of that
+situation so they can join the conference.  The following message
+would indicate that #2323 near the callee is on a conference node:
+
+   Message to WB4APR (originator)
+   +--------------+  +--------------+   Message confirms to sender that
+   | VE7LTD bsy   |  | Use   I#1212 |   the IPRS processor has seen the
+   | 2323 = C123  |  |  146.995^PL  |   IPRS-CQ message but tells sender
+   +--------------+  +--------------+   his nearest IRLP node is busy
+                                        but that it is currently con-
+                                        nected to conference node #123
+
+   Message to VE7LTD (called station)
+   +--------------+  +--------------+   Message to recepient asks him
+   | Meet WB4APR  |  | Use   I#2323 |   join the conference currently
+   | on Conf  123 |  |  446.375^PL  |   in progress on his closest
+   +--------------+  +--------------+   node that he can use...
+
+   This same message would be sent to the originator if his nearest
+   node was the one that was currently connected to a conference.
+   
+
+AUTO-QSY -  The ultimate IPRS implementation is when the end users radio
+can respond directly to an IPRS command to automatically QSY to a given
+link freuency.  This can be done through newly manufactured radios or
+retrofitted to existing radios with a simple external pc-processor.  The
+Pic processor watches for the QSY packet command on the serial port and
+then sends the appropriated radio-control codes to set up the call.
+
+Of course end users may enable various levels of auto-QSY to maintain
+some level of control over their radio response to these external
+influences.  QSY commands may come in as BULLETINS to all stations
+in an area or as commands directed to only your station.  Such a menu
+might consist of the following.  Each level is assumed to include
+the processing of lower levels
+
+   OFF  - No QSY commands accepted.  Displayed but not prompted
+   1    - No QSY action, but prompt for Directed Commands
+   2    - No QSY action, but prompt for all QSY commands
+   3    - Respond to only Emergency Directed QSY Commands.
+   4    - Include Priority Directed and above QSY commands.  
+   5    - Include all Directed QSY commands.  Prompt for BLNS
+   6    - Include all Directed QSY commands and Emergency Bulletins
+   7    - Include all Directed QSY commands and Priority Bulletins
+   8    - Auto-QSY to all
+
+Since the kenwood D7 and D700 packet data can be monitored on the serial
+port while in APRS mode, an external PIC processor can watch for QSY
+commands and then command the radio as indicated.  Thus, this
+IPRS automated QSY idea is backwards compatible!
+
+de WB4APR, Bob
+

@@ -1,0 +1,48 @@
+***************************************************************************
+*                  ATGP 2019 Report for GD Hill  by Bob, WB4APR          75
+***************************************************************************
+
+Quick report for GDHILL.  Links were quick and OK, except MDMTNS-7 was not
+decoding all my packets.  We suspected a deaf D7XX on his end, but he 
+changed radios and still was not perfect.  I had to go to High power and
+move my fixed antena to see if I was in a null.  These should not have been
+necessary, since I can hit MDMTNS with an HT and stub atnenna from my site.
+
+This year we had good UHF voice with Camelback but only when he pointed his
+beam my way.  Otherwise, I could never raise himi when I wanted him.
+
+I learned 3 things:
+
+1) You guys are amazing! to do this every year.  I was exhausted, but my 
+strong son pulled me through (and up, and down, the mountain and tower etc)
+
+2) I had a D72 HT without an antenna at the site and found it was essential!  
+It saw EVERYTHING that my station digipeated and nothing else.  This was a 
+real eye to what was going on and along the chain.  Since I was entering 
+data , sending messages, reviewing lists with the main D710, there are so 
+many packets I would not have seen, had it not been for the D72 always 
+displaying every one.  Also it constantly proved that my station WAS 
+digipeating and which way consistently and always.   If I had relied only 
+on what my D710 displayed I would have been half in the dark
+
+3) Forget 1200.  9600 worked so well and so fast, that we can easily double 
+our throughput speed and don't have to wait ten minutes for each possible 
+golden packet.
+4) I had solid links both ways, but MDMTNS was having problems hearing me 
+100%.  We suspect the common 10dB front-end-filter failure but not sure.  
+This is a problem that normally no one is aware of because it is so rare 
+to try weak signal work, and so normal repeaters and digis have plenty of 
+signal.  When I had my lab in the past, I wouild test each rig before the 
+event.  A good number have failed.
+
+My 30 year old nicd pack of D cells maintained voltage from beginning to 
+end at 12.8v due to a 1 amp solar panel in parallel.  Didnt need the 5 
+spares we hauled up there.  And I was operating at high power half the 
+event to solve the link south.
+
+Again, you guys are amazing!
+
+I didnt even try the satellite,  Was exhausted and didnt have an SMA 
+connector for the HT and arrow antenna.
+
+Bob, WB4APR

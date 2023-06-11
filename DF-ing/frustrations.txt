@@ -1,0 +1,53 @@
+FRUSTRATIONS OF THE OMNI-DF TECHNIQUE
+================================================================
+
+It has been frustrating that this most powerful contribution of 
+OMNI-DFing to the self-policing of the amateur bands has not become 
+second nature to HAMS.  This has nothing to do with APRS, but simply 
+that the vast majority of mobile hams on the air don't realize how 
+quickly they could work as a group to rapidly locate the source of 
+interference.  If they would just think and make an effort...  
+Here are some of the frustrations:
+
+1) People think they cannot DF without expensive special equipment
+2) People think that not hearing a signal is of no value in DFing
+3) People don't instantly hit the REVERSE button on their radios when
+   they hear an unwelcome signal on their repeater
+4) When they do make a report, they are not careful with the details
+   a) Where are they really?
+   b) Do they know which direction is north if they report a direction?
+   c) DO they have any clue about their antenna height gain?
+   d) Are they aware of the general terrain going out a few miles?
+   e) Are they listening on the right frequency?
+   f) Are they actually hearing a fox or a birdie?
+
+Although the OMNI DF technique can localize a fox to a mile or so in
+only a few minutes if you can find enough people to make reports,
+it is frustrating to try to solicit omni-DF info from casual operators
+because of the general lack of understanding of the power of this 
+technique.  Here are examples of the furstrations:
+
+GOOD REPORT:  I'm in the center of Mudville in a mobile on average 
+terrain and cannot hear the fox at all.  (Enter DFS=0)
+
+GOOD REPORT:  I'm about 3 miles west of Tinytown in my mobile on a
+slight hill with best coverage to the west and hear the fox with
+a readible but noisey signal..  (Enter DFS=5)
+
+BAD REPORTS:  
+"I cant help.  I dont have any DF equipments"
+"I can't help, I'm mobile"
+"I can't help, I can't hear the fox"
+"I don't know where the REV button is on this radio"
+"I can't help, I've never done any DFing before"
+
+Turns out, if you dial around to various repeaters on a sunday afternoon
+fox hunt to solicit signal reports, you will spend 90% of your time 
+explaining to the above responders why their input is so valuable
+just so you can eventually get a  report out of them!
+
+It is frustrating.  EVERY mobile operator when they hear a jammer on 
+their repeater or, are asked for a signal report should have the 
+understanding and knowledge to respond with usable information.
+
+de WB4APR, Bob

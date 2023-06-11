@@ -1,0 +1,32 @@
+PCsat Emergency Status and Reporting (SAR) Capability
+-----------------------------------------------------
+
+PCsat has a limited Emergency Status and Reporting (SAR) 
+capability to assure that emergency and priority packets
+from travelers anywhere on the planet can be captured not
+just those in range of an IGate.
+
+This SAR mission is necessary as a separate function because
+the mission of PCsat is to relay all packets back to the earth
+in real time.  This normal mode of PCsat assumes that there 
+are other users or IGates in the footprint.  This leaves 
+travelers in the middle of the Oceans or at the poles without
+a communications capability.
+
+The SAR buffer on PCsat will capture EMERGENCY messages
+from users anywhere on the planet and will downlink
+the last N packets in this buffer once every 10 minutes.  
+
+There is the ability to also use this buffer for very special
+travelers that may need non emergency access in far away places.
+Since this takes extra power and adds to the downlink everywhere,
+we want to limit this capability to only those wilderness
+or distant PCsat users who have no other means to communicate.
+
+For this reason, we ask that special travelers who may need
+access to this buffer, to register with us in advance of
+your travels and to send us a travel plan and we will
+give you the details of this system.
+
+de WB4APR, Bob
+

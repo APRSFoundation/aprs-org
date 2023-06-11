@@ -1,0 +1,28 @@
+********************************************************************************
+*                  Final packets from PSAT (NO-84)                             *
+********************************************************************************
+
+Last Beacon on 2021-12-22 
+15:59:10  K0KOC-1>3Y2S1Y,PSAT,ARISS*,qAR,VE2GQF-2:'i4wl  #/]www.K0KOC.com=   
+15:58:35  K1WY>TQTU7T,PSAT,ARISS*,RS0ISS,qAR,VE2GQF-2:'dGRl  -/]      
+15:57:21  N3FCX-4>DJFT2Z,PSAT,ARISS*,qAO,WB2QGZ-10:'g.7l  n/]WLNK-1 SP=               
+15:56:31  N3FCX-4>DJFT2Z,PSAT,ARISS*,qAO,NOVA-10:'g.7l  n/]WLNK-1 SP=                                                                                     
+15:56:12  N3FCX-4>DJFT2Z,PSAT,ARISS*,qAR,N9SIR-1:'g.7l  n/]=                    
+15:55:38  K0KOC-1>3Y2S1Y,PSAT,ARISS*,qAR,N9SIR-1:'i4wl  #/]=   
+
+Last Position Digi on 2021-12-22 
+15:55:22  KE4AZZ>APRSAT,PSAT,ARISS*,qAR,N9SIR-1:=2702.06N/08209.93W` KE4AZZ EL87      
+15:55:18  PSAT>APRSON,ARISS,qAR,N9SIR-1:T#030,752,068,448,447,358,00011000                
+
+Last CQ on 2021-12-22 
+15:55:07  KE4AZZ>APRSAT,PSAT,ARISS*,qAR,N9SIR-1::CQ :deKE4AZZ via PSAT NO-84{DI}          
+15:54:55  W9QO>STPX1V,PSAT,ARISS*,SGATE,WIDE2-2,qAR,N9SIR-1:'oIPl  -/]               
+15:54:46  KE4AZZ>APRSAT,PSAT,ARISS*,qAR,N9SIR-1:=2702.06N/08209.93W` KE4AZZ EL87
+
+Last Command on 2021-12-22 
+15:54:18  PSAT>APRSON,ARISS,qAR,N9SIR-1::KE4AZZ :ackDs}          
+
+Last Telementry on 2021-12-22 
+15:54:00  PSAT-1>APOFF,ARISS,qAO,AE0CJ-1:T#028,755,070,446,447,669,00011100                
+
+ 

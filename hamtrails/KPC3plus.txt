@@ -1,0 +1,44 @@
+KPC3+ Settings for Golden Packet Event                  19 July 2010
+--------------------------------------------------------------------
+
+The reason we do not recommend using a home-brew radio/TNC combo is
+the track record of over 90% of the existing digipeaters on the air
+that are terribly configured and aligned.  Yes, they "work" for
+nearby digi's and stations, but typically suffer 20 dB or more of
+poor performance which can DRASTICALLY undermine the weak signal
+needs of this event.
+
+The most important thing about setting up a digi is proper setting 
+of the radio/TNC interface with proper attention to more than a
+dozen hardware issues such as tone SKEW, BALANCE, modulation type,
+deviation, levels, distortion, overmodulation.  The biggest need is
+a direct discriminator and modulator connection for flat response.
+COnnecting to the speaker and mic assures a the use of PRE and DE
+emphasis which loses 6 dB or more of performance.
+
+That is why we recommend using the D700 or FTM-350 all-in-one
+factory aligned TNC/Radio combos.
+
+Getting the hardware and/or settings wrong can lose 20 dB on weak 
+signal performance andd we need every single dB.  And I would say 
+that 90% (yes, 90%) of most TNC digipeaters on the air are abominable!
+
+Once all that is set corretly, then the only settings for the TNC are:
+
+MYCALL to your chosen mountain name
+UIFLOOD HOP,ID
+UITRACE TEMP
+BTEXT  !DDMM.mmN/DDDMM.mmW;comment
+UNPROTO set to HOP7-7,HOP7-7
+BEACON 10
+
+For a beacon every 10 minutes.  Using the site's exact LAT/LONG 
+given on the AT-Golden-Packet web page for that site.  
+
+Be sure and test it before you leave to be sure the format is 
+decodable.  THen follow all the ideas in the CHECKLIST.TXT file...
+
+I think that should do it. Did I forget anything?  
+Then set the radio fo 144.34 during the event.
+
+Bob, WB4APR

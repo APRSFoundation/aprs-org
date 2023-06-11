@@ -1,0 +1,177 @@
+WHATS WRONG WITH THE RELAY,WIDE PATH?                  31 March 2005
+--------------------------------------------------------------------
+
+>Please explain how RELAY causes DUPES in the USA?  
+
+Thanks for asking, because it is important that eveyone understand 
+this and it is why RELAY in our current overloaded nets is now part 
+of the problem and not the solution...
+
+The problem is that in the USA, Kantronics implemented my WIDEn-N 
+suggestions in 1998 over the top of the previous legacy RELAY-WIDE
+system independently.  A packet digipeated with RELAY, or WIDE in
+the path is not compared with a subsequent WIDEn-N copy of the same
+packet.  Thus dupes can be generated.  Lets assume a mobile is using 
+the path of RELAY,WIDE:
+
+If all he hits is a rare RELAY-only digi in the boonies, then there 
+is one copy digipeated and then that copy is then digipeated by lets 
+say 3 other WIDES.  Those are all 4 copies of the original packet, 
+one for each digipeater.  We dont call those dupes.  Those are what 
+we want.  4 copies, one for each of the 4 surrounding digis. That's 
+good.
+
+MOBILE>APRS,RELAY*,WIDE
+MOBILE>APRS,RELAY,DIGI1*
+MOBILE>APRS,RELAY,DIGI2*
+MOBILE>APRS,RELAY,DIGI3*
+
+But all the other 95% of the time while the mobile is driving around 
+town his RELAY,WIDE packet is being heard by lets say 3 other digis.  
+Now then here is what we see:
+
+MOBILE>APRS,DIGI1*,WIDE
+MOBILE>APRS,DIGI2*,WIDE
+MOBILE>APRS,DIGI3*,WIDE
+MOBILE>APRS,DIGI1,DIGI2*
+MOBILE>APRS,DIGI1,DIGI3*
+MOBILE>APRS,DIGI2,DIGI1*
+MOBILE>APRS,DIGI2,DIGI3*
+MOBILE>APRS,DIGI3,DIGI1*
+MOBILE>APRS,DIGI3,DIGI2*
+
+for a total of 9 packets.  Three are the intended packets from the 3 
+surrounding digis and the other SIX are "DUPES".  Each digipeater is 
+digipeating the same packet TWICE because it does not compare the
+RELAY digipeated packet to any that it has also digipeated vis WIDEn-N.  
+Now imagine each time that mobile  passes by a HOME RELAY, that adds 
+another original for each of the digis to also digi a 3rd time (total 
+of 12 packets).
+
+Not only is this so obvious to see happening and so obviously a waste 
+of bandwidth by causing a factor of 3 dupes on every packet transmitted,
+but the stations doing it the most are MOBILES which already generate 
+10 to 20 times as many positions per hour as any other stations.
+
+It is this totally unneeded multiplication of DUPES from RELAY,WIDE 
+paths that is the biggest load on the APRS channel in the USAand also 
+the *easiest* to get rid of.
+
+Some people say that they have to have a RELAY in a certain area because 
+it is a dead zone.  True, but the "cost" of having mobiles use the 
+RELAY,WIDE path just for that one packet in the morning and that one 
+packet in the evening in that "hole" is causing the other 40 of his 
+commute packets to be generating over 240 "DUPES" all the rest of the 
+time when he is closer to town on his 20 minute commute.  We must
+get rid of RELAY (and WIDE) which have no dupe elimination algorithm.
+Besides, we can still have FILL-IN digis by just swapping WIDE1-1 in
+place of the RELAY alias.
+
+To me, we are shooting ourselves in the foot with all these mobiles 
+driving around using a RELAY,WIDE path.  Yes, I advocated that for 
+years for backwards compatiblity with all the RELAY-only and WIDE only
+TNC's we had back here on the east coast.  But it is time to move beyond 
+that.  In fact, we should have done it years ago.  
+
+But I have to admit that since I have been spending 12 hours a day for 
+the last 4 years building satellites, I had not been watching what was 
+going on on the local 144.39.  A few months ago, I had a weekend lull 
+and was watching RAW packets and was  *astonished* at what I saw from 
+all the dupes of all the RELAY, and WIDE paths in our area.
+
+By the way, WIDE,WIDE does exactly the same thing.  If there are 3 digis 
+that hear that path, then there are the potential for 9 copies just from 
+the first 3 digis.   We MUST phase out WIDE completely and discourage
+any routine use of RELAY.
+
+On the other hand the path of WIDE2-2 goes just as far, but because the 
+WIDEn-N algorithm has perfect dupe elimination, then if there are 3 digis, 
+then there are only 3 copies (no dupes) heard in the original area of 
+packet origination.  Copies only radiate outward and never fold back.
+
+Whereas with RELAY,WIDE and WIDE,WIDE paths there will always be dupe 
+multiplicatiion.
+
+But you ask, what about callsign-substitution? Isnt that supposed to 
+eliminate dupes and keep a digi from digipeating something it has 
+digipeated before?   Yes, but look back at the original 6 dupes in the 
+original example above.  Notice that none of the 6 dupes was ever 
+transmitted by the same digi twice.  Those would look like 
+MOBILE>APRS,DIGI1,DIGI2,DIGI1* and you dont see those, beause substitution
+prevents it.  But that only protects after the 2nd hop.  Most dupes are
+caused after the first hop!  There, could be as many as 15 copies  
+(3 desired and 12 dupes) heard from these 3 digis when only 3 would be 
+heard if WIDEn-N were used.
+
+MOBILE>APRS,DIGI1*,WIDE,WIDE
+MOBILE>APRS,DIGI2*,WIDE,WIDE
+MOBILE>APRS,DIGI3*,WIDE,WIDE
+MOBILE>APRS,DIGI1,DIGI2*,WIDE
+MOBILE>APRS,DIGI1,DIGI3*,WIDE
+MOBILE>APRS,DIGI2,DIGI1*,WIDE
+MOBILE>APRS,DIGI2,DIGI3*,WIDE
+MOBILE>APRS,DIGI3,DIGI1*,WIDE
+MOBILE>APRS,DIGI3,DIGI2*,WIDE
+MOBILE>APRS,DIGI1,DIGI2,DIGI3*
+MOBILE>APRS,DIGI1,DIGI3,DIGI2*
+MOBILE>APRS,DIGI2,DIGI1,DIGI3*
+MOBILE>APRS,DIGI2,DIGI3,DIGI1*
+MOBILE>APRS,DIGI3,DIGI1,DIGI2*
+MOBILE>APRS,DIGI3,DIGI2,DIGI1*
+
+That is why I say that any use of RELAY or WIDE paths is causing 2 to 
+5 times the duplication of every packet transmitted in the USA.  These are 
+unnnecessary DUPES and not just COPIES I am talking about.  They are 
+just wasted QRM...
+
+>So, if home RELAY fill ins are spaced properly, what is the problem?   
+>They are doing what they were put there to do...
+
+So true.   But is the other 95% of the time that that mobile is 
+transmitting RELAY,WIDE and hitting the big digis direct that is causing 
+horrendous duplication all the rest of the time when he *is* in range 
+of digis that is the problem...
+
+>I fail to understand your statement that home RELAYs 
+>cause so much duplication.. 
+
+They don't.  What I was meaning was that the "concept of home RELAYS 
+which is the basis for mobiles using the RELAY,WIDE... path is causing 
+horrendous duplication most of the time when the mobile hits other
+digipeaters directly" is the better way to say it.  Its not the home 
+"RELAYs" but the use of the RELAY,WIDE... path that is the problem.
+
+>So in short, a DUPE to me is a packet sent by a RELAY 
+>that was received from another RELAY. It is not a DUPE 
+>if two RELAYs attempt to digipeat the same received 
+>direct from the tracker's packet.
+
+Yes.  A DUPE is the same digi digipeating the same packet more than once...
+
+>Simple solution is to limit unnecessary home RELAYs.
+
+No, Best solution is to eliminate the use of the RELAY,WIDE and WIDE,WIDE 
+paths completely in the USA.  This will cause a huge 2 to 5 TIMES reduction 
+in dupes.  This means the network load could go down to 50% or even 20%
+of what it is now.  With that kind of a quiet channel there probably is 
+no need for many of the fill-in digis in the first place, because now 
+the regular digis might hear enough dead silence to hear the mobile in 
+what used to be called the dead zone in the first place.
+
+And if the dead zone is really dead, then simply replace the RELAY alias
+with the WIDE1-1 alias.  It will work just as well, but being of the
+WIDEn-N family, the perfect dupe-elimination filter in the digis will not
+generate the wasteful dupes.  Thus, users that need to use FILL-IN digis
+can use the dual entry WIDE1-1,WIDE2-1 path.  Notice the second entry 
+starts as 2-1 so that only one additional hop is used for a total of 2
+which is about right in most areas.  A mobile path of WIDE1-1,WIDE2-2
+would make 3 hops on every packet.  OK in remote rural areas, but not 
+desired in the seven major APRS metro areas or California or any other 
+populous state with big mountain digis.
+
+NEVER use WIDE1-1 anywhere except the first hop in a path.  Just like RELAY
+was never used beyond the first hop, or it generates horrendous QRM.
+
+Hope that clears it up.
+
+Bob, WB4APR

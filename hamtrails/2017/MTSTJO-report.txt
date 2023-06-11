@@ -1,0 +1,69 @@
+***************************************************************************
+*                ATGP 2017 Report for Mount St Joseph in Canada          75
+***************************************************************************
+
+I've been interested in and wanting to participate in AT-GP for years.  
+Although I found that extra summits are welcomed I realized that there are 
+15 main summits that make up the core chain.   I'm really happy that I was 
+able to activate Mont Saint-Joseph as an alternate to Sugarloaf this year 
+and be part of the core chain.
+My team member Bram (VA2XE) was joking that he and I were the "border 
+agents" facilitating the AT-GP packet's crossing into and out of an 
+international border.
+
+We left for the summit at 7am and got there around 10am. While Bram was 
+putting up his SOTA HF antenna I was putting up an Arrow dual-band j-pole 
+for AT-GP.  This antenna worked very well on top of a 16 foot painter's 
+pole. Next time I use it I'll bring a bit more rope so I can guy it at 
+least at 8 feet instead of the 4 foot level I had it at.
+I fed it with 30ft of RG-213 for lower loss, especially on 70cm.
+
+The radio was a TM-D710A.  The tab on the interface patch cable's RJ-45 
+was broken and would reset the radio when it came loose. Gotta fix that.  
+I used a PM that I had programmed years ago and the radio still had the 
+hard-coded coordinates for Mount Carlson.  Sorry for beaconing the wrong 
+position.  Next time, I'll configure my GPS-710.
+
+Power was from a 18ah LiFePo, weight about 2 pounds.  It was more than 
+enough for AT-GP.  
+
+We didn't have computer logging and I wished I had APRSISCE available.  
+Next time...
+
+I found using ANSRVR from the TH-D72 user interface very awkward.  
+Another job for APRSISCE. 
+
+I think the first thing I heard was Leo on UHF from Kathadin-15.  
+Then I got a few packets.  Then I heard from John on MTWash-13 on UHF. 
+I got a call from Lynn looking for a status update.
+Got a few more packets.
+Got a call to go to 1200baud.
+Got lots of packets.
+I got some support from Kevin(?) to make sure I had digipeate set on.
+
+After a bit I confirmed that right after packet receipt my radio would 
+show "on air", so I was digipeating.
+
+Then it was just a matter of relaying a few messages by phone and waiting 
+for the golden packet.
+
+Mont (French spelling for mount) Saint Joseph is part of Mont-Megantic 
+national park.  Megantic has a 63 inch telescope on it.
+
+	Mont Mégantic Observatory
+The asteroid 4843 Mégantic is named for the observatory.	
+
+
+Mont-Saint-Joseph is the other tall summit of the park and promotes a 
+historical theme.  There was a park employee up there in period costume 
+doing presentations to crowds. We were in a refuge with 3 open sides 
+on the summit since it was misting rain when we arrived.  Later, when 
+the rain got stronger, the presentation was moved into the refuge.  
+It got quite crowded.
+
+We got lots of questions from the hikers.  All of them seemed to know 
+about the Appalachian Trail. 
+
+I'd like to do it again.
+
+Dan -- VA2KEY

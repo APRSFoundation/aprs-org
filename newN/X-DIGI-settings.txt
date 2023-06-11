@@ -1,0 +1,73 @@
+NEW-N PARADIGM SEETINGS FOR THE X-DIGI                     24 July 09
+---------------------------------------------------------------------
+
+Updated 24 July 09 to add additional beacons for EchoLink/IRLP objs
+Original 16 Jul 09
+
+Following settings for the TNC-S provider by Kai Gunter, LA3QMA.
+Translated from  www.aprsla.net and tweaked by WB4APR...
+
+The proportional pathing algortihm originally resulted in a schedule 
+of data packets from the Digipeater which gave the mobile a local
+direct digi packet every 10.5 minutes, a 1-hop digi packet every
+31.5 minutes and a 2 hop packet every 63 minutes.  See the old
+arrangement: www.aprs.org/mewN/X-DIGI-settings-old.txt
+
+But this has been simplified to free up one more slot for another
+local frequency object such as the EchoLink or IRLP object.  The
+new result is:
+
+A local digi packet every 10 minutes 
+A 2 hop digi packet every hour
+A local Frequency Object packet every 10 minutes direct
+A local EchoLink/IRLP Object packet every 10 minutes direct
+
+Here are all the settings for the TNC-X New-N Paradigm Digi:
+
+C.     Set Digipeater Callsign.         :URCALL
+A.     Set Digipeater Alias.            :URDIGI
+F.     Set UIFlood Callsign.            :SS or SSS etc for your SSn-N
+L.     Set UIFlood Limit.               :7
+T.     Set UITrace Callsign.            :WIDE
+M.     Set UITrace Limit.               :3
+1.     Set UICall 1.                    :
+2.     Set UICall 2.                    :
+3.     Set UICall 3.                    :
+4.     Set UICall 4.                    :
+5.     Set UICall 5.                    :
+6.     Set UICall 6.                    :
+7.     Set UICall 7.                    :
+8.     Set UICall 8.                    :
+D.     Set Dupe Time (x5 secs).         :3  (15 seconds)
+
+B.     Set Beacons
+0. Beacon Destination Call :APNX01
+1. Beacon 1 Path :WIDE2-2             (via 2 hops)
+2. Beacon 2 Path :                    (direct)
+3. Beacon 3 Path :                    (direct)
+4. Beacon 4 Path :                    (direct)
+
+5. Beacon 1 inteval (x5 secs) :00720 Offset :0   (DIGI every 60m at 0) 
+6. Beacon 2 inteval (x5 secs) :00120 Offset :48  (DIGI every 10m offset 4m
+7. Beacon 3 inteval (x5 secs) :00120 Offset :72  (FREQ every 10m offset 6m
+8. Beacon 4 inteval (x5 secs) :00120 Offset :96  (VOIP every 10m offset 8m
+
+A. Beacon 1 text:!DDMM.mmN/DDDMM.mmW#PHGxxxx W2, SSn-N comments
+B. Beacon 2 text:!DDMM.mmN/DDDMM.mmW#PHGxxxx W2, SSn-N comments
+C. Beacon 3 text:;FFF.FFFxy*111111zDDMM.mmN/DDDMM.mmWrTnnn RxxM etc
+D. Beacon 4 text:;EL-123456*111111zDDMM.mmNEDDDMM.mmW0FFF.FFFMHz Tnnn RxxM CALL-R
+
+(Where W2, SSn-N shows the user the hops supported here
+(Where FFF.FFF is the locally reecommended voice repeater
+(Where xy makes it unique in the world
+(Where Tnnn is the tone
+(Where RxxM or Rxxk is the range in miles or kilometers
+(Where etc is any additional data for users
+
+Q. Quit
+
+For a Fill-In digipeater set UICALL 1 to WIDE1-1 and set UIFlood and UITrace
+empty.
+
+Kai Gunter, LA3QMA
+Bob Bruninga, WB4APR

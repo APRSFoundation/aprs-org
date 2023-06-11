@@ -1,0 +1,63 @@
+PCSAT2 ACTUAL POWER REQUIREMENTS                           15 APR 2003
+----------------------------------------------------------------------
+                                                                WB4APR
+15 July 2005 revised to better detail beacon mode dutycyles
+15 Nov  2005 updated due to TLM only on one side at a time
+
+The measured currents for the PCSAT2 Comms system full-up Prototype:
+
+120 mA (12 to 16 v)  RX Critical power (EVA plug in place)
+190 mA (12 to 16 v)  TX Power after both ARM relays are enabled
+                     This is the nominal ON condition minimum
+                     power assuming no transmissions and all
+                     user transmit loads are off.
+430-580 mA (13-16v)  With TXA on  (460 @ 14v), (540 @ 15v)
+450-560 mA (13-16v)  With TXB On  (490 @ 14v), (530 @ 15v)
+410-660 mA (13-16v)  With TXC on  (510 @ 14v), (590 @ 15v)
+
+These are the stock transmit currents and have not been reduced
+to the exact 2 Watt limits proposed at CDR.  If we are forced to
+limit our transmit powers to the exact 2W requirement, then the 14 volt
+values will be used.
+
+But all transmit powers are low dutycycle.  The nominal duty cycles are as
+follows and the resulting AVERAGE transmit currents at 14 volts are shown:
+
+PC2 1200 baud TLM 1 min A or B only     2% orbit average =  10 mA
+PC2 1200 bd tlm 10 sec one side only   10% orbit average =  50 mA
+FTSCE Beacon 11 sec evy 200 sec 1 side  6% orbit average =  30 mA
+Digital Packet Users only (worst case)  4% orbit average =  20 mA
+Crew Repeater (if used)                10% orbit average =  50 mA
+PSK-31 Transponder (if used)           10% orbit average =  50 mA
+
+Worst Case Voice Repeater always on:   50% orbit average = 250 mA
+
+Add to this the 190 mA constant load of the receivers and TNC.  This
+190 mA is independent of battery voltage.  The FTSCE DC current is about
+125 mA in addition.  The PCSAT2 Transmitter currents are somewhat reduced 
+at lower battery voltages the full 16 volt value will be assumed here.   
+This yields the following whole orbit averages for the conditions shown:
+
+125 mA  Full time load of FTSCE system
+PLUS
+120 mA  Lowest power mode of PCSAT2 with ARM relays OFF
+190 mA  Armed and operational but with no transmitter activity
+200 mA  Basic 1 minute 1200 baud telemetry on both A or B sides
+230 mA  FTSCE beacon and 1 min 1200 baud telemetry on one side
+270 mA  FTSCE and one side at 10 sec rate
+320 mA  FTSCE and both sides 10 sec 1200 baud telemetry and beacons
+340 mA  Nominal mode And Digital Users
+390 mA  Nominal mode and Digital and typical PSK31 users 
+390 mA  Nominal mode and Digital and typical Repeater 
+535 mA  Worst case scenario
+
+Add 80 mA if RX heaters are turned on in any mode.
+
+Thus, we can manage our PCSAT2 power from a minimum of 1.9 Watts (all off) 
+or 3.2 Watts while on, 4.3 W nominal up to a maximum of 8 Watts  if we turn 
+on everything...  But always there is the additional 2W of the FTSCE
+experiment.
+
+Bob Bruninga
+USNA Satellite Lab
+

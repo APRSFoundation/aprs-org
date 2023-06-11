@@ -1,0 +1,103 @@
+------------------------------------------------------------------------
+Mammoth Cave APRS Volunteer list           Rev d             19 Feb 2013
+------------------------------------------------------------------------
+                                                                  WB4APR
+
+19 Feb 13 Updated status of team planning.
+08 Feb 13 Rev C planning update
+
+Test Date:  2,3 March 2013 (Same saturday as Cave City Hamfest)
+            (Also Volunteer weekend at the Park)
+
+Test Time:  Meet at Pavillion North of visitors center parking lot at
+            8:30 AM with all other volunteers.  Then we organize into
+            Maybe 3 test periods? Saturday AM, PM and Sunday followup?
+
+Based on the present volunteer list as follows as of 21 Feb 2013, we 
+will have one team in the cave, entering at the elevator and proceeding
+towards the Carmichael entrance.
+
+CALL   Name  Day Lead APRS Fit Cave Eqp HT Digi comments
+------ ----- --- ---- ---- --- ---- --- -- ---- -----------------------
+WB4APR Bob    SS   1    1   2    2   3   5    5 Team Leader
+KG4LVA John   SS   2    1   2    ?   I   1    I IGate Operator- topside
+KG4CSQ Ralph  FSS  2    2   2    3   3   2  706 HF op - topside
+KY4JME Josh   S?   3    ?   3    4   5   2    2 Cell;YAAP;Igate backup
+KJ4AJP Roger  S?                         1      Team2 Lead D72 4hr away
+KI4RDDCharlie S?   2   -    3    4   -      D72 in accident, observer
+
+KD4ANG Jon    ..   3    3   2    3   2   5  D72 Can't come due to Drill
+
+Lodging:  Park Hotel or Campground.  Campground is first-come, but
+          the season doesnt really begin for another 2 weeks so there
+          should be plenty of room.
+
+We need mostly people with APRS radios and experience.  Also, HF tests
+will be welcome.  We need to match people with the test plan.  Here is 
+what I am thinking for assignments.  We may as well use these as tactical 
+calls too, since we dont all know each other's calls, not having operated 
+together before.  
+
+See also the Testplan, and Hardware list: http://aprs.org/cave-link.html
+Let me know where you think you will best fit in...
+And any other suggestions...
+
+VHF-1:   WB4APR leader +2 or more (enters Carmichael)
+VHF-2:   Team Leader +2 or more  (enters via elevator)
+HF-1:    One topside, caver below
+HF-2:    One topside, caver below
+IGate:   KG4LVA + one assistant
+Rover:   Topside fetch-it guy to go where needed
+Sniffer: Topside- goes over top of each digi to see if heard
+Crawler: Cavers willing to crawl or get muddy
+Liaison: links us to Park or other VIP personnel
+NetCon:  Sits somehwere with a lot of radios
+PR:      If we  have extras we can operate a PR event station for fun?
+
+Here is a list of folks showing interest, not yet assigned.
+
+WB4APR - D72(3), 817(2). Bob - will drive down from Maryland 12 hrs away
+W9RXR  - D72, Bob Burns W9RXR has D72, D710 and VX8GR about 4 hours away
+KG4CSQ - IC-706 & TNC. Ralph. Caver. Clarksville, TN about 2 hrs away.
+KD4ANG - D72, Jon Stewart, Middle TN. Natl Guard duties same weekend 
+KA0AZS - D72, D7, D700, IC-706 Randy Allen, Dayton Ohio. no mud.
+KC9LDH - D72, D7.  Kurt Savegnago from Canton Illinois (long way away)
+KI4RDT - D7, D700, 817-KPC3 Charlie. 1 Hr away - Did the Vert-Link test
+KY4JME - D72, 710 - Josh Edlin found by Charlie
+?????  - D72, Steve.  Drives by frequently.  Watching for dates...
+KG4LVA - IGate operator.  John.  Tested Hotel WiFi
+KC8SFQ - OT2 only.  Ron, kc8sfq@mei.net has relatives nearby 
+KO4FV  - HF only - Brian, Active Caver from Huntsville.
+AK4RP  - HF & soundcard, Peter 2 hours away (Vanderbilt).
+K4GAA  - VX8DR, Ray COle, works at NRL in DC
+       - Gary Gibula, Caver - Chicago volunteer for Mammoth that weekend
+NW5AR  - D72, etc... Mark Palmer, -9 Hrs away and can't come this time....
+NH7C   - Sid Caesar works at Dept of Interior.  Kibitzing from a distance.
+KD4SS  - Charles.  Member of local Mammoth area Ham Radio Club
+KJ4NES - Roger Hall ? ? ?
+N3EV   - VHF/UHF/HF Gene. Leesburg, Va. Caver and rescue
+?????? - George D.  Active Caver
+W1IR   - LF, MF, HF Brian Pease, caver comms experience (lives in VT)
+KJ4ERJ - Lynn - Author of APRSIS32 software and all around kibitzer
+------ - Bill Copeland - Restoration Director at Mammoth
+------ - Gary Gibula - Cave Restoration crew and NSS caver (non ham)
+------ - Rick Olsen - Mammoth Cave Ecologist
+------ - Rick Toomey - Mammoth cave Research Coordinator
+------ - Charles Fox - Cave Research Foundation
+
+Personnel Matrix: The Numbers indicate your preference or skills in the
+given area.  1 is best, 5 means not likely.  The OK column means your 
+probability of attending.  LEAD is your desire to be a team leader, APRS
+and Fitness are skills. Caving and Caving Equipment are next.  HT is if 
+you have a D7 or VX8R or other messaging radio For texting but cannot
+act as a digi, and DIGI is the number of radios contributed to the
+digipeaer string.  
+
+CALL   Name Day Lead APRS Fit Cave Eqp HT Digi comments
+------ ---- --- ---- ---- --- ---- --- -- ---- -------------------------
+WB4APR Bob   11   1    1   2    2   3   5    5 Team1 Lead
+KG4GSQ Ralph 11   2    2   2    3   3      706 HF
+KY4JME Josh  1?   3    ?   3    4   5   2    2 Cell;YAAP;Igate backup
+KD4ANG Jon   1?   3    3   2    3   2   5  D72
+KI4RDDCharlie1?   -    2   -    3   4   -  D72 in accident, observer
+

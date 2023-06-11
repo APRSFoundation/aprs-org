@@ -1,0 +1,48 @@
+FIELD DAY WITH THE ASTARS SATELLITES                        8 May 2002
+----------------------------------------------------------------------
+                                                                WB4APR
+
+Here are all the FM or packet satellite pass times for  Field Day 2002
+(Mid Northern Latitudes):
+ 
+Sats 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23 00 01 02 03
+---- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+AO27    **********                       **********
+UO14      **********                       ***********
+SO41        *************            *************
+AO16         **********                      **********   <== (not FM)
+ISS    *  ******************************
+UO22 ******                      ***********
+OPAL ***** *                      *** **** *
+NO44                             *********** *            ************
+NO45                            *************            * ***********
+ 
+The last 6 are digipeaters and last 5 can all be worked with normal packet
+TNC.'s and FM rigs.  The best way to get a valid contact is as follows:
+ 
+1) Put your EXCHANGE in a packet.  Digipeat via the satelilte ONCE.
+2) Copy ALL other calls sending their exchange.
+3) send a single QSL packet with your exchange and list of all calls
+   for which you are QSLing..
+4) Watch for their similar QSL packets.
+ 
+A valid exchange occurs if YOU are in their QSL packet AND they are in
+your QSL packet.  APRSdos and APRStk can do this all automatically.  Read
+SPACE.TXT in the readme files.  A QSL packet looks something like this:
+ 
+WB4APR>CQFD::BLN1MD-DC:QSL:CALL1,CALL2,CALL3,CALL4,CALL5,CALL6,CALL7,CALL8
+ 
+The advantage of this technique is that for each 8 people on the bird,
+they can make 8 QSO's each for a total of 64 different QSO's with the
+total load on the bird of only 16 packets.  Doing it the normal way would
+take over 8*8*2 or over 128 packets.... Grossly inefficient (and
+impossible).
+ 
+Of course you never get the ideal due to some dupes, and collsions, but
+it sure is better than trying to exchange 4 packets with every single
+station!  See the web page:
+ 
+APRS SATELLITES     http://www.ew.usna.edu/~bruninga/astars.html
+ 
+de WB4APR, Bob
+ 

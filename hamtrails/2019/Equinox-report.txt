@@ -1,0 +1,80 @@
+***************************************************************************
+*                  ATGP 2019 Report for MT Equinox-12                    75
+***************************************************************************
+
+Hello:
+
+Only change at EQINOX-12 this year was from a car to a van, meaning 
+slightly higher antennas in the site parking lot. Some pictures in the 
+Photo section
+
+Same parking location, same radio and antenna for the event.
+
+The Wash-13 voice signal from last year was low (but readable) as well, 
+but when you moved this year the signal jumped to S9, removing the 
+intermittent voice and packet reception.
+
+So not sure about different results this year, but glad you found a new 
+spot and ended-up with solid signals.
+
+Thanks,
+----------------------- full report -------------------------------------
+
+Jeff Marden/N1JCM (formally KB1TJI as per Yahoo)
+
+For the 2019 Appalachian Trail Golden Packet Event, I signed-up for station 
+EQINOX-12 on Mount Equinox in Vermont again this year. Third year here for 
+me (after 4 years on Mt Greylock for this event).
+
+My trip took 3hr 45min from SW of Boston to get there, and 4hr 35min to 
+return using local roads rather than the highways. 
+
+Mt Equinox was a mix of foggy/overcast and sunny, but temps only made it to 
+~85 degrees, with a nice 5-8mph breeze that kept things comfortable.
+
+Equipment included a go-kit Kenwood D710G, A D72 HT, An Icom IC-208 for 
+repeater and simplex contacts, an Icom IC-92AD for local repeater 
+monitoring and a power kit with 35AH batteries; one for the 710G and one 
+for the 208.  I had 3 mobile antennas, using a 5/8 dual-band for ATGP work 
+and a tuned 2M antenna for repeater and simplex experimenting.
+
+Initial setup was complete by 10:30am and 1st contact was with MtWash-13 
+voice then digipeated packets. MtWash-13 moved around a bit after some 
+trouble with signaling, but found an excellent spot and his signal was 59 
+after that on both 1200 and 9600. They then established contact with 
+Kataden-15, Mt St Joe and the Canada folks.
+
+Made voice contact with SamsPoint-10 next, but too far for direct packets. 
+His S3 to S4 signal on voice at my location was good enough for reliable 
+comms.
+
+Contacted Grylock-11 via the Mt Greylock repeater at ~11:45am and he 
+identified delays in traffic that would make him late. He subsequently 
+came up on voice and packet shortly after 12:30pm. Then I started to 
+receive packets from SamsPoint-10 and south. Eventually I saw packets 
+from all stations including the golden packets to/from Springer-1 and 
+Kataden-15 at 1200 baud (see picture).
+
+At 2:30pm local we switched to 9600 baud. I saw 9600 packets from 
+MtWash-13 and north immediately, but was having trouble receiving/ 
+decoding 9600 packets from Grylock-11. He agreed to move higher and 
+subsequently his signal got stronger and I received and digipeated good 
+9600 packets from him and south successfully.
+
+In between ATGP events I was able to ping other repeaters in the area. 
+Obviously being 3800 feet high provided me excellent coverage and I 
+contacted repeaters in New York, Connecticut, Vermont, New Hampshire and 
+Massachusetts. On some frequencies I keyed-up 2-4 repeaters at a time 
+and had one “pile-up” as folks from 3 different repeaters came back to 
+my call.
+
+I monitored ANSRVR and ATGP messaging and received several messaged from 
+GDHill-8 during the event, digipeated north thru our links.
+
+We closed-down at 3:00pm local after getting a message on ATGP packet. 
+
+It was great to work with the folks at SamsPoint-10, Grylock-11 and 
+MtWash-13 again this year for our part of the ATGP event. Hopefully 
+we’ll see/hear folks again next year.
+
+Jeff Marden/N1JCM (formally KB1TJI)

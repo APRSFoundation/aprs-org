@@ -1,0 +1,139 @@
+PCSAT FREQUENCY COORDINATION REQUEST:
+
+The mission of our PCsat is unique in the Amateur Satellite Service as it
+is designed to support the text messaging and position tracking needs of
+mobiles and handhelds only and links into the terrestrial internet system. 
+As such, the link margins to user OMNI antennas require downlinks in the
+2 meter band.
+
+For international operation, we will need a frequency(s) in the agreed 
+satellite sub band of 145.8 mhz.  This frequency can hopefully be shared 
+with a number of other UI digipeating satellites in work... But we also 
+hope to use the exclusive North American Continent wide 144.39 APRS frequency 
+for occassional downlinks of brief one-line text pages to remote mobile 
+travelers.  The following design summary should provides the background.
+
+UPLINKS AND RECEIVE GAINS:  Up and downlinks fall into several different 
+classes based on ERP and receiver antenna gain as shown below.  The column 
+labeled Standby-receive gain is for the user who is not aware of, nor 
+optimized for satellite reception.  For example, an HT in a pocket, or 
+a mobile parked under trees.
+  
+             ERP  ERP Rcv Rcv Rcv  
+             UHF  VHF UHF VHF STBY 
+ USERS       (W)  (W) dBi dBi dBi  Applications
+   --------- --- ---- --- --- ---  ------------------------------
+   HANDHELDS   3    5   3   3  -6  Sailboats, Hikers, Wilderness
+   MOBILES    70  100   5   5  -6  Boats, Remote Travelers
+   HOME STNS 700 1000  13  13      Not intended for PCsat
+  
+ NETWORK
+   IGATE RCV            7   5      Omni Internet receive site
+   MSG NODE   70  100              Internet to user UPLINK site   
+   COMMAND   700 1000  13  13      US Naval Acadmy Ground Station
+  
+MISSIONS:  Since several other amateur satellties have provided imaging
+and file store- and-forward for the last several years, PCsat concentrates
+on the current trend towards personal real-time wireless messaging using 
+UI digipeating.  In this context, the following list prioritizes these needs.
+
+ 1) Handheld/Mobile message uplink to Internet (emergency and routine)
+ 2) Handheld/Mobile message downlink delivery from Internet
+ 3) Handheld/Mobile to Handheld/Mobile real-time communications
+ 4) Nationwide Bulletin delivery to all users
+ 5) Handheld/Mobile GPS position tracking to internet
+ 6) GPS tracking of buoys, telemetry devices, wildlife, expeditions
+ 7) Other UI digipeating applications (TBD)
+ 8) Message Store-n-forward (limited special applications only)
+
+FUNDAMENTAL ASUMPTIONS:
+ 
+ 1) Optimum ALOHA CSMA channel effeciency is about 18% due to collisions
+ 2) VHF links have a 9 dB advantage over UHF links (omni to omni)
+ 3) 1200 baud AFSK has a 7 dB advantage (measured) over 9600 baud FSK
+ 4) T/R delays render 9600 only twice as fast as 1200 for short bursts
+ 5) UHF uplinks require wide bandwith to avoid doppler (- 4 dB)
+ 6) UHF downlinks require user tuning throughout pass (not desired)
+ 7) There are available off-the-shelf handheld and mobile radios now
+    that can serve as stand-alone digital satellite transceivers
+ 
+REQUIREMENTS/CONSTRAINTS Design Drivers:  The following are some of
+the obvious first-order alignments of requirements to hardware and
+frequencies.  From these, then, we determined the optimum trade-offs to
+arrive at our final design and frequency requirements.
+
+ 1) MSG delivery to HT in Standby requires best possible downlink 
+    (1200 baud VHF).  Igate uplink is relatively unconstrained.
+ 2) MSG receipt from HT requires best possible uplink (1200 baud VHF).  
+    Downlink to internet is relatively unconstrained.
+ 3) Continent wide Bulletin Delivery requires downlink on existing 
+    dedicated terrestrial APRS frequencies (144.39 in USA and 144.8
+    in Europe (both 1200 baud).
+ 4) HT/Mobile real-time messaging requires same up/downlink baudrate
+ 5) GPS HT/Mobile tracking is relatively unconstrained.
+ 6) Low power GPS tracking devices requires best uplink (1200 baud VHF)
+    and the uplink must not be used by any other satellite uplink to
+    avoid unintentional interference to other systems.
+ 7) Other UI digipeating applications should be crossband full duplex
+    and should use same up/downlink baud rates
+ 8) Store-n-forward (rare) is unconstrained with equal baud rates
+ 9) Spread of applications among multiple receivers to minimize
+    collisions is desired.
+10) Reundancy and Backups are desired.
+11) UHF downlinks are of little value due to poor link budget and doppler
+12) UHF Uplinks can work without doppler tuing with a 30Khz Satellite RCVR
+13) KISS applies (Keep it Simple, Stupid)
+   
+HARDWARE ALIGNMENT:  Using the above as the basis, we chose a pair of 
+dual-port KPC-9612 TNC's to satisfy as many of the above requirements as 
+possible.   Each KPC-9612 can cross relay from either of its two inputs 
+to its two outputs.  Since we only have two transmitters on VHF for best 
+downlink, we output both the 1200 and 9600 baud data to the same transmitter
+(with appropriate PTT/DCD cross strapping).  ALthough we need two 2m 
+downlinks, two 2m uplinks and two 70cm uplinks, we have gone ahead and 
+penciled in some obvious suggestions, so that the uniqueness of the choices
+is quite obvious.
+ 
+USERS             UPLINK            TNC              DOWNLINK
+----------------  -------         ------------       ---------------------
+                                  KPC-9612 #1
+HT-to-HT          145.825 ------> 1200 Baud -*-----> 145.825 (ITU Subband)
+                                     \ /     |
+                                     / \     |
+Mobile-to-Mobile  435.250 ------> 9600 Baud -*
+ 
+                                  KPC-9612 #2
+Low Pwr Trackers  VHF-V2  ------> 1200 Baud -*-----> 144.39  (over USA )
+                                     \ /     |               
+                                     / \     |
+Igate Paging      UHF-U2  ------> 9600 Baud -*
+
+ 
+Notice that the Igates monitor both downlinks to capture every packet
+heard and feed to the worldwide APRServe internet linked network.
+
+Our AMSAT/ITU Frequency request is:
+
+1) VHF-A = 145.825 as a shared international UI digipeating frequency 
+
+2) VHF-B = 144.390 downlink over North America Only.  This frequency is
+   already dedicated for APRS by TAPR, ARRL, AMSAT and their Canadian 
+   counterparts.  Downlink on this frequency even though it is outside
+   the Gentlemen's agreed satellite subband is a unique opportunity 
+   welcomed by all current users in North America.
+
+3) VHF-C = Any 2m satellite uplink frequency hopefully not shared with 
+      any other satellite uplink so that we do not QRM any other sats.
+      We have no objections if this frequeny is another satellite
+      downlink.  THis will be our command uplink channel and reserved
+      special uplink channel for very special worldinterest events.
+
+3) UHF-A = 435.250 for all 9600 baud 50w mobiles.
+
+4) UHF-B = Any other 20 KHz frequency in the 435-437 MHz band.
+
+
+Bob Bruninga, WB4APR@amsat.org
+
+
+

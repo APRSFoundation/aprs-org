@@ -1,0 +1,282 @@
+Spec for Voice-Internet NODE Status on APRS  [AVRS]             Rev 3
+---------------------------------------------------------------------
+                                                   23 Jun 2003 WB4APR
+Automatic Voice Reporting System AVRS
+
+AVRS is a generic term that applies to any Voice-over-IP system that
+uses APRS to augment the end-user data delivery and display of system 
+status and/or end-to-end signaling between users of these systems.  
+Thus AVRS refers to all of the systems:
+
+One early objective of AVRS is for IRLP, I-LINK, ECHO-Link and any
+other Voice-to-Internet interfaces to HAM radio to transmit a status 
+packet to local APRS users whenever the node changes state.  These status
+packets show up on the front panel of APRS radios or other display devices
+to alert APRS mobiles of the current state of all nodes in RF range.  
+The normal APRS front-panel display can show the following information 
+about a node:
+
+NAME       Node geographic name or Node Number
+State:     Off line, idle, in use, Connected, Conferenced.
+Position:  Coordinates of Node
+Distance:  Distance from mobile (computed by mobile)
+Bearing:   Direction from mobile (computed by mobile) (an arrow)
+Freq:      Frequency of node
+PL:        PL of node if used or if public
+Link:      Callsign or name of station connected
+Type:      Type of Node, IRLP, I-Link, ECHOlink, etc
+
+All of this is transmitted in a single APRS OBJECT (ITEM) packet by a TNC 
+connected to the PC comm port. The node software simply has to send an 
+ASCII string to the serial port whenever the node changes status.  A TNC 
+connected to the serial port and a radio on 144.39 (USA) completes the 
+hardware requirements.
+
+NOTE:  Eventually we hope all NODES will convert to an alphabetic NAME
+instead of a NODE number.  This is far more user friendly.  For example, 
+of the node in Annapolis Maryland the name would be MDannapls and when
+typed on a Touch-Tone DTMF pad, the equivalent node number would be
+
+MDAnnapls  ==>  63266757
+
+This way no one has to remember node numbers, just NODE names.  I call this
+process "hashing" the name in to a DTMF string.  All nodes begin with their
+two digit STATE or COUNTRY abbreviation.  But this will take evolution of
+the existing system to include the additional digits necessary.  But in the
+mean time, NODE operators can CHOOSE numbers that at least approximate their
+Touch-Tone hash code of their geographic name.  For example, the node at 
+NASA in Greenbelt Maryland could choose 6272.  Or Annapolis could choose an
+echolink number of 26627.
+
+INTERIM PLAN:
+-------------
+
+But until we get the IRLP or ECHOlink node systems to switch to alphabetic
+node names, we will use the node TYPE and NUMBER for now.  Such as 
+IRLP-7070 or ECHO12345
+
+SAMPLE DISPLAYS ON THE TH-D7 HT for ECHOLINK NODE NAMED MDAnnapls:
+
++-------------+   This is the station list.  It contains the last
+| 1:MDAnnapls |   40 entries heard.  It shows 2 nodes on line and
+| 2:DCWash-03 |   one, MD-NASA as being connected.  You can tell
+| 3:MD-NASA   |   it is connected because it is all UPPERCASE.
++-------------+   (But this is future objective)
+
++-------------+   This is how things will actually appear until we can
+| 1:IRLP-7070 |   convince everyone to switch to node names.  Notice
+| 2:ECHO12345 |   The node fits in the list just like any other APRS calls
+| 3:WB4APR-9  |   heard.
++-------------+
+
+
++-------------+   Each time a new status comes in, it is displayed for
+| 1:IRLP-7070 |   10 seconds as shown here.  It shows that it is
+|  146895-107 |   on 146.895 MHz with - Offset and PL of 107.
+|   OFF @1345 |   It is also the first display page for Station #1
++-------------+
+
++-------------+
+| 1:IRLP-7070 |  This is page 3 showing the node is in FM19SX
+|   FM19SX    |  and is 13.5mi east
+|/L 13.5mi => |
++-------------+
+
++-------------+
+| 1:IRLP-7070 |  This is page 5 showing the node is running
+| pw49W h0400'|  about 50 watts to a 6 dB omni antenna at 400'
+| ant6dB omni |  Normal APRS programs will display a range circle
++-------------+  computed from this information.
+
++-------------+
+| 1:IRLP-7070 |  The state just changed to "connected to the
+|  146895-107 |  node number 8315"
+| => 8315     |
++-------------+
+
+The Kenwood D700 mobile displays similar information, but because of its
+larger screen, it displays it all on one page.
+
+PACKET FORMAT:
+--------------
+
+The format of the string is in APRS "OBJECT" format as follows:
+
+;nnnnnnnnn*DDHHMMzDDMM.HHN/DDDMM.HHWLPHGphgdFFFFFF+PPPyyyyyyyyyyzzzzzzzz
+
+Where:
+nnnnnnnnn           is the 9 character node Name or Callsign
+DDMM.HHN DDDMM.HHW  is the LAT/LONG of the node
+L                   is a the Link ICON character
+"PHG" are required characters indicating the next 4 chars are:
+                    p is power
+                    h is HAAT
+                    g is antenna gain
+                    d is directivity
+FFFFFF+ppp          frequency in KHz, offset, and PL in whole number Hz
+yyyyyyyyyy          10 Status bytes (Second line on a TH-D7)
+zzzzzzzz            8 optional bytes shown on the D700, but not the D7
+
+Formats for the NNnnnnnnn Name or Callsign Field:
+(When we get around to it)
+
+   REPEATER:    Then NN is the state and nnnnnnn is the city
+   INDIVIDUAL:  NNn is the type IR-, IL-, EC- and nnnnnn is call
+   STATUS:      This is the key.  The CASE of this field
+                indicates four operating states:
+                uullllllll  - shows offline
+                UUllllllll  - Shows on line or idle
+                UULlllllll  - Shows Connected
+                UULLLLLLLL  - Shows conferenced.
+
+Formats for NODES using existing numbering schemes depend on the number
+of digits.  Four and Five digit systems fit well.  As we go to larger
+number of digits, then the leading TYPE characters can be shortened to
+IP, EO, or IL, etc:
+    IRLP-#### for four digit IRLP nodes 
+    ECHO##### for five digit Echolink nodes
+    I-LK-#### for I-Links
+   
+Formats for FFFFFF/ppp:  Notice that this is a 10 byte field driven
+by the fact tht both the D7 and D700 display such text in a 10/10 format
+for the D7 and a 10/10/8 format for the D700. The following variations
+on this format are permitted:
+    FFFFFF+ppp   Can show a + or - repeater offset.
+    FFF.FFF-     Decimal point fits if there is no PL
+    FFFFFF/ppp   Is simplex or no offset is given
+
+
+Formats for the variable field YYYYYYYYYY and ZZZZZZZZ:  Again, the
+YYYYYYYYYY field is 10 characters and is displayed on both the D7 and
+D700, but ZZZZZZZZ is only displayed on the D700.  Therefore the
+following formats are suggested.  Notice the leading space or punctuation
+mark to make this more readable on devices other than the Kenwoods where
+these fields are concatonated together in the actual packet:
+
+   Node State   YYYYYYYYYYZZZZZZZZ   Comments
+   ----------   ------------------   -----------------------------
+   Offline:    " Off @HHMM........"  can contain some comments in Z
+   On-Line:    " On  @HHMM........"  Time it returned to ON (+Z if any)
+   Busy:       " Busy HHMM.3 nodes"  Time it went busy & # of nodes
+   Connected:  "=NNnnnnnnn at HHMM"  Shows call/Name of connection
+               "+NNnnnnnnn at HHMM"  if another one connects
+
+TIMING:  The status packet should go out whenever the node changes state,
+or once every 10 minutes.
+
+PATH:  These packets should go DIRECT if the Node is physically
+at the RF site, because the packet will have the same RF coverage area.
+If it is necessary to hit a digipeater, then ONLY hit ONE HOP (via WIDE).
+There will  be a lot of these packets and we dont want to kill the golden
+goose by overloading the APRS system.  Keeping them DIRECT keeps any
+QRM issues totally local..
+
+APRS TNC PARAMETERS:  The TNC connected to the COMM port needs
+to be in converse mode so that the ASCII string is transmitted
+when it is sent to the COMM port.  These TNC settings are
+recommended:
+
+   MYCALL is your callsign.   It is not meaningful in AVRS
+   UNPROTO APVInn VIA WIDE    For IRLP, with nn as software version
+      or   APVEnn VIA WIDE    For ECHOlink
+   BEACON EVERY 0             Turn off all beacons unless
+                              you have a specific reason for on.
+
+JUSTIFICATION:
+
+IRLP, I-LINK and ECHOlink will revolutionize voice HAM radio just
+like APRS and Steve Dimse's APRS-IS have revolutionized packet
+radio.  APRS in this case is the end user data system for
+delivering tactical real-time data to the mobile user  which is
+of immediate value to him.  Kenwood has also made all this
+possible by giving us a target end user display system to which
+we can push this formatted information.
+
+Now, this is only the beginning.  Here are the NEXT steps in the
+evoluion:
+
+NODE NAMING:
+------------
+
+The objective of AVRS is to be system transparent to everything
+except the end user's callsign.  If I want to talk to WB4APR
+by voice anywhere on the planet, then all I should have to do
+is enter the callsign.  APRS should know where he is, IRLP/ECHO
+link can make the connection, so we already have all the tools.
+But, so that ANYONE can use the advantage of AVRS, not just
+APRS mobiles, the obvoius comon denominator is the ubiquitous
+DTMF pad.  This is why the TOuchTone system was developed for
+APRS as APRStt.  But to facilitate callsign entry, APRStt
+uses "Touch-Tone callsign hashing".  That is you simply spell
+out the callsign on the Keypad.  Thus, every callsign has a unique
+4 to 6 digit number hash.  Only about one call in every 1000
+will have similar hash codes.  In those cases, the node simply
+reads back all those that matched and are on line, and ask the
+sender to select the right one.
+
+For WB4APR, the HASHED call is 924277  This should be my ECHOlink
+node number.
+
+REPEATER NAMES:  Now, with 60,000 repeaters involved, the callsign
+of a repeater means practically nothing outside of its supporting
+club.  Thus, REPEATERS or LINKS that support multi-users should
+use NAMES that either refer to the geographic location, or to the
+name of the club.  Since APRS supports a 9 character packet call,
+then these names must be limited to 9 characters as follows:
+
+   NNnnnnnnn  Where NN is the STATE abbreviation in the USA/Canada
+              Where NN is any other distinct 2 letter country code
+     nnnnnnn  Is the City or other distinguishing  letter group.
+
+For example, DCwash03 Might be the 3rd IRLP repeater in Washington DC,
+MDnasa might be the repeater at the NASA Goddard center in Greenbelt
+Maryland.  VAamrad might be the AMRAD repeater in Virginia.
+Again, these NAMES automatically convert to a TouchTone HASH code.
+In this case MDnasa is 636272  Or MD-NASA is 6306272
+
+Phasing in these new node numbers is easy.  In APRStt, all HASH coded
+callsigns are preceeded with a "0" to indicate it is a hashed call.
+If it doesnt start with a "0" then it is an existing NODE number or it is
+a fully spelled out callsign.  In this case, WB4APR on the TTone pad is
+922444427A77 when fully spelled out.  The "A" key is a separator when two
+adjacent letters are on the same TTone key.  The TTOne HASH plan is:
+
+  QZ1   ABC2  DEF3
+  GHI4  JKL5  MNO6
+  PRS7  TUV8  WXY9
+   *    _0     #
+
+MULTIPLE NODES PER CALL:  Just like Packet allows up to 16 differnet
+SSID's under a single callsign, the inventiveness of HAM radio operators
+will require multiple uses per call.  Following on the ECHOlink definition
+of -R and -L for Repeaters and links, this convention can be extended to
+a total of 9 different stations subtypes.  Here we carefully make sure
+there isa one-to-one correspondence to TTone keys so that we have no
+ambiguity.  Here are my suggestions for the 9 station types:
+
+KEY  LTR MEANING
+---- --- -------
+1QZ   Q  Qth
+2ABC  C  Club station
+3DEF  E  EOC or other emergency station
+4GHI  H  HF station
+5JKL  L  Link station
+6MNO  M  Mobile station
+7PRS  R  Repeater
+8TUV  T  Telephone link (local calls)
+9WXY  W  Work station
+
+
+Thats all there is to it.  The result will be a revolution in
+HAM radio, because now users can see on the tiny-web-pages of
+their radio, the status of all nodes (known or unknown) that
+are in range, no matter where they are.  And the Frquency,
+PL and status are also shown.
+
+Later we can add all the additional leveraging ideas that I have
+been talking about for using APRS as an adjunct to VOICE Internet
+interfaces to HAM radio..
+
+de WB4APR, Bob
+
+

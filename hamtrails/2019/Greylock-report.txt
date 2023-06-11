@@ -1,0 +1,122 @@
+***************************************************************************
+*             ATGP 2019 Report for MT Greylock    by Jim, N4WFP          75
+***************************************************************************
+
+My apologizes for both being late to the event and being late in sending in 
+my report. Work travel has seriously impacted my Ham Radio projects and 
+time over the previous several months.
+
+Below is a link to a Google Map that I built using the last positions 
+stored in my D72 List from all the Digi sites.
+
+https://drive.google.com/open?id=1HJIYVrRusfwfXDbCsA_9KSMDYlb0mtjf&usp=sharing 
+
+
+Planned Operation:
+
+Some months before this event I obtained a new old-stock KAM-XL. I have one 
+of the original KAMs from decades ago. Great modems. My plan was to 
+interface the KAM-XL to my IC-7100 and then operate that as the DIGI and 
+use the D72 as a QA receiver. As is normal work got busy and I had to travel 
+quite a bit for work preceeding the event so the build of the GP setup 
+started the night before the event. This included a Lead Acid Battery to 
+power the whole setup independent of the vehicle. Had a tri-pod mast with 
+a 2m ladder line role out antenna. This whole package was my idea for a 
+get-away emergency package. After getting all the hardware interfaced I went 
+to start configuring the KAM-XL with the GP parameters. Well it appears that 
+either the KAM-XL didn't have an up-to-date firmware load or it was never 
+updated to support the New-N paradigm. Anyone comment on that? After working 
+until after midnight I finally tossed in the towel and gave up going to bed.
+
+Woke up the next morning late (0730) and needed to program the D72 for GP 
+parameters and get going. I currently stay in Merrimack NH so the drive was 
+about 3 hours. Ran into traffic which caused even further delay. Arrival was 
+close to 13:00 (again sorry for that).
+
+I had been issued a permit by the State of MA to setup at the Thurderbolt 
+Shelter near the summit. I was planning on doing POTA HF in addition to 
+the GP. Permit was not exclusive use and provided no reserved parking. The 
+Shelter was not in the optimal location for GP on the NE side of the summit 
+and arriving late parking was an issue. I attempted to use that location 
+last year with the D72 using it's factory antenna which performed very 
+poorly hence the new setup I planned to use. As discussed the planned setup 
+was a no-go.
+
+Once within repeater range of the 146.91 Mt Greylock repeater I made contact 
+with Jeff N1JCM at Equinox-12 about 50 minutes out to advise I was late but 
+enroute. Arrived at the Mt Greylock access road and started the accent up 
+the mountain (in vehicle). D72 was activated at that point. As I arrived at 
+the first overlook area close to the summit I was starting to see significant 
+packet traffic and was able to verify with EQ-12 that he was seeing my beacon. 
+It appeared that this location was a good location to stay at (Location 1 
+42°38'24.5"N 73°10'17.5"W 42.640140, -73.171540) to maintain North - South 
+APRS traffic for the event.
+
+At 1430 as directed I switched to 9600. I could still see packets from EQ-12 
+but he was no longer seeing mine. Troubleshot for about 15 minutes or so. 
+Since I had never operated the D72 at 9600 I was not sure what the issue 
+might be (equipment, propagation etc). Finally at 14:45 I decided to move 
+to a new location and drove further up the road toward the summit. At 14:50 
+I arrived at the second location (Location 2 42°38'15.8"N 73°10'21.6"W 
+(42.637722, -73.172667). EQ-12 started seeing packets again from my station. 
+Remained at that location until the conclusion of the event. While both 
+locations were at 3k+ feet elevation they both had excessive foliage growth 
+on the mountain side higher then the vehicle antenna. Likely some attenuation 
+since I was only putting out 5-6 watts depending on the location. The only 
+location on Mount Greylock that would not have foliage issues (this time of 
+year) would be the summit. No parking in that area with the clear view, 
+heavy vehicle and pedestrian traffic. 
+
+Actual Equipment Used: D72 on high power into a 5/8 Mag-Mount antenna on the 
+roof of my vehicle with power from the vehicle.
+
+Lessons Learned;
+1) Don't wait until the last minute to build and implement a new methodology. 
+Best laid plans of mice and men ...
+
+2) Mt Greylock geography shadows half the summit from both the North and 
+South Stations without using masted antenna and additional power
+
+3) D72 9600 performance is a bit finicky. I think one of the previous emails 
+mentioned something to that effect. I never used it at 9600 before so I had 
+no idea
+
+4) Both locations listed above are acceptable to complete the required N-S 
+chain with the necessary visibility but only the second one allowed the D72 
+to be successful at 9600
+
+5) I was finally able to use the APRS messaging functions. Something that I 
+never was able to do before. Sure helps to read the manual. Where I normally 
+stay/live in NH there does not appear to be significant APRS message traffic 
+so this event was an excellent opportunity to learn about APRS messaging and 
+actually use/practice the capability.
+
+6) I still have not figured out if the D72 offers any type of indication via 
+the display that it is digipeating a packet, anyone ???
+
+7) While 9600 offers far superior throughput it does introduce issues (at 
+least using a D72)
+
+Attached is a spreadsheet that contains the data I collected using the D72.
+
+Next Year: 2019 was my second year. I continued learning more about APRS and 
+the D72 compared to last year. I may try coming up with a truly trans-
+portable APRS DIGI package with higher power, masted  antenna for next year. 
+Perhaps using a modern APRS DIGI that is primarily designed to be a DIGI.
+
+Though I do have a caveat for next year. I work for the Department of the 
+Air Force and at the moment I am processing for a deployment in October for 
+12mo in Afghanistan. The only  thing  that might prevent me from going on 
+that deployment is not receiving a required medical waiver. If I am not 
+deployed I plan on participating next year. If I do make the deployment I 
+am going to try and obtain an Afghanistan Ham License/Permit. If that occurs 
+then you may see a APRS PICO Balloon https://gmigliarini.wixsite.com/wb8elk
+with an Afghanistan callsign sometime between Nov 2019 and Nov 2020. 
+
+Hat's off to everyone that participated especially those that actually 
+climbed to the mountain tops. And also to Bob for starting this whole thing 
+off decades ago!
+
+73's - Jim - N4WFP
+
+

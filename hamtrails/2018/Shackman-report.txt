@@ -1,0 +1,144 @@
+***************************************************************************
+*                  ATGP 2018 Report for SHACKMAN                         75
+***************************************************************************
+
+I'm heading out of town tomorrow, so I wanted to write down a stream-of-
+consciousness summary of today's AT GP attempt.
+
+My first word would be "AWESOME".  As in how awesome it is to watch the 
+chain coming together knowing at least some of the places that stations 
+are activating.  My family went to Springer for the first ever AT GP attempt, 
+so I know that area (we actually packed the gear up to the official trail 
+staring point).  We've visited Gatlinburg and from there up to Clingman's 
+Dome.  My son, KJ4DXK, and I activated it once for SOTA complete with 
+packing our Yaesu 817 and BuddiPole along the AT from the main road.  
+We've been to the top of Mt Washington a day after they finally cleared the 
+last snow one spring.  And I can only imaging the beautiful views from the 
+other locations (and I've seen and appreciated the pictures).  I really wish 
+the mountains were closer to Florida (but leave the winter air far away).  
+Anyway, on to the view from the shack.
+
+I set up my MultiTracks and checked various messages for who was where and 
+what time they expected to arrive.  At 9:15am, I got an APRS-IS message from 
+W3GK telling me that COMERS-4 came on the air...in Raleigh, but coming through
+ the KF4YLM-1 IGate 140 miles away.  Turns out they had their coordinates 
+wrong or not selected as it moved to the proper location a bit later.  
+
+Note of encouragement:  If you can APRS track your mobile, even if it's only 
+APRS-IS tracking with a cellphone app, it can make it easier to see the 
+deployment coming together.
+
+Around 10:00 stations started appearing through the few 144.340 receive IGates.  
+MDMNTS-7 came through HWKSBL-6 and into the K3FRT-10 IGate.  Watching and 
+waiting added AOMTN-5 (via HWKSBL-6) at 10:46.  ROAN-3 came through the 
+N4YH-10 IGate at 10:50.  At 10:52, CLNGMN-2 digipeated ROAN-3's packet and 
+into the N4YH-10 IGate, so at least two digipeaters are known functional 
+along with 5 stations.  By 10:56, I had seen packets from stations 2 through 7.
+
+At about 10:40 I noticed an FTM-350 beaconing APRS from Mt Washington, KB1POR-9.  
+I had a nice APRS (-IS on my end, RF on his) QSO with him at 11:00 and 
+suggested that he try contacting WA1KLI and/or Katahdin on 445.925 Simplex.  
+More on that later.
+
+At 11:09, I saw a ROAN-3 packet digipeated by SPRNGR-1, so add another 
+(likely 2) operating digipeaters to the known list.  I had seen CLNGMN-2 just 
+before 11:00 and SPRNGR seeing ROAN says that CLNGMN must be digipeating.
+At 11:19, WG3K let me know that squelch was open at HWKSBL-6 but it was now 
+fixed which explained the lack of seeing that station for a while.
+By 11:20, I was seriously questing whether ROAN-3 and/or COMERS-4 were 
+digipeating.  1-3 were working fine, and 4-7 were showing up, but I didn't see 
+any cross-polination between the two chain segments.  WG3K took that information 
+and ran with it because at 11:48 he informed me that ROAN was working on the 
+digipeat problem.  AL0I had reported that action via the AT ANSRVR after WG3K 
+had asked the question.
+
+In the meantime, at 11:23, N1JCM-12 reported via AT ANSRVR that "mtw13 digi 
+dead voiceok" (sic).  We were seeing stations 1-9 via IGates and 12 had reported 
+seeing 11 back at 10:34, so we really need Mt Washington.  I got on the phone 
+to MTSTJO-14 who had UHF voice comm to Mt Washington and suggested that they 
+see if KB1POR-9 would be willing to join the activity, even though the FTM-350 
+doesn't digipeat.  They agreed and worked on configuring for MTWASH-13 and 
+HOP7-7,HOP7-7 paths.
+
+By 11:50 I was working with SAMSPT-10 which seemed like it wasn't bridging 
+between 11 and 9.  Got MTSTJO in contact with SAMSPT to see if they could ensure 
+the D710 was properly configured.  In the end, the configuration was correct, 
+but a bad piece of borrowed coax was leaving SAMSPT-10 mostly incommunicado.  
+Thankfully, a spare was on hand and the station made it on the air sometime 
+later.
+
+At 12:03 SPRNGR-1's comment indicated that they had seen 1-4, so apparently 
+ROAN-3 was digipeating by then.  By 12:07, SPRNGR-1 was seeing 1-5.  Note for 
+the "encouragement" list:  It's really, REALLY helpful if you update your 
+comment to indicate what stations you have copied!
+
+By 12:10, GDHILL-8 reported that they had seen stations 1-9, further confirming 
+that ROAN-3 must be digipeating.  But 1-3 were still not seeing anything north 
+of 5.
+
+At 12:40, HWKSBL-6  reported that they were copying packets from AOMTN-5, but 
+not vice versa.  That explained the observations.  Packets from the south were 
+able to get north, but packets from the north were not getting to the south.  
+WG3K helped AOMTN-5 relocated their station which improved things a bit, but 
+definitely not reliably.  See his e-mail about the 9600 baud link test between 
+5 and 6 at the end of the day.
+
+At 12:41 I requested SAMSPT-10 to work with CAMLBK-9 (beaconing as CMLBK-9) 
+and GRYLCK-11 to see why further north stations are not coming through.  
+SAMSPT-10 had seen 9-7, 5, and 3 by then, but nothing from the north so either 
+he wasn't copying -11 or -9 wasn't copying him.  It was 13:04 when SAMSPT-10 
+starting appearing and we received the report that the issue was bad coax.
+
+At 13:40 we received notice that MTWASH-13 had "voice from kataden" (sic).  
+So Tim & company were on station and safe.
+
+At 13:48 we observed a MTWASH-13 packet digipeated by HWKSBL-6 and subsequently 
+to an IGate, so the north part of the chain appears to be coming together.
+
+By 14:40, the northern folks were working out an alternate route to get from
+Katahdin into the chain.  They figured that contact could go from Katahdin to 
+Mt Carlton to Mt St Joe to Equinox and subsequently points south.  But by the 
+time they were working that, it appeared that the link between MTSTJO-14 and 
+EQINOX-12 had gone sour.  No idea what happened there.
+
+Some stations were anxious to call it a day, and the northern links were not 
+likely to be recoverable, and even though the weather was gorgeous on Mt Katahdin 
+according to Tim, in consultation with Bob we decided to call it a wrap at 15:00.  
+We made efforts to get the word out via the APRS chain as well as discrete 
+contact points along the chain, so I hope everyone got a positive indication and 
+didn't have to figure out that the event was over when the traffic dried up.  
+If so, please accept my apology and let me know (privately) where you were so I 
+can try to fix the notifications next time.
+
+I have to say I enjoy the event, even though I don't get any of the fresh air and 
+view benefits.  I appreciate being a part of it and envy those of you that are 
+actually in the field and doing the "real" work.  As WG3K told me at 10:16 as the 
+event was unfolding "This is painful to watch from a distance.  How do you do 
+it?"  He's so right!
+I may have mis-stated who did what, and I know I haven't mentioned everybody 
+that did something exceptional, but thank you to ALL and apologies to those.
+I'm headed off on a vacation tomorrow, but if you've got logs, please post 
+them to the Yahoo group so others can analyze them before I get back.  
+Especially if you have raw RF logs from anywhere.  The APRS-IS logs are woeful 
+because only the first copy of any packet comes through, so if a packet started 
+at HWKSBL-6 (which had a direct link to an IGate), the APRS-IS won't see any 
+other indication of how far that packet traveled.  But a raw RF log from, say 
+the IGate that was copying 1-3, would show that packet in all of it's 
+digipeated and HOP7-reduced glory.
+
+Lynn (D) - KJ4ERJ - 2018 AT GP Shackman (formerly Potato)
+
+PS.  If you were ever curious about how I watch the event unfold, here's a 
+screen shot of my second monitor.  
+
+See:  http://aprs.org/hamtrails/Shackman/Shackman-screen-2018.png
+
+15 APRSIS32 MultiTracks, one centered on each station object.  They run on a 
+full APRS-IS feed with View/None and View/Tracks so that I only see the centered 
+station and anything else that moves.  
+
+Unfortunately, this also means that I don't see the event station, even when 
+it does get to the APRS-IS, but that's fine by me.  I also run a FilterTest 
+windows using d/HOP* and add in any dedicated 144.340 IGates with an e/ filter.  
+(Just don't ask me why the black labels turned white in the screen cap!)
+

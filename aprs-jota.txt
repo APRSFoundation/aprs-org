@@ -1,0 +1,60 @@
+GENERIC CALLSIGNS FOR NATIONAL APRS EVENTS                 20 Oct 2005
+----------------------------------------------------------------------
+
+The purpose of these National Generic Callsigns is so that APRS can 
+be used to support connectivity between widely and sparsely situated
+groups on special events.  Examples of such groups and generic calls
+are:
+
+    SCOUTS, JOTA, GUARD,  KIDS,  SCR,  REDCROSS, 
+    SATERN, ARES, RACES,  MARS,  CAP,  SKYWARN
+    FOUR-H, CQFD, YOUTH,  ARMAD
+
+We can use FINDU.COM to get downloadable and printable lists of all 
+stations that intend to participate in an event or are currently 
+active in that event.  Stations wanting to make contacts during the 
+event can print out the list before going into the field, and then 
+can send normal APRS messages to other stations on the list whereever 
+they may be via the normal  APRS-IS system.  To make this automatic, 
+here is how it works:
+
+1) Prior to the event, stations desiring to be on a list simply send 
+an APRS message to one of the National Generic Calls listed above.
+
+2) In his 1-line message he can share any particulars that might be 
+of interest to others.  Such as location and special notes.
+
+3) Anyone can download the list of all such stations for any given
+national generic callsign by entering it into the CALL parameter in
+the following URL:
+
+    http://www.findu.com/cgi-bin/msg.cgi?call=scouts
+
+This system is in place and works.  All we have to do for each event
+is make sure people know how to send their messages to appear on the
+list and how to download the list prior to the event.
+
+For the upcoming ARMAD event on 14 Novermber, just pur armad in
+place of "scouts" in teh above URL.
+
+EXAMPLE OF USE:  For scouting's annual one-day JOTA or Jamboree-On-
+the-Air, for example, we want the capability for a JOTA station to 
+send an APRS MESSAGE to other JOTA stations, but in APRS, you need
+to know the callsigns of someone to send any traffic.  So those
+stations intending to participate should plan on sending a message
+prior to the event to JOTA so that they will appear on the list.
+
+All JOTA stations should download the FINDU.COM list for that JOTA
+callsign and take it with them to the field.  During the event, 
+then, you will have a list of calls and contacts you can try to make 
+via APRS from anywhere on the planet.
+
+POSITIONS:  Remember that once the IGates see traffic between 
+stations A and B, then they will also send a courtesy POSIT so you 
+also can see each other on the map.  Thats how the APRS IGate 
+systems are supposed to work.  
+
+See you on the air on JOTA!
+
+de WB4APR-7
+

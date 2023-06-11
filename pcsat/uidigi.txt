@@ -1,0 +1,68 @@
+PCSAT UI-DIGI CALLSIGNS                                    WB4APR
+-----------------------                                    ------
+
+
+PCsat was designed to support the generic digipeater aliases of 
+"APRSAT" and "ARISS" to set the trend for all space UI digipeaters 
+and also the ISS Digipeating mission.  With the new packet system
+activated on ISS on 22 Feb, this is now a reality!
+
+UNPROTO APRS VIA PCSAT-1   Use this for all normal PCsat ops
+UNPROTO APRS VIA W3ADO-1   Use via PCsat when it resets (see cautions)
+UNPROTO APRS VIA ARISS     Use via PCSAT or ISS!
+
+Other aliases currently supported so that users do not have to 
+re-configure between Terrestrial, and ISS operation are RELAY, 
+WIDE and the ISS ARISS as noted above.
+
+
+BACKGROUIND:
+
+PCsat was designed to use the generic digipeater alias of "APRSAT"
+to set the trend for all space UI digipeaters.  By using "APRSAT" 
+as the digipeating MYALIAS for PCsat and all future follow-on UI 
+digipeating missions, mobiles would  not have to reconfigure for 
+each satellite that came in to  view.  This takes advantage of one 
+of the primary features of APRS in the use of generic, instead of 
+specific digipeating.  Thus "which" satellite is in view would be
+transparent to the end user on the ground in his mobile...
+
+Since all APRS digipeaters support up to 4 UIDIGI Aliases, PCsat 
+was flown with these defaults in ROM:
+
+UIDIGI ALIASES:       RELAY,  WIDE,  APRSAT  and  ARISS
+
+The RELAY and WIDE are the universal generic digipeater aliases for 
+all APRS digiepaters everywhere and so by supporting these on orbit 
+means that the mobile or HT user does not even have to reconfigure 
+his mobile or HT between the terreestrial and on-orbit systems.  He 
+only has to change operating frequency.
+
+For the last several months, PCsat has supported the ISS path of
+NOCALL.  But as of 22 Feb 2002, the new ISS packet system now
+supports ARISS so that ISS users can switch  between PCsat and 
+ISS without any requirmeent to change their UNPROTO path.
+
+Finally, however, we are also having occasional PCsat resets on the
+A side and so the operating call of PCSAT-1 is lost on each reset and
+the UIDIGI functions are disabled.  The PCsat callsign reverts to the
+default ROM call of W3ADO-1.  Thus, during these periods before the
+command station is able to reload PCSAT's operating configuration,
+the only digi callsign that will work then is W3ADO-1.
+
+To minimize confusion and assure that high priority users and special
+demos can still use PCsat, we have now arrived at the following 
+NORMAL operating mode for PCsat.  The UIDIGI aliases that will be 
+supported until ISS is squared away are:
+
+UIDIGI ALIASES:       RELAY,  WIDE,  ARISS, and W3ADO-1
+
+This way, priority users can set their UNPROTO path to APRS VIA 
+W3ADO-1 and ALWAYS get in no matter what the state of PCsat.  But we 
+must ask that this only be used for PRIORITY stations.  All others 
+should use either PCSAT-1, RELAY or WIDE.  THis way, they can operate
+with confidence that if PCsat is LOADED for NORMAL digipeating, then 
+their signals will be digipeated.  But if PCsat has RESET into SAFE 
+mode, then PCsat will ignore their uplinks and there is no harm done.
+
+de WB4APR

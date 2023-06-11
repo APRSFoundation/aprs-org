@@ -1,0 +1,28 @@
+COMERS ROCK - 2016,  John KK4BSM
+--------------------------------
+
+Comers Rock had issues with both our D700As yesterday.  
+
+For the record, we were able to see from Roan-3, to Equinox-12 on 1200, 
+and at least 3-9 on 9600.  UHF voice to both neighbors worked fine.
+
+Generated beacons worked fine, but strangely, both rigs would not 
+digipeat decoded packets.  We hadn't touched anything since last year, 
+so settings should have remained the same.  
+
+While attempting to look at UIDIGI settings, we were plagued with serial 
+issues.  Despite bringing extensive cabling and software, we lacked a 
+"gender-bender" serial adapter.  We spent over an hour trying to jerry-
+rig a jumper wire equivalent with no success.  Zach, KJ4QLP is still 
+trying to diagnose the issue.  I'll report back if I hear from him.
+
+Setup
+2 x D700As
+1 x Diamond X-50 at 15' (9913 coax)
+2 x 7Ah SLAB batteries
+2 x Linux/Windows laptops
+
+VTARA will try upgrading to a D710GA before next year.
+Apologies for being "that" station.
+
+John, KK4BSM

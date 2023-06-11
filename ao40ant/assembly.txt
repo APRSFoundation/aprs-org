@@ -1,0 +1,158 @@
+          A Portable Reflector S-Band (APRS) Antenna
+                   Bob Bruninga, WB4APR
+
+This APRS Antenna (sorry, I couldn't resist the name) is designed to 
+be a portable lightweight communications antenna for the traveler who 
+needs ready access to worldwide satellite voice communications via 
+AO-40.  It is not designed to be a permanent outdoors antenna system
+suitable for all weather conditions.  It uses mixed metals and non 
+weather proof motor positioning controls.  But beyond these limitations,
+it is a neat, foldable (much assembly required) 1 meter antenna system 
+including a tripod and remote control motor system that will fit in a 
+normal suitcase (24" long).  Or the dish can be trimmed to 21" panels
+to fit in any industry standard suitcase.  
+
+The Reflector System is based on the foldable vegetable spreader concept
+of 16 wedges deployed around a central hub and held in place by a
+web of radial spokes.  An F/D ratio of .3 was chosen for the best 
+match to the readily available AIDC 3033 and other simple dipole feed
+systems.   Using an unmodified AIDC converter (but with the 1/4 wave
+stub filter removed), the dish provides a measured 11 dB SNR on the
+middle beacon.  Making the filter mods improves this to 14 dB SNR or 
+better.
+
+The portable mount and remote control system takes advantage of the near 
+zero inclination of the AO-40 orbit by using a polar mount.  With this 
+mount, not only is almost all tracking movement done with just one motor,
+but also alignment is trivial. 
+
+The polar mount has the primary axis of rotation aligned with the earths
+polar axis.  Thus with the 2 degree inclination of AO-40, the antenna
+is never more than 4 degrees or so off of the satellite in the up/down
+direction.  Since this is within the beamwidth of the antenna, you can
+always find AO-40 by just setting the up/down tweaking motor to center
+and moving the antenna about the polar axis until you find the beacon.
+From then on, you can track AO-40 for hours with only occassional bumps
+of the polar motor.
+
+Alignment only requires pointing the front leg of the mount towards south
+and then lengthening or shortening the legs to achieve a tilt angle for
+the polar axis that equals your station's latitude.
+
+The APRS Antenna was designed entirely of readily available Home Depot 
+plumbing and electrical fittings and parts.  The total cost of these
+parts is less than $xx.   The two electrical screwdrivers used for the
+drive system add an additional $20 each to the overall system.  
+
+Since the APRS antenna was designed  only for portable operation, the 
+remote control seems a little bit of a luxury when your operations will 
+usually be done from the parking lot anyway.  But remembering how cold 
+the parking lot at an AMSAT convention in Maine can be, I decided the
+added cost of the screwdrivers was small compared to the creature
+comforts of working AO-40 from the hotel lobby instead of the freezing
+termperatures outside.  Also the screwdrivers help with ballast to 
+balance the antenna, and since the extra weight is required anyway, it
+may as well be functional.
+
+One advantage of the S-Band downconverter at the antenna is that the
+coax run can be over 100 feet of commmon RG-59 coax cable.  This is why
+it seems very practical to add the remote motor control for convenient
+operation indoors.  To date, I have not focused too much on the uplink
+since there is nothing unique about transmitting on UHF.  But I hope to
+make a 6 element UHF addition to the feed system so that the dish can
+be used as a reflector as well.
+
+ASSEMBLY:  
+
+Extreme care should be taken to align parts in exactly 90 or 45 degree
+angles true to each other.  If you follow these steps in sequence, the
+mounting system should go together quite well.  If anything has to be
+forced, you can re-heat some solder joints to relieve stress.
+
+Initial Assembly Preparations:  First solder all parts that need no
+mutual alignmnet into fixed solid Pieces as follows:
+
+ 1) Solder the N1, N2 and N3 parts into the North Yoke Piece
+ 2) Solder the B3, B4, B5, B6 and B7 pieces into the Base Unit Piece
+ 3) Solder the S1, S2, S3 south leg Piece
+ 4) Solder the S4, S5, S6 Polar Axle Piece
+ 5) Solder the S7, S8, S9 center brace Piece
+ 6) Solder the P6 and P7 side bracket Pieces
+
+Unit Alignment Assembly:  Assemble the pieces temporarily using tape at
+all removable junctions so that final alignment can be obtained prior
+to final soldering of the N5 and N6 street elbows and drilling of pilot
+holes for all assembly clips.
+
+ 1) Add the N4 pipes to the North Yoke Piece and tape in place.
+ 2) Add the N5 elbows in the same plane as the N4 pipes.
+ 2) Add the N6 elbows not in yoke plane, but in the vertical plane.
+ 3) Add and tape the two N7 "T"'s and N8 cross pipe to each other
+ 4) Add the two B1 vertical "T"'s and tape to the two B2 pipes
+ 5) Tape the two B2 pipes to the Base Unit Piece.
+ 6) Add and tape the south Leg Piece
+ 7) Add and tape the Center Brace Piece
+ 8) Add and tape the Polar Axle Piece to complete the structure.
+ 9) Now solder the N4, N5 and N6 pieces together into two diagonal pieces.
+ 10) Now solder the two N7 and two B1 "T"'s into two leg pieces.
+
+Parts list:
+-----------
+
+North Yoke: 
+ N1 - 5.75" Cu pipe
+ N2 - "T"
+ N3 - Two 45 degree street elbows
+ N4 - two 18" Cu pipes
+ N5 - two 45 degree street elbows
+ N6 - two 45 degree street elbows
+ N7 - Two Cu "T"'s
+ N8 - 27.5" Cu cross pipe
+
+Base Yoke:
+ B1 - Two Cu "T"'s
+ B2 - Two 18" Cu pipes
+ B3 - Two 45 degree street elbows
+ B4 - Cu "T"
+ B5 - 1" splice piece
+ B6 - Vertical "T"
+ B7 - 12.5" Cu south brace
+
+South Leg:
+ S1 - Cu "T"
+ S2 - 4" Vertical pipe
+ S3 - 45 degree elbow
+ S4 - 12" Cu Polar pipe
+ S5 - "T"
+ S6 - 6" Cu polar bearing pipe
+ S7 - 5.25" Angle center brace
+ S8 - 45 degree elbow
+ S9 - 8" Vertical brace
+
+Polar Bearing Structure:
+ P1 - Bearing "T"
+ P2 - 1.5" bearing extension pipe
+ P3 - Bearing cross "T"
+ P4 - two 1" splice pieces
+ P5 - two bracket "T"'s cut 1/8th inch short on top end
+ P6 - two 90 degree street elbows cut 1/8th inch short
+ P7 - two 7.5" side brackets
+ P8 - 3 hole cast aluminum conduit box
+
+Declination Mount
+ D1 - 6" strap hinge
+ D2 - 1/2" conduit set screw connector
+ D3 - hand made nut holder
+ D4 - 4" threaded 1/4" x 20 bolt
+ D5 - Spring
+ D6 - Declination hand crank piece
+ D7 - Hand crank nut
+ D8 - Hand crank bolt 2.5 inch 1/4" x 20 bolt and nut
+
+Dish Panels
+
+These are formed from a thin piece of Aluminum into panels that
+are 24" long and taper on the sides.  I hope to be able to make
+these available from a local sheet metal bender...
+
+de WB4APR, Bob

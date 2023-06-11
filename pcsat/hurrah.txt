@@ -1,0 +1,59 @@
+22 March 2002
+From:  WB4APR
+to:    AMSAT/APRS
+
+SUBJECT:   PCsat returns for a last Hurrah!
+
+If you have been waiting to try PCsat and just not gotten around to it,
+now is your last chance.  DIGI will be on on all passes as long as it
+lives.  It will only work while in sunshine for a few more days so if you
+have had your fun, back off and let others play.  Lets see some live
+operators, not just timed beacons... Share...  Celebrate the Wake...
+
+If you can operate an IGate/Satgate, bring it up. Lets capture the moment.
+
+After a few more tries through Friday, we are throwing in the towel on our
+12 day round-the-clock PCsat recovery attempts.  In that time we have
+documented over 98 passes of command attempts.  Most have been successful
+in commanding PCsat to low power mode, but none in the last 7 days have
+resulted in PCsat making it through the next eclipse (eclipse happens
+every 100 minutes and lasts 35 minutes).  We had turned off all users
+starting on the 18th.
+
+PCsat will continue to work while in the sun for a few more days but the
+eclipse percentage even gets about 3% worse over the next week before it
+begins to improve slightly for about a week from the worst case 35% up to
+25% in 3 weeks from now.  We won't see full sun till June!  Even if we
+nursed it on every one of the 300 orbits between now and the minimum in
+early April, there is no way the batteries will make it through each
+eclipse.  That is still 300 deep discharges to go and 1100 to June!
+
+Since we cannot get it to stay in low power mode through eclipse, it is
+just going to die anyway.  Since PCsat was intended as a COMM relay and we
+have learned all we are going to learn from it (lots!), we are going to
+turn it back on for users this weekend as a last hurrah!
+
+Command stations will continue to command low power mode, but will not be
+exercising the extrordinary pre-sunrise efforts, but take the more
+convenient command passes to issue the commands.
+
+Unlike other microsats who can keep their low power transmitters on all
+the time in Sun, PCsat's packet transmitter even under full load, is only
+on say 20% of the time due to the low dutycycle of Packet.  So although
+there is enough average power to power PCsat for years while it is in Sun,
+if the batteries are completely gone, then there is not enough PEAK power
+to let PCsat even transmit a single packet even though there is plenty of
+average power.  PCsat draws 1200 ma when it transmits.  The solar panels
+in full sun only produce about 350 ma.
+
+Once the batteries can no longer provide 1200 ma for a few seconds, each
+time it tries to transmnit, the batteries will go down, and the TNC will
+reset.  This will be the end.. Actually we may be able to get packets out
+of it occassionally for weeks to come, but it all depends on when the
+first battery cells short or reverse.  Thats it...
+
+Enjoy
+
+Bob, WB4APR
+US Naval Academy Satellite Command Station
+

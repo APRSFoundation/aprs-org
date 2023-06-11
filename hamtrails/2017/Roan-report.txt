@@ -1,0 +1,106 @@
+***************************************************************************
+*                  ATGP 2017 Report for Roan                             75
+***************************************************************************
+2017 AT Golden Packet
+Roan Mountain Report
+ 
+Operators:
+Glenn - N4AZR * Gino - KI4YXO * Christy - KJ4AEO * Nathan (13) Gino and 
+Christy's oldest * and* Nelson (4) their youngest
+
+I've been interested in the Golden Packet event since 2010 when I first 
+read about it online. Right away I picked up on the fact that Roan Mountain 
+was one of the sites. My family has been spending our Thanksgiving holiday 
+at a number of rental properties just inside NC from the Carvers Gap NC/TN 
+state line since the early 1980's, so this is very special place for me 
+with a lot of fun memories over the years. I always enjoy coming up here.
+
+Our crew, including me, are all from the Raleigh - Durham area of NC 
+representing the South Wake Amateur Radio Club. Gino is our special events 
+director. We are a "do-stuff" club, so this is a great event for us.
+
+Although it is not a bad day trip, it wears you out with the 8+ hrs of 
+driving round trip. We actually started planning this trip with the intent 
+of riding our motorcycles up to Roan with Christy following in the car as 
+a support vehicle. Unfortunately, the past week's temperatures changed 
+our minds. It has been nearly 100 degrees every day in central NC this 
+week with Friday being no exception and bad afternoon storms every day as 
+well. So we changed our plans and decided to ride together in the car. 
+Maybe next year we will do the bikes.
+
+So...this year we decided to spend the night in Marion, NC as planned 
+(about an hour away from Roan). While driving up on Friday afternoon, Gino 
+had a quick mobile QSO on the Mt Mitchell 145.19 repeater with Bill KB4KFT. 
+Bill was familar with the AT Golden Packet event and said that he had 
+participated in it many years ago. He told us that he was planning to visit 
+Roan Mountain on Saturday anyway just to visit, so he would stop by to 
+check out our setup. We arrived safely in Marion and had a nice relaxing 
+stay at the hotel with the intent of leaving early in the morning. The best 
+laid plans....
+
+This morning, like many of us had happen today, is where the fun started 
+for us too. Both of us had to straighten out incorrect charges on our 
+hotel bill. For some reason, I was booked for 4 rooms and Gino was double 
+charged for his room. Crazy. It took us a while to get that straight and 
+we finally departed for Roan a little after 10am. A late start, but in the
+ end it didn't make much difference.
+We arrived on-site at about 11:15am, and had our station set up a few 
+minutes later with voice comms to our adjacent sites. We saw the network 
+from Springer to Apple Orchard come together quickly on my D700. 
+Everything seemed very stable but we were not seeing anything north of 
+Apple Orchard. Our UHF links were pretty weak in both directions, but 
+VHF was strong. This was different than other years I had operated at the 
+Roan Mountain site. Maybe poor band conditions? Who knows?
+
+Shortly after we set up, Bill KB4KFT stopped by as promised. We chatted 
+about our setup along with various other "war stories" for an hour or so 
+before he had to depart. He was very excited about the possibility of 
+getting to see the ATGP happen, but alas he ran out of time.
+
+Christy KJ4AEO took her boys off to see the other sights at the top of the 
+mountain. Roan Mountain has an incredible Rhododendron garden as well as 
+a newly built overlook at the Roan High Bluff that is a couple of miles 
+walk from where we set up. I highly recommend visiting this area if you 
+ever have a chance. They had a nice time seeing the sights while we 
+played radio.
+
+As the 2pm hour approached, I thought about going QRT after not hearing 
+anything north of Apple Orchard pretty much since we set up. There is no 
+cell phone service on the top of Roan, and for some reason it is tough 
+to get into the 144.39 APRS network up there. So getting a station on to 
+ANSRVR is challenging. I spent the remainder of the 1pm hour trying to 
+get on to ANSRVR to get a status from up North. At about this time, Todd 
+AL0I called me on voice from Boone and advised that we switch to 1200bps. 
+After reading the other emails about this switch tonight, it makes 
+perfect sense. We switched and I relayed to Clingmans and Comers Rock 
+to do the same. I mentioned to Gino that this was it and it was going 
+to happen...and sure enough within a couple of minutes the map was filled 
+on my Xastir screen. Awesome!
+We exchanged SSTV pictures with Comers Rock using our phones to encode/
+decode data. This was really neat! Great idea to do this as a side project 
+this year! The boys thought the SSTV was really cool!
+
+We shut down at about 3:15pm, headed into Roan Mountain, TN to get some 
+lunch, and then headed back home.
+
+Weather was good but unpredictable as always. Temps were about 65 degrees 
+the entire time. Most of the time we were in the clouds. We had heavy 
+rain during the 1pm hour. Otherwise dry.
+
+As usual, we had several hikers and visitors stop by to see what we 
+were doing. They were very interested once we explained it. The visual 
+display in Xastir is always interesting to people when I show it to them.
+
+I took a lot of pictures this year of the surrounding area (Roan was 
+clouded in almost the entire time), our station, my D700 screens, my 
+Xastir screen, and the SSTV image we received from Comers. They are 
+uploaded to the group in a dedicated album. Anybody is welcome to use 
+these pictures if they wish to do so.
+As always I would like to thank everybody who participates in this event 
+every year - both the folks back home coordinating and the folks in the 
+field. This is a lot of fun for me, it really represents what ham radio 
+is all about, and I look forward to it every summer!
+
+See you all next year!
+73,
+Glenn N4AZR

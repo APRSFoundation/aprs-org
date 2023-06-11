@@ -1,0 +1,58 @@
+ROAN Report - 2013                                           22 July 2013
+-------------------------------------------------------------------------
+
+Operators: K4KWL Dave and N4AZR Glenn
+
+Photos of the setup are uploaded in the Photos area of the Yahoo Group.
+
+Upon setup around 11am we were immediately able to hear Clingman's Dome 
+and Comers Rock on both APRS and on Voice.  Comers Rock was a very strong 
+signal and Clingmans was a bit weaker but was very readable.
+
+Primary Radio (ROAN-3) was: TM-D710 running on a 9ah sealed lead acid 
+battery with a Diamond x50 antenna on a telescoping mast around 
+36 feet high.  This radio was set on high power the whole time and 
+did not deplete the battery throughout the event.
+
+Secondary Radio (ROAN) was: a Yaesu radio attached to a netbook running 
+Linux and Xastir, Antenna was a Diamond x30 at 15-20 feet.  This was 
+very valuable because we were able to see all of the stations as they 
+came online and were able to see all of the packets digipeated, etc.  
+N4AZR Glenn ran this station and had previous experience at Roan as 
+well as Comers Rock.
+
+Aux Radio was: a TH-D72 with a slim jim antenna. We were on 144.39 and 
+were unable to establish 2-way communication with the ANSRVR. After the 
+event we discovered that our packets were in fact getting out but we 
+just weren't getting anything back.  There was a lot of traffic on 
+144.39 up there so not totally surprising.  We were able to talk with 
+Comers Rock on voice but were not able to reach Clingman's Dome with the HT.
+
+Operating Position:  We set up in the parking lot up toward the former 
+location of the Cloudland Hotel and adjacent to the restrooms. Since 
+we didn't have any shelter to speak of, this came in handy when it 
+started raining.  We were able to put the radios inside our vehicles 
+and continue to operate.
+
+Cell Coverage: For all intents and purposes there was no cell coverage 
+on AT&T, Verizon, or Sprint.  N4AZR Glenn was able to get some occasional 
+data coverage on the Sprint network but nothing dependable or lasting 
+longer than a minute or two.
+
+Local Repeater:  We were able to get into the Mt. Mitchell 145.19 repeater 
+with no problem from Roan Mountain and much of the journey in from the 
+NC side. We were also able to get into several D-Star repeaters from our 
+position with just an HT.  We didn't try anything with EchoLink.
+
+Weather: Dense fog for the most part with occasional clearing and short 
+periods of light to moderate rain throughout the test.  (somehow K4KWL 
+managed to get a sunburn despite N4AZR warning us about the damaging effects 
+of the sun and offering to share his sunscreen on at least three occasions)
+
+Overall we had a great time participating in the test. It was great to get 
+out of the shack and set up a portable station and hear others on the air 
+doing the same.  Many thanks to Glenn N4AZR for his kindness and taking 
+time to time to teach me things during the event.  His knowledge and 
+experience were invaluable.  We look forward to getting back out to 
+Roan next year!
+

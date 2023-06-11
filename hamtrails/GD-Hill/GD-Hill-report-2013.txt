@@ -1,0 +1,166 @@
+GD Hill Report - 2013                                        22 July 2013
+-------------------------------------------------------------------------
+
+
+Bob Bruninga, WB4APR and Rorie Shaffer NU2J
+
+We got up there in plenty of time this year, around 1115 maybe.  Hiked
+to the top with one Backpack each.
+
+This report includes some overall stuff as well.
+
+Every site was manned and lots of courageous souls in some bad weather.
+
+In your reports, I need to know details.  Reliability of VHF both ways.  
+Reliability of UHF both ways.  What power levels on both VHF and UHF.
+
+I am convinced we all need front end filters.  Even on GD hill that has 
+no other RF at all, our UHF front end was blapping away all day from 
+pagers and all kinds of racket.  Even though I could hear the UHF links 
+when the racket would go away, the constant racket drove us crazy.
+
+For next year here are the key points:
+1) We are going to use PL on 445.925!
+2) We are going to use a good external filter for both VHF and UHF
+3) We must get everyone to test their Band A and band B sensitivity.
+Remember, I had one radio that had 10 dB loss of performance one year 
+on one band, and this year, MDMTNS had the same problem.  Maybe Camelback 
+also had a deaf receiver on VHF.  WHen he switched bands finally and 
+GD hill upped to 50W my packets were finally being digipeated by 
+Camelback-9.  The log jam was open!
+
+But then found out that 15, 14 and maybe more had closed up shop.  
+So donno if any southern packets were heard north of -9 after 1430 when 
+it was starting to work.
+
+The problem with filters is that with the kenwoods, we will need a dual
+ band filer but that has a single connector input and a single connector 
+output to a dual band antenna.  I dont thing such a thing exists.  
+Maybe I can design one.
+
+ANyway, the reason the filters are so important is that even if you dont 
+hear QRM or see any BUSY signal strength, your fotn end could be quite 
+totally blocked by front end overload... making it appear to be deaf.  
+We are not used to operating in high RF environments, but on these 
+mountaintops front end rejection is a must to be able to hear the 
+weak ones.
+
+Finally the UHF linked system in PA did not work well.  The Baltimore 
+node was down, so I could not test beforehand.  Then on site, the Lebanon 
+AND York nodes were down.  (Apparently they could hear, but the link did 
+not come up at all).  Then the site at Camelback that three of us should 
+have been able to work did not work for me anyway.
+Finally I could talk to Net control if I shot directly to the one he
+ could hit in NJ!  But then I was marginal into that!
+
+Remember, a rig can be 10 or 20 dB down and it "works" on APRS locally 
+because we are usually not listening and/or th e path does not matter 
+because SOMETHING will usually hear us.  But we cannot tolerate these 
+losses (whether by bad front ends or by overload).
+
+So even 445.925 did not work for us (after MDMTN gave up his Band B to 
+fix APRS on VHF) and we never heard Camelback on UHF nor had any ida 
+that he could hear us.  I thknk Camelback was overloaded on all channels 
+maybe?
+
+Bob, Wb4aPR
+--------------------------
+
+Regarding Stoneyman to GSD hill direct packets:
+
+Stonyman was heareding GD Hill reliable with one bar.  Note, I put 
+10 Watts to the Maryland Mountains because that was more than enough. 
+At some point I move my antenna and upped the power to 50 Watts so 
+AO-5 could hear me.  This was overkill for Maryland Mountains.  
+So I was ten watts at first then 50 later.  This could account for you 
+seeing me with two bars while I saw you with one. 
+- - - - -        
+
+
+John Said:
+
+I get -19 dB from the point where 95% occurs.  I'd say more like 65% 
+probability is what I'm seeing with Radio Mobile.
+
+As far as average signal strength goes, however, it says two bars... 
+just like you saw.
+
+I saw a reliable and repeatable 1 bar from you so we were pretty well 
+symmetrical.  In fact once things settled in, south bound packets got 
+into a rhythm of weak packet (from GDHill), booming packet (MMtns), 
+digipeat from me, and then one more packet heard (I guess from AO MTN.
+
+John
+
+I'll need to look at KD6AKC's log again to see if I ever decoded you 
+straight.
+
+On Mon, Jul 22, 2013 at 11:11 AM, Bob Bruninga <bruninga@usna.edu> 
+wrote:
+
+John, just curious what the link looks like from Stonyman to GD hill, 
+since I heard them at 2 bars and decoded  some of their packets.  
+I don’t plan on skipping MDMTN, but just curious what your LINK 
+calculator gives for this link for comparison to my actual results.
+ 
+Bob. Wb4aPR
+-----------
+
+Rorie's Report:
+
+Bob covered many of the points from GDHill -I would add the following;
+
+Check the gear in your go kit, the team and success depends on this- 
+As example I heard one station of UHF talking of issues with coax - 
+It is basic enough, but takes a beating - treat it right when coiling 
+and don't stress connectors.
+
+Solar panels will keep a top up charge level on batteries during the 
+event and allow you to carry less lead to the site - We had 2 7ah 
+and 1 5ah or so in our packs for the assault up GDHill - all were 
+placed in service through the event and capacity remained.
+
+If you are using a Comet or Diamond Dual or TriBand Collinear design - 
+set it up in your yard and sweep it with a MFJ Antenna analyzer 
+beforehand.  The sectional design and tiny capacitors are subject to 
+stresses and points of failure.  If you are hearing on one band and 
+not another - could be the or part of the cause.
+
+The A - B band issue dropped in on Bob and I on GDHill in the past - 
+This was how we thought to trouble shoot the MDMTNS station - Point is 
+that we should know our radios - The default side being A for TNC is 
+only a menu option away to switch to B.  Just remember to switch the 
+frequency as we use a non standard APRS freq during ATGP to minimize 
+collisions with normal APRS traffic.
+
+If you have an IPad or SmartPhone - bring it up the mountain and use it 
+for checking the Yahoo group for info - monitoring the national APRS 
+network - Checking KWood Tech manuals or even Tweeting.  I used my smart 
+phone as a local hot spot and ran APRS software and websites on the 
+IPad to check and support our trouble shooting of the ATGP as we went.
+
+Finally bring along ARRL handouts - We had dozens of hikers checking us 
+out and asking plenty of questions.  The sounds of packets on the radio 
+allowed me to explain that we were doing and how HAM radio was an 
+important part of the national communication infrastructure.  Several 
+visitors identified themselves as "Preppers" or mentioned a family 
+member or neighbor that was a HAM.  
+
+Emphasize the modern computer / digital functions and the fact that 
+we talk to the astronauts in the ISS and that we have our own satellites 
+to use.  These points strike the imagination and dispel any other images 
+of well...  Bob mentioned to one visitor that getting your initial FCC 
+license is as easy as a drivers license test.  That sounded great to me 
+so I added it to the elevator pitch !
+
+Simple enough to get the handouts - ARRL Store will ship up to 25 of 
+each type with any order - So when you order your Field Day T-Shirt or 
+Hat - Add the handouts to your cart for free!  People seemed to like 
+the 22 Things You Can Do with Amateur Radio  - We Do That with Amateur 
+Radio and HAM Radio Getting the Message Though for your family and 
+community.
+
+73 NJ3U Rory
+
+
+

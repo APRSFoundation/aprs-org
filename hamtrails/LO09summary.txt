@@ -1,0 +1,31 @@
+2009 Lookout Mountain Event Summary                        28 Jul 09
+--------------------------------------------------------------------
+                                                              WA4YYM
+
+At Lookout Mountain, TN near Chattanooga we were able to hear 
+Clingman's Dome, Springer, and Huntsville and send and receive 
+messages to all.  Never did hear Roan-3 although we turned the beam 
+right at them, although that would be about 180 mile trip as I 
+figure it. Having two beams would have been a plus although we could 
+copy both Springer and Clingman's off the back of the one beam as it 
+was pointed toward Huntsville.  
+
+We were up at noon and down at 1415 EDT, perhaps before Roan got 
+their technical problems solved.  We used a D-710 for the .34-.94 
+Huntsville link and a D-700 for the .34 digi later in the exercise.  
+We also tried the Comet dual band collinear vertical, but got better 
+gain with the beam.  We used the Comet as another APRS station on 
+the standard frequency along with a IC-706 with Signalink, AGPWE, 
+and UI-View. I tried to connect to the Echolink Conference through 
+my Sprint aircard, but could never establish a connection, although 
+I could see all the stations that were online.
+
+There were three of us at the Lookout Mountain site: Van, KK4US, 
+Roy, whose call I missed (from nearby Ooltewah, TN, and me, Don, 
+WA4YYM.  It was a fun exercise.and I hope to participate again in the 
+future.
+
+Don
+WA4YYM
+Cleveland, TN
+

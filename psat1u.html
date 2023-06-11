@@ -1,0 +1,355 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+   <TITLE>SATT4 Page</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (Win95; I) [Netscape]">
+   <META NAME="Author" CONTENT="Bob Bruninga">
+   <META NAME="Description" CONTENT="ParkinsonSat APRS Satellite Project">
+   <META NAME="Keywords" CONTENT="ParkinsonSat, Parkinson, satellite, PCsat, buoy, ocean,environmental sensors, APRS, APRsat, buoys, oceanography, Satellite, Cubesat,  Tracking, Bruninga, LEO, GPS">
+   <META NAME="Classification" CONTENT="Science">
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#48D1CC" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000">
+
+
+<P>
+
+<CENTER><P><B><U><FONT SIZE=+2>
+The PSAT1U Cubesat Project
+
+</FONT></U></B>
+
+<P>
+<P><FONT SIZE=-1>
+<BR>Bob Bruninga, WB4APR, Instructor, US Naval Academy (last name at usna dot edu)
+
+</FONT><BR>
+
+<IMG SRC="PSAT1U/PSAT1U-boards-PR-shot-65xx.jpg">
+</CENTER>
+
+
+<P>
+<IMG SRC="psat/SATT4-003xxx.jpg" align=right>
+
+<B>The PSAT1U </B> project is to develop a set of cubesat cards that downscale the 1.5U PSAT2 launched in June 2019
+down to a 1U standard cubesat project for students and other schools.  Several examples are shown above.
+ Its primary card is the 
+<A HREF="satt4.html"><B>SATT4</B></A> which is a 1.5 Watt VHF communications, command and control module 
+used in current Naval Academy student project cubesats.  It is just a new mechanical layout for the 
+original <A HREF="http://byonics.com/mtt4b"><B>MTT4B Microtrack</B></A> product sold by 
+<A HREF="http://byonics.com"><B> BYONICS.COM</B></A>.  You can develop your own Printed Circuit board
+and then buy the critical parts for the SATT4 from Byonics for about $200.
+
+An advantage of this approach is that  your students can begin experimenting with this comm system
+immediately by simply purchasing a factory assembled MTT4B terrestrial configuration for desk top testing of your project.
+
+<P>
+
+<B>Global APRS Satellite Network:</B>  When you use a SATT4 comms board on the shared
+145.825 MHz satellite channel you co-exist with all the existing APRS satellites (listed below) as well
+as the global network of volunteer ground stations that capture all downlinks and 
+feed them into the APRS network operating in the Amateur Satellite Service shown here.
+All downlink data is available live on the two web pages: 
+<A HREF="http://pcsat.findu.com"><B>The APRS satellite downlink page</B></A> or the one dedicated exclusivly to the   
+<A HREF="http://ariss.net"><B>ISS downlink page</B></A>:
+<P>
+<IMG SRC="psat/APRS-satcom-arch.png" height=285 width=550 align=right>
+
+<P >
+<A HREF="outnet.html"><B>OUTNET</B></A> a global APRS channel on 3 GEO satellites!
+<BR><A HREF="pcsat.html"><B>PCsat-1</B></A> in orbit since 2001 semi-operational
+<BR><A HREF="ariss.html"><B>ARISS</B></A> on the ISS since 2007
+<BR><A HREF="psat.html"><B>Psat</B></A> Operational since May 2015
+<BR><A HREF="qikcom-1.html"><B>QIKcom-1</B></A> Sat on ISS a year due to FCC SNAFU
+<BR><A HREF="qikcom-2.html"><B>QIKcom-2</B></A> missed flight due to FCC SNAFU
+<BR><A HREF="psat2.html"><B>PSAT2</B></A> With APRStt/Voice/PSK31/SSTV launched June 2019
+<BR><A HREF="bricsat-2.html"><B>BRICSAT-2</B></A> APRS digi and thruster experiment
+<BR><A HREF="astars.html"><B>ASTARS missions:</B></A> Prior APRS missions, ISS, Shuttle and MIR
+
+<P>
+<B>Geostatonary APRS Feed:</B> also shown as part of our network ar the three geostationary Inmarsats carrying the 
+<A HREF="http://outernet.org"><B>Outernet feed</B></A> to remote areas of the globe not
+served by the Internet.  This general purpose global low data rate feed contains in addition to its public data streams, it also includes a small stream
+of the same APRS satelite downlinks.  We call this stream the
+<A HREF="outnet.html"><B>APRS Outnet</B></A>.  Thus, not only can a licensed ham operator anywhere on earth with a homemade
+Raspberry Pi Inmarsat receiver receive the APRS satellite feeds, he can use his ham radios
+to send back his return data via any of the other APRS Ham sateliltes for two-way communications almost anywhere on Earth.
+<P>
+
+
+<P>
+
+<B>Low Cost Comms Board:</B>  Our earliest satellites used Kantronics KPC9612 (PCSAT, PCSAT2, ANDE) and KPC-3's (RAFT) packet TNC's.  Then we switched to Byonics MTT4's for RAFT, QIKCOM1 and QIKCOM2.  But now we are standardizing on the single board SATT4 as a baseline
+for future missions.  It is based on the popular 
+<A HREF="http://byonics.com/mtt4b"><B>Byonics MTT4B</B></A> all-in-one APRS Tiny-Track4 module.  We are standardizing the MTT4B onto a standard cubesat-104 board (and adding a 9600 baud UHF downlink if needed) to allow other schools to rapidly develop their own amateur radio cubesat projects.  We call this board the SATT4.  In the photo above, the small daughter board in the upper half of the picture is the 
+<A HREF="http://www.stensat.org/products/product2.html"><B>CANSAT 9600 baud</B></A>
+ UHF downlink board.  It permits higher data capacity downlinks for other missions.
+It is available from the 
+<A HREF="http://www.stensat.org/"><B>STENSAT Group</B></A> and derived from their higher power
+<A HREF="http://www.stensat.org/products/product1.html"><B>3 Watt STENSAT Beacon</B></A>.
+
+<P>
+
+<LI><B>Download</B> a copy of our <A HREF="PSAT2/SATT4-t.docx"><B> SATT4-rev-t Documentation</B></A>.
+<LI><B>Download</B> a copy of our <A HREF="PSAT2/SATT4-MTT4B-f.docx"><B> Using the MTT4B as a SATT4 simulator</B></A>. An ideal way to experiment with the Byonics module before building an SATT4
+ 
+<P>
+
+<IMG SRC="psat/SATT4-003xxx.jpg"> . 
+<IMG SRC="PSAT1U/PSAT1U-battery-board.jpg" height =320 width=320> . 
+<IMG SRC="PSAT2/ADCS-board.png">
+
+<P>
+<IMG SRC="PSAT2/psat-2-PCB-all.png" align=right>
+
+<B>OVERVIEW:</B> . Our student satellites are undergraduate senior engineering projects to
+give the students hand's on experience in their Aerospace major.  All engineering students complete a capstone project in their major. Eighty Five percent (85%) of the EE, Systems and IT projects involve wireless spectrum under the FCC rules and some Astro student projects result
+in viable spacecraft (cuebsats) that are designed to operate in the Amateur Satelite Service.
+As such, these cubesats
+need to be low cost and hence this SATT4 low cost approach.  Shown above are the SATT4 board 
+and the matching 7 volt 1800 mAh battery board and Arduino based Attitude Dynamics and Control
+(ADCS) board.
+<P>
+
+<B>Battery Board:</B> To avoid the safety issues and critical charging and discharging requirements for modern 
+LiPo batteries which require individual Baterry Management Systems (BMS) on each LiPo cell, we use NiCd batteries.  
+These have 60 years of space heritage, require no BMS, and can be over dischaged and overcharged 
+by more than 10% indefinitely with no ill effects.  We use pairs of 700 mAh cells to give us 1400 mAh capacity
+because they can absorb any overcharge that might occur from a cubesat size solar panel giving us a completely safe 
+passive charging design while also providing 4.2 Whrs of energy storage operating at a bus voltage between 
+3.6 and 4.2 volts (similar to Lithium but safer).  This is boosted to a 5v system bus by a pololu boost converter.
+<P>
+
+urther, there is a current sensor for battery current and 
+a 555 watchdog timer that must receive a repeating heartbeat from the spacecraft CPU or it will time out after 
+90 seconds and reboot the power to all systems on the 5v bus.
+
+<P>
+<B>ADCS Board:</B> The ADCS board is laid out to hold either an Arduino mini-pro processor or a Parallax Basic Stamp CPU.  The board also contains six current sensors for the six solar panels and 6 channels for photo-resistor sun sensors.  It also contains a 3 axis Micromag-3 magnetometer.  All of the solar panels plug into header pins on this board which is usually the top board in the stack.  
+
+<P>
+<B>Solar Panels:</B> The solar panel connects to the ADCS board with an 8 pin connector that not only provides, power but also a sun sensor, a temperature sensor and torque coil connections for the torque coils on the front and back of each panel.  Combined in series with the pair on the opposite face, this give 4 coils in series which is a perfect impedance match with the 30 mA current direct drive capability of a 5 volt Arduino or BS2 I/O pin.  This greatly simplifes the ADCS hardware design.  A final pin feeds to a Burn-resistor trace that goes all around the panel so that the future antenna release burn resistor can be placed at dozens of locations on any panel making the final antenna release design flexible enough to meet the final flight requirements.
+<P>
+
+  Every new project based on this board adds to the existing on-orbit constellation
+of amateur radio experimenter relay sateliltes pioneered with the original <A HREF="pcsat.html"><B>PCsat</B></A> in 2001 and our  most recent <A HREF="psat.html"><B>PSAT-1</B></A>(2015) missions noted above containing
+an APRS packet radio communications transponder for relaying remote telemetry, 
+sensor and user data 
+from remote users and amateur radio experiments or other data sources back to 
+Amateur Radio experimenters via a global network
+of internet linked volunteer ground stations.  The APRS transponder also includes  
+telemetry, and some command and control for the user modes. 
+<P>
+
+<IMG SRC="PSAT1U/PSAT1U-ADCS-control-board-a.png" align=right>
+<P>
+<B>Lab ADCS Demos:</B> THe ADCS control card at right allows the PSAT1U to demonstrate three methods of attitude control 
+in the lab when hung from a long piece of 4# fishing line.  The Control card has a reaction wheel and four tiny control 
+thrusters (fans).  It also has drivers for torque coils on all 6 faces though only 4 can be used when hanging in
+the vertical Z axis.
+<P>
+
+<B>Operations under ITU Rules:</B> These SATT4 cubesat comm boards are designed for the Amateur Satellite Service and
+include a commandable two-way Amateur Radio mission (Digital packet relay).  They may only operate under the ITU rules 
+of the Amateur Satellite Service as long as the mission fully meets the rules.  This means, no pecuniary interest, 
+no externally funded research, no benefit to anyone other than amateur radio experimenters learning about the radio art.  
+A perfect match for undergraduate stuednt engineering projects.  See how our PSAT2 design and operation fit entirely 
+within the ITU International Amateur Radio 
+<A HREF="PSAT2/PSAT2-BRICSAT2-ITU-rules.txt"><B> RULES</B></A>.  The FCC does not issue
+licenses for Amateur Radio Spacecraft
+<A HREF="PSAT2/FCC%20Public%20Notice-clarified-a.doc">(see public notice)</A> because they are operated under the
+license of the individual amateur radio <B><i>Control </B></i>operator who is responsible to assure
+that both the design and operation are within the rules of the ITU as interpreted by the IARU.  Our licensed control operator is Todd Bruner, WB1HAI in Annapolis, and Rick Hambley, W2GPS.
+
+<P>
+
+<P>
+<B>APRS Up/Downlink</B> . . 145.825 1200 baud APRS (shared with ISS, PCSAT, UO11 and others!)
+<P>
+<B>9600 bd Downlink</B> . . 435.350 MHz +/- 5 kHz FM (300 mw) if used
+
+
+<P>
+. . .
+<P>
+
+<B>SATT4 Digipeater Aliases:</B> To join the existing APRS satellites on orbit and operate as a seamless constellation, PSAT-2 supports the same <B>APRSAT</B> and <B>ARISS</B> generic aliases as the original 
+<A HREF="pcsat.html"><B>PCSAT</B></A> (NO44)
+<A HREF="psat.html"><B>PSAT-1</B></A> and the
+<A HREF="ariss.html"><B>packet system on the ISS</B></A> so that users do not have to change any parameters when using any of these three APRS transponders.  
+
+<P>
+
+
+
+<HR SIZE=2 WIDTH="100%">
+<P>
+
+
+
+<P>
+<B>APRS Digipeater:</B> When the DIGI is on, the satellite TOCALL is APRSON.  When it is
+off for user digipeating the TOCALL is APOFF.  The digipeating ALIASes are the usual, ARISS, APRSAT (and WIDEn-N if you forget). 
+<P>
+
+<B>LIVE Telemetry Downlink:</B> will also be captured on Steve Dimse's, K4HG original
+<A HREF="http://pcsat.findu.com"><B>pcsat.findu.com</B></A> web page.  APRS packet is a secondary mission compared to DTMF and PSK31, so the digipeater may be turned off if power is low.  But beacons, telemetry and Bulletins will always remain.  The five Telemetry Equations (after the serial number) in standard APRS telemetry format are:
+<P> <B>Format:</B> . . . . . T#SSS, VVV, I I I, XXX, YYY, ZZZ, 00011X00
+<P > VVV. . .  Bus Volts in hundredths
+<BR> I I I . . . .  Bus Current in mA
+<BR> XXX. . .  Temp +Z where T = -1.26E-6*X^3 +0.0028*X^2 -2.215*X + 625
+<BR> YYY. . .  Temp - Z where T = -1.26E-6*X^3 +0.0028*X^2 -2.215*X + 625
+<BR> ZZZ . . .  TempBat where T = -2.57E-6*X^3 +0.0061*X^2 -5.149*X +1475
+<BR> In the 00011X00 field, only the X has meaning. 0 = DIGI ON, and 1 = Digi off
+
+<P>
+
+
+<IMG SRC="psat/Tracking-world-map-FINDU-gnd-stns-b.png">
+<P>
+
+<B>Worldwide APRS Ground Station IGates:</B> Although almost all of the dozens of 145.825 MHz APRS-IS (internet system) ground stations can hear the ISS downlink with simple antennas, the map above shows the fewer ground stations that have actually IGated PSAT packets.
+Although these are the same stations listening to 145.825 as the ISS, the ISS station is 14 dB stronger (10W versus 0.35W for PSAT).  So only IGates with good weak signal performace are successful with PSAT.  As you can see, we need IGates in Hawaii, India, China and the Southern Hemisphere.  PSAT-2 will operate at 2 Watts and be 7 dB stronger than PSAT-1.
+
+<P>
+<IMG SRC="psat/PSK31-uplink-antenna-plot.gif" align=right>
+<img src="psat/omni-antenna-vertical-a.png" align=right>
+<IMG SRC="psat/range-gain.gif">
+<P>
+
+<B>Best Satellite IGATE Antenna:</B>  The most practical IGate antenna is an OMNI (so it does not wear out or require rotators) and it has high gain above about 30 degrees and less gain on the horizon (where it cannot hear
+a 350 mW satellite anyway). 
+See (<A HREF="aprs-satellite-igate-antennas.html"><B>SatGate Antennas</B></A>) Not only is the gain higher at the higher elevations, but the satellite is also
+ 6dB closer, thus giving a combined gain of nearly 13 dBi similar to an OSCAR class beam.
+ Another reason for minimizing gain on the horizon is the Donut-Hole NULL effect where any IGate that hears a
+user station <i><b> direct</B></i> will send that into the APRS-IS first and that will cause the 
+subsequent space digipeated packet to be a DUPE and will be ignored by all IGates.  So a mobile or
+terrestrial omni is the worst omni (maximizes gain on horizon and usually has a null around 20 or 30
+degrees which is where the satellite is best located!  
+<P>
+
+The best Satellite OMNI Igate antenna is
+a non-gain 1/4 wave vertical (19.5" over a large ground plane).  Even better (+2 dB) is a 3/4 wave vertical
+(58" high) over a large ground plane shown here.  It has nearly 7 dBi gain above 30 degrees, plus the +6 dBi closer range gain and not much at all on the horizon.  It is best placed low in the yard to further minimize horizon gain as shown here.
+
+<P>
+
+<IMG SRC="psat/PSAT-GSE.png" align=right>
+
+<B>BACKGROUND:</B> . PSAT-2 follows on to several previous student project satellites
+which contain an APRS packet radio communications transponder for relaying remote telemetry, 
+sensor and user data 
+from remote users and amateur radio environmental experiments or other data sources back to 
+Amateur Radio experimenters via a global network
+of internet linked volunteer ground stations.  The data transponder also includes all 
+telemetry, command and control for a complete cubesat.  A secondary transponder supports multi-user PSK31 text messaging users via a Brno University transponder. 
+
+<P>
+<B>See the 
+
+<A HREF="psat/AMSAT-2010c.doc">Psat paper</B></A> at the 2010 AMSAT symposium
+<BR><B>The image at right</B> is the test equipment used during integration testing of PSAT-1.
+
+<P>
+
+<B>Operations in the Amateur Satellite Service:</B>
+All of the transponders on PSAT are operated in the Amateur Satellite Service to encourage 
+amateur radio students, 
+educators and experimenters 
+around the world to contribute additional satellities to this constellation on 145.825 MHz or
+to build interesting self motivated remote sensors suitable for the uplink channel.
+ See our
+<A HREF="buoy.html"><B>ocean or bay oceanographic data buoys</B></A> for examples.
+  
+This kind of Amateur Radio experimentation fits well in the ITU rules
+<A HREF="PSAT2/IARU-rules-psat-2.txt"><B>(see PSAT-2 justification)</B></A> 
+for operating in this service
+and well serve our educational and outreach goals for student projects encouraging young people to
+be interested in Science, Technology, Engineering and Math.
+
+<P>
+
+<B>APRS Packet Transponder:</B> The APRS packet transponder 
+is an AX.25 Packet Radio Relay similar to what is flying on 
+<A HREF="pcsat.html"><B>PCsat</B></A> and the
+<A HREF="http://www.aprs.org/ariss.net"><B>ISS</B></A>.  This ongoing mission in space on the original PCsat 
+is now over 12 years old and pioneered
+this very popular operating mode via the ISS since 2006.  Both of these 
+missions deliver packets to users worldwide via the global network of
+volunteer ground stations feeding the two downlink capture pages:
+<A HREF="http://pcsat.aprs.org"><B>psat.aprs.org</B></A> and
+<A HREF="http://ariss.net"><B>ariss.net</B></A>.  These pages display live maps such as the one
+below, of the most
+recent user position data and capture all message traffic between users. 
+See the <A HREF="psat/APRS%20Link%20Budgets%20for%20Psat-a.doc"><B>APRS link budgets</B></A>. In addition there
+is also a PSK31 transponder as noted below.
+<P>
+
+<P>
+
+<B>Attitude Dynamics and Control System (ADCS):</B>   To maintain a very slight spin about the Z axis the solar cells are offset with a reflective strip on one edge to produce an unbalanced solar radiation pressure on each side. This should create a fractional RPM spin (the Spin on PCsat now, 12 years in orbit is maintained between about 0.6 and 0.8 RPM by this method).  And PSAT-1 typically spins between 1 and 5 RPM with this method.  The spin is needed to maintain thermal balance and not let one side get too hot facing the Sun.
+<P>
+
+
+<B>Global Experimental Data Channel:</B>  PSAT is the space segment of this
+initiative to encourage both new satellite construction in support of this experimental
+data channel and lower cost buoy and
+sensor experimentation at other schools as shown below.  
+Today, the only AMSAT that is available for 
+no cost to schools with such experiments are the Naval Academy's PCSATs.  But with 
+ParkinsonSAT we hope to commence an ongoing full time presence in
+space to continue this support of the 145.825 data uplink channel for future experiments.  
+To this end we hope other schools to either build additional 145.825 MHz relay satellites 
+and/or to build experimental sensors.  The complete comms system including data
+transponder fits on one 3.4 inch square card <B><i>shown here</B></i>.
+  We hope that ParkinsonSAT will be the Egg in this 
+chicken-egg conundrum.
+<P>
+<B>The 2016 Initial Design:</B> Below will be the more descriptive images and links to the details of PSAT-2 design.  But until we finish the new cubesat-standard-bus design for PSAT-2, we are retaining some of the olderlinks to the portions of the original PSAT-1 design that are similar.
+<P>
+
+<LI><A HREF="psat/2014/Burn-corner416x.jpg"><B> Burn Resistor</B></A> constraining 4 antennas and the 3rd inhibit switch via nylon line
+<LI><A HREF="psat/2014/ground%20track.jpg"><B> Ground Track</B></A>
+<LI><A HREF="psat/2014/internal-structures-labeled-x.jpg"><B> Skeletal View</B></A> showing equator ballast to maintain Z axis inertia
+<LI><A HREF="psat/2014/inhibits-three.gif"><B> Three Inhibits</B></A> showing 3 inhibits and unique solar panel wiring
+<LI><A HREF="psat/2014/MTT4-flight-harness-d.gif"><B> Microtrack harness</B></A> and GSE connector
+<LI><A HREF="psat/2014/Orbital-decay.gif"><B> Orbital Decay</B></A> and
+     <A HREF="psat/2014/orbit-life.gif"><B> Orbit Life</B></A> prediction
+<LI><A HREF="psat/2014/PowerControl-circuit-Yz-public.gif"><B>Power Control </B></A>
+
+<LI><A HREF="psat/2014/Release-mechanism-x.gif"><B> Release Resistor </B></A>design showing tied nylon line on Nitinol antenna wires
+<LI><A HREF="psat/2014/Y+side97x.jpg"><B> Antenna Detail</B></A> shows how 2 UHF, one VHF and 1 72" HF antennas were constrained
+<LI><A HREF="psat/APRS%20Link%20Budgets%20for%20Psat-a.doc"><B>APRS Antennas and Link Budgets</B></A>
+<LI><A HREF="psat/PSK31%20Link%20Budgets%20for%20Psat-a.doc"><B>PSK31 Antennas and Link Budgets</B></A>
+<P>
+
+<HR SIZE=5 WIDTH="100%">
+
+
+
+<P>
+
+
+<A HREF="psat-old.html"><B>Earlier 2008 and 2010 DESIGN Documentation</B></A> 
+
+<P>
+
+
+
+
+
+<P>
+<HR SIZE=5 WIDTH="100%">
+<TABLE BORDER=2 CELLPADDING=2 >
+<TR>
+
+<TD>
+<P><FONT SIZE=+1><A HREF="sitemap.html"> WB4APR's overall Site Map </A></FONT></P>
+</TD>
+</TR>
+</TABLE>
+</UL>
+
+</BODY>
+</HTML>

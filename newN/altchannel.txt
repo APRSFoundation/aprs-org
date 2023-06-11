@@ -1,0 +1,179 @@
+APRS ALT-PRIORITY Input Channel for LOCAL stations           10 Jul 2004
+-------------------------------------------------------------------------
+
+Updated 19 Oct 2005
+
+Alternate frequency input digipeaters is a great and easy improvement for 
+local APRS reliability,  AND it can be done independently of what any 
+other digipeater owners do.  It is simply the additon of an alternate 
+locally coordinated APRS input frequency to give local stations priority 
+over the local 144.39 channel.  Packets heard on this very quiet low 
+dutycycle channel are then digipeated in occasional short bursts over on 
+144.39.  Advantages:
+
+- Drastically reduces collisions for locals (improves reliability)
+- Is a local issue that can be implemented locally and independently
+- Can use any existing TNC' with NO software/firmware upgrades to digis.
+- Or, with software can do WX conversion to standard WX format for Kenwoods
+
+Implementation is simple:
+1) Existing digi hardware on 144.39 is unchanged
+2) Add a new TNC and Receiver on the local alternate input 
+   (144.99 if avail)which then digipeats those packets over to 144.39
+
+Additional options:
+3) Connect the original TNC PTT, and DCD lines to new TNC 
+   external CD line.  Connect its PTT to the original TNC's XCD.
+4) Connect the new TNC TX audio and PTT to the 144.39 TX
+
+This way the alternate RX channel TNC waits for 144.39 to clear, before
+it transmits.  The cross connected PTT's and DCD's to the external CD 
+lines assure they will not collide when both trying to use the XMTR.  
+Though for only a few low powere trackers, none of this is necessary.
+
+The TNC settings are:
+
+MYCALL:    99ANAP  The first two bytes are the Freq (144.99 here)
+                   and then some local abbreviation (Annapolis here)
+                   because we want all these TNCs to have a unique
+                   call so that they are distinct on FINDU.  
+
+BText:     Standard DIGI position report.
+
+BEACON:    Every 10 minutes direct.  (it only serves direct users!)
+
+UNPROTO:   APALT    (direct to the APALT TO-CALL with no VIA path)
+
+XCD:       External CD enabled (if used)
+
+FIXED AND WX STATION SETTINGS:  The users of this back door alt freq
+simply include the callsign of this digi in their outgoing path.  For 
+example:  VIA 99ANAP,WIDE2-1.  Note, with home stations designating a 
+specific digi, the path is traceable even if this is a dumb TNC with
+no callsign substitution possible.  Since there are so few locals
+compared to the 95% of other distant stations that would hit this digi,
+the probability of a collision is drastically reduced.  
+
+MOBILES and LOW POWER TRACKERS:  This alternate local channel also
+drastically improves the probability of a mobile or low power tracker
+being heard.  Being on this input-only channel, they only have to complete
+with the very rare local packets, instead of the other 95% of QRM
+packets from out of area.  When their packet is digipeated over from
+the alt-channel to the 144.39, their local packet reliability has
+improved by an order of magnitude or more.
+
+SOFTWARE IMPROVEMENT #1.
+
+For an additional benefit to Mobile Kenwoods that cannot currently decode 
+the RAW stand-alone Peet Brothers WX packets, a nice level of improvemnt 
+can be gained with a processor that collects all the non-standard APRS WX 
+reports and  weatherless position and positionless weather, and converts 
+them all to the standard COMPLETE format before dumping them on 144.39.  
+Also, bundeling then in groups of 5 makes for a nice neat channel burst 
+of weather and one full screen display on the Kenwoods LIST.  Nothing is 
+lost in thie bundling because WX is only flashed on the Kenwood display
+raw anyway when first received and the user has always had to "select" a 
+WX station on his radio front panel to see the actual weather anyway.  But 
+going to all the trouble of a PC at the site instead of a dumb TNC might 
+make this option simply not worth it.
+
+SOFTWARE IMPROVEMENT #2:
+
+The software can also implement the OBJECT bundling included in APRS1.1, 
+further improving channel efficiency.  See the links on the APRS 1.1 SPEC.
+This added capability makes a PC more valuable at the digi.
+
+
+STAND-ALONE ALT-DIGI:
+
+Alternatively, in an area that is saturated with too many digis already, 
+simply convert one HIGH digi that already hears too much over completely 
+to this new method.  One TNC, One radio.  It just receives on the "fixed" 
+local priority channel and TX's on 144.39.  It can have the 555 bundler
+or not and it may or may not have a separate CSMA RX on 144.39.  Reason
+being, if it is high enough, it probably hears wall-to-wall packets on
+144.39 anyway, and the CSMA gives no real advantage.
+
+Think of this concept as a back-door into your local digi that is almost
+two orders of magnitude less vulnerable to collisions.  Also, when the digi 
+does re-transmit these local packets, they can be inserted seamlessly using 
+CSMA into the existing 144.39 while fully honoring the collision avoidance 
+of the digi which is well situated to hear all other potential signals on 
+the channel.  Thus everyone wins...
+
+HERE IS A CONDENSATION OF FOLLOW-ON DISCUSSION FROM THE APRSSIG:
+
+* If the frequency of 144.99 is available in your area, see if you can
+get it coordinated for this application.  It then lets all users simply 
+use the +600 KHz offset on their radios
+
+* ANY TNC can be  used, since no smart digipeating is needed to get
+the packet from the alt channel to the 144.39 channel.  The digi's
+actual call is used.  If there is more than one in an area, use SSID's 
+99ANAP-2 etc...  Even if there are two such inputs that are in RF range 
+of each other, they doubtfully will hear the same ground level fixed 
+users AND there are no dupes because the given site is specifically 
+called out in the path by callsign.
+
+* Notice that EVERY ONE still listens to everything on 144.39 so
+nothing is lost and the channel operated normally even for visitors.
+
+* Since only fixed stations or local mobiles use this new alt-channel 
+input, the locations of these new alt-channel inputs can be much more 
+sparse than normal digis because with the clear channel, the locals 
+packets do not have to overpower distant QRM as they do now.
+
+* Fixed and WX stations are transmitting in the blind on the alternate
+input channel but since there are only so many of these stations in the 
+range of this alternate channel input, it has been shown that the chance
+of a collision  even with 14 home stations and 6 WX stations all in
+simplex range is down around 3% or less.  Listening first only changes
+this by 0.3%, because any one station cannot hear most of the other
+stations sharing the input anyway.  This guaranteeed low collision 
+rate without CSMA compared to the very high rate you otherwise would get 
+on 144.39 even with CSMA is what makes this so attractive.
+
+* There really is not much advantage to dual CSMA on both channels
+because because the loading on the alternate channel locally is so 
+low.  The probability that you are colliding with a local packet
+is very low.  And the purpose of this system is to give LOCAL 
+priority!
+
+* Home stations serving as local WIDE1-1's are not affected.  They
+still will hear mobiles on 144.39 and although they send the packet
+via the back-door on the alternate channel, the packet still gets to 
+144.39 as before.
+
+* By activating this second channel and maintaining a few digis
+there this does provide a backup channel for passing traffic during
+emergencies or special needs.  Or even maintaining home station
+BBS's for end delivery (on-air BBS mail reading is not desired).
+Though  you cannot use the alt-digis function for reading mail 
+because they collide with 144.39 traffic.  But the FREQUENCY is 
+available for direct connects if needed.
+
+* The advantages of this alternate channel are because of its low
+usage.  If a few local stations become active and begin heavily 
+using the channel say with APRS messages, then some of the
+advnatages to others are lost.  Users should consider QSYing to the
+main 144.39 in this case.  Or conversly, let the single heavy user
+such as the EOC stay on the alt channel so that he DOES get priority
+CSMA service at the digi without other 144.39 competition...
+
+* Igates continue to function normally.  But the best 24/7 IGate
+should clearly be on this alt-channel so that it gets the advantage
+of good CSMA at the digi for its packets..  Though as usual, good
+placement and minimization of duplicate IGates is good practice.
+
+ANALYSIS OF BENEFITS:
+---------------------
+
+In our area, with a 120 Height above average terrain, there are no more than
+about 17 fixed home stations (3 are WX) and 3 stand-alone WX stations.  These
+add to about 52 packets per 30 minutes or about 1 every 35 seconds for a
+probability of collision on the non-CSMA input channel of about 3%.  The 
+benefit is determined by how much better this probability is than if they
+transmitted on the 144.39 channel and it's much worse probabilities.
+
+--------------
+de WB4APR, Bob

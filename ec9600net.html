@@ -1,0 +1,326 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+   <TITLE>East Coast 9600 baud backbone</TITLE>
+      <META NAME="Author" CONTENT="Bob Bruninga">
+   <META NAME="Description" CONTENT="the APRS Golden packet event on The Appalachian Trail">
+   <META NAME="Keywords" CONTENT="Golden packet, Amateur Radio, Appalachian Trail, HAM Radio, APRS, Bruninga, Scouts">
+   <META NAME="Classification" CONTENT="Amateur Radio">
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#87CEFA" LINK="#0000FF" VLINK="#AA1A8B" 
+ALINK="#FF0000">
+
+<IMG SRC="9600/BearNet.png" align=right>
+<P>
+<P>
+<H1 ALIGN=CENTER><IMG SRC="logos/aprs.gif" HSPACE=5 HEIGHT=90 WIDTH=90 align=left>
+<ALIGN=TEXTTOP><CENTER><B>BearNet</B>
+<BR>The East Coast Backup Emergency Amateur Radio Network </B>
+</CENTER></H1>
+<H4 ALIGN=CENTER>Bob Bruninga, <B>WB4APR</B>, Annapolis, MD
+<BR>lastname at usna dot edu</H4>
+<P>
+
+<B>With 9600 baud success</B> for the last several years in the 
+<A HREF="at-golden-packet.html"><B> annual Golden Packet Demonstration/event</B></A>, 
+it is time to move on with thoughts on a more permanent 9600 baud AT backbone. 
+There are several exsting packet networks in adjacent states that couldd benefit
+from the connecctivity of some of our high sites.
+<P> 
+
+
+<P>
+<B>Dual Port KPC-9612 Nodes Available!</B> In January 2021 the project received a donation of
+fifteen or so dual port KPC-9612 TNC's that are ideal for this project.  Each site would
+have a backbome radio on the exclusive 9600 baud port and would have a local radio and channel on
+a local user access port.  The network would simply be a KA node network built into the TNC's.
+<P>
+
+<B>Background:</B> We think this East Coast chain of mountains offers a great opportunity to
+build an East Coast long haul wormhole packet path 
+covering the 2000 miles from Maine to Georgia. The paths have been proven every 
+year since 2009 during our annual 
+<A HREF="at-golden-packet.html"><B>Appalachain Golden Packet Event</B></A> where dozens 
+of us climb the mountains and set up temporary APRS digipeaters to relay the golden 
+packets the entire 2000 miles.  Starting in 2016, we shifted from 1200 to 9600 baud 
+to better characterize the paths for a permanent backbone. All stations reported success 
+from Maine to Georgia with only a marginal link in Virginia from AO mountain.  This has 
+given us excitement about this potential network.  It seems the path is viable for this 
+long haul backup emergency communications network while serving hikers on a routine basis.
+
+<P>
+<B>BACKBONE FREQUENCY SELECTION:</B> The existing APRS channel on 144.39 provides full
+connectivity for hikers on the mountains, so this backbone network is not for APRS but
+ really for an emergeny
+east coast backbone and user-to user packet experiments.  In that sense, only the 
+backbone frequency has to be a single choice from main to Georgia, but the individual
+access frequencies can be on VHF or UHF at each node independently since the network acess points
+will be published and should also appear as Frequency Onjects on 144.39 to self identify each
+site.
+<P>
+<IMG SRC="aprstt/Radios08xX.JPG" height=200 width=240 align=right>
+
+<P>
+<B> SO WHAT FREQUNECY BAND FOR THE BACKBONE???</B> ... That is the question and there
+are LOTS of considerations.  Most importantly to come up with a one-design that is reproducible
+and reliable.  Issues are:
+<LI> Most sites will have existing ham gear and so VHF and UHF will need cavities
+<LI> On the other hand many may have existing spare VHF or UHF antennas
+<LI> Many sites also have existing 220 gear
+<LI> A single frquency is desired so that a single 9600 baud backbone can work on the 9600 baud port of  the dual band TNCs
+<LI> Since each node needs to go both opposite ways, then an omni antenna is most practical.
+<P>
+<B>Mountain Map:</B> The map at right shows red circles on the sites where Hams already have permanent access 
+and could possibly install a permanent node in this East Coast 9600 baud backbone.  Are there others? (See below)!
+<P>
+<P>
+<B>OTHER EXISTING PACKET NETWORKS:</B>  One advantage of our Appalachian Mountain experience is that it can be used to link some
+of the other disconnected packet networks in adjacent east coast states.  Here are some examples.  Although purists in these networks
+look down on single frequency backbones due to their ineffiiciency (when used in broad networks), it can be shown that linear strings of
+nodes on a single frquency are quite efficient since each node only hears its two adjacent nodes and does not hear all the other
+hiddne transmitters in a broader network (which requires 4 times as many radios per node as the long linear backbone.)  So if 
+our sites on our mountains could provide a backbone wormhole between experimenters in other networks, it might be nice.
+<P>
+<LI><A HREF="http://tarpn.net/t/packet_radio_networking.html"><B> North Carolina TARPN Network:</B></A>
+is active in NC, PA and Deleware for building out a level 4 network.  There could be some good synergy with our efforts.
+
+<LI><A HREF="http://www.depn.net/"><B>Delaware Packet Network (DPRN):</B></A>
+is building a packet network throughout the State 
+using the TARPN ideas featuring BPQ Node, BBS and Conference Chat.
+
+<LI><A HREF="https://www.eastnetpacket.org/"><B>Eastnet</B></A> and their 
+<A HREF="https://www.eastnetpacket.org/Maps/"><B>network maps</B></A>
+in Connecticut, NY, NJ, Florida and Indianna.  They appear to be based on Flexnet protocol.
+
+<LI><A HREF="http://vden.org/Map_of_VDEN.html"><B>VDEN network</B></A> in Virginia 
+
+<P>
+
+<B> Level-4 Networking:</B> While we recognize that single frequency backbone networking is
+a definate no-no in good network design, that mostly applies due to the interference and
+collisions of hidden transmitters hitting all nodes from all sides.  But, this is not a significant
+problem for a long linear node string where each backbone node only hears its two adjacent
+North and South nodes and generally, under light use, packets are only going in one 
+direction and acks in the reverse.  The powerful adantage is that it only
+takes one radio per site instead of <B><I>three or more</B></I>.
+<P>
+
+<B>219 MHz though ideal is not workable?</B> 220 could be an ideal band for the backbone since it could fit in easier 
+at some sites.   But we looked at the 
+special 219 MHz band where the FCC has very stringent rules under 
+<A HREF="https://www.gpo.gov/fdsys/pkg/CFR-2002-title47-vol5/pdf/CFR-2002-title47-vol5-sec97-303.pdf"><B>part 97.303(e)</B></A> 
+to get a frequency.  These frequencies are shared with the 
+<A HREF="https://www.law.cornell.edu/cfr/text/47/80.385">Maritime AMTS system</A> 
+(see <A HREF="https://www.law.cornell.edu/cfr/text/47/80.475">also</A>).
+
+The ARRL maintains a 
+<A HREF="9600/ARRL-219-MHz%20list-AMTS-by-location.xls"><B> list</B></A> of these 219 MHz AMTS stations and
+<A HREF="9600/ARRL-219-MHz%20list-AMTS-near-AT.xls"><B> these</B></A> are the ones near the AT.  
+But there has been so little 219 MHz activity, and no one seems to know the status of those frequencies.
+Scott Gordon reports that in 2016 it was being considered for <A HREF="https://www.rrmediagroup.com/Features/FeaturesDetails/FID/645">
+<B>Train Control</B></A>. 
+The company that bought most of the spectrum in 2007 seems to have 
+<A HREF="https://www.rrmediagroup.com/Features/FeaturesDetails/FID/329">gone bankrupt in 2011?</A>.  I consider this approach a deadend. 
+<P>
+
+<B>223 MHz channel:</B> There are 7 digital 20 kHz channels in the 223.52 to 223.64 MHz range (ARRL band plan). We were considering this 
+<A HREF="https://www.bridgecomsystems.com/collections/amateur-mobile-radios/products/bcm-220-1-25m-mobile-radio">
+<B> 30 Watt 220 MHz radio</B></A>.
+Here is the <A HREF="9600/BCM-interface.png"><B> 15 pin I/O connector</B></A> and the 
+<A HREF="https://cdn.shopify.com/s/files/1/0833/9095/files/BCM-220_Users_Manual_V_1_3.pdf?6101102715464995630"><B>the full radio manual</B></A>.
+<P>
+
+
+<P>
+<B>433 MHz might be good!</B> On the other hand, since this will be a slow grow
+grass roots effort, an advantage of 433 MHz as a backbone since it can also then
+be initially easily tested with users existing dual band radios the network
+matures with second radios on local user channels.
+We just add one radio and the 9612 TNC and the initial connectivity can be exercised.
+By using a 433 MHz simplex channel, we are far enough from 445 repeaters so that minimal 
+filters are needed and maybe we can simply 
+find a path the entire way using only existing Ham sites?  Below is a set of plots from APRS.FI plots 
+of all the existing APRS digipeater sites.  
+If we could get those hams to add a 433 MHz TNC we might make this work!
+<P>
+
+<B> Or Maybe initially on 2 meters:</B> Cavity diplexers at repeater sites have excellent 
+isolation between their TX and RX frequencies but the
+cavities also have much broader highpass and lowpass attenuation beyond the repeater frequencies.  
+For example it takes two large cavities on 144.39 to allow operation
+at any 145 MHz repeater site because the repeater input cavities are quite open below 
+their tuned frequency.  So any colocation of APRS at any voice site usually requires 
+heavy filtering so as to not desense
+the repeater.  For a single ATGP channel, the best possibility might be in the 145.01 
+area which is quite far from repeater inputs.  This solves the repeater desense problem 
+but puts the onus on us then to have a cavity to protect our front end.  
+See the 2m bandplan and cavity considerations below right.  
+The original national packet channel of <B>145.01</B> seems to be the best starting point.
+<P>
+
+<IMG SRC="hamtrails/2m-band-plan-ideas.png" align=right>
+
+<A HREF="http://www.aprs.org/9600/ham-sites"><B></B></A>
+<BR><A HREF="9600/ham-sites/SPRNGR-CLNGMN-ROAN-xX.png"><B>Georgia to Smokies</B></A> - W4KCO-3, KE4TOZ-3
+<BR><A HREF="9600/ham-sites/CLNGMN-ROAN-COMERS-xX.png"><B>Smokies to Comers Rock</B></A> - W4MLN?
+<BR><A HREF="9600/ham-sites/COMERS-AOMTN-xX.png"><B>Comers Rock through Roanoke</B></A> - K4CQ-4, 
+<BR><A HREF="9600/ham-sites/AOMTN-HWKSBL-xX.png"><B>Roanoke through Blue Ridge</B></A> - N4DSL-3
+<BR><A HREF="9600/ham-sites/HWKSBL-MDMTNS-xX.png"><B>Blueridge to Maryland Mountains</B></A> - MDMTNS
+<BR><A HREF="9600/ham-sites/MDMTNS-GDHILL-xX.png"><B>Maryland Mountains to GD Hill area</B></A> - <A HREF="https://www.lrts.org/"> Lancaster Transmitting Society</A>
+<BR><A HREF="9600/ham-sites/GDHILL-CAMLBK-xX.png"><B>GD Hill area to Camelback in the Poconos</B></A>  - CMLBCK
+<BR><A HREF="9600/ham-sites/CAMLBK-SAMSPT-xX.png"><B>Poconos to Sams point NY</B></A> - Sams Point
+<BR><A HREF="9600/ham-sites/SAMSPT-GRYLCK-xX.png"><B>Sams point NY to Masachusetts</B></A>Greylock - permanent?
+<BR><A HREF="9600/ham-sites/GRYLCK-EQINOX-xX.png"><B>Massachusetts to Vermont</B></A> - K1DF-7
+<BR><A HREF="9600/ham-sites/EQINOX-MTWASH-xX.png"><B>Vermont to New Hampshire</B></A> - KB1FDA-1
+<BR><A HREF="9600/ham-sites/MTWASH-SGRLOF-MTSTJO-xX.png"><B>New Hampshire to Sugarloaf</B></A> - KQ1L-1
+<BR><A HREF="9600/ham-sites/SGRLOF-MTSTJO-KATHDN-xX.png"><B>Sugarloaf to Mt Katahdyn</B></A> - W1PIG
+<P>
+
+
+<B>Network Node:</B>  Each node would consist of the 9600 baud backbone radio link hopefully on 219 MHz (or 433 MHz)
+and a local VHF or UHF 1200 baud user access frequency.  The other figure at right show some of the 
+user radios that have built in 1200 and 9600 baud APRS modems and are fully capable to pass traffic 
+on the user access ports of this network.  The links below are the original AT-GoldenPacket links to 
+give an idea of the distance of each link:
+<P>
+
+- - <B>Operating Station</B>. . . . . . <B>Report</B> . <B>Distance</B> . . . . <B>Other End</B>
+<LI><A HREF="hamtrails/huntsville.html">
+    <B>Lookout Mountain-1</B></A>.  . . . . .   
+    85 miles to . . . <B>Clingman's Dome</B>,& Huntsville
+
+<LI><A HREF="hamtrails/springer.html">
+    <B>Springer Mountain-1</B></A>.  . . . . .  
+    75 miles to . . . <B>Clingman's Dome</B>,& Huntsville
+          
+<LI><A HREF="hamtrails/clingmans.html">
+    <B>Clingmans Dome-2</B></A> . . . . .  . .  
+    89 miles to . . . <B>Roan Mountain</B>.
+
+<LI><A HREF="hamtrails/roan.html">
+    <B>Roan Mountain-3</B></A> . . . . . . . .  
+    72 miles to . . . <B>Comers Rock</B>.
+
+          
+<LI><A HREF="hamtrails/comers-rock.html">
+    <B>Comer's Rock-4</B></A> . . . . . . . . .  
+    103 miles to . . <B>Apple Orchard Mountain</B></A> 
+
+<LI><A HREF="hamtrails/AO.html"><B>Apple Orchard Mtn-5</B></A>. . . . .  
+    111 miles to . . <B> Stony Man Mountain</B></A>, 
+                 
+
+<LI><A HREF="hamtrails/hawksbill.html"><B> Hawksbill Mountain-6</B></A> . . . .  
+    70 miles to . . . <B>Maryland Mountains</B></A>, 
+
+<LI><A HREF="hamtrails/MD.html"><B>Maryland Mountains-7</B></A> . . .  
+    70 miles to . . . <B>Governor Dick Hill info</B>, 
+
+<LI><A HREF="hamtrails/GD-hill.html"><B>Governor Dick Hill-8</B></A> . . . . .  
+    78 miles to . . . <B>Camelback(Big Pocono SP)</B> 
+
+<LI><A HREF="hamtrails/camelback.html"><B>Camelback Mountain-9</B></A> . . .  
+    97 miles to . . . <B>Sam's Point</B></A>, 
+
+
+<LI> <A HREF="hamtrails/sams-point.html"><B>Sam's Point, NY-10</B></A>. . . . . . .  
+     61 miles to . . . <B>Mount Greylock</B></A>. 
+     Tried <A HREF="hamtrails/highpoint.html"><B>Highpoint, NJ</B></A> in 2011
+
+<LI><A HREF="hamtrails/greylock.html"><B>Mount Greylock-11</B></A>. . . . . . .  
+     48 miles to . . . <B>Mount Equinox</B>  in NH (not avail in 2011/12)
+
+<LI><A HREF="hamtrails/Equinox.html"><B>Mount Equinox link-12</B></A>. . . .  
+     100 miles to . . <B>Mt Washington</B></A>.
+
+<LI><A HREF="hamtrails/mtwashington.html"><B>Mount Washington-13</B></A> . . . .  
+     102? miles to . <B>Sugarloaf</B>.
+
+<LI><A HREF="hamtrails/sugarloaf.html"><B>Sugarloaf-14</B></A> . . . . . . . . . . . . 
+     61? miles to . . <B>Mount Katahdin-15</B>.
+
+<LI> <A HREF="hamtrails/katahdin.html"><B>Mount Katahdin-15</B></A> . . . . . .  
+     <B> DONE!!!!!</B>
+
+
+<P>
+
+<IMG SRC="9600/9600system04x.jpg" align=right>
+
+<B>Permanent Node Hardware:</B>  The image at right suggests a possible design for a 5 watt node using a 5W UHF digital radio,
+ a KPC-9612 TNC, a 7 AHr battery and 20 watt solar panel.  Packaging for permanent installation in an unpowered, 
+unattended remote site is a chaallenge to this network but if we start instead where existing sites exist with power,
+and look for new sites that can linke them, 
+it should be easy.
+
+<P>
+<B>NODE-to-NODE FREQUENCY - Packet and coordination:</B>  Initially we thought about using 6 meters or 900 MHz 
+so that it was more compatible with other VHF/UHF radios at existing sites.  
+But, as noted above,the end-user-terminal equipment is almost always going to be an integrated APRS dual band radio, 
+so user operations should be restricted to VHF or UHF, but backbone can be any band.  
+Low band 6m 150W radios are readily availble but BIG and someone has to do the mods.  
+Then at Dayton 2016, we got a batch of data radios, but they turned out to be 800 MHz commercial (see below)... 
+<P>
+. . .
+<P>
+
+<B>END USER FREQUENCY:</B> Bryan and Bill pointed out that end users should not be on the same frequency as the backbone 
+and so that suggests user ports should be on VHF or UHF to work with their existing 9600 baud packet radios.  
+But on the other hand, the KPC-9612 is dual port, with one port operating at 9600 baud and the other at 1200 baud.  
+So naturally, the backbone has to be 9600 baud to handle the bulk of the traffic and so the end user is at 1200 baud
+ on the local frequency.  But then we realised as a first step, just put a single 433 MHz radio operating at 9600 baud.  
+Users APRS radios can hit it directly for initial testing and to build interest in level-4 networking experimentation. 
+<P>
+
+<IMG SRC="hamtrails/splitter.GIF">
+<P>
+
+
+<IMG SRC="9600/stack386xx.jpg" align=right> 
+<IMG SRC="9600/nameplate391x.jpg" align=right>
+
+<B>NODE BATTERY POWER:</B>  If battery power is needed, here is a rough estimate of battery capacity.  
+For example, a VHF 5 watt radio and Kantronics KPC-9612 TNC each draw about 40 mA but peaks at 1 Amp during transmit.  
+If we assume a 24 hour dutycycle of about 4%, then the TX average current is another 40 mA for a total of about 120 mA 
+average current drain.  A rule of thumb for the east coast is that you get about 4 hours average solar power per day
+and that needs to power the system for the full 24 hours.  So the solar capacity has to be SIX times the average current 
+to break even on sunny days.  Multiply this by at least 5 times to make up for cloudy days 
+and we end up needing about 2 Amps solar charging (24 Watt panel) and about 7 to 9 Ahrs of battery capacity 
+as shown above right.
+<P>
+
+
+<B>900 MHz Possibility?</B> Here is a batch of radios I picked up at Dayton 2016.  They are clean and support 14.4 kPBs on three serial ports and have separate antennas for TX and RX.  But the bad news is that they are 800 MHz and of course we have no access to their firmware and coding.  The guy who sold them to me said they were "UHF" so I guesss he was technically correct.  Anyway, there are 25 of them and if we can figure out a way to get them to 900 MHz or use them at 420 MHz, then these might also make a nice backbone.
+<P>
+<img src="9600/Top-flat398x.jpg"> . <img src="9600/Bottom-flat397x.jpg">
+
+<P>
+<IMG SRC="9600/800MHz-bandplan.png" align=right>
+
+<B>Operating at UHF 433 MHz?</B> Looking at the 800 MHz band plan, these radios appear to be transmitting in the 824 MHz ESMR band and reeciving in the 860 MHz range.  A possible way to use some of this hardware is to simply bypass the 45W PA doubler final transistor (824 MHz) and use the output in the lower end of the 420-450 MHz amateur band from the 15 Watt Driver transistor which already works at 412 MHz or so.  Then scrap the 850 MHz receiver and stick in our own receiver for 433 MHz?
+<P>
+
+<B>UHF Exciter Transceiver:</B> The very rugged die-cast box has plenty of room for a UHF transceiver of our choice.  The D2294UK 15W driver transistor 
+<A HREF="http://www.datasheets360.com/pdf/-7108084217740701575"><B>(datasheet)</B></A>
+   needs about 1 Watt for full power, so all we need to find is a small 1W XCVR?  OOPS... and then add a T/R circuit.  Maybe we can do that with 1/4 wave lines and diodes?  Or does that just generate products..
+
+<P>
+
+<B>Full power on UHF?</B>  And since the 45W PA transistor 
+<A HREF="http://www.mitsubishielectric.com/semiconductors/content/product/hf/sirfpowermosfet/siliconrfdiscrete/siliconrfdiscrete_lv4/rd45hmf1.pdf"><B>(datasheet)</B></A>
+will work fine
+<A HREF="9600/PA-Sparameters.png"><B>(See S parameters)</B></A> down at UHF, maybe we can cut the output strip lines and add inductance and retune it for UHF and get the advantage of the full 45W power?  How does one re-bias the PA to encourage it to operate as an AMP and not as a doubler?  Higher or lower bias?
+
+<P>
+Bob, WB4APR
+
+<P>
+See my other GENERAL page on <A HREF="ham-trails.html"><B>APRS applications and Ideas on The AT</B></A>
+<HR SIZE=5 WIDTH="100%">
+
+<CENTER><P>Return to The <A HREF="index.html">APRS HOMEPAGE</A>
+ or <A HREF="sitemap.html"><B>SiteMap</B></A>. 
+
+</BODY>
+</HTML>

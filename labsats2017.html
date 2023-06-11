@@ -1,0 +1,504 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+   <TITLE>USNA LABsats-2017</TITLE>
+   <META NAME="Author" CONTENT="Bob Bruninga">
+   <META NAME="Description" CONTENT="LABsats, experimental student satellites">
+   <META NAME="Keywords" CONTENT="LABsats, laboratory, lab satellites, PCsat, APRS, APRsat, Satellite, Cubesat,  Tracking, Bruninga, LEO, GPS">
+   <META NAME="Classification" CONTENT="Science">
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#58F1FC" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000">
+<CENTER>
+<IMG SRC="logos/usnalogo.gif" HSPACE=5 HEIGHT=90 WIDTH=90 ALIGN=TEXTTOP>
+<B><U><FONT SIZE=+2>US Naval Academy LABsats 2017</FONT></U></B>
+<IMG SRC="pcsat/pcsatlogo2.jpg" HSPACE=5 HEIGHT=90 WIDTH=90 ALIGN=TEXTTOP>
+
+<BR>US Naval Academy Satellite Lab, <FONT SIZE=-2>Bob Bruninga, WB4APR
+<BR>Dr. J Thinel, CDR Stevens, CDR J.King, Dr. Jin Kang</FONT><BR>
+</CENTER>
+<P>
+<IMG SRC="labsats/labsats2017/Hanging18x.jpg"> . 
+<IMG SRC="labsats/RAFTsteidl2.jpg" height = 200 width = 280> 
+<IMG SRC="labsats/SolarPanelTest%20001x.JPG" height = 200 width = 280>
+<P>
+
+<B>LABsats:</B> These labsats shown here have been used since about 2010 and are based on the <A HREF="http://byonics.com/mtt4b"><B>Byonics.com MTT4B</B></A> 1200 baud VHF Microtracker packet transceiver and an Arduino prototyping board to give students in the US Naval Academy's Aerospace labs
+various hands-on experiments with satellite technology at low cost.  The photo above
+shows deputy NASA Administrator Admiral Steidle being briefed on the LABsat
+system.  We use the LABsats to support about 33 lab periods covering
+a number of space design principles in our sophomore intro labs (EA204) and in our senior
+spacecraft design labs (EA467).
+<P>
+<B>Flight Units:</B> The full size MTT4B transceiver above will not fit a cubesat, so we have 
+also laid out the board to fit a cubesat-104 size bus.  We call this board the
+<A HREF="satt4.html"><B>SATT4</B></A> and it uses a kit of the special parts from Byonics mounted on our ExpressPCB circuit board.  The link has the full design.  We have at least 6 spacecraft in space or manifest or in work that use this design. 
+See <A HREF="psat2.html"><B>PSAT2</B></A> for an example and links to the other spacecraft.
+<P>
+
+<B>Live Downlinks:</B> Also when using this LABSAT or PSAT comms board, any packets heard anywhere in the world by IGates will make it to the live APRS satellite downlink web pages:
+ <A HREF="http://ariss.net"><B>ARISS.NET</B></A> and <A HREF="http://pcsat.findu.com"><B>PCSAT.FINDU.COM</B></A>.
+<P>
+
+<P>
+<IMG SRC="labsats/labsats2017/Overall37x-labels.jpg" align=right>
+<IMG SRC="labsats/ADCS-sats-control.GIF">
+<P>
+<IMG SRC="psat/SATT4-003xxx.jpg" align=right>
+
+<B>Telemetry Command and Control:</B> The basis for these Labsats is the same Amateur Radio Command and Control Comms card we use in our cubesats design as shown at right.  Called the
+<A hREF="satt4.html"><B>SATT4</B></A> this 3.5" square comms board contains the AX.25 packet radio TNC and the VHF 1.5W RF transceiver.  It also provides the 5 channels of analog telemetry and the potential 8 bits of on/off commanding.  The actual photos of the Labsats show the earlier version of the Byonics MTT4 which is no longer available.  That is why we laid out their newer MTT4B to this new SATT4 board to also use in our Labsats.
+<P>
+
+<B> By the end of the semester the 33 labs have then learned everything from power system to comms, sensors to control, and ending in 4 labs on Attitude Dynamics & Control (ADCS) where the labsat is 
+hung on  a string where it can be commanded and controlled by the Arduino.  A final demo deploys the satellites on strings around thee campus with their S-band cameras so the students can command the Spysats remotely using the ADCS modes.</B>
+<P>
+<B>These next two links are a decade old and need to be updated:</B>
+<BR><A Href="AMSAT/APRS-in-space08.ppt"><B>Download APRS-in-space </B></A> Power Point presentation.
+<BR><A Href="labsats/USNAreview08f.ppt"><B>Download LABsat Review</B></A> Power Point presentation.
+<P>
+
+
+
+<B>LAB Summary:</B> The labs below are the actual labs in the fall of 2016 . 
+ </i> Also there is an older one-page-per-lab, conglomeration
+<A HREF="labsats/LABsat-Outline.doc"><B> summary overview</B>(doc)</A> of all the 
+learning elements extracted from the entire series as used in 2005. .
+<B>[this needs updating to the LABSAT model above]</B>.
+
+<P>
+ 
+The following are the latest copies of each of the 33 labs:
+
+<P>
+<LI><B>Antenna Labs:</B> . . . . . . . . . Links, Patterns, Gain, Beamwidth, SWR & Bandwidth.
+    <A HREF="labs/EA467-AntLab16_b.docx"><B>Antenna Lab</B></A>, 
+    <A HREF="labs/EA467-EZNEC16a.docx"><B>EZNEC Lab</B></A>.
+
+<LI><B>Transmission Lines:</B> . . . . Transmission lines and matching systems.
+    <A HREF="labs/EA467-XmissionLines2017%20Rev%20c.docx"><B>Transmission Lines Lab</B></A>.
+
+<LI><B>Microwave Experiments:</B> Link margin, Antenna gain and Beamwidth. 
+    <A HREF="labsats/TVlink2400MHzX.JPG"><B>Dish photo</B></A>
+    <A HREF="labsats/TVxmtrLband.JPG"><B>XMTR photo</B></A>
+
+<LI><B>Electrical Power:</B> . . . . . . . Solar Cells, batteries and Regulators
+    <A HREF="labs/EA467-EPS-battery-psat2016-c.docx"><B>Batterys</B></A>, 
+    <A HREF="labs/EA467-EPS-Curves%20and%20Regs-2017c.docx"><B>IV curves and Regs</B></A>, 
+    <A HREF="labs/EA467-EPSdesign2016f.docx"><B>EPS System Design</B></A>, 
+
+<LI><B>Transmitters:</B> . . . . . . . . . . Measuring TX power and antenna matching 
+    <A HREF="labs/EA467-commsRX-TX2016-c.docx"><B>TX/RX Lab</B></A>
+<LI><B>Receivers:</B>. . . . . . . . . . . . . Measuring receiver sensitivity, selectivity and Bandwidth
+   <A HREF="labs/EA467-commsRX-TX2016-c.docx"><B>TX/RX Lab</B></A>
+<LI><B>Communications:</B> . . . . . . Evaluating FSK, AFSK and PSK signals; and TDMA and FDMA systems 
+    <A HREF="labs/EA467-commsFSK-2016-b.docx"><B>FSK</B></A>
+    <A HREF="labs/EA467-commsBPSK-2016-c.docx"><B>BPSK</B></A>
+
+<LI><B>Command and Control:</B> . Programming the Arduino. 
+    <A HREF="labs/CDH%20Lab-arduino-2016f.docx"><B>Digital I/O</B></A>, 
+
+
+<LI><B>Telemetry I:</B>  . . . . . . . . . . . Analog inputs, Signal conditioning, decoding, unit conversions 
+    <A HREF="labs/EA467-Telemetry-I-2017f.docx"><B>Telemetry I Lab</B></A>
+
+<LI><B>Telemetry II:</B>  . . . . . . . . . . Serial Data & intrfaces, Packet formatting & Xmission 
+    <A HREF="labs/EA467-Telemetry-II-2018-%20LABSAT-c.docx"><B>Telemetry II GPS Lab</B></A>
+
+<LI><B>Imaging Sensors:</B> . . . . . . .Field-of-View, Resolution, Bandwidth 
+    <A HREF="labs/EA467-Sensors-Imaging-Arduino2018c.docx"><B>Cameras and SSTV</B></A>, 
+
+<LI><B>Attitude Systems:</B> . . . . . . Mass, Center-of-gravity, Moments-of-inertia, Torsion Balance. 
+    <A HREF="labs/EA467-ADCS-intro-17b.docx"><B>ADCS Intro</B></A>.
+<LI><B>Attitude Estimation:</B>. . . . Sun Sensors, Star Tracker, Magnetometer. 
+    <A HREF="labs/EA467-ADCS-estimation17-c.docx"><B>Estimation Lab</B></A>.
+<LI><B>Attitude Control(Bdot):</B> . Magnetic(passive), Torque coils, Momentum wheels, Thrusters.
+    <A HREF="labs/EA467-ADCS-control-Bdot17-b.docx"><B>Bdot Lab</B></A>
+<LI><B>ADCS Thrusters and Wheels:</B> . Thrusters (fans), overshoot, Reaction Wheels
+    <A HREF="labs/EA467-ADCS-Arduino-Thrusters%20&amp;%20Reaction%20Wheel%2017b.doc"><B>Sun Pointing Lab</B></A>
+
+<LI><A HREF="labsats/EA467-Ops-Final-b.doc"><B>Final LABsat Ops Lab</B></A>.  
+ <<== Final lab hides labsats with cameras around the campus hanging on strings and they have to command/control/attitude to figure out where they are.
+
+<LI><B>Thermal Control:</B> . . . . . . Absorbtivity, Emissivity, Conduction.
+    <A HREF="http://www.aprs.org/labsats/labs08/EA467_TCS_Lab_ay09.pdf"><B>Thermal Lab</B></A>, 
+    <A HREF="http://www.aprs.org/labsats/labs08/EA467_TCS_Lab_ay09_partd.pdf"><B>Pumped Loops</B></A>.
+<LI><B>Thermal LABsat:</B> . . . . . . LABsat in Thermal-Vac!
+    <A HREF="http://www.aprs.org/labsats/labs08/EA467-Thermal-labsat-ae-o8b.pdf"><B>TSAT in TVAC</B></A>! 
+
+
+<LI><B>Tracking/Targeting:</B> . . . . Google satellite imagry and PCSAT/APRS
+       tracking for tactical exercise.
+    <A HREF="http://www.aprs.org/labsats/EA467-Targeting.DOC"><B>Targeting Lab</B></A>
+
+
+<P>
+<B>LABSAT SYSTEM: </B> 
+The LABsat concept was developed at USNA beginning about 1998 to use innexpensive 
+off-the shelf components
+for under about $600 each ($900 with discrete TX & RX), yet include RF hardware similar
+to what we used in our 5 actual spacecraft
+(<A HREF="pcsat.html"><B>PCSAT</B></A>, <B>PCSAT2</B>, <B>ANDE</B>, <B>RAFT</B>, and
+<B>MARScom</B>) so that they could actually close
+the link from orbit in the Amateur Satellite Service.  
+The labsats can not only serve as the final integration of all the
+modules of the seniors lab course, but they can also serve as rapid prototyping devices
+for testing modules and components for auxilliary payloads and applications.
+. With their full space-link budget comms system, they can be carried anywhere on
+the academy or out to 500 miles LOS and still be commanded for demos.
+Our next satellite project is <B>Psat</B>.
+
+<!-- <A HREF="labsats/Labsat-points.htm"><B>See salient points</B></A>.//-->
+<P>
+
+<B>COMM SYSTEM:</B> . The Telemetry, Command and Control system communicates at 1200 baud using the standard AX.25 packet radio protocol
+that has flown on MIR, the Shuttle and ISS plus a dozen or more satellites in the
+Amateur Satellite Service (including 5 of our own). . The current Labsat model uses
+the Byonics.com MTT4 series of Microtrackers for the Telemetry, command and control and
+an Ardunio for controll and programming.
+
+<P> 
+
+<IMG SRC="labs/room-to-room-link-test-TX.png" height=300 width=500> . . . 
+<IMG SRC="labs/room-to-room-link-test-RX.png" height=200 width=400>
+<P>
+<IMG SRC="labs/link-1mi-testX.jpg" align=right>
+
+<B>Room-to-Room Link Test:</B> While this is not an actual lab, it is an essential test
+we require on all student satellite comm system projects.  There is no such thing as a viable bench-top
+comm test with any value.  The transmitter emitts 100,000,000,000,000 or a 100 million*million times
+more RF power than the receiver needs for a good link.  It is impossible to get that separation on a desk top.  So, our first level test is to put the transmtter in a faraday cage (an old metalic PC box)
+and include about 60 dB of attenuation in the cable plus ferrite chokes on all leads going into
+or out of the box (data or power).  Then we place the TX box (above left) hundreds of feet away in another room
+and connect back to the receiver under-test (above right) via 200' of lossy RG-58 cable with 20 or 30 dB
+attenuators in the middle.  Then the cable connects to a step attenuator at the receiver for making weak signal link tests.  The huge physical separation makes sure there is no leakage around all the attenuators.
+<P>
+
+
+<B>1 Mile Link Test:</B> The final test of any  flight units is the 1 mile full range test as shown at right.  The satellite and ground station are separated by about a mile and then 30 dB of attenuators are placed in the ground station coax line and in the distant satellite test item.  This total attenuation summs to 60 dB which is the same thing as a range difference of 1000-to-1.  If the communications works with this
+attenuation over 1 mile, then it proves it will work over 1000 miles without the attenuation.
+<P>
+An advantage of this test is that it permits full test of the antennas as well.  Also, if there is true line-of-sight then the test should be pretty reliable except for ground-reflection gains and nulls.  But these can be quickly assessed by raising and lowering the test antennas and looking for the peak and avoiding the null.  You can assume the peak is no more than about a 3 dB ground gain,
+though the nulls can be 10 dB or moer deep.
+<P>
+
+<IMG SRC="labsats/GainAnt2x.JPG" align=left height=200 width=200>
+
+<IMG SRC="labsats/dish-TV-sband1x.JPG" align=right height=200 width=200>
+
+<BR>
+<B>IMAGING SYSTEM:</B> All of the LABsats have a low cost ($75) camera on board 
+operating on the four video carriers at either
+1200 or 2400 MHz, for a total of 8 independent LABsat images. . 
+These 
+<A HREF="labsats/SPY-systemLband.JPG"><B>self-contained cameras </B></A> 
+not only make excellent imaging devices, but their
+operation at L and S band make great microwave link sources and receivers for
+antenna and link labs below. . Normally the cameras operate in the lab 
+with their OMNI antennas,  but 4 mile range is easily achievable outside
+using the parabolic reflector on the LABsat as shown to the
+left and an 18" dish at the receiver as shown to the right.  .
+This is a challenge for the ADCS when the satellite is so far away
+that the students have to use telmetry to determine and then command the
+attitude in the blind to point it back to the ground station before they can
+even see the image!.
+
+<P>
+
+<B>STACKsats:</B> The images below show two of the typical 2005 style LABsat stack configurations.  These
+show the original momentum wheel and magnetorquing experiments for demonstrating attitude 
+control.
+The Motor and the orthogonal X and Y torquing coils demonstrate
+actual attitude control using the Earths magnetic field.  When hung from a string,
+students are able to change the attitude of the labsat, and, with the right pulsing
+of the coils, spin up or de-spin the spacecraft. . Other models can demonstrate
+propulsion with either Match-heads, Estes rockets, or Fans. [We now use fans after too many fire-alarms]...
+<P>
+
+<IMG SRC="labsats/SPINsat.JPG" Height=240 width=320> 
+<IMG SRC="labsats/TORQsat.JPG" Height=240 width=320>
+
+<P>
+<B>FLATsats:</B> 
+As shown in the 8 different models below, the LABsats can also be configured into a 
+FLATsat configuration for the EPS Solar Panel System design Lab.  In the FLATsat 
+configuration, three Solar Panel sides of the
+spacecraft can be illuminated at once as is the typical illumination of a
+cube shaped satellite.  During the design Lab, we have boxes of 8 different
+solar cell sub-panels of various voltages and currents.  The students must
+design a power system that can be illuminated under a lamp which will power
+their LABsat including momentum wheel, while staying within the panel size 
+allocated.  Cost is also a parameter of the overall design challenge.
+<P>
+<IMG SRC="labsats/Flat-Group1-016x.JPG" HEIGHT=240 WIDTH=320> 
+<IMG SRC="labsats/Flat-Group2-017x.JPG" HEIGHT=240 WIDTh=320>
+
+<P>
+<B>ELECTRICAL POWER SYSTEMS: </B> 
+The original 2005 Labsatw were composed of several boards.  The image below shows three of the LABsat 
+boards (the RF Transceiver board, a Solar Panel, and the Comand/Control/Telemetry
+board).  The single radio transceiver board was replaced with separate TX and
+RX boards in 2005 so students could perform individual functionsl tests on these
+modules. Other standard boards are the Battery
+board, and experimental prototype board.  The photo on the right shows how the Telemety
+and Transceiver boards are used to make measurements during the Solar Power lab.
+<BR>
+<IMG SRC="labsats/LABsatPanels.JPG" Height=240 width=320>  
+<IMG SRC="labsats/Labsat-Solar1x.JPG" height = 240 width = 320>
+<P>
+The drawing below shows how the LABsat telemetry system is typically used as a
+data collection device during experiments.  In this case the 4 of the channels are being
+used to collect Solar Panel voltage and temperature, plus current and battery voltage 
+and discharge current of the torque motor.  This same 5 channel telemetry of the original Kantronics KPC-3 packet TNC is also now in the Byonics MTT4B that we now use.
+
+<P>
+<IMG SRC="labsats/EPStempMotor.GIF">
+<P>
+<B>TRANSMITTERS:</B>  New in 2005 labs, the original $100 radio transceiver was replaced
+with discrete TX and RX panels (at $200 each raising satellite costs to about $900 each) 
+so that  students could measure and 
+peak the transmitter for peak power out and measure the antenna SWR.  They also
+observe and measure any harmonics or other spurious emissions.  These emissions
+are important in passing EMI testing.  This experiment also has them plot the
+temperature rise of the transmitter final PA amplifier so they learn the heat
+involved in a 2W transmitter and how it is mostly concentrated in the final stage
+and requires thermal design to get rid of it. . They use a FLIR camera to see
+the temerature of the components (mostly the driver and PA).  We still use these discrete transmitters and receivers since the on in the current LABSAT is not much bigger than a large postage stamp!
+
+<BR> 
+<!--<IMG SRC="labsats/VHFXMTR1.JPG" Height=240 width=420> //-->
+<IMG SRC="labsats/Stack-TX007x.JPG" HEIGHT=230 WIDTH=240>
+ <IMG SRC="labsats/TXdwg.GIF">
+
+<P>
+<B>RECEIVERS:</B> On the new discrete receiver, students measure
+the 10 dB SNR sensitivity and bandwidth as shown below.  They measure the
+noise power on the audio voltmeter and then increase the signal until they
+achieve 10dB, and then 20 dB SNR.  They then move the signal up and down
+in frequency to measure the 6 dB bandwidth of the receiver.  SImilarly, we still  use these discrete receivers so the students can actually see the individual stages on the board.
+<BR>
+<!--<IMG SRC="labsats/VHFRCVR180.JPG" height=240 width=240>  //-->
+<IMG SRC="labsats/Stack%20RX008x.JPG" HEIGHT=210 WIDTH=240>
+
+<IMG SRC="labsats/RXbandwidthX.GIF" > 
+<BR><IMG SRC="labsats/RXsetup.GIF">
+
+<P>
+<B>STACK INTEGRATION:</B>
+The next close up view shows how we stacked the original 6"x6" boards back in 2005 to compose a LABsat.  The right image is the Kantronics KPC3 we used to use. By having a common footprint, the
+students have greater freedom in the physical layout of their designs.  In
+the attitude control lab, they have to arrange for a good center of gravity and
+calculate their moment of inertia.  This view, from top down is composed of:
+
+<LI>Payload board:  . . . . The top board is the torgue coil control board
+<LI>Transceiver Board: . The XCVR board is being replaced with separate TX & RX boards
+<LI>TNC board: . . . . . .  The TNC board has the Command, Control, Telemetry board (shown separately to the right)
+<LI>Power System: . . . .  The bottom board contains the Electrical Power System
+<P>
+<IMG SRC="labsats/STACKsat.JPG" Height=240 width=320> 
+<IMG SRC="labsats/TNC-radio%20034x.JPG" Height=240 width=320>
+<P>
+<B>TELEMETRY:</B> The block diagram of the original 5 channel Telemetry Command and control interface for the original Kantronics KPC-3plus TNC is shown below.  Now in the MTT4B (and our SATT4) we have
+the same 5 analog inputs but also eight command bit outputs instead of the original two (A & B). 
+The bidirectional serial bus allows unlimited expansion to other processors
+and experiments.  This Amateur Radio Packet TNC functionality is the foundation of most of the labsat
+experiments.  It is identical to the dozen currently flown or manefest on USNA satellites.
+<P>
+<IMG SRC="labsats/tlm-tnc-ctrl.GIF" >
+<P>
+To prepare the COTS Kantronics TNC packet modem back in 2005 for use as a Telemetry, Command and Control system,
+we make modifications to the circuitry and make various taps off of many of the
+microprocessor I/O lines.  With these mods, the students can easily access the
+CPU telemetry inputs and command outputs.  
+<A HREF="labsats/LABSATtncMods1006.GIF">See details of the TNC mods</A>.
+<P>
+LABsat telemetry consists of periodic packets containing a serial number followed by
+5 comma delimited analog values in the range of 0 to 255. 
+<A HREF="labsats/LS1-1001.TXT"><B> (see example)</B></A>.  This file can be opened directly into
+EXCEL for display and/or conversion to specific units for display.  If more than one
+LABsat is on the air, then the separate labsat callsign packets need to be sorted first.
+
+<P>
+<B>SIGNALS AND MODULATION:</B>
+<P>
+<B>FDMA and BPSK:</B> The students use the Transmitters and Receivers and Telemetry system to investigate
+both FDMA and TDMA systems.  To observe and FDMA system, we simply load DIGIPAN PSK31 Amateur radio software on every PC in the lab and then crossconnect the sound card audio from an HF receiver to every PC's LINE-IN so they can all see the same waterfall of whatever we can find on the HF PSK31 frequency of 14.070 MHz.  But then we also patch the PSK31 transmit audio output from every PC via a 10k resistor to that same common audio point.  This way any PC can also be used to trnamit intot he same waterfall. (Not on the air to the HF radio, but their TX tones just superimpose onto the same waterfall).
+
+<P>
+<B>TDMA and FSK Data:</B> We tap in a dual channel O'scope to see the reecived audio and discriminator detector as shown on the right. They observe and capture time domain waveforms and
+compare signals and compare the dualtone AFSK to the recovered bits and to the receoverd ASCII telemetry as shown on the right.  We still  use the original KPC3 TNC to get the tap point on the data bit recovery point in the circuit.  
+<P>
+<IMG SRC="labsats/FDMAsystem.JPG" height=240 width=320>
+<IMG SRC="labsats/TDMAsystem.GIF" height=240 width=320>
+
+<P>
+<B>LABSAT GROUND STATIONS:</B> The ground station for both our LABsats and our
+USNA Satellites on orbit consists of a brief-case system containing a laptop, 
+and AX.25 packet radio modem and small radio.  The one shown below uses the Kenwood
+TH-D7 packet radio that has built-in TNC-modem for easy construction and is 
+suitable for actual comms with the spacecraft on orbit and in the lab.  On the right
+is a GSE laptop connected to our flight RAFT and MARScom satellites.
+<BR>
+<IMG SRC="labsats/PCsatGSE.JPG" Height=240 width=320> 
+<IMG SRC="labsats/GSE%20and%20stack%20004x.JPG" Height=240 width=320>
+<P>
+<B>ATTITUDE CONTROL LABS:</B> The below images were our labsats in about 2005 showing the reaction wheel and torque coil labs.  The initial approach shown
+above right used <i>match-head</i> thrusters, but having a room full of students and boxes
+of matches is a bad mix. The next thruster design used Estes two rocket engines on outriggers on a very massive plate (the large mass to keep it under control). But during the
+third year, the labsat flew off the support string and crashed and burned. . The newer LABSAT we developed in 2008 and still use is an excellent final design that uses small CPU fans as thrusters.
+<P>
+<IMG SRC="labsats/Attitudes.GIF">
+<IMG SRC="labsats/FOAMsat.JPG" Height=258 width=344>
+<BR>
+The image shows the original foam sat aligned with North (using the small permanent 
+magnet inserted on the +X face).  The match-head Thruster was inserted on the lower left
+-Y face and ignited.  The moment of inertia is calculated and the resulting
+angular velocity is used to calculate the force of the thruster.  The dip needle 
+shows the orientation of the Earths Magnetic field in the lab.
+<A HREF="labsats/TORQcoils.JPG">Click for closeup of the original magnetorquing coils</A>.
+<P>
+<IMG SRC="labsats/rocketsatface010xL.JPG" height=240 width=320> 
+<IMG SRC="labsats/rocketsatmotor%20014x.JPG" height=240 width=320>
+<P>
+In 2006 we abandoned the match-motor tiny thrusters for the much more vigorous
+ESTES rocket motor on an actual LABsat as shown above.  This satellite 
+was hung outdoors but close
+to the lab window so it is easy to see.  First the CW motor was fired to give the
+satellite a good spin CW.  Then the CCW motor was fired and if they were close in
+performance, then the second motor would counteract the spin and return the satellite
+to rest in about 1 second. . With lots of smoke and fire of course.
+<P>
+<B>Magnetic Stabilization:</B> To help studnets visualize the attitudes of
+spacecraft with magnetic stabilization, I wrote a program in Qbasic to generate many
+views from our ground station such as the one below. This one shows that
+fixed magentic stabilization gives horizontal attitude to the south of us,
+becoming more vertical the further north.  But perfectlyl predictible and
+reproducable on every pass.
+<A HREF="attitudes.html"><B>(See more views)</B></A>
+<P>
+<IMG SRC="labsats/MAG30w.gif">
+
+<P>
+<B>SERIAL DATA COMMUNICATIONS EXPERIMENT:</B>  In this lab (called Telemetry II above), the students
+analyze the serial data output of a GPS unit and connect it to the LABsat 
+command/control system to transmit GPS position data to the ground station in APRS format.  
+Back in 2005, the data is then decoded and
+displayed on a local map of the Academy.  Each GPS (since the experiment is conducted
+indoors) is pre-loaded with a simulated position.  The screen shot below
+of the <A HREF="index.html"><B>APRS</B></A> display 
+shows the positions reported by their GPS units and the callsigns
+the students gave their labsats for this experiment.  The students are required to
+manually parse the data fields and then this display gives them feedback about 
+their successful data transmission.
+<P>
+
+<B>Now since 2008,</B> we simply transmit this data on the national APRS frequency of
+144.39 MHz and it will be picked up by a local APRS Igate and fed into the global APRS
+Internet system where the students (and anyone else) can zoom in on
+<A HREF="http://aprs.fi"><B> APRS.FI</B></A> and see their plots live.
+
+<P>
+    <IMG SRC="labsats/GPSserial.GIF">
+<BR><IMG SRC="labsats/GPSlab.GIF" >
+<P>
+
+<B>OTHER Experiments:</B> Another advantage of the LABsat based experience for the
+students is that they can use it as the baseline for building and testing other
+sub components of their EA-470 satellite design work.  In the photo below, a
+FLATsat model was used to test a string-cutter antenna deployment design for
+one of the early RAFT models.  In this case, the students could concentrate on
+the mechanical and structural details and simply use the FLATsat as the control
+system.  On the right, students experiment with a UHF helix antenna.
+<P>
+<IMG SRC="labsats/Flat-Sepsys010x.JPG" height=220 width=280>
+<IMG SRC="labsats/Mids-w-helix.JPG" height=220 width=280>
+<P>
+<B>SATELLITE TRACKING:</B> The USNA Satellite Lab maintains a track on all of our
+own satellites plus other university and interesting satellites.  When passes occur
+during labs, students participate in ground station operations.  In a number of
+experiments, the students have done the planning and scheduling of PCSAT2
+and PCSAT1 commanding.
+<A HREF="labsats/EA467PCSAT2.pdf"><B>(PCSAT2 Ops Lab)</B></A>, 
+    <A HREF="labsats/EA467-PC2-PC1ops.pdf"><B>(Joint ops Planning Lab)</B></A>.
+The image below is used to help the students visualize the daily pass geometry of
+PCSAT2 over our station.
+<P>
+<IMG SRC="labsats/passes-iss.GIF">
+
+<P>
+<B>FLIGHT HERITAGE:</B>
+The LABsat hardware is derived from the actual flight hardware used on several 
+of the successful Naval Academy Satellite designs that have flown or are currently 
+manafest.  These systems are similar and compatible to what has flown on the MIR, 
+ISS and the Space Shuttle for use by schools and universities around the world.
+By using a common Telemetry Command and Control system, the independent 
+flight systems can actually be used in constellation with each other for
+multiple satellite experiments.  Also, their commonality encourage colaboration
+with other schools making similar compatible systems.
+<BR>
+<IMG SRC="labsats/USNAsatsX.GIF">
+<P>
+<B>USNA SATELLITES: </B>  A total of eight independent Telemetry Command and Control
+Systems similar to our labsats have flown or have been delivered for flight as
+of 2007 as shown below.  Both PCsat, PCSAT2 and ANDE are dual systems, meaning they carry
+two complete systems each.  The dual systems give redundancy, and also give
+multiple functionality.  The RAFT and MARScom systems have single TC&C systems.
+<P>
+
+<A HREF="pcsat.html"><B>PCsat </B></A>  
+<IMG SRC="pcsat/PRshotS.jpg" height=120 width=160>
+ <A HREF="pcsat2.html"><B>PCSAT2</B></A>
+<IMG SRC="pec/PC2group.jpg" height=120 width=160> 
+ <A HREF="ande.html"><B>ANDE</B></A> . . . . . 
+<IMG SRC="labsats/ANDEfinalTweakx.JPG" height=120 width=160>
+<P>
+ <A HREF="raft.html"><B>RAFT</B></A> 
+ <IMG SRC="craft/GroupRnM042x.JPG" height=120 width=160>
+ <A HREF="http://www.aprs.org/marscom.html"><B>MARS</B></A> .  
+ <IMG SRC="labsats/MARS%20pix.JPG" height=120 width=160> 
+ <A HREF="buoy.html"><B>Parkinsonsat</B></A> 
+ <IMG SRC="buoy/buoy.jpg" height=120 width=160>
+<P>
+<B>Dry Spell:</B> Then we had no launch opportuinities for 7 years until we got a ride
+for <A HREF="psat.html"><B>PSAT</B></A> in May 2015 and several more manifest for launch in 2017 and 2018 such as 
+<A HREF="qikcom-1.html"><B>QIKCOM-1</B></A> currently on ISS awaiting deployment,
+
+<A HREF="qikcom-2.html"><B>QIKCOM-2</B></A> currently on a PSLV awaiting launch this Fall,
+
+<A HREF="psat2.html"><B>PSAT2</B></A> Manifest for Spring 2018 on STP-2 mission, and
+
+<A HREF="hfsat.html"><B>HFSAT</B></A> currently removed from any DoD launch because it is Amateur and the AirForce has declaired it will not launch any more USNA AMateur Student project satellites.
+
+
+
+<P>
+<B>LABsat Drawings:</B> Here are some of the obsolete documents that describe the original LABsat details.
+ These are not all inclusive, but are all that we have posted at this time...
+<P>
+<LI>Battery Panel . . . . <A HREF="labsats/Battery-Panel.GIF"><B> Drawing</B></A>
+<LI>Overall Manual . . . <A HREF="labsats/LABsatManual.pdf"><B>Draft Tech Manual</B></A>
+
+<P>
+
+<B>Current LABSAT documentaion </B> is best found on the
+<A HREF="satt4.html"><B>SATT4</B> </a> web page.
+<P>
+
+<HR SIZE=5 WIDTH="100%">
+<TABLE BORDER=2 CELLPADDING=2 >
+<TR>
+Return To:
+<TD>
+<CENTER><P><FONT SIZE=+1><A HREF="satstation.html">USNA
+Satellite Lab</A></FONT>
+</TD>
+
+<TD>
+<CENTER><P><FONT SIZE=+1><A HREF="sitemap.html"> Site Map </A></FONT></P></CENTER>
+</TD>
+</TR>
+</TABLE></CENTER>
+</UL>
+
+</BODY>
+</HTML>

@@ -1,0 +1,147 @@
+PCSAT2 TELEMETRY DEFINITIONS AND EQUATIONS                   22 Aug 2005
+--------------------------------------------------------------------------
+rev1 12 Dec 2003
+rev2  4 Mar 2005
+rev3 28 Apr 2005 Swapped Isol and Iload and changed "10" fm Cell1 to Cell2
+rev4 22 Aug 2005 swapped Load & Sol current in EQN table to be consistent
+                 and fixed the two Cell-1's to be 1 and 2
+
+This is the validated as-wired telemtry channels for PCSAT2.  
+
+The twenty channels of PCSAT2 telemetry are multiplexed into 4 sequential
+frames of telemetry.  Every telemetry frame consists of 5 analog channels, 
+8 on/off status bits, two CONTROL bits, two FRAME counter bits and a final 
+single status bit.  It takes four such frames to constitute the complete
+telemetry picture of PCSAT2.
+
+The format of each frame is:
+
+PCSAT2>APRTLM,SGATE:T#SSS,111,222,333,444,555,11111111,XXYY,ZZ
+
+Where the header is PCSAT2>APRTLM,SGATE: (These fields may vary)
+Within the actual data portion of the packet are these fields:
+
+  SSS      is the serial number 
+  111      is the first channel telemetry
+  222      is the second channel
+  333      is the thrid channel
+  444      is the forth channel
+  555      is the fifth channel
+  11111111 is the status of the 8 ON/OFF OUTPUT commmand bits
+  XX       is the status of the CTRL-A and CTRL-B outputs
+  YY       is the 1-of-4 telemetry FRAME counter (00,01,10,11)
+  Z        is a single telemtery ON/OFF bit.
+
+Notice, the YY bits tell you which frame you have.
+
+Here are the verififed channels for PCSAT2:
+
+
+YY  CHANNEL 1    CHANNEL 2    CHANNEL 3    CHANNEL 4     CHANNEL 5
+--  -----------  -----------  -----------  ------------  ------------
+00  RXA-current  RXB-current  BAT-CELL3    TNCA-current  TNCB&RXC-Cur
+01  BAT-Temp     PEC-Temp     TXA-current  TXB-Current   Bat-Cell1
+10  TXA-Temp     TXB-Temp     Bat-Cell2    RX-Temp       TLM-Temp
+11  Bat-Volts    Bat-Current  Load-Current Sol-Current   5-Volts  
+
+Telemetry equations are generally of the form y = aX^2 + bX + C where
+X is the 3 byte decimal telemetry count in each channel in the data.
+For PCSAT2, however, all channels are linear except for the temprature
+which are y=.00001X^3 - .0034X^2 + .7134X - 33.49
+
+CHANNEL          A      B       C    UNITS  Equation basis
+-------------  -----  -----  ------  -----  ---------------------------
+RXA-current     0       2       0    mA     a count of 256 = 512 mA
+RXB-current     0       2       0    mA     a count of 256 = 512 mA
+BAT-CELL3       0     0.0498    0    volts
+TNCA-current    0       2       0    mA     a count of 256 = 512 mA
+TNCB&RXC-Cur    0       2       0    mA     a count of 256 = 512 mA
+
+BAT-Temp        .       ..      .    degC   See cubic equation above  
+PEC-Temp        .       ..      .    degC   See cubic equation above  
+TXA-current     0       5      -5    mA     a count of 256 = 1.33 Amps
+TXB-Current     0       5       0    mA     a count of 256 = 1.33 Amps
+Bat-Cell1       0     0.0504    0    volts
+
+TXA-Temp        .       ..      .    degC   See cubic equation above  
+TXB-Temp        .       ..      .    degC   See cubic equation above  
+Bat-Cell2       0      0.0500   0    volts
+RX-Temp         .       ..      .    degC   See cubic equation above  
+TLM-Temp        .       ..      .    degC   See cubic equation above  
+
+Bat-Volts       0      0.1      0    volts
+Bat-Current     0    -22.44 +2842    mA     a count of 128 is 0
+Load-Current    0     15.43    20    mA     a count of 128 is about 2000 mA
+Sol-Current     0      7.843   -7    mA     a count of 128 is about 1000 mA
+5-Volts         0      0.0235   0    volts  a count of 213 = 5 volts
+
+
+
+-----------------------------------------------------------------------
+PCSAT2 TELEMETRY DESCRIPTION                                 4 Mar 2005
+-----------------------------------------------------------------------
+Not realizing I had done all this work, I did another complete write up
+of the telemetry from scratch.  Here is the new version and this one is 
+derived from the actual code in our PCSAT2 decoding software used 
+during all testing.  So if there is any difference between the above 
+file and the below file, I guess the below file should take precedence.
+
+ Define Function for Temperature:
+        Tof(V) = .00001 * V ^ 3 - .0034 * V ^ 2 + .7134 * V - 33.49
+
+ Telemetry Format is:   T#515,135,134,001,138,001,11111111,0010,1
+ T#nnn is serial number
+ Then five 3 byte decimal values
+ Then eight bits which default to 11111111
+       1st bit = 0 means 96 hour timer toggle is set
+       2nd bit = 0 forces reset of opposite TNC
+       3rd bit = 0 means RX heaters are on
+       4th bit = 0 means VHF transmitter is enabled
+       5th bit = 0 toggles state of Shunt Reference
+       6th bit = 0 means PSK-31 is enabled
+       7&8 bits= 01 means FM Repeater is forced on
+                 00,11,10 mean nothing
+ Next is a comma
+ Next is SRFF,Z
+      Where S bit is Solar Experiment Reset
+      Where R bit is RESET 8 hour timer    (shuts down system)
+      Where FF are they two frame bits
+   
+      IF Frame is "00" THEN
+         RXa Current  = 2 * value1
+         RXb current  = 2 * Value2
+         B3volts      = Value3 / 20.07
+         TNCa current = 2 * value4
+         TNCb current = 2 * value5
+         IF Z bit is a "0" THEN ArmB2 = -1
+      
+      IF Frame is "01" THEN
+         BatTemp      = Tof(value1)
+         CaseTemp     = Tof(value2)
+         TXa current  = 5 * value3 - 5
+         TXb current  = 5 * value4
+         B1-volts     = value5 / 19.86
+         IF Z bit is "0" THEN ArmA2 = -1
+      
+      IF Frame is "10" THEN
+         TXa temp     = Tof(value1)
+         TXb temp     = Tof(value2)
+         B2-volts     = value3 / 20.01
+         RX temp      = Tof(value4)
+         TNC temp     = Tof(value5)
+         IF Z bit is "0" THEN ArmB1 = -1
+      
+      IF Frame is "11" THEN
+         B4-volts     = value1 / 10
+         Bat current  = INT(-22.44 * value2) + 2.27 * Tf + 2842)
+         Load current = INT(15.43 * value3 + 20)
+         Solar current= INT(7.843 * value4) - 7
+         5volt ref    = value5 * 5 / 213
+         IF Z bit is "0" THEN ArmA1 = -1 ELSE ArmA1 = 0
+
+      IF 5volt ref is < 1 volt THEN set 48 hour warning
+      Notice TF in the Battery Current equation.  This is the 
+             temperature of the FTSCE experiment which must be 
+             obtained by other means.  Assume 0 deg C if not avail
+
+de WB4APR, Bob

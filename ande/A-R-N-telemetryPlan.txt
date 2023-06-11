@@ -1,0 +1,103 @@
+ANDE, RAFT and MARScom Telemetry Plan               21 Dec 2006
+---------------------------------------------------------------
+                                                         WB4APR
+
+The first few days of ANDE, RAFT and MARScom will focus on
+capturing whole orbit telemetry.   The satellites came out with
+a very rapid spin as high as 60 RPM on NMARS and about half 
+that on RAFT.   User packets are not authorized (except for 
+authorized command station checkouts).
+
+But we do welcome TELEMETRY and LOG capture files for any data
+that did not make it through the Satgates and APRS Internet
+System.  We make these telemetry requests:
+
+1) Make sure your TNC or logging clock is within a second or so
+of UTC time.  It can be LOCAL time if you clearly tell us
+whether to ADD or SUBTRACT X hours from the time indicated.  If
+you send us the file, include your statment of the accuracy or
+offset of your clock in the first line of the file.
+
+2) Please compare your packets to the raw packets captured at
+the bottom of the live FINDU downlink page:
+http://pcsat.aprs.org .  We only need a copy of the raw packets
+that you captured that are -not- on that list (at the bottom of
+the page).   You will have to make your comparison within an
+hour or so, depending on activity, so that the packets of
+interest do not scroll off the page.
+
+3) It would be very helpful to our data team if you edited out
+all the dupes and only send us the packets that are not on
+FINDU.  Send them to bruninga@usna.edu. Include your LOCATION and
+time in the subject line:  "Telemetry, Kalamazoo, MI 21 dec 1848z"...
+
+CAUTION:  Since the FINDU page normally does not have a time
+stamp and only shows the relative age of a packet (but no
+reference) it is obsolete the moment you view it.  So it is best
+to either annotate the time at the instant that you refreshed
+the page, or better is to click on the LINK that says "clickhere
+to see times in UTC".  It will download another page with
+complete time stamps (though unformatted and hard to read).
+
+FREQUENCY:  Monitor 145.825 MHz 1200 baud packet for ANDE and
+RAFT.  Monitor 27.965 +/-2 KHz SSB 1200 baud AFSK packet for NMARS.
+Notice, you may also hear UO-11 on the same 145.825 frequency.
+NMARS is lighter and will eventually lead RAFT.
+
+TELEMETRY NOTES:  The telemetry from all three satellites are in
+standard APRS telemetry format of the KPC-3 TNC's:
+T#SSS,111,222,333,444,555,11111111,000.   There are several easy
+observations:
+
+1) It is important to note that T#SSS is a serial number and
+that these serial numbers are helpful for determining dupes or
+absolute time.  For RAFT and NMARS, these are once a minute and
+will count up to 999 and then roll back to 000.  That takes
+about 16 hours unless we take some high rate data.
+
+2) ANDE, however, does a COLD boot on every pass.  So for ANDE,
+the T#SSS is every 50 seconds and will tell you how long the TNC
+has been up since it last awoke.  Hopefully it will only be
+awake for 10 to 20 minutes at a time, though while it is in
+range of the pesky RAFT's telemetry, it may be kept awake for
+hours until RAFT gets out of range.  
+
+WHAT TO LOOK FOR:
+
+For RAFT and NMARS you can visually decode the 5 channels of
+telemetry (see format above).
+ 111 - is Voltage in 0.1 volts.     (80 ==> 8.0 volts)
+ 222 - is Solar current in 2 mA's.   Multiply by 2 for mA
+ 333 - is Battery current in 2 mA's. Multiply by 2 for mA
+ 444 - is Load current in 2 mA's.    Multiply by 2 for mA
+ 555 - is temperature  (a cubic, but 128 is about room temp)
+
+A healthy spacecraft will be above 8.0 volts and will see
+consistent solar current while in the sun.
+
+ANDE is more complicated because it has a total of 20 telemetry
+channels divided up among four separate packets.  So it takes
+3.3 minutes to get a complete set.  You can tell which set you
+get by the first 2 digits of the 8 bit number at the end.
+00XXXXXX, 01XXXXXX, 10XXXXXX and 11XXXXXX.  ANDE runs on primary
+batteries and no solar power, so it either works or it doesn't.
+But the most important data is the spin rate which we hope to
+derive from the 6 solar sensors.  These packets are the 11XXXXXX
+packets.
+
+G4DPZ has written an on-line decoder on his web page:
+
+  http://www.g4dpz.me.uk/ANDE/home.do
+
+For more info on telemetry, check these pages:  
+   http://www.ew.usna.edu/~bruninga/craft/RAFTeqns.gif
+   http://www.ew.usna.edu/~bruninga/ande/ANDEeqns.txt
+
+And for up-to-date info about this mission, please check the
+main operations page:
+
+http://www.ew.usna.edu/~bruninga/ande-raft-ops.html
+
+Bob Bruninga, WB4APR
+US Naval Academy Satellite Lab
+

@@ -1,0 +1,262 @@
+ANDE Integration Functional Test Procedures:               14 March 2006
+------------------------------------------------------------------------
+
+This revision includes updates from the pre-thermal tests on 14 March 
+2006.  The base document used then was from the 22 July 05 pre-vib 
+functional test.
+
+This procedure is for functional testing of the ANDE comms modules using
+a combination of GSE connected to the test harness and an RF receive 
+station to functional test all aspects of both Comm Modules.
+
+EQUIPMENT: 
+   ANDE Comm Test Set with cross connect cable assembly
+   Bench Power supply for 14.4 volts at 1.2 amp
+   Telemetry Sensor Simulator Plug assembly
+   Laser Load Resistor Simulator
+   GSE Laptop connected to test set
+   GSE RF briefcase with laptop and transceiver.
+
+SETUP PROCEDURE:
+----------------
+
+0) Boot both PC's, cancel any windows logon window.
+1) Run USNA002.exe on both PC's.  Use password "lmur" ENTER, hit ENTER.
+2) Configure for ANDE with alt-S-USAGE-ANDE to see ANDE screen.
+3) Plug the test set Power-A plug into left side connector on module
+   COMM-01 and Power-B into the left side connector on COMM-02.
+4) Plug the test set DB-9 Serial port into the GSE Laptop.
+5) Plug TELM Simulator cables A and B into right side connectors.
+6) Set power supply to 14.4 volts, set current limit knobs to about 1.5
+   amps (which is about the 12:00 oclock position)
+7) Turn all switches on the Test Set to off (down).  
+8) Plug the Red and  Black leads into the power supply.
+9) On RF station, turn radio on and set to 145.825, memory (MR 0).
+10) Turn on RF power meter to switch position factor "1".
+11) Turn on speaker volume control and connect to Test set.
+12) Connect RF wattmeter to COMM-01 module RF connector.
+13) Connect dummy load (2 attenuators) to RF connector on COMM-02.
+14) If lasers are used, connect TELM B pigtails to Lasers, yellow wire
+    to pin at 2 o'clock position and gray to pin at 4 o'clock position.
+15) If lasers not used, connect one pigtail (2 wires) to the laser-test-load.
+    There are two pigtails in case there are two laser assemblies to test
+    at the same time.  But both are in parallel, so only one is needed
+    when the laser-test-resistor simulator is used.  Be sure to prevent
+    the unused pigtail from touching ground.
+
+SOFTWARE AND MODES BACKGROUND:
+------------------------------
+
+USNA SOFTWARE can be in 2 modes:  TELEMETRY screen and KEYBOARD screen.
+The KEYBOARD screen is used to send commands out the serial port to
+either an attached TNC/radio (RF station) or to the spacecraft TNC
+via a serial port connection.  All serial data is viewable on this
+screen in raw form.  But you must be on the TELEMETRY screen to actually
+receive and parse any telemetry data.  Use these transitions:
+
+  C C ENTER will transition from TELEMETRY to the KEYBOARD screen 
+            *AND* will also send a ^C to place a TNC into cmd: mode.
+
+  K         will transition from TELEMETRY to KEYBOARD screen directly
+            without going to cmd: mode.  Any typing in this mode will
+            pass transparently through the TNC and be transmitted.
+            Hitting a ^C here can get you from converse to cmd: mode.
+
+  ESC       ESC will transition from the KEYBOARD screen to TELEMETRY.
+
+A TERMINAL NODE CONTROLLER (TNC) can be in two modes, cmd: and CONVERSE.
+The cmd: mode is for setting up or commanding the TNC parameters.  The
+CONVERSE mode places the TNC in transparent mode so that anything typed
+is transmitted by the TNC to an attached radio.
+
+  Use "K ENTER"   as a command to go from cmd: to CONVERSE.   
+  Use ^C to break from CONVERSE mode and go to cmd:  mode.
+  
+You will frequently transition between all these modes.  So these detail
+transition entries may not be listed in each step in these procedures 
+but are assumed to be an operator skill.
+
+SCREEN CLEAR:  Sometimes it is desireable to clear the telemetry screen
+to make new valuse more apparent.  Use the FILE-NEW command to do this.
+
+DELAYS:  There are delays in the handshaking RF command modes becuase of 
+the line-by-line protocol overhead.  Several seconds may be required.  
+Further due to shared resources on the ANDE systems, there can be as 
+much as a 10 second delay in response to some commands via the GSE port.
+
+
+PREPARATION PROCEDURES:
+-----------------------
+
+While watching the current load on the Power Supply perform these steps:
+
+Turn on Battery 1 switch.             Verify =< 0.01 A on power supply.
+Turn on Sep-Switch.                   Verify =< 0.01 Amp .
+Turn on the RX-A wake switch.         Verify about 0.07 Amp or less
+Set speaker switch DOWN (A).          Verify radio noise in speaker
+Wait 15 secs.                         Verify 1 sec TX burst >= 0.50 Amps
+Turn on Battery 3 switch (B1).
+Set speaker switch UP (B) (on back)   Verify no noise (RX-B is off)
+Turn on Receiver B Wake switch.       Verify .12 Amps and speaker noise
+Wait 15 secs.                         Verify 1 sec TX burst >= 0.50 Amps
+
+Turn off both of the RX WAKE switches.  
+Wait 1 minute for RX's to sleep shown by current =< .01 Amps.
+If all OK to this point, it is safe to proceed with the test.
+
+SIDE B TEST:
+------------
+
+Flip all battery switches, and the SEP switch up.  This will be the 
+post-separation deployed configuration.
+
+Set speaker switch to A side (down)
+Flip the RX A WAKE switch up to wake up the side A system. 
+Set the PC switch to the A side (down) and, execute these commands:
+   C C        Hit C then C then ENTER to enter TNC command mode.
+   ENTER      Hit ENTER to verify you get cmd mode.  (may take 10 s)
+   TE 1       to set telemetry to every 10 secs
+   ESC key    to get back to telemetry monitoring screen
+
+After 40 seconds, on the RF station verify telemetry fields for the 
+A side are updated.  Note, the GSE laptop cannot show Side A telemetry.
+ 
+              A                         A1     A2     B1     B2
+   VOLTS    13.5           Currents A:  35     38      -      -  mA
+   X-SOL     .94           Currents B:   -      -      -      -  mA
+   Y-SOL     .98           Volts:       .2 V  
+   Z-SOL     .92           Use counter:       _____   
+   5-volts   5.02          Temperatures:  all ambient
+
+If side B wakes up too, then you will see its values as well.  
+Set speaker switch to B side (up).
+Wake up system B with the RX B WAKE switch. 
+Flip the PC switch to B side (up) and do the C C ENTER to cmd: mode.
+Send these commands: TE 1, MXM ON and MON ON following each by ENTER
+After 40 seconds you should see side B on the RF systems screen:
+
+              A      B                  A1     A2     B1     B2
+   VOLTS    13.5   13.3    Currents A:  35     38     30     30  mA
+   X-SOL     .94    .92    Currents B:  35     38     30     30  mA
+   Y-SOL     .98    .98    Volts:       .2 V  
+   Z-SOL     .92    .92    Use counter:       _____   
+   5-volts   5.02          Temperatures:  all ambient
+
+The B side telemetry will also show on the GSE laptop if the PC switch
+remains in the B position.  A side telemetry cannot be viewed with this
+wired GSE PC in this test.
+
+To test the A side SOLAR sensors, momentarily hold the yellow clip lead on 
+the Telemetry connector to the negative terminal of a 1.5 volt flashlight
+cell for more than 40 seconds.  Verify Solar Cell voltages drop from their
+.9 values to near zero (zero shows as black or no value) for that
+telemetry system
+
+Remove yellow clip lead and 1.5 volt cell.  It is OK for the yellow clip
+to fall to ground.  No damage will occur.
+
+Still with PC switch set on side B
+ Send LEDS ON   Verify nothing happens
+ Send CTR A ON  Verify LASER LED located on side B connector comes on. 
+                Verify A1/A2 battery currents sum >= 500 mA
+ Send CTR B ON  Verify currents shift mostly to B2 and B1/B2 >= 450 mA
+ Send CTR A OFF Verify currents shift mostly to B1 and B1/B2 >= 450 mA
+ Send LEDS OFF  Verify laser LED goes off.  Current drops to =< 0.13A.
+
+ Send LEDS ON.     Verify laser LED comes ON.   Allow the receivers to
+      return to sleep mode by turning off both RXA and RXB wake switches.
+ Verify laser LEDS OFF and power drops to =< 0.01 amps within a minute 
+      or so to simulate fail safe at LOS.
+
+Verify RX-A wakes up 2 secs every 16 @ 25C. (A on longer when colder)
+Verify RX-B wakes up 2 secs every 23 seconds (observe .06 on P.S.).
+
+After the tests have been running for a while and MON has been on, 
+confirm these bulletins have been received.  Press "A" or "B" to show
+the bulletins received from the A or B side of ANDE.
+
+After  15 seconds verify receipt of the first Bulletin
+After  1 min 45 seconds verify receipt of second Bulletin
+After  4 min 15 seconds verify receipt of third Bulletin
+After 10 min 30 seconds verify receipt of fourth Bulletin
+
+
+SIDE A TEST PROCEDURES:
+-----------------------
+
+SWAP the TELM A & B simulator cable end-for-end between A and B.  This
+only does one thing, and that is to allow the yellow clip lead to be
+used to test the side B solar sensor circuits.  The A end also has
+real thermisters, whereas the end marked B only has fixed resistors
+simulating thermisters.
+
+Switch on both the A and B side receivers.
+Switch the laptop PC switch to side B (up).  Hit ESC to TELEMETRY.
+   C C ENTER and set TE 1, MXM ON and MON ON commands (ENTER after each)
+Switch the laptop PC switch and speaker switch to side A (down).
+   C C ENTER (or ^C) and set TE 1.
+Wait for full telmetry from both sides on the RF station.
+
+Connect the yellow clip lead on the Telemetry Simulator connector to 
+the negative end of a 1.5 volt flashlight cell.  Hold the Plus terminal to
+ground for over 40 secs until the simulated solar voltages appear.  THe
+values should drop from the 0.9 range to the 0 range (or turn black-
+blank) indicating full sun. (This is due to the inverted polarity of the
+solar cells.).
+
+Disconnect Yellow Clip Lead and battery.
+
+Send CTR A ON.  Verify transmitter comes on and voice module wakes.
+                Verify A2 battery current >= 400 mA for the duration 
+                       of the voice announcement and returns to 0.16 A.
+Send LEDS ON    Verify test set laser LED comes on.  A1/A2 sum >= 500 mA.
+Send CTR B ON   Verify current shifts to mostly B2 and B1/B2 >= 500 mA
+Send CTR A OFF  Verify current shifts mostly to B1 and B1/B2 >= 500 mA
+
+Send LEDS OFF.  Verify laser LED off, currents back to =< .16 Amps.
+
+Send LEDS ON.   Verify laser LED comes ON.   Allow the receivers to
+     return to sleep mode by turning off the RXA and RXB test switchs.
+Verify laser LEDS OFF and power drops below 0.01 amps
+     within a minute or so to simulate fail safe at LOS.
+
+VOICE TEST:
+-----------
+
+Set RX-A wake switch to ON.
+With PC switch selecting side A, hit ESC and send these commands:
+     C C ENTER        to get to cmd: mode
+     MYAPRS TALK      to define the speaking callsign
+     CTR OFF          to make sure of default state.
+
+Send CTR A ON.    Verify transmitter comes on and voice module wakes.
+                  Verify A2 battery current >= 400mA on PS for duration 
+                  of the voice message and stops.  Current =< 0.16 A.
+
+On RF station, tune TX channel to 145.825 (MR 0).
+On RF laptop, hit ESC to go to TELEMETRY screen.  Then C C ENTER to cmd:
+   so you can send the radio TNC the following commands:
+
+   U APRS V ARISS  <ENTER>      This sets the proper callsign for voice
+   K ENTER                      To get to keyboard mode (not cmd: mode).
+   :TALK.....:testing <ENTER>   Notice that the 5 dots..... are SPACES
+   :TALK.....:type anything here to be spoken, etc
+
+Verify ANDE speaks each test.  Note, there may be 10 second delays in 
+the voice even though the packet may be digipeated immediately.
+
+TURN OFF VOICE MODULE:  On GSE Labtop, hit ESC and then enter:
+   C C ENTER   To get to ANDE side A cmd: prompt.
+   CTR OFF     To turn off voice module.  Notice that this turns off
+               both the CTR A and CTR B circuits with one command.
+
+END OF TEST:    Shut down as follows:
+- Turn off all test set switches starting right to left.  
+- Unplug red wire from power supply, turn Power supply off.
+- Turn off the small battery powered Speaker box
+- Turn the RF wattmeter switch to OFF.
+- Exit USNA002.EXE with the FILE-QUIT-YES command.
+- Disconnect connections if needed.
+
+Bob Bruninga,            USNA Satellite Lab,              410-293-6417
+

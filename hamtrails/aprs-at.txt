@@ -1,0 +1,110 @@
+APRS-AT.TXT        APRS on the Appalachian Trail!
+===========================================================================
+Document version: 002
+Document dated:   5 May 2003.
+Author(s):        Bob Bruninga, WB4APR <bruninga@usna.edu>
+
+APRS-AT was written to run in APRS Kiosks along the Appalachian Trail
+wherever we can find power and a sheltered location for an old DOS PC.
+APRS-AT runs under automatic control to report the movement of hikers
+along the trial.  Hikers may either be HAMS with APRS portable gear,
+or regular hikers who have placed themselves on the map at one of these
+APRS Kiosks along the trail.  Their movements are dead-reckoned based
+on their estimated speed and direction.
+
+HIKER DATA ENTRY:  Each hiker is identified by his initials, direction
+of travel, icon,  and type of hiker (Day, Through, Weekend, etc).
+He also enters additional data that will show up in his object report:
+
+  *Initials for ID     AAA
+  *Direction           North or South
+  *Type                Day, Section, Through, or Weekend
+  Starting point       Where he entered the trail
+  Destination          His ultimate destination
+  ICON                 Hiker, Bike, Horse, Circle, Sqare, Triangle
+  Speed                Speed in Miles per day...
+
+The first three are used to give him his unique ID such as "AAANT"
+for a North bound Through hiker with the initials of AAA.
+
+NIGHTIME OPS:  All such hikers are dead reckoned every hour or so
+between the hours of 7 AM to 7 PM.  After those hours, all objects
+are transmitted at their last predicted position and their ICON is
+converted to the "tent" icon.
+
+Whenever an object has not been updated in a week or reaches its final
+destination, it is removed from the system.
+
+DEAD RECKONING and APRS:
+
+Although all APRSdos programs dead reckon all moving objects to their
+estimated current positions based on elapsed time since the last
+position report, APRS-AT (derived from APRSdr) does this movement at
+the point of transmission, not at reception.  Thus, to all other APRS
+programs of any kind, whether DR is enabled or not, they see the new
+estimated positions only.  This includes the WEB FINDU.COM as well!
+
+This is a very powerful technique which can provide the same measure of
+tracking but without attaching a GPS to every hiker!  The concept is
+simple, the position of the hiker at least for the purpose of knowing
+approximaely what section of trail he is on is completely predictible
+from his last known point as long as he makes a reasonable entry of
+his estimated speed over the next section...
+
+
+APRS ALT-NET:  To avoid cluttering normal APRS screens in states along 
+the trail, all APRS-AT stations use the special ALT-NET of ATxxxx.
+This should not be displayed by properly configured software.  By the
+same token, the APRS-AT stations will not display anything on the
+maps except other ATxxxx stations.  But APRS-AT does have two other
+exceptions.  First, any Kenwood HT using the Hiker ICON will be
+captured.  This is necessary, since the Mic-E format cannot designate
+an ALT-NET.  Second, all weather stations are accepted since weather
+information should be useful to Hikers.
+
+
+THE TRAIL:  The Appalachian Trail is added to a DOS map as a purple
+line in the map file USA-AT.MAP.  This is one map that covers the
+entire 2000+ mile range of the trail.  Just as in APRSdr, the trail
+begins in Georgia and runs to Maine and BACK so that Hikers may be
+placed on the trial going either direction.  North bound hikers use
+LEG 1 and southbound hikers use LEG 2.
+
+BEGINNING A HIKER:  The INPUT-ADD-OBJECT command in APRSdr has been
+completely customized for APRS-AT.  The hiker only needs to enter the
+appropriate information above, and he is placed on the map at the
+present location of the APRS Kiosk he is using.  To make this work
+the APRS-AT must be customized with these parameters:
+
+  1) The location of the Kiosk
+  2) The immediate direction of the first leg north and south
+  3) The difficulty of the next 60 miles north and south
+
+Whenever the destination of a hiker is reached, his SPEED is set to zero
+so that no further DR occurs and his ICON remains in the system for a
+day before it is deleted...
+
+Hikers that APRS-AT is dead-reckoning will show in CYAN.  Any
+other of your uplinked Objects will be the usual Yellow.
+
+
+APRS-AT keeps the map USA-AT in memory at all times
+4  APRS-AT will not let you zoom below 1 mile.  This is because the DR
+algorithm fails due to map scale problems below that range.
+
+See APRSdr.txt on how the USA-AT map is made using color 13 and no
+leg is shorter than what a Hiker would cover in one hour (about
+one mile)
+
+REDRAW:  APRS-AT has an automatic recenter and redraw routine whenever
+keyboard has been in active for 3 minutes.  This time is settable with
+the alt-S-OTHER-REDRAW command.
+
+By default, APRS-AT sets the special APRS ALT-NET of ATxxxx.  Thus this
+software will only show the location of other APRS-AT systems.  But
+since the Kenwood's cannot do alt-Nets, all Kenwoods showing the
+HIKER ICON will be displayed too.
+
+
+Enjoy!
+Bob Bruninga

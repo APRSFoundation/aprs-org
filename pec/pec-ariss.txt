@@ -1,0 +1,87 @@
+PCsat2 ARISS COMMS COMPATIBILITY                           20 Nov 2002
+----------------------------------------------------------------------
+                                                                WB4APR
+
+Since PCsat2 is an amateur radio experiment to fly on the ISS, it must
+operate in compatible modes with all other ARISS experiments.  It
+consists of dual-redundant AX.25 command/control system and a PSK-31 
+multi-user COMM experiment.  Further, it can be configured to agugment
+crew voice communications.  The following paragraphs address the ARISS
+compatibility of each of these modes.  For a Block diagram see 
+
+         http://www.ew.usna.edu/~bruninga/pec/pecsatcom.jpg
+
+DEFAULTS AND BASIC OPERATIONS:   PCsat2 has 3 receivers and 3 
+transmitters.  For NASA EVA requirements the transmitters default to 
+OFF.  In addition, their default  configuration if activated are as 
+follows:
+
+ 145.825 FM RX    ==>TNC==>  435.x TX-A  UI digi normally on
+ 145.800 RM RX    ==>TNC==>  435.x TX-B  A back up command link
+
+This default mode assures there is no interference to ARISS on 144.49,
+145.200 and other unpublished ARISS School contact frequencies in the
+two meter band.  Further, PCsat2 antennas will be more than 120 feet 
+from other existing ARISS antennas.
+
+PSK-31 COMMS EXPERIMENT MODE:  When mutually scheduled, the PSK-31 
+linear receiver can be patched to the UHF-A transmitter for full 
+duplex multi-user communications experiments.  Being linear up, and 
+FM down, the Doppler rates are on the order of 1 Hz per second and anyone 
+with an FM receiver and a sound card can decode all of the 20+ multi-
+user data streams with public domain software.  This mode has no 
+impact on current ARISS operations on the 2 meter band.  Yet provides
+schools with easy 'uncongested' access to an ARISS transponder.
+
+UI-DIGIPEATER CROSSBAND MODE:  In this mode, the 145.825 MHz packet 
+receiver digipeats to UHF-A transmitter, again with no impact to
+ARISS 2 meter band operations.
+
+UI-DIGIPEATER MODE:  In this mode, the digipeater operates up and 
+down on 145.825 in synergy with the existing ARISS packet system.
+This mode can be scheduled during hours when the ARISS crew will not
+be using 2 meters for voice.  At these times, the best OPERATIONS
+PLAN will be for ARISS packet (145.800) to be reserved for MAILBOX BBS 
+operations only and all UI digipeater users to be encouraged to operate 
+only on 145.825.  This separation of function will lead to greater 
+through-put for both.
+
+BACKUP DUAL-REDUNDANT COMMAND/CONTROL MODE:  This mode is always
+active as a backup command channel.  WIth a 2 meter uplink and UHF
+downlink on UHF-B, it also has no impact on current 2m ARISS operations.
+
+FM-CREW-COMMUNICATIONS SUPPORT MODE:  In this mode, the PCsat2 can
+be configured to act as a full-duplex crossband voice repeater with 
+2-meter uplink and UHF-B transmitter downlink.  This permits a
+vast improvement in crew-to-ground ARISS voice operations because
+it eliminates the total congestion on the uplink by allowing
+everyone in the footprint to hear the uplink as well as the downlink
+and thus avoid collisions.  The uplink has been chosen to be 145.800 
+for several reasons.
+
+1) Uplinking on the existing published 145.200 and 144.49 voice
+uplinks is problematic and wouild require changing frequencies two
+times per orbit.   Thus, using the internationally cleared ARISS
+voice frequency of 145.800 is the next best choice.
+
+2) By operating the FM repeater with a receiver on 145.800, normal 
+operations of ARISS are not impacted and yet any crew operations of 
+opportunity will be heard on the UHF-B downlink.
+
+3) To take maximum advantage of this capability, crew operations
+will best operate simplex on 145.800, with everyone monitoring
+the process on UHF-B to avoid collisions with others.
+
+4) In the future, the presence of a full duplex repeater on ISS
+will allow HT operations by the crew from anywhere within the
+ISS (if it were ever possible for such emissions within the ISS).
+
+CONCLUSION:  This PCsat2 configuration is felt to offer the best
+possible design which minimizes any conflict with current ARISS
+operations, while still offering distinct ARISS advantages of
+improved voice communications, improved packet throughput, and
+something new (PSK-31) for students to learn about.
+
+Bob Bruninga, WB4APR
+US Naval Academy Satellite Lab
+ 

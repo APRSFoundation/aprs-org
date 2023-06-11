@@ -1,0 +1,160 @@
+                           
+                           THE APRS/AMSAT TRAKNET
+                             
+
+    Commercially, there are two distinct advantages of the global nature
+of satellites which cannot be easily met with terrestrial systems:  wide-
+bandwidth point-to-point and mobile applications.  With the availability 
+of telephone, cable, and the internet to link HAMS at fixed sites to each 
+other routinely, we are wasting a lot of potential of our very valuable 
+AMSAT resources by ignoring mobile applications.
+
+     HAM radio is on the move.  Any survey will likely show that many
+hams only have time to play radio while mobile, and similarly, whenever
+a ham contemplates a long trip, his HAM radio is high on the priority
+list.  Although many dream of taking along an HF mobile to play with 
+and to report their progress back home, the $1000 to $2000 investment  
+is just too much of a risk.   Two meters is fun, and can bring emergency
+aid, but it just doesn't provide the nationwide coverage that is needed
+for the the mobile HAM traveler far from home, the offshore boater, or 
+first-response teams arriving in a disaster area.  In many cases, just 
+a brief position/status report is all that is needed to assure the health 
+and welfare of the traveler or to summon assistance or alert other comms
+channels.
+
+     Many hams have put together some impressive mobile satellite 
+stations, but the performance is poor and takes a major investment in $$$, 
+size and weight.  The reason is that they are essentially duplicating a 
+typical weak-signal home satellite station on wheels.  What we need is a 
+new perspective which takes advantage of some very unique capabilities to 
+exploit a small portion of our AMSAT on-orbit capacity to the mobile 
+requirement.  Fortunately, there are several AMSAT's that are VERY EASY
+to transmit to from the mobile using only a 2 meter 25 watt FM mobile 
+radio.  The ubiquitous radio that EVERYONE has...
+
+UPLINKS:   Lets look at the 1200 baud PACSAT uplinks.  These uplinks are 
+unique for several resons that make them ideal for the mobile environment 
+as follows:
+
+  1)  The 2m uplink from a mobile omni antenna has a 9 dB advantage over 
+        a similar 435MHz link due to the 3 times larger antenna aperture
+  2)  There is no tuning or tracking required on the uplink since the 
+        doppler on 2m is less than 3 KHz.
+  3)  Any 25 watt mobile 2m FM rig can be used as the transmitter
+  4)  Any TAPR-2 compatible TNC can be modified for the uplink for $2
+  5)  World Wide Coverage
+  6)  NO software or hardware on-orbit modifications to the satellite.
+
+Reportedly stations running as low as 7 watts into an indoor omni antenna
+have reported success with the PACSATS.  THis means that even back-
+packers with an HT and handheld gain antenna could get emergency or 
+priority traffic into a Pacsat...  from anywhere on earth!
+
+DOWNLINK:  OK, so the 2m UPLINK is easy and anyone can do it, so what 
+about the downlink?  This is not so easy.  The path loss omni-to-omni 
+is 9 dB worse, the satellite is only transmitting a watt or so for 
+another 10 dB worse performance, plus it REQUIRES doppler tuning, a $250 
+PACSAT modem and a $1000 all mode UHF receiver!  In most cases, all 
+successful pacsat stations use high gain antennas and automatic tracking 
+to make up for the almost 19 dB performance loss on the downllink.  This 
+is not something that most operators will want to add to their mobile.  
+But what if the mobile application did not need to receive data, but
+only send it?
+
+TRAKNET:  The combination of EASY uplinks, MINIMUM downlinks, and an
+application that often only needs a one way exchange of data, such as the
+mobile position/status report is the whole idea behind TRAKNET.  Only a 
+few automated downlinks are needed every 1000 miles or so to receive the 
+mobile data and to provide it into a nationwide system of linked ground 
+stations.  These ground stations relay the mobile position/status reports 
+onto local mobile vehicle tracking channels and onto the internet.  Anyone 
+may access the data live on VHF, HF or via the internet.  TRAKNET is not
+just a future idea, it can be implemented immediately with existing
+equipment and satellites.  Yes, even the INTERNET ground stations exist.
+Any Mac/WinAPRS or APRS+SA station can serve as a live internet Igate.
+
+MOBILE STATION:  A mobile station consists of nothing more than a typical 
+2 meter FM radio and a modified TAPR-2 compatible TNC as shown in figure
+1.  Optional accessories are a GPS for moving position reports, and a 
+laptop for modifying the status message.  Most modern TNC's will accept 
+the GPS data directly and will transmit the data in a timed packet burst.
+There are even tiny handheld TNC's available that include front panel
+switches for selecting 1 of 7 pre-canned status messages without needing
+a laptop to change the status report.  The modifications to the TAPR-2
+TNC are to simply EXclusive OR the transmit data with its 1200 Hz clock
+and to filter the result to the Mic input of the radio.  The following
+circuit will do this with nothing but an 89 cent standard 7400 quad
+2 input NAND gate connected to the two points shown.
+
+  19-20 J5            |\     
+  TXD ---*------------| |0--*
+         |         *--|/    |   
+         *---|\    |        *---|\      
+             | |0--|        *---| |0--*--/\/\/\--*-------*       
+         *---|/    |  |\    |   |/               |       \ 1k
+         |         *--| |0--*                   ===.2uF  / <----*> To Mic
+  TXC ---*------------|/                         |       \
+  U10A pin 6                                     |       /
+                                               -----   -----
+                                               /////   /////
+
+The pin numbers shown are for a PacComm TINY-2.  
+
+TRAKNET PROTOCOL:  The problem with any AMSAT is the very low bandwidth 
+available compared to the very large worldwide amateur population.  At
+first glance, the prospect of increasing the number of users on a Pacsat
+channel by a hundred fold raises lots of red flags in the minds of those
+stations who already find the 10 minutes of a satellite pass to be too
+short for any meaningful dialoge.  But what if each of these hudreds of
+of new users was limited to only a few seconds per orbit?  Then as many
+as 200 stations per footprint could be tracked.  That is the only objective
+of the TRAKNET protocol, to allow everyone to transmit a few single 1 
+second position/status reports during the closest point of approach over 
+their location. 
+
+TRAKNET SATELLITES:  There are currently three operational 1200 baud Pacsats
+on orbit.     Here is the frequency plans of the existing PACSATS:
+
+DIGIPEATER FM Manchester UPLINKS                  DOWNLINKs
+---------- -------------------------------------- ---------
+AO-16                 .860      .900 .920 .940    437.051
+LU-19            .840 .860 .880 .900              437.153
+IO-26                     .875  .900  .925  .950  435.822
+
+                                       
+ADVANCED MOBILES:  While the preceeding was written to emphasize the
+ease of using the PACSATS by anyone for emergency or priority status/
+position reporting, there is certainly no reason why a full two way
+PACSAT communications system cannot be added to most mobiles.  Omni
+PACSAT downlinks are possible and the addition of only a modest gain
+antenna will certainly help.  Advantages are the small size of a 6 dB
+two element UHF antenna and the SHORT cable run found in a mobile.
+Rather than a $1000 SSB rig, a $90 QRP HF rig and a UHF downconverter
+would do just as well.
+
+CONCLUSION:  The advent of the handheld GPS unit for under $200 has 
+brought thousands of mobile amateur radio operators into the world of 
+mobile data.  For years, the growth of amateur GPS applications have
+been growing at phenomenal rates.  Similarly, the state-of-the-art in
+automatic PACSAT ground station has
+been improving with many recent software packages to make un-attended
+automatic ground station quite easy.  The problem is that these two 
+communities of expertise have so far had little cross-interests.  It
+seems that the time is now to merge these technologies into a new amateur
+application that takes advantage of the unique capabilities of each  
+and fuels the develpoment of an Amateur Radio Mobile Satellite System.  
+TRAKNET is the opportunity to not only merge these interests into a 
+common purpose, but also to demonstrate amateur radio's continuing 
+progress in comunications technology.
+
+
+PHOTOS:
+
+
+Figure 1:  This photo shows the display of stations in the Continental US
+that successfully digipeated their positions and status via the SPRE
+exeriment on STS-72.  A similar experiment was conducted via SARES on STS-78.
+
+Figure 2:  This photo shows a typical PACSAT mobile status/position
+reporting station.  It conisists of a 2 meter FM radio, a GPS unit
+and a slightly modified TAPR-2 compatible TNC.

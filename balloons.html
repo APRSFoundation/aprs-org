@@ -1,0 +1,710 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+   <TITLE>Naval Academy Amateur Radio Balloons</TITLE>
+   <META NAME="Author" CONTENT="Bob Bruninga">
+   <META NAME="Description" CONTENT="High Altitude Balloon">
+   <META NAME="Keywords" CONTENT="High Altitude Ballooning, USNA, Bob Bruninga, Darrin Maule">
+   <META NAME="Classification" CONTENT="Science">
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#87CEFA" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000">
+
+<IMG SRC="balloons/Balloon2015/MT-400_08xx.jpg" align=right>
+<IMG SRC="balloons/Balloon2014/payload-2nd-34xx.jpg" align=right >
+
+
+<CENTER><P><B><U><FONT SIZE=+2>
+Naval Academy Amateur Radio BALLOON Experiments
+</FONT></U></B></P></CENTER>
+<CENTER>
+<P>Bob Bruninga, WB4APR lastname@usna.edu
+
+<BR>Midn 1C Bottomley, Daly (2014)
+<BR>EA-470 Satellite Design Project
+</CENTER>
+
+<!-- This is how to make a clickable picture and a link...!
+
+<CENTER><P><A HREF="liftoff.html">
+
+
+
+<IMG SRC="photos/balloon1.jpg" LOWSRC="photos/balloon1.jpg" ALT="Balloon Preparation" 
+HSPACE=1 VSPACE=1 BORDER=1 HEIGHT=220 WIDTH=330></A></P></CENTER>
+//-->
+<P>
+<H1>Balloon Path Settings:</H1> The original BALLOONS.TXT file seems to have been lost.  
+So here are the recommended settings for balloons on the National Amateur Radio APRS frequency: 
+<LI> No more than once a minute (balloons are easy to hear and do not change directions rapidly)
+<LI> DIRECT Path if possible above a few thousand feet above local terrain
+<LI> One hop via WIDE1-1 when below that altitude and higher rate is OK.
+<LI> Dual hop WIDE1-1,WIDE2-1 if you can detect landing on the ground.
+<LI> If you must fly the entire mission with only one path, then <B><i>USE WIDE2-1</B></i>.  
+This will bring up every digi over a million square miles but at least it will only do it once a minute, 
+and no worse to locals than just another mobile in the area. And being 2-1, 
+it will not bring up the WIDE1-1 fill-in-digis that may not have dupe suppression.
+<P>
+<LI> If <B><I> every digipeater</B></i> in your area digipeates these 1 minute packets separately 
+and discretely and seems to be overloading your channel, then the problem is in YOUR DIGIPEATERS, not the balloon.  
+The DWAIT is supposed to be 0 in all APRS digipeaters.
+
+<P>
+<B>APRS NETWORK FRATRICIDE:</B> Generally, all APRS digipeaters are supposed to transmit immediately and all at the same time.  
+They should NOT wait long enough for each one to QRM the channel with the same copy of each packet.  
+NO, APRS digipeaters are all supposed to STEP ON EACH OTHER with every packet.  This makes sure that everyone in range of a digi 
+will hear one and only one copy of each packet.  and that the packet will digipeat OUTWARD and not backward.  
+The goal is that a digipeated packet is cleared out of the local area in ONE packet time and not N packet times 
+for every N digipeaters that heard the packet.  This means no PERSIST times, no DWAIT times and no UIDWAIT times.  
+Notice, this is contrary to other packet systems that might want to guarantee delivery (but at the expense of throughput).  
+APRS wants to clear the channel quickly to maximize throughput.
+<P>
+<IMG SRC="balloons/Balloon2018/Pico-Anika-summer/Balloon-ready.jpg" align=right>
+
+<H1>2018 Summer Pico Balloon Test:</H1>
+<IMG SRC="balloons/Balloon2018/Pico-Anika-summer/Skytracker0026x.jpg">
+<P>
+See Summary <A HREF="balloons/Balloon2018/Pico-Anika-summer/Pico%20Balloon%20Report%20paper%20rev12a.docx"><B> Paper</B></A>
+<P>
+A summer intern, Anika Williams, studied the potential of using ultra lightweight APRS telemetry systems on 
+a party-balloon sized mission to achieve constant pressure altitude and float potentially around the world.
+She used a WB8ELK SkyTracker and had a successful mission.  Unfortunately we launched on a day with a totally
+unexpected and unusal weather pattern bringing in winds that took it North instead of the usual East.  After
+about 17 hours and at night over Lake Ontario it expeirenced severe weather and lost pressure and began to descend
+as shown in the map below.
+<P>
+
+
+<IMG SRC="balloons/Balloon2018/Pico-Anika-summer/Flight-path-APRS-fi.png">
+<P>
+<B>Landing:</B> After experienceing severe weather, the balloon began leaking helium and descended fortunetely over land.
+And our prediction is shown below.  Since the payload is solar powered, there is no reason that it should not continue
+to beacon its position for some time to come unless it landed upside down or in permanent shade.  
+We invite any hams in the area to go take a listen.  It transmits once every 2 minutes on 144.34 MHz (clear channel) and
+also on 144.39 (busy channel).
+<P>
+
+<IMG SRC="balloons/Balloon2018/Pico-Anika-summer/balloon-descent-xxx.png">
+<P>
+Watch the brief <A HREF="http://www.aprs.org/balloons/Balloon2018/Pico-Anika-summer/Pico-baloon-launch-aug2018.mp4"><B> launch video</B></A>.
+
+<P>
+<H1>2017 Solar Eclipse:</H1>
+
+<IMG SRC="balloons/Eclipse004.png">
+<P>
+Image above provided by Scott, K4KDR or Mark, KE6BB.  On the Great American Solar Eclipse of 2017, 
+a capture from FINDU.COM showed a surprising 244 APRS balloons that day.  
+This was a surprise to see so many APRS balloons on a single day.  The scope is not understood.  
+96 of those balloons had nothignt  to do with the Eclipse and were elsewhere in the world.  
+Then I counted 148 were within the continental USA by LAT/LONG.  
+But a visual scan zoomed in on the eclipse path on APRS.FI only found about 46.  
+That matches closely the planned NASA project with 50 schools launching balloons all along the path, 
+though their web page mentiones NOTHING about APRS on those balloons.  
+Their mission was to stream live video of the moving shadown of the moon acorss the Earth.  
+Clearly smart people realized that adding an APRS device would make it easy to recover.  If anyone has more info, please fill us in.
+<P>
+
+<img SRC="balloons/near-space-eclipse-plot.png">
+<P>
+Another plot of the same balloons shows on the North Carolina 
+<A HREF="http://www.ncnearspace.org/missions/nsl-58-59"><B>Near Space web page</B></A> shown above.  
+That page describes two of the above Eclipe balloon missions in detail.  Notice, at the time of this screen capture, 
+he balloons out west, having been launched earlier, were achieving higher altitudes than the ones lanched later 
+in the east as evidenced by the blue range circles under each balloon.
+<P>
+
+<H1>2015 Mission - Solar Sculpture:</H1>
+Tracking the Solar-Sculpture: This rapid-response (3 day prep) mission was atempting to get a
+tracker on the Maryland Institute College of Art's solar hot air balloon.  The mission
+ended up being a tether mission, but this package (shown at far right)
+was my latest version of my typical
+balloon tracker using a soda bottle for solar heating and water survival.  Note, this
+year I put the tapered end of the bottle "down" so that it would sit lower in the water
+(in the event of a water landing) and be more stable.
+<A HREF="balloons/Balloon2015/APRS-tracker-bottle-package-a.doc"><B> See description document</B></A>
+
+<P>
+
+<H1>2014 Mission - Solar Heating Data:</H1>
+Midshipmen 1C Bottomley and Daly
+<P>
+<B> 3 May 2014 Re-Flight:</B> The near image (bottle) at right was the 2014 solar thermal payload that was re-flown to get the intended solar thermal data.  The image shows it in comparision to the more conventional
+approach some take to packaging in foam.  The mission proved our thesis (since 1991), that balloon payloads do not need insulation and heavy foam, but simply need clear containers to take advantage of solar heating.  The payload shown here used the conventional foam packaging (top) but also a solar thermal package as well.  The Thermal payload consisted of three concentric layers of clear
+plastic.  The inner layer was a single layer of bubblewrap around the electronics.  The second layer was a plastic water bottle and the outer layer was a larger soda bottle.  There were thermisters in each of the three layers and one outside as shown here.  See the University of New South Wales
+<A HREF="balloons/SolarBalloon-TeamBALU.pdf"><B>Report on using solar heating</B></A>.
+<P>
+<IMG SRC="balloons/Balloon2014/thermal-plotX.jpg">
+<P>
+<B>The Chase:</B> The chase was as exciting as ever.  The balloon went into short-cycle resets within a few minutes of launch giving data every 2 seconds instead of every minute.  This constant reset of the GPS did not allow the TinyTrack 4 to capture any NMEA senteces with altitude or CSE/SPD data.  Also the GPS was not altitude rated and started generating random erroneous data above 33,000 feet causing us to divert through small towns towards the erroneaous data.  But when the payload descended below 33,000 feet, it began with good data and now we were 20  miles away.  The last posit after 100 miles of flight was within 100 yards of the Susquehanna River at 2400 feet.  A sure gonner.  But data from the backup SPOT system was showing it on the shore line.  Sure'nuff, it was found 60 feet short of the river!  Payload was recovered! (Photos will follow).
+<P>
+
+<B>Conclusion:</B> Triple layer clear plastic packaging for balloon payloads provides a comfortable, 15 C (60 F) benign electronics environment for balloon missions.  The clear plastic drastically saves weight and they still provide low density impact protection with no sharp edges and also can be sealed to float during water landings.  Unfortunately the thermister inside the coam container failed, so we did not get that data.  Post-flight note:  During preparations for launch, you can shade the payload if you want to avoid excessive heat buildup (ours got to 53 C (127 F).
+<P>
+
+<B> 6 April 2014:</B> The initial attempt of this experiment was launched near Chambersburg PA with burst near
+Shrewsbury with apparently an unrestrained descent at 4000 feet per minute (nearly 50 MPH straight
+down.  Flight path to the last position heard on APRS.FI is shown below.  Ignore the
+4 hours wasted search around GlenRock.  Although the 5000' last position was on
+my radio the whole time, (over where the map shows "landed"), we were going by the
+last Balloon SYMBOL on my attached GPS map display.  Not until 4 hours later did we
+realize that the last two posits from the radio did not make it to the GPS for some
+reason, and so we were searching around the wrong spot!
+<P>
+<IMG SRC="balloons/Balloon2014/Flight-path.jpg">
+<P>
+Next is the post-fligh/post-search detail of the last 2 minutes of the flight.  The last position of APRS.FI 
+at 9273' is shown in the upper left corner.  Then there was one more position
+captured on my mobile APRS radio shown here at 5207 feet.  At that point it was
+1 minute from impact and going down at 50 MPH and at 145 degrees at 6 MPH.
+<P>
+<IMG SRC="balloons/Balloon2014/balloon-6Apr14-final.jpg"> . 
+<IMG SRC="balloons/Balloon2014/AVMAP=GPS_0232xx.jpg">
+<P>
+<IMG SRC="balloons/Balloon2014/found-bob2x.jpg" align=right>
+
+<P>
+We did <B>not</B> have the advantage of the above image at the time, and assumed
+that the balloon was descending at the design rate of 600' per minute and would have
+traveled another 1/2 mile before impact.  So we spent all our time searching to the
+  
+<A HREF="balloons/Balloon2014/balloon-6Apr14-walk.JPG"><B> southeast of this location</B></A>.
+It was only after getting home and reviewing all the
+data that we realized this payload came down like a rock. 
+See <A HREF="balloons/Balloon2014/altitude.jpg"><B> altitude profile</B></A>. The purple
+dotted lines on the map show how close we had gotten in the initial search, but at that time we were looking
+mostly high in the trees for the balloon, parachute and 30 feet of string.
+<P>
+
+
+
+<B>CONCLUSION:</B>  We concluded that not only did we not search the two backyards
+that now seem obvious,but we were also looking for a balloon and bright BLUE/ORANGE
+3' diameter parachute.  The high descent rate suggests the payload was detached from
+any shards of the balloon and from the parachute.  Thus, we were not looking for the
+right thing.  We SHOULD HAVE BEEN LOOKING for the payload.  It was originally about a 1/2
+shoe box block of styrofoam.  But by the time it was released, it was mostly dark
+duct tape.  Thus, we would not have see it if we were looking for exactly that.
+<P>
+
+<B> IDEAL SEARCH CONDITIONS:</B>  Right now,
+the fields are bare, and the trees are bare!  We can see 100 yards easily into
+the trees, not even any buds are showing.  But one week from now, it will be
+impossible to see into the trees.  Besides, without a balloon or parachute, the
+search needs to be on the ground.  And the briars are also going to become
+impenitrable.  The payload does have a return phone number on it, but without
+the balloon or parachute, it is just another piece of styrofoam trash.
+<P>
+
+<B>FOUND:</B> Realizing it probably had no chute nor balloon we returned with all the above new analysis 
+in hand to serach inside the tree area on the ground.  It was not where we predicted in that last
+1 minute of 50 MPH descent but had taken a hook curve to the southwest.  After an hour we finally
+found it as shown.  Only the payload and radar reflector were here.  Celebrations commenced on the
+way back to the academy, until someone realized they had lost their cell phone.  We returned to the
+site... yet again.  But fortunately, the cellphone had a pinger on it(ringer) and it was 
+<A HREF="balloons/Balloon2014/phone3x.jpg"><B>found in the leaves</B></A> in short order.
+<P>
+
+<B>Other Tracking Sites:</B> lu7abf, Pedro Converso suggests the
+<A HREF="http://lu7aa.org.ar/vor.asp?callsign=w3ado-11"><B>
+live web page balloon tracking and predicting</B></A>
+ web page they use in South America so that everyone with a smart phone 
+can see it live as it is happening as well as the
+<A HREF="http://lu7aa.org.ar/balloonchart.asp?callsign=w3ado-11"><B>
+charting page</B></A> that shows the altitude profile (captured in a link above) and
+the <A HREF="balloons/Balloon2014/altitude.jpg"><B> speed/height profile</B></A> from
+that web page.
+<P>
+
+<HR SIZE=5 WIDTH="100%"></P>
+
+<H1>2013 - Lightweight Party Balloon Payload</H1>  
+Midshipmen 1C Hardesty and Hinz
+<P>
+
+<B>17 April 2013:</B> Balloon Launch Annapolis, only to 5000' with FM CW downlink on 433.72 +/-.
+It uses 2 party balloons and is very light weight.  It sends LAT/LON/ALT in 3 digits each in
+quasi-CW meaning only the first part of normal CW for each digit is sent.  IE, "1" is a single dit
+and "6" is a single dah etc.  The 3 digits are in tenths of minutes of LAT/LON with degrees
+always as 38N and 76W.  A string cutter will release the payload as soon as it crosses route 50
+on the Eastern shore (Longitude of 76 04').  From then on and below 1000' it will send 4
+digits of MM.MM in hundredths of minutes for precise finding.
+<P>
+Talkin on 147.105 Repeater.  But best to watch for APRS bulletins.
+<P>
+<IMG SRC="balloons/balloon2013/IMG_1370x.jpg">
+<P>
+<B>SPLASH!</B> ARGH!  it worked perfectly.  It cut down at exactlly the programmed longitude
+but we did not do a good job of predicting the descent rate of a water bottle with 30' streamer
+and no parachute.  It came down no faster than it went up.  It overshot Kent Island!  As you can
+see below, we had even included a South Limit so that if the track missed the island to the 
+south then the burn command would not fire.  As you can see we should have been smart enough to 
+anticipate the descent and set the burn longitude further west at the beach.  
+And also, we should have
+made the south limit anticipate the SW heading from Annapolis, and moved it a few miles
+higher.  But since the longitude crossing would have still preceeded the south limit, that
+would not have saved it.
+<P>
+Oh well, next time.  Here is the track:
+<P>
+<IMG SRC="balloons/balloon2013/EstimatedPath.jpg">
+<P>
+
+<HR SIZE=5 WIDTH="100%"></P>
+
+<H1>2012-B - SPY-CAM Balloon Launch - Annapolis, 27 April 2012:</B></H1> 
+Midshipmen 1c Thomasson, Larson, Ballester, Garcia, Rose, and Fick
+<P>
+
+<IMG SRC="balloons/balloon2/Balloon2-in-bottle%20022xx.JPG" align=right>
+<P>
+
+<P>
+  
+This launch (W3ADO-11) was targeted for 1300 from Annapolis but didn't get off the ground
+till about 1545 due to dozens of little gotcha's.  It was designed to be
+a low altitude cruise using party balloons to around 6500'.  
+We chased it across DELMARVA with APRS  confident in its cut-down string
+to allow us to save it before the Atlantic shore.  
+A cut-down command was sent as soon as it crossed the Choptank River, 
+east of Easton.  The cut-down mechanism worked but the chute got tangled in
+a failed balloon.  But without the 5th balloon, it came down about the same place anyway.
+ It had APRS and a 2.4 GHz wireless camera on channel 1 as shown below.  See the mission
+<A HREF="balloons/Mission-low-altitude-design.doc"><B>design document</B></A>.
+<P>
+
+<IMG SRC="balloons/BlockDiagram.GIF">
+<P>
+<B>Mobile Balloon AZ/EL Tracker:</B>  The above sketch shows how we  integrated everything 
+in the chase vehicle so we could see live video from the balloon while we chased it 
+across the DELMARVA penninsula as shown below. 
+Because it is used a milliwatt 2.4 GHz wireles camera,
+ we needed a high gain dish on the van.  Thus the need to automatically do AZ/EL based
+ on the APRS data from the balloon and GPS data from the van. 
+<P>
+<IMG SRC="balloons/Chase-map-winds.JPG">
+<P>
+<B>Predictions:</B> The map above was our best guess.  
+Unfortunately it was for Friday afternoon beach traffic.  Our plan was to drive 
+at traffic speeds to Easton and then wait for the balloon to approach us.  
+Hopefully we would cut it down to land right on us.  
+The chute descends at about 1000 fpm so from 6500 feet it should take about 6 minutes 
+and land in about 3 miles.  The <A HREF="http://APRS.FI"><B> APRS.FI map</B></A>
+ below shows the actual track.
+<P>
+
+<IMG SRC="balloons/balloon2/Track-history.GIF">
+<P>
+
+<B> Payload Design:</B>
+
+The whole thing weighed only 320 grams (about 0.7 lbs) and fit in a
+1 liter bottle.  You can cut a bottle, and then lightly heat one end
+of the cut and it will shrink slightly so you can then rejoin the
+bottle with a snug water proof fit.  Some tape makes sure it will
+not separate.  We require the bottle for two things.  1) Solar warming of the electronics, and
+2) the large amount of surrounding
+water landing sites.  The temperature at launch was about 70 F and inside the bottle was about 88F.  This temperature rose to a peak of about 98 F (36.6C) at about 3500' but then fell back to 88 F at the max altitude 
+of 8100'.  The outside temperature at that height was -35F.  We find solar warming much preferred to attemps 
+at insulation with bulky and heavy styrofoam.  The sun provides
+plenty of warmth for daytime launches.
+
+<P><IMG SRC="balloons/balloon2/Balloon2-burn-resistor%20125xx.JPG">
+<P>The separation mechanisim is simply a 10 ohm resistor (1/4 watt), but 
+includes a clever 2 pin jumper that will then cut off current to the
+resistor once separation is successful and will provide a telemetry bit indicating separation has occurred.
+
+<P><IMG SRC="balloons/balloon2/Balloon2-MTT4-Camera%20014x.JPG">
+<P>The camera is a simple 2.4 GHz wireless camera.  It draws about 150 mA
+and is supposed to provide a range of about 1000 feet (to an omni receive
+antenna).  By using an 18" dish, this can be extended to about 4 miles.  With our 4' wire mesh antenna, we anticipated almost 8 miles range.  Everything is mounted dead-bug style to minimize any additional mass.
+You can also see the two red reed-relays added at the last minute.  Our first ones much smaller worked fine, but somehow had several ohms of contact resistance which would have significantly impacted the burn resistor (almost 1 amp).
+
+<P><IMG SRC="balloons/balloon2/Balloon2-Van-antenna%20043x.JPG">
+<P>The key to getting good video was the AZ/EL mounted 2.4 GHz antenna mounted on the van.  It was driven from a standard Yaesu G5500 rotator system from a Parallax
+Basic Stamp processor which had serial inputs from the balloon telemetry and van GPS.  These combined to drive the AZ/EL antenna.  The antenna pointed dead-ahead was synonymous with the "South-center" of the Yaesu rotators to allow maximum turning without driving the dish into the stops.
+
+<P><IMG SRC="balloons/balloon2/AZ-EL-tracker0156x.JPG">
+<P>This is the automatic AZ/EL controller using a Parallax Basic Stamp CPU.  It took inputs from the GPS on the Van
+and the TNC in the TH-D7 radio and computed the proper AZ/EL to the balloon.  LEDS on the front panel indicated if the dish was moving left or right or up and down.  Two additional LED's indicated if the dish was fully CW or CCW and two more Green LED's indicated when the dish was within 10 degrees of straight ahead or within 10 degrees of 
+the horizon (a typical situation).  The serial output of theCPU could be monitored with another PC to see what was going on.  My particular implementaion disabled the existing meters when in auto mode.  I need to rebuild my circuit so that the meter indicators are retained.
+
+<P><IMG SRC="balloons/balloon2/Balloon2-carrying-out029x.JPG">
+<P>Fortunately Mylar balloons are very rugged.  Filled in the building in the background, 
+they went across the road and through the fence 3 times.  
+The first two were because I had to call it back in to reprogram the beacons which 
+were still on a 10 second test rate.  The flight rate had to be a 1 minute rate.  
+Notice that the balloons are underinflated by an amount proportional to the desired cruise height.  For example, filling them half-full will cause the balloons to rise from the 14.7 psi surface up to about 18,000' where the pressure is half (7.3 psi).  But at that fill ratio, you only get half the lift.  These shown here are about 80% full to target a 6500' float altitude.
+
+<P>
+<IMG SRC="balloons/balloon2/Balloon2-UFO-%20051x.JPG" height=400 width=600>
+<IMG SRC="balloons/balloon2/Balloon2%20-released061x.JPG" height=400 width=300>
+<P>
+
+<B>Launch!:</B> We filled a spare balloon in case we damage one.  If we dont need
+it, we release it as a pilot to make sure we know where the wind is going 
+and that we will clear the field lights.  It flies level making a great UFO image.
+In the next image, after the Mmids released the balloons, I had to run down wind 
+to gently release the payload to make sure that the cut-down and separation 
+strings were not tangled.  Normally the parachute is above the payload, 
+but since we intended to cut-loose the payload with a string cutter at the top of the bottle, 
+the chute had to hang below.
+
+<P>
+<IMG SRC="balloons/balloon2/Balloon2-van-controls1-%20076x.JPG">
+<P>
+<B>Tracking Vehicle:</B> This is the view while chasing.  
+We tracked the balloon on the APRSdos screen as well as on the
+handheld TH-D72 APRS walkie-talkie giving range and bearing to the balloon.  Unfortunately due to a missing
+cable, we couild not activatge the auotomatic AZ/EL tracker and simply manually pointed it.  This was easy enough
+to do as the balloon was 16 mies ahead of us and usually within a few degrees of straight ahead.
+You can see the antenna controller in the center, and the TV monitor 
+to the right.  Below it was the old laptop running APRSdos.  Behind
+the laptop is the DVD recorder, and just the tip of the circuit board
+with the basic stamp to the left of the laptop is visible.
+
+<P>
+<IMG SRC="balloons/balloon2/Balloon2%20-easy-find090x.JPG">
+<P>
+
+<B>RECOVERY:</B> We could see the balloons from a half mile away even with the baloon on the ground 
+because they hovered over the payload.  One balloon had burst
+at 8500' and so we did not cut loose, but rode it down on the remaining 4 balloons.  
+We sent the cut down command at 1000' just to prove that it 
+worked...  It didnt.
+
+<P>
+<IMG SRC="balloons/balloon2/Balloon2-recovery%20097x.JPG">
+<P>
+<B>DISCOVERY:</B>When we got to it, everything was still working.  
+In fact, the string cutter had worked and if we had been watching the telemetry
+ we would have seen the separation also occurred.   
+But the burst balloon, being heavier than air, hung down below the descent package 
+and got all tangled in the chute string.  So even though the payload had separated, 
+it was stuck with the balloons.  NEXT time, we will make sure the payload hangs much
+farther down the string.
+
+<P>
+<IMG SRC="balloons/balloon2/Balloon2-relaunch%20111x.JPG">
+<P>
+
+<B>RELAUNCH:</B>Since we still had 4 good balloons and a nice "recovery note", 
+we took out the electronics, and sent the empty container back up for a ride into the sunset.  
+Hopefully, with no distinguishible mass, the balloons will rise faster, and overpressure 
+until they burst and maybe then fall back to earth before it gets to Ocean City.  
+Maybe someone will find it. (no one reported it...)
+
+<P>
+<B>LESSONS LEARNED AND IDEAS:</B> For next time, we realize there is no need for a chute.  
+Simply cut loose a few balloons and retain a few for a nice descent. 
+ But still the problem remains how to not let the lines get tangled so badly as to defeat 
+the cut-down system.
+<P>
+
+
+<HR SIZE=5 WIDTH="100%">
+
+<P>
+<IMG SRC="balloons/Launch143.JPG" align=right>
+
+<H1> 2012-A Long Distance Balloon Attempt - 29 March 2012</h1>
+Midshipmen 1/C Thomasson and Larson
+<P>
+
+The mission of this balloon payload is to give us insight into constant-pressure balloons
+and especially the use of common mylar party balloons as a fixed volume envelope.  
+Unfortunately, these
+balloons have a high mass and so the theoretical maximum altitude no matter how many 
+balloons are used is only about 26,000 feet and that is with no payload other than 
+the fixed balloon mass.
+
+<P>
+Our payload is shown at right.  It is about 50 grams.  We are targeting 6 party balloons 3' in diameter which should give us a float altitude around 16,000 feet. The Telemetry will be in CW on 28.223 MHz (USB DIAL) and will contain
+Battery voltage, inside and outside temperatures, and surface luminosity of the ocean/clouds.  It has no GPS.  We will rely entirely on DF bearings and signal reports.  At 16,000 feet the radio range will only
+be about 175 miles or less, not like the 400 miles for high altitude balloons.  Though on 10m we may
+get some good DX?  Transmitter power is 100 milliwatts. or less...
+<P>
+
+<B>EMAIL DF reports to W3ADO@homeside.to</B> Be sure to include:
+<BR>
+<LI>Your LAT/LONG
+<LI>Time of observation
+<LI>Quality of heading (subjective 1 to 10)
+<LI>The CW string copied (examples below)
+<P>
+
+<B>CW Format:</B> The CW format assumed that all outside termperatures will be below zero 
+or negative so the minus sign is not transmitted.  The 
+inside temperature might get above 0 during sunlight.  So assume the <B>I</B> inside
+temperature is positive and the outside temperature is negative in Degrees C.  When the
+inside temperature goes negative then the <B>I</B> will change to <B>IN</B> to indicate
+negative temps.  The outside Temp is always negative.  If it goes positive, then the
+value will be replaced with an X.
+<P>
+
+<B>. . . W3ADO I nn T nn V nn APRS.ORG . . . </B> <== inside temp positive and outside negative and Bat volts(in tenths)
+<P>
+
+<B>. . . W3ADO N nn T x V nn APRS.ORG . . . </B> <== inside temp negatve and outside positive(X)
+<P>
+
+The CW message takes about 35s and then will sleep for 60 seconds.  During the CW, there are long 2.3
+second gaps between each different parameter to save power.  
+The WEB page URL is only sent every 4th beacon to save power.  
+A photo resistor looking down reported the Luminosity of the
+ocean and clouds.  During the day it sent a Daylight or <B><i>D xx</i></B> value
+and at night it woiuld change to a Nighttime number <B><i>N xx</B></i>.  
+The luminosity count was inversly
+proportional to light level.  The larger the number, the darker.  
+When it maxes out Nightime at 99,
+that parameter will not be transmitted to save power.
+<P>
+
+<B>. . . W3ADO I 10 T 40 V 85 D 07 APRS.ORG . . . </B> <== inside 10C, outside -40C, Battery 8.5v Daytime Luminosity "07"
+<P>
+<B>. . . W3ADO IN 20 T 43 V 84 N 75 APRS.ORG . . . </B> <== inside -20, outside -43, Battery 8.4v Night Luminosity "75"
+<P>
+
+<IMG SRC="balloons/payload0.JPG">
+<P>
+<B>TRACKING:</B>  The balloon had no GPS.  All tracking was done by HF DFing.  The
+luminosity value would give us a time-of-sunset data point.  All APRS
+users are assumed to know how to enter an APRS DF bearing report so that their DF bearing
+line shows  up on global APRS maps.  Those without APRS DFing capability, could email their
+reports to this address <B>[W3ADO@homeside.to]</B>.
+<P>
+
+<B>29 March 2012, FLIGHT LOG - LAUNCH AT SUNSET in Annapolis Maryland:</B>
+
+<P>
+    <B>29-2330z: LIFTOFF!.</B>  heading 150 deg.  Temp 19C!
+<P><B>29-2345z: Heading 145 deg.</B>  Temp 10C.   lost visual
+<P><B>30-0000z: Heading 143 deg.</B>  Temp  5C implies about 5000'.  Deadreckoning on APRS moving SE at 6 kts.
+... <A HREF="balloons/5kft-winds-2100EDT.GIF"><B>See winds at 5kft</B></A>.
+<P>
+<B>30-0019z: Temp transition to freezing.</B>  I value is a garbled "I7".  Outside temp now at 0.  This is 
+important, since our ballast is a block of Ice.  So it has been melting for 50 minutes and losing more
+mass than planned.  Now that we are at freezing, the ice should remain frozen for the rest of the mission
+and release mass via sublimation, about 3 grams a day.
+<P>
+
+<B>30-0045z: Inside temp "I2" (meaningless).</B>  Outside 00C. Volts 8.4.  Anomolous readings around the transition from +C to -C is expected.  We scaled from +70 to -70 using two different biased thermisters
+and there are some
+transition anomolies as we go from + to - values.  We designed this mission to go to -40C at cruise altitude of 40,000' but when we discovered these balloons will top out at about 17,000 we did not have time to go back
+and optimize our A/D converters for better resolution around 0C.
+<P>
+<B>30-0100z: Temp formats now OK.</B> Both temps showing -5C or about 10,000', volts 8.4.  Luminosity indicates NIGHT so parameter is not being transmitted
+<P>
+<IMG SRC="balloons/payload-final132x.JPG" align=right>
+<P>
+<IMG SRC="balloons/10kft-winds-2100EDT.GIF">
+<P>
+<BR><B>30-0154z: Temps are -13C.</B> Maybe at about 13,000'  Battery is 8.3
+<P>
+<B>0210z: Approaching desired Cruise Altitude of 15,000'.</B> temps at -15C
+<P>
+
+<B>30-0237z: Temps -23C implies overshoot to 19,000'</B>.  
+ <A HREF="balloons/18kft-winds-2100EDT.GIF"><B>See winds at 18kft</B></A>.
+It went higher probably because the icecube ballast 
+<A HREF="balloons/Ice-ballast0136.JPG"><B>(see closeup)</B></A>
+ was exposed to above freezing temperatures during the first hour from launch so it lost some ballast as melted water.  Just did a test chamber re-play of the first hour of flight and it looks like we lost 12 grams of un-intended water from our 36g ice ballast.  That's about 1/3rd of our 10 day mission ballast... leading to higher altitude this first night and an additional 4% of overpressure.  
+<P>
+<B>30-0300z: Lost in noise.</B> Temps at -25c implying 20,000'.  Beyond my horizon from Annapolis at 180 miles distance.  Faded out.
+<P>
+<B>30-0330z: Estimated position 37.6N and 73.7W </B> and CSE/SPD posted on APRS-IS as W3ADO-11 Balloon object.
+<P>
+<B>30-0400z: Pictures posted</B> and I'm going home.  HOpe to be listening before sunrise...
+<P>
+<IMG SRC="balloons/Prediction-96hr-b.GIF" align=right>
+
+<B>Wind Predictions anyone?</B>  I have no experience with this and no one here is doing a wind/balloon
+prediction, so if anyone wants to take this last posit and do some formal estimates as to where it should
+be by morning, then we can all take a listen.  I assume we may get some skip over the horison around sun up?  BINGO, RObert Rochte KC8UCH to the rescue.  Here is his current 96 hour prediction:
+<A HREF="balloons/Prediction-0300z.GIF"><B>See also his earlier 48 hour one</B></A>.
+<P>
+
+
+<P>
+
+<B>30-1200z: In range Bermuda!</B> Praying someone contacts a HAM there to listen.  A major fault in
+our planning that we did not make prior arrangements with hams in Bermuda to listen for the balloon!
+<P>
+
+<B>30-1500z: Out of range of Bermuda.</B>  No reports received yet...
+<P>
+<B>30-2200z: No landfall till Africa!</B>  Humans in range near zero for a few days.  Landfall off Morocco
+on 3 April if we are lucky.  Any way to contact sailors at sea?  There are other signals near our freq.  But you can tell ours, the exact format is shown below.  35 sec of CW followed by 60
+secs of silence.
+<P>
+<B>01-1400z: Halfway to Africa!</B>  Still waiting for any Boats in the Atlantic to report anything heard.
+  Estimated posit
+from the prediction to the right has been uplinked to APRS-IS.
+<P>
+<B>02-1600z: No change.  Still hoping for a reception report from someone within 200 miles.</B>
+<P>
+
+<B>* * * End of Real-time LOG to now * * *  No other reports ever heard </B>
+<P>
+
+<B>BEAM HEADING WARNING:</B>  Our HORIZONTAL beam is weak when pointed directly
+at the balloon yet reports strong signals + and - 90 degrees from actual heading.  
+This makes some sense.  The Balloon antenna is Vertical, and the Beam is horizontal.  
+So we get weakest signal when pointed right at the balloon due to cross polarization.  
+When tune to either side, then there is a vertical component to the beam and the signal is stronger.
+.. at least while it was close and there was some elevation angle to the incoming wave.
+<P>
+<B>At about 0200z into the flight, we tilted beam about 45 degrees from Horizontal:</B>  
+Now we can peak on the signal.  We were getting about a 135 AZ and so we posted a DF bearing 
+on APRS.  See <B>APRS.FI</B>.
+<P>
+<B>THEREFORE, we will tend to ignore all beamheadings </B> reports unless the originator
+ they clearly indicates they have a VERTICAL beam, or that they have swung either side 
+of the bearing and gotten peaks on either side and then split the difference.  
+Reporting bad beam headings is worse than no beam heading.
+
+<P>
+<B>Nearby QRM:</B> We notice another beacon with CW on nearly the same freq.  Our dial freq is 28.223 USB dial, but we hear another CW signal (Italian) down at 28.222 USB dial.</B>
+<P>
+<P>
+<B>de WB4APR, Bob</B>
+<P>
+
+<HR SIZE=5 WIDTH="100%"></P>
+
+<H1>2000</H1>
+<P>
+<IMG SRC="photos/n-stat1.jpg" align=right BORDER=1 HEIGHT=213 WIDTH=362 >
+<P>
+
+<B>June 2000: </B>The photo at right is our Sunday 26 March 2000 
+trial-balloon payload that was launched from the Baltimore Hamfest consisting
+of two 3v Lithium batteries, a 555 oscillator with thermister and a 10mW 433.92 MHz key chain
+ transmitter inside a tiny plastic bottle.  It weighed less than 16g and rose to over 20,000'
+ on three 18" underinflated party balloons.  It was a trial test of our launch and tracking
+capabilities in preps for our larger 1 April APRS balloon launch (which was canceled).
+The balloon was tracked and chased across the DLMARVA penninsula and out over the 
+Atlantic when we ran out of land on the shoreline near Dover Deleware.  The balloon
+had only a temperature sensor, but when matched to an elevation temperature profile
+we got this telemetry:
+<P>
+<LI>1230 launch
+<LI>1306 temp was 65 at about 2500 feet
+<LI>1400 temp was 54 at about 8000 feet
+<LI>1430 temp was 48 at about 11,000 '
+<LI>1500 temp was 34 at about 18,000 '
+
+
+<P>
+
+See USNA Radio Club's <A HREF="http://www.qsl.net/w3ado/photo5.html">
+<B>PHOTOS and description</B></A>  of the Launch and chase.
+
+
+<HR SIZE=5 WIDTH="100%"></P>
+
+<H1>1991 - Our First Balloon </H1>
+Midshipman 1/c Stohs (now - LtCol USMC (ret))
+<P>
+<IMG SRC="photos/balloon1.jpg"> . <IMG SRC="photos/balloon2.jpg">
+<P>
+
+
+<B>April 1991:</B> The above photos are from our April 1991 launch.  Notice our nice tracking antenna in the
+background.  The student (left of Bob) was Midn 1/c Stohs (who just dropped by the office on his USMC retirement in Aug 2013)
+to reminisce about the project.  It used CW sent from an EPROM memory with the tone proportional to pressure altitude and the 
+sequence rate proportional to temperature.  The payload was in foam (got very cold) and the batteries in clear triple-layer
+plastic container and got hot.  It was not recovered by the chase teams, but was found days later by a kid in Ocean city, 
+about 10' into the bay.  He returned it for the $20 reward.
+<P>
+
+
+
+<HR SIZE=5 WIDTH="100%"></P>
+<P>
+<H1>General APRS Balloon Configuration</H1
+<P>
+
+<B>APRS BALLOONS:</B> Balloons make a good low cost test bed for small satellite payloads.
+Mission duration may last from a few hours to a few days and just about
+matches the modern student's attention span. 
+The Naval Academy balloons are typically detected as far away as South Carolina and Conneticut. 
+<P>
+
+<B>APRS SETTINGS:</B> It is critical to use the proper APRS setting for balloons
+whcih are UNIQUE compared to normal APRS operations.  Wrong settings can disturb
+the APRS network over half the country and affect tens fo thousands of APRS users
+over several hours.  This has always been problematic.   No path (simplex direct)
+is all that is needed above 1000 feet since every APRS station within hundreds of
+square miles will hear it directly.  Next, nothing more than a single hop (WIDE1-1)
+ is desired once the balloon is on the ground and lost..  
+
+<P>
+<B>DO NOT USE WIDE1-1,WIDE2-1 Path!</B> This is much worse then even WIDE2-2.
+This is because most of the WIDE1-1 digipeaters only do callsign substitution and are not
+part of the WIDEn-N algorithm.  When these packets get delayed for whatever reason
+by a second or so, then other digi's hear them and can end up with multiple dupes
+from every nearby digipeater.  There is no need to have 2 hops either.  If your chase team
+is not within 30 miles of the landing, then it is your fault.  Dont make up for it
+by jamming the APRS network over half the country.
+
+<P>
+<B>PACKET RATES:</B> These balloons will be seen by everyone within hundreds of miles,
+and although they do not add more than the equivalent of a single local mobile traveler, 
+they should adhere to the same gentlemenly rules of channel sharing as everyone else.
+In that regard, short duration flights should never use a packet period any shorter
+than once a minute.  For cross country longer duration flights, a 2 minute rate should be considered.
+
+<P>
+
+Select any ofthe following replays of missions:</B></P>
+
+<UL>
+<LI><B><U><A HREF="http://www.aprs.org/montreal.html">Montreal</A></U> : A balloon mission in Montreal</B></LI>
+
+<LI><B><U><A HREF="http://www.aprs.org/denver.html">Denver</A></U> : A balloon test near Denver</B></LI>
+
+
+<CENTER><P><B><U><FONT SIZE=+1>Other Balloon Sites (not updated in a decade) </FONT></U></B></P></CENTER>
+
+<A HREF="http://www.arhab.org"><B>Nebraska Stratospheric Amateur Radio</B></A> High Altitude Balloons
+<P>
+
+<B>(obsolete link)</B> <A HREF="http://www.usafa.af.mil/dfas/smallsat.html"><B>Air Force
+Academy</A></U> : Info on the use of Ballooning in relation to satellite 
+research</B>
+<P>
+
+<B>(obsolete link)</B> <A HREF="http://www.wff.nasa.gov/~web/balloons.html"><B>NASA WFF</A>
+: NASA's Wallops Island Scientific Balloons Program</B>
+<P>
+
+<B>(obsolete link)</B> <A HREF="http://master.nsbf.nasa.gov/"><B>NSBF</A> : The National Scientific
+Balloon Facility</B> 
+<P>
+
+<B>(obsolete link)</B> <A HREF="http://garc.gsfc.nasa.gov/~simsat/"><B>SIMSAT</A><A HREF="http://garc.gsfc.nasa.gov/~simsat/simsat.html"></A>: 
+A local NASA Education and Outreach program for small payloads</B> 
+<P>
+
+<A HREF="http://fly.hiwaay.net/~bbrown/"><B>HALO</A> : WB8ILK's page
+on their HALO (High Altitude Lift Off) &nbsp;balloon projects</B>
+<P>
+
+<B>(obsolete link)</B> <A HREF="http://www.mindspring.com/~rwf/balloon.html"><B>Atlanta Balloonatics</A>
+: An Active ballooning group in Atlanta, Ga</B></P> 
+</UL>
+
+<P>
+<HR SIZE=5 WIDTH="100%"></P>
+
+<CENTER><TABLE BORDER=1 CELLSPACING=0 CELLPADDING=0 >
+<TR ALIGN=CENTER VALIGN=BASELINE>
+<TD ALIGN=CENTER VALIGN=BOTTOM>
+<CENTER><P><B><A HREF="index.html">Return to the main APRS page</A></B></P></CENTER>
+</TD>
+</TR>
+</TABLE></CENTER>
+
+</BODY>
+</HTML>

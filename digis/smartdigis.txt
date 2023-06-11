@@ -1,0 +1,99 @@
+SMART DIGI ALGORITHMS                                         31 OCT 2003
+-------------------------------------------------------------------------
+Updated 13 Dec 2004 to the new n-N paradigm                        WB4APR
+Updated 11 April 2006
+
+There has been lots written about smart digi algorithms, but I have serious
+doubts about their efficacy for two fundamental reasons:
+
+1) Smart digis, by definition, make the network undeterministic.  One has
+no idea what the network will do with your packet.  Will it go where you
+want it to go?  Does the local sysop's opinion of where your packet should
+go match with your need?  Does the local digi even understand  your smart
+request?
+
+2) With over 1,000 digis in the USA, and almost as many different digi
+sysops and opinions and beliefs and personalities, my experience has shown
+me that the hope of getting any consistent implementation of even the
+simplest of smart digi concepts would be very sparse and spotty and would
+take years and years and years to even get to half...  What good is a
+smart network that is half dumb and you the user can never tell what the
+half smart and half dumb network will do with your packets. See #1
+
+3) Almost all of the "problems" that were in such dire need of fixing
+have mostly been fixed with the 2004 initiative called the New-N Paradigm.
+Those simple fixes using existing digis and no requirement to change out
+any hardware made a DRASTIC improvement in most areas.  I have seen
+reports of reductions by a factor of 3 to 5 or more in the amount of QRM
+on the network.  As a result, the network is now (2006) much more reliable
+for local use.
+
+In conclusion, I am quite opposed to digis "making assumptions" about what
+a user wants his packet to do.  I believe the USER should always be 
+able to choose his own best path and have the network respond to it.  This
+is the only way to have a deterministic network which operates consistently
+everywhere for the user.  Of course, the network is allowed to protect 
+itself from abuse also.
+
+SMART DIGIS.  But since this concept seems to come up often, I will try to
+document the various proposals.  So here are two lists.  The first  is the 
+list of smart-digi directives and the second is just a list of the commonnly 
+used callsign-substituting aliases that may be in use in some areas...  
+Send me more if you think of them...
+
+SMART DIGI DIRECTIVES:
+ 
+Directives are pseudo-path names that are inserted on the end of an APRS
+user's outgoing digipeater path to serve as a signal to the network of any 
+special handling requirements.  Here are several of the ones that have
+been suggested:
+ 
+NOGATE    - IGates should ignore these packets
+RFONLY    - IGates should ignore these packets (why do we have 2?)
+IGATE     - Smartdigi may substitute shortest path to nearest IGate
+ISTATE    - Smartdigi may substitute a ##LNKn-N along an interstate
+STATE     - Smartdigi may substitude the local state SSn-N
+LAN       - Smartdigi may substitute local LANn-N name
+LINK      - Smartdigi may substitute an optimum LINKn-N path
+EOC       - Smartdigi may substitute shortest path to nearest EOC
+SKYWRN    - Smartdigi may substitute preferred skywarn path
+WX        - Smartdigi may substitute preferred local WX path
+NOAUTO    - Smartdigi should do NOTHING to this path
+
+CALLSIGN SUBSTITUTING ALIASES and TRAPS:
+ 
+In early APRS, callsign substitution was used to provide some traceability
+to the paths taken by the GENERIC path callsigns of RELAY and WIDE.  But
+these generated many duplicate packets and were phased out completely in
+the 2004 New-N Paradigm.  Now, callsign substitution is used as a TRAP for
+abusive paths.  It works as a trap, because the matching path is digipeated
+but replaced with the digi's substituted callsign.  This effectively stops
+all further propogation of that path if it was a WIDEn-N path.  
+THe four traps typically used for a New-N Paradigm Digi are WIDE7-7, WIDE6-6,  
+WIDE5-5 and WIDE4-4.
+
+STATE AND SECTION PATHS:
+
+Originally there were some special aliases that were used to support local
+nets such as SS, SAR, SKY, ARES, RACES, etc.  But these also had the same 
+DUPE and flood problem of the original RELAY and WIDE.  Hence these were 
+all also obsoleted with the New-N Paradigm.  They were replaced with the
+nomenclature SSn-N.  Where SS is the abbreviation for a small state or for
+the ARRL Section in a large state.
+
+SSn-N packets propogate just like WIDEn-N packets, except that they stop
+at the borders.  THis way, their damage to the network outside of their
+intended area is completely eliminated.  For example, a WIDE6-6 packet
+launched in Maryland would potentially QRM over 144 surrounding digis in
+over 13 states.  But a MD6-6 packet during a routine State Net, would hit
+only a total of 9 digis (the 9 big digis that cover Maryland) and would
+go no farther.  And it would work the same for someone in the middle of
+the state or at the extreme pan-handle. 
+
+Since SSn-N packets do not get traced except for the last hop, an 
+improvement is to actually use WIDE1-1,SSn-N.  This takes advantage of any
+fill-in digis and also assures the First and Last digi paths are traced.
+This way the packet will arrive as DIGI1,WIDE1,DIGIn,SSn-N with both the 
+FIRST and LAST digipeaters identified.
+
+de WB4APR, Bob

@@ -1,0 +1,98 @@
+***************************************************************************
+*              ATGP 2019 Report for COMERS Rock by Kevin, KJ4OAP         75
+***************************************************************************
+
+Tried to beat the heat by getting up high, but the heat surely followed me 
+to Comers Rock.  Great day though with no rain and/or lightning.  This year 
+Kevin (KJ4OAP) captain'ed the station with great setup support from Charlie 
+(K4FF) and Susan (K4TIG).  It was great to link up with them again though 
+the last time I saw them it was under much different circumstances (a story 
+for another time).  These two still have a cabin a couple of miles from the 
+Rock and were gracious on helping carry up (too much) equipment to the 
+platform at the top.  Here is the station log:
+
+~9:45am: Arrival to "parking lot" turn around by KJ4OAP, 2 minutes later 
+joined by K4FF and K4TIG as had a quick talk-in with them.  2 up and down 
+trips later and most of the gear was on the summit. (Made a run back down 
+for my leatherman and the solar panel afterwards.
+
+~10:45am: First setup with D-710, easy contact with N4AZR (Glenn) on Roan-3 
+on VHF and UHF at low power setting.  Also easy contact with WG3K (Eric) on 
+AOMTN-5 on low power setting.  Eric even logged our QSO as a summit-to-
+summit on SOTA (something I really want to get into when I'm able to get 
+out hiking/backpacking more).
+
+~11:15am: "Full" station setup including solar panel connected to primary 
+battery (2nd 35 Ah battery was never used).  Also thankfully brought along 
+a 10'x10' pop-up canopy that I was able to tie down to the platforms fence.  
+This was most needed to beat the heat as well as relief from the sun as 
+there's no shade nearby this summit.
+
+~12:30pm: Noted Roan-3 needed to go QRT for lightning
+
+~12:45pm: I had been watching a good rain shower slowly creep south across 
+the valley towards my mountain for about an hour.  About this time, I 
+estimated it may hit my mountain within 15 minutes, so I started to prep 
+for getting wet on the summit.  In the process of pulling my tarp out of 
+the tote I was using as a table, the D-710's control head rolled off the 
+lid and cracked the glass in the display (see picture).  Now couldn't see 
+part of the right half of the screen.  Doh!
+
+1:06pm: Heard stations all the way north to Mt. Washington.  (Didn't log 
+too much more on activities here as I probably should have, but in general 
+didn't have too much of problems switching baud rates and hearing anyone.  
+If anything, when a bulletin would come across, I would have to have Roan 
+or AOMTN relay the message on UHF due to not being able to read part of 
+the screen.)
+
+3:10pm: Didn't get anything over the air, but checked e-mail via phone 
+(tried not to do so very much to enjoy the view more than my phone screen) 
+and noted to start securing station.  I still left the radio in the same 
+setup as I thought Roan-3 was just qrt for a little bit and was going to 
+try to come back.  After a while, figured he'd shut down after seeing 
+the e-mail.
+
+~3:30pm: To try to have some fun playing APRS games, tried seeing what 
+I could do for trying to setup a temporary digipeater on the summit.  
+Switched the TNC freq back to '4.390 and changed some settings back to 
+how they were, but I don't think I was really digi-peating anything.  
+I was mostly curious as I've been wondering how well a few digipeaters 
+could increase coverage in our area.
+
+3:52pm: Radio shutdown
+4:31pm: Station secured and on the road
+
+Follow-up summary:
+I'd followed along the Golden Packet event for a number of years ever 
+since my colleague Zach (KJ4QLP) was manning this station a number of 
+years ago.  Usually the timing didn't work out well for me, but this 
+year it was fairly good timing (and I had all the necessary gear with 
+the purchase of a used D-710 last fall).  Like others, at the end I did 
+get beacon reports in from all of the stations, but I didn't understand/
+know what the actual Golden packet was.  This was my first time ever 
+to Comers Rock, so I wasn't totally sure what to expect and brought a 
+little much on gear/equipment.
+
+Before my screen cracked (and even some after it did), I had a lot of 
+fun sending messages via APRS to my neighboring stations.  I also 
+wasn't sure if it was kosher to try to send ones to far away stations 
+(I think I sent one to Mt. Washington once I got it in), but I usually 
+was sending in words of encouragement/signal report.
+
+Otherwise, since the link to Roan and Apple Orchard from this station 
+is easy enough, if I did it again, I'd like to explore a location 
+that's actually nearer to the AT (if not pretty much on it).  I've 
+hiked a good section of the AT in Virginia (actually passed Apple 
+Orchard, so I know what that peak looks like) and have a few ideas on 
+places it could be.  Of course, it this was agreeable for the group 
+and still seemed like good link between the 2 directions.
+
+Also, very interesting that this event overlapped some with the CQ WW 
+6m/2m contest. I was able to give out a few QSOs for that, but not as 
+much as I thought.
+
+73 and GL!
+
+-Kevin, KJ4OAP
+
+

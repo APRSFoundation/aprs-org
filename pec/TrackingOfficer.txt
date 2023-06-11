@@ -1,0 +1,39 @@
+PCSAT2 Tracking Officer                                 25 July 2005
+--------------------------------------------------------------------
+
+The tracking officer is responsible for all spacecraft tracking and
+antenna pointing during a pass.  The beamwidth of our antennas is 
+on the order of 30 degrees or so and so precision requirements are
+not that great.  Here are the detail responsibilities:
+
+1) Check all PC's and the MISSION clock to make sure all are sync'ed
+to correct time (within a few seconds).
+
+2) Download the latest KEPS from: http://celestrak.com/NORAD/elements/
+   Get the amateur radio file and copy it to a floppy disk:
+
+   http://celestrak.com/NORAD/elements/amateur.txt
+
+3) Place the disk in the main tracking laptop and in InstantTrack
+software do these commands:
+
+   Q - as needed to quit back to main menu
+   6 - Houskeeping
+       A -  Update Satellite Elements
+            3 - UPDATE:
+                enter A:amateur.txt
+       Q as needed back to main menu
+   2 - Real-time track
+       3 - ISS
+
+4)  Compare the position of ISS on the tracking computer
+to that on this web page:  http://heavens-above.com/
+and also compare to the backup tracking computer and confirm
+that the predicted position is no more than 5 degrees off
+in LAT and Long from those backups.
+
+5)  Make an entry in the log book recording your update.
+
+
+Bob Bruninga
+USNA Satellite Lab

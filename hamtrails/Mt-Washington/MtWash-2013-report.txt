@@ -1,0 +1,69 @@
+Mt Washington Report - 2013                                  22 July 2013
+-------------------------------------------------------------------------
+
+Photos documenting our packets are in yahoo groups photo section.
+
+Station was manned by me NT1I and Fred N7FMH.  KB1POR showed up with his 
+I-Gate and to provide moral support, I think he really wanted to see the 
+promised continuous lightning which thankfully didn't come.
+
+EQINOX-12 copied MTWASH-13 solidly 100% of the time on the 445.925 MHz 
+FM channel in spite of all kinds of antennas on the summit of Mt. Equinox.
+
+MTWASH-13 from time to time, had some interference and did have some some 
+trouble copying Equinox. Generally however, Equinox operators said they
+were successful in coordinating on the 445.925 MHz channel.
+
+Equipment was:
+
+- D710A running about 50 watts Digipeating only (left mic at home oops)
+
+- Diamond X-300 antenna on about 12' painter pole 1/2 up because of wind
+
+- FT-8900a 445.925 voice at max power to trunk lip mounted CR8900A 
+
+- primary power supply: large tractor battery
+
+
+This was supported by:
+
+- D72A with Opek HR-603VU Shape Memory whip for ANSRVR communications
+
+- FT-1500 with OpenTracker4 & windows tablet w/ Larsen NMO-2/70B mag mount 
+on roof for ANSRVR
+
+- KB1POR showed up after we we operational with his portable I-Gate for 
+ANSRVR support
+
+We Got there early this year to get a good spot to setup. We picked a spot 
+to the left in the lower lot where it looked good to Surgarloaf and equinox. 
+We only brought a vertical in case the thunder started, for a quick escape. 
+It was mounted with ratchet straps to the hitch mounted bike rack. The full 
+length of the painter pole brought the antenna almost horizontal so we 
+shortened it. The wind was about 35mph and the clouds would puff in through 
+the open windows. It gave the appearance of someone smoking a cigar in the 
+car which is a big no no in my car!
+
+The rain was intermittent but the clouds drifting through kept everything wet. 
+WE initially got voice contact with Equinox a very clear signal, and then the 
+packets came. It was nice to have every one ready at the start. Sugarloaf 
+packets came next. I could hear Sugarloaf talking with Katahdin and when 
+they finished I tried calling Sugarloaf but Tim on Katadin answered and the 
+signal was so good I thought it was Sugarloaf. But I couldn't get Sugarloaf 
+to respond to my calls. I couldn't get a cell call to work so I texted Sugarloaf.
+ 
+I was able to use another carrier and was able to talk to Sugarloaf. That's how 
+we found out on Mt Washington that the weather was bad for Katadin as well. 
+We were not able to get any thing from south of Camelback-9. We waited around 
+watching the weather and it got dark at about 2:45 so we shut down and went home.  
+It was a pretty good time.
+
+We had no computer capturing packets maybe next year. I did post photos of 
+the d710 screen showing paths and the list of packets. 
+http://groups.yahoo.com/group/at-golden-packet/photos/album/149889882/pic/list
+
+73,
+NT1I
+John
+
+

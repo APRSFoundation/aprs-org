@@ -1,0 +1,142 @@
+KANTRONICS KPC-3 Text to SPEECH Specification           24 Feb 2004
+-------------------------------------------------------------------
+                                                             WB4APR
+
+When combined with the $180 TextSpeak module, a KPC-3 TNC can speak 
+text sent to it in the APRS Message format if the following slight
+modifications to the KPC-3+ TNC are incorporated.  The text module 
+interface to the TNC can be as simple as ground and RXD data.
+
+PROTOCOL:  The protocol for speech will be the APRS message format
+where the first character of the message is a % sign.  This has
+always been the "speak-this" character and works with the Kenwoods
+with the built in speech module and other software that has speech
+capability.
+
+APRS MESSAGE FORMAT:  An APRS message is a UI packet containing the
+following in the Data field of the packet:
+
+:CALLSIGN_:%speak this........................{nnnnn
+
+It begins with a colon, then a 9 byte CALLSIGN field (padded with
+spaces), then another colon and then the text of the message.  The
+message usually ends with an up to 5 byte Line number preceeded with
+a "{" character.  In the case of speech, the % sign indicates the
+text to be spoken.  If the first byte is a %, then ALL of the text
+is to be spoken.  Otherwise, if the % preceeds any other word in
+the text, then only that word is spoken.
+
+KANTRONICS COMMANDS:  Since a basic APRS message parser must be included
+in this process, we may as well add a general purpose APRS message
+filter to the TNC for other uses as well.  So here are the new TNC
+commands:
+
+APRSCALL:      Sets the callsign to be used for receiving APRS messages.
+               (or we can just use MYCALL)
+
+APRS MSGS ON:  This turns MON off and the only text out the serial
+               port is only the text of an APRS  message and only if
+               there is a match between the message CALLSIGN and the
+               APRSCALL.  Not even the AX.25, nor the APRS message 
+               header, nor the {nnnn line number is included.  This allows 
+               for 100% control over the text out the serial port for 
+               stand-alone-compatibility with some off-the-shelf serial 
+               port devices.
+
+               Note:  It is assumed that if there is an external
+               processor to separate the APRS header from the APRS
+               text, then the processor is also smart enough to work
+               with MONITGOR ON and all packets.  Hence the decision
+               to ONLY pass the APRS Message text only in this mode.
+
+APRS ACK ON:   If ACK is on, and the CALLSIGN is an exact match to
+               the APRSCALL including SSID, then an APRS UI ack is 
+               transmitted.  It consists of a UI packet with a data 
+               field of ACK{nnnn.  If no line number was on the original
+               packet, then there is no ack. The ack is sent once.
+
+APRS MSGS ALL: Default ON.  In all other APRS applications, a message 
+               to a callsign is captured by all SSID's of that same station 
+               call. This is so that the owner will get the message whether
+               at home, in his car, or carrying his HT.  But ONLY the
+               station with the exact match and SSID will ACK it.  To allow
+               for only addressing messages ONLY to up to 16 unique SSID's
+               under one callsign, this command lets the user turn OFF
+               the normal default of moonitoring all messages to a given 
+               root call.
+
+
+APRS VOICE ON: Same as above but with additional conditions:
+               1) An unused I/O bit is set HIGH so that it can be
+                   used to turn on an external Voice Device.  This bit
+                  is not one of the existing CONTRL bits.
+               2) If the first byte is %, then all text up to the {nnnn line
+                  number is passed to the serial port.
+               3) ELSE if a % is prepended to any word, then only that word
+                  is passed to the serial port
+               4) All such text is ended with a <CR> character (no LF).
+               5) PRECEEDING the above text to the serial port, the original
+                  AX.25 FROMCALL is inserted followed by " says, ".  Hence
+                  every text is preceeded by "FROMCALL says, ".  Three rules
+                  are needed to assure the callsign is spelled and not spoken:
+                  a) The callsign is in all UPPERCASE
+                  b) The first letter is separated with a space
+                  c) If the first letter is "A" then the space is omitted
+                  d) If the first letter is "W" then a "-" is used 
+                     instead of the space
+
+APRS VOICE ECHO:  The TEXT-SPEECH module sends out serial port responses
+       to incoming text.  Normally this should be ignored.  If APRS VOICE
+       ECHO is on, then this text is passed along to the TNC for transmission
+       as a UI packet.  THus the remote-sysop can see the handshaking while
+       remote controlling of the module if needed.
+
+HARDWARE INTERFACE:  The TextSpeak module has two 8-pin headers with
+16 I/O lines as follows.  A minimum 4 connections (*) are required.
+
+* J1-1 Audio Out               J2-1  Test pin (reserved)
+* J1-2 Ground                  J2-2  5v dc output (50 mA max)
+  J1-3 Speaker +               J2-3  GND
+  J1-4 Speaker -               J2-4  GP-IO2 (pulls low on SPEAKING
+* J1-5 RS-232 RX               J2-5  GP-IO3 (Pulls high on speaking)
+  J1-6 RS-232 TX               J2-6  IRDA compatible signal
+  J1-7 GP-IO1 (OEM code)       J2-7  PS2-AT Keyboard (data line)
+* J1-8 DC power 7-12 vdc       J2-8  PS2-AT Keyboard (Clock line)
+
+Notice that J2-4 is a good PTT switch though I have not tested 
+the delay yet.
+
+SOFTWARE INTERFACE:  The TextSpeak module simply speaks the text
+it reads on the serial input line.  It mostly spells capital 
+letters but there are anomolies, in that it also has some
+abbreviations that it speaks.  For example MM becomes "millimeters"
+etc..  At the end of a text input ending with a <CR> the module
+responds with the following responses.  Enclosed here in quotes only:
+
+"<its interpretation -of the inpt text as it spoke it>"
+" OK" when it has finished with the input string (though still speaking)
+"eof" after the end of speech.
+
+SPECIAL FUNCTIONS:
+" /" or " //" on the end of a string causes it to repeat N times
+
+OTHER COMMANDS:  There are some other special functions and commands
+but they are not for the end user.  See TextSpeak manual for details.
+
+GENERAL APPLICATION NOTE:  These modules use a special processor that
+contains over 1 megabytes of programmed text-to-speech algonrithms
+that were primarily designed for the Cell Phone market.  The chips
+are then incorporated by Digital Acoustics into this general purpose
+module by adding a front end-processor to deliver the interface 
+described herein.  They tried to override some of the special cell
+phone market quirks in their pre-processor such as traping some
+common abbreviations.  But they admit they may not have gotten all 
+of them.   Thus, there may be some legacy of the cell phone
+application that they missed in their implementation.
+
+AVAILABLITY:  These modules are available from Digital Accoustics in
+Westport CT at the following WEB page:
+
+http://www.digac.com/oemtts.htm
+
+Tech assist phone number is 203-227-9700

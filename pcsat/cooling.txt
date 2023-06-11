@@ -1,0 +1,25 @@
+THERMAL COOLING EXPERIMENT:
+---------------------------
+ 
+A resistor on the -Z axis could serve as a heat sink for excess 
+solar power and would be a good study project for students.  Sizing 
+the resistor to dissipate all solar power in excess of the nominal
+average power could allow us to get rid of about 3 watts of heat.
+
+If we don't do anything, then that 3W adds to our peak temperature.
+If we switch it to a radiating resistor, then that gives us at least some
+thermal control.  Assuming the total solar flux is about 140W through 
+our spacecraft, this would give us about a 3.5% control range.  Taking 
+the 4th root at a nominal 270 deg K operating temperature, then this 
+could equate to a temperature difference of about 3 degrees?
+
+Just my guess.....
+
+So we  put 80 RED LEDS on the bottom of PC sat as a 3W thermal radiator 
+for this test.  And just for fun, at night we can also turn them on as 
+power permits as a visual experiment.  Calculations suggest a magnitude
+of about 6 if it is pointing straight down.  Eight, if it is off to
+one side or the other.  Magnitude 8 is visible with binoculars.
+
+Bob Bruninga, WB4APR
+

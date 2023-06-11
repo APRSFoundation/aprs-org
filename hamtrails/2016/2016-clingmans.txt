@@ -1,0 +1,109 @@
+CLINGMANS DOME (Smokies) REPORT 2016
+------------------------------------
+
+Now back  at home, so sorry guys if my station's failure to come up was 
+the single point of failure in what would have been an otherwise 
+successful event.  I hate to be the guy who "screwed the pooch!" (Tip of 
+the hat to the 1980s movie "The Right Stuff" for those who remember the reference). 
+
+This weekend has been a "comedy of errors," except it wasn't so funny.  
+Left work early afternoon yesterday (Friday) to take the cat to the vet 
+for updated shots and to board him for the 5-day business trip beginning 
+tomorrow (Sunday) and make other preparations.  Also, took off early to 
+start getting the car loaded up and finish prepping for today's event.  
+(Needed to solder up a PL-259 on a 25-foot roll of RG-8X, among other 
+things, not all of which happened.  Continue reading.) 
+
+Well that plan went "off-the-tracks" when I got home and started to move 
+equipment to the car when I got attacked by yellow jackets who had unknown 
+to me set up a nest in the side yard next to the car port and something 
+I did got them totally agitated.  I got nailed on the right hand on the 
+little finger and bottom part of the hand pretty good (for those who don't 
+know, yellow jackets rank #6 on the Schmidt Insect Bite Pain Index!).  
+So now I have a very painful and rapidly swelling hand, and after dispatching 
+the yellow jacket to insect Hades with liberal doses of wasp and hornet spray, 
+I grab a frozen ice pack and start icing my hand (did I mention I'm right-handed??!!). 
+
+While icing the hand, I manage to use my phone to Google search "Yellow 
+Jacket Sting Treatment;" of all the various folklore and other mythical 
+"cures" that popped-up, the one that made the most sense was a doctor-
+recommended regime of 50 milligrams of Benadryl and ibuprofen.  So off 
+I go to Dollar General to get their generic version of Benadryl and take 
+two 25 mg. capsules plus 400 mg. of ibuprofen upon return.  After about 
+an hour, plus periodic application of topical lidocaine solution on the 
+bites, the pain subsides some what, but that Benadryl puts me in some 
+version of "LA LA" land for the rest of the evening.  I manage to get 
+the batteries topped off, gear loaded, and verify that the Kenwood 
+TM-D700A has the proper GP event parameters still loaded in PM slot 1 
+from previous years.  Take another dose of Benadryl and off to bed where 
+the sedative effect of antihistamine puts me right out.  Surprise, that 
+Benadryl plus the diuretic I normally take for BP control causes me to 
+get up and go to the bathroom every two hours, so it seems like 6 AM 
+rolls around really fast.  Get up really groggy from the Benadryl and 
+lack of sleep, make some coffee, start to wake up a bit, do the bathing 
+essentials, load a few more items, and hit the road to meet my event 
+companion at a breakfast diner about 30 miles away on the way to Clingman's. 
+
+He's already there, but service is fast and we eat and get out of the diner, 
+get him loaded up, and we're on the road more or less on schedule around 8 AM.  
+Fortunately, due to rainy and cloudy conditions, the roads through some of 
+the most heavily tourist-infected areas of the mountains of Western North 
+Carolina this time of year are practically deserted, we make really good time, 
+and arrive at Clingmans Dome parking area at 9:45 AM, a bit ahead of target ETA. 
+
+We begin setting-up, and despite my being hampered by a stiff, swollen, 
+and still painful right hand and residual grogginess, and with Bob's 
+assistance. we assemble and erect the dual-band ground plane antenna, 
+18-foot mast, and a ground mount improvised from a surplus satellite 
+dish mount. 
+
+So far, so good, and I'm thinking "We'll be on the air ahead of schedule."  
+Nope. Famous last words. It was when I connected up the antenna coax and 
+connected up the power leads to the big marine battery that something 
+went awry, and no joy when I tried to turn the radio on.  I started testing 
+the PowerPole and fuse connections one by one, eliminating the possible 
+failure points, confirming 12 volt power and continuity at each point in 
+the chain, until I reached the final fuse in the positive power lead right 
+next to the radio. It was definitely blown, confirmed by both visual 
+inspection and failed continuity and power check. It's a glass fuse, and. 
+lo and behold, I had taken my spare supply of glass fuses out of the car 
+and failed to return them to the glove box (which I may have caught had 
+I not been so brain-addled by the Benadryl).  So Bob and I quickly improvise 
+a "jumper" with alligator clips and wire between the two fuse holder ends 
+try again.  No dice.  Then it dawns on me that some catastrophic  event 
+related to the power has taken out some internal component in the radio, 
+and it is now dead.  By this time it's after 11:00 AM. 
+
+I have Bob pull out his Yaesu dual band handheld, and attempt to get on the 
+UHF simplex frequency but after several calls, determine that he has 
+automatic repeater shift enabled, so when I key up with 445.925 showing on 
+the screen, it shifts down to 440.925 MHz, which is why I get no reply from 
+the GP group.  Bob cannot figure out how get it off that setting into simplex
+mode for transmit, so we are stuck.  At one time, we do receive a call from 
+Tom, KG4VUB, from Springer for our station, but can't reply. 
+
+That's when I managed to move around in the parking lot to a better spot 
+and get enough 4G cell signal on Verizon to send out the e-mail that we 
+are down.  At some point, Tom tried to call my cell, but the call did not 
+come through.  As I was coming off the mountain, back into Cherokee, I got 
+the voice mail he left, but since the original call did not ping my cell 
+phone it did not capture the Caller ID, and as Tom said he was calling from 
+someone's "truck cellphone" or some such, and had no reception on his 
+personal cell, he did not leave a number I could call back on. 
+
+So, that's my story and I'm stickin' to it.  If the damage to the TM-D700A 
+is not something I can fix once I open it up, or at a reasonable cost from 
+a Kenwood repair shop, this may be my last GP event, as I really don't think 
+I'm going to spring for a new TM-D710G for a once a year event.  And, as I 
+discovered, one really needs, into addition to the TM-D7xxx radio, you need 
+a Kenwood APRS-capable HT as a back-up, or at least a capable UHF back-up 
+radio.  Had I had my IC-7100 mobile unit in the car, instead of the old 
+IC-706 (w/ no 440), or Bob's Yaesu HT had worked on UHF simplex, we could 
+have a least communicated on UHF. 
+
+Sorry for the inconvenience to all concerned. 
+
+------------------------------------------------
+Posted by: "LARRY J. FORD" <lford@usa.net> K4AEC
+------------------------------------------------
+

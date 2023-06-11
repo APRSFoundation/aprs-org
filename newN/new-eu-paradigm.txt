@@ -1,0 +1,186 @@
+The New-EU WIDEn-N Paradigm                              19 March 2006
+----------------------------------------------------------------------
+                                                                WB4APR
+Updated 25 Nov 08 because the New-N paradigm was adopted 20 Nov 08 at 
+the final plenary of the Cavtat-IARU-Region 1 conference based on the 
+proposal of the norwegian NRLL (paper C5-33, one worldwide aprs-
+standard).  The paper C5_09 of the Danish Radio Society (european- 
+aprs-standard) has been withdrawn by the EDR.
+
+Updated 3 July 2006
+Updated 21 Sept 2006 
+
+The APRS network in Europe in many areas is unreliable due to the same
+lack of consistent user settings and network digipeater settings that 
+had evolved in the USA forcing us to finally implement the New-N
+Paradigm and get consistency and traceability throughtout the network.
+See the map on www.aprs.org/newN/NewEU-map.GIF 
+
+The following history of APRS paths is important to understand:
+
+RELAY    was simple digipeating but NO dupe checking
+WIDE     was simple digipeating but NO dupe checking*
+TRACE    simple digipeating but with call substitution & no dupe ck*
+WIDEn-N  was N flooding with DUPE-CHECKING, but no traceability
+TRACEn-N was N TRACEing with DUPE-CHECKING and with TRACEABLITY.
+
+For Optimum operation, APRS networks need n-N Hopping, Dupe Checking 
+and path Traceing.
+
+To eliminate huge numbers of dupes, the first step is to eliminate
+RELAY, and WIDE and TRACE paths.  Next we needed to get n-N hopping 
+and Traceing at the same time.  Since 90% of all users were already 
+using WIDEn-N, and since it is extremely difficult to get tens of 
+thousands of users to change their habbits, it was clear that there 
+was only once answer.  That is, to move WIDEn-N support over to the 
+Traceable parameter and eliminate TRACEn-N.
+
+Doing it this way, had no impact on the users at all.  And only
+the digipeaters had to change.  And the change could be done
+one-at-a-time with no impact on users.  Slowly the system would
+become one universal standard "WIDEn-N" everywhere and fully 
+Traceable at the same time.
+
+Since we had to change the parameters at ALL the digis to get rid
+of RELAY, WIDE and TRACE anyway, it was just as easy to implement
+number 2 above.  Once we put WIDEn-N into the fully-traceable 
+UITRACE function, then there was no need for the "TRACEn-N"
+any longer.  So this then left UIFLOOD unused.  So we put the STATE
+or LOCAL or REGIONAL alias of SSn-N in its place so that the 
+"untraceable" UIFLOOD parameter would still be useful without
+adding QRM out of the area.  In Europe these regions are based on
+a combination of two iso-standards, ISO 3166-1 country code and 
+ISO 3166-2 subdivision code.
+
+The New-N paradigm in the USA achievend a two to four-fold reduction
+in dupes and QRM in some regions that had been heavily using the old
+RELAY and WIDE parameters.  This improvement was striking!
+
+NOTE:  Admittedly, most European digipeaters evolved after the USA, 
+and so many of them did not have the bad DUPE problem of the old
+RELAY, WIDE and TRACE because they used more software based TNC's
+and digipeaters that used the better dupe-checking algorithms
+that had evloved at that point.  But still, there simply is no
+reason any longer to support all of these original legacy paths.
+Lets SIMPLIFY APRS!  Everything is obsolete except:
+
+WIDEn-N with full dupe-checking and Traceability.
+
+On 20 November 2008, Europe finally decided it was easier to change
+the digis to Traceable WIDEn-N than to try to convince all the users
+to change their PATHS to TRACEn-N.  At this point, there is no 
+longer any New-EU-Paradigm, as it is now a global New-N Paradigm.
+
+BACKGROUND DATA:  To asses the situation a 24 hour snapshot of 
+94,000 packets was taken in Europe on 17 March 2006 (did not 
+include data from the UK).  The data showed the following 
+percentages of those using paths of WIDEn-N or TRACEn-N.  It turns 
+out, this was only about half of all paths!  The rest were using 
+the obsolete paths of RELAY and WIDE and TRACE!  Here were the
+numbers using WIDEn-N.
+
+WIDE7-7    18%        TRACE7-7  9%
+WIDE6-6     2%        TRACE6-6  3%
+WIDE5-5    10%        TRACE5-5  4%
+WIDE4-4     5%        TRACE4-4  1%
+WIDE3-3    36%        TRACE3-3  5%
+WIDE2-2    12%        TRACE2-2  1%
+WIDE1-1     2%        TRACE1-1  0%
+Using both WIDEn-N & TRACEn-N!  5%
+
+The numbers for the UK were similar but they showed a 4:1 preference 
+for using the TRACEn-N system so that they have packet traceability.
+
+The GOOD news:  Clearly WIDEn-N was favored *and* about half  of the 
+users were being considerate and keeping their QRM down with 3-3 and 
+2-2 packets.  Also this showed that simplifying the network to only 
+use WIDEn-N could be done with little impact to existing users.  And 
+simply swapping the WIDEn-N support over to the UITRACE parameter 
+would allow all WIDEn-N paths to be traceable just like we did in 
+the USA.
+
+The BAD news:  The biggest LOAD, however, was caused by the huge 
+numbers of 7-7 and 5-5 packets and packets with BOTH WIDEn-N and 
+TRACEn-N in the same packet!  For each of these additional hops, 
+the number of QRM copies can triple!  And for only a few 7-7 
+users, they can cause QRM over much of the continent.
+
+Our final suggestion for the New-EU Paradigm was:
+
+1) The best path for fixed stations is WIDEn-N (small N, 2 or less)
+2) The best path for Mobiles is WIDE1-1,WIDEn-N (Small N, 2 or less)
+3) Educate users to use routine N no larger than their ALOHA area
+4) Change the digis (swap TRACEn-N and WIDEn-N) so Wn-N is traceable.
+
+IGATE RULES:  IGates are also big contributors to the health of the
+APRS network.  They should set their path to their local area only 
+(usually one hop, WIDE1-1) and should not flood their area with 
+unwanted QRM. 
+
+New-N Paradigm DIGIPEATER RULES:
+1) In saturated areas, TRAP large values of N-N by setting call-
+   substitution aliases of WIDE7-7, 6-6, 5-5, etc.   These will 
+   digi once and then stop further routing.
+
+2) Home stations should *not* be digipeaters UNLESS:
+    a) Station is high and is -not- covered by a BIG digi.
+       They should  support WIDEn-N, and regional SSn-N.
+    b) -or- Station is needed for a fill-in digi for nearby
+        mobiles who cannot be heard by the big digi.
+        Support ***only*** the WIDE1-1 alias.
+
+3) For NETWORK reliability, All digipeaters  should:
+     a) Put their PHGxxxx in their position comment
+     b) Put "Wn, SSSSn" in the beacon to show users propoer settings
+     c) The SSn shows what regional SSSSn-N they support
+     d) Use the DIGI symbol with "S" overlay to show it is new-N Paradigm.
+     d) -or- use the "1" overlay for WIDE1-1 ONLY home digis.
+
+4) Move WIDEN-N support to the UITRACE parameter so
+    that all WIDEn-N traffic is traceable.
+
+5) Support for WIDE, TRACE or TRACEn-N should be eliminated 
+    immediately to force users to reset their settings.  Providing
+    an ongoing crutch for a period will only delay the problem.
+
+6) With time, WIDEn-N will become fully traceable as DIGI
+    owners move WIDEn-N support over to the UITRACE parameter.
+
+7) Digipeaters should not beacon beyond 2 hops.  Use the proportional
+    pathing algorithm for DIGI beacons.  That is, set for a local
+    (direct, no hops) beacon rate of 10 minutes.  If poosible, then
+    also a one-hop beacon once every 30 minutes.  THen a 2-hop beacon 
+    once an hour.
+
+TRACKERS:  All future mobile GPS tracker designs should consider
+the Proportinal-Pathing algorithm that sends 1 minute updates
+local-direct, every 2nd minute via one hop, every 4th minute
+via 2 hops and optionally every 8th minute via 3 hops.  See
+www.aprs.org/newN/ProportionalPathing.txt
+
+TIPS:
+
+- Be sure all digis transmit their PHGxxxx and "Wn, SSSn" data
+
+- Use the UI-PHG add-on to see the range and coverage of
+  all digipeaters and stations in your area
+
+- Use UI-ALOHA add-on to see the ALOHA range for your UIVIEW
+   station.  It analyses traffic heard by your station to compute
+   that area that is a 100% saturated 1200 baud APRS channel.  
+   Keep your N hops within that area.
+
+By simplifying the network to only WIDEn-N and WIDE1-1,WIDEn-N
+guidance and telling users to limit their N's to the minimum
+needed in their area, then a vast impovement in reliability
+and throughput can be achieved in the European System.
+
+For more in-depth understanding, please review the details
+in the web page:
+
+www.aprs.org/fix14439.html
+
+Good luck!
+Spread the word.
+
+de Wb4APR, Bob

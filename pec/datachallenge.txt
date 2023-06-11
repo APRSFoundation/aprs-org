@@ -1,0 +1,64 @@
+PCSAT2 9600 Buad Data Challenge                       28 July 2005
+------------------------------------------------------------------
+Updated 26 Sept 2005
+
+PCSAT2 carries a solar cell experiment to measure cell degradation 
+over time.  Having many ground stations capturing the data will 
+help assure a complete initial data set.
+
+A data set consists of 54 lines of 9600 baud data transmitted as a 
+beacon group once every 3 minutes 20 seconds consisting of 11 one-
+sec data bursts of 5 lines spaced every 2 secs.  The 7th byte of 
+each line is human readable as a serial number starting with "A" 
+through "Z", then "a" through "z" and then "0", and "1".  Here is 
+an example 128 byte line (truncated to fit this document):
+
+ISSTLM>APRS,SGATE,WIDE:{TPrVQEAwEAAwEAAwEAAwEAAHoAAwEAAwEAAwEAAH...
+
+Notice the 7th byte is an "E" meaning this is the 5th line of the
+data dump.  For a complete file, see:
+
+http://www.ew.usna.edu/~bruninga/pec/PC2oct14FTSCE.TXT
+
+The "challenge" to receive this data is due to the high +/- 9 KHz 
+UHF Doppler during the pass and the fact that the data is in bursts.  
+You have to anticipate the Doppler to get a complete set since 
+there is nothing to tune in until it has begun.  Consider:
+
+1) Please be sure to set your TNC and PC clock to UTC within a 
+second or so.  Be sure time-stamping of your TNC or software is ON.
+ALOGGER is an ideal logging tool.  http://www.billdiaz.dynip.com/
+
+2) Use this file name convention with time stamp and your call, to
+save the data to file and also use the same format for the subject 
+line of the Email. 
+
+    PC2_YYMMDD_HHMM_CALL.txt
+
+3) Email to PC2@grc.nasa.gov  (this is no longer needed since we
+are now getting sufficient data via the APRS internet system).
+
+4) If you can simultaneously feed your live 9600 baud RX data
+via IGate software, then feed to port 20150 on satgate.aprsca.net.
+
+5) If you are a 1200 baud only station, then feed to ANY APRS
+server on the global APRS-IS system.
+
+TUNING DOPPLER:  Remember that at AOS the UHF signal will be as 
+much as 9 KHz high and at LOS will be as much as 9 KHz low.  But 
+at these times the doppler is *changing* the least and this is
+probably the best time to catch a complete file without any tuning 
+glitches.
+
+In the middle of the pass, the Doppler rate of change is the 
+highest and although the signal will be strongest, over the center 
+2 minutes the doppler will shift as much as 8 KHz!  This is why 
+we expect to have to combine files from multiple users to get a 
+complete set.
+
+Computer tuning may not help, since the step-transition during a 
+tuning step may garble a packet?
+
+
+Bob Bruninga, WB4APR
+USNA Satellite Lab

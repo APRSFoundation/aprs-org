@@ -1,0 +1,228 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+   <TITLE>DIGIPEATERS in Maryland</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.0Gold (X11; I; SunOS 5.5.1 sun4m) [Netscape]">
+   <META NAME="Author" CONTENT="Bob Bruninga">
+   <META NAME="Description" CONTENT="APRS Homepage">
+   <META NAME="Keywords" CONTENT="Maryland,Virginia, digipeaters, Bruninga,radio, position, w3ado, wb4apr, GPS, APRS, Satellites, USNA">
+   <META NAME="Classification" CONTENT="Science">
+</HEAD>
+
+<BODY TEXT="#FF0000" BGCOLOR="#87CEFA" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000"> 
+
+<H1 ALIGN=CENTER><B>MD/VA Digipeater Plan</B></H1>
+
+<H2 ALIGN=CENTER><IMG SRC="http://www.aprs.org/aprs.gif" HSPACE=30 HEIGHT=60 WIDTH=80 ALIGN=TEXTTOP>
+<B>Automatic Position Reporting System</B>
+<IMG SRC="http://www.aprs.org/aprs.gif" HSPACE=30 HEIGHT=60 WIDTH=80 ALIGN=TEXTTOP></H3>
+<!-- begin comments and the next line ends them
+//-->
+<FONT COLOR="#000000"><FONT SIZE=3>
+<P>
+<HR SIZE=5 WIDTH="100%">
+<P><FONT COLOR="#FF0000"><FONT SIZE=4>
+<B><U>This Plan was updated on 10 April 2005</U> </B>
+<P><FONT COLOR="#000000"><FONT SIZE=3>
+
+<B>This digipeater plan for Maryland and Virginia is inspired by all the
+new recommendations for all digipeaters in North America in the
+<A HREF="http://www.aprs.org/digis/fix14439.html"><B>New n-N Paradigm</B></a>.  This major change 
+will fix the congestion presently overloading the APRS network and making it 
+un-reliable.  With the reduced QRM by a factor of 3 to 5, the reliablity and 
+capacity of the network will drastically improve.
+</B>
+<P>
+
+<B>National New n-N PARADIGM SUMMARY:</B>
+<LI> For National interoperability, WIDEn-N is the new universal path (with N optimized locally)
+<LI> WIDE2-2 is the new universal path in our area from Northern VA to Boston, though we may
+see some rural visitors using WIDE3-3
+<LI> WIDEn-N will be traceable everywhere
+<LI> Generic paths like RELAY, WIDE, TRACE and SS are the biggest QRM generators
+in our area and must be phased out.
+<LI> The old Mobile path of RELAY,WIDE is replaced with an equivalent WIDE1-1,WIDE2-1 path.
+<LI> The old PacComm TRACE-only digis can also support these WIDE1-1 and WIDE2-2 universal paths.
+
+<P>
+<B>See: <A HREF="digi-settingsMD.txt">The KPC-3+ Late 8.2 and all 8.3 versions Recommended Settings in MD and VA</B></A>
+<BR><B>See: <A HREF="http://www.aprs.org/digis/kpc3+82WIDEn.txt">The KPC-3 Early 8.2 Recommended Settings...</B></A>
+<BR><B>See: <A HREF="http://www.aprs.org/digis/PacComm-settingsMD.txt">The PacComm Recommended Settings in MD and VA</B></A>
+
+<P>
+<B>USER RECOMMENDATIONS ARE SIMPLIFIED:</B>  The best path is simply WIDE2-2.  It will
+work everyhwere.  In wide-open areas such as western Maryland and Virginia, WIDE3-3 may be OK.  
+MDn-N and VAn-N will also work to support state wide communications without QRM across
+borders..  For MDn-N or VAn-N use an N based on your location and who you need to hit,
+probably 3, but may be higher in the far corners of the state.
+<P>
+<LI>MOBILES and TRACKERS . . . . . WIDE2-2 . . . . . . . (is most efficient)
+<LI>MOBILES NEEDING FILL-INs. .  WIDE1-1,WIDE2-1 
+<LI>FIXED STATIONS: . . . . . . . . . . . WIDE2-2 . . . . . . . . . . . (the most efficient)
+<LI>SPECIAL STATE NETS: . . . . . . . MD5-5 or VA5-5. . . . . (not for routine operations)
+<P>
+<B>ABUSIVE WIDEn-N FILTERING:</B> This New n-N Paradigm became possible when we
+realized that the ALIAS list in the KPC-3 digipeaters can be used also as a TRAP
+for large values of N originated in the local area.  This is
+accomplished by setting the UIDIGI parameter to trap WIDE4-4, 5-5, 6-6 and 7-7.  
+They will be digipeated once and then swapped with the DIGI callsign.  
+Thus preventing further propagation.
+<P>
+<B>WIDEn-N TRACING:</B>  A second improvement in the New n-N  Paradigm is that all
+WIDEn-N packets can be traced.  This is beacuse WIDEn-N is being moved from the
+UIFLOOD parameter in the TNC's to the UITRACE parameter.
+<P>
+<B>STATE SSn-N Networks:</B> State SSn-N paths are now able to be
+supported in the UIFLOOD parameter and are far less damaging than the
+original WIDEn-N because the total number of copies is automatically limited by the state
+borders.  MD6-6 may only generate 12 copies, all in Maryland compared to almost 140 copies
+in 8 states for the very abusive WIDE6-6.  Actually, if the user actually uses the
+path of MD1-1,MD4-4 for example then the path will also arrive as identified by the
+first and last digipeaters used.  For example it may arrive as DIGI1,MD1,DIGI3*,MD4-1.
+<P>
+During emergencies or exercises, communications personnel involved in passing Maryland
+or Virginia traffic may use the paths of <B>MD1-1,MD5-5</B> or <B>VA1-1,VA5-5</B> 
+which should cover 
+most of the state.  (Please use sparingly and not for ROUTINE!)  Notice the real advantage
+of these paths is for stations living in the far corners of a state to have a multi-hop
+path to communicate back to the rest of his state without QRMing the surrounding
+states that he may be closer to.
+<P>
+<IMG SRC="http://www.aprs.org/digis/mdmapw66.gif" width=300 height=300> 
+<IMG SRC="http://www.aprs.org/digis/mdmapm66.gif" width=300 height=300>
+<P>
+<B>USER DENSITY.  Maryland and the mid-Atlantic states are THE HIGHEST TRAFFIC
+densities in the world for APRS.  See map below.</B>  This is why we MUST limit
+our routine paths to 2 hops to keep from shooting our selves in the foot with
+too much QRM.
+<P>
+<IMG SRC="http://www.aprs.org/digis/usamapfu.gif">
+<P>
+<P>
+<P><FONT COLOR="#FF0000"><FONT SIZE=4>
+<B><U>Fix #2: Alt-Input Channel on 144.99:</U> </B>
+<P><FONT COLOR="#000000"><FONT SIZE=3>
+
+In highly congested areas, it is still very difficult for a low-power APRS
+station or tracking device to be heard amongst all the other QRM on the 144.39
+channel.  To solve this problem, alternate-input receivers in some areas can also
+listen for these low-power users on the very clear channel of 144.99.  This
+is simply 144.39 +600 standard Offset.  These packets heard on that channel
+are simply then cross digipeated back to 144.39 where they are heard on an
+equal footing with everyone else.  This simple SYSOP solution can drastically improve local channel 
+reliability! 
+<P>
+Currently there is one alt-input digi and it is <B>99ANAP</B> In Annapolis.
+It supports WIDE1-1 and WIDE2-2 digipeating.  Any other 144.99
+alt-input digis should also begin their geographic name with "99".
+
+<P>
+<B>SUCCESS OF APRS:</B>
+The success of your local APRS is <i> not</i> how many stations
+you see on your maps, and how far away, but <i> how reliably</i> your mobile or handheld or portable
+station can communicate with others in the local area.  This fundamental principal should drive
+everything we do with APRS in our local areas.
+<P>
+<B>Mason-Dixon APRS Group: </B> N3KTX reports 8 N-N Digipeaters, five under his call in MD,
+plus two in PA, N3BXO-4,-5 and KF3M-1 belonging to the HAHA group.  A possible
+alias for this group might be MASOND or MDIXON?
+
+<P>
+<B>Southern Maryland:</B> K3GJ reports several digis for the 
+Southern Maryland APRS Group: WX3SMD-8,-13,-15, KA3POX, and K3WTF-1 digis 
+plus one in work in south Charles County.  
+<P>
+<B>Eastern Virginia Area:</B> KF4HJX supports many of the digis ov the Eastern Virginia Group
+including the N4EVA-10, -11, -12, and -13 digipeaters.
+<P>
+<P>
+<B><U>FIXING THE 144.39 NETWORK:</U></B> The most important thing we need is 
+USER EDUCATION that a local 1200 baud APRS network can only support about 60 or so 
+users in its RF domain, and in most congested areas that only works if everyone uses a 
+path of only 2 hops or less !  This digipeater plan for Maryland and Virginia tries to provide
+WIDE2-2 (and some WIDE3-3 support in the south and west) so that the large number of duplicate
+packets is eliminated and the reliability of the network vastly inproves.
+<P>
+This new WIDE2-2, and SSn-N plan is part of the national effort to upgrade our 144.39 system
+as detailed on the
+<A HREF="http://www.aprs.org/digis/fix14439.html"><B>New n-N Paradigm (FIX 144.39)</B></a> web page.
+<P>
+<B>APRS FUNDAMENTALS:</B> APRS can ONLY work at the local level on RF.  It is only a 
+1200 baud channel shared by your nearest neighbors.  It can only work if
+you and your neighbors understand how it works and its limitations and you are
+not QRM'ed to death from packets from out-of-area.  The following table
+shows the BASIC ASSUMPTIONS about the goals of an APRS network:
+<BR>
+<IMG SRC="http://www.aprs.org/digis/basics.gif">
+<P>
+<B>THE ALOHA CONCEPT:</B>
+The 1200 baud 144.39 channel can only support an average user load of about 60 or so
+APRS stations or objects based on the typical transmission rates and typical number of
+surrounding digipeaters generating multiple copies.   This is because
+any greater load than 100% channel capacity guarantees lost packets due to collisions.
+The size of your area that holds the number of users capable of generating 100% channel
+capacity is called your ALOHA circle.  
+You are responsbile to make sure that your packets get to your
+surrounding ALOHA network but no further, so you do not add QRM to other areas.
+<A HREF="http://www.aprs.org/digis/ALOHAcir.txt"><B>ALOHA Circle concept</B></A>.  
+<P>
+<IMG SRC="http://www.aprs.org/digis/alohamap.gif">
+
+<P>
+Every APRS software should calculate and display the ALOHA circle for its user.  It should 
+be overlayed on every map so that it is never out of mind. 
+<P>
+<HR SIZE=5 WIDTH="100%">
+
+<!--
+<B>OBSOLETE IDEAS:</B>
+<B>Eastern Maryland:</B>
+ <IMG SRC="md-digisE.gif"> 
+
+<P>
+<B>Interstate ##LNKn-N:</B> <i>This idea for long-haul links along the interstates
+has been abandoned.  It would just take too much coordination and would have to
+give up WIDEn-N entirely. </i>  The idea was to replace the abuses of
+long hop WIDEn-N through the use of ##LNKn-N along the major national Interstate
+corridors.  These
+linear strings of digis would also be protected from abuse, since a ##LNK7-7 packet
+could only hit 7 digis in one direction instead of almosst 200 if WIDE7-7 was
+used.  The long-haul interestate systems in Maryland and Virginia are shown on 
+the maps above and below:
+<LI> Interstate 95 long-haul travelers may use <B>95LNKn-N</B>
+<LI> Interstate 81 long-haul travelers may use <B>81LNKn-N</B>
+<LI> Interstate 70 long-haul travelers may use <B>70LNKn-N</B>
+<LI> Interstate 64 long-haul travelers may use <B>64LNKn-N</B>
+<LI> Intercoastal Waterway long-haul travelers may use <B>COASTn-N</B>
+<P> 
+<B> TRACKING WITHOUT GPS:</B> to track a vehicle anywhere to its vicinity
+the path of <B>VIA RELAY,WIDE3-3</B> transmitted once every 30 minutes
+will cause the first digipeater to identify itself for knowing approximately
+what area the mobile is located.
+
+<P>
+<B>Western Maryland and Northern Virginia:</B>
+<BR><IMG SRC="md-digisW.gif"> 
+-->
+
+<HR SIZE=5 WIDTH="100%">
+<P>
+<A HREF="../sitemap.html">See SITEMAP of other related web pages</A>
+<P>
+<HR SIZE=5 WIDTH="100%">
+
+<P><FONT SIZE=+1>
+You are visitor number: <IMG SRC="http://www.aprs.org/cgi-bin/Bruninga/digis-md.cgi">
+Since 14 Dec 2004.</FONT>.<BR>
+<HR SIZE=5 WIDTH="100%">
+
+<P><FONT SIZE=-2>The Naval Academy is a registered user of APRS
+and WinAPRS. The purpose of this web page is to show several applications
+currently in use at this site and should not be considered as an advertisement
+or an endorsement of any commercial product.</FONT>
+
+</BODY>
+</HTML>
+

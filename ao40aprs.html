@@ -1,0 +1,172 @@
+<HTML>
+<HEAD>
+<TITLE>A APRS for remote travelers on AO-40</TITLE>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="Keywords" CONTENT=
+   "APRS,ASTARS,AMATEUR,SATELLITE,GPS,TRACKING,WB4APR,BRUNINGA,NAVAL ACADEMY,TH-D7,AO-40">
+   
+   <META NAME="Author" CONTENT="Bob Bruninga">
+   <META NAME="Description" CONTENT="APRS Antenna for AO-40">
+   <META NAME="Classification" CONTENT="Science">
+</HEAD>
+<!--<BASE HREF="http://web.usna.navy.mil/~bruninga/aprs">-->
+<BODY TEXT="#FF0000" BGCOLOR="#87CEFA" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000"> 
+
+
+<H1 ALIGN=CENTER><IMG SRC="http://web.usna.navy.mil/~bruninga/satellite.gif" HSPACE=30 HEIGHT=32 WIDTH=32 ALIGN=TEXTTOP>
+<B>APRS on AO-40</B><IMG SRC="http://web.usna.navy.mil/~bruninga/satellite.gif" HSPACE=30 HEIGHT=32 WIDTH=32 ALIGN=TEXTTOP></H2>
+<CENTER>
+<H2 ALIGN=CENTER><B>For linking remote travelers into the worldwide APRS system </B></H2>
+
+<!-- begin comments and the next line ends them
+//-->
+<FONT COLOR="#000000"><FONT SIZE=4>
+<P>
+<H3>
+<FONT COLOR="#000080">Bob Bruninga, WB4APR</FONT>
+<HR SIZE=5 WIDTH="100%">
+</CENTER>
+</FONT>
+</H3>
+<P>
+<B>Operating a single APRS channel on AO-40:</B>  Since AO-40 is the primary bird in the
+AMSAT inventory that provides hemispherical coverage to all corners of the globe for many
+hours a day, it is reasonable that we establish a permanent APRS channel on the
+transponder.  This can serve to link remote travelers back into the global APRS system.
+This permits live real-time communications between the remote operator and his intended
+target anywhere on the globe and only he needs the AO-40 portable station.   
+The plan is simple.  A net control station (one per continent) 
+establishes a constant PSK signal uplink channel fed from the APRS-IS.  This gives users something
+to tune in and lock on to as shown below.  We will use PSK-31 as the modulation mode
+because of its excellent weak signal characteristics and ready availability to all
+radio amateurs. (And many other factors discussed later).
+<P>
+<IMG SRC="http://web.usna.navy.mil/~bruninga/aprs/pskAO40.jpg">
+<P>
+Then exactly 1000 Hz higher is where the SATGATE station is listening for remote APRS
+user uplinks.  If the DSP software was smart enough, it couild accept multiple uplinks
+over a range of frequencies offset from the pilot channel.  
+The SATGATE station will take these and then feed anything heard into
+the global APRS-IS!
+<P>
+<IMG SRC="http://web.usna.navy.mil/~bruninga/aprs/psk31format.bmp">
+<P>
+<B>SATGATE UPLINK:</B>
+The APRS to PSK-31 conversion will convert all APRS position data (that uses the ALTNET
+address of "AO40xx") to a simple 6 character
+gridsquare as shown above.  Any PHG is dropped and the course and speed is only included
+if the station is moving.  Otherwise the position comment text comes through as
+written.  Notice that the callsign suffix is repeated as a redundancy check and the
+grid square is case sensitive to allow for context checking of information validity.
+PSK-31 has no inherrent error detection, so these techinques allow some rudimentary
+sanity checking of data that can be Human read and manually entered.  Thus the PSK-31
+AO-40 user needs no special software to join the Global APRS system.  Typically, he
+would prepare his basic Gridsquare format in one of his transmit buffers to trnsmit
+at the beginning of any QSO exchange.
+<P>
+<B>The AO40 ALTNET:</B>   Traffic from the global APRS-IS intended for this SATGATE uplink
+ will use the APRS <I>alt-net</i> concept.  Any packet on the APRS-IS originating
+anywhere on the  planet can be routed to the SATGATE uplink by simply using the ALT-NET
+address of AO40xx.  This is a valid ALTNET TOCALL that will not impact
+normal APRS functionality but it signals the SATGATE to include it in the live uplink.
+There is not need to carry this through the conversion to PSK-31 because it is assumed
+that ALL packets on the pilot uplink meet this criteria.  SImilarly, when PSK-31
+user generated position data is captured from user uplinks and converted to 
+normal APRS position or message packets, by the SATGATE for injection back into
+the APRS-IS, then those packets will contain not an <i>ALTNET</i> tocall, but a
+normall APRS tocall of "AP40xx" so that they are seen by any APRS station through
+the normal APRS filters.  But the "AP40xx" gives a unique identifier that the 
+packets came into the system via AO-40.  Probably we can use the availablle two XX
+characters to indicate the identity of the SATGATE...
+<P>
+<B> WHY PSK-31? </B>  There are several reasons why PSK-31 and this full duplex
+pilot uplink system is the mechanism of choice for this APRS channel on AO-40:
+<LI><B> High Doppler: </B> With over 60 KHz of Doppler during an AO-40 pass, there must
+be a mechanism for the user to be able to find the signal, and to track it.  This
+includes then the mechanism for using a constant offset to identify the exact
+frequency for the remote user uplink.
+<LI><B> Weak Signal: </B> With the narrowband DSP signal advantage, the uplink user only
+needs a modest station to produce a usable signal on the transponder.
+<LI><B> Low Impact:  </B> Operating with weak signals with very little margin above the
+transpodner noise floor permits PSK operation through AO-40 without impacting other
+users.
+<LI><B> Ready availability: </B> Many varieties of PSK-31 software are avaiable and
+since the user uplink is totally operated in QSO mode with no automatic features,
+it permits anyone to uplink into APRS without special software or prior considerations.
+<P>
+
+<B>Some AO-40 BASICS:</B>  All it takes to communicate with AO-40 is a small dish
+on the order of a meter across and a UHF transmitter good for 50W or so and a small
+UHF beam.  These can easily fit in a suitcase for travel as indicated below:
+<P>
+<IMG SRC="http://web.usna.navy.mil/~bruninga/ao40ant/AO40overallW.jpg">
+<A HREF="http://web.usna.navy.mil/~bruninga/ao40ant.html">See antenna details</A>.
+<P>
+
+<B>AO-40's ORBIT:</B>  AO-40 follows the same arc across the sky everyday 
+but at different times as shown below.  And this arc is just the projection of the Earth's
+equator onto the sky.  It goes from horizon to horizon beginning in the East and
+ending in the West and due South it is up an angle equal to 90 minus your
+latitude (in the northern hemisphere).  By simply pointing the axis of your dish rotator at the north star
+(simply North and tilted at an angle equal to your latitude) then you only have
+to swing the dish left and right to find AO-40.  Because of AO-40's very high
+orbit, it is in view for 8 hours or more at a time.  You can even add a simple
+dipole feed to your backyard satellite dish if you like:
+<LI><A HREF="http://web.usna.navy.mil/~bruninga/ao40ant/3mfeed1w.jpg"> Backyard dish feed photo</A>, 
+<LI><A HREF="http://web.usna.navy.mil/~bruninga/ao40ant/3mfeed2w.jpg"> Installed Photo</A>, 
+<P>
+<IMG SRC="http://web.usna.navy.mil/~bruninga/ao40ant/ao40geo.jpg">
+<P>
+<B>Easy, TV rotator (no elevation) tracking system!</B>
+<BR>
+If you have a good downconverter, low noise pre-amp and circular feed and can hear AO-40
+on a "prime-star" type eliptical dish, all you need to track AO-40 remotely is a simple
+TV rotator.  Just point the axis of the rotator at the north star, mount the dish and your
+UHF uplink beam to the tilted mast, and you can track AO-40 horizon to horizon with
+just the $65 TV rotator from Radio Shack.  This is beacause the vertical beamwidth of 
+the oval Primestar dish is about 20 deg, wide enough to always see AO-40 along the
+geostationary arc as shown below:
+<IMG SRC="http://web.usna.navy.mil/~bruninga/ao40ant/tvrotator.bmp">
+<A HREF="http://web.usna.navy.mil/~bruninga/ao40ant/tvrotator.bmp"> click here if image is broken</A>
+
+<P>
+<HR SIZE=5 WIDTH="100%"></P></CENTER>
+<P>
+<B>APRS AO-40 SATGATE DETAILS:</B> There are several things that the SATgate software
+should do to facilitate the proper operation of this system.
+<LI><B>Igating:</B>  Captures all APRS-IS packets addressed to AO40xx and passes them
+onto the SATGATE Pilot channel.
+<LI><B>Dynamics:</B>  If there is not enough APRS-IS data to saturate the uplink
+pilot, then the pilot channel will recirculate on a decaying algorithm older and
+older data to keep the channel busy and redundant.  But as with any APRS system,
+as this data ages beyond 30 minutes it must be dropped so as to not violate
+the netcycle expectations of users.
+<LI><B>Redundancy:</B> Redundantly repeats all uplink "APRS" data using the original 
+APRSdos algorithm.  That is, if a  new position is heard from an UPLINK station, that
+position is injected into the APRS-IS anew.  But if not uplinked again, the packet
+is redundantly repeated on the APRS-IS but at an ever increasing period.  Each time
+it is injected, the period to the next refresh is doubled.  This way, new positions
+only have to be received once to have some redundancy in delivery, but old data
+will decay out of the system.
+<LI><B>Messages:</B> The same goes for messages.  The SATGATE will acknowledge
+the receipt of a message either from the APRS-IS or from the UPLINK using the
+normal APRS process.  Then it takes over the responsibility and the decaying 
+algorithm to assure delivery via the AO40APRS system.
+
+<P>
+
+<CENTER><P><FONT SIZE=+1>You are visitor number: 
+<IMG SRC=http://web.usna.navy.mil/cgi-bin/Bruninga/ao40aprs.cgi>
+Since 27 Oct 2003</FONT>.<BR>
+<HR SIZE=5 WIDTH="100%"></P></CENTER>
+
+
+
+<CENTER><P>Return to the <A HREF="http://web.usna.navy.mil/~bruninga/aprs.html">APRS HOMEPAGE</A> 
+<HR WIDTH="100%"><FONT SIZE=-2>The Naval Academy does not endorese any project
+shown here.  The purpose of this web page is to show several applications
+currently in use at this site and should not be considered as an advertisement
+or an endorsement of any commercial product.</FONT></P></CENTER>
+
+</BODY>
+</HTML>

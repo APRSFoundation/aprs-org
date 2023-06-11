@@ -1,0 +1,110 @@
+|OPERATION of Student Buoy Projects IN THE AMATEUR RADIO SERVICE     30 Apr 06
+|-----------------------------------------------------------------------------
+|                                                                       WB4APR
+|
+|The Amateur Radio Service is authorized by the FCC for radio communications
+|between duly licensed amateur radio operators for the purpose of developing
+|personal expertise with the radio art.   The rules allow for experimentation 
+|but again, only within the spirit of the rules for providing a set of 
+|frequencies for such licensed operation without any hint of pecuniary interest 
+|or commercial or government use.  Think of the Amateur Radio Spectrum as a 
+|"national park" for preserving frequencies from commercial exploitation and
+|for use by authoirzed individuals willing to live within the rules, and not 
+|polute or exploit it.  Here are some paraphrasing of some of the rules and 
+|how some ocean buoy experiments are possibly within the rules...
+|
+|RULES:
+|
+|  "Amateur Service: A radiocommunication service for the purpose of 
+|   self-training, intercommunication and technical investigations 
+|   carried out by amateurs, that is, by duly authorised persons 
+|   interested in radio technique solely with a personal aim and without 
+|   pecuniary interest." [RR S1.56]
+|
+|A one-time student Buoy Project can fit within that rule...
+|
+|RULE:
+|
+|  "VI. OPERATIONAL GUIDELINES. The following operational guidelines, based
+|   on interpretations by IARU of the Radio Regulations and good amateur
+|   practice, are intended to help in planning the missions, management, and
+|   control of devices planned to operate in the amateur-radio service.
+|
+|   A. The purposes of an amateur radio station should be:
+|
+|      (1) To provide communication resources for the general amateur radio
+|          community and/or
+|      (2) To conduct technical investigations in all respects consistent with
+|          the Radio Regulations. [See RR S1.56 and RR S1.57.]
+|
+|   Technical investigations carried out using frequencies allocated to the
+|   amateur-radio service should be relevant to the development of "radio
+|   technique," that is, have a reasonable possibility of application to the
+|   development of amateur radio communication systems.  [See RR S1.56 and RR S1.57.]
+|
+|The Buoy project, on a limited basis, is exploring the propogation from a low
+|power device to an amateur radio network.  As long as the motivation is the
+|exploration of that capability or an individual's own technical curiousity, it 
+|is probably within the rules.  HOWEVER, when the motivation for the buoy project 
+|is driven solely for the purpose of obtaining the routine oceanographic data for 
+|use by others (who are not licensed radio amateurs), then this would be a violation 
+|of the use of the amateur radio frequencies.
+|
+|RULES:
+|
+|   B. Station Control.
+|
+|   All stations operating in the amateur service... must be controlled by "duly
+|   authorised persons," that is, licensed amateur radio operators who must be
+|   acting "solely with a personal aim and without pecuniary interest." [See
+|   RR S1.56 and RR S1.57.]
+|
+|   AMSAT-NA, for example, is an organisation which owns and builds amateur 
+|   satellites to operate in the amateur-satellite service. But, because it is
+|   an organisation and not an individually licensed radio amateur, it may not
+|   control an amateur station. Licenses under which AMSAT-NA owned amateur
+|   stations are operated are issued either in the name of an individually
+|   licensed amateur radio operator or an amateur radio club... where a 
+|   licensed amateur radio operator is named on the license as trustee
+|   for the club station.
+|
+|   In every case, an individual licensed amateur radio operator, who is
+|   neither employed nor paid by [the club or organization], is legally 
+|   responsible for the operation of every amateur station or amateur-satellite 
+|   station.  Commonly, the licensee is an unpaid member of the organisation...
+|
+|   Thus, the individual responsibility of the licensed amateur radio
+|   operator, effectively imposed by the Radio Regulations, works as a kind of
+|   legal safety check for the organisation and the amateur to protect both of
+|   their interests as well as that of the amateur satellite service itself.
+|
+|OCEAN BUOY COMMENT:  The buoy must be a personal project with the goals of
+|experimenting with the communications system and propogation and network
+|experience and cannot be motivated by some external requirement for specific
+|data, expecially when that data is of commercial or public value.
+|
+|
+|RULES:
+|   D. Plain Language.  The plain language requirement includes telemetry and 
+|   data exchanged between users.
+|
+|   To meet the plain language requirement, technical descriptions of all
+|   emissions, codes, and formats must be made publicly available.  No system
+|   intended to conceal the meaning of a transmission may be used.
+|
+|RULES:
+|   E. Open Access. All telecommunication facilities, except telecommand,
+|   operating in amateur-radio service should be open for use by any duly licensed
+|   amateur radio operators world-wide and for reception by students and educators.
+|
+|BOTTOM LINE:  In amateur radio, the medium is the message.  As soon as an
+|application appears to be only using amateur radio for convenience, that in
+|itself raises the red flag of skirting the FCC rules and is not allowed.  And
+|not only is it a violation of the FCC rules, but more significantly it is a
+|violation of the government's public trust in the self-policing of the licensed
+|amateur radio spectrum.... and will usually be met by an outrcy and action from
+|the ubiquitous amateur radio community.  One in every 500 people in the USA
+|is a licesned radio amateur.  They do not take violations of their precious
+|frequencies lightly...
+|
+|Bob Bruninga, WB4APR
